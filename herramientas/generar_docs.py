@@ -31,7 +31,7 @@ o += [f"| {w['id']} | {w['module']} | {'Guiado' if w['id'].endswith('T1') else '
 o += ["", "| Caso | Módulo | Nodos | Título |", "|---|---|---|---|"] + [f"| {x['id']} | {x['module']} | {len(x['steps'])} | {x['title']} |" for x in c["cases"]]
 o += ["", "Además: diagnóstico de 16 situaciones (orientación), transferencia final, 24 encargos comparados, 10 plantillas rellenables, 3 auditorías, glosario (37) y 42 fuentes en la biblioteca.", ""]
 prod = [r for r in loc if r["id"] in ra]
-o += ["## 2. Voz en off (328 guiones)", "", f"Producidas: **{len(prod)}** pistas de muestra con `es-CL-CatalinaNeural` (estado: muestra para aprobación). Pendientes: **{len(loc) - len(prod)}**, listas para producir con `herramientas/tts_lote.py --set todo` tras aprobar voz y licencia.", "",
+o += ["## 2. Voz en off (328 guiones)", "", f"Producidas: **{len(prod)}** pistas de prueba (ElevenLabs, plan sin uso comercial confirmado; se reemplazan). Pendientes: **{len(loc) - len(prod)}**. Diego graba las 328 con una sola voz en Storyline (63 bloques de ≤3.000 caracteres) y `herramientas/cortar_grupos.py` las corta, normaliza y verifica.", "",
       "| Tipo | Total | Producidas |", "|---|---|---|"]
 for k in ("orientacion", "introduccion_modulo", "pantalla", "cierre_modulo", "escena_video"):
     o.append(f"| {k} | {sum(1 for r in loc if r['kind'] == k)} | {sum(1 for r in prod if r['kind'] == k)} |")

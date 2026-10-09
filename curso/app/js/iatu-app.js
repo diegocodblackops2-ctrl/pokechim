@@ -902,8 +902,8 @@
     mnt.appendChild(h("h1", null, "Créditos y licencias"));
     mnt.appendChild(h("ul", { class: "reading" },
       h("li", null, "Contenido y casos ficticios: Curso 5 v3, Dibork Learning."),
-      h("li", null, "Narración: voz sintética «Catalina» (Microsoft Azure Neural, es-CL-CatalinaNeural). Es una voz generada por computador, no una grabación humana. Uso sujeto a la licencia que confirme Dibork."),
-      h("li", null, "Iconos: Lucide (licencia ISC)."),
+      h("li", null, "Narración: voz sintética en español de Chile, generada por computador (no es una grabación humana). Uso sujeto a la licencia de la cuenta con que Dibork produce las pistas."),
+      h("li", null, "Iconos: Lucide (licencia ISC). Tipografías: Sora y Manrope (SIL Open Font License 1.1, incluidas en app/fonts)."),
       h("li", null, "Imágenes: generadas para el curso (Canva / entregadas por Dibork); no representan personas, marcas ni lugares reales."),
       h("li", null, "Las salidas X/Y/Z de las actividades son material controlado del curso; no son resultados de ChatGPT, Claude ni Gemini.")));
   }

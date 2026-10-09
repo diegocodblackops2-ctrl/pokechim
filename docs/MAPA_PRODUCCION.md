@@ -142,44 +142,53 @@ Además: diagnóstico de 16 situaciones (orientación), transferencia final, 24 
 
 ## 2. Voz en off (328 guiones)
 
-Producidas: **13** pistas de muestra con `es-CL-CatalinaNeural` (estado: muestra para aprobación). Pendientes: **315**, listas para producir con `herramientas/tts_lote.py --set todo` tras aprobar voz y licencia.
+Producidas: **22** pistas de prueba (ElevenLabs, plan sin uso comercial confirmado; se reemplazan). Pendientes: **306**. Diego graba las 328 con una sola voz en Storyline (63 bloques de ≤3.000 caracteres) y `herramientas/cortar_grupos.py` las corta, normaliza y verifica.
 
 | Tipo | Total | Producidas |
 |---|---|---|
 | orientacion | 4 | 4 |
-| introduccion_modulo | 16 | 1 |
-| pantalla | 256 | 4 |
-| cierre_modulo | 16 | 1 |
-| escena_video | 36 | 3 |
+| introduccion_modulo | 16 | 3 |
+| pantalla | 256 | 12 |
+| cierre_modulo | 16 | 3 |
+| escena_video | 36 | 0 |
 
 Pistas producidas:
 
-- `media/audio/iatu-bienvenida.mp3` · 20.33 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-cierre_curso.mp3` · 15.84 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-como_estudiar.mp3` · 23.52 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-m01-cierre.mp3` · 9.43 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-m01-intro.mp3` · 14.93 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-m01-l03-p01.mp3` · 55.15 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-m01-l03-p02.mp3` · 50.86 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-m01-l03-p03.mp3` · 52.15 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-m01-l03-p04.mp3` · 13.58 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-rutas.mp3` · 24.0 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-vid01-s01.mp3` · 8.9 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-vid01-s02.mp3` · 8.35 s medidos · muestra_para_aprobacion
-- `media/audio/iatu-vid01-s03.mp3` · 8.69 s medidos · muestra_para_aprobacion
+- `media/audio/iatu-bienvenida.mp3` · 20.45 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-cierre_curso.mp3` · 16.09 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-como_estudiar.mp3` · 23.85 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-cierre.mp3` · 11.08 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-intro.mp3` · 15.33 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l01-p01.mp3` · 66.19 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l01-p02.mp3` · 55.41 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l01-p03.mp3` · 64.1 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l01-p04.mp3` · 57.31 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l02-p01.mp3` · 54.99 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l02-p02.mp3` · 49.66 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l02-p03.mp3` · 51.7 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l02-p04.mp3` · 8.99 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l03-p01.mp3` · 57.42 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l03-p02.mp3` · 52.72 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l03-p03.mp3` · 53.89 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m01-l03-p04.mp3` · 13.64 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m02-cierre.mp3` · 11.34 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m02-intro.mp3` · 14.0 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m03-cierre.mp3` · 10.0 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-m03-intro.mp3` · 15.02 s medidos · generado_pendiente_escucha
+- `media/audio/iatu-rutas.mp3` · 24.11 s medidos · generado_pendiente_escucha
 
 <details><summary>Las 328 locuciones con destino</summary>
 
 | ID | Tipo | Archivo | Estado |
 |---|---|---|---|
-| IATU-M01-L01-P01 | pantalla | media/audio/iatu-m01-l01-p01.mp3 | guion listo |
-| IATU-M01-L01-P02 | pantalla | media/audio/iatu-m01-l01-p02.mp3 | guion listo |
-| IATU-M01-L01-P03 | pantalla | media/audio/iatu-m01-l01-p03.mp3 | guion listo |
-| IATU-M01-L01-P04 | pantalla | media/audio/iatu-m01-l01-p04.mp3 | guion listo |
-| IATU-M01-L02-P01 | pantalla | media/audio/iatu-m01-l02-p01.mp3 | guion listo |
-| IATU-M01-L02-P02 | pantalla | media/audio/iatu-m01-l02-p02.mp3 | guion listo |
-| IATU-M01-L02-P03 | pantalla | media/audio/iatu-m01-l02-p03.mp3 | guion listo |
-| IATU-M01-L02-P04 | pantalla | media/audio/iatu-m01-l02-p04.mp3 | guion listo |
+| IATU-M01-L01-P01 | pantalla | media/audio/iatu-m01-l01-p01.mp3 | muestra producida |
+| IATU-M01-L01-P02 | pantalla | media/audio/iatu-m01-l01-p02.mp3 | muestra producida |
+| IATU-M01-L01-P03 | pantalla | media/audio/iatu-m01-l01-p03.mp3 | muestra producida |
+| IATU-M01-L01-P04 | pantalla | media/audio/iatu-m01-l01-p04.mp3 | muestra producida |
+| IATU-M01-L02-P01 | pantalla | media/audio/iatu-m01-l02-p01.mp3 | muestra producida |
+| IATU-M01-L02-P02 | pantalla | media/audio/iatu-m01-l02-p02.mp3 | muestra producida |
+| IATU-M01-L02-P03 | pantalla | media/audio/iatu-m01-l02-p03.mp3 | muestra producida |
+| IATU-M01-L02-P04 | pantalla | media/audio/iatu-m01-l02-p04.mp3 | muestra producida |
 | IATU-M01-L03-P01 | pantalla | media/audio/iatu-m01-l03-p01.mp3 | muestra producida |
 | IATU-M01-L03-P02 | pantalla | media/audio/iatu-m01-l03-p02.mp3 | muestra producida |
 | IATU-M01-L03-P03 | pantalla | media/audio/iatu-m01-l03-p03.mp3 | muestra producida |
@@ -430,10 +439,10 @@ Pistas producidas:
 | IATU-M16-L04-P04 | pantalla | media/audio/iatu-m16-l04-p04.mp3 | guion listo |
 | IATU-M01-INTRO | introduccion_modulo | media/audio/iatu-m01-intro.mp3 | muestra producida |
 | IATU-M01-CIERRE | cierre_modulo | media/audio/iatu-m01-cierre.mp3 | muestra producida |
-| IATU-M02-INTRO | introduccion_modulo | media/audio/iatu-m02-intro.mp3 | guion listo |
-| IATU-M02-CIERRE | cierre_modulo | media/audio/iatu-m02-cierre.mp3 | guion listo |
-| IATU-M03-INTRO | introduccion_modulo | media/audio/iatu-m03-intro.mp3 | guion listo |
-| IATU-M03-CIERRE | cierre_modulo | media/audio/iatu-m03-cierre.mp3 | guion listo |
+| IATU-M02-INTRO | introduccion_modulo | media/audio/iatu-m02-intro.mp3 | muestra producida |
+| IATU-M02-CIERRE | cierre_modulo | media/audio/iatu-m02-cierre.mp3 | muestra producida |
+| IATU-M03-INTRO | introduccion_modulo | media/audio/iatu-m03-intro.mp3 | muestra producida |
+| IATU-M03-CIERRE | cierre_modulo | media/audio/iatu-m03-cierre.mp3 | muestra producida |
 | IATU-M04-INTRO | introduccion_modulo | media/audio/iatu-m04-intro.mp3 | guion listo |
 | IATU-M04-CIERRE | cierre_modulo | media/audio/iatu-m04-cierre.mp3 | guion listo |
 | IATU-M05-INTRO | introduccion_modulo | media/audio/iatu-m05-intro.mp3 | guion listo |
@@ -460,9 +469,9 @@ Pistas producidas:
 | IATU-M15-CIERRE | cierre_modulo | media/audio/iatu-m15-cierre.mp3 | guion listo |
 | IATU-M16-INTRO | introduccion_modulo | media/audio/iatu-m16-intro.mp3 | guion listo |
 | IATU-M16-CIERRE | cierre_modulo | media/audio/iatu-m16-cierre.mp3 | guion listo |
-| IATU-VID01-S01 | escena_video | media/audio/iatu-vid01-s01.mp3 | muestra producida |
-| IATU-VID01-S02 | escena_video | media/audio/iatu-vid01-s02.mp3 | muestra producida |
-| IATU-VID01-S03 | escena_video | media/audio/iatu-vid01-s03.mp3 | muestra producida |
+| IATU-VID01-S01 | escena_video | media/audio/iatu-vid01-s01.mp3 | guion listo |
+| IATU-VID01-S02 | escena_video | media/audio/iatu-vid01-s02.mp3 | guion listo |
+| IATU-VID01-S03 | escena_video | media/audio/iatu-vid01-s03.mp3 | guion listo |
 | IATU-VID02-S01 | escena_video | media/audio/iatu-vid02-s01.mp3 | guion listo |
 | IATU-VID02-S02 | escena_video | media/audio/iatu-vid02-s02.mp3 | guion listo |
 | IATU-VID02-S03 | escena_video | media/audio/iatu-vid02-s03.mp3 | guion listo |
@@ -556,36 +565,36 @@ Con personas tras la indicación de Diego: 31 de 60 (briefs en `herramientas/ima
 | IATU-IMG028 | IATU-M08-L02-P01 | Contrastar la afirmación | sí | pendiente |
 | IATU-IMG029 | IATU-M08-L04-P01 | Acuerdo no es independencia | no | pendiente |
 | IATU-IMG030 | IATU-M09-L01-P01 | Cero, vacío y repetición | no | pendiente |
-| IATU-IMG031 | IATU-M09-L02-P01 | Cada indicador tiene su población | sí | pendiente |
-| IATU-IMG032 | IATU-M09-L04-P01 | Un gráfico necesita sus datos | no | pendiente |
-| IATU-IMG033 | IATU-M10-L01-P01 | El brief antes de la imagen | sí | pendiente |
-| IATU-IMG034 | IATU-M10-L02-P01 | Cambiar una cosa por vez | no | pendiente |
-| IATU-IMG035 | IATU-M10-L03-P01 | La imagen acompaña, el control funciona | no | pendiente |
-| IATU-IMG036 | IATU-M10-L04-P01 | Procedencia de un recurso | sí | pendiente |
-| IATU-IMG037 | IATU-M11-L01-P01 | Una voz cercana y profesional | no | pendiente |
-| IATU-IMG038 | IATU-M11-L02-P01 | Tres escenas con propósito | no | pendiente |
-| IATU-IMG039 | IATU-M11-L03-P01 | Escuchar la muestra | sí | pendiente |
-| IATU-IMG040 | IATU-M11-L04-P01 | Coherencia entre voz, texto e imagen | no | pendiente |
-| IATU-IMG041 | IATU-M12-L01-P01 | Mirar la tarea completa | sí | pendiente |
-| IATU-IMG042 | IATU-M12-L02-P01 | El trabajo que queda fuera de la demo | no | pendiente |
-| IATU-IMG043 | IATU-M12-L03-P01 | Biblioteca que se puede mantener | sí | pendiente |
-| IATU-IMG044 | IATU-M12-L04-P01 | También existe una ruta manual | sí | pendiente |
-| IATU-IMG045 | IATU-M13-L01-P01 | Reglas y fuentes separadas | no | pendiente |
-| IATU-IMG046 | IATU-M13-L02-P01 | Recuperar solo lo pertinente | sí | pendiente |
-| IATU-IMG047 | IATU-M13-L03-P01 | Un asistente con límites | no | pendiente |
-| IATU-IMG048 | IATU-M13-L04-P01 | Probar también el caso difícil | sí | pendiente |
-| IATU-IMG049 | IATU-M14-L01-P01 | Un flujo con puntos de decisión | no | pendiente |
-| IATU-IMG050 | IATU-M14-L02-P01 | La aprobación tiene una versión | sí | pendiente |
-| IATU-IMG051 | IATU-M14-L03-P01 | No repetir el mismo efecto | no | pendiente |
-| IATU-IMG052 | IATU-M14-L04-P01 | Pausar conserva el control | sí | pendiente |
-| IATU-IMG053 | IATU-M15-L01-P01 | Una copia mínima de verdad | sí | pendiente |
-| IATU-IMG054 | IATU-M15-L02-P01 | Lo que no muestra el primer plano | no | pendiente |
-| IATU-IMG055 | IATU-M15-L03-P01 | Una instrucción ajena dentro de un documento | no | pendiente |
-| IATU-IMG056 | IATU-M15-L04-P01 | Verificar por otro canal | sí | pendiente |
-| IATU-IMG057 | IATU-M16-L01-P01 | Ver la demo fuera del encuadre | sí | pendiente |
-| IATU-IMG058 | IATU-M16-L02-P01 | Confianza que se puede explicar | no | pendiente |
-| IATU-IMG059 | IATU-M16-L03-P01 | Un acuerdo operativo del equipo | sí | pendiente |
-| IATU-IMG060 | IATU-M16-L04-P01 | Cierre con un producto defendible | sí | pendiente |
+| IATU-IMG031 | IATU-M09-L02-P01 | Cada indicador tiene su población | sí | generada en Canva, sin exportar |
+| IATU-IMG032 | IATU-M09-L04-P01 | Un gráfico necesita sus datos | no | generada en Canva, sin exportar |
+| IATU-IMG033 | IATU-M10-L01-P01 | El brief antes de la imagen | sí | generada en Canva, sin exportar |
+| IATU-IMG034 | IATU-M10-L02-P01 | Cambiar una cosa por vez | no | generada en Canva, sin exportar |
+| IATU-IMG035 | IATU-M10-L03-P01 | La imagen acompaña, el control funciona | no | generada en Canva, sin exportar |
+| IATU-IMG036 | IATU-M10-L04-P01 | Procedencia de un recurso | sí | generada en Canva, sin exportar |
+| IATU-IMG037 | IATU-M11-L01-P01 | Una voz cercana y profesional | no | generada en Canva, sin exportar |
+| IATU-IMG038 | IATU-M11-L02-P01 | Tres escenas con propósito | no | generada en Canva, sin exportar |
+| IATU-IMG039 | IATU-M11-L03-P01 | Escuchar la muestra | sí | generada en Canva, sin exportar |
+| IATU-IMG040 | IATU-M11-L04-P01 | Coherencia entre voz, texto e imagen | no | generada en Canva, sin exportar |
+| IATU-IMG041 | IATU-M12-L01-P01 | Mirar la tarea completa | sí | generada en Canva, sin exportar |
+| IATU-IMG042 | IATU-M12-L02-P01 | El trabajo que queda fuera de la demo | no | generada en Canva, sin exportar |
+| IATU-IMG043 | IATU-M12-L03-P01 | Biblioteca que se puede mantener | sí | generada en Canva, sin exportar |
+| IATU-IMG044 | IATU-M12-L04-P01 | También existe una ruta manual | sí | generada en Canva, sin exportar |
+| IATU-IMG045 | IATU-M13-L01-P01 | Reglas y fuentes separadas | no | generada en Canva, sin exportar |
+| IATU-IMG046 | IATU-M13-L02-P01 | Recuperar solo lo pertinente | sí | generada en Canva, sin exportar |
+| IATU-IMG047 | IATU-M13-L03-P01 | Un asistente con límites | no | generada en Canva, sin exportar |
+| IATU-IMG048 | IATU-M13-L04-P01 | Probar también el caso difícil | sí | generada en Canva, sin exportar |
+| IATU-IMG049 | IATU-M14-L01-P01 | Un flujo con puntos de decisión | no | generada en Canva, sin exportar |
+| IATU-IMG050 | IATU-M14-L02-P01 | La aprobación tiene una versión | sí | generada en Canva, sin exportar |
+| IATU-IMG051 | IATU-M14-L03-P01 | No repetir el mismo efecto | no | generada en Canva, sin exportar |
+| IATU-IMG052 | IATU-M14-L04-P01 | Pausar conserva el control | sí | generada en Canva, sin exportar |
+| IATU-IMG053 | IATU-M15-L01-P01 | Una copia mínima de verdad | sí | generada en Canva, sin exportar |
+| IATU-IMG054 | IATU-M15-L02-P01 | Lo que no muestra el primer plano | no | generada en Canva, sin exportar |
+| IATU-IMG055 | IATU-M15-L03-P01 | Una instrucción ajena dentro de un documento | no | generada en Canva, sin exportar |
+| IATU-IMG056 | IATU-M15-L04-P01 | Verificar por otro canal | sí | generada en Canva, sin exportar |
+| IATU-IMG057 | IATU-M16-L01-P01 | Ver la demo fuera del encuadre | sí | generada en Canva, sin exportar |
+| IATU-IMG058 | IATU-M16-L02-P01 | Confianza que se puede explicar | no | generada en Canva, sin exportar |
+| IATU-IMG059 | IATU-M16-L03-P01 | Un acuerdo operativo del equipo | sí | generada en Canva, sin exportar |
+| IATU-IMG060 | IATU-M16-L04-P01 | Cierre con un producto defendible | sí | generada en Canva, sin exportar |
 
 ## 5. Iconografía (24 roles · Lucide, licencia ISC)
 

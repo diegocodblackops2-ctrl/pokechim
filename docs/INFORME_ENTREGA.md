@@ -1,50 +1,41 @@
-# Informe de entrega · Curso 5 «IA para trabajar mejor» · 9-oct-2026
+# Informe de entrega · Curso 5 «IA para trabajar mejor» · 9-oct-2026 (segunda iteración)
 
-## Qué quedó construido
-- **Curso completo implementado** con el contenido íntegro del maestro v3: orientación con diagnóstico de 16 situaciones, 16 módulos, 64 lecciones, 256 pantallas, 32 talleres con producto, pauta, modelo, variante y las 96 devoluciones corregidas, 3 casos ramificados con reparación, biblioteca (24 encargos comparados, 10 plantillas rellenables y descargables, 3 auditorías, glosario, 42 fuentes, documentos de casos y descargas del participante), evaluación, proyecto, transferencia y cierre.
-- **Identidad propia, «Laboratorio de criterio»**: tinta, papel cálido y teal discreto. Los expedientes aparecen como documentos con líneas etiquetadas (E1, F2…), con sellos «Ficticio», encabezados de módulo con número grande e imagen, tema oscuro, tres tamaños de texto y modo sin movimiento. Usa tipografía del sistema e iconos Lucide (ISC) para los 24 roles.
-- **Interactividad con propósito** (detalle en `MAPA_PRODUCCION.md`):
-  - 16 clasificaciones: arrastre desde el asa, «Mover a…», tocar tarjeta y luego destino, y deshacer. Las tres vías llegan al mismo estado.
-  - 7 secuencias que aceptan cualquier orden válido y explican qué dependencia falta.
-  - 1 secuencia con ramas (M14) que evalúa solo la rama elegida.
-  - 8 comparaciones X/Y/Z con cálculos: aceptan coma decimal, negativos y conjuntos sin importar el orden.
-  - 32 micro-decisiones con microproducto (la referencia se desbloquea al escribir).
-  - 32 tarjetas reversibles con predicción opcional.
-  - 8 hotspots anclados a documentos HTML, con lista equivalente.
-  - Anotación personal por pantalla y descarga de la evidencia del módulo.
-- **Evaluación seria y protegida.** El banco A/B de 128 unidades se sirve desde un servicio autorizado y nunca llega al navegador. La corrección es 3+2 por unidad, con devolución por situación tras entregar la forma completa. El proyecto queda «pendiente de revisión» hasta que lo revise una persona con la rúbrica C1–C4. Resultado: 40/60, global ≥ 80 y proyecto ≥ 75. Se entrega un servicio de referencia y una herramienta para quien revisa.
-- **SCORM 2004 multi-SCO real (18 SCO)** con secuenciación que bloquea la evaluación hasta completar los 17 módulos, y **SCORM 1.2 separado** con sus límites declarados.
-- **Voz:** Catalina `es-CL-CatalinaNeural`, con muestra y lección muestra producidas, adaptación oral verificada y producción del lote lista para un comando. Ver `VOZ_CATALINA.md`.
-- **Microvideo VID01 producido:** composiciones del curso, voz y subtítulos medidos sobre el audio final. Los otros 11 tienen sus composiciones escritas en `herramientas/videos_escenas.json`.
-- **Imágenes con personas:** a pedido de Diego, se reescribieron 29 briefs ambientales para mostrar personas adultas ficticias trabajando, con lo que quedan 31 de 60 con personas. 6 imágenes integradas en WebP y 10 generadas en Canva sin exportar.
+## Qué cambió en esta iteración (pedidos de Diego)
+| Pedido | Qué se hizo |
+|---|---|
+| «Que sea bakán, que se mueva, morado, no azul ni verde» | Nueva identidad, **«Laboratorio nocturno de criterio»**: tinta violeta, auroras, fucsia y ámbar, tipografías Sora y Manrope (OFL, incluidas en el paquete). En la portada, una **red neuronal del programa**: 18 nodos (orientación, 16 módulos y evaluación) que se encienden con el avance real y llevan a cada sección. Además: título animado, subtítulo que se «escribe», tarjetas de módulo con imagen, inclinación y brillo, cabeceras de módulo con imagen viva y número gigante, aparición al hacer scroll, celebración con confeti al completar un módulo o aprobar. Todo se apaga con «Reducir movimiento». |
+| «Que diga cuántas horas llevas, una línea con el progreso» | **Reloj de dedicación**: solo cuenta tiempo activo con la pestaña visible; se guarda en el LMS y se informa como `session_time`. **Línea de progreso** del programa en la barra superior, panel de avance en el mapa lateral, anillos por módulo, insignias, «continuar donde quedaste» y una **línea de recorrido** por módulo (lecciones → talleres → caso → cierre). |
+| «Más actividades, realmente interactivo» | Se agregaron, todas con contenido real del maestro: escalera interactiva de los 4 niveles de uso; **predice antes de ver la resolución** (64 pantallas); **procedimiento paso a paso** (64 pantallas); **glosario vivo** (los términos se marcan en el texto y muestran su definición); carrusel con lo que permite cada lección. Se mantienen las 32 actividades, 32 tarjetas, 8 hotspots, 32 talleres y 3 casos. |
+| «Examen bloqueado hasta completar todo; % y aprobado al LMS» | **Un solo SCO** (SCORM 2004 4.ª ed. recomendado y 1.2 como alternativa). Las situaciones aplicadas se abren solo con las 17 secciones completas: forma A en el primer intento y B en el segundo, 64 situaciones por forma, 3 + 2 puntos, aprobado con 80 o más. Al LMS llegan `score.raw/scaled`, `success_status` (passed/failed), `completion_status`, `progress_measure`, objetivos por sección e interacciones. El proyecto se entrega como evidencia descargable para revisión humana y no bloquea la aprobación. |
+| «Las imágenes las puedes pedir a Canva; no tantas sin personas» | **60 de 60 imágenes** generadas en Canva, exportadas a resolución completa y convertidas a WebP con su variante móvil (3,7 MB en total). 31 tienen personas adultas ficticias trabajando y todas tienen acentos violeta. |
+| «La voz Microsoft es robótica; todas las voces desde el inicio, sin cambios bruscos» | Se probó Catalina de ElevenLabs: la cuenta conectada llegó a su tope de 10.000 créditos tras 22 pistas. Diego decidió grabar **todas** las voces en Storyline con una sola voz. Se entregaron **63 bloques de ≤3.000 caracteres**, con los códigos escritos como se pronuncian («ene equis 14», «ce 1», «pol a»), y un **cortador automático** que separa cada MP3 en sus pantallas, normaliza, crea subtítulos y revisa cada pista con reconocimiento de voz. Se retiró la voz de Microsoft del curso. |
+| «Velocidades ×0,75 a ×1,25» y «música de fondo con botón para silenciar» | Selector ×0,75 · ×0,8 · ×0,9 · ×1 · ×1,1 · ×1,2 · ×1,25, que se recuerda por persona. Botón de música en la barra superior (parte silenciado); la música baja sola cuando suena la narración o un video. Los prompts para 3 pistas están en `docs/locucion/MUSICA_PROMPTS.md`. |
 
-## Pruebas ejecutadas (evidencia en `docs/qa/`)
+## Pruebas (evidencia en `docs/qa/`, reproducible con `herramientas/qa/ejecutar_todo.sh`)
 | Suite | Resultado | Cubre |
 |---|---|---|
-| Interacciones | 32/32 | Las 4 familias, alternativa sin arrastre, teclado, persistencia, móvil a 360 px |
-| Recorrido | 9/9 | 256 pantallas, talleres, casos, biblioteca, carga a demanda, primera carga de 501 KiB, foco visible |
-| Evaluación + servicio | 26/26 | Puerta, forma A/B, sin claves en el cliente, reanudación, 3+2, proyecto, revisión, resultado y número de intentos |
-| SCORM (LMS simulado) | 22/22 | 2004 y 1.2: inicio, guardado, reanudación, completitud, objetivos, guardado rechazado y límite de 4.096 |
-| Locución (reconocimiento de voz) | 13 pistas | Similitud 0,955–1,0; ninguna negación perdida |
+| Interacciones | 32/32 | Las 4 familias, alternativa sin arrastre, teclado, persistencia, examen bloqueado, móvil a 360 px sin scroll horizontal |
+| Recorrido | 9/9 | 256 pantallas (con predicción y procedimientos abiertos), 32 talleres, 3 casos, biblioteca, carga a demanda, foco visible |
+| SCORM (LMS simulado, 1 SCO) | 36/36 | 2004: inicio, guardado, reanudación, tiempo, objetivos por sección, puerta de 17 secciones, forma A reprobada → `failed`, forma B aprobada → `passed` con 95/100, interacciones, guardado rechazado. 1.2: estado, `session_time` y límite de 4.096 |
+| Locución (reconocimiento de voz) | 22 pistas | Similitud 0,97–1,00; ninguna negación perdida; las etiquetas de dirección no se leen |
 
-Ninguna de estas pruebas se hizo en Dibork Learning ni con personas reales: falta la validación en el LMS y el pilotaje.
+Ninguna prueba se hizo en Dibork Learning ni con personas reales.
 
-## Decisiones tomadas (y por qué)
-1. **El repositorio `pokechim` es público.** Por eso el banco con claves, las soluciones de proyectos y el maestro completo quedan fuera de git (`.gitignore`). El build y el empaquetador fallan si detectan material privado. **Recomendación: pasar el repositorio a privado**, porque igual contiene el curso vendible.
-2. **Las claves formativas sí viajan al cliente**, porque el maestro las declara publicadas («claves y rúbrica publicadas»). Las claves del examen nunca.
-3. **Sin servicio no hay examen formal.** Ocultar claves no es seguridad; sin servicio, la evaluación muestra el bloqueo y su motivo.
-4. **Voz:** se produjo solo la muestra, como pide la guía. El lote se produce cuando Diego apruebe la voz y su licencia.
-5. **Referencia de calidad:** el curso de referencia «con voces chilenas» no estaba en el repositorio ni en Drive. No se inventó; se usaron como vara el prompt y los criterios del paquete.
-6. **Observación editorial:** la unidad `IATU-M12-U02` del banco usa el mismo expediente que la práctica `IATU-M12-L01-P04`, así que el participante ya lo vio antes. Conviene variarla.
+## Decisiones (y por qué)
+1. **Un solo SCO.** Lo pidió Diego y es lo más robusto: un solo registro, sin depender de la secuenciación del LMS. La puerta del examen la controla el curso.
+2. **Banco ofuscado dentro del paquete.** Lo eligió Diego para tener el examen dentro del SCORM. Es ofuscación, no seguridad: quien tenga el ZIP y conocimientos técnicos puede leer las claves. El banco **nunca** se sube al repositorio, que es público (`curso/data/eval.js` está en `.gitignore`). Si más adelante hace falta seguridad real, se puede volver al servicio de corrección de referencia (`servicio-correccion/`).
+3. **`cmi.exit = suspend` siempre.** Así la persona puede volver a ver su devolución y la biblioteca; la nota y el aprobado quedan registrados igual. Con «normal», varios LMS abren un intento nuevo y vacío.
+4. **Voz.** No se usa voz del navegador ni se presenta la voz sintética como humana. Mientras no estén las pistas definitivas, cada pantalla muestra que su narración está pendiente y el texto completo sigue disponible.
+5. **Repositorio público.** Sigue la recomendación de pasarlo a privado.
 
-## Pendientes concretos (bloquean la publicación)
+## Pendientes (bloquean la publicación)
 | Pendiente | Responsable | Cómo se cierra |
 |---|---|---|
-| Aprobar la voz Catalina y su licencia (o indicar otra) | Diego | Escuchar la muestra; definir Azure, Articulate o ElevenLabs. Luego un comando produce las 315 pistas restantes y los 11 videos |
-| Imágenes: 4 tuyas sin archivo (003, 004, 006, 007), 10 en Canva sin exportar (011–020) y 40 por generar | Diego / Claude | Subir los archivos o autorizar a seguir con Canva |
-| Servicio de corrección en la infraestructura de Dibork | Responsable del LMS | Implementar el contrato de `INTEGRACION_DIBORK.md` |
-| Persona revisora de proyectos | Dibork | Asignar rol y flujo |
-| Importación y pruebas en Dibork Learning (2004 y 1.2) | Responsable del LMS | Checklist de la sección 6 de `INTEGRACION_DIBORK.md` |
+| Grabar los 63 bloques de voz (Storyline) y entregarlos | Diego | Paquete `IATU_C05_voces_storyline_bloques*.zip`. Luego `python herramientas/cortar_grupos.py --entrada <carpeta> --voz "Storyline · <voz>"` y re-empaquetar |
+| Bloques 02–04 ya grabados con códigos sin deletrear (C1, F2, V1) | Diego | Escuchar; si suenan mal, regrabar con el texto corregido |
+| Re-render de los 12 microvideos con la voz definitiva | Claude | `herramientas/render_videos.py` (composiciones listas) en cuanto lleguen los bloques VID-* |
+| Música de fondo (opcional) | Diego | Generar con `docs/locucion/MUSICA_PROMPTS.md`, dejar los MP3 en `curso/media/music/` y re-empaquetar |
 | Revisión de funciones y planes vigentes de ChatGPT, Claude y Gemini | Contenido | Fuentes oficiales con fecha (caso 004) |
-| Lector de pantalla, medición WCAG, red limitada, memoria y dispositivos táctiles reales | QA | Casos parciales de `ACEPTACION_PRODUCCION.md` |
-| Pilotaje: las 60 h siguen siendo una estimación | Dibork | Piloto con participantes |
+| Persona revisora y lugar de entrega del proyecto | Dibork | El participante descarga su proyecto (.txt); definir dónde lo sube |
+| Importación y prueba en Dibork Learning | Responsable del LMS | Checklist de `INTEGRACION_DIBORK.md` |
+| Lector de pantalla, medición WCAG, red limitada y dispositivos táctiles reales | QA | Casos parciales de `ACEPTACION_PRODUCCION.md` |
