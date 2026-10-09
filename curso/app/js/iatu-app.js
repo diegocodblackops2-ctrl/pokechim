@@ -79,7 +79,7 @@
       var diag = st.d && st.d.diag;
       var list = [
         { type: "screen", id: "ori-bienvenida", label: "Bienvenida", r: "orientacion/bienvenida" },
-        { type: "screen", id: "ori-como", label: "Cómo estudiar y condiciones", r: "orientacion/como-estudiar" },
+        { type: "screen", id: "ori-como", label: "Cómo estudiar", r: "orientacion/como-estudiar" },
         { type: "diag", id: "diag", label: "Diagnóstico (16 situaciones, sin nota)", r: "orientacion/diagnostico", done: !!(diag && diag.done) },
         { type: "screen", id: "ori-tarea", label: "Tarea inicial ficticia", r: "orientacion/tarea" }];
       list.forEach(function (x) { if (x.done === undefined) x.done = itemDone(x.type, x.id, st); });
@@ -139,8 +139,8 @@
         cel[sco] = 1;
         store.save(true);
         fx.celebrate(sco === "orientacion" ? "00" : sco.slice(1), sco === "orientacion" ? "Orientación completa" : "Módulo " + parseInt(sco.slice(1), 10) + " completo",
-          "Se encendió un nodo más de tu red del programa.");
-        u.announce(sco === "orientacion" ? "Orientación completa." : "Módulo completo: requisitos obligatorios revisados.");
+          "Un nodo más encendido en tu mapa. ¡Vas avanzando!");
+        u.announce(sco === "orientacion" ? "Orientación completa." : "Módulo completo: terminaste todo lo obligatorio.");
       }
       if (IATU.service.configured()) reportProgress(sco, p);
     }
@@ -186,7 +186,7 @@
     if (parts[0] === "biblioteca") return show(function (mnt) { renderLibrary(mnt, parts.slice(1)); });
     if (parts[0] === "ajustes") return show(renderSettings);
     if (parts[0] === "creditos") return show(renderCredits);
-    if (!sco) return show(function (mnt) { mnt.appendChild(h("p", null, "Página no encontrada. ")).appendChild(h("a", { href: "#/" }, "Volver al inicio")); });
+    if (!sco) return show(function (mnt) { mnt.appendChild(h("p", null, "No encontramos esta página. ")).appendChild(h("a", { href: "#/" }, "Volver al inicio")); });
     var need = /^m\d\d$/.test(sco) ? loadData(sco) : Promise.resolve();
     need.then(function () {
       if (store.sco !== sco) { store.save(true); store.load(sco); }
@@ -243,7 +243,7 @@
         app.refreshProgress();
       }
       if (next) go(next.r);
-      else { u.toast("Fin de esta sección. Revisa el cierre para ver tus pendientes."); renderPager(sco, raw); }
+      else { u.toast("Llegaste al final de esta sección. En el cierre ves si te queda algo pendiente."); renderPager(sco, raw); }
     });
     if (!next && !isTeaching) nextB.disabled = true;
     pager.appendChild(prevB);
@@ -270,7 +270,7 @@
         var active = scoOfRoute(R.parts) === sco;
         var prog = sco !== "evaluacion" ? secProg(sco) : null;
         var mark = sco === "evaluacion"
-          ? (cp.complete ? (ex.done ? h("span", { class: "ring full", role: "img", "aria-label": "entregada" }) : null) : h("span", { class: "nav-lock" }, icon("candado", "bloqueada hasta completar las 17 secciones")))
+          ? (cp.complete ? (ex.done ? h("span", { class: "ring full", role: "img", "aria-label": "entregada" }) : null) : h("span", { class: "nav-lock" }, icon("candado", "se abre cuando completes las 17 secciones")))
           : h("span", { class: "ring" + (prog.complete ? " full" : ""), style: "--v:" + prog.pct.toFixed(3), role: "img", "aria-label": prog.complete ? "completo" : Math.round(prog.pct * 100) + " %" });
         var det = h("details", { class: "navmod", open: active });
         det.appendChild(h("summary", { class: "nav-list" }, h("span", { class: "navbtn", style: { display: "flex", gap: ".5rem", alignItems: "center", padding: ".45rem .5rem", fontWeight: active ? 700 : 500 } },
@@ -361,7 +361,7 @@
     var started = cp.done > 0 || !!res;
     var primary = h("a", { class: "btn btn-primary", href: "#/" + (res ? res.r : "orientacion/bienvenida") }, icon(started ? "jugar" : "cohete"), started ? "Continuar donde quedé" : "Empezar el laboratorio");
     var meta = h("div", { class: "hero-meta" });
-    [[16, "", "módulos"], [64, "", "lecciones"], [32, "", "talleres con producto"], [3, "", "casos con decisiones"]].forEach(function (m) {
+    [[16, "", "módulos"], [64, "", "lecciones"], [32, "", "talleres prácticos"], [3, "", "casos para decidir"]].forEach(function (m) {
       var b = h("b", null, "0"); meta.appendChild(h("div", null, b, h("span", null, m[2]))); setTimeout(function () { fx.count(b, m[0], m[1]); }, 500);
     });
     var hero = h("section", { class: "lab-hero", "aria-labelledby": "hero-t" },
@@ -378,18 +378,33 @@
     mnt.appendChild(hero);
     fx.type(typed, pub.subtitle, 14);
     setTimeout(function () { fx.neural(canvas, nodes); }, 60);
-    var progressTxt = "Tu red del programa: " + cp.secs + " de " + cp.nsecs + " secciones completas" + (cp.complete ? "; la evaluación está disponible." : "; la evaluación se habilita al completar todas.");
+    var progressTxt = "Tu red del programa: " + cp.secs + " de " + cp.nsecs + " secciones completas" + (cp.complete ? "; la evaluación está disponible." : "; la evaluación se abre cuando completes todas.");
     mnt.appendChild(h("p", { class: "sr-only" }, progressTxt));
 
-    // 2. Cinta con términos del glosario del curso
-    var terms = glossary().map(function (g) { return g[0]; });
-    if (terms.length) {
-      var track = h("div", { class: "ticker-track", "aria-hidden": "true" });
-      terms.concat(terms).forEach(function (t) { track.appendChild(h("span", null, t)); });
-      mnt.appendChild(h("div", { class: "ticker" }, track));
+    // 2. Vocabulario del oficio: un concepto del glosario a la vez, con su definición (se lee, no solo se ve pasar).
+    var G = glossary();
+    if (G.length) {
+      var gi = Math.floor(Date.now() / 86400000) % G.length, gt = h("b", { class: "vt" }), gd = h("p", { class: "vd" }), gn = h("span", { class: "vn" }), timer = null;
+      var showG = function (i) {
+        gi = (i + G.length) % G.length;
+        var card = gt.parentNode; if (card) { card.classList.remove("in"); void card.offsetWidth; card.classList.add("in"); }
+        gt.textContent = G[gi][0]; gd.textContent = G[gi][1]; gn.textContent = (gi + 1) + " de " + G.length;
+      };
+      var prevG = h("button", { type: "button", class: "btn btn-ghost btn-sm", "aria-label": "Concepto anterior" }, icon("anterior"));
+      var nextG = h("button", { type: "button", class: "btn btn-ghost btn-sm", "aria-label": "Concepto siguiente" }, icon("siguiente"));
+      var vocab = h("section", { class: "vocab rv", "aria-label": "Vocabulario del oficio", "aria-live": "polite" },
+        h("div", { class: "vh" }, h("span", { class: "eyebrow" }, icon("idea"), " Vocabulario del oficio"), gn, h("span", { class: "grow" }), prevG, nextG),
+        h("div", { class: "vbody in" }, gt, gd));
+      var auto = function () { clearInterval(timer); if (!fx.reduced()) timer = setInterval(function () { if (!document.body.contains(vocab)) return clearInterval(timer); showG(gi + 1); }, 9000); };
+      prevG.addEventListener("click", function () { showG(gi - 1); auto(); });
+      nextG.addEventListener("click", function () { showG(gi + 1); auto(); });
+      vocab.addEventListener("mouseenter", function () { clearInterval(timer); });
+      vocab.addEventListener("mouseleave", auto);
+      vocab.addEventListener("focusin", function () { clearInterval(timer); });
+      mnt.appendChild(vocab); showG(gi); auto();
     }
 
-    if (!store.isLMS()) mnt.appendChild(h("div", { class: "callout warn" }, h("p", null, h("b", null, "Vista previa. "), "Tu avance se guarda solo en este navegador. En Dibork Learning el mismo curso guarda tu avance, tu tiempo, la nota y el resultado en el LMS.")));
+    if (!store.isLMS()) mnt.appendChild(h("div", { class: "callout warn" }, h("p", null, h("b", null, "Vista previa. "), "Por ahora tu avance se guarda solo en este navegador. Dentro de Dibork Learning, el curso guarda tu avance, tu tiempo y tu nota en tu cuenta.")));
 
     // 3. Continuar
     if (res) {
@@ -402,22 +417,63 @@
 
     // 4. Tu avance e insignias
     mnt.appendChild(h("div", { class: "sec-head" }, h("div", null, h("span", { class: "sec-kick" }, "Tu laboratorio"), h("h2", null, "Tu avance, a la vista"),
-      h("p", null, "Cada sección completa enciende un nodo y una insignia. La evaluación final se abre cuando las 17 están listas."))));
+      h("p", null, "Cada sección que terminas enciende un nodo y te da una insignia. La evaluación final se abre cuando completes las 17."))));
     var tiles = h("div", { class: "stats" },
-      [[fx.fmtTime(store.totalTime()), "de trabajo activo"], [Math.round(cp.pct * 100) + " %", "de requisitos cumplidos"], [cp.secs + "/" + cp.nsecs, "secciones completas"], [ex.pass ? "Aprobada" : ex.done ? "Entregada" : cp.complete ? "Disponible" : "Bloqueada", "evaluación final"]]
+      [[fx.fmtTime(store.totalTime()), "de trabajo activo"], [Math.round(cp.pct * 100) + " %", "de lo obligatorio"], [cp.secs + "/" + cp.nsecs, "secciones completas"], [ex.pass ? "Aprobada" : ex.done ? "Entregada" : cp.complete ? "Disponible" : "Bloqueada", "evaluación final"]]
         .map(function (x) { return h("div", { class: "stat" }, h("b", null, x[0]), h("span", null, x[1])); }));
     mnt.appendChild(tiles);
-    var badges = h("div", { class: "badges", role: "list", "aria-label": "Insignias del recorrido" });
+    // Insignias: cada sección se gana con una habilidad concreta, no con un número.
+    var INSIG = { orientacion: ["brujula", "Punto de partida"], m01: ["diana", "Delegar con criterio"], m02: ["encargo", "Encargos que funcionan"],
+      m03: ["chat", "ChatGPT en serio"], m04: ["documento", "Claude para documentos"], m05: ["fuente", "Gemini con fuentes"],
+      m06: ["comparar", "Elegir la herramienta"], m07: ["enviar", "Comunicar con IA"], m08: ["lupa", "Verificar antes de usar"],
+      m09: ["grafico", "Datos sin humo"], m10: ["ver", "Imágenes con intención"], m11: ["audio", "Voz y video responsables"],
+      m12: ["cronometro", "Productividad medible"], m13: ["cerebro", "Asistentes propios"], m14: ["rayo", "Automatizar con control"],
+      m15: ["escudo", "Datos protegidos"], m16: ["estrella", "Criterio profesional"], evaluacion: ["trofeo", "Programa aprobado"] };
+    var ganadas = 0, detalle = h("div", { class: "badge-detail", hidden: true, "aria-live": "polite" }), abierta = null;
+    var infoSec = function (sco) {
+      if (sco === "orientacion") return { titulo: "Orientación y diagnóstico", obj: "Entender cómo funciona el curso, ubicarte con 16 situaciones (sin nota) y elegir una tarea de tu trabajo para ensayar.",
+        temas: ["Cómo estudiar y rutas", "Diagnóstico inicial", "Tu tarea inicial", "Mapa del programa"], min: 60, href: "#/orientacion/bienvenida" };
+      if (sco === "evaluacion") return { titulo: "Evaluación final", obj: "Demostrar tu criterio en 64 situaciones aplicadas (40 %) y en un proyecto de 9 etapas que califica un profesor (60 %).",
+        temas: ["Situaciones aplicadas · forma A y B", "Proyecto de desempeño", "Tu resultado", "Transferencia a tu trabajo"], min: 660, href: "#/evaluacion/requisitos" };
+      var m = C.modules[parseInt(sco.slice(1), 10) - 1];
+      return { titulo: "Módulo " + m.number + " · " + m.title, obj: m.objective, temas: m.lesson_titles || [], min: m.minutes, href: "#/" + sco + "/intro" };
+    };
+    var abrir = function (sco, btn) {
+      u.$$("button.badge", badges).forEach(function (x) { x.setAttribute("aria-expanded", "false"); });
+      if (abierta === sco) { abierta = null; detalle.hidden = true; return; }
+      abierta = sco; btn.setAttribute("aria-expanded", "true");
+      var inf = infoSec(sco), ins = INSIG[sco], on = btn.classList.contains("on"), p = sco === "evaluacion" ? null : secProg(sco);
+      u.clear(detalle);
+      detalle.appendChild(h("div", { class: "bd-top" }, h("i", { "aria-hidden": "true" }, icon(ins[0])),
+        h("div", null, h("span", { class: "sec-kick" }, on ? "Insignia ganada" : "Insignia: " + ins[1]), h("h3", null, inf.titulo))));
+      detalle.appendChild(h("div", { class: "bd-meta" }, h("span", { class: "chip" }, icon("reloj"), " Duración estimada: " + (inf.min >= 60 && inf.min % 60 === 0 ? inf.min / 60 + " h" : inf.min >= 60 ? fx.fmtTime(inf.min * 60) : inf.min + " min")),
+        p ? h("span", { class: "chip" }, icon("medidor"), " " + Math.round(p.pct * 100) + " % hecho") : null));
+      detalle.appendChild(h("p", { class: "bd-obj" }, h("b", null, "Para qué: "), inf.obj));
+      if (inf.temas.length) { detalle.appendChild(h("p", { class: "bd-lbl" }, "Qué vas a aprender")); detalle.appendChild(h("ol", { class: "bd-temas" }, inf.temas.map(function (t) { return h("li", null, t); }))); }
+      var locked = sco === "evaluacion" && !cp.complete;
+      detalle.appendChild(h("div", { class: "btn-row" }, locked ? h("span", { class: "note" }, icon("candado"), " Se abre cuando completes las 17 secciones.")
+        : h("a", { class: "btn btn-primary btn-sm", href: inf.href }, on ? "Repasar" : p && p.done ? "Continuar" : "Empezar", icon("siguiente"))));
+      detalle.hidden = false;
+      var colocar = function () { var cols = getComputedStyle(badges).gridTemplateColumns.split(" ").length || 1, idx = C.scos.indexOf(sco), fin = Math.min(C.scos.length, (Math.floor(idx / cols) + 1) * cols); badges.insertBefore(detalle, badges.children[fin] && badges.children[fin] !== detalle ? badges.children[fin] : null); };
+      colocar();
+    };
+    var badges = h("div", { class: "badges", role: "list", "aria-label": "Insignias del recorrido: toca una para ver qué aprendes" });
     C.scos.forEach(function (sco) {
-      var on = sco === "evaluacion" ? !!ex.done : secProg(sco).complete;
-      badges.appendChild(h("div", { class: "badge" + (on ? " on" : ""), role: "listitem" }, h("i", { "aria-hidden": "true" }, h("span", null, sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1))),
-        h("span", null, (sco === "orientacion" ? "Orientación" : sco === "evaluacion" ? "Evaluación" : "Módulo " + parseInt(sco.slice(1), 10)) + (on ? " · lograda" : ""))));
+      var on = sco === "evaluacion" ? !!ex.pass : secProg(sco).complete, ins = INSIG[sco] || ["medalla", sco];
+      if (on) ganadas++;
+      var donde = sco === "orientacion" ? "Orientación" : sco === "evaluacion" ? "Evaluación final" : "Módulo " + parseInt(sco.slice(1), 10);
+      var bt = h("button", { type: "button", class: "badge" + (on ? " on" : ""), role: "listitem", "aria-expanded": "false", title: "Ver qué aprendes en " + donde },
+        h("i", { "aria-hidden": "true" }, icon(on ? ins[0] : "candado")),
+        h("span", { class: "bt" }, h("b", null, ins[1]), h("small", null, donde + (on ? " · ganada" : ""))));
+      bt.addEventListener("click", function () { abrir(sco, bt); });
+      badges.appendChild(bt);
     });
+    mnt.appendChild(h("p", { class: "note" }, (ganadas ? "Llevas " + ganadas + " de " + C.scos.length + " insignias." : "Aún no tienes insignias: la primera la ganas al terminar la orientación.") + " Toca cualquiera para ver qué aprendes y cuánto dura."));
     mnt.appendChild(badges);
 
     // 5. Escalera de niveles de uso (interactiva)
     mnt.appendChild(h("div", { class: "sec-head" }, h("div", null, h("span", { class: "sec-kick" }, "El mapa del programa"), h("h2", null, "Cuatro niveles de uso, una sola pregunta: ¿quién controla el resultado?"),
-      h("p", null, "Toca cada nivel. Es un mapa editorial de trabajo, no una escala científica ni un ranking de personas."))));
+      h("p", null, "Toca cada nivel. Es una forma práctica de ordenar el trabajo, no un ranking de personas."))));
     var lv = [["Consultar", "Pedir una explicación o un primer apoyo."], ["Colaborar", "Iterar con objetivo, contexto y revisión."], ["Sistematizar", "Procedimiento reutilizable con fuentes, criterios y pruebas."], ["Automatizar con supervisión", "Ejecutar partes con límites, permisos y respuesta ante fallos."]];
     var ladder = h("div", { class: "ladder", role: "group", "aria-label": "Niveles de uso" });
     lv.forEach(function (l, i) {
@@ -433,12 +489,12 @@
       h("p", null, pub.short))));
     var routes = [[1, 6, "Ruta esencial"], [7, 12, "Aplicación profesional"], [13, 16, "Profundización"]];
     var grid = h("div", { class: "mod-grid" });
-    grid.appendChild(mcard({ n: "00", title: "Orientación y diagnóstico", obj: "Condiciones, rutas, 16 situaciones sin nota y tu tarea inicial.", time: "60 min", href: "#/orientacion/bienvenida", prog: secProg("orientacion"), band: "Inicio", img: secImage("orientacion") }));
+    grid.appendChild(mcard({ n: "00", title: "Orientación y diagnóstico", obj: "Cómo funciona el curso, 16 situaciones para ubicarte (sin nota) y tu tarea inicial.", time: "60 min", href: "#/orientacion/bienvenida", prog: secProg("orientacion"), band: "Inicio", img: secImage("orientacion") }));
     C.modules.forEach(function (m) {
       var band = routes.filter(function (r) { return m.number >= r[0] && m.number <= r[1]; })[0][2];
       grid.appendChild(mcard({ n: ("0" + m.number).slice(-2), title: m.title, obj: m.objective, time: (m.minutes / 60) + " h", href: "#/" + m.sco + "/intro", prog: secProg(m.sco), band: band, img: secImage(m.sco) }));
     });
-    grid.appendChild(mcard({ n: "EV", title: "Evaluación, proyecto y transferencia", obj: "Situaciones aplicadas y proyecto con corrección automática al entregar, y transferencia a tu trabajo.", time: "11 h", href: "#/evaluacion/requisitos", prog: null, band: cp.complete ? "Disponible" : "Bloqueada", img: secImage("evaluacion"), locked: !cp.complete, sent: ex.done }));
+    grid.appendChild(mcard({ n: "EV", title: "Evaluación, proyecto y transferencia", obj: "64 situaciones aplicadas, un proyecto que revisa un profesor y cómo llevar todo a tu trabajo.", time: "11 h", href: "#/evaluacion/requisitos", prog: null, band: cp.complete ? "Disponible" : "Bloqueada", img: secImage("evaluacion"), locked: !cp.complete, sent: ex.done }));
     mnt.appendChild(grid);
     u.$$(".mcard", grid).forEach(fx.tilt);
 
@@ -492,13 +548,13 @@
       mnt.appendChild(h("p", { class: "note" }, C.publication.duration));
       mnt.appendChild(h("h2", null, "Condiciones de avance"));
       mnt.appendChild(h("ul", { class: "reading" },
-        h("li", null, "Pantallas de enseñanza: revisión declarada, sin tiempo mínimo."),
-        h("li", null, "Prácticas (P04): un intento y revisar la devolución. No se exige acertar."),
-        h("li", null, "Talleres: entregar tu borrador y revisar la pauta. Sin nota automática de calidad."),
-        h("li", null, "Casos: completar decisiones y escribir tu versión."),
-        h("li", null, "Audio, videos, tarjetas y zonas exploradas son opcionales y no dan puntos."),
-        h("li", null, "La evaluación se habilita cuando completas lo obligatorio, verificado por el servicio autorizado.")));
-      mnt.appendChild(h("div", { class: "callout warn reading" }, h("h3", null, icon("privado"), " Tus datos"), h("p", null, "Trabaja con los expedientes ficticios del curso. Si usas un asistente real, comparte solo datos ficticios o autorizados y registra lo que hiciste. No escribas contraseñas ni datos personales reales en las respuestas.")));
+        h("li", null, "Pantallas: las marcas como revisadas cuando las leíste. No hay tiempo mínimo."),
+        h("li", null, "Prácticas: haces un intento y revisas la devolución. No necesitas acertar."),
+        h("li", null, "Talleres: entregas tu borrador y lo comparas con la pauta. No llevan nota."),
+        h("li", null, "Casos: tomas las decisiones y escribes tu propia versión."),
+        h("li", null, "El audio, los videos, las tarjetas y las zonas para explorar son de apoyo: opcionales y sin puntos."),
+        h("li", null, "La evaluación final se abre sola cuando completas todo lo obligatorio.")));
+      mnt.appendChild(h("div", { class: "callout warn reading" }, h("h3", null, icon("privado"), " Tus datos"), h("p", null, "Trabaja con los expedientes ficticios del curso. Si pruebas con un asistente real, comparte solo datos ficticios o autorizados y anota lo que hiciste. Nunca escribas contraseñas ni datos personales reales.")));
       mnt.appendChild(h("div", { class: "callout info reading" }, h("p", null, C.honesty)));
       markReviewed("ori-como");
     } else if (page === "diagnostico") {
@@ -521,7 +577,7 @@
       var b = h("button", { class: "btn btn-primary", type: "button" }, icon("guardar"), store.get("s", "ori-tarea") ? "Tarea guardada" : "Guardar mi tarea inicial");
       b.addEventListener("click", function () { store.put("s", "ori-tarea", { r: 1 }, { now: true }); b.lastChild.textContent = "Tarea guardada"; app.refreshProgress(); u.announce("Tarea inicial guardada."); });
       mnt.appendChild(h("div", { class: "btn-row" }, b));
-      mnt.appendChild(h("p", { class: "note" }, "Volverás a esta tarea en el cierre del programa para medir con evidencia qué cambió."));
+      mnt.appendChild(h("p", { class: "note" }, "Al final del programa vuelves a esta tarea para ver, con evidencia, qué cambió en tu forma de trabajar."));
     } else if (page === "mapa") {
       head("Mapa", "Mapa del programa");
       var reqs = requirements("orientacion");
@@ -648,11 +704,11 @@
     var id = u.newId("pred"), ta = h("textarea", { id: id, rows: 3, placeholder: "Por ejemplo: qué dato revisaría primero y qué no prometería." }, rec.t || "");
     ta.addEventListener("input", function () { store.put("o", "pred-" + screen.id, { t: ta.value }); });
     var show = h("button", { class: "btn btn-primary", type: "button" }, icon("ver"), "Ver la resolución");
-    var skip = h("button", { class: "btn btn-ghost", type: "button" }, "Ver sin predecir");
+    var skip = h("button", { class: "btn btn-ghost", type: "button" }, "Ver sin adivinar");
     function reveal() { res.hidden = false; box.classList.add("revealed"); store.put("o", "pred-" + screen.id, { t: ta.value, shown: 1 }); u.announce("Resolución visible."); res.scrollIntoView({ behavior: fx.reduced() ? "auto" : "smooth", block: "start" }); }
     show.addEventListener("click", reveal); skip.addEventListener("click", reveal);
-    var box = h("section", { class: "predict" + (rec.shown ? " revealed" : ""), "aria-label": "Predice antes de ver" },
-      h("div", { class: "predict-q" }, h("span", { class: "sec-kick" }, icon("chispa"), " Predice primero"),
+    var box = h("section", { class: "predict" + (rec.shown ? " revealed" : ""), "aria-label": "Primero, tu apuesta" },
+      h("div", { class: "predict-q" }, h("span", { class: "sec-kick" }, icon("chispa"), " ¿Qué harías tú?"),
         h("label", { class: "fl", for: id }, "Antes de leer la resolución: ¿qué harías tú con este caso?"), ta,
         h("div", { class: "btn-row" }, show, skip)),
       res);
@@ -742,12 +798,12 @@
     mnt.appendChild(h("p", { class: "lead reading" }, m.closure));
     var reqs = requirements(m.sco), p = progressOf(m.sco);
     mnt.appendChild(h("div", { class: "callout " + (p.complete ? "" : "warn") }, h("h3", null, p.complete ? "Requisitos obligatorios completos" : "Te faltan " + (p.total - p.done) + " de " + p.total + " requisitos"),
-      h("p", null, p.complete ? "Este módulo quedó registrado como completo. Puedes volver a cualquier pantalla para repasar." : "Abre cada pendiente desde la lista. No se exige acertar: basta intentar y revisar la devolución.")));
+      h("p", null, p.complete ? "¡Listo! Este módulo quedó completo. Puedes volver a cualquier pantalla cuando quieras repasar." : "Abre cada pendiente desde la lista. No necesitas acertar: basta con intentarlo y revisar la devolución.")));
     var pend = reqs.filter(function (q) { return !q.done; });
     if (pend.length) { mnt.appendChild(h("h2", null, "Pendientes")); mnt.appendChild(reqList(pend)); }
     mnt.appendChild(h("details", null, h("summary", null, "Ver todos los requisitos (" + reqs.length + ")"), reqList(reqs)));
     mnt.appendChild(h("h2", null, "Tu evidencia del módulo"));
-    mnt.appendChild(h("p", null, "Descarga tus productos (talleres, microproductos, casos y anotaciones) para tu portafolio. Conservar tus productos y correcciones es la evidencia de lo que aprendiste."));
+    mnt.appendChild(h("p", null, "Descarga lo que produjiste en este módulo (talleres, casos y notas) para tu portafolio: es la prueba de lo que aprendiste."));
     var dl = h("button", { class: "btn", type: "button" }, icon("descargar"), "Descargar mi evidencia (.txt)");
     dl.addEventListener("click", function () { u.download("IATU-" + m.sco + "-evidencia.txt", evidenceText(m)); });
     mnt.appendChild(h("div", { class: "btn-row" }, dl));
@@ -779,7 +835,7 @@
     var C = IATU.data.curso, tab = parts[0] || "prompts";
     mnt.appendChild(h("span", { class: "kicker" }, "Biblioteca opcional"));
     mnt.appendChild(h("h1", null, "Biblioteca y recursos"));
-    mnt.appendChild(h("p", { class: "note reading" }, "Recursos de consulta. No suman horas obligatorias ni puntos."));
+    mnt.appendChild(h("p", { class: "note reading" }, "Material de consulta para cuando lo necesites. No es obligatorio ni da puntos."));
     var tabs = [["prompts", "Encargos comparados (" + C.prompts.length + ")"], ["plantillas", "Plantillas (" + C.templates.length + ")"], ["auditorias", "Auditorías (" + C.faults.length + ")"], ["materiales", "Documentos de casos"], ["glosario", "Glosario"], ["fuentes", "Fuentes"], ["descargas", "Descargas"]];
     mnt.appendChild(h("nav", { class: "lib-tabs", "aria-label": "Secciones de la biblioteca" }, tabs.map(function (t) { return h("a", { href: "#/biblioteca/" + t[0], "aria-current": t[0] === tab ? "page" : null }, t[1]); })));
     if (tab === "prompts") {
@@ -791,7 +847,7 @@
           h("div", null, h("span", { class: "ref-label" }, "Encargo vago"), h("div", { class: "prompt-box vague" }, p.vague)),
           h("div", null, h("span", { class: "ref-label" }, "Encargo completo"), h("div", { class: "prompt-box good" }, p.prompt))));
         var copy = h("button", { class: "btn btn-sm", type: "button" }, icon("archivo"), "Copiar encargo completo");
-        copy.addEventListener("click", function () { (navigator.clipboard ? navigator.clipboard.writeText(p.prompt) : Promise.reject()).then(function () { u.toast("Encargo copiado. Úsalo solo con datos ficticios o autorizados."); }, function () { u.toast("No se pudo copiar; selecciona el texto manualmente."); }); });
+        copy.addEventListener("click", function () { (navigator.clipboard ? navigator.clipboard.writeText(p.prompt) : Promise.reject()).then(function () { u.toast("Encargo copiado. Úsalo solo con datos ficticios o autorizados."); }, function () { u.toast("No se pudo copiar. Selecciona el texto y cópialo a mano."); }); });
         d.appendChild(h("div", { class: "btn-row" }, copy));
         d.appendChild(h("details", null, h("summary", null, "Ver referencia y controles"),
           h("div", { class: "ref" }, h("span", { class: "ref-label" }, "Referencia"), p.reference),
@@ -847,7 +903,7 @@
       q.addEventListener("input", fill); fill();
       mnt.appendChild(h("div", { style: { maxWidth: "420px" } }, q)); mnt.appendChild(dl2);
     } else if (tab === "fuentes") {
-      mnt.appendChild(h("p", { class: "note reading" }, "Cada marca como ", h("span", { class: "src" }, "N1"), " en el texto remite a esta lista. Las fuentes indican su alcance y estado de consulta; las funciones de productos cambian y deben verificarse en documentación oficial antes de publicar."));
+      mnt.appendChild(h("p", { class: "note reading" }, "Cada marca como ", h("span", { class: "src" }, "N1"), " en el texto te trae a esta lista. Cada fuente indica qué respalda y cuándo se consultó. Las funciones de estas herramientas cambian seguido: revisa la documentación oficial antes de usarlas en tu trabajo."));
       C.sources.forEach(function (s) {
         var open = parts[1] === s.id;
         var d = h("div", { class: "card", id: "src-" + s.id, style: { marginBottom: ".6rem", borderColor: open ? "var(--teal)" : null } },
@@ -868,7 +924,7 @@
       mnt.appendChild(h("div", { class: "dl-list" }, files.map(function (f) {
         return h("a", { class: "dl-item", href: BASE + f[0], download: "" }, icon("descargar"), h("span", null, h("b", null, f[1]), h("small", null, f[2])));
       })));
-      mnt.appendChild(h("p", { class: "note" }, "Todos los datos de estos archivos son ficticios. Las claves del examen no se incluyen en materiales del participante."));
+      mnt.appendChild(h("p", { class: "note" }, "Todos los datos de estos archivos son ficticios."));
     }
   }
 
@@ -897,7 +953,7 @@
       seg("Tamaño del texto", "size", [[null, "Normal"], ["l", "Grande"], ["xl", "Muy grande"]]),
       seg("Tema", "theme", [[null, "Según el sistema"], ["light", "Claro"], ["dark", "Oscuro"]]),
       seg("Animaciones", "nomotion", [[null, "Según el sistema"], [true, "Reducir movimiento"]])));
-    mnt.appendChild(h("p", { class: "note" }, "Las tarjetas se muestran sin giro animado cuando reduces el movimiento."));
+    mnt.appendChild(h("p", { class: "note" }, "Con movimiento reducido, las tarjetas cambian sin animación de giro."));
   }
   function renderCredits(mnt) {
     mnt.appendChild(h("h1", null, "Créditos y licencias"));
@@ -905,8 +961,8 @@
       h("li", null, "Contenido y casos ficticios: Curso 5 v3, Dibork Learning."),
       h("li", null, "Narración: voz sintética en español de Chile, generada por computador (no es una grabación humana). Uso sujeto a la licencia de la cuenta con que Dibork produce las pistas."),
       h("li", null, "Iconos: Lucide (licencia ISC). Tipografías: Sora y Manrope (SIL Open Font License 1.1, incluidas en app/fonts)."),
-      h("li", null, "Imágenes: generadas para el curso (Canva / entregadas por Dibork); no representan personas, marcas ni lugares reales."),
-      h("li", null, "Las salidas X/Y/Z de las actividades son material controlado del curso; no son resultados de ChatGPT, Claude ni Gemini.")));
+      h("li", null, "Imágenes: creadas para el curso; no representan personas, marcas ni lugares reales."),
+      h("li", null, "Las salidas X, Y y Z de las actividades se escribieron para el curso; no son respuestas reales de ChatGPT, Claude ni Gemini.")));
   }
 
   /* ---------- Arranque ---------- */
@@ -922,7 +978,7 @@
     savePill = h("span", { class: "save-pill", role: "status", "aria-live": "polite" }, h("span", { class: "dot" }), h("span", { class: "lbl" }, ""));
     courseLine = h("div", { class: "course-line", role: "img", "aria-label": "Avance del programa" }, h("i"));
     pctChip = h("span", { class: "chip pct" }, icon("red"), h("b", null, "0 %"));
-    timeChip = h("span", { class: "chip time", title: "Tiempo activo en el curso (se cuenta solo con la pestaña visible y actividad reciente)" }, icon("cronometro"), h("span", { class: "t-long" }, "Llevas "), h("b", null, "0 min"));
+    timeChip = h("span", { class: "chip time", title: "Tiempo activo: cuenta solo mientras estás trabajando en el curso" }, icon("cronometro"), h("span", { class: "t-long" }, "Llevas "), h("b", null, "0 min"));
     var brand = h("a", { class: "brand", href: PREVIEW ? "#/" : "#/" + firstRoute(SCO_LOCK) },
       h("span", { class: "brand-mark", html: '<svg viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#d946ef"/></linearGradient></defs><rect x="2" y="2" width="30" height="30" rx="9" fill="url(#bm)"/><circle cx="11" cy="12" r="2.6" fill="#fff"/><circle cx="23" cy="11" r="2.2" fill="#fff" opacity=".85"/><circle cx="17" cy="22" r="3" fill="#fff"/><circle cx="26" cy="23" r="1.8" fill="#fcd34d"/><path d="M11 12L17 22L23 11M17 22L26 23" stroke="#fff" stroke-width="1.4" opacity=".75" fill="none"/></svg>' }),
       h("span", { class: "brand-txt" }, h("b", null, "IA para trabajar mejor"), h("small", null, "Dibork Learning · Curso 5")));
@@ -951,6 +1007,8 @@
     var C = IATU.data.curso;
     if (!C) { document.body.textContent = "No se pudieron cargar los datos del curso."; return; }
     store.init("orientacion", C.scos);
+    // Evaluación del proyecto que el LMS haya dejado para esta persona (cmi.comments_from_lms).
+    try { if (IATU.evaluacion && IATU.evaluacion.sincronizar && IATU.evaluacion.sincronizar()) store.save(true); } catch (e) { /* sin acción */ }
     buildShell();
     updateTopbar();
     fx.clock(store, function () { updateTopbar(); store.saveSoon(); });

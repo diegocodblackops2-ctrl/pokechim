@@ -73,7 +73,7 @@
       // Pista aún no producida/aprobada: se informa sin simular audio ni usar voz del navegador.
       return h("div", { class: "audio na", role: "note" },
         icon("audio"),
-        h("span", { class: "label" }, "Narración pendiente de aprobación de voz. El texto de esta pantalla es el contenido completo."));
+        h("span", { class: "label" }, "Esta pantalla aún no tiene narración. El texto tiene todo el contenido."));
     }
     var el = new Audio();
     el.preload = "none";
@@ -88,7 +88,7 @@
     var trBtn = h("button", { class: "btn btn-sm btn-ghost", type: "button", "aria-expanded": "false" }, icon("transcripcion"), "Transcripción");
     var trBox = h("div", { class: "transcript", hidden: true });
     var muestra = /^muestra/.test(rec.status || "");
-    var label = h("span", { class: "label" }, eq, (opts.label || "Narración") + " · voz sintética (es-CL)", muestra ? h("span", { class: "tag tag-ochre", title: "Pista de muestra pendiente de aprobación de voz y licencia" }, "muestra") : null);
+    var label = h("span", { class: "label" }, eq, (opts.label || "Narración") + " · voz sintética (es-CL)", muestra ? h("span", { class: "tag tag-ochre", title: "Pista de prueba" }, "muestra") : null);
     function setIcon(name, lbl) { u.clear(btn); btn.appendChild(icon(name)); btn.setAttribute("aria-label", lbl); }
     btn.addEventListener("click", function () {
       if (!el.src) el.src = BASE + rec.file;
@@ -96,7 +96,7 @@
       if (active && active !== el) active.pause();
       active = el;
       el.playbackRate = parseFloat(speed.value);
-      el.play().catch(function () { u.toast("No se pudo reproducir el audio. El texto de la pantalla contiene la misma información."); });
+      el.play().catch(function () { u.toast("No se pudo reproducir el audio. Todo lo que dice está en el texto de la pantalla."); });
     });
     el.addEventListener("play", function () { playing = true; wrapA.classList.add("is-playing"); duck(true); setIcon("pausa", "Pausar narración"); });
     el.addEventListener("pause", function () { if (playing) duck(false); playing = false; wrapA.classList.remove("is-playing"); setIcon("play", "Reproducir narración"); });
@@ -115,7 +115,7 @@
       trBox.hidden = !open; trBtn.setAttribute("aria-expanded", String(open));
       if (open && !trBox.firstChild) {
         if (rec.text) trBox.appendChild(u.paragraphs(rec.text, ""));
-        else trBox.appendChild(h("p", null, "La narración lee el texto de esta pantalla, sin agregar información."));
+        else trBox.appendChild(h("p", null, "La narración lee el texto de esta pantalla."));
       }
     });
     var wrapA = h("div", { class: "audio", role: "group", "aria-label": "Narración opcional" },

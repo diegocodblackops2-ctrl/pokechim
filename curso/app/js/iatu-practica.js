@@ -15,7 +15,7 @@
         h("div", { class: "meta-row" },
           h("span", { class: "tag" }, icon("reloj"), w.minutes + " min estimados"),
           h("span", { class: "tag" }, w.scaffolding),
-          h("span", { class: "tag tag-violet" }, "Formativo · sin nota automática"))));
+          h("span", { class: "tag tag-violet" }, "Práctica · sin nota"))));
     mount.appendChild(head);
     var steps = h("ol", { class: "ws-steps", "aria-label": "Etapas sugeridas" });
     w.workflow.forEach(function (s, i) {
@@ -50,7 +50,7 @@
     ta.addEventListener("input", function () { store.put("w", w.id, { prod: ta.value }); count(); });
     count();
     mount.appendChild(h("h2", null, icon("archivo"), " Tu producto"));
-    mount.appendChild(h("p", { class: "hint", id: pid + "-h" }, "Escribe tu producto editable y un registro breve que vincule cada decisión con los antecedentes (por ejemplo, «F2: tabla interna»)."));
+    mount.appendChild(h("p", { class: "hint", id: pid + "-h" }, "Escribe tu producto y, junto a cada decisión, anota de qué antecedente sale (por ejemplo, «F2: tabla interna»)."));
     mount.appendChild(h("label", { class: "sr-only", for: pid }, "Producto del taller " + w.title));
     mount.appendChild(ta); mount.appendChild(cnt);
 
@@ -67,7 +67,7 @@
     mount.appendChild(live);
 
     var post = h("div");
-    var submit = h("button", { class: "btn btn-primary", type: "button" }, icon("enviar"), rec.sub ? "Actualizar mi borrador" : "Entregar borrador para revisión formativa");
+    var submit = h("button", { class: "btn btn-primary", type: "button" }, icon("enviar"), rec.sub ? "Actualizar mi borrador" : "Entregar mi borrador y ver la pauta");
     var dl = h("button", { class: "btn", type: "button" }, icon("descargar"), "Descargar mi producto (.txt)");
     dl.addEventListener("click", function () {
       u.download(w.id + "-producto.txt", w.title + "\n\n" + ta.value + "\n\n— Registro de ruta real —\n" + JSON.stringify(lr, null, 2));
@@ -87,7 +87,7 @@
       var r = store.get("w", w.id) || {};
       u.clear(post);
       post.appendChild(h("h2", { tabindex: "-1" }, icon("revision"), " Revisa con la pauta"));
-      post.appendChild(h("p", null, "Compara tu producto con cada control. Marca los que cumple; los que no, corrígelos en tu producto."));
+      post.appendChild(h("p", null, "Compara tu producto con cada punto de la pauta. Marca los que cumples y corrige los que no."));
       var checks = (r.checks || []).slice();
       var cl = h("ul", { class: "checklist" });
       w.checks.forEach(function (c, i) {
@@ -136,11 +136,11 @@
       done.addEventListener("click", function () {
         store.put("w", w.id, { fbr: true, done: true }, { now: true });
         done.lastChild.textContent = "Pauta revisada"; done.classList.remove("btn-primary");
-        u.announce("Taller registrado: evidencia y revisión guardadas.");
+        u.announce("¡Taller listo! Tu producto y tu revisión quedaron guardados.");
         IATU.app && IATU.app.refreshProgress();
       });
       post.appendChild(h("div", { class: "btn-row" }, done));
-      post.appendChild(h("p", { class: "note" }, "Completar el taller exige entregar tu borrador y revisar la pauta. No se exige coincidir con el modelo ni un puntaje."));
+      post.appendChild(h("p", { class: "note" }, "Para completar el taller, entrega tu borrador y revisa la pauta. No necesitas igualar el modelo ni sacar puntaje."));
       if (focus) post.firstChild.focus();
     }
     if (rec.sub) renderPost(false);
@@ -218,18 +218,18 @@
           var rp = h("div", { class: "fb no repair", role: "status" }, h("h3", null, icon("circulo-alerta"), "Revisión " + s.repair_id + ": revisa " + parts.join(" y ")), h("p", null, s.repair_text));
           fb.appendChild(rp);
         }
-        u.announce(ok ? "Decisión sustentada. Puedes continuar." : "Revisa el antecedente y vuelve a confirmar.", true);
+        u.announce(ok ? "Decisión sustentada. Puedes continuar." : "Revisa el antecedente y vuelve a intentarlo.", true);
       });
       B.appendChild(h("div", { class: "btn-row" }, go));
       B.appendChild(fb);
-      B.appendChild(h("p", { class: "note" }, "No se envía ni se concede nada desde el curso. " + s.expected));
+      B.appendChild(h("p", { class: "note" }, "Ojo: desde el curso no se envía ni se aprueba nada real. " + s.expected));
       stage.appendChild(box);
     }
     function renderFinal() {
       var r = store.get("c", cs.id) || {};
       var box = h("section", { class: "card" });
       box.appendChild(h("h2", { style: { marginTop: 0 } }, icon("lapiz"), " Tu versión propia"));
-      box.appendChild(h("p", null, "Con las cinco decisiones tomadas, escribe tu versión del producto. Luego compárala con el modelo y explica qué conservas del documento."));
+      box.appendChild(h("p", null, "Con tus cinco decisiones tomadas, escribe tu versión del producto. Después compárala con el modelo y explica qué tomaste del documento."));
       var tid = u.newId("cr");
       var ta = h("textarea", { id: tid, rows: 8 }, r.refl || "");
       ta.addEventListener("input", function () { store.put("c", cs.id, { refl: ta.value }); });
@@ -276,7 +276,7 @@
     var answers = st.ans || {};
     var i = st.at || 0;
     var stage = h("div");
-    mount.appendChild(h("p", { class: "note" }, "16 situaciones breves. No hay nota ni bloqueo por resultado: sirve para que sepas qué conviene reforzar. Puedes elegir «No lo sé»."));
+    mount.appendChild(h("p", { class: "note" }, "16 situaciones cortas. No tienen nota ni te bloquean nada: sirven para saber qué te conviene reforzar. Puedes responder «No lo sé»."));
     var dots = h("div", { class: "case-track", "aria-hidden": "true" });
     mount.appendChild(dots);
     mount.appendChild(stage);
@@ -324,11 +324,11 @@
       var weak = items.filter(function (it) { return answers[it.id] !== it.key; });
       var box = h("section", { class: "card" });
       box.appendChild(h("h2", { tabindex: "-1", style: { marginTop: 0 } }, "Tu mapa inicial"));
-      box.appendChild(h("p", null, "Este resultado no se registra como nota. Úsalo para decidir dónde poner más atención."));
+      box.appendChild(h("p", null, "Esto no es una nota: úsalo para decidir dónde poner más atención."));
       if (weak.length) {
         box.appendChild(h("h3", null, "Temas para reforzar (" + weak.length + ")"));
         box.appendChild(h("ul", null, weak.map(function (it) { return h("li", null, it.topic); })));
-      } else box.appendChild(h("p", null, "Leíste bien las 16 situaciones. Igual conviene recorrer los talleres: el diagnóstico no mide producción."));
+      } else box.appendChild(h("p", null, "¡Muy bien en las 16! Igual conviene hacer los talleres: el diagnóstico mide criterio, no lo que produces."));
       var again = h("button", { class: "btn", type: "button" }, icon("reintentar"), "Revisar las situaciones");
       again.addEventListener("click", function () { i = 0; save(); render(); });
       box.appendChild(h("div", { class: "btn-row" }, again));

@@ -22,7 +22,7 @@ Copia y pega cada campo. Todo sale del contenido del curso (v3.0.0).
 Aprende a usar y comparar asistentes, crear contenidos y diseñar flujos con criterio. Un recorrido práctico con casos, datos ficticios, verificaciones y seguridad desde el primer módulo.
 
 ## Descripción larga
-Programa aplicado para personas de atención, ventas y administración que buscan pasar de preguntas improvisadas a un trabajo profesional con IA. Incluye ChatGPT, Claude y Gemini; herramientas de imágenes, voz y video; análisis de datos; productividad; recuperación de conocimiento; automatizaciones supervisadas y protección de información. Las prácticas se resuelven con expedientes controlados y datos ficticios, sin suscripción de pago. La ruta con herramientas reales es opcional. Termina con una evaluación final que se corrige automáticamente: situaciones aplicadas y un proyecto de desempeño.
+Programa aplicado para personas de atención, ventas y administración que buscan pasar de preguntas improvisadas a un trabajo profesional con IA. Incluye ChatGPT, Claude y Gemini; herramientas de imágenes, voz y video; análisis de datos; productividad; recuperación de conocimiento; automatizaciones supervisadas y protección de información. Las prácticas se resuelven con expedientes controlados y datos ficticios, sin suscripción de pago. La ruta con herramientas reales es opcional. Termina con una evaluación final: 64 situaciones aplicadas y un proyecto de desempeño que califica un profesor.
 
 ## Qué aprenderás (resultados)
 1. Distinguir tipos de IA, componentes y niveles de uso para delimitar un encargo revisable según sus consecuencias.
@@ -80,7 +80,7 @@ En `dist/ficha_lms/`: `portada_1920x1080.jpg`, `portada_1280x720.jpg` (16:9, par
 | Navegadores | Chrome, Edge, Firefox y Safari actuales; escritorio, tablet y celular |
 | Conexión externa | Ninguna: fuentes, imágenes, audio y video van dentro del paquete |
 | Criterio de finalización | `completion_status = completed` cuando la persona completa las 17 secciones y entrega las dos partes de la evaluación |
-| Criterio de aprobación | `success_status = passed` con nota global ≥ 80, proyecto ≥ 75 y sin fallos críticos pendientes. En el LMS: usar el estado que informa el SCORM (no fijar otro puntaje mínimo) |
+| Criterio de aprobación | Nota global ≥ 80 (40 % situaciones + 60 % proyecto) y proyecto ≥ 75 sin fallo crítico. El proyecto lo califica un profesor en el LMS (ver `INTEGRACION_PROYECTO_LMS.md`); hasta entonces `success_status = unknown` |
 | Nota | `cmi.score.raw` 0–100 (nota global = 40 % situaciones + 60 % proyecto); `score.scaled` 0–1 |
 | Intentos dentro del curso | 2 por parte (forma A y luego B); cuenta el mejor. Configurable en `config.js` |
 | Intentos del LMS | 1 intento de SCORM (el curso guarda todo con `cmi.exit = suspend`). No forzar «nuevo intento» al reabrir: se perdería el avance |

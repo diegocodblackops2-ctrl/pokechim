@@ -32,9 +32,9 @@
     return b;
   }
   function stateLine(rec) {
-    var st = !rec || !rec.sub ? ["Sin intento", "tag"] : rec.fbr ? ["Intentada y revisada", "tag tag-teal"] : ["Intentada · falta revisar la devolución", "tag tag-ochre"];
+    var st = !rec || !rec.sub ? ["Sin intento", "tag"] : rec.fbr ? ["Intentada y revisada", "tag tag-teal"] : ["Intentada · te falta revisar la devolución", "tag tag-ochre"];
     return h("div", { class: "state-line" }, h("span", { class: st[1] }, st[0]), rec && rec.att ? h("span", null, "Intentos: " + rec.att) : null,
-      h("span", null, "Formativa: no suma puntos al examen."));
+      h("span", null, "Es práctica: no suma puntos."));
   }
 
   /* Bloque de transferencia (variante) común a las actividades estructuradas */
@@ -52,7 +52,7 @@
     var ta = h("textarea", { id: tid, "aria-describedby": tid + "-h" }, rec.tr || "");
     ta.addEventListener("input", function () { store.put("a", act.id, { tr: ta.value }); });
     wrap.appendChild(h("label", { class: "fl", for: tid }, "Tu respuesta a la variante"));
-    wrap.appendChild(h("p", { class: "hint", id: tid + "-h" }, t.evaluation || "Respuesta abierta formativa; se compara con una referencia, no se califica por coincidencia literal."));
+    wrap.appendChild(h("p", { class: "hint", id: tid + "-h" }, t.evaluation || "Respuesta libre: la comparas con una referencia. No necesitas usar las mismas palabras."));
     wrap.appendChild(ta);
     var refBox = h("div", { class: "ref", hidden: !rec.trRef }, h("span", { class: "ref-label" }, "Referencia"), t.reference);
     var b = h("button", { class: "btn btn-sm", type: "button" }, icon("ver"), "Comparar con la referencia");
@@ -87,7 +87,7 @@
     var B = el._body;
     B.appendChild(u.docView({ tab: "Expediente", text: act.context }));
     B.appendChild(h("p", { class: "instr" }, act.instruction));
-    B.appendChild(h("p", { class: "note" }, icon("info"), " Arrastra desde el asa ", icon("arrastrar"), ", usa «Mover a…» o toca una tarjeta y luego la categoría. Las tres formas guardan lo mismo."));
+    B.appendChild(h("p", { class: "note" }, icon("info"), " Arrastra desde el asa ", icon("arrastrar"), ", usa «Mover a…» o toca una tarjeta y después la categoría. Cualquiera de las tres sirve."));
     var board = h("div", { class: "classify" });
     var pool = h("div", { class: "pool", "data-bin": "" }, h("h3", null, "Sin clasificar", h("span", { class: "note", "data-count": "" })));
     var bins = h("div", { class: "bins" });
@@ -205,8 +205,8 @@
       var missing = act.items.filter(function (i) { return !place[i.id]; });
       if (missing.length) {
         fbArea.hidden = false; u.clear(fbArea);
-        fbArea.appendChild(fbBox(false, "Distribución incompleta", "Quedan " + missing.length + " tarjeta(s) sin clasificar. Tu avance está guardado; ubícalas para comprobar."));
-        u.announce("Distribución incompleta.", true); return;
+        fbArea.appendChild(fbBox(false, "Te faltan tarjetas", "Quedan " + missing.length + " tarjeta(s) sin ubicar. Tu avance está guardado: ubícalas y vuelve a comprobar."));
+        u.announce("Te faltan tarjetas por ubicar.", true); return;
       }
       showFeedback(true);
     });
@@ -221,11 +221,11 @@
       });
       if (fresh) { recordAttempt(act, Object.assign({}, place), wrong === 0); store.put("a", act.id, { showfb: true }); }
       fbArea.hidden = false; u.clear(fbArea);
-      fbArea.appendChild(fbBox(wrong === 0, wrong === 0 ? "Distribución coherente con el expediente" : wrong + " tarjeta(s) por revisar",
+      fbArea.appendChild(fbBox(wrong === 0, wrong === 0 ? "¡Bien! Todo calza con el expediente" : wrong + " tarjeta(s) por revisar",
         wrong === 0 ? act.feedback.success : act.feedback.retry));
       fbArea.appendChild(h("div", { class: "btn-row" }, reviewedButton("a", act.id)));
       fbArea.appendChild(stateLine(store.get("a", act.id)));
-      u.announce(wrong === 0 ? "Comprobado: todas las tarjetas coinciden." : wrong + " tarjetas por revisar. Cada una muestra su criterio.", true);
+      u.announce(wrong === 0 ? "¡Bien! Todas las tarjetas calzan." : wrong + " tarjetas por revisar. Cada una te muestra por qué.", true);
     }
     B.appendChild(h("div", { class: "btn-row" }, checkBtn, undoBtn));
     B.appendChild(fbArea);
@@ -332,7 +332,7 @@
       u.clear(fbArea); fbArea.hidden = false;
       var box = fbBox(v.length === 0, v.length === 0 ? "Orden válido: respeta todas las dependencias" : v.length + " dependencia(s) sin respetar", v.length === 0 ? act.feedback.success : act.feedback.retry);
       if (v.length) box.appendChild(h("ul", { class: "violations" }, v.map(function (t) { return h("li", null, t); })));
-      if (v.length === 0) box.appendChild(h("p", { class: "note" }, "Se acepta cualquier orden que respete los requisitos previos; no se compara con una lista memorizada."));
+      if (v.length === 0) box.appendChild(h("p", { class: "note" }, "Vale cualquier orden que respete lo que debe ir antes. No hay una única lista correcta."));
       fbArea.appendChild(box);
       fbArea.appendChild(h("div", { class: "btn-row" }, reviewedButton("a", act.id)));
       fbArea.appendChild(stateLine(store.get("a", act.id)));
@@ -375,7 +375,7 @@
     });
     fs.appendChild(pick); B.appendChild(fs);
     B.appendChild(h("h3", null, "2. Construye solo la ruta que corresponde"));
-    B.appendChild(h("p", { class: "note" }, "Agrega las etapas necesarias y ordénalas. No ejecutes la rama alternativa: incluir pasos de otra rama también se revisa."));
+    B.appendChild(h("p", { class: "note" }, "Agrega solo las etapas que corresponden y ordénalas. Ojo: sumar pasos de la otra rama también cuenta como error."));
     var avail = h("div", { class: "grid grid-2" });
     var routeWrap = h("div");
     function renderAvail() {
@@ -404,7 +404,7 @@
     var fbArea = h("div", { hidden: true });
     var check = h("button", { class: "btn btn-primary", type: "button" }, icon("revision"), "Comprobar ruta");
     check.addEventListener("click", function () {
-      if (!branch) { u.clear(fbArea); fbArea.hidden = false; fbArea.appendChild(fbBox(false, "Primero elige el resultado de la consulta", "La ruta depende de lo que informe el canal autorizado.")); return; }
+      if (!branch) { u.clear(fbArea); fbArea.hidden = false; fbArea.appendChild(fbBox(false, "Primero elige el resultado de la consulta", "La ruta depende de lo que responda el canal autorizado.")); return; }
       show(true);
     });
     function show(fresh) {
@@ -523,9 +523,9 @@
       });
       if (fresh) { recordAttempt(act, Object.assign({}, ans), wrong === 0); store.put("a", act.id, { showfb: true }); }
       u.clear(fbArea); fbArea.hidden = false;
-      fbArea.appendChild(fbBox(wrong === 0, wrong === 0 ? "Registro coherente con el expediente" : wrong + " campo(s) por revisar", wrong === 0 ? act.feedback.success : act.feedback.retry));
+      fbArea.appendChild(fbBox(wrong === 0, wrong === 0 ? "¡Bien! Tu registro calza con el expediente" : wrong + " campo(s) por revisar", wrong === 0 ? act.feedback.success : act.feedback.retry));
       if (act.key_output) highlight(act.key_output);
-      fbArea.appendChild(h("p", { class: "note" }, "Salida defendible: " + act.key_output + ". Las salidas son material controlado del curso; no se atribuyen a un proveedor."));
+      fbArea.appendChild(h("p", { class: "note" }, "La salida que se puede defender: " + act.key_output + ". Las salidas se escribieron para el curso; no vienen de un asistente real."));
       fbArea.appendChild(h("div", { class: "btn-row" }, reviewedButton("a", act.id)));
       fbArea.appendChild(stateLine(store.get("a", act.id)));
     }
@@ -546,7 +546,7 @@
     var el = frame("Haz tu propia comprobación", "Micropráctica", "tag-teal", "encargo");
     var B = el._body;
     B.appendChild(u.paragraphs(screen.text, "prose"));
-    var fs = h("fieldset", { class: "opts" }, h("legend", null, "Elige la decisión más defendible"));
+    var fs = h("fieldset", { class: "opts" }, h("legend", null, "¿Qué decisión puedes defender mejor?"));
     var choice = rec.ch || null;
     D.options.forEach(function (o) {
       var r = h("input", { type: "radio", name: id + "-d", value: o.id, checked: choice === o.id });
@@ -574,7 +574,7 @@
       });
       u.clear(fbArea);
       var ok = r.last === D.key;
-      fbArea.appendChild(fbBox(ok, ok ? "Decisión defendible (" + D.key + ")" : "La decisión más defendible es " + D.key, D.feedback));
+      fbArea.appendChild(fbBox(ok, ok ? "Decisión defendible (" + D.key + ")" : "La decisión que mejor se defiende es " + D.key, D.feedback));
       // Microproducto
       var mp = h("div", { class: "card", style: { marginTop: "1rem" } });
       mp.appendChild(h("h3", { style: { marginTop: 0 } }, icon("lapiz"), " Microproducto"));
@@ -584,11 +584,11 @@
       var refBox = h("div", { class: "ref", hidden: !r.ref, tabindex: "-1" }, h("span", { class: "ref-label" }, "Referencia"), D.reference);
       var cnt = h("p", { class: "counter", "aria-live": "polite" });
       var showRef = h("button", { class: "btn btn-sm", type: "button", disabled: !(r.mp && r.mp.trim().length >= 20) && !r.ref }, icon("ver"), "Comparar con la referencia");
-      var skip = h("button", { class: "linklike", type: "button" }, "No puedo escribir ahora: ver la referencia igual");
+      var skip = h("button", { class: "linklike", type: "button" }, "Ahora no puedo escribir: ver la referencia igual");
       ta.addEventListener("input", function () {
         store.put("p", id, { mp: ta.value });
         showRef.disabled = ta.value.trim().length < 20;
-        cnt.textContent = ta.value.trim().length < 20 ? "Escribe al menos una frase para desbloquear la referencia." : "";
+        cnt.textContent = ta.value.trim().length < 20 ? "Escribe al menos una frase y se abre la referencia." : "";
       });
       function reveal(noProduct) {
         refBox.hidden = false; refBox.focus();
@@ -600,7 +600,7 @@
       mp.appendChild(ta); mp.appendChild(cnt);
       mp.appendChild(h("div", { class: "btn-row" }, showRef, skip));
       mp.appendChild(refBox);
-      mp.appendChild(h("p", { class: "note" }, "Compara criterios, no palabras. Se aceptan redacciones distintas que conserven hechos y límites."));
+      mp.appendChild(h("p", { class: "note" }, "Compara ideas, no palabras: vale otra redacción si mantiene los hechos y los límites."));
       fbArea.appendChild(mp);
       fbArea.appendChild(h("div", { class: "btn-row" }, reviewedButton("p", id)));
       fbArea.appendChild(stateLine(store.get("p", id)));
@@ -647,7 +647,7 @@
     });
     mount.appendChild(h("section", { "aria-label": "Tarjetas de contraste" },
       h("h2", null, icon("tarjeta"), " Contrasta antes de seguir"),
-      h("p", { class: "note" }, "Piensa tu respuesta y luego gira la tarjeta. Girar tarjetas es opcional y no otorga puntos."),
+      h("p", { class: "note" }, "Piensa tu respuesta y después gira la tarjeta. Es opcional y no da puntos."),
       grid));
   }
 
@@ -711,7 +711,7 @@
     b.addEventListener("click", function () { refBox.hidden = false; refBox.focus(); store.put("hs", hs.id, { fbr: true }); });
     dec.appendChild(h("div", { class: "btn-row" }, b));
     dec.appendChild(refBox);
-    dec.appendChild(h("p", { class: "note" }, "Abrir zonas no da puntos ni es obligatorio: sirve para encontrar la evidencia antes de decidir."));
+    dec.appendChild(h("p", { class: "note" }, "Abrir las zonas es opcional y no da puntos: te ayuda a encontrar la evidencia antes de decidir."));
     B.appendChild(dec);
     mount.appendChild(el);
   }

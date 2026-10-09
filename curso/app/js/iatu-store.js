@@ -57,14 +57,30 @@
       this.set("cmi.session_time", "PT" + h + "H" + m + "M" + x + "S");
     },
     /* Un objetivo por sección (orientación, módulos y evaluación) para que el LMS muestre el detalle. */
-    section: function (id, done, pct) {
+    section: function (id, done, pct, ext) {
       var n = parseInt(this.get("cmi.objectives._count"), 10) || 0, i = 0;
       for (; i < n; i++) if (this.get("cmi.objectives." + i + ".id") === id) break;
       var p = "cmi.objectives." + i + ".";
       if (i === n) this.set(p + "id", id);
       this.set(p + "completion_status", done ? "completed" : "incomplete");
-      this.set(p + "success_status", done ? "passed" : "unknown");
+      this.set(p + "success_status", ext && ext.success ? ext.success : done ? "passed" : "unknown");
       if (pct !== undefined) this.set(p + "progress_measure", Math.max(0, Math.min(1, pct)).toFixed(4));
+      if (ext && ext.scaled !== undefined && ext.scaled !== null) this.set(p + "score.scaled", Math.max(0, Math.min(1, ext.scaled)).toFixed(4));
+      if (ext && ext.description) this.set(p + "description", String(ext.description).slice(0, 250));
+    },
+    /* Entrega del proyecto: texto legible para el profesor en cmi.comments_from_learner (4.000 caracteres por comentario). */
+    learnerComment: function (text, loc) {
+      var n = parseInt(this.get("cmi.comments_from_learner._count"), 10) || 0, p = "cmi.comments_from_learner." + n + ".";
+      var ok = this.set(p + "comment", String(text).slice(0, 4000));
+      this.set(p + "location", String(loc || "").slice(0, 250));
+      this.set(p + "timestamp", new Date().toISOString().slice(0, 19));
+      return ok;
+    },
+    /* Evaluación del profesor que el LMS deja en cmi.comments_from_lms (ver docs/INTEGRACION_PROYECTO_LMS.md). */
+    lmsComments: function () {
+      var n = parseInt(this.get("cmi.comments_from_lms._count"), 10) || 0, out = [];
+      for (var i = 0; i < n; i++) out.push({ comment: this.get("cmi.comments_from_lms." + i + ".comment"), location: this.get("cmi.comments_from_lms." + i + ".location"), timestamp: this.get("cmi.comments_from_lms." + i + ".timestamp") });
+      return out;
     },
     objectives: function () {
       var n = parseInt(this.get("cmi.objectives._count"), 10) || 0, out = {};
@@ -113,6 +129,8 @@
       this.set("cmi.core.session_time", ("000" + h).slice(-4) + ":" + ("0" + m).slice(-2) + ":" + ("0" + x).slice(-2));
     },
     section: function () { /* SCORM 1.2: los objetivos no aportan; el avance va en suspend_data */ },
+    learnerComment: function (text) { var prev = this.get("cmi.comments") || ""; return this.set("cmi.comments", (prev ? prev + "\n\n" : "") + String(text).slice(0, Math.max(0, 4000 - prev.length))); },
+    lmsComments: function () { var c = this.get("cmi.comments_from_lms"); return c ? [{ comment: c, location: "", timestamp: "" }] : []; },
     objectives: function () { return null; },
     interaction: function () { /* SCORM 1.2: cmi.interactions es de solo escritura y opcional; no se usa para evitar errores en LMS. */ },
     navChoice: function () { return false; }
@@ -138,6 +156,8 @@
     setCompletion: function (o) { try { localStorage.setItem(this.key() + ":lms", JSON.stringify(o)); } catch (e) { /* sin acción */ } },
     sessionTime: function () {},
     section: function () {},
+    learnerComment: function (text, loc) { try { var k = this.key() + ":comments", a = JSON.parse(localStorage.getItem(k) || "[]"); a.push({ comment: text, location: loc, timestamp: new Date().toISOString() }); localStorage.setItem(k, JSON.stringify(a)); } catch (e) { /* sin acción */ } return true; },
+    lmsComments: function () { try { return JSON.parse(localStorage.getItem(this.key() + ":lmsComments") || "[]"); } catch (e) { return []; } },
     objectives: function () { return {}; },
     interaction: function () {},
     navChoice: function () { return false; }
@@ -176,7 +196,7 @@
       if (api) adapter = new Scorm2004(api);
       else if ((api = discover("API"))) adapter = new Scorm12(api);
       else adapter = new Local();
-      if (!adapter.init()) { adapter = new Local(); store.setStatus("error", "El LMS no aceptó la inicialización; usando almacenamiento local de emergencia."); }
+      if (!adapter.init()) { adapter = new Local(); store.setStatus("error", "No pudimos conectar con el LMS. Por ahora tu avance se guarda en este navegador."); }
       store.adapter = adapter;
       store.learner = adapter.learner();
       if (adapter.kind === "local") adapter.learnerId = store.learner;
@@ -221,7 +241,7 @@
       try { store.adapter.sessionTime(store.sessionSec); } catch (e) { /* sin acción */ }
     },
     totalTime: function () { return store.root ? store.root.time || 0 : 0; },
-    section: function (id, done, pct) { try { store.adapter.section(id, done, pct); } catch (e) { /* sin acción */ } },
+    section: function (id, done, pct, ext) { try { store.adapter.section(id, done, pct, ext); } catch (e) { /* sin acción */ } },
     on: function (fn) { store.listeners.push(fn); },
     setStatus: function (s, msg) {
       store.status = s; store.statusMsg = msg || "";
@@ -281,7 +301,7 @@
         store.setStatus(ok ? "local" : "error", ok ? "Vista previa · guardado local" : "No se pudo guardar en este navegador");
         return Promise.resolve(ok);
       }
-      if (!ok) { store.setStatus("error", "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla; reintenta."); return Promise.resolve(false); }
+      if (!ok) { store.setStatus("error", "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla: vuelve a intentarlo."); return Promise.resolve(false); }
       if (lite) {
         store.overflow = true;
         if (service.configured()) {
@@ -300,6 +320,8 @@
     setCompletion: function (o) { store.adapter.setCompletion(o); return store.save(true); },
     objectives: function () { return store.adapter.objectives(); },
     interaction: function (it) { try { store.adapter.interaction(it); } catch (e) { /* sin acción */ } },
+    learnerComment: function (t, loc) { try { return store.adapter.learnerComment(t, loc); } catch (e) { return false; } },
+    lmsComments: function () { try { return store.adapter.lmsComments() || []; } catch (e) { return []; } },
     navChoice: function (t) { try { return store.adapter.navChoice(t); } catch (e) { return false; } },
     finished: false,
     finish: function () {

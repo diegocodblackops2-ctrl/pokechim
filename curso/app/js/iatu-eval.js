@@ -1,8 +1,10 @@
 /* Curso 5 — Evaluación dentro del SCORM (decisiones de Diego, 9-oct-2026), corregida 100 % automáticamente.
    - Se habilita solo cuando las 17 secciones (orientación y 16 módulos) cumplen sus requisitos.
    - Situaciones aplicadas: forma A y luego B; 3 (decisión) + 2 (evidencia) por situación; nota = 100 × puntos / 320.
-   - Proyecto de desempeño: forma A y luego B; 9 etapas con pauta automática (clasificar, elegir, calcular, ordenar,
-     encargos y textos con comprobaciones). Nota 0–100 ponderada por criterio C1–C4 de la rúbrica.
+   - Proyecto de desempeño: forma A y luego B; 9 etapas (clasificar, elegir, calcular, ordenar, encargos y textos).
+     Por defecto lo califica un PROFESOR en el LMS (config.js › proyecto.correccion = "docente"): el curso envía la entrega
+     (interacciones, cmi.comments_from_learner y postMessage) y recibe la evaluación (cmi.comments_from_lms o postMessage).
+     Contrato: docs/INTEGRACION_PROYECTO_LMS.md. Con "automatica" se corrige con la pauta y la devolución es inmediata.
    - Global = 40 % situaciones (mejor intento) + 60 % proyecto (mejor intento). Aprueba con global ≥ 80, proyecto ≥ 75
      y sin fallos críticos pendientes (se subsanan corrigiendo el texto señalado). Todo configurable en config.js.
    - Informa al LMS: cmi.score (raw/scaled/min/max), success_status, completion_status e interacciones.
@@ -33,18 +35,25 @@
       umbral: umbral(), up: p.umbral || g.umbral_proyecto || 75, pint: p.intentos || 2 };
   }
   function phist() { return X().phist || []; }
-  /* Mejor proyecto sin fallos críticos pendientes (el que cuenta para aprobar) y mejor proyecto a secas. */
-  function pbest(clean) { return phist().reduce(function (b, a) { return (clean && a.crit && a.crit.length) || (b && b.pct >= a.pct) ? b : a; }, null); }
+  /* Corrección del proyecto: «docente» (por defecto, pedido de Diego 9-oct-2026: el LMS recibe la entrega y un profesor
+     la califica con la rúbrica) o «automatica» (pauta automática con devolución inmediata). Se elige en config.js. */
+  function docente() { return ((CFG.proyecto && CFG.proyecto.correccion) || "docente") !== "automatica"; }
+  /* Solo cuentan los intentos ya calificados (pct definido). Mejor sin fallos críticos (el que sirve para aprobar) y mejor a secas. */
+  function pbest(clean) { return phist().reduce(function (b, a) { return a.pct === undefined || a.pct === null || (clean && a.crit && a.crit.length) || (b && b.pct >= a.pct) ? b : a; }, null); }
+  function intentosProy() { var ns = {}; phist().forEach(function (a) { ns[a.n] = 1; }); return Object.keys(ns).length; }
+  function ultimaProy() { var ph = phist(); return ph[ph.length - 1] || null; }
 
   function status() {
     var hs = hist(), b = best(), R = regla(), pb = pbest(true), pa = pbest(false), ph = phist();
     var g = b && (pb || pa) ? R.pe * b.pct + R.pp * (pb || pa).pct : null;
     var pass = !!(b && pb && pb.pct >= R.up && g >= R.umbral);
-    var pend = !!(pa && pa.crit && pa.crit.length && !pb);
+    var pend = !!(pa && pa.crit && pa.crit.length && !pb), ul = ultimaProy();
+    var revision = !!(ul && ul.estado === "en_revision"), devuelto = !!(ul && ul.estado === "devuelto"), npi = intentosProy();
     return { sent: hs.length > 0, best: b ? b.pct : null, attempts: hs.length, max: maxIntentos(), inProgress: !!X().ex,
-      psent: ph.length > 0, pbest: (pb || pa) ? (pb || pa).pct : null, pattempts: ph.length, pmax: R.pint, pInProgress: !!X().proj, pend: pend,
+      psent: ph.length > 0, pbest: (pb || pa) ? (pb || pa).pct : null, pattempts: npi, pmax: R.pint, pInProgress: !!X().proj, pend: pend,
+      revision: revision, devuelto: devuelto, docente: docente(),
       done: hs.length > 0 && ph.length > 0, global: g, pass: pass,
-      final: pass || (hs.length >= maxIntentos() && ph.length >= R.pint && !pend) };
+      final: pass || (hs.length >= maxIntentos() && npi >= R.pint && !pend && !revision && !devuelto && g !== null) };
   }
 
   function head(mnt, k, t) { mnt.appendChild(h("div", { class: "crumbs" }, "Evaluación y proyecto")); mnt.appendChild(h("span", { class: "kicker" }, k)); mnt.appendChild(h("h1", null, t)); }
@@ -80,10 +89,10 @@
       mnt.appendChild(h("div", { class: "parts" }, parte("Situaciones aplicadas", "40 %", stt.sent ? fmt(stt.best) + " / 100" : "Pendiente",
         stt.inProgress ? "Tienes un intento en curso." : stt.attempts + " de " + stt.max + " intentos usados · forma A y luego B.", "#/evaluacion/examen",
         stt.inProgress ? "Continuar" : !stt.sent ? "Empezar" : stt.attempts < stt.max && !stt.pass ? "Mejorar con la forma B" : "Ver devolución", "bandera"),
-        parte("Proyecto de desempeño", "60 %", stt.psent ? fmt(stt.pbest) + " / 100" : "Pendiente",
-        stt.pend ? "Hay un fallo crítico por subsanar." : stt.pInProgress ? "Tienes un proyecto en curso." : stt.pattempts + " de " + stt.pmax + " intentos usados · forma A y luego B.", "#/evaluacion/proyecto",
-        stt.pInProgress ? "Continuar" : stt.pend ? "Subsanar" : !stt.psent ? "Empezar" : "Ver devolución", "proyecto")));
-      if (stt.done) mnt.appendChild(h("div", { class: "btn-row" }, h("a", { class: "btn btn-primary", href: "#/evaluacion/resultado" }, icon("medalla"), "Ver mi nota global")));
+        parte("Proyecto de desempeño", "60 %", stt.pInProgress ? "En curso" : stt.revision ? "En revisión" : stt.devuelto ? "Devuelto" : stt.pbest !== null ? fmt(stt.pbest) + " / 100" : "Pendiente",
+        stt.pInProgress ? "Tienes un proyecto en curso." : stt.revision ? "Lo está revisando tu profesor con la rúbrica." : stt.devuelto ? "Tu profesor te pidió correcciones." : stt.pend ? (stt.docente ? "Tu profesor señaló un fallo crítico." : "Hay un fallo crítico por subsanar.") : stt.pattempts + " de " + stt.pmax + " intentos usados · forma A y luego B." + (stt.docente ? " Lo califica un profesor." : ""), "#/evaluacion/proyecto",
+        stt.pInProgress ? "Continuar" : stt.devuelto ? "Corregir" : stt.pend && !stt.docente ? "Subsanar" : !stt.psent ? "Empezar" : stt.revision ? "Ver mi entrega" : "Ver devolución", "proyecto")));
+      if (stt.done && stt.global !== null) mnt.appendChild(h("div", { class: "btn-row" }, h("a", { class: "btn btn-primary", href: "#/evaluacion/resultado" }, icon("medalla"), "Ver mi nota global")));
     }
   }
   function parte(t, peso, nota, sub, href, cta, ic) {
@@ -227,7 +236,8 @@
   /* Registro completo para el LMS: lo usan la evaluación y app.refreshProgress (así nadie pisa el passed/failed). */
   function lms() {
     var cp = IATU.app.courseProg(), stt = status(), o = { completed: cp.complete && stt.done, progress: Math.min(1, cp.pct * .9 + (stt.sent ? .05 : 0) + (stt.psent ? .05 : 0)) };
-    if (stt.done) {
+    // Con corrección docente, la nota global y el aprobado se informan recién cuando el profesor califica el proyecto.
+    if (stt.done && stt.global !== null) {
       var g = Math.round(stt.global * 100) / 100;
       o.success = stt.pass ? "passed" : "failed"; o.raw = g; o.scaled = g / 100; o.max = 100; o.final = stt.final;
     }
@@ -236,7 +246,10 @@
   function report() {
     var stt = status();
     store.setCompletion(lms());
-    if (stt.done) store.section("obj-evaluacion", stt.pass, 1);
+    if (stt.sent) store.section("obj-situaciones", true, 1, { success: "unknown", scaled: stt.best / 100, description: "Situaciones aplicadas (40 %): mejor intento " + fmt(stt.best) + " / 100" });
+    if (stt.psent) store.section("obj-proyecto", true, 1, { success: stt.pbest !== null && !stt.revision && !stt.devuelto ? (stt.pbest >= regla().up && !stt.pend ? "passed" : "failed") : "unknown",
+      scaled: stt.pbest !== null ? stt.pbest / 100 : null, description: stt.revision ? "Proyecto entregado: en revisión del profesor" : stt.devuelto ? "Proyecto devuelto para corrección" : "Proyecto calificado" });
+    if (stt.done && stt.global !== null) store.section("obj-evaluacion", stt.pass, 1, { success: stt.pass ? "passed" : "failed", scaled: stt.global / 100 });
   }
   function results(box, at, fresh) {
     if (!at) { box.appendChild(h("p", null, "Aún no entregas ninguna forma.")); return; }
@@ -376,7 +389,7 @@
       u.clear(box);
       var x = X(), stt = status(), ph = phist();
       if (x.proj) return runProject(box);
-      if (ph.length && (!x.pnuevo || stt.pass || stt.pattempts >= stt.pmax)) return projResults(box, ph[ph.length - 1]);
+      if (ph.length && (!x.pnuevo || stt.pass || stt.pattempts >= stt.pmax)) return (docente() ? projDocente : projResults)(box, ph[ph.length - 1]);
       projStart(box, stt);
     }, function (e) { u.clear(box); box.appendChild(h("div", { class: "callout risk" }, e.message)); });
   }
@@ -392,7 +405,13 @@
     box.appendChild(h("div", { class: "meta-row" }, h("span", { class: "tag tag-violet" }, "Forma " + f), h("span", { class: "tag" }, icon("reloj"), " " + p.minutes / 60 + " h estimadas"), h("span", { class: "tag" }, "Intento " + (stt.pattempts + 1) + " de " + stt.pmax)));
     brief(box, p);
     box.appendChild(h("h3", null, "Cómo se corrige"));
-    box.appendChild(h("ul", { class: "reading" },
+    if (docente()) box.appendChild(h("ul", { class: "reading" },
+      h("li", null, "Trabajas en 9 etapas con el expediente siempre a mano: clasificar, elegir, calcular, ordenar, escribir tus encargos y redactar el producto final."),
+      h("li", null, "Al terminar, envías tu proyecto: llega al LMS y lo califica un profesor con la rúbrica del curso (C1 20 %, C2 25 %, C3 30 % y C4 25 %)."),
+      h("li", null, "La redacción es libre. Se valora que uses los datos vigentes del expediente, respetes los límites y que el producto sirva."),
+      h("li", null, "Si el profesor encuentra algo que corregir, te devuelve el proyecto con comentarios para que lo reenvíes."),
+      h("li", null, "El proyecto aporta el " + Math.round(R.pp * 100) + " % de la nota global y necesitas " + R.up + " o más. Puedes pausar: tus respuestas quedan guardadas.")));
+    else box.appendChild(h("ul", { class: "reading" },
       h("li", null, "Trabajas en 9 etapas con el expediente siempre a mano: clasificar, elegir, calcular, ordenar, escribir tus encargos y redactar el producto final."),
       h("li", null, "Al entregar, todo se corrige automáticamente con la pauta del curso, por criterio de la rúbrica: C1 20 %, C2 25 %, C3 30 % y C4 25 %."),
       h("li", null, "Los textos se revisan con comprobaciones concretas (fechas, cifras, límites, datos que no deben aparecer). La redacción es libre: no se exige coincidencia literal."),
@@ -539,15 +558,187 @@
       c.appendChild(h("h2", { tabindex: "-1", style: { marginTop: 0 } }, "Revisión antes de entregar"));
       c.appendChild(h("p", null, (F.etapas.length - falta.length) + " de " + F.etapas.length + " etapas completas."));
       if (falta.length) c.appendChild(h("p", null, "Incompletas: " + falta.map(function (e) { return e.title.replace(/ · .*/, ""); }).join(", ") + ". Lo vacío vale 0 puntos."));
-      c.appendChild(h("p", { class: "note" }, "Al entregar se corrige todo de inmediato y verás tu devolución por etapa con el modelo de referencia. Tus encargos (etapa 3) y el producto final (etapa 4) son obligatorios: si faltan, la aprobación queda pendiente hasta completarlos."));
+      c.appendChild(h("p", { class: "note" }, docente()
+        ? "Al enviar, tu proyecto llega al LMS para que lo califique un profesor. Después no podrás cambiarlo, salvo que te lo devuelva con comentarios."
+        : "Al entregar se corrige todo de inmediato y verás tu devolución por etapa con el modelo de referencia. Tus encargos (etapa 3) y el producto final (etapa 4) son obligatorios: si faltan, la aprobación queda pendiente hasta completarlos."));
       var cf = h("label", { class: "opt", style: { maxWidth: "620px" } }, h("input", { type: "checkbox" }), h("span", null, "Entrego mi proyecto (forma " + pr.forma + "). Confirmo que usé solo datos del expediente ficticio y que no envié, publiqué ni conecté servicios reales."));
-      var send = h("button", { class: "btn btn-primary", type: "button", disabled: true }, icon("enviar"), "Entregar y corregir");
+      var send = h("button", { class: "btn btn-primary", type: "button", disabled: true }, icon("enviar"), docente() ? "Enviar al profesor" : "Entregar y corregir");
       cf.firstChild.addEventListener("change", function (ev) { send.disabled = !ev.target.checked; });
-      send.addEventListener("click", function () { send.disabled = true; var at = gradeProject(); u.clear(box); projResults(box, at, true); });
+      send.addEventListener("click", function () {
+        send.disabled = true;
+        if (docente()) { var en = entregarProyecto(); u.clear(box); projDocente(box, en, true); return; }
+        var at = gradeProject(); u.clear(box); projResults(box, at, true);
+      });
       c.appendChild(cf); c.appendChild(h("div", { class: "btn-row" }, send));
       stage.appendChild(c); c.querySelector("h2").focus();
     }
     render();
+  }
+
+  /* ---------- Corrección docente: entrega al LMS y evaluación del profesor ----------
+     Contrato completo en docs/INTEGRACION_PROYECTO_LMS.md. */
+  function respuestaLegible(it, v) {
+    if (v === undefined || v === null || v === "") return "(sin respuesta)";
+    if (it.t === "classify") return it.rows.map(function (r) { var a = v[r[0]]; return r[1] + " → " + (a === undefined || a === null ? "(sin respuesta)" : it.cats[a]); }).join("\n");
+    if (it.t === "multi") return v.length ? v.map(function (i) { return "• " + it.opts[i]; }).join("\n") : "(nada marcado)";
+    if (it.t === "mcq") return it.opts[v];
+    if (it.t === "num") return it.fields.map(function (f, i) { return f[0] + ": " + ((v[i] || "").trim() || "(vacío)") + (f[3] ? " " + f[3] : ""); }).join("\n");
+    if (it.t === "order") return v.map(function (k, i) { return (i + 1) + ". " + it.steps[k]; }).join("\n");
+    if (it.t === "prompt") return it.fields.map(function (f, i) { return (i + 1) + ". " + f + ": " + ((v[i] || "").trim() || "(vacío)"); }).join("\n");
+    return String(v);
+  }
+  function respuestas(forma, ans) {
+    var out = [];
+    pauta().formas[forma].etapas.forEach(function (e) {
+      e.items.forEach(function (it, i) {
+        var k = e.id + "." + i;
+        out.push({ clave: k, etapa: e.title, criterio: e.crit, tipo: it.t, pregunta: it.q || it.label || "", respuesta: respuestaLegible(it, ans[k]), valor: ans[k] === undefined ? null : ans[k] });
+      });
+    });
+    return out;
+  }
+  function textoEntrega(en, resp) {
+    var t = "PROYECTO DE DESEMPEÑO · IA para trabajar mejor (Curso 5)\nEntrega " + en.id + " · forma " + en.forma + " · intento " + en.n + "\nParticipante: " + (store.adapter.learnerName && store.adapter.learnerName() || store.learner) + " (" + store.learner + ")\nFecha: " + en.at + "\n";
+    var etapa = "";
+    resp.forEach(function (r) {
+      if (r.etapa !== etapa) { etapa = r.etapa; t += "\n== " + r.etapa + " · " + r.criterio + " ==\n"; }
+      if (r.pregunta) t += "• " + r.pregunta + "\n";
+      t += r.respuesta + "\n";
+    });
+    t += "\n-- Prevalidación automática (orientativa para el profesor; no es la nota): " + fmt(en.pre.pct) + " / 100" + (en.pre.alertas.length ? " · Alertas: " + en.pre.alertas.join(" · ") : "") + "\n";
+    return t;
+  }
+  function entregarProyecto() {
+    var x = X(), pr = x.proj, pre = corregirProyecto(pr.forma, pr.ans), now = new Date().toISOString();
+    var en = { id: "IATU-P-" + pr.forma + pr.n + "-" + Date.now().toString(36), n: pr.n, forma: pr.forma, ans: pr.ans, at: now, estado: "en_revision",
+      pre: { pct: pre.pct, cr: pre.cr, alertas: pre.crit.map(function (c) { return c.label; }) }, reenvio: pr.reenvio || null };
+    var resp = respuestas(pr.forma, pr.ans), texto = textoEntrega(en, resp);
+    // 1) Interacciones: una por ítem, legibles en el reporte del LMS.
+    resp.forEach(function (r) {
+      store.interaction({ id: "IATU-PROY-" + en.forma + en.n + "-" + r.clave.replace(".", "-"), type: r.tipo === "prompt" || r.tipo === "text" ? "long-fill-in" : "other",
+        response: r.respuesta, result: "neutral", description: r.etapa + (r.pregunta ? " · " + r.pregunta : "") });
+    });
+    // 2) Texto completo para el profesor en cmi.comments_from_learner (trozos de 3.900 caracteres).
+    var partes = []; for (var i = 0; i < texto.length; i += 3900) partes.push(texto.slice(i, i + 3900));
+    partes.forEach(function (pt, j) { store.learnerComment(pt, "IATU-PROYECTO|" + en.id + "|" + (j + 1) + "/" + partes.length); });
+    // 3) Aviso inmediato a la página del LMS que contiene el curso (si está escuchando).
+    var msg = { type: "dibork:iatu:proyecto-entregado", version: 1, curso: "IATU-C05", entrega_id: en.id, forma: en.forma, intento: en.n, reenvio_de: en.reenvio, fecha: now,
+      participante: { id: store.learner, nombre: store.adapter.learnerName ? store.adapter.learnerName() || "" : "" },
+      respuestas: resp, prevalidacion: { nota_sugerida: pre.pct, por_criterio: pre.cr, alertas: en.pre.alertas }, texto: texto };
+    avisarLMS(msg);
+    if (IATU.service && IATU.service.configured()) IATU.service.call("POST", "/api/v1/proyecto/entrega", msg).catch(function () { /* el LMS ya tiene la entrega en el CMI */ });
+    x.phist = phist().concat([en]);
+    delete x.proj;
+    report(); persist(true); IATU.app.refreshProgress();
+    return en;
+  }
+  function avisarLMS(msg) {
+    var origen = (CFG.proyecto && CFG.proyecto.origen_lms) || "*";
+    [window.parent, window.top, window.opener].forEach(function (w, i, a) {
+      try { if (w && w !== window && a.indexOf(w) === i) w.postMessage(msg, origen); } catch (e) { /* sin acción */ }
+    });
+  }
+  /* Aplica una evaluación del profesor. ev = { entrega_id?, forma?, estado: "evaluado" | "devuelto",
+     niveles?: {C1..C4: 0–3}, nota?: 0–100, critico?: bool, comentario?, profesor?, fecha? }. Devuelve true si cambió algo. */
+  function aplicarEvaluacion(ev) {
+    if (!ev || (ev.estado !== "evaluado" && ev.estado !== "devuelto")) return false;
+    var ph = phist(), en = null;
+    for (var i = ph.length - 1; i >= 0; i--) { if (ev.entrega_id ? ph[i].id === ev.entrega_id : !ev.forma || ph[i].forma === ev.forma) { en = ph[i]; break; } }
+    if (!en) return false;
+    var firma = JSON.stringify([ev.estado, ev.niveles, ev.nota, ev.critico, ev.comentario, ev.fecha]);
+    if (en.eval && en.eval.firma === firma) return false;
+    var nota = null, W = { C1: 20, C2: 25, C3: 30, C4: 25 };
+    try { W = pauta().criterios; } catch (e) { /* pesos por defecto */ }
+    if (ev.niveles && typeof ev.niveles === "object") {
+      var sw = 0, acc = 0;
+      Object.keys(W).forEach(function (c) { var n = Number(ev.niveles[c]); if (!isNaN(n)) { sw += W[c]; acc += W[c] * Math.max(0, Math.min(3, n)) / 3; } });
+      if (sw) nota = 100 * acc / sw;
+    }
+    if (nota === null && ev.nota !== undefined && !isNaN(Number(ev.nota))) nota = Math.max(0, Math.min(100, Number(ev.nota)));
+    if (ev.estado === "evaluado" && nota === null) return false;
+    en.eval = { estado: ev.estado, niveles: ev.niveles || null, nota: nota, critico: !!ev.critico, comentario: String(ev.comentario || "").slice(0, 4000), profesor: String(ev.profesor || "").slice(0, 120), fecha: ev.fecha || new Date().toISOString(), firma: firma };
+    en.estado = ev.estado;
+    if (ev.estado === "evaluado") { en.pct = Math.round(nota * 100) / 100; en.crit = ev.critico ? [{ k: "", label: "Fallo crítico señalado por el profesor" }] : []; }
+    else { delete en.pct; en.crit = []; }
+    report(); persist(true);
+    return true;
+  }
+  /* Lee las evaluaciones que el LMS dejó en cmi.comments_from_lms (JSON con "tipo": "iatu-proyecto-evaluacion"). */
+  function sincronizar() {
+    var cambio = false;
+    store.lmsComments().forEach(function (c) {
+      var t = (c && c.comment) || "";
+      if (!/^\s*\{/.test(t)) return;
+      try { var j = JSON.parse(t); if (j && (j.tipo === "iatu-proyecto-evaluacion" || /^IATU-PROYECTO/.test(c.location || ""))) cambio = aplicarEvaluacion(j) || cambio; } catch (e) { /* comentario no estructurado */ }
+    });
+    return cambio;
+  }
+  window.addEventListener("message", function (e) {
+    var d = e.data;
+    if (!d || d.type !== "dibork:iatu:proyecto-evaluado") return;
+    if (e.source !== window.parent && e.source !== window.top && e.source !== window.opener) return;
+    if (store.root && aplicarEvaluacion(d.evaluacion || d)) {
+      u.toast(d.estado === "devuelto" || (d.evaluacion && d.evaluacion.estado === "devuelto") ? "Tu profesor te devolvió el proyecto con comentarios." : "Tu profesor calificó tu proyecto.");
+      IATU.app.refreshProgress();
+      if (/^#\/evaluacion/.test(location.hash)) window.dispatchEvent(new HashChangeEvent("hashchange"));
+    }
+  });
+
+  function projDocente(box, en, fresh) {
+    var R = regla(), stt = status(), C = IATU.data.curso, ev = en.eval || {};
+    var hero = h("div", null, h("span", { class: "eyebrow" }, "Proyecto · forma " + en.forma + " · intento " + en.n + " de " + R.pint));
+    var ringv = en.estado === "evaluado" ? en.pct : null;
+    if (en.estado === "en_revision") {
+      hero.appendChild(h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, "Entregado · en revisión del profesor"));
+      hero.appendChild(h("p", { style: { margin: 0 } }, "Enviado el " + new Date(en.at).toLocaleString("es-CL") + ". Tu profesor lo calificará con la rúbrica; cuando lo haga, verás aquí tu nota y sus comentarios. " + (!stt.sent ? "Mientras tanto, puedes rendir las situaciones aplicadas." : "")));
+    } else if (en.estado === "devuelto") {
+      hero.appendChild(h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, "Tu profesor te pidió correcciones"));
+      hero.appendChild(h("p", { style: { margin: 0 } }, "Revisa sus comentarios, corrige y vuelve a enviar. No cuenta como un intento nuevo."));
+    } else {
+      hero.appendChild(h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, en.crit && en.crit.length ? "Calificado con un fallo crítico" : en.pct >= R.up ? "Proyecto aprobado por tu profesor" : "Aún bajo el " + R.up));
+      hero.appendChild(h("p", { style: { margin: 0 } }, fmt(en.pct) + " de 100 con la rúbrica. Aporta el " + Math.round(R.pp * 100) + " % de tu nota global. " + (stt.pass ? "Tu evaluación está aprobada." : !stt.sent ? "Te faltan las situaciones aplicadas (40 %)." : "")));
+    }
+    var top = h("div", { style: { display: "flex", gap: "1.6rem", alignItems: "center", flexWrap: "wrap" } });
+    top.appendChild(ringv !== null ? h("div", { class: "ringbig", style: "--v:" + (ringv / 100).toFixed(3) + ";width:150px;height:150px;font-size:1.6rem" }, h("span", null, fmt(ringv)))
+      : h("div", { class: "lockbig" }, icon(en.estado === "devuelto" ? "lapiz" : "reloj")));
+    top.appendChild(hero);
+    box.appendChild(h("section", { class: "gate-hero" }, top));
+    if (fresh && en.estado === "en_revision") IATU.fx.celebrate("★", "Proyecto enviado", "Quedó en el LMS para tu profesor.");
+    if (ev.comentario) box.appendChild(h("div", { class: "callout " + (en.estado === "devuelto" ? "warn" : "info") }, h("h3", null, icon("chat"), " Comentarios" + (ev.profesor ? " de " + ev.profesor : " del profesor")), u.paragraphs(ev.comentario, "")));
+    if (en.estado === "evaluado" && ev.niveles) {
+      box.appendChild(h("h2", null, "Por criterio de la rúbrica"));
+      var bars = h("div", { class: "modbars" });
+      C.rubric.forEach(function (c) {
+        var n = Number(ev.niveles[c.id]); if (isNaN(n)) return;
+        bars.appendChild(h("div", { class: "modbar" + (n < 2 ? " low" : "") }, h("span", null, c.id), h("div", { class: "bar" }, h("i", { style: { width: Math.round(100 * n / 3) + "%" } })), h("b", null, "Nivel " + n + " de 3")));
+      });
+      box.appendChild(bars);
+      box.appendChild(h("p", { class: "note" }, C.rubric.map(function (c) { return c.id + ": " + c.title + " (" + c.weight + " %)"; }).join(" · ")));
+    }
+    var row = h("div", { class: "btn-row" });
+    if (en.estado === "devuelto") {
+      var fix = h("button", { class: "btn btn-primary", type: "button" }, icon("lapiz"), "Corregir y reenviar");
+      fix.addEventListener("click", function () {
+        X().proj = { n: en.n, forma: en.forma, ans: JSON.parse(JSON.stringify(en.ans || {})), idx: 0, reenvio: en.id, ini: new Date().toISOString() };
+        persist(true); u.clear(box); runProject(box);
+      });
+      row.appendChild(fix);
+    }
+    if (en.estado === "evaluado" && !stt.pass && stt.pattempts < R.pint) {
+      var again = h("a", { class: "btn", href: "#/evaluacion/proyecto" }, icon("reintentar"), "Usar mi segundo intento (forma B)");
+      again.addEventListener("click", function () { X().pnuevo = 1; });
+      row.appendChild(again);
+    }
+    row.appendChild(h("a", { class: "btn" + (en.estado === "devuelto" ? "" : " btn-primary"), href: stt.sent ? "#/evaluacion/resultado" : "#/evaluacion/examen" }, icon(stt.sent ? "medalla" : "bandera"), stt.sent ? "Ver mi resultado" : "Ir a las situaciones aplicadas"));
+    box.appendChild(row);
+    var det = h("details", { class: "card" }, h("summary", null, h("b", null, "Lo que enviaste")));
+    var etapa = "";
+    respuestas(en.forma, en.ans || {}).forEach(function (r) {
+      if (r.etapa !== etapa) { etapa = r.etapa; det.appendChild(h("h4", null, r.etapa)); }
+      if (r.pregunta) det.appendChild(h("p", { class: "pq" }, r.pregunta));
+      det.appendChild(h("div", { class: "ref", style: { whiteSpace: "pre-wrap" } }, r.respuesta));
+    });
+    box.appendChild(det);
   }
 
   function gradeProject() {
@@ -652,6 +843,12 @@
       mnt.appendChild(h("p", null, "Tu nota global aparece cuando entregas las dos partes: " + (stt.sent ? "te falta el proyecto." : stt.psent ? "te faltan las situaciones aplicadas." : "situaciones aplicadas y proyecto.")));
       mnt.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/requisitos" }, "Ir a la evaluación")); return;
     }
+    if (stt.global === null) {
+      mnt.appendChild(h("div", { class: "callout info" }, h("h3", null, icon("reloj"), stt.devuelto ? " Proyecto devuelto para corrección" : " Proyecto en revisión"),
+        h("p", null, "Situaciones aplicadas: " + fmt(b.pct) + " / 100 (mejor intento). " + (stt.devuelto ? "Tu profesor te pidió correcciones: revisa sus comentarios y reenvía." : "Tu nota global y el resultado aparecen cuando tu profesor califique el proyecto. Te avisaremos aquí."))));
+      mnt.appendChild(h("div", { class: "btn-row" }, h("a", { class: "btn btn-primary", href: "#/evaluacion/proyecto" }, icon("proyecto"), stt.devuelto ? "Corregir y reenviar" : "Ver mi entrega"), h("a", { class: "btn", href: "#/evaluacion/transferencia" }, "Transferencia", icon("siguiente"))));
+      report(); return;
+    }
     var g = stt.global;
     mnt.appendChild(h("section", { class: "gate-hero" }, h("div", { style: { display: "flex", gap: "1.6rem", alignItems: "center", flexWrap: "wrap" } },
       h("div", { class: "ringbig", style: "--v:" + (g / 100).toFixed(3) + ";width:150px;height:150px;font-size:1.6rem" }, h("span", null, fmt(g))),
@@ -724,6 +921,7 @@
   }
   IATU.evaluacion = {
     status: status, lms: lms, corregirItem: corregirItem, corregirProyecto: corregirProyecto,
+    sincronizar: sincronizar, recibirEvaluacion: function (ev) { var c = aplicarEvaluacion(ev); if (c) IATU.app.refreshProgress(); return c; },
     render: function (mnt, page, api) {
       ({ requisitos: function () { gate(mnt, api); }, examen: function () { examen(mnt); }, proyecto: function () { proyecto(mnt); },
         resultado: function () { resultado(mnt); }, transferencia: function () { transferencia(mnt); }, cierre: function () { cierre(mnt); } }[page] || function () { gate(mnt, api); })();
