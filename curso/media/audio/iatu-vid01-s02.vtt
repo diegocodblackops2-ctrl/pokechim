@@ -1,0 +1,7 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:02.910
+Comprueba que el archivo existe, abre y contiene la versión correcta.
+
+00:00:02.950 --> 00:00:05.370
+Si no puedes hacerlo, informa que solo existe un borrador.

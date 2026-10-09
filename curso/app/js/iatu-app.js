@@ -423,7 +423,7 @@
         .map(function (x) { return h("div", { class: "stat" }, h("b", null, x[0]), h("span", null, x[1])); }));
     mnt.appendChild(tiles);
     // Insignias: cada sección se gana con una habilidad concreta, no con un número.
-    var INSIG = { orientacion: ["brujula", "Punto de partida"], m01: ["diana", "Delegar con criterio"], m02: ["encargo", "Encargos que funcionan"],
+    var INSIG = { orientacion: ["brujula", "Punto de partida"], m01: ["diana", "Delegar con criterio"], m02: ["encargo", "Prompts que funcionan"],
       m03: ["chat", "ChatGPT en serio"], m04: ["documento", "Claude para documentos"], m05: ["fuente", "Gemini con fuentes"],
       m06: ["comparar", "Elegir la herramienta"], m07: ["enviar", "Comunicar con IA"], m08: ["lupa", "Verificar antes de usar"],
       m09: ["grafico", "Datos sin humo"], m10: ["ver", "Imágenes con intención"], m11: ["audio", "Voz y video responsables"],

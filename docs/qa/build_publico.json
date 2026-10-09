@@ -8,13 +8,23 @@
  "talleres": 32,
  "casos": 3,
  "diagnostico": 16,
- "audio_disponible": 22,
+ "audio_disponible": 328,
  "audio_total": 328,
  "imagenes_disponibles": 60,
  "imagenes_total": 60,
  "videos_disponibles": 0,
  "videos_total": 12,
  "fuga_privada": "ninguna detectada",
+ "correcciones_estilo": {
+  "total": 271,
+  "sin_uso": [
+   "checklists",
+   "frameworks",
+   "tips",
+   "desplegó una automatización",
+   "(\\s)restituye(\\s)"
+  ]
+ },
  "observaciones": [
   "IATU-M12-U02: expediente coincide con una pantalla de lección del maestro"
  ]

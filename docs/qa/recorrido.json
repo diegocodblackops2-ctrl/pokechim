@@ -2,7 +2,7 @@
  {
   "prueba": "Inicio frío: transferencia de la portada",
   "resultado": "OK",
-  "detalle": "752 KiB en 21 solicitudes, 607 ms (local, sin limitación de red)"
+  "detalle": "733 KiB en 18 solicitudes, 595 ms (local, sin limitación de red)"
  },
  {
   "prueba": "Carga a demanda: sin audio ni video al entrar",

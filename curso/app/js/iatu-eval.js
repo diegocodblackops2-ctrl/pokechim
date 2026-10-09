@@ -619,7 +619,8 @@
         response: r.respuesta, result: "neutral", description: r.etapa + (r.pregunta ? " · " + r.pregunta : "") });
     });
     // 2) Texto completo para el profesor en cmi.comments_from_learner (trozos de 3.900 caracteres).
-    var partes = []; for (var i = 0; i < texto.length; i += 3900) partes.push(texto.slice(i, i + 3900));
+    // SCORM 2004 (localized_string) no admite saltos de línea en un comentario: se marcan con « ¶ ».
+    var plano = texto.replace(/\n+/g, " ¶ "), partes = []; for (var i = 0; i < plano.length; i += 3900) partes.push(plano.slice(i, i + 3900));
     partes.forEach(function (pt, j) { store.learnerComment(pt, "IATU-PROYECTO|" + en.id + "|" + (j + 1) + "/" + partes.length); });
     // 3) Aviso inmediato a la página del LMS que contiene el curso (si está escuchando).
     var msg = { type: "dibork:iatu:proyecto-entregado", version: 1, curso: "IATU-C05", entrega_id: en.id, forma: en.forma, intento: en.n, reenvio_de: en.reenvio, fecha: now,

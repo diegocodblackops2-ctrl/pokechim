@@ -15,7 +15,7 @@ Modo por defecto en `config.js`: `proyecto: { correccion: "docente" }`. Con `"au
 Cada entrega tiene un `entrega_id` único, por ejemplo `IATU-P-A1-lx3k9a`.
 
 **a) `cmi.comments_from_learner.n`** (SCORM 2004), siempre presente y la vía más simple de leer:
-- `comment`: el texto completo y legible de la entrega, en trozos de hasta 3.900 caracteres.
+- `comment`: el texto completo y legible de la entrega, en trozos de hasta 3.900 caracteres. Los saltos de línea van como « ¶ » (SCORM 2004 no los admite en un comentario); para mostrarlo, reemplaza « ¶ » por un salto de línea.
 - `location`: `IATU-PROYECTO|<entrega_id>|<parte>/<total>`. Para armar el texto, junta las partes en orden.
 - `timestamp`: la fecha de la entrega.
 

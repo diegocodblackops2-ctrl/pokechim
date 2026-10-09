@@ -7,12 +7,12 @@
  {
   "prueba": "Clasificación: devolución por tarjeta ante errores",
   "resultado": "OK",
-  "detalle": "4 tarjeta(s) por revisarRevisa las tarjetas señaladas. Cada devolución explica e"
+  "detalle": "4 tarjeta(s) por revisarRevisa las tarjetas marcadas: cada una te explica por qu"
  },
  {
   "prueba": "Clasificación: acierto reconocido",
   "resultado": "OK",
-  "detalle": "Distribución coherente con el expedienteTu distribución respeta las categorías y"
+  "detalle": "¡Bien! Todo calza con el expediente¡Bien! Tu distribución calza con las categorí"
  },
  {
   "prueba": "Clasificación: flujo tocar tarjeta → tocar destino",

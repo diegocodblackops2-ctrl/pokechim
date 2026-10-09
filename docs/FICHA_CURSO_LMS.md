@@ -45,7 +45,7 @@ Programa aplicado para personas de atención, ventas y administración que busca
 ## Temario
 0. Orientación (diagnóstico y ruta)
 1. Entender la IA y decidir cuánto delegar · 3 h
-2. Dar instrucciones que permitan trabajar · 3 h
+2. Ingeniería de prompts: instrucciones que funcionan · 3 h
 3. ChatGPT: del primer encargo a un espacio de trabajo · 3 h
 4. Claude: documentos, proyectos y productos editables · 3 h
 5. Gemini y trabajo basado en fuentes · 3 h

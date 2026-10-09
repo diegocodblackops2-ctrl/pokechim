@@ -3,6 +3,18 @@
  "nota": "Reemplazos literales [de, a] aplicados en orden a todo el texto público del curso (build_publico.estilo). El maestro v3 no se modifica. Cuidado: el orden importa (frases largas antes que palabras sueltas).",
  "reemplazos": [
   [
+   "Dar instrucciones que permitan trabajar",
+   "Ingeniería de prompts: instrucciones que funcionan"
+  ],
+  [
+   "Un encargo útil empieza por el producto, no por una frase solemne sobre el rol del asistente.",
+   "Un prompt es la instrucción que le das a un asistente de IA; en este curso también lo llamamos encargo. Un buen prompt empieza por el producto, no por una frase solemne sobre el rol del asistente."
+  ],
+  [
+   "Encargo o prompt",
+   "Prompt (o encargo)"
+  ],
+  [
    "Comprende el criterio",
    "La idea clave"
   ],
@@ -111,18 +123,6 @@
    "Lista de comprobación"
   ],
   [
-   "el mismo prompt",
-   "el mismo encargo"
-  ],
-  [
-   "guardar un prompt",
-   "guardar un encargo"
-  ],
-  [
-   "la cantidad de prompts",
-   "la cantidad de encargos"
-  ],
-  [
    "templates",
    "plantillas"
   ],
@@ -207,38 +207,6 @@
    "La elección depende de condiciones concretas"
   ],
   [
-   "Encargo o prompt",
-   "Encargo o prompt"
-  ],
-  [
-   "Prompt de referencia:",
-   "Encargo de referencia:"
-  ],
-  [
-   "Prompt:",
-   "Encargo:"
-  ],
-  [
-   "Un prompt más largo",
-   "Un encargo más largo"
-  ],
-  [
-   "Escribe un prompt completo",
-   "Escribe un encargo completo"
-  ],
-  [
-   "un prompt de actualización",
-   "un encargo de actualización"
-  ],
-  [
-   "Produce prompt propio y aviso",
-   "Escribe tu propio encargo y el aviso"
-  ],
-  [
-   "prompt propio",
-   "encargo propio"
-  ],
-  [
    "Evidencia del bloque: ",
    "En el documento dice: "
   ],
@@ -316,7 +284,7 @@
   ],
   [
    "Conserva localmente el prompt, la salida y la corrección.",
-   "Guarda en tu equipo el encargo, la salida y la corrección."
+   "Guarda en tu equipo el prompt, la salida y la corrección."
   ],
   [
    "audita la salida de referencia",
@@ -468,7 +436,7 @@
   ],
   [
    "La solución no es repetir el prompt más fuerte",
-   "La solución no es repetir el encargo con más fuerza"
+   "La solución no es repetir el prompt con más fuerza"
   ],
   [
    "Parte del entregable. Para una minuta",
@@ -728,7 +696,7 @@
   ],
   [
    "Retirar o archivar prompts que inventan fechas y deduplicar versiones, conservando historial.",
-   "Retirar o archivar los encargos que inventan fechas y eliminar versiones repetidas, conservando el historial."
+   "Retirar o archivar los prompts que inventan fechas y eliminar versiones repetidas, conservando el historial."
   ],
   [
    "El rol retórico y la promesa absoluta no sustituyen controles.",
@@ -912,7 +880,7 @@
   ],
   [
    "La estructura y los ejemplos son decisiones editoriales del curso, no un método de prompting validado ni una garantía de exactitud.",
-   "La estructura y los ejemplos son decisiones propias del curso, no un método validado para escribir encargos ni una garantía de exactitud."
+   "La estructura y los ejemplos son decisiones propias del curso, no un método validado para escribir prompts ni una garantía de exactitud."
   ],
   [
    "La respuesta de referencia es editorial, no una salida atribuida a un proveedor.",
@@ -1113,16 +1081,6 @@
   [
    "(\\s)restituye(\\s)",
    "\\1recupera\\2",
-   "re"
-  ],
-  [
-   "\\bprompts\\b",
-   "encargos",
-   "re"
-  ],
-  [
-   "\\b([Ee]l|[Uu]n|[Dd]el) prompt\\b",
-   "\\1 encargo",
    "re"
   ],
   [

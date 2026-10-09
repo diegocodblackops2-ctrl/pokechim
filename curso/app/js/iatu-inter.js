@@ -62,7 +62,7 @@
     return wrap;
   }
   // source_note del maestro es una nota de autoría (no se muestra al participante).
-  function microNote() { return null; }
+  function microNote() { return document.createTextNode(""); }
   function recordAttempt(act, response, correct) {
     var rec = store.get("a", act.id) || {};
     var patch = { sub: true, last: response, att: (rec.att || 0) + 1 };

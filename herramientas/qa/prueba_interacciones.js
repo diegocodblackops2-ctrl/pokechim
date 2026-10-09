@@ -27,7 +27,7 @@ function ok(name, cond, detail) { results.push({ prueba: name, resultado: cond ?
   for (const [id, b] of Object.entries(key)) await page.selectOption(`.dcard[data-item="${id}"] select`, b);
   await page.click('text=Comprobar distribución');
   fb = await page.textContent('.fb');
-  ok('Clasificación: acierto reconocido', /coherente/.test(fb), fb.slice(0, 80));
+  ok('Clasificación: acierto reconocido', /calza/.test(fb), fb.slice(0, 80));
   await page.click('text=Revisé la devolución');
   // Tocar-tocar: seleccionar tarjeta y colocar
   await page.click('.dcard[data-item="C01"] .grip');
@@ -95,7 +95,7 @@ function ok(name, cond, detail) { results.push({ prueba: name, resultado: cond ?
   await page.check('input[name="IATU-M01-L03-P04-d"][value="A"]');
   await page.click('text=Comprobar decisión');
   fb = await page.textContent('.fb');
-  ok('Decisión: devolución con clave tras intento', /más defendible es B/.test(fb));
+  ok('Decisión: devolución con clave tras intento', /mejor se defiende es B/.test(fb));
   const refBtn = await page.$('button:has-text("Comparar con la referencia")');
   ok('Decisión: referencia bloqueada sin producto', await refBtn.isDisabled());
   await page.fill('.card textarea', 'Consulta: pedir agrupación. Sistematización: categorías, IDs, prueba y revisión.');
@@ -122,7 +122,7 @@ function ok(name, cond, detail) { results.push({ prueba: name, resultado: cond ?
   await go('m01/taller/IATU-M01-T1');
   await page.click('text=Ver una pista');
   await page.fill('textarea >> nth=0', 'Tabla: acceso a información C1; acceso C2; valoración positiva C3; descarga C4. Excluyo enviar respuestas porque F2 solo pide una tabla interna.');
-  await page.click('text=Entregar borrador para revisión formativa');
+  await page.click('text=Entregar mi borrador y ver la pauta');
   ok('Taller: pauta y modelo tras entregar', await page.isVisible('text=Modelo de referencia'));
   await page.click('text=Revisé la pauta y guardé mi evidencia');
   await page.screenshot({ path: OUT + '/qa-taller.png', fullPage: false });

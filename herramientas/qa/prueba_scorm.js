@@ -100,7 +100,8 @@ const R = []; const ok = (n, c, d) => R.push({ prueba: n, resultado: c ? 'OK' : 
   await f.check('.card input[type=checkbox]'); await f.click('text=Enviar al profesor'); await p.waitForTimeout(1500);
   ok('2004: el proyecto se envía al profesor (queda en revisión)', await f.isVisible('text=Entregado · en revisión del profesor'));
   const nCom = parseInt(await get('cmi.comments_from_learner._count'), 10);
-  ok('2004: la entrega queda legible en cmi.comments_from_learner', nCom >= 1 && /PROYECTO DE DESEMPEÑO/.test(await get('cmi.comments_from_learner.0.comment')) && /^IATU-PROYECTO\|/.test(await get('cmi.comments_from_learner.0.location')), nCom + ' comentario(s)');
+  const com0 = await get('cmi.comments_from_learner.0.comment'), loc0 = await get('cmi.comments_from_learner.0.location');
+  ok('2004: la entrega queda legible en cmi.comments_from_learner', nCom >= 1 && /PROYECTO DE DESEMPE/.test(com0) && /^IATU-PROYECTO\|/.test(loc0), nCom + ' comentario(s) · ' + String(com0).slice(0, 40) + ' · ' + loc0);
   ok('2004: completion_status = completed (17 secciones + dos partes entregadas)', (await get('cmi.completion_status')) === 'completed', await get('cmi.completion_status'));
   ok('2004: sin calificación del profesor el resultado sigue pendiente', (await get('cmi.success_status')) === 'unknown', await get('cmi.success_status'));
   const evalLMS = (ev) => p.evaluate((ev) => document.querySelector('iframe').contentWindow.postMessage(Object.assign({ type: 'dibork:iatu:proyecto-evaluado' }, ev), '*'), ev);

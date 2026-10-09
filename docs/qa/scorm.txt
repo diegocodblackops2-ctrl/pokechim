@@ -120,14 +120,14 @@
   "detalle": ""
  },
  {
-  "prueba": "2004: el proyecto se corrige solo y detecta el fallo crítico",
+  "prueba": "2004: el proyecto se envía al profesor (queda en revisión)",
   "resultado": "OK",
   "detalle": ""
  },
  {
-  "prueba": "2004: nota del proyecto sobre 90 pese al fallo (puntaje analítico)",
+  "prueba": "2004: la entrega queda legible en cmi.comments_from_learner",
   "resultado": "OK",
-  "detalle": "{\"p\":96.09,\"pend\":true}"
+  "detalle": "2 comentario(s) · PROYECTO DE DESEMPEÑO · IA para trabajar · IATU-PROYECTO|IATU-P-A1-mv0iyuuo|1/2"
  },
  {
   "prueba": "2004: completion_status = completed (17 secciones + dos partes entregadas)",
@@ -135,12 +135,22 @@
   "detalle": "completed"
  },
  {
-  "prueba": "2004: success_status = failed con fallo crítico pendiente",
+  "prueba": "2004: sin calificación del profesor el resultado sigue pendiente",
   "resultado": "OK",
-  "detalle": "failed"
+  "detalle": "unknown"
  },
  {
-  "prueba": "2004: subsanar el texto levanta el fallo crítico",
+  "prueba": "2004: el profesor puede devolver el proyecto con comentarios",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: el reenvío no gasta un intento",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: la nota del profesor llega al curso (niveles C1–C4 → 90)",
   "resultado": "OK",
   "detalle": ""
  },
@@ -157,7 +167,7 @@
  {
   "prueba": "2004: score.raw = nota global y scaled coherente",
   "resultado": "OK",
-  "detalle": "95.65 / 0.9565 (esperado 95.65)"
+  "detalle": "92 / 0.9200 (esperado 92)"
  },
  {
   "prueba": "2004: score.min/max 0–100",
@@ -167,7 +177,7 @@
  {
   "prueba": "2004: interacciones del proyecto registradas",
   "resultado": "OK",
-  "detalle": 148
+  "detalle": 166
  },
  {
   "prueba": "2004: cmi.exit = suspend también al aprobar (permite volver a la devolución)",
@@ -177,7 +187,7 @@
  {
   "prueba": "2004: guardado rechazado se informa como error",
   "resultado": "OK",
-  "detalle": "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla; reintenta."
+  "detalle": "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla: vuelve a intentarlo."
  },
  {
   "prueba": "1.2: el SCO inicializa la API",
@@ -197,7 +207,7 @@
  {
   "prueba": "1.2: respeta 4.096 caracteres (guarda avance «lite»)",
   "resultado": "OK",
-  "detalle": "343 caracteres"
+  "detalle": "339 caracteres"
  },
  {
   "prueba": "1.2: informa que los textos largos quedaron solo en el navegador",
@@ -211,4 +221,4 @@
  }
 ]
 
-42/42 OK
+44/44 OK

@@ -1,0 +1,10 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.520
+Un cero puede ser un dato válido.
+
+00:00:01.560 --> 00:00:03.660
+Un vacío significa que no se informó el dato.
+
+00:00:03.700 --> 00:00:05.760
+Reemplazar ambos por lo mismo cambia el análisis.
