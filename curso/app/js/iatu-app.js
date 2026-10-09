@@ -346,7 +346,7 @@
       mnt.appendChild(M.audioPlayer("IATU-COMO_ESTUDIAR"));
       mnt.appendChild(u.paragraphs(O.how_to, "prose"));
       mnt.appendChild(h("h2", null, "Rutas"));
-      mnt.appendChild(M.audioPlayer("IATU-RUTAS", { label: "Narración de las rutas" }));
+      mnt.appendChild(M.audioPlayer("IATU-RUTAS", { label: "Rutas · voz sintética" }));
       mnt.appendChild(u.paragraphs(O.study_routes, "prose"));
       var hrs = O.hours;
       mnt.appendChild(h("div", { class: "table-wrap" }, h("table", { class: "data" },
@@ -437,7 +437,12 @@
       var f = M.figure(screen.image_ids[0], { side: false });
       if (f) mnt.appendChild(f);
     }
-    mnt.appendChild(u.paragraphs(screen.text, "prose"));
+    if (/resolución/i.test(screen.title)) {
+      mnt.appendChild(h("section", { class: "resolution", "aria-label": "Resolución comentada" },
+        h("span", { class: "ref-label" }, "Resolución comentada"), u.paragraphs(screen.text, "prose")));
+    } else if (/procedimiento/i.test(screen.title)) {
+      mnt.appendChild(h("section", { class: "procedure", "aria-label": "Procedimiento" }, u.paragraphs(screen.text, "prose")));
+    } else mnt.appendChild(u.paragraphs(screen.text, "prose"));
     if (screen.video_id) { var v = M.videoCard(screen.video_id); if (v) mnt.appendChild(v); }
     if (screen.flipcards) I.flipcards(screen.flipcards, mnt);
     if (screen.hotspots) screen.hotspots.forEach(function (hs) { I.hotspots(hs, mnt); });
@@ -454,9 +459,14 @@
 
   function renderIntro(mnt, m) {
     mnt.appendChild(h("div", { class: "crumbs" }, "Módulo " + m.number + " de 16"));
-    var head = h("header", { class: "screen-head" }, h("div", null, h("span", { class: "kicker" }, "Objetivo " + m.objective_id), h("h1", null, m.title)));
-    mnt.appendChild(head);
-    mnt.appendChild(M.audioPlayer(m.intro_audio, { label: "Introducción del módulo · voz sintética Catalina (es-CL)" }));
+    var C = IATU.data.curso, firstImg = null;
+    m.lessons.some(function (l) { return l.screens.some(function (s) { return (s.image_ids || []).some(function (id) { if (C.images[id] && C.images[id].file) { firstImg = C.images[id]; return true; } return false; }); }); });
+    var banner = h("header", { class: "mod-banner" + (firstImg ? "" : " noimg") },
+      firstImg ? h("img", { src: BASE + firstImg.file, alt: "", srcset: firstImg.sm ? BASE + firstImg.sm + " 720w, " + BASE + firstImg.file + " 1440w" : null, sizes: "(max-width: 900px) 100vw, 980px" }) : null,
+      h("div", { class: "mod-banner-in" }, h("span", { class: "mod-num", "aria-hidden": "true" }, ("0" + m.number).slice(-2)),
+        h("div", null, h("span", { class: "kicker" }, "Módulo " + m.number + " · objetivo " + m.objective_id), h("h1", null, m.title))));
+    mnt.appendChild(banner);
+    mnt.appendChild(M.audioPlayer(m.intro_audio, { label: "Introducción · voz sintética" }));
     mnt.appendChild(h("p", { class: "lead reading" }, m.introduction));
     mnt.appendChild(h("div", { class: "callout reading" }, h("h3", null, icon("bandera"), " Al terminar podrás"), h("p", null, m.objective)));
     var tc = m.time_components;
@@ -482,7 +492,7 @@
     mnt.appendChild(h("div", { class: "crumbs" }, "Módulo " + m.number + " · cierre"));
     mnt.appendChild(h("span", { class: "kicker" }, "Cierre del módulo"));
     mnt.appendChild(h("h1", null, m.title));
-    mnt.appendChild(M.audioPlayer(m.closure_audio, { label: "Cierre del módulo · voz sintética Catalina (es-CL)" }));
+    mnt.appendChild(M.audioPlayer(m.closure_audio, { label: "Cierre · voz sintética" }));
     mnt.appendChild(h("p", { class: "lead reading" }, m.closure));
     var reqs = requirements(m.sco), p = progressOf(m.sco);
     mnt.appendChild(h("div", { class: "callout " + (p.complete ? "" : "warn") }, h("h3", null, p.complete ? "Requisitos obligatorios completos" : "Te faltan " + (p.total - p.done) + " de " + p.total + " requisitos"),

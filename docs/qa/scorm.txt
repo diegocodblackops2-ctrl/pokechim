@@ -1,0 +1,114 @@
+[
+ {
+  "prueba": "2004: SCO inicializa la API",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: estado de guardado muestra conexión al LMS",
+  "resultado": "OK",
+  "detalle": "Conectado a SCORM 2004"
+ },
+ {
+  "prueba": "2004: suspend_data comprimido escrito",
+  "resultado": "OK",
+  "detalle": "167 caracteres"
+ },
+ {
+  "prueba": "2004: cmi.location guardada",
+  "resultado": "OK",
+  "detalle": "m01/IATU-M01-L01-P02"
+ },
+ {
+  "prueba": "2004: incompleto mientras faltan requisitos",
+  "resultado": "OK",
+  "detalle": "incomplete"
+ },
+ {
+  "prueba": "2004: cmi.exit = suspend",
+  "resultado": "OK",
+  "detalle": "suspend"
+ },
+ {
+  "prueba": "2004: reanuda en la ubicación guardada",
+  "resultado": "OK",
+  "detalle": "#/m01/IATU-M01-L01-P02"
+ },
+ {
+  "prueba": "2004: reanuda el avance (pantalla revisada)",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: completion_status = completed al cumplir requisitos",
+  "resultado": "OK",
+  "detalle": "completed"
+ },
+ {
+  "prueba": "2004: success_status = passed (escribe objetivo global)",
+  "resultado": "OK",
+  "detalle": "passed"
+ },
+ {
+  "prueba": "2004: progress_measure = 1",
+  "resultado": "OK",
+  "detalle": "1.0000"
+ },
+ {
+  "prueba": "2004: interacciones formativas registradas (cmi.interactions)",
+  "resultado": "OK",
+  "detalle": "0"
+ },
+ {
+  "prueba": "2004: guardado rechazado no se muestra como guardado",
+  "resultado": "OK",
+  "detalle": "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla; reintenta."
+ },
+ {
+  "prueba": "2004: tras rechazo, el dato sigue disponible para reintentar",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004 evaluación: lee los 17 objetivos globales",
+  "resultado": "OK",
+  "detalle": "17 filas"
+ },
+ {
+  "prueba": "2004 evaluación: señala exactamente el módulo pendiente",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004 evaluación: sin servicio, examen bloqueado",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "1.2: SCO inicializa la API",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "1.2: lesson_status incomplete + suspend_data",
+  "resultado": "OK",
+  "detalle": "171 caracteres"
+ },
+ {
+  "prueba": "1.2: respeta 4.096 caracteres (guarda avance «lite»)",
+  "resultado": "OK",
+  "detalle": "171 caracteres"
+ },
+ {
+  "prueba": "1.2: informa honestamente que los textos largos quedaron solo en el navegador",
+  "resultado": "OK",
+  "detalle": "El LMS guardó tu avance, pero tus textos largos quedaron solo en este navegador (límite de SCORM 1.2)."
+ },
+ {
+  "prueba": "Sin errores de JavaScript",
+  "resultado": "OK",
+  "detalle": ""
+ }
+]
+
+22/22 OK

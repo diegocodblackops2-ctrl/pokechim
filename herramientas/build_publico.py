@@ -86,6 +86,7 @@ def main():
             "text": None if r["kind"] == "pantalla" else r["transcript_text"],
         }
 
+    personas = cargar(os.path.join(RAIZ, "herramientas", "imagenes_personas_v3_1.json"))["cambios"]
     imagenes = {}
     for a in cat["assets"]:
         rel = a["path_expected"]
@@ -95,7 +96,8 @@ def main():
             "file": rel if ok else None,
             "sm": rel_sm if ok and existe_media(rel_sm) else None,
             "w": a["width"], "h": a["height"], "ratio": a["aspect_ratio"],
-            "role": a["role"], "alt": a["alt_draft"], "title": a["title"],
+            "role": a["role"], "alt": personas[a["id"]]["alt"] if a["id"] in personas else a["alt_draft"], "title": a["title"],
+            "people": a["id"] in personas or a["id"] in ("IATU-IMG025", "IATU-IMG059"),
             "screen": a["screen_id"],
         }
 

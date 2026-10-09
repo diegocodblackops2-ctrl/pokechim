@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><title>LMS simulado (scorm-again) · prueba de runtime</title>
+<script src="scorm-again.min.js"></script></head>
+<body style="margin:0">
+<iframe id="sco" style="width:100vw;height:100vh;border:0"></iframe>
+<script>
+/* Simula el entorno de ejecución SCORM del LMS para pruebas automatizadas: NO es Dibork Learning.
+   ?ed=2004|12 &sco=m01 &estado=<json cmi guardado> &obj=<json objetivos> */
+var q = new URLSearchParams(location.search), ed = q.get("ed") || "2004", sco = q.get("sco") || "m01";
+var settings = { autocommit: false, logLevel: 5 };
+if (ed === "2004") {
+  window.API_1484_11 = new Scorm2004API(settings);
+  var saved = q.get("estado");
+  if (saved) {
+    var st = JSON.parse(saved), flat = {};
+    (st.objectives || []).forEach(function (o, i) { flat["cmi.objectives." + i + ".id"] = o.id; flat["cmi.objectives." + i + ".success_status"] = o.success_status; });
+    delete st.objectives;
+    window.API_1484_11.loadFromJSON(st);
+    if (Object.keys(flat).length) window.API_1484_11.loadFromFlattenedJSON(flat, "");
+  }
+  window.API_1484_11.on("Commit", function () { window.ultimoCommit = window.API_1484_11.renderCommitCMI(true); });
+} else {
+  window.API = new Scorm12API(settings);
+  var saved12 = q.get("estado"); if (saved12) window.API.loadFromJSON(JSON.parse(saved12));
+  window.API.on("LMSCommit", function () { window.ultimoCommit = window.API.renderCommitCMI(true); });
+}
+document.getElementById("sco").src = "paquete/sco_" + sco + ".html";
+</script></body></html>

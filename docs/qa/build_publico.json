@@ -1,0 +1,21 @@
+{
+ "modulos": 16,
+ "lecciones": 64,
+ "pantallas": 256,
+ "actividades": 32,
+ "tarjetas": 32,
+ "hotspots": 8,
+ "talleres": 32,
+ "casos": 3,
+ "diagnostico": 16,
+ "audio_disponible": 13,
+ "audio_total": 328,
+ "imagenes_disponibles": 6,
+ "imagenes_total": 60,
+ "videos_disponibles": 1,
+ "videos_total": 12,
+ "fuga_privada": "ninguna detectada",
+ "observaciones": [
+  "IATU-M12-U02: expediente coincide con una pantalla de lección del maestro"
+ ]
+}

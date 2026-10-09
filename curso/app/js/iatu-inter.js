@@ -662,8 +662,9 @@
     B.appendChild(h("p", { class: "note" }, hs.source_input));
     var wrap = h("div", { class: "hs-wrap" });
     var doc = h("div", { class: "doc hs-doc", "aria-label": hs.document.title },
-      h("div", { class: "doc-tab" }, icon("documento"), hs.document.kind),
-      h("h3", { class: "doc-title" }, hs.document.title));
+      h("div", { class: "doc-tab" }, icon("documento"), "Documento simulado"),
+      h("h3", { class: "doc-title" }, hs.document.title),
+      h("p", { class: "note", style: { marginTop: "-.3rem" } }, hs.document.kind + ". Toca cada zona numerada."));
     var panel = h("div", { class: "hs-panel" });
     var detail = h("div", { class: "card", role: "region", "aria-live": "polite", tabindex: "-1" }, h("p", { class: "note" }, "Elige una zona numerada del documento o de la lista."));
     var list = h("ul", { class: "hs-list", "aria-label": "Zonas del documento" });

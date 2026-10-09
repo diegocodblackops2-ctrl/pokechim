@@ -30,7 +30,7 @@
     var trBtn = h("button", { class: "btn btn-sm btn-ghost", type: "button", "aria-expanded": "false" }, icon("transcripcion"), "Transcripción");
     var trBox = h("div", { class: "transcript", hidden: true });
     var muestra = /^muestra/.test(rec.status || "");
-    var label = h("span", { class: "label" }, icon("audio"), (opts.label || "Narración · voz sintética Catalina (es-CL)") + (muestra ? " · muestra en revisión" : ""));
+    var label = h("span", { class: "label" }, icon("audio"), (opts.label || "Voz sintética") + " · Catalina (es-CL)", muestra ? h("span", { class: "tag tag-ochre", title: "Pista de muestra pendiente de aprobación de voz y licencia" }, "muestra") : null);
     function setIcon(name, lbl) { u.clear(btn); btn.appendChild(icon(name)); btn.setAttribute("aria-label", lbl); }
     btn.addEventListener("click", function () {
       if (!el.src) el.src = BASE + rec.file;
@@ -73,7 +73,7 @@
     var C = IATU.data.curso, im = C.images[imgId];
     if (!im || !im.file) return null; // sin marcador "imagen pendiente" en la vista del participante
     var img = h("img", {
-      src: BASE + im.file, alt: im.role === "ambiental" ? "" : (im.alt || ""), loading: "lazy", decoding: "async",
+      src: BASE + im.file, alt: im.alt || "", loading: "lazy", decoding: "async",
       width: im.w, height: im.h
     });
     if (im.sm) { img.setAttribute("srcset", BASE + im.sm + " 720w, " + BASE + im.file + " " + im.w + "w"); img.setAttribute("sizes", opts.side ? "(max-width: 720px) 100vw, 360px" : "(max-width: 900px) 100vw, 860px"); }

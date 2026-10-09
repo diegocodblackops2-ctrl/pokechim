@@ -1,0 +1,164 @@
+[
+ {
+  "prueba": "Clasificación: 6 tarjetas con selector Mover a…",
+  "resultado": "OK",
+  "detalle": "6 selectores"
+ },
+ {
+  "prueba": "Clasificación: devolución por tarjeta ante errores",
+  "resultado": "OK",
+  "detalle": "4 tarjeta(s) por revisarRevisa las tarjetas señaladas. Cada devolución explica e"
+ },
+ {
+  "prueba": "Clasificación: acierto reconocido",
+  "resultado": "OK",
+  "detalle": "Distribución coherente con el expedienteTu distribución respeta las categorías y"
+ },
+ {
+  "prueba": "Clasificación: flujo tocar tarjeta → tocar destino",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Clasificación: tarjeta colocada por toque",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Clasificación: deshacer",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Clasificación: arrastre con puntero",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Secuencia: orden topológico válido aceptado",
+  "resultado": "OK",
+  "detalle": "Orden válido: respeta todas las dependenciasNo basta guardar"
+ },
+ {
+  "prueba": "Ramas: ruta A–B para resultado incierto",
+  "resultado": "OK",
+  "detalle": "Ruta correcta para «Consulta sin respuesta»La ruta depende d"
+ },
+ {
+  "prueba": "Ramas: misma ruta no basta para envío confirmado",
+  "resultado": "OK",
+  "detalle": "La ruta no corresponde a «Envío confirmado»Revisa el resulta"
+ },
+ {
+  "prueba": "Comparación: 3 campos numéricos M12",
+  "resultado": "OK",
+  "detalle": "3"
+ },
+ {
+  "prueba": "Comparación: coma decimal y negativo aceptados",
+  "resultado": "OK",
+  "detalle": "3 campos OK"
+ },
+ {
+  "prueba": "Comparación: conjunto por IDs (orden indiferente)",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Decisión: devolución con clave tras intento",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Decisión: referencia bloqueada sin producto",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Decisión: referencia habilitada con producto",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Tarjeta: gira con teclado (Enter)",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Tarjeta: foco pasa a «Volver a la pregunta»",
+  "resultado": "OK",
+  "detalle": "Volver a la pregunta"
+ },
+ {
+  "prueba": "Hotspot: zonas ancladas a bloques",
+  "resultado": "OK",
+  "detalle": "3 zonas"
+ },
+ {
+  "prueba": "Hotspot: lista equivalente abre la misma devolución",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Taller: pauta y modelo tras entregar",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Caso: reparación ante decisión incorrecta",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Caso: avance tras decisión + evidencia correctas",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Diagnóstico: «No lo sé» con devolución",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Persistencia: borrador de clasificación tras recarga",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Examen: bloqueado sin servicio configurado",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Móvil 360 px sin scroll horizontal: /",
+  "resultado": "OK",
+  "detalle": "scrollWidth=360"
+ },
+ {
+  "prueba": "Móvil 360 px sin scroll horizontal: /m01/IATU-M01-L01-P04",
+  "resultado": "OK",
+  "detalle": "scrollWidth=360"
+ },
+ {
+  "prueba": "Móvil 360 px sin scroll horizontal: /m05/IATU-M05-L03-P04",
+  "resultado": "OK",
+  "detalle": "scrollWidth=360"
+ },
+ {
+  "prueba": "Móvil 360 px sin scroll horizontal: /m02/IATU-M02-L02-P03",
+  "resultado": "OK",
+  "detalle": "scrollWidth=360"
+ },
+ {
+  "prueba": "Móvil 360 px sin scroll horizontal: /m01/taller/IATU-M01-T1",
+  "resultado": "OK",
+  "detalle": "scrollWidth=360"
+ },
+ {
+  "prueba": "Sin errores de JavaScript",
+  "resultado": "OK",
+  "detalle": ""
+ }
+]
+
+32/32 OK

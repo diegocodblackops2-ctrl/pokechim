@@ -1,0 +1,28 @@
+{
+ "version": "3.0.0",
+ "sco": 18,
+ "scorm2004": {
+  "archivos_declarados": 95,
+  "faltantes": [],
+  "ids_duplicados": [],
+  "referencias_rotas": [],
+  "archivos_no_declarados": [],
+  "posible_material_privado": [],
+  "sco": 18,
+  "zip": "dist/IATU_C05_SCORM2004_4ed_v3.0.0.zip",
+  "bytes": 3791988,
+  "sha256": "ac423c3e50047959aef36bd90f83dcc5b70ded9d757257ca02baa66121d02960"
+ },
+ "scorm12": {
+  "archivos_declarados": 95,
+  "faltantes": [],
+  "ids_duplicados": [],
+  "referencias_rotas": [],
+  "archivos_no_declarados": [],
+  "posible_material_privado": [],
+  "sco": 18,
+  "zip": "dist/IATU_C05_SCORM12_v3.0.0.zip",
+  "bytes": 3791342,
+  "sha256": "a029b90c90127a9fad704dc872b41484639f1bd8e9410b2a34d3dec506d9a565"
+ }
+}

@@ -180,7 +180,7 @@
   }
   function reportUnits(at) {
     (at.resultado.unidades || []).forEach(function (r) {
-      store.interaction({ id: r.id, type: "choice", response: (r.d || "") + "/" + (r.e || ""), result: r.puntos === 5 ? "correct" : r.puntos ? "neutral" : "incorrect", description: "Unidad " + r.id });
+      store.interaction({ id: r.id, type: "other", response: (r.d || "-") + "/" + (r.e || "-"), result: r.puntos === 5 ? "correct" : r.puntos ? "neutral" : "incorrect", description: "Unidad " + r.id });
     });
   }
   function results(box, at) {

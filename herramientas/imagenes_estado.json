@@ -1,0 +1,6 @@
+{
+  "nota": "Estado real de las 60 imágenes al 9-oct-2026. 'integrada' = WebP en curso/media/images. 'canva_sin_exportar' = generada en la cuenta Canva de Diego (media_id), falta exportar a resolución completa. 'entregada_por_diego_sin_archivo' = Diego la mostró en el chat como vista previa; falta subir el archivo. Lienzo de trabajo en Canva: diseño DAHXeRKNQ-Q.",
+  "integrada": {"IATU-IMG001": "MAHXeenRVgk", "IATU-IMG002": "MAHXeoMIwMs", "IATU-IMG005": "MAHXevHX66M", "IATU-IMG008": "MAHXeqDk-7k", "IATU-IMG009": "MAHXes4hKpk", "IATU-IMG010": "MAHXeqy6eQU"},
+  "canva_sin_exportar": {"IATU-IMG011": "MAHXejzNeoQ", "IATU-IMG012": "MAHXepKOr4c", "IATU-IMG013": "MAHXeqkt2ME", "IATU-IMG014": "MAHXeiUAgmA", "IATU-IMG015": "MAHXevbcAOE", "IATU-IMG016": "MAHXei7JQZ0", "IATU-IMG017": "MAHXegVeTVA", "IATU-IMG018": "MAHXeusbxxA", "IATU-IMG019": "MAHXegGH17g", "IATU-IMG020": "MAHXep-5y-w"},
+  "entregada_por_diego_sin_archivo": ["IATU-IMG001", "IATU-IMG003", "IATU-IMG004", "IATU-IMG006", "IATU-IMG007"]
+}

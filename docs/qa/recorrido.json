@@ -1,0 +1,47 @@
+[
+ {
+  "prueba": "Inicio frío: transferencia de la portada",
+  "resultado": "OK",
+  "detalle": "501 KiB en 14 solicitudes, 613 ms (local, sin limitación de red)"
+ },
+ {
+  "prueba": "Carga a demanda: sin audio ni video al entrar",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Carga a demanda: no carga los 16 módulos al entrar",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Recorrido: 256 pantallas renderizadas con su texto",
+  "resultado": "OK",
+  "detalle": "256 pantallas; sin texto esperado: "
+ },
+ {
+  "prueba": "Recorrido: 32 talleres con expediente",
+  "resultado": "OK",
+  "detalle": "32"
+ },
+ {
+  "prueba": "Recorrido: 3 casos con antecedentes",
+  "resultado": "OK",
+  "detalle": "3"
+ },
+ {
+  "prueba": "Orientación, evaluación y biblioteca abren sin errores",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "Teclado: controles alcanzables con Tab muestran foco visible",
+  "resultado": "OK",
+  "detalle": "BUTTON|true, SELECT|true, TEXTAREA|true, A|true, BODY|false, SUMMARY|true"
+ },
+ {
+  "prueba": "Sin errores de JavaScript",
+  "resultado": "OK",
+  "detalle": ""
+ }
+]

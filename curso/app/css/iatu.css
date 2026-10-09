@@ -597,3 +597,20 @@ table.data th { background: var(--paper-3); }
   .bins { grid-template-columns: 1fr; }
   .crumbs { font-size: .76rem; }
 }
+
+/* Encabezado de módulo */
+.mod-banner { position: relative; border-radius: 16px; overflow: hidden; background: var(--ink); min-height: 260px; display: grid; align-items: end; margin: .3rem 0 1.5rem; box-shadow: var(--shadow-lg); }
+.mod-banner img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.mod-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(14,19,26,.92) 0%, rgba(14,19,26,.55) 55%, rgba(14,19,26,.15) 100%); }
+.mod-banner.noimg { background: radial-gradient(120% 140% at 100% 0%, #24524f 0%, #17202b 60%); }
+.mod-banner.noimg::after { display: none; }
+.mod-banner-in { position: relative; z-index: 2; display: flex; gap: 1.2rem; align-items: flex-end; padding: 1.4rem clamp(1rem, 3vw, 2rem); }
+.mod-num { font: 700 clamp(3rem, 2rem + 4vw, 5.5rem)/.85 var(--serif); color: #9fd6cf; }
+.mod-banner h1 { color: #fffaf0; margin: .3rem 0 0; }
+.mod-banner .kicker { color: #9fd6cf; }
+/* Pantallas de procedimiento y resolución */
+.resolution { border: 1px solid var(--rule); border-left: 4px solid var(--violet); background: var(--paper-2); border-radius: var(--radius); padding: 1rem 1.2rem .4rem; max-width: calc(var(--measure) + 2.6rem); box-shadow: var(--shadow); }
+.procedure .prose p { padding-left: 1rem; border-left: 2px solid var(--rule-strong); }
+.procedure .prose p:first-child { border-left-color: var(--teal); }
+.audio { max-width: 680px; }
+.audio .label { flex-wrap: wrap; }

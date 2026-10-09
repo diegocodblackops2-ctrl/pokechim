@@ -155,7 +155,8 @@
     mount.appendChild(h("header", { class: "screen-head" }, h("div", null,
       h("span", { class: "kicker" }, "Caso con decisiones"),
       h("h1", null, cs.title),
-      h("div", { class: "meta-row" }, h("span", { class: "tag" }, icon("reloj"), cs.minutes + " min"), h("span", { class: "tag tag-violet" }, "Práctica sin nota"), h("span", { class: "tag" }, cs.placement)))));
+      h("div", { class: "meta-row" }, h("span", { class: "tag" }, icon("reloj"), cs.minutes + " min"), h("span", { class: "tag tag-violet" }, "Práctica sin nota")),
+      h("p", { class: "note", style: { marginTop: ".5rem" } }, cs.placement))));
     mount.appendChild(h("div", { class: "callout" }, h("p", null, cs.brief)));
     var mats = h("details", { class: "materials-toggle", open: true }, h("summary", null, h("b", null, "Materiales del caso (" + cs.materials.length + ")")));
     cs.materials.forEach(function (mid) {
