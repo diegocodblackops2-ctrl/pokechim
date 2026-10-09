@@ -1,0 +1,979 @@
+{
+  "id": "SEG360-CIBER-M03",
+  "ruta": "CIBER",
+  "numero": 3,
+  "titulo": "Accesos: contraseñas, gestores, MFA y passkeys",
+  "subtitulo": "Cómo cuidar la puerta de entrada a tus cuentas de trabajo, y qué hacer cuando alguien la golpea a medianoche",
+  "resultado": "Ante una política de acceso y solicitudes de autenticación simuladas, configurar prácticas razonables de contraseñas, gestor, MFA y passkeys, y responder correctamente a una aprobación MFA inesperada o a una solicitud de recuperación sospechosa.",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-CIBER-M03-INTRO",
+    "titulo": "Martes, 23:40: alguien tiene tu clave",
+    "texto": "Javier ya está acostado cuando el celular vibra en el velador: «¿Estás intentando iniciar sesión en el Correo Pehuén?». Él no está intentando nada.\n\nEsa notificación dice dos cosas a la vez: que alguien ya tiene su contraseña y que la segunda puerta, la verificación adicional que en el trabajo se conoce como **MFA**, por ahora está aguantando. Lo que Javier haga en los próximos diez segundos decide el resto.\n\nEn este módulo vas a ordenar tus accesos para que esa noche no llegue, y para saber exactamente qué hacer si llega.",
+    "voz": "Una notificación a medianoche parece poca cosa. Un botón verde, un botón rojo, y el sueño que te pide apretar cualquiera para seguir durmiendo. Pero detrás de ese aviso hay alguien, en otra parte, que escribió tu contraseña correcta y que está esperando que tú le abras. En las próximas tres horas vamos a trabajar las dos puertas de tus cuentas: la contraseña y la verificación adicional. Y también la puerta de atrás, la que se usa cuando olvidas la clave o pierdes el celular, que es justamente por donde muchos intentan entrar.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG032",
+    "logros": [
+      "Crear y administrar contraseñas largas y únicas con apoyo del gestor de contraseñas de la empresa.",
+      "Elegir y configurar métodos de MFA y passkeys, sabiendo qué protege cada uno y qué no.",
+      "Responder a una aprobación MFA que no pediste sin aprobarla, cambiar la clave y reportarlo a tiempo.",
+      "Reconocer solicitudes de recuperación o reseteo sospechosas y verificar siempre por un canal que tú eliges."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-CIBER-M03-L01",
+      "titulo": "Contraseñas únicas y gestores",
+      "resultado": "Ante prácticas de contraseñas de un equipo de trabajo, distinguir las que reducen el daño de una filtración de las que lo multiplican, y proponer el uso de frases de contraseña y del gestor corporativo en lugar de claves repetidas o compartidas.",
+      "minutos": 38,
+      "fuentes": ["CIB-NIST80063B", "CIB-INCIBE", "CIB-CISA-PHISH", "CIB-NISTCSF2"],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M03-L01-P01",
+          "tipo": "apertura",
+          "titulo": "El «sistema» de Javier",
+          "escena": "Es lunes a las 9:10 en la oficina del segundo piso. El sistema de pagos le pide a Javier cambiar la contraseña. Él no se complica: tiene un sistema. Usa la misma base para todo, el correo de Pehuén, el portal del banco de la empresa y su cuenta del supermercado online, y le cambia el número del mes. Le toma diez segundos y nunca se le olvida.",
+          "pregunta": "¿Qué pasa con todas esas cuentas el día que se filtra la del supermercado?",
+          "texto": "El sistema de Javier es cómodo, rápido y muy común. También es justo lo que buscan quienes compran listas de contraseñas filtradas.\n\nEn esta lección vas a cambiar la pregunta «¿mi clave es difícil?» por otra mucho más útil: **«¿qué pasa si esta clave se filtra?»**.",
+          "voz": "Casi todos tenemos un sistema parecido al de Javier. Una palabra que nos gusta, unos números, un signo al final, y después pequeñas variaciones para cada sitio. Tiene lógica: nadie puede recordar treinta claves distintas. El problema es que quienes roban contraseñas también conocen estos sistemas, y los prueban primero. Así que no te vamos a pedir que memorices más. Te vamos a pedir que memorices menos, pero mejor, y que dejes que una herramienta haga el resto.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG031",
+          "icono": "key-round"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Cómo se roban las claves de verdad",
+          "texto": "Pocas veces alguien «adivina» tu clave probando letra por letra. Lo habitual es más simple y más barato:",
+          "bloques": [
+            { "icono": "file-warning", "titulo": "Filtraciones", "texto": "Atacan un sitio cualquiera, una tienda o un foro, y sus correos y claves terminan en listas que se venden o se publican." },
+            { "icono": "refresh-cw", "titulo": "Relleno de credenciales", "texto": "Programas automáticos prueban esas mismas combinaciones en cientos de sitios: correos, bancos, portales de proveedores." },
+            { "icono": "mail-warning", "titulo": "Phishing", "texto": "Una página falsa, idéntica a la real, te pide la clave y tú se la entregas sin notarlo." },
+            { "icono": "search", "titulo": "Claves comunes", "texto": "Se prueban primero las más usadas y sus variaciones típicas: nombres, años, «123», un signo al final." }
+          ],
+          "nota": { "tipo": "ojo", "texto": "Una clave muy difícil que usas en dos sitios vale lo mismo que el sitio menos protegido de los dos." },
+          "voz": "Fíjate en que ninguna de estas formas depende de lo inteligente que seas. Si una tienda online donde compraste una vez guardaba mal las claves, tu clave ya está en una lista. Y esa lista no la revisa una persona: la recorre un programa que, en una noche, prueba tu correo y tu clave en el correo de Pehuén, en el banco y en el portal de proveedores. Por eso la regla más importante no es que tu clave sea rara. Es que sea única: que lo que se filtra en un lugar no abra ningún otro.",
+          "hablante": "narrador",
+          "profundiza": "El relleno de credenciales funciona porque mucha gente reutiliza contraseñas. Los atacantes no necesitan entrar a los sistemas de Pehuén para conseguir la clave de Javier: les basta con que él la haya usado en un sitio más débil que sufrió una filtración. Con esas listas, herramientas automáticas prueban miles de combinaciones por hora y avisan cuando alguna funciona.\n\nTambién existen variantes en que se prueba una sola clave muy común contra muchas cuentas distintas, para no gatillar bloqueos. Y cuando una clave fue filtrada con una pequeña variación, como el número del mes, los programas prueban esas variaciones antes que nada.\n\nPor eso las guías actuales, como las del NIST de Estados Unidos sobre autenticación, ponen el foco en el largo, en revisar si una clave aparece en listas de claves comprometidas y en no obligar a cambios periódicos que solo producen variaciones predecibles. La clave cambia cuando hay una razón: una filtración, una sospecha, un aviso del gestor o de soporte TI. La política de cada empresa define los detalles, y en Pehuén esa política la está ordenando Nacho.",
+          "icono": "file-warning"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P03",
+          "tipo": "mito_realidad",
+          "titulo": "Lo que nos enseñaron sobre las claves",
+          "texto": "Algunas de estas ideas se repiten hace años en oficinas de todo Chile. Decide cuáles se sostienen y cuáles no.",
+          "afirmaciones": [
+            { "texto": "Cambiar la contraseña cada mes, aunque no haya pasado nada, la hace mucho más segura.", "es_verdad": false, "explicacion": "El cambio forzado y frecuente suele producir variaciones predecibles, como pasar de «Pehuen2026Oct» a «Pehuen2026Nov», que un programa prueba en segundos. Las guías actuales recomiendan cambiarla cuando hay una razón: una filtración, una sospecha o un aviso. Si la política de tu empresa dice otra cosa, se cumple y se conversa con quien la administra." },
+            { "texto": "Una frase larga de palabras elegidas al azar puede ser más resistente que una clave corta llena de símbolos.", "es_verdad": true, "explicacion": "El largo multiplica las combinaciones posibles mucho más que cambiar una letra por un símbolo. Cuatro o más palabras sin relación entre sí son fáciles de recordar y difíciles de adivinar, siempre que no sean una frase conocida." },
+            { "texto": "Si mi clave es realmente buena, puedo usarla en varias cuentas sin problema.", "es_verdad": false, "explicacion": "La calidad de la clave no te protege si el sitio donde la usaste la guarda mal y se filtra. Una clave buena y repetida termina abriendo todas las puertas donde la usaste." },
+            { "texto": "Anotar la clave en un post-it pegado bajo el teclado es una buena solución intermedia.", "es_verdad": false, "explicacion": "Cualquiera que pase por tu puesto, una visita, alguien de aseo, un colega, puede verla. Si te cuesta recordar claves, el camino es tener pocas que recordar, como frases, y que el gestor guarde el resto." },
+            { "texto": "Un gestor de contraseñas protegido con una buena clave maestra y MFA suele ser más seguro que recordar todas las claves de memoria.", "es_verdad": true, "explicacion": "La memoria humana empuja a repetir y simplificar. El gestor permite tener una clave distinta y larga en cada sitio. Su punto débil es la clave maestra y la cuenta del gestor: por eso se protegen con una frase única y con verificación adicional." },
+            { "texto": "Si el sitio muestra la barrita verde de «contraseña segura», la clave está bien.", "es_verdad": false, "explicacion": "Ese medidor mira la forma de la clave, no su historia. No sabe si la usas en otros sitios ni si ya apareció en una filtración." }
+          ],
+          "voz": "Muchas de estas reglas nos las enseñaron con buena intención, y algunas tuvieron sentido en su momento. Pero el riesgo cambió. Hoy el peligro principal no es que alguien adivine tu clave, sino que la consiga ya hecha, desde una filtración o con una página falsa. Ve marcando lo que piensas y lee con calma cada explicación, sobre todo en las que dudes.",
+          "hablante": "narrador",
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P04",
+          "tipo": "comparacion",
+          "titulo": "Corta y rara, o larga y tuya",
+          "texto": "Las pocas claves que sí tienes que recordar, como la del computador o la clave maestra del gestor, conviene que sean **frases de contraseña**: varias palabras al azar, largas y fáciles de escribir.",
+          "izquierda": {
+            "titulo": "La clave «compleja» de siempre",
+            "icono": "lock",
+            "puntos": [
+              "Ejemplo: P3hu3n!26",
+              "Ocho a diez caracteres con trucos conocidos: la e por un 3, la a por una @",
+              "Difícil de recordar para ti, fácil de probar para un programa que conoce esos trucos",
+              "Termina anotada en un post-it o repetida en otros sitios"
+            ]
+          },
+          "derecha": {
+            "titulo": "Una frase de contraseña",
+            "icono": "shield-check",
+            "puntos": [
+              "Ejemplo: tetera andén lluvia violeta (no uses esta)",
+              "Cuatro o más palabras sin relación entre sí, elegidas al azar",
+              "Larga, fácil de recordar y de escribir, también en el celular",
+              "Si el sistema exige un número o signo, lo agregas sin volverla predecible"
+            ]
+          },
+          "conclusion": "El largo pesa más que los trucos. Pero ninguna clave, por buena que sea, sirve si la repites: la frase es para las pocas claves que recuerdas; el resto las genera y guarda el gestor.",
+          "voz": "Mira las dos columnas como las miraría un programa que intenta adivinar. La clave de la izquierda parece complicada, pero sigue un patrón que todos usamos: una palabra conocida, cambios de letras por números y un año. Eso está en todos los diccionarios de ataque. La frase de la derecha no sigue un patrón, solo es larga y está hecha de palabras que no tienen nada que ver entre sí. Para ti es más fácil de recordar porque puedes imaginarla: una tetera en el andén, bajo la lluvia, pintada de violeta.",
+          "hablante": "narrador",
+          "profundiza": "Una frase de contraseña funciona cuando las palabras se eligen de verdad al azar. Si eliges una frase con sentido, como el título de una canción, un dicho popular, el nombre de tu equipo de fútbol o los nombres de tus hijos, el número de combinaciones posibles se reduce muchísimo, porque esas frases también están en listas de ataque.\n\nUna forma práctica de elegir al azar es abrir un libro en páginas distintas y tomar una palabra de cada una, o usar el generador de frases que trae el gestor de contraseñas. Separar las palabras con espacios o con un signo no cambia mucho la resistencia, pero ayuda a escribirla sin errores.\n\nAlgunos sistemas todavía exigen mayúsculas, números o símbolos. En ese caso, agrégalos en un lugar que no sea el obvio y no los uses para numerar versiones de la misma clave. Y recuerda que una frase larga no reemplaza a la verificación adicional ni a que la clave sea única.",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P05",
+          "tipo": "explicacion",
+          "titulo": "El gestor: una bóveda con una sola llave",
+          "texto": "Un **gestor de contraseñas** es un programa que guarda tus claves cifradas en una bóveda. Tú recuerdas una sola, la **clave maestra**, y el gestor crea y rellena las demás.\n\nEn Pehuén existe un gestor corporativo que instala y configura Nacho. Para las cuentas de la empresa se usa ese, no uno que elijas por tu cuenta.",
+          "bloques": [
+            { "icono": "key-round", "titulo": "Genera", "texto": "Crea una clave larga y distinta para cada sistema. No tienes que conocerlas." },
+            { "icono": "scan-eye", "titulo": "Reconoce el sitio", "texto": "Rellena la clave solo en la dirección correcta. Si no te la ofrece, mira bien dónde estás: puede ser una página falsa." },
+            { "icono": "share-2", "titulo": "Comparte con permisos", "texto": "Las cuentas compartidas del local se dan y se quitan desde el gestor, sin dictar claves por teléfono ni WhatsApp." },
+            { "icono": "bell-ring", "titulo": "Avisa", "texto": "Te muestra claves repetidas, débiles o que aparecen en filtraciones conocidas." }
+          ],
+          "nota": { "tipo": "ojo", "texto": "La clave maestra nunca se repite en ningún otro lugar, y la cuenta del gestor siempre lleva MFA. Pregúntale a Nacho cómo se recupera el acceso al gestor corporativo si olvidas la clave maestra: en muchos gestores, sin preparación previa, no se puede." },
+          "voz": "Yo era de las del cuaderno. Tenía una libreta en el cajón del mesón con las claves del correo del local, del portal de pedidos y de la cuenta de despacho. Cuando Nacho nos instaló el gestor, pensé que iba a ser un enredo, y la primera semana sí me costó. Ahora entro a todo con una sola frase, la libreta se fue a la trituradora y, cuando alguien del turno de la tarde necesita entrar al portal, Nacho le da acceso desde el gestor. Nadie anda dictando claves por teléfono, y cuando alguien se va del equipo, se le quita el acceso y listo.",
+          "hablante": "daniela",
+          "profundiza": "El gestor cifra tu bóveda con una llave que se deriva de tu clave maestra. Por eso la clave maestra es tan importante: si es débil o la repites en otro sitio, quien la consiga podría abrir todo. Por la misma razón, la cuenta del gestor siempre debe tener MFA, idealmente con un método resistente al phishing.\n\nUn beneficio menos conocido es que el gestor ayuda a detectar phishing: rellena la clave solo cuando la dirección del sitio coincide con la que tiene guardada. Si estás en una página que se ve igual al correo de Pehuén y el gestor no te ofrece nada, esa es una señal para detenerte.\n\nPara tu vida personal puedes usar un gestor de prestigio, separado del corporativo. Lo que conviene evitar es mezclar: guardar claves de Pehuén en el gestor del navegador ligado a tu cuenta personal significa que, si roban tu cuenta personal o dejas la empresa, esas claves se van contigo. Tampoco exportes la bóveda a una planilla ni la imprimas. Y bloquea el gestor cuando te levantes del puesto, igual que el computador.",
+          "icono": "folder-lock"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P06",
+          "tipo": "clasificar",
+          "titulo": "¿Suma o resta?",
+          "texto": "Estas son prácticas reales que Nacho encontró al conversar con el equipo de Pehuén. Clasifícalas.",
+          "consigna": "Arrastra cada práctica a la categoría que corresponde. Ojo: algunas no son blanco o negro y dependen de lo que diga la política de Pehuén.",
+          "categorias": [
+            { "id": "suma", "nombre": "Suma: protege el acceso", "icono": "shield-check", "descripcion": "Reduce el daño si una clave se filtra o dificulta que la roben." },
+            { "id": "resta", "nombre": "Resta: te expone", "icono": "shield-alert", "descripcion": "Multiplica el daño de una filtración o deja claves al alcance de otros." },
+            { "id": "consulta", "nombre": "Depende de la política: consulta a Nacho", "icono": "circle-help", "descripcion": "Puede ser razonable o no según cómo esté configurado en Pehuén." }
+          ],
+          "elementos": [
+            { "texto": "Usar una frase de cuatro palabras al azar como clave maestra del gestor.", "categoria": "suma", "feedback": "Bien: es larga, fácil de recordar y no la usas en ningún otro lado. Es la clave que más vale la pena cuidar." },
+            { "texto": "Mandar la clave del portal de pedidos por WhatsApp al compañero del turno de la tarde.", "categoria": "resta", "feedback": "La clave queda guardada en dos celulares, en respaldos de chats y en manos de quien vea la pantalla. Además, ya no se sabe quién hizo qué en el portal. La alternativa es pedirle a Nacho acceso propio o compartido desde el gestor." },
+            { "texto": "Dejar que el gestor corporativo genere una clave distinta para cada sistema de Pehuén.", "categoria": "suma", "feedback": "Así una filtración afecta a un solo sistema. Y no necesitas memorizarlas: para eso está el gestor." },
+            { "texto": "Usar la misma clave del correo de Pehuén en tu cuenta personal de una plataforma de películas.", "categoria": "resta", "feedback": "Si esa plataforma sufre una filtración, la clave de tu correo de trabajo queda expuesta. Lo personal y lo laboral nunca comparten clave." },
+            { "texto": "Guardar las claves de la empresa en el gestor del navegador sincronizado con tu cuenta personal.", "categoria": "consulta", "feedback": "Mezcla lo personal con lo laboral: si roban tu cuenta personal, o si dejas la empresa, esas claves se van con ella. Muchas políticas no lo permiten. Confírmalo con Nacho y, mientras tanto, usa el gestor corporativo." },
+            { "texto": "Cambiar al tiro una clave cuando el gestor avisa que apareció en una filtración.", "categoria": "suma", "feedback": "Es exactamente el momento de cambiarla. Hazlo desde el gestor o escribiendo tú la dirección del sitio, nunca desde un link que te llegó por correo." },
+            { "texto": "Agregarle el número del mes a tu clave de siempre cada vez que el sistema te obliga a cambiarla.", "categoria": "resta", "feedback": "Es la variación más predecible que existe. Los programas de ataque prueban esas variaciones primero. Deja que el gestor genere una clave nueva." },
+            { "texto": "Instalar por tu cuenta un gestor gratuito que viste recomendado en redes, porque el corporativo es «más lento».", "categoria": "resta", "feedback": "En el notebook de Pehuén solo se instala software autorizado. Además, tus claves de trabajo quedarían en un servicio que nadie en la empresa conoce ni controla. Si el corporativo te complica, cuéntaselo a Nacho." },
+            { "texto": "Desbloquear el gestor con la huella en el celular de la empresa.", "categoria": "consulta", "feedback": "Suele ser una práctica cómoda y razonable, porque la huella se verifica en el propio celular. Pero depende de cómo Nacho configuró el gestor y el celular. Pregúntale antes de activarlo." }
+          ],
+          "voz": "Fíjate en un detalle mientras clasificas. Casi todas las prácticas que restan nacen de algo razonable: no atrasar al turno de la tarde, no olvidar la clave, que el sistema no sea lento. No se trata de gente descuidada, sino de herramientas y procesos que no estaban resueltos. Por eso, cuando algo te empuja a una mala práctica, la mejor respuesta no es aguantarte en silencio, sino contarle a Nacho qué es lo que no funciona.",
+          "hablante": "narrador",
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P07",
+          "tipo": "decision",
+          "titulo": "Javier está de vacaciones",
+          "situacion": "Javier está de vacaciones en el sur. Marisol necesita descargar hoy una orden de compra desde el portal de Embalajes del Litoral, donde solo Javier tiene usuario. Te escribe por WhatsApp: «Tú tienes la clave de Javier, ¿cierto? Pásamela, es solo para descargar un PDF».",
+          "pregunta": "¿Qué le respondes a Marisol?",
+          "multiple": false,
+          "opciones": [
+            { "texto": "Se la paso por WhatsApp y le pido que borre el mensaje apenas descargue el PDF.", "correcta": false, "feedback": "Borrar el mensaje no borra los respaldos del chat ni lo que Marisol ya copió. Y desde ese momento todo lo que se haga en el portal queda a nombre de Javier, aunque no haya sido él." },
+            { "texto": "Entro yo con la clave de Javier, descargo el PDF y se lo mando.", "correcta": false, "feedback": "Resuelve lo de hoy, pero estarías usando la identidad de otra persona. Si algo sale mal en esa sesión, nadie podrá saber quién fue. Y si tienes la clave de Javier, ya hay un problema que conviene corregir." },
+            { "texto": "Le digo que no tengo la clave ni debería tenerla, y le propongo pedirle a Nacho un acceso para ella o pedirle el documento al proveedor por su canal habitual.", "correcta": true, "feedback": "Eso es. Resuelves la necesidad real, el PDF, sin usar la identidad de nadie. Y de paso aparece un problema de organización: un proceso crítico que depende de la clave de una sola persona. Vale la pena que Marisol lo levante con Rodrigo." },
+            { "texto": "Llamo a Javier a sus vacaciones para que él le dicte la clave directamente a Marisol.", "correcta": false, "feedback": "Le interrumpes las vacaciones y la clave igual termina compartida. El problema no es quién la dicta, sino que el acceso no está pensado para que otra persona pueda cubrirlo." }
+          ],
+          "explicacion": "Compartir claves borra la huella de quién hizo qué y deja copias regadas. La salida es organizacional: accesos propios, cuentas compartidas administradas desde el gestor, o pedir el documento por otra vía. Que una sola persona tenga la llave de un proceso es un problema de diseño, no de buena voluntad.",
+          "texto": "Una situación de todos los días: una necesidad real, una persona que confía en ti y un atajo a la mano.",
+          "voz": "Aquí nadie tiene malas intenciones. Marisol necesita un documento, Javier está descansando y tú quieres ayudar. Justamente por eso es una situación difícil: el atajo parece inofensivo. Antes de elegir, piensa en dos cosas. Quién va a aparecer como responsable de lo que se haga en ese portal, y qué tendría que existir en Pehuén para que esta conversación ni siquiera fuera necesaria.",
+          "hablante": "narrador",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: contraseñas y gestores",
+          "ideas": [
+            "Pregúntate qué pasa si una clave se filtra: si es única, el daño queda en una sola cuenta.",
+            "Las pocas claves que recuerdas, como frases largas al azar; todas las demás las genera y guarda el gestor corporativo.",
+            "Las claves no se prestan: si alguien necesita acceso, se le pide uno propio a Nacho."
+          ],
+          "pregunta": "¿Cuál es la clave que más repites hoy, y cuál sería la primera cuenta que cambiarías esta semana?",
+          "texto": "Tres ideas para quedarte de esta lección, y una pregunta para tu propio trabajo.",
+          "voz": "Si te quedas con una sola idea, que sea esta: la pregunta no es si tu clave es difícil, sino qué pasa si se filtra. Una clave única convierte una filtración en una molestia y no en un desastre. Antes de seguir, piensa en esa clave que usas en todas partes, porque todos tenemos una. ¿En qué cuentas está? Esa es tu tarea de esta semana.",
+          "hablante": "narrador",
+          "icono": "lightbulb"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-CIBER-M03-L02",
+      "titulo": "MFA y passkeys: qué protegen y qué no",
+      "resultado": "Ante distintos métodos de verificación y una cuenta de trabajo simulada, elegir y configurar el método más resistente disponible, explicar los límites de cada uno y rechazar solicitudes de códigos o aprobaciones que no se iniciaron.",
+      "minutos": 45,
+      "fuentes": ["CIB-CISA-MFA", "CIB-FIDO", "CIB-NIST80063B", "CIB-CISA-PHISH"],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M03-L02-P01",
+          "tipo": "dialogo",
+          "titulo": "«¿Otra cosa más que aprobar?»",
+          "texto": "**MFA** significa autenticación multifactor: entrar a una cuenta pidiendo dos o más pruebas de tipos distintos, por ejemplo algo que sabes, como la clave, y algo que tienes, como el celular. Javier y Nacho conversan sobre activarlo en el correo.",
+          "lineas": [
+            { "personaje": "javier", "texto": "Nacho, ¿de verdad hay que activar esto del MFA en el correo? Ya tengo una clave larga, como dijiste." },
+            { "personaje": "nacho", "texto": "La clave larga es la primera puerta. El MFA es la segunda: aunque alguien tenga tu clave, le falta algo que tienes tú, como el celular o una llave." },
+            { "personaje": "javier", "texto": "En mi banco personal me llega un SMS con un código y listo. ¿No es lo mismo?" },
+            { "personaje": "nacho", "texto": "Es mucho mejor que nada. Pero no todos los métodos aguantan lo mismo: un SMS se puede desviar, y un código te lo pueden pedir en una página falsa." },
+            { "personaje": "javier", "texto": "¿Y la notificación que dice «aprobar o rechazar»? Esa es más cómoda." },
+            { "personaje": "nacho", "texto": "Cómoda, sí. El riesgo es aprobar por costumbre, sin mirar. Por eso la vamos a configurar para que te pida un número, y te voy a mostrar las passkeys." },
+            { "personaje": "javier", "texto": "¿Pass qué?" },
+            { "personaje": "nacho", "texto": "Passkeys. Ya vas a ver: al que intenta engañarte con una página falsa se le complica harto." }
+          ],
+          "pregunta": "Según lo que explica Nacho, ¿qué agrega el MFA?",
+          "opciones": [
+            { "texto": "Hace que la contraseña deje de importar.", "correcta": false, "feedback": "La clave sigue siendo la primera puerta. Si es débil o repetida, el atacante ya tiene la mitad del camino hecho y solo le queda engañarte en la segunda." },
+            { "texto": "Pide una prueba adicional de otro tipo, de modo que robar la clave ya no basta para entrar.", "correcta": true, "feedback": "Exacto. El MFA no reemplaza a una buena clave: la complementa. Su valor es que obliga al atacante a conseguir algo más que tu contraseña." },
+            { "texto": "Impide cualquier robo de cuenta, sea cual sea el método.", "correcta": false, "feedback": "Ningún control protege al cien por ciento. Como dice Nacho, algunos métodos se pueden desviar o engañar. Lo que sí hace el MFA es subir mucho el costo para el atacante." },
+            { "texto": "Permite usar la misma clave en varios sitios sin riesgo.", "correcta": false, "feedback": "No. Si repites la clave y un sitio no tiene MFA, o el atacante te engaña con la segunda prueba, el problema vuelve. Claves únicas y MFA van juntos." }
+          ],
+          "explicacion": "El MFA es una segunda puerta, no un escudo total. Su fuerza depende del método y de que tú no le abras a quien la golpea.",
+          "voz": "Esta conversación se repite en casi todas las empresas cuando se activa el MFA. La primera reacción es pensar que es un trámite más. Pero escucha el argumento de Nacho: la clave puede filtrarse sin que tú hagas nada mal, y la segunda prueba es lo que impide que esa filtración se convierta en alguien leyendo tu correo. Lo que vamos a ver en esta lección es que no todas las segundas pruebas son iguales.",
+          "hablante": "narrador",
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P02",
+          "tipo": "tarjetas",
+          "titulo": "Los métodos, uno por uno",
+          "consigna": "Da vuelta cada tarjeta para ver cómo funciona cada método y dónde puede fallar.",
+          "tarjetas": [
+            { "frente": "Código por SMS", "icono": "message-square", "reverso": "Te llega un código de seis números al celular. Es fácil de usar, pero el mensaje se puede desviar si alguien consigue un duplicado de tu SIM, y una página falsa te lo puede pedir y usar en el acto." },
+            { "frente": "App con código", "icono": "smartphone", "reverso": "Una app autenticadora genera un código que cambia cada pocos segundos, sin depender de la red. Es más difícil de desviar que el SMS, pero si escribes el código en una página falsa, el atacante lo usa de inmediato." },
+            { "frente": "Notificación para aprobar", "icono": "bell-ring", "reverso": "La app te pregunta si estás iniciando sesión. Es cómoda, pero se puede abusar mandando muchas solicitudes hasta que alguien apruebe. Mejora bastante cuando te pide escribir un número que aparece en la pantalla donde estás entrando." },
+            { "frente": "Llave de seguridad física", "icono": "usb", "reverso": "Un pequeño dispositivo que conectas o acercas al equipo. Solo responde al sitio verdadero, así que resiste el phishing. Si la pierdes, necesitas otra llave registrada o un método de respaldo." },
+            { "frente": "Passkey", "icono": "fingerprint", "reverso": "Una llave digital guardada en tu celular o computador, que desbloqueas con tu huella, rostro o PIN. Igual que la llave física, solo funciona en el sitio real. No hay código que escribir ni que te puedan pedir." }
+          ],
+          "texto": "Todos estos métodos son MFA, pero no ofrecen la misma resistencia.",
+          "voz": "Mientras das vuelta las tarjetas, fíjate en una diferencia que va a ser importante. En los tres primeros métodos hay algo que una persona puede leer y entregar: un código o un sí. En los dos últimos no hay nada que dictar ni que copiar, porque el dispositivo conversa directamente con el sitio verdadero. Esa diferencia es la que separa a los métodos que resisten el phishing de los que no.",
+          "hablante": "narrador",
+          "profundiza": "El duplicado de SIM, también llamado cambio de SIM, ocurre cuando alguien convence a una compañía telefónica de transferir tu número a una tarjeta que él controla, haciéndose pasar por ti. Desde ese momento recibe tus SMS, incluidos los códigos. Por eso el SMS se considera un método débil para cuentas sensibles, aunque sigue siendo mejor que no tener MFA.\n\nLas apps autenticadoras generan códigos con un secreto compartido entre la app y el sitio. No dependen de la red telefónica, pero el código igual se puede capturar si lo escribes en una página falsa que lo reenvía al sitio real en el mismo minuto.\n\nLas llaves físicas y las passkeys usan estándares de la FIDO Alliance. CISA, la agencia de ciberseguridad de Estados Unidos, las describe como MFA resistente al phishing, porque la respuesta criptográfica queda amarrada a la dirección del sitio. Cuál usar en Pehuén lo define la política: para quienes aprueban pagos, lo razonable es el método más resistente disponible.",
+          "icono": "layers"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P03",
+          "tipo": "pestanas",
+          "titulo": "Qué protege y qué no",
+          "texto": "Cada método responde distinto según el tipo de ataque. Revisa las cuatro situaciones.",
+          "pestanas": [
+            { "titulo": "Clave filtrada", "icono": "file-warning", "texto": "**Todos ayudan.** Si alguien compró tu clave en una lista, cualquier MFA le exige algo más que no tiene. Es la razón principal para activarlo en todas las cuentas que lo permitan, empezando por el correo y el gestor." },
+            { "titulo": "Página falsa", "icono": "mail-warning", "texto": "**SMS, códigos y aprobaciones simples no alcanzan.** Si escribes clave y código en una página falsa, el atacante los usa en el sitio real en el mismo minuto. **Llaves físicas y passkeys sí resisten**, porque no responden a una dirección que no es la verdadera." },
+            { "titulo": "Bombardeo de notificaciones", "icono": "bell-ring", "texto": "Se llama **fatiga de MFA**: llegan muchas solicitudes seguidas, a menudo de noche, hasta que alguien aprueba por cansancio. La **coincidencia de números**, que te obliga a escribir el número que aparece en la pantalla de inicio de sesión, la hace mucho más difícil. Si no hay pantalla tuya, no hay número que escribir." },
+            { "titulo": "Celular perdido", "icono": "smartphone", "texto": "Si todo depende de un solo celular, perderlo te deja afuera. Por eso se registra **un segundo método** y se guardan **códigos de respaldo** en el gestor. Un celular con PIN y bloqueo automático también impide que quien lo encuentre apruebe por ti." }
+          ],
+          "voz": "Te cuento lo que me pasó a mí antes de que Nacho cambiara la configuración. Un domingo en la mañana me llegaron como seis notificaciones seguidas al celular del local. Yo pensé que era el sistema que se había vuelto loco y estuve a punto de apretar aprobar solo para que dejara de sonar. Al final le escribí a Nacho y resultó que alguien tenía mi clave vieja. Desde entonces la app me pide escribir un número, y si no estoy entrando a ninguna parte, no hay número que escribir. Así de simple.",
+          "hablante": "daniela",
+          "profundiza": "La fatiga de MFA, a veces llamada bombardeo de notificaciones, se volvió conocida porque permitió entrar a cuentas de empresas grandes. El atacante, que ya tiene la clave, intenta iniciar sesión una y otra vez. Cada intento manda una notificación. Si la persona aprueba una sola, entra. Muchas veces se combina con un mensaje o llamada de un supuesto soporte que pide aprobar para solucionar el problema.\n\nCISA recomienda la coincidencia de números como medida de mitigación para quienes usan notificaciones: la persona tiene que escribir en la app un número que solo ve quien está frente a la pantalla de inicio de sesión. Así, una aprobación distraída ya no basta. También ayuda que la app muestre desde dónde se intenta entrar y que la empresa limite la cantidad de solicitudes seguidas.\n\nNinguna de estas medidas reemplaza la regla de oro: si no iniciaste sesión tú, en ese momento, no apruebas nada.",
+          "icono": "shield-alert"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P04",
+          "tipo": "video",
+          "titulo": "La notificación que no pediste",
+          "video_id": "SEG360-VID06",
+          "texto": "Un minuto y medio para ver qué hay detrás de una aprobación que llega cuando no estás entrando a ninguna parte, y qué hacer en los siguientes minutos.",
+          "voz": "Antes de configurar la cuenta de Javier, mira este video corto. Fíjate en el orden de las acciones que propone, porque es el mismo que vas a usar en el laboratorio.",
+          "hablante": "narrador",
+          "icono": "bell-ring"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P05",
+          "tipo": "explicacion",
+          "titulo": "Passkeys: nada que escribir, nada que entregar",
+          "texto": "Una **passkey** reemplaza la contraseña por un par de llaves digitales. Una queda guardada en tu dispositivo y no sale de ahí; la otra la tiene el sitio. Para entrar, desbloqueas con tu huella, tu rostro o el PIN del equipo.\n\nLo central: la passkey está **amarrada a la dirección real** del sitio. Si una página falsa te la pide, tu dispositivo simplemente no la ofrece.",
+          "bloques": [
+            { "icono": "shield-check", "titulo": "Resiste el phishing", "texto": "No hay nada que puedas escribir en una página falsa, ni dictar por teléfono." },
+            { "icono": "lock", "titulo": "Nada que robar en el sitio", "texto": "El sitio solo guarda la parte pública de la llave. Si lo atacan, no hay clave que robar." },
+            { "icono": "triangle-alert", "titulo": "No es infalible", "texto": "Si alguien usa tu equipo desbloqueado, si la cuenta sigue aceptando un método débil o si hay un programa malicioso en el equipo, el riesgo sigue ahí." }
+          ],
+          "nota": { "tipo": "dato", "texto": "Las passkeys y las llaves de seguridad física están entre las formas de MFA que la FIDO Alliance y CISA describen como resistentes al phishing. Resistentes no significa infalibles." },
+          "voz": "Piensa en la diferencia con un código. El código lo lees tú y lo escribes tú, y por eso alguien te lo puede pedir con una buena historia. Con una passkey, tú solo pones el dedo o el PIN, y es tu equipo el que revisa con quién está hablando. Si la dirección no es la verdadera, no responde. Eso no significa que sea mágica. Si dejas el notebook abierto o si tu cuenta todavía acepta un SMS como alternativa, el atacante va a buscar esa otra puerta. La passkey cierra muy bien una puerta; las demás hay que cuidarlas igual.",
+          "hablante": "narrador",
+          "profundiza": "Las passkeys se basan en estándares de la FIDO Alliance. Cuando creas una, tu dispositivo genera un par de llaves: una privada, que se queda protegida en el equipo, y una pública, que se registra en el sitio. Al iniciar sesión, el sitio envía un desafío y tu dispositivo lo firma con la llave privada, pero solo si la dirección del sitio coincide con la que se registró. Tu huella o tu PIN no viajan a ninguna parte: solo desbloquean la llave en tu equipo.\n\nHay passkeys que se sincronizan entre dispositivos de una misma cuenta y otras que quedan en un solo equipo o en una llave física. Cuál se usa en Pehuén lo decide Nacho según el tipo de cuenta.\n\nLímites honestos: si un programa malicioso controla tu computador después de que iniciaste sesión, puede abusar de la sesión abierta. Si tu cuenta permite recuperar el acceso con un SMS o una pregunta débil, el atacante irá por ahí. Y si pierdes el dispositivo, necesitas un método de respaldo registrado. Por eso la passkey es parte de un conjunto, no una solución única.",
+          "icono": "fingerprint"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P06",
+          "tipo": "escritorio",
+          "titulo": "Ordena la seguridad de la cuenta de Javier",
+          "texto": "Es jueves a las 10:00. Nacho le pidió a Javier dejar lista la seguridad de su cuenta de Pehuén antes del viernes. Estás en su notebook.",
+          "consigna": "Cumple las seis misiones. En cada elemento elige la acción que deja la cuenta mejor protegida, y fíjate en lo que no calza.",
+          "usuario": "javier",
+          "practica_formativa": true,
+          "misiones": [
+            { "id": "m1", "texto": "Cambia el método de verificación principal", "app": "configuracion", "elemento": "s1" },
+            { "id": "m2", "texto": "Registra una passkey donde corresponde", "app": "configuracion", "elemento": "s2" },
+            { "id": "m3", "texto": "Genera y guarda los códigos de respaldo", "app": "configuracion", "elemento": "s3" },
+            { "id": "m4", "texto": "Revisa los dispositivos y sesiones activas", "app": "configuracion", "elemento": "s4" },
+            { "id": "m5", "texto": "Usa el código que acaba de llegar al celular", "app": "telefono", "elemento": "t1" },
+            { "id": "m6", "texto": "Revisa la otra pestaña abierta en el navegador", "app": "navegador", "elemento": "w2" }
+          ],
+          "configuracion": [
+            {
+              "id": "s1",
+              "titulo": "Método de verificación principal",
+              "estado": "SMS al celular terminado en 4821",
+              "acciones": [
+                { "id": "s1a", "texto": "Cambiar a la app autenticadora de Pehuén con coincidencia de números", "correcta": true, "feedback": "Bien. La app no depende de la red telefónica y la coincidencia de números evita las aprobaciones distraídas. Deja el SMS solo si la política lo exige como respaldo." },
+                { "id": "s1b", "texto": "Dejar el SMS: funciona y es lo más cómodo", "correcta": false, "feedback": "Es mejor que nada, pero el SMS es el método más fácil de desviar y de pedir con una página falsa. Javier paga proveedores: su cuenta merece algo más resistente." },
+                { "id": "s1c", "texto": "Desactivar la verificación: ya tiene una clave larga y única", "correcta": false, "feedback": "Una buena clave puede filtrarse o entregarse en una página falsa sin que lo notes. La verificación adicional es justamente lo que frena eso." }
+              ]
+            },
+            {
+              "id": "s2",
+              "titulo": "Passkeys",
+              "estado": "Ninguna registrada. Pehuén permite passkeys en el notebook y en el celular entregados por la empresa.",
+              "acciones": [
+                { "id": "s2a", "texto": "Registrar una passkey en este notebook de Pehuén, protegida con el PIN del equipo", "correcta": true, "feedback": "Correcto. Queda en un equipo de la empresa, administrado por Nacho y protegido con PIN. Desde ahora, una página falsa no podrá pedirle nada a Javier." },
+                { "id": "s2b", "texto": "Registrar una passkey en el computador familiar de la casa, para trabajar desde ahí los martes", "correcta": false, "feedback": "Ese equipo lo usan otras personas y no lo administra Pehuén. Registrar ahí una passkey le da a ese computador una llave de la cuenta de trabajo." },
+                { "id": "s2c", "texto": "Dejarlo para otro día: con la app ya es suficiente", "correcta": false, "feedback": "La app es un avance, pero sigue siendo engañable con una página falsa. Para alguien que aprueba pagos, la passkey es el método más resistente que Pehuén ofrece." }
+              ]
+            },
+            {
+              "id": "s3",
+              "titulo": "Códigos de respaldo",
+              "estado": "No generados",
+              "acciones": [
+                { "id": "s3a", "texto": "Generarlos y guardarlos en la bóveda del gestor corporativo", "correcta": true, "feedback": "Bien. Quedan cifrados y disponibles si Javier pierde el celular. Cada código sirve una sola vez: cuando use uno, conviene revisar cuántos quedan." },
+                { "id": "s3b", "texto": "Generarlos y sacarles una foto con el celular", "correcta": false, "feedback": "Si pierde el celular, pierde también la foto, justo cuando la necesita. Y si la galería se sincroniza con una nube personal, los códigos quedan fuera del control de Pehuén." },
+                { "id": "s3c", "texto": "Generarlos y mandárselos a Nacho por correo, para que él los tenga", "correcta": false, "feedback": "Los códigos de respaldo son llaves de tu cuenta: nadie más debe tenerlos, tampoco soporte. Nacho tiene sus propias herramientas para ayudarte a recuperar el acceso." }
+              ]
+            },
+            {
+              "id": "s4",
+              "titulo": "Dispositivos y sesiones activas",
+              "estado": "Notebook Pehuén, este equipo, Quilicura, ahora\nCelular Pehuén, Quilicura, hace 2 horas\nNavegador en Windows, ubicación desconocida, hace 3 días",
+              "acciones": [
+                { "id": "s4a", "texto": "Cerrar la sesión que no reconoce, cambiar la clave desde el gestor y avisar a Nacho", "correcta": true, "feedback": "Exacto. Javier no usa otro computador, así que esa sesión no es suya. Cerrarla corta el acceso, cambiar la clave impide que vuelva a entrar y avisar permite que Nacho revise qué se hizo en esos tres días." },
+                { "id": "s4b", "texto": "Cerrar la sesión y no decir nada, para no armar color", "correcta": false, "feedback": "Cerrarla está bien, pero quien entró pudo dejar reglas de reenvío o leer correos con datos de pago. Sin aviso, nadie revisa eso. Avisar no es armar color: es dar información a tiempo." },
+                { "id": "s4c", "texto": "Dejarla: debe ser el computador de algún familiar", "correcta": false, "feedback": "Si Javier no inició esa sesión, no hay que suponer. Una sesión desconocida en la cuenta de quien paga a proveedores es una señal que se revisa." }
+              ]
+            }
+          ],
+          "telefono": [
+            {
+              "id": "t1",
+              "tipo": "sms",
+              "remitente": "Cuentas Pehuén",
+              "texto": "Tu código para registrar un nuevo método de verificación es 482 913. Pehuén nunca te pedirá este código por teléfono, chat ni correo.",
+              "hora": "10:04",
+              "acciones": [
+                { "id": "t1a", "texto": "Escribirlo en la página de configuración que Javier abrió desde su marcador", "correcta": true, "feedback": "Bien. Javier pidió este código hace segundos, desde la página verdadera. Ese es el único lugar donde se escribe." },
+                { "id": "t1b", "texto": "Reenviarlo a Nacho por WhatsApp para que confirme que es legítimo", "correcta": false, "feedback": "El propio mensaje lo dice: nadie debe recibir este código. Si dudas de un código, no lo uses y pregunta, pero sin mandarlo." },
+                { "id": "t1c", "texto": "Escribirlo en la página que se abrió desde el correo «Actualiza tu MFA antes del viernes»", "correcta": false, "feedback": "Esa página no es de Pehuén. Si escribes el código ahí, el atacante lo usa en el sitio real en el mismo minuto." }
+              ]
+            }
+          ],
+          "navegador": [
+            {
+              "id": "w1",
+              "url": "https://cuentas.pehuen.example/seguridad",
+              "titulo": "Cuentas Pehuén · Seguridad",
+              "tipo": "sitio",
+              "contenido": "Página de configuración de seguridad de la cuenta. Javier llegó aquí desde el marcador que Nacho dejó en el navegador. Muestra los métodos de verificación, las passkeys, los códigos de respaldo y las sesiones activas.",
+              "acciones": [
+                { "id": "w1a", "texto": "Trabajar aquí: llegó por su marcador y la dirección es la de Pehuén", "correcta": true, "feedback": "Correcto. Entrar desde un marcador o escribiendo la dirección evita depender de links que llegan por correo." },
+                { "id": "w1b", "texto": "Cerrar y buscar la página de seguridad en un buscador", "correcta": false, "feedback": "No es necesario, y los buscadores a veces muestran anuncios que imitan páginas de inicio de sesión. El marcador es más seguro." }
+              ]
+            },
+            {
+              "id": "w2",
+              "url": "https://pehuen-cuentas-verificacion.invalid/mfa",
+              "titulo": "Verificación obligatoria de MFA",
+              "tipo": "login",
+              "contenido": "Pestaña abierta desde un correo de esta mañana: «Actualiza tu MFA antes del viernes o tu cuenta quedará bloqueada». La página copia el diseño de Pehuén y pide usuario, contraseña y el código que acaba de llegar al celular. El gestor no ofrece rellenar la clave.",
+              "acciones": [
+                { "id": "w2a", "texto": "Cerrar la pestaña sin escribir nada y reportar el correo con el botón «Reportar»", "correcta": true, "feedback": "Bien visto. La dirección no es de Pehuén y el gestor no reconoció el sitio. El plazo del viernes calza con lo que dijo Nacho, y eso es justamente lo que hace creíble el engaño." },
+                { "id": "w2b", "texto": "Ingresar los datos: el plazo del viernes coincide con lo que pidió Nacho", "correcta": false, "feedback": "Ese detalle es el anzuelo. Los engaños bien hechos se apoyan en algo real. Mira la dirección: no es pehuen.example. Y el gestor no ofreció rellenar la clave." },
+                { "id": "w2c", "texto": "Escribir una clave antigua para ver si la página es real", "correcta": false, "feedback": "Una clave antigua puede seguir sirviendo en otro sitio, y le confirmas al atacante que tu usuario existe. Con una página dudosa no se experimenta: se cierra y se reporta." }
+              ]
+            }
+          ],
+          "voz": "En esta práctica no hay apuro. Tómate tu tiempo en cada elemento y lee el estado antes de elegir. Hay dos cosas que no están en la lista de tareas de Javier pero que vas a encontrar en el camino: una sesión que no debería estar ahí y una pestaña que se parece mucho a Pehuén. Si te equivocas, lee el comentario y vuelve a intentarlo: así se aprende esta pega.",
+          "hablante": "narrador",
+          "icono": "laptop"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P07",
+          "tipo": "quiz",
+          "titulo": "¿Qué método, para qué situación?",
+          "texto": "Cuatro situaciones del día a día en Pehuén. Elige la mejor respuesta en cada una.",
+          "preguntas": [
+            {
+              "enunciado": "Daniela recibe un SMS con un código de verificación del correo de Pehuén. Ella no está intentando entrar a ninguna parte. ¿Qué significa y qué hace?",
+              "opciones": [
+                { "texto": "Es un error del sistema; lo borra y sigue atendiendo.", "correcta": false, "feedback": "Puede ser un error, pero lo más probable es que alguien escribió su clave o esté intentando recuperar su cuenta. Borrarlo sin avisar deja la puerta a medio cerrar." },
+                { "texto": "Alguien podría tener su clave: no comparte el código, cambia la clave desde el gestor y avisa a Nacho.", "correcta": true, "feedback": "Exacto. El código llegó porque alguien pasó la primera puerta. Cambiar la clave la cierra, y avisar permite revisar desde dónde fue." },
+                { "texto": "Responde el SMS preguntando quién lo pidió.", "correcta": false, "feedback": "Responder no da información útil y puede confirmar que el número está activo. La conversación va por el canal de soporte, no por el SMS." }
+              ]
+            },
+            {
+              "enunciado": "Rodrigo pregunta qué método conviene para las personas que aprueban pagos a proveedores desde el portal del banco de la empresa. Pehuén tiene disponibles todos.",
+              "opciones": [
+                { "texto": "SMS, porque todos lo entienden.", "correcta": false, "feedback": "Es simple, pero también el más fácil de desviar o pedir con una página falsa. Para pagos, conviene lo más resistente disponible." },
+                { "texto": "Notificación para aprobar, sin coincidencia de números, porque es la más rápida.", "correcta": false, "feedback": "La rapidez es justamente lo que aprovecha la fatiga de MFA. Sin coincidencia de números, una aprobación distraída basta." },
+                { "texto": "Passkey o llave de seguridad física, con un método de respaldo registrado.", "correcta": true, "feedback": "Bien. Son los métodos resistentes al phishing. El respaldo evita que perder el dispositivo deje a alguien sin poder pagar." }
+              ]
+            },
+            {
+              "enunciado": "La app autenticadora de Javier le pide «Escribe el número que ves en tu pantalla de inicio de sesión». Javier no tiene ninguna pantalla de inicio de sesión abierta.",
+              "opciones": [
+                { "texto": "Rechaza la solicitud, no escribe ningún número y avisa a Nacho.", "correcta": true, "feedback": "Correcto. Si no hay pantalla tuya, el número lo está viendo otra persona. Y si alguien te llama para dictarte ese número, es parte del mismo intento." },
+                { "texto": "Prueba con un número cualquiera para que la notificación desaparezca.", "correcta": false, "feedback": "Adivinar no ayuda y puede, por azar, funcionar. Rechazar es la acción que corta el intento." },
+                { "texto": "Abre el correo en el notebook para ver si aparece el número ahí.", "correcta": false, "feedback": "El número aparece solo en la pantalla de quien está iniciando sesión. Si no eres tú, no lo vas a encontrar en ninguna parte, porque lo tiene el atacante." }
+              ]
+            },
+            {
+              "enunciado": "Javier entra al correo desde un link de un mensaje. La página se ve igual a la de Pehuén, pero el notebook no le ofrece usar su passkey y le sugiere «entrar con otro método».",
+              "opciones": [
+                { "texto": "Usa el otro método, el código de la app, para no perder tiempo.", "correcta": false, "feedback": "Es justamente la trampa: si la passkey no aparece, puede ser porque la dirección no es la verdadera. Bajar a un método más débil le hace el trabajo al atacante." },
+                { "texto": "Desconfía: cierra esa página, entra desde su marcador o escribiendo la dirección, y reporta el mensaje.", "correcta": true, "feedback": "Eso es. Que la passkey no aparezca es una alarma útil. Desde el marcador va a funcionar, y si no, es momento de preguntarle a Nacho." },
+                { "texto": "Borra la passkey y crea una nueva desde esa misma página.", "correcta": false, "feedback": "Crear o borrar llaves desde una página que llegó por un link es exactamente lo que no se hace. La configuración se maneja solo desde la página verdadera." }
+              ]
+            }
+          ],
+          "voz": "Estas situaciones no tienen trampa de redacción. Lo que tienen es presión: un cliente esperando, un pago que tiene que salir, una notificación molesta. Antes de responder cada una, hazte la pregunta que más sirve en esta lección: ¿yo pedí esto, ahora, desde la página verdadera? Si la respuesta es no, ya sabes por dónde va la respuesta correcta.",
+          "hablante": "narrador",
+          "icono": "clipboard-check"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: MFA y passkeys",
+          "ideas": [
+            "El MFA agrega una segunda puerta; su fuerza depende del método y de que tú no le abras a quien la golpea.",
+            "Las passkeys y las llaves físicas resisten el phishing porque solo responden al sitio verdadero, pero no protegen un equipo desbloqueado ni una recuperación débil.",
+            "Si no iniciaste sesión tú, en ese momento, no apruebas ni dictas nada: rechazas, cambias la clave y avisas."
+          ],
+          "pregunta": "¿Qué método de verificación tienes hoy en tu correo de trabajo y en el gestor? ¿Hay alguno que podrías subir de nivel esta semana?",
+          "texto": "Tres ideas para quedarte y una pregunta para revisar tus propias cuentas.",
+          "voz": "Lo que viste hoy se resume en una regla corta y en una idea más fina. La regla: si no lo pediste tú, no apruebas. La idea fina: no todos los métodos son iguales, y vale la pena subir de nivel las cuentas que más importan, como el correo, el gestor y todo lo que tenga que ver con pagos. Revisa tus cuentas con esa mirada.",
+          "hablante": "narrador",
+          "icono": "lightbulb"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-CIBER-M03-L03",
+      "titulo": "Recuperar el acceso sin abrirle la puerta a otro",
+      "resultado": "Ante solicitudes de códigos, reseteos o recuperación de cuentas por teléfono, chat o correo, reconocer las señales de suplantación, negarse a entregar códigos, verificar por un canal independiente y mantener métodos de recuperación seguros y al día.",
+      "minutos": 37,
+      "fuentes": ["CIB-NIST80063B", "CIB-CISA-PHISH", "CIB-INCIBE", "CIB-LEY21459"],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M03-L03-P01",
+          "tipo": "chat",
+          "titulo": "«Soy Nacho, te va a llegar un código»",
+          "texto": "Daniela está cerrando el local cuando le llega este mensaje. Léelo como lo leería ella, a las seis de la tarde y con la caja por cuadrar.",
+          "canal": "whatsapp",
+          "contacto": { "nombre": "Nacho TI", "detalle": "+56 9 •••• 7730 · no está en tus contactos" },
+          "mensajes": [
+            { "de": "contacto", "texto": "Hola Daniela, soy Nacho de TI. Te escribo de este número porque el mío se quedó sin batería.", "hora": "18:12" },
+            { "de": "contacto", "texto": "Estamos pasando las cuentas del local al sistema nuevo y la tuya quedó a medio camino.", "hora": "18:12" },
+            { "de": "contacto", "texto": "Te va a llegar un código por SMS. Me lo reenvías al tiro para terminar, si no mañana el local parte sin correo.", "hora": "18:13" },
+            { "de": "yo", "texto": "Ya, me llegó uno de seis números.", "hora": "18:14" },
+            { "de": "contacto", "texto": "Ese. Mándamelo porfa, estoy con el tiempo justo.", "hora": "18:14" }
+          ],
+          "pregunta": "¿Qué hace Daniela con el código?",
+          "opciones": [
+            { "texto": "Lo manda: es Nacho y el local no puede abrir mañana sin correo.", "correcta": false, "feedback": "Con ese código, quien escribe entra a la cuenta de Daniela. Nacho no necesita códigos de nadie: administra las cuentas desde su consola." },
+            { "texto": "Le pide al contacto el RUT de Nacho para comprobar que es él.", "correcta": false, "feedback": "Los datos de una persona, su RUT, su cargo o su número, se consiguen con relativa facilidad. Verificar con preguntas al mismo contacto no sirve: hay que salir de esa conversación." },
+            { "texto": "No lo manda. Llama a Nacho al número que tiene guardado o le escribe por el chat interno para confirmar, y reporta el mensaje.", "correcta": true, "feedback": "Eso es. Daniela cambia de canal y elige ella cómo contactar a Nacho. Si era Nacho de verdad, no se pierde nada: él puede resolverlo sin el código." },
+            { "texto": "Le manda solo la mitad del código, para ver qué responde.", "correcta": false, "feedback": "No hay forma segura de probar a un estafador. Medio código igual lo acerca, y la conversación solo le da más tiempo para presionar." }
+          ],
+          "explicacion": "Un código de verificación es la llave de la segunda puerta. Nadie de soporte lo necesita, porque el sistema ya sabe cuál es. Quien te lo pide, por cualquier canal, está intentando entrar con tu cuenta.",
+          "voz": "A mí me llegó un mensaje casi igual, con otro nombre pero con la misma historia: el número nuevo, el apuro y el local que mañana no iba a funcionar. Lo que me salvó fue que justo antes había pasado lo de las notificaciones y Nacho nos había dicho una frase que se me quedó grabada: yo nunca les voy a pedir un código, nunca. Así que le escribí por el chat interno. Él estaba en su casa, tranquilo, con el celular con batería. Fíjate en cada detalle del mensaje antes de responder.",
+          "hablante": "daniela",
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P02",
+          "tipo": "explicacion",
+          "titulo": "La puerta de atrás: recuperar el acceso",
+          "texto": "Toda cuenta tiene una forma de entrar cuando olvidas la clave o pierdes el celular. Si esa puerta es débil, de nada sirven la frase larga ni el MFA: **el atacante entra por ahí**.",
+          "bloques": [
+            { "icono": "circle-help", "titulo": "Preguntas de seguridad", "texto": "El nombre de tu mascota o tu colegio suelen estar en tus redes sociales o se pueden averiguar." },
+            { "icono": "mail", "titulo": "Correo de recuperación", "texto": "Si es un correo personal sin MFA y con una clave repetida, es la llave maestra de tu cuenta de trabajo." },
+            { "icono": "smartphone", "titulo": "Número de celular", "texto": "Un número que ya no usas puede terminar en manos de otra persona; un duplicado de SIM desvía tus SMS." },
+            { "icono": "phone-call", "titulo": "Soporte por teléfono", "texto": "Una llamada convincente, con datos tuyos, puede lograr que alguien resetee tu cuenta." }
+          ],
+          "nota": { "tipo": "terreno", "texto": "En Pehuén, Nacho nunca te va a pedir tu contraseña ni un código. Si necesita hacer algo en tu cuenta, lo hace desde su consola, contigo informado y por un canal que tú reconoces." },
+          "voz": "Cuando una cuenta está bien protegida por delante, quien quiere entrar no se rinde: rodea la casa y busca la puerta de atrás. Y esa puerta casi nadie la revisa, porque la configuramos una vez, hace años, cuando creamos la cuenta. ¿Te acuerdas de qué correo pusiste para recuperar tu cuenta del trabajo, o qué respondiste en la pregunta de seguridad? Si no te acuerdas, no estás sola ni solo. Pero esa respuesta a lo mejor está en una foto pública de tu perro.",
+          "hablante": "narrador",
+          "profundiza": "Las preguntas de seguridad se consideran un método débil porque sus respuestas suelen ser públicas, fáciles de averiguar o de adivinar: la comuna donde naciste, el nombre de tu primer colegio, tu equipo de fútbol. Si un sistema te obliga a usarlas, una buena práctica es responder con algo inventado y guardarlo en el gestor como si fuera otra clave.\n\nEl correo de recuperación merece el mismo cuidado que la cuenta principal: clave única y MFA. Si alguien controla ese correo, puede pedir el cambio de clave de todas las cuentas que dependen de él.\n\nLos números de celular que se dejan de usar vuelven a asignarse a otras personas después de un tiempo. Si tu cuenta sigue enviando códigos a un número antiguo, alguien desconocido podría recibirlos.\n\nPor último, los equipos de soporte son un blanco frecuente: el atacante llama haciéndose pasar por la persona y pide un reseteo urgente. Por eso un buen procedimiento de soporte no actúa en la misma llamada y verifica por un canal registrado previamente. En Chile, acceder sin autorización a un sistema informático, superando sus medidas de seguridad, es un delito según la Ley 21.459, pero eso no reemplaza cerrar bien la puerta.",
+          "imagen": "SEG360-IMG033",
+          "icono": "door-open"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P03",
+          "tipo": "dialogo",
+          "titulo": "La llamada que recibió Nacho",
+          "texto": "Miércoles a las 8:20. Nacho le cuenta a Javier algo que pasó anoche.",
+          "lineas": [
+            { "personaje": "nacho", "texto": "Javier, ¿tú me llamaste anoche como a las diez, desde otro número?" },
+            { "personaje": "javier", "texto": "¿Yo? No, anoche estaba viendo el partido." },
+            { "personaje": "nacho", "texto": "Alguien llamó diciendo que eras tú. Sabía que pagas a Embalajes del Litoral, que teletrabajas los martes y hasta tu RUT. Dijo que había perdido el celular y que le sacara el MFA para terminar un pago urgente." },
+            { "personaje": "javier", "texto": "¿Y qué hiciste?" },
+            { "personaje": "nacho", "texto": "Le dije que lo llamaba de vuelta al número que tengo registrado para ti. Ahí se cortó." },
+            { "personaje": "javier", "texto": "Pucha. Igual sonaba creíble, con todo lo que sabía." },
+            { "personaje": "nacho", "texto": "Esa es la idea. Todo eso sale de redes profesionales, de una firma de correo o de una factura. Por eso no verifico con datos que cualquiera puede saber, sino por un canal que elijo yo." }
+          ],
+          "pregunta": "¿Qué fue lo decisivo en lo que hizo Nacho?",
+          "opciones": [
+            { "texto": "Que el llamante supiera el RUT y los proveedores de Javier le dio confianza para avanzar con cuidado.", "correcta": false, "feedback": "Al revés: esos datos no prueban nada, porque se pueden conseguir. Que alguien sepa mucho de ti no significa que sea tú." },
+            { "texto": "No actuar en la misma llamada y verificar por un canal que él controla: devolver el llamado al número registrado.", "correcta": true, "feedback": "Exacto. La devolución de llamada al número registrado rompe el engaño: el atacante no controla ese número. Es incómodo y lento, y por eso funciona." },
+            { "texto": "Pedir una foto del carnet por WhatsApp para comprobar la identidad.", "correcta": false, "feedback": "Una foto de un carnet se puede conseguir o adulterar, y llegaría por el mismo canal del atacante. No es una verificación independiente." },
+            { "texto": "Quitar el MFA pero dejar la cuenta en observación por si pasaba algo raro.", "correcta": false, "feedback": "Quitar el MFA era exactamente lo que buscaba el atacante. Observar después no sirve si ya entró y vació la bandeja o cambió los datos de un proveedor." }
+          ],
+          "explicacion": "La verificación de identidad no se hace con datos que la otra persona te entrega, sino saliendo de esa conversación hacia un canal conocido. Y tú puedes ayudar a que funcione: mantén al día tu número registrado y no te molestes cuando soporte te devuelva el llamado.",
+          "voz": "Fíjate en lo que tenía a favor el que llamó. Conocía datos reales, tenía una historia razonable, perder el celular le pasa a cualquiera, y usaba la urgencia de un pago. Muchas personas de soporte, con ganas de ayudar, habrían cedido. Lo que hizo Nacho no requiere ser experto: requiere un procedimiento claro y la tranquilidad de seguirlo aunque la otra persona se moleste. Y eso también te toca a ti, cuando la que llama diciendo ser de soporte es otra persona.",
+          "hablante": "narrador",
+          "icono": "phone-call"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P04",
+          "tipo": "proceso",
+          "titulo": "Perdiste el celular: el camino seguro de vuelta",
+          "texto": "Perder el celular o quedarse fuera de una cuenta pasa. Lo importante es volver a entrar sin dejar puertas abiertas en el camino.",
+          "pasos": [
+            { "titulo": "Avisa por un canal conocido", "icono": "megaphone", "texto": "A Nacho, desde otro equipo, el teléfono fijo de la oficina o a través de tu jefatura. Si era el celular de la empresa, también es la pérdida de un equipo con información." },
+            { "titulo": "Bloquea la línea", "icono": "phone-call", "texto": "Pide a la compañía telefónica bloquear la SIM, o pídeselo a quien administra los celulares de Pehuén. Así nadie recibe tus SMS." },
+            { "titulo": "Entra con tu respaldo", "icono": "key-round", "texto": "Usa un código de respaldo guardado en el gestor, tu llave física o una passkey en otro equipo de la empresa." },
+            { "titulo": "Deja que verifiquen tu identidad", "icono": "user-check", "texto": "Nacho te devolverá el llamado al número registrado o te pedirá verificar en persona. Es lento a propósito." },
+            { "titulo": "Limpia lo que quedó", "icono": "trash-2", "texto": "Cierra las sesiones del celular perdido, elimina sus passkeys y métodos, y registra los nuevos." },
+            { "titulo": "Deja lista la próxima vez", "icono": "refresh-cw", "texto": "Genera nuevos códigos de respaldo y revisa que el número y el correo de recuperación estén al día." }
+          ],
+          "voz": "Este proceso tiene una lógica que conviene entender, más que memorizar. Primero cortas lo que el celular perdido todavía puede hacer: recibir mensajes y aprobar cosas. Después entras por una puerta que preparaste antes, y por eso los códigos de respaldo son tan importantes. Al final ordenas, para que el celular perdido deje de ser una llave. Si un paso te parece lento, como esperar a que Nacho te devuelva la llamada, recuerda que esa lentitud es la que deja afuera a quien se haga pasar por ti.",
+          "hablante": "narrador",
+          "profundiza": "Prepararse antes de perder el celular hace toda la diferencia. Tener al menos dos métodos registrados, por ejemplo la app en el celular y una passkey en el notebook o una llave física, evita depender de un solo dispositivo. Los códigos de respaldo funcionan una sola vez cada uno: guárdalos en la bóveda del gestor corporativo y genera nuevos cuando uses varios.\n\nSi el celular era de la empresa, avisar es todavía más importante: Nacho puede bloquearlo o borrarlo a distancia si está administrado, y revisar qué cuentas tenía abiertas. Si era personal pero tenías ahí el correo o la app autenticadora de Pehuén, también hay que avisar.\n\nUn celular con PIN y bloqueo automático le da tiempo a todo este proceso, porque quien lo encuentre no puede aprobar notificaciones ni leer códigos. Por eso conviene que las notificaciones no muestren su contenido en la pantalla bloqueada.\n\nY un aviso honesto: si el reseteo de tu cuenta fue demasiado fácil, cuéntaselo a Nacho. Lo que fue fácil para ti también puede ser fácil para otro.",
+          "icono": "route"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P05",
+          "tipo": "clasificar",
+          "titulo": "Puertas de atrás: firmes o con la bisagra suelta",
+          "texto": "Revisa estas formas de recuperar el acceso a una cuenta. ¿Cuáles son firmes, cuáles hay que reforzar y cuáles le abren la puerta a otra persona?",
+          "consigna": "Arrastra cada situación a la categoría que corresponde.",
+          "categorias": [
+            { "id": "firme", "nombre": "Firme", "icono": "shield-check", "descripcion": "Te permite volver a entrar sin facilitarle el acceso a otro." },
+            { "id": "debil", "nombre": "Débil: refuérzala", "icono": "triangle-alert", "descripcion": "Funciona, pero alguien con un poco de esfuerzo podría usarla." },
+            { "id": "peligrosa", "nombre": "Le abre la puerta a otro", "icono": "door-open", "descripcion": "Entrega o deja expuesto lo necesario para entrar a tu cuenta." }
+          ],
+          "elementos": [
+            { "texto": "Pregunta de seguridad «¿nombre de tu primera mascota?», con la respuesta real, que aparece en tus fotos públicas.", "categoria": "debil", "feedback": "Cualquiera que revise tus redes puede responderla. Si el sistema te obliga a usar preguntas, responde algo inventado y guárdalo en el gestor." },
+            { "texto": "Respuesta inventada a la pregunta de seguridad, guardada en el gestor como si fuera otra clave.", "categoria": "firme", "feedback": "Bien: así la pregunta deja de ser un dato público y se convierte en un secreto más, protegido en la bóveda." },
+            { "texto": "Correo personal de recuperación sin MFA y con una clave que usas en varios sitios.", "categoria": "debil", "feedback": "Ese correo es la llave de tus otras cuentas. Ponle una clave única y activa el MFA, o pídele a Nacho que lo cambie por otro método." },
+            { "texto": "Códigos de respaldo guardados en la bóveda del gestor corporativo.", "categoria": "firme", "feedback": "Correcto. Están cifrados, disponibles si pierdes el celular y fuera del alcance de otros." },
+            { "texto": "Códigos de respaldo en una foto de la galería del celular, que se sincroniza con tu nube personal.", "categoria": "debil", "feedback": "Si pierdes el celular, pierdes la foto justo cuando la necesitas. Y quedan en una nube personal que Pehuén no controla. Pásalos al gestor y borra la foto." },
+            { "texto": "Mandarle tus códigos de respaldo a un colega, por si acaso.", "categoria": "peligrosa", "feedback": "Con esos códigos, tu colega o quien lea su chat puede entrar a tu cuenta. Los códigos de respaldo son tuyos, como tu clave." },
+            { "texto": "Número de recuperación que dejaste de usar hace dos años.", "categoria": "peligrosa", "feedback": "Los números en desuso se reasignan. Hoy otra persona podría estar recibiendo tus códigos. Actualízalo cuanto antes." },
+            { "texto": "Una segunda passkey o llave física en otro equipo de la empresa, registrada con Nacho.", "categoria": "firme", "feedback": "Bien: si pierdes un dispositivo, el otro te permite entrar, y ambos son resistentes al phishing." },
+            { "texto": "Responder un correo que dice «Para recuperar tu cuenta, responde con tu RUT, tu fecha de nacimiento y tu clave actual».", "categoria": "peligrosa", "feedback": "Ningún proceso de recuperación legítimo te pide tu clave actual por correo. Es phishing: repórtalo sin responder." }
+          ],
+          "voz": "Mientras clasificas, piensa en cada caso desde los dos lados. Desde el tuyo: si mañana pierdes el celular, ¿esto me sirve para volver a entrar? Y desde el lado de alguien que quiere tu cuenta: ¿esto me sirve a mí para entrar en su lugar? Una buena forma de recuperación pasa la primera prueba y falla la segunda.",
+          "hablante": "narrador",
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P06",
+          "tipo": "decision",
+          "titulo": "Viernes, 19:30, en la micro",
+          "situacion": "Javier vuelve a su casa el viernes. Se baja de la micro y se da cuenta de que no tiene el celular de la empresa. Ahí tenía la app autenticadora y el correo de Pehuén. Tiene su notebook de la empresa en la mochila y su pareja le presta su celular.",
+          "pregunta": "¿Cuáles son las tres primeras acciones que le conviene hacer? Elige tres.",
+          "multiple": true,
+          "minimo": 3,
+          "maximo": 3,
+          "opciones": [
+            { "texto": "Avisar a Nacho desde el celular de su pareja o desde el notebook, por el canal que Pehuén indicó para estos casos.", "correcta": true, "feedback": "Es lo primero. Nacho puede bloquear el equipo a distancia, cerrar sesiones y ayudarle a entrar con su respaldo." },
+            { "texto": "Esperar al lunes: el celular tiene PIN, así que nadie podrá usarlo.", "correcta": false, "feedback": "El PIN ayuda mucho, pero un fin de semana es harto tiempo. Y si alguien además tiene su clave, el celular perdido puede recibir las aprobaciones que necesita." },
+            { "texto": "Pedir el bloqueo de la línea a la compañía telefónica o a quien administra los celulares de Pehuén.", "correcta": true, "feedback": "Bien: así nadie recibe sus SMS ni puede usar el número para recuperar cuentas." },
+            { "texto": "Entrar al correo desde el notebook con un código de respaldo del gestor y cerrar la sesión del celular perdido.", "correcta": true, "feedback": "Exacto. Para eso se prepararon los códigos de respaldo. Cerrar la sesión del celular le quita esa llave a quien lo tenga." },
+            { "texto": "Publicar en sus redes su número nuevo y pedir a sus contactos que le reenvíen ahí los códigos que les lleguen.", "correcta": false, "feedback": "Eso multiplica el riesgo: anuncia la pérdida y pone códigos en manos de terceros. Los códigos no se reenvían a nadie." }
+          ],
+          "explicacion": "Primero se corta lo que el celular perdido puede hacer, después se entra por una puerta preparada y se avisa por un canal conocido. El orden exacto entre avisar y bloquear la línea puede variar; lo que no varía es hacerlo esa misma noche.",
+          "texto": "Javier tiene poco tiempo y harto estrés. Ayúdalo a ordenar sus primeras acciones.",
+          "voz": "Perder el celular un viernes en la noche es de esas cosas que le arruinan el fin de semana a cualquiera. Lo natural es dejarlo para el lunes y no pensar más. Pero piensa en lo que había en ese celular: el correo de quien paga a los proveedores y la app que aprueba sus inicios de sesión. La buena noticia es que Javier se preparó en la lección anterior. Ahora toca usar esa preparación.",
+          "hablante": "narrador",
+          "icono": "smartphone"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P07",
+          "tipo": "reflexion",
+          "titulo": "Tu prueba de mañana",
+          "texto": "Imagina que mañana pierdes el celular o se te olvida la clave del correo de trabajo. Antes de que pase, revisa cómo volverías a entrar.",
+          "pregunta": "Si mañana pierdes tu celular o se te olvida la clave del correo de trabajo, ¿cómo vuelves a entrar? Escribe qué tienes hoy y qué te falta.",
+          "ayuda": "Piensa en tus códigos de respaldo y dónde están, en tu número y tu correo de recuperación, en si tienes un segundo método registrado y en a quién llamarías y desde dónde. Si no sabes cómo funciona la recuperación de cuentas en tu empresa, esa es tu primera pregunta para soporte.",
+          "voz": "Yo hice este ejercicio después de lo del mensaje del falso Nacho y me llevé una sorpresa. Mi correo de recuperación era uno que creé cuando estaba en el colegio, y ni me acordaba de la clave. O sea, si perdía el celular, no tenía cómo entrar, y si alguien adivinaba esa clave antigua, entraba él. Me tomó veinte minutos ordenarlo con Nacho. Te recomiendo que lo pienses con calma y escribas lo que tienes hoy, aunque sea poco. Nadie más va a leerlo.",
+          "hablante": "daniela",
+          "icono": "pen-line"
+        },
+        {
+          "id": "SEG360-CIBER-M03-L03-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: recuperar el acceso",
+          "ideas": [
+            "Nadie de soporte necesita tu clave ni tus códigos: quien te los pide, por cualquier canal, está intentando entrar.",
+            "La identidad se verifica saliendo de la conversación, por un canal que tú eliges o que está registrado de antes.",
+            "La puerta de atrás también se cuida: códigos de respaldo en el gestor, segundo método registrado y recuperación al día."
+          ],
+          "pregunta": "¿Qué dato de recuperación de tus cuentas de trabajo vas a revisar o actualizar esta semana?",
+          "texto": "Tres ideas para quedarte de esta lección, y una tarea concreta.",
+          "voz": "Esta lección tenía una idea que cruza todo: la forma más fácil de entrar a una cuenta bien protegida es convencer a alguien de que abra la puerta de atrás. A veces ese alguien eres tú, cuando te piden un código. A veces es soporte, cuando alguien llama haciéndose pasar por ti. En los dos casos, la defensa es la misma: salir de esa conversación y verificar por un canal propio. En el laboratorio vas a poner todo esto junto, a las once y cuarenta de la noche.",
+          "hablante": "narrador",
+          "icono": "lightbulb"
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-CIBER-M03-LAB",
+    "titulo": "Laboratorio: la notificación que nadie pidió",
+    "resultado": "Ante un borrador de política de accesos y un intento de aprobación MFA inesperado a las 23:40, seleccionar reglas razonables y aplicables, redactar una instrucción breve para el equipo y resolver el intento en el escritorio simulado sin aprobar nada, cambiando la clave y reportando con la información útil.",
+    "minutos": 50,
+    "fuentes": ["CIB-CISA-MFA", "CIB-FIDO", "CIB-NIST80063B", "CIB-CISA-PHISH", "CIB-NISTCSF2"],
+    "pantallas": [
+      {
+        "id": "SEG360-CIBER-M03-LAB-P01",
+        "tipo": "apertura",
+        "titulo": "Lo que dejó la noche del martes",
+        "escena": "Miércoles, 8:30. Nacho llega con cara de no haber dormido mucho: anoche hubo intentos de entrada en tres cuentas de Pehuén, entre ellas la de Javier. Nadie perdió nada, pero Rodrigo le pidió una política de accesos simple, que la gente entienda y pueda cumplir, antes de fin de mes. Nacho te pide ayuda con dos cosas: revisar su borrador de reglas y escribir la instrucción para la tarjeta de bolsillo del equipo.",
+        "pregunta": "¿Cómo se ve una regla que la gente realmente pueda cumplir a las once de la noche, medio dormida?",
+        "texto": "En este laboratorio vas a hacer tres cosas: revisar las reglas de una política de accesos, escribir una instrucción breve para el equipo y ponerte en los zapatos de Javier la noche del martes.\n\nTrabaja con calma: lo que construyas aquí te sirve para tus propias cuentas.",
+        "voz": "Una política de accesos puede ser perfecta en el papel y no servir de nada a medianoche. Si es larga, confusa o castiga a quien se equivoca, la gente la evita o esconde sus errores. Si es corta, clara y realista, se vuelve un hábito. En este laboratorio vas a ayudar a Nacho a lograr lo segundo. Y después vas a vivir la noche del martes desde el celular de Javier, para comprobar si esas reglas aguantan la realidad.",
+        "hablante": "narrador",
+        "imagen": "SEG360-IMG032",
+        "icono": "clipboard-list"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P02",
+        "tipo": "clasificar",
+        "titulo": "El borrador de Nacho",
+        "texto": "Estas son las diez reglas que Nacho anotó en su primer borrador, algunas copiadas de políticas de otras empresas. Ayúdalo a decidir.",
+        "consigna": "Clasifica cada regla: ¿va tal cual, va pero hay que ajustarla, o queda fuera porque empuja a malas prácticas?",
+        "categorias": [
+          { "id": "va", "nombre": "Va tal cual", "icono": "badge-check", "descripcion": "Es razonable, aplicable y protege de verdad." },
+          { "id": "ajustar", "nombre": "Va, pero hay que ajustarla", "icono": "pen-line", "descripcion": "La intención es buena, pero así redactada genera problemas." },
+          { "id": "fuera", "nombre": "Fuera", "icono": "user-x", "descripcion": "Empuja a malas prácticas o abre una puerta." }
+        ],
+        "elementos": [
+          { "texto": "Cambio obligatorio de todas las contraseñas cada 30 días.", "categoria": "fuera", "feedback": "Produce claves con el número del mes y post-its. La clave se cambia cuando hay una razón: filtración, sospecha o aviso del gestor o de soporte." },
+          { "texto": "Mínimo 8 caracteres, con mayúscula, número y símbolo obligatorios.", "categoria": "ajustar", "feedback": "La intención es buena, pero premia la forma y no el largo. Mejor: frases largas para las claves que se recuerdan, claves generadas por el gestor para el resto, y bloqueo de claves comunes o filtradas." },
+          { "texto": "Todas las cuentas de Pehuén se guardan en el gestor corporativo; las cuentas compartidas se dan y se quitan con permisos desde ahí.", "categoria": "va", "feedback": "Ordena el acceso, permite saber quién tiene qué y evita dictar claves. Es la base del resto." },
+          { "texto": "MFA obligatorio en correo, gestor, sistema de facturación y portal del banco de la empresa.", "categoria": "va", "feedback": "Cubre las cuentas que más daño harían si alguien entra. Bien elegido para empezar." },
+          { "texto": "Para quienes aprueban pagos: passkey o llave física, con un método de respaldo registrado.", "categoria": "va", "feedback": "Proporcional al riesgo: donde se mueve dinero, el método más resistente al phishing disponible." },
+          { "texto": "Si te llega una notificación MFA que no pediste: recházala, cambia tu clave desde el gestor y avisa a Nacho.", "categoria": "va", "feedback": "Clara, corta y aplicable a cualquier hora. Es justo la que vas a poner a prueba en un rato." },
+          { "texto": "Soporte TI puede pedirte el código MFA para resolver problemas de acceso.", "categoria": "fuera", "feedback": "Esta regla haría imposible distinguir a Nacho de un impostor. La regla correcta es la contraria: nadie, tampoco soporte, pide códigos." },
+          { "texto": "Los reseteos pedidos por teléfono se hacen solo después de devolver la llamada al número registrado o de verificar en persona.", "categoria": "va", "feedback": "Es lo que frenó la llamada del falso Javier. Conviene que todo el equipo la conozca, para que nadie se ofenda cuando Nacho la aplique." },
+          { "texto": "La clave del correo del local se comparte en el grupo de WhatsApp del turno.", "categoria": "fuera", "feedback": "Deja la clave en muchos celulares y respaldos de chats. Para cuentas compartidas, el gestor con permisos." },
+          { "texto": "Quien apruebe por error una notificación MFA será sancionado.", "categoria": "fuera", "feedback": "Castigar el error logra que la gente lo esconda, y un error escondido es mucho más caro que uno avisado a tiempo. La regla útil es la contraria: avisa siempre, también si te equivocaste." }
+        ],
+        "voz": "Al revisar el borrador, piensa en dos cosas por cada regla. Primero, si protege de verdad contra lo que vimos en el módulo: claves filtradas, páginas falsas, bombardeo de notificaciones y llamadas de falso soporte. Y segundo, cómo la vive una persona como Daniela un sábado en el local, o como Javier a medianoche. Una regla que nadie puede cumplir no protege: solo produce culpa o trampas.",
+        "hablante": "narrador",
+        "icono": "clipboard-list"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P03",
+        "tipo": "construir",
+        "titulo": "La tarjeta de las 23:40",
+        "texto": "Nacho quiere imprimir una tarjeta de bolsillo, y ponerla también como fondo de pantalla en los celulares de la empresa, con una sola instrucción: qué hacer ante una notificación MFA que no pediste.",
+        "consigna": "Redacta el contenido de la tarjeta, completando las cuatro partes. Después compáralo con los criterios y evalúa tu propia versión.",
+        "contexto": "Debe poder leerse en veinte segundos, de noche y con sueño. Sin tecnicismos. En horario de oficina, Nacho atiende en el anexo 210, el celular de soporte y el chat interno. Fuera de horario, si entregaste tu clave o aprobaste algo, se llama al celular de soporte, que contesta a cualquier hora; si rechazaste todo, basta con dejar el aviso en el canal de incidentes del chat interno, que Nacho revisa hasta la medianoche y a primera hora.",
+        "campos": [
+          { "id": "momento", "etiqueta": "En el momento", "ayuda": "¿Qué hace la persona con la notificación, apenas la ve?", "tipo": "texto", "min_palabras": 10 },
+          { "id": "despues", "etiqueta": "Apenas rechazas", "ayuda": "¿Qué hace con su clave y a quién avisa, por qué canal y con qué datos?", "tipo": "texto_largo", "min_palabras": 20 },
+          { "id": "nunca", "etiqueta": "Lo que nunca", "ayuda": "¿Qué no se hace aunque alguien lo pida o insista?", "tipo": "texto", "min_palabras": 10 },
+          { "id": "error", "etiqueta": "Si ya aprobaste", "ayuda": "¿Qué hace quien se equivocó? ¿Cómo lo dices sin que suene a castigo?", "tipo": "texto", "min_palabras": 12 }
+        ],
+        "criterios": [
+          { "criterio": "Acción inmediata clara", "niveles": [
+            "No dice qué hacer con la notificación, o sugiere aprobar para ver qué pasa.",
+            "Dice que hay que tener cuidado, sin una acción concreta.",
+            "Indica rechazar, pero mezclado con otras acciones o con condiciones.",
+            "Indica rechazar como primera acción, en una frase corta, sin condiciones."
+          ] },
+          { "criterio": "Aviso con información útil", "niveles": [
+            "No menciona avisar.",
+            "Menciona avisar, sin canal ni datos.",
+            "Indica canal o datos, pero no ambos, o no menciona cambiar la clave.",
+            "Indica cambiar la clave desde el gestor y avisar por el canal correcto con hora y lo ocurrido."
+          ] },
+          { "criterio": "Contempla el error sin culpa", "niveles": [
+            "No considera que alguien pueda haber aprobado, o lo trata como falta.",
+            "Lo menciona de forma ambigua o amenazante.",
+            "Pide avisar si se aprobó, pero sin urgencia o sin tono tranquilizador.",
+            "Pide avisar de inmediato si se aprobó, y deja claro que avisar a tiempo es lo que importa."
+          ] },
+          { "criterio": "Se entiende con sueño", "niveles": [
+            "Texto largo, con tecnicismos o siglas sin explicar.",
+            "Se entiende, pero cuesta encontrar qué hacer primero.",
+            "Es claro, aunque podría ser más corto.",
+            "Breve, en orden, con verbos al principio y lenguaje de todos los días."
+          ] }
+        ],
+        "ejemplo_solido": "En el momento: si no estás entrando tú a ninguna parte, aprieta RECHAZAR. No apruebes para que deje de sonar.\nApenas rechazas: cambia la clave de esa cuenta desde el gestor, no desde un link. Escribe a Nacho por el chat interno, canal de incidentes: qué cuenta, a qué hora y cuántas notificaciones llegaron.\nLo que nunca: aprobar, dictar ni reenviar un código a nadie, aunque diga ser de soporte. Nacho nunca te los pide.\nSi ya aprobaste: llama al tiro al celular de soporte de Nacho, a la hora que sea. No es para retarte: avisar rápido es lo que permite cerrar la puerta.",
+        "ejemplo_debil": "Ante notificaciones sospechosas de autenticación multifactor, evalúe la legitimidad de la solicitud y actúe con precaución. Reporte los incidentes según el procedimiento vigente. El incumplimiento será considerado una falta.\n\nPor qué es mejorable: no dice qué apretar, usa palabras que nadie entiende a medianoche, no dice a quién avisar ni qué datos dar, olvida cambiar la clave y amenaza, con lo que quien se equivocó probablemente no avise.",
+        "voz": "Escribir para alguien con sueño es más difícil de lo que parece. Tienes que elegir qué va primero y qué sobra. Te propongo una prueba: cuando termines, léelo en voz alta como si te despertaran a medianoche. Si en la primera frase no sabes qué apretar, hay que acortar. Y presta especial atención a la última parte, la de quien ya aprobó: es la que más cuesta escribir sin que suene a reto.",
+        "hablante": "narrador",
+        "icono": "pen-line"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P04",
+        "tipo": "escritorio",
+        "titulo": "Martes, 23:40",
+        "texto": "Es martes, 23:40. Javier ya está acostado. El celular de la empresa vibra en el velador y el notebook de Pehuén está cerrado en el escritorio del living.",
+        "consigna": "Resuelve la noche del martes en el celular y el notebook de Javier. Cumple las siete misiones; el orden de las primeras importa.",
+        "usuario": "javier",
+        "practica_formativa": true,
+        "misiones": [
+          { "id": "m1", "texto": "Revisa la notificación que acaba de llegar", "app": "telefono", "elemento": "t1" },
+          { "id": "m2", "texto": "Atiende la segunda notificación", "app": "telefono", "elemento": "t2" },
+          { "id": "m3", "texto": "Revisa el SMS de «Pehuén Soporte»", "app": "telefono", "elemento": "t3" },
+          { "id": "m4", "texto": "Atiende la llamada de las 23:46", "app": "telefono", "elemento": "t4" },
+          { "id": "m5", "texto": "Ocúpate de la clave del correo", "app": "configuracion", "elemento": "s1" },
+          { "id": "m6", "texto": "Revisa el correo que llegó a las 23:44", "app": "correo", "elemento": "c2" },
+          { "id": "m7", "texto": "Avisa a Nacho", "app": "chat", "elemento": "h1" }
+        ],
+        "telefono": [
+          {
+            "id": "t1",
+            "tipo": "mfa",
+            "remitente": "Autenticador Pehuén",
+            "texto": "¿Estás intentando iniciar sesión en Correo Pehuén?\nNavegador en Windows · Santiago, Chile · 23:40\n[Aprobar] [Rechazar]",
+            "hora": "23:40",
+            "acciones": [
+              { "id": "t1a", "texto": "Rechazar: «No, no fui yo»", "correcta": true, "feedback": "Bien. Javier está acostado y no está entrando a ninguna parte. Fíjate en lo que significa: alguien escribió su contraseña correcta. La segunda puerta aguantó, pero la primera ya cayó." },
+              { "id": "t1b", "texto": "Aprobar: debe ser el notebook, que se quedó sincronizando", "correcta": false, "feedback": "Un notebook cerrado no inicia sesión solo, y la notificación dice «Navegador en Windows», que no es el equipo de Javier. Aprobar le abre el correo a otra persona." },
+              { "id": "t1c", "texto": "Ignorarla y dar vuelta el celular para seguir durmiendo", "correcta": false, "feedback": "Ignorarla no la rechaza, y el que intenta entrar va a seguir. Además, Javier pierde la oportunidad de cambiar la clave a tiempo." }
+            ]
+          },
+          {
+            "id": "t2",
+            "tipo": "mfa",
+            "remitente": "Autenticador Pehuén",
+            "texto": "Escribe el número que aparece en tu pantalla de inicio de sesión para Correo Pehuén.\n[ __ ]   [No fui yo]",
+            "hora": "23:41",
+            "acciones": [
+              { "id": "t2a", "texto": "Tocar «No fui yo»: no hay ninguna pantalla de Javier mostrando un número", "correcta": true, "feedback": "Exacto. El número solo lo ve quien está frente a la pantalla de inicio de sesión, y no es Javier. Si alguien le pide ese número, es parte del mismo intento." },
+              { "id": "t2b", "texto": "Escribir un número cualquiera para que deje de sonar", "correcta": false, "feedback": "Adivinar no ayuda y, por azar, podría acertar. La única respuesta que corta el intento es «No fui yo»." },
+              { "id": "t2c", "texto": "Esperar a ver si llega una tercera para estar seguro", "correcta": false, "feedback": "No hace falta más evidencia: ya hay dos intentos que Javier no hizo. Cada minuto de espera es un minuto en que su clave sigue sirviendo." }
+            ]
+          },
+          {
+            "id": "t3",
+            "tipo": "sms",
+            "remitente": "Pehuen Soporte",
+            "texto": "Pehuén Soporte: detectamos accesos inusuales en tu cuenta. Para evitar el bloqueo, responde este mensaje con el código que recibiste o con el número de tu app.",
+            "hora": "23:43",
+            "acciones": [
+              { "id": "t3a", "texto": "No responder, guardar el mensaje como evidencia y reportarlo junto con el resto", "correcta": true, "feedback": "Bien. Es el siguiente paso del mismo ataque: como no aprobó, ahora le piden el código por otro lado. El mensaje sirve para el reporte." },
+              { "id": "t3b", "texto": "Responder con el número que mostraba la app, para evitar el bloqueo", "correcta": false, "feedback": "Ese número es justo lo que le falta al atacante para entrar. El bloqueo de la cuenta, si ocurriera, no es un problema: se resuelve con Nacho mañana." },
+              { "id": "t3c", "texto": "Responder preguntando quién es, para salir de dudas", "correcta": false, "feedback": "Le confirmas que estás despierto y atento, y le das la oportunidad de inventar una historia mejor. Con este tipo de mensajes no se conversa." }
+            ]
+          },
+          {
+            "id": "t4",
+            "tipo": "llamada",
+            "remitente": "Número desconocido · dice ser de «Soporte Pehuén»",
+            "texto": "«Buenas noches, don Javier, le hablo de soporte. Estamos viendo intentos de acceso en su cuenta. Para bloquearlos le va a llegar una notificación: apruébela y así la protegemos desde acá».",
+            "hora": "23:46",
+            "acciones": [
+              { "id": "t4a", "texto": "Cortar sin aprobar nada y avisar a Nacho por el chat interno", "correcta": true, "feedback": "Correcto. Soporte nunca necesita que apruebes una notificación para protegerte; si algo hay que bloquear, lo hace desde su consola. Esta llamada confirma que es un ataque organizado." },
+              { "id": "t4b", "texto": "Aprobar la notificación mientras sigue en línea, porque la persona sabe su nombre y lo que está pasando", "correcta": false, "feedback": "Sabe lo que está pasando porque es quien lo está provocando. Aprobar le entrega el correo." },
+              { "id": "t4c", "texto": "Pedirle su nombre completo y su anexo para devolverle el llamado a ese número", "correcta": false, "feedback": "Devolver la llamada solo sirve a un número que tú ya conocías. Un número que te da el mismo llamante te lleva de vuelta a él." }
+            ]
+          }
+        ],
+        "configuracion": [
+          {
+            "id": "s1",
+            "titulo": "Gestor de contraseñas · Correo Pehuén",
+            "estado": "Último cambio: hace 8 meses.\nAviso del gestor: esta clave también está guardada para tienda-online.example.",
+            "acciones": [
+              { "id": "s1a", "texto": "Cambiarla ahora desde el gestor por una clave nueva, generada y única", "correcta": true, "feedback": "Bien. Así la clave que tiene el atacante deja de servir. Y fíjate en el aviso: la clave estaba repetida en una tienda online. Ese dato es clave para el reporte." },
+              { "id": "s1b", "texto": "Dejarlo para mañana, para que Nacho la cambie", "correcta": false, "feedback": "Mientras tanto, el atacante tiene una clave que funciona y puede seguir intentando, por ejemplo con más llamadas. Cambiarla toma un minuto y no requiere a Nacho." },
+              { "id": "s1c", "texto": "Cambiarla agregándole un número al final", "correcta": false, "feedback": "Es la variación más predecible: los programas de ataque la prueban primero. Que el gestor genere una nueva." }
+            ]
+          },
+          {
+            "id": "s2",
+            "titulo": "Actividad reciente de la cuenta",
+            "estado": "23:40 · Inicio de sesión bloqueado · Navegador en Windows · Santiago\n23:41 · Inicio de sesión bloqueado · Navegador en Windows · Santiago",
+            "acciones": [
+              { "id": "s2a", "texto": "Anotar las horas y el origen para incluirlos en el aviso", "correcta": true, "feedback": "Bien. Esa información le ahorra tiempo a Nacho y ayuda a ver si otras cuentas recibieron intentos parecidos." },
+              { "id": "s2b", "texto": "Borrar el historial de actividad para que no quede registro", "correcta": false, "feedback": "Ese registro es evidencia útil. Además, no tienes por qué esconder nada: no aprobaste ningún intento." }
+            ]
+          }
+        ],
+        "correo": [
+          {
+            "id": "c1",
+            "de_nombre": "Alertas Pehuén",
+            "de_correo": "alertas@pehuen.example",
+            "para": "javier.contreras@pehuen.example",
+            "asunto": "Se bloqueó un intento de inicio de sesión",
+            "fecha": "Martes, 23:41",
+            "cuerpo": "Hola Javier:\n\nBloqueamos dos intentos de inicio de sesión en tu cuenta desde un navegador en Windows, en Santiago, a las 23:40 y 23:41.\n\nSi no fuiste tú, cambia tu clave desde el gestor de contraseñas y avisa a soporte por el chat interno. Este correo no contiene links: no necesitas hacer clic en nada.\n\nSoporte TI Pehuén",
+            "adjuntos": [],
+            "enlaces": [],
+            "acciones": [
+              { "id": "c1a", "texto": "Leerlo y seguir sus indicaciones por los canales de siempre", "correcta": true, "feedback": "Bien. Es una alerta legítima: viene del dominio de Pehuén, coincide con lo que viste en el celular y no te pide hacer clic en nada." },
+              { "id": "c1b", "texto": "Reportarlo como phishing", "correcta": false, "feedback": "No pasa nada por reportar de más, pero este correo no tiene señales de engaño: dominio correcto, sin links, sin pedir datos. Distinguirlo del otro te ahorra tiempo." }
+            ]
+          },
+          {
+            "id": "c2",
+            "de_nombre": "Seguridad de Cuentas",
+            "de_correo": "seguridad@pehuen-alertas.invalid",
+            "para": "javier.contreras@pehuen.example",
+            "asunto": "Acción requerida: tu cuenta será suspendida en 30 minutos",
+            "fecha": "Martes, 23:44",
+            "cuerpo": "Detectamos actividad sospechosa en tu cuenta.\n\nPara evitar la suspensión, verifica tu identidad ingresando tu usuario, tu contraseña y el código de tu app autenticadora en el siguiente link antes de 30 minutos.\n\nEquipo de Seguridad",
+            "adjuntos": [],
+            "enlaces": [ { "texto": "Verificar mi cuenta ahora", "destino_real": "https://pehuen-alertas.invalid/verificar" } ],
+            "acciones": [
+              { "id": "c2a", "texto": "No abrir el link y reportarlo con el botón «Reportar»", "correcta": true, "feedback": "Correcto. El dominio no es pehuen.example, pide clave y código, y mete prisa. Llega justo cuando Javier está nervioso: el momento perfecto para un engaño." },
+              { "id": "c2b", "texto": "Abrir el link solo para ver qué pide, sin escribir nada", "correcta": false, "feedback": "No hace falta abrirlo para saber que es falso, y algunas páginas intentan aprovechar fallas del navegador. Con reportar basta." },
+              { "id": "c2c", "texto": "Seguir las instrucciones: el correo de Pehuén de hace tres minutos también hablaba de actividad sospechosa", "correcta": false, "feedback": "Ahí está la trampa: se cuelga de algo real. Compara los remitentes y fíjate en que el correo legítimo no tenía links ni pedía datos." }
+            ]
+          }
+        ],
+        "chat": [
+          {
+            "id": "h1",
+            "de": "Nacho Pérez · Soporte TI",
+            "texto": "Respuesta automática: estoy fuera de horario. Si entregaste tu clave o aprobaste algo sin querer, llámame al celular de soporte. Si no, déjame aquí lo que pasó: reviso este canal de incidentes hasta la medianoche y a primera hora.",
+            "hora": "23:50",
+            "acciones": [
+              { "id": "h1a", "texto": "Escribir: «Nacho: 23:40 y 23:41 me llegaron dos MFA del correo que no pedí, los rechacé. 23:43 SMS pidiendo el código, 23:46 llamada de falso soporte pidiendo aprobar. No aprobé nada. Cambié la clave a las 23:52; la antigua la usaba también en una tienda online»", "correcta": true, "feedback": "Un aviso completo: qué pasó, a qué hora, qué hiciste y qué no, y un dato valioso, la clave repetida. Con esto Nacho puede actuar sin tener que llamarte." },
+              { "id": "h1b", "texto": "Escribir: «Me llegaron unas cosas raras, mañana te cuento»", "correcta": false, "feedback": "Avisar es bueno, pero sin datos Nacho no puede hacer nada esta noche. Tómate un minuto más y cuenta qué pasó, a qué hora y qué hiciste." },
+              { "id": "h1c", "texto": "No avisar: rechazó todo y ya cambió la clave, así que está resuelto", "correcta": false, "feedback": "Lo de Javier quizás sí, pero el ataque puede estar dirigido a más personas de Pehuén, y la llamada de falso soporte indica que es organizado. Tu aviso protege a otros." }
+            ]
+          },
+          {
+            "id": "h2",
+            "de": "Nacho Pérez · Soporte TI",
+            "texto": "Gracias, Javier, justo eso necesitaba. Revisé tu cuenta: no hay sesiones abiertas desde afuera. Hubo intentos en otras dos cuentas, ya las estoy viendo. ¿Aprobaste alguna sin querer? Si fue así, dímelo tranquilo.",
+            "hora": "23:58",
+            "acciones": [
+              { "id": "h2a", "texto": "Responder con la verdad: no aprobó ninguna, y la llamada fue desde un número desconocido", "correcta": true, "feedback": "Bien. La pregunta de Nacho es importante: si alguien aprobó, hay que actuar distinto. Y fíjate en el tono: así se logra que la gente cuente sus errores." },
+              { "id": "h2b", "texto": "No responder hasta mañana: ya hizo su parte", "correcta": false, "feedback": "Es tarde y es comprensible, pero un sí o un no toma diez segundos y le permite a Nacho decidir esta misma noche. Avisar no es trabajar fuera de horario: es cerrar una puerta." }
+            ]
+          }
+        ],
+        "voz": "Ahora te toca a ti estar en el velador de Javier. Vas a ver todo lo que vimos en el módulo, uno tras otro y en pocos minutos, como pasa en la vida real: notificaciones, un mensaje, una llamada, un correo. No hay apuro en la práctica, pero fíjate en cómo cada paso del atacante se apoya en el anterior. Y fíjate también en lo que pasa después de que avisas.",
+        "hablante": "narrador",
+        "icono": "smartphone"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P05",
+        "tipo": "decision",
+        "titulo": "Daniela aprobó una",
+        "situacion": "Miércoles, en la reunión de las 9:00. Nacho cuenta lo de anoche. Daniela se pone roja y dice: «La semana pasada me llegó una notificación del portal de pedidos, que todavía usa el aviso de aprobar o rechazar, a las seis de la mañana. Pensé que era el celular actualizándose y apreté aprobar. No dije nada porque no ha pasado nada raro».",
+        "pregunta": "¿Qué le recomiendas a Daniela?",
+        "multiple": false,
+        "opciones": [
+          { "texto": "Que no diga nada más: ya pasó una semana y nada se ve raro.", "correcta": false, "feedback": "Que no se vea nada raro no significa que no haya pasado nada. Alguien pudo revisar pedidos, cambiar datos de despacho o esperar el momento justo. Solo revisando se sabe." },
+          { "texto": "Que cambie la clave ella misma y así no tiene que contar nada.", "correcta": false, "feedback": "Cambiar la clave ayuda, pero no deshace cambios que el atacante ya hizo ni cierra sesiones que dejó abiertas. Nacho necesita saberlo para revisar." },
+          { "texto": "Que le cuente hoy a Nacho, con la fecha y hora aproximada, para que revise la actividad de su cuenta, y que cambie la clave.", "correcta": true, "feedback": "Eso es. Una semana después todavía se puede revisar mucho: inicios de sesión, pedidos modificados, datos cambiados. Y Daniela ya dio el paso más difícil, que era decirlo." },
+          { "texto": "Que pida que le desactiven el MFA, porque la confunde.", "correcta": false, "feedback": "La solución es que el MFA sea más claro, por ejemplo con coincidencia de números, no quitarlo. Sin MFA, la próxima vez nadie tendría que pedirle permiso." }
+        ],
+        "explicacion": "Aprobar por error le puede pasar a cualquiera, sobre todo medio dormido. Lo que hace la diferencia es avisar, aunque sea tarde. Por eso la regla de Pehuén no castiga el error: lo único que pide es no esconderlo.",
+        "texto": "Las reglas se ponen a prueba cuando alguien se equivoca. Ayuda a Daniela a decidir.",
+        "voz": "Esto me pasó a mí, y no es fácil contarlo frente a todos. Lo primero que sentí fue vergüenza, y lo segundo, miedo a que me retaran. Lo que me ayudó fue que Nacho, antes de que yo hablara, había dicho que prefería diez avisos de falsa alarma a uno tarde. Cuando lo revisamos, alguien había entrado al portal y había cambiado la dirección de despacho de un pedido grande que salía esa semana. Si no hablo, eso seguía ahí. Piensa qué le dirías tú a una compañera en mi lugar.",
+        "hablante": "daniela",
+        "icono": "user-check"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P06",
+        "tipo": "dialogo",
+        "titulo": "Lo que encontró Nacho",
+        "texto": "Jueves. Nacho, Javier y Rodrigo revisan lo que pasó y qué cambiar.",
+        "lineas": [
+          { "personaje": "nacho", "texto": "Javier, encontré de dónde salió tu clave: la tienda online donde la usabas tuvo una filtración hace unos meses." },
+          { "personaje": "javier", "texto": "O sea que el que intentó entrar no adivinó nada. La tenía." },
+          { "personaje": "nacho", "texto": "Exacto. Lo que lo frenó fue el MFA y que tú rechazaste. Si hubieras aprobado, estaría leyendo tu correo con los datos de pago de los proveedores." },
+          { "personaje": "rodrigo", "texto": "¿Y qué cambiamos para que esto no dependa de que Javier esté despierto y atento a medianoche?" },
+          { "personaje": "nacho", "texto": "Tres cosas: coincidencia de números en todas las cuentas, passkey o llave física para quienes aprueban pagos, y que el gestor nos avise de claves repetidas o filtradas." },
+          { "personaje": "rodrigo", "texto": "Y que la gente avise sin miedo. Prefiero diez falsas alarmas a un aviso tarde. Eso lo voy a decir yo en la próxima reunión." },
+          { "personaje": "javier", "texto": "Yo esta semana reviso todas las claves que tenía repetidas. Eran más de las que pensaba." }
+        ],
+        "reflexion": "Fíjate en que los cambios son de dos tipos: los que dependen de la empresa, como la configuración y el tono de la jefatura, y los que dependen de cada persona. ¿Qué cambio de cada tipo haría más falta donde tú trabajas?",
+        "voz": "Esta conversación es la que hace que un susto se convierta en aprendizaje. Fíjate en que nadie busca un culpable. Nacho explica qué pasó con datos, Rodrigo pregunta qué hay que cambiar en el sistema y no en Javier, y Javier asume lo que le toca, sin que nadie se lo exija. Ese es el orden que funciona: primero entender, después mejorar las condiciones y al final los hábitos de cada uno.",
+        "hablante": "narrador",
+        "icono": "users"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P07",
+        "tipo": "checklist",
+        "titulo": "Tu plan de accesos para esta semana",
+        "texto": "Ahora llévalo a tus propias cuentas. Marca lo que ya tienes y lo que harás esta semana.",
+        "consigna": "Marca cada acción que ya hiciste o que te comprometes a hacer en los próximos siete días. Si algo no aplica en tu empresa, conversa con soporte qué existe en su lugar.",
+        "items": [
+          "Identifiqué las claves que repito y cambié primero la del correo de trabajo.",
+          "Uso el gestor de contraseñas de la empresa para las cuentas de trabajo, con una frase larga como clave maestra.",
+          "La cuenta del gestor y la del correo tienen MFA, con el método más resistente que mi empresa ofrece.",
+          "Si uso notificaciones para aprobar, tengo activada la coincidencia de números o pedí que la activen.",
+          "Generé mis códigos de respaldo y los guardé en el gestor.",
+          "Revisé que mi número y mi correo de recuperación estén al día y protegidos.",
+          "Sé por qué canal avisar si recibo una notificación que no pedí, también fuera de horario.",
+          "Revisé las sesiones y dispositivos activos de mi cuenta de trabajo y cerré los que no reconozco."
+        ],
+        "voz": "Cuando Nacho nos pasó esta lista, yo la hice en dos partes. Un martes en la tarde, con poco público en el local, cambié las claves repetidas y guardé los códigos de respaldo. La semana siguiente revisé el correo de recuperación, que era ese del colegio que ya te conté. No hace falta hacerlo todo hoy. Elige dos o tres acciones, empezando por la que más te preocupe. Lo que sí te pido es que no lo dejes para después del próximo susto: las cuentas se ordenan con calma, no a medianoche.",
+        "hablante": "daniela",
+        "icono": "list-checks"
+      },
+      {
+        "id": "SEG360-CIBER-M03-LAB-P08",
+        "tipo": "cierre_leccion",
+        "titulo": "Para llevar: la noche del martes",
+        "ideas": [
+          "Una notificación que no pediste significa que tu clave ya no es secreta: rechaza, cambia la clave desde el gestor y avisa con la hora y lo que viste.",
+          "El ataque viene en capas: notificaciones, mensajes, llamadas y correos se apoyan unos en otros. Ninguno de ellos merece un código ni un sí.",
+          "Las buenas reglas son cortas, aplicables a cualquier hora y no castigan el error: así la gente avisa a tiempo."
+        ],
+        "pregunta": "Si mañana te llega una notificación que no pediste, ¿por qué canal y con qué datos avisarías en tu trabajo?",
+        "texto": "Lo que te llevas del laboratorio, y una pregunta para dejar resuelta hoy.",
+        "voz": "Terminaste el laboratorio más nocturno del curso. Lo que hiciste aquí no fue memorizar una regla, sino ver cómo se comporta un ataque real, paso a paso, y cómo cada decisión tuya cierra una puerta. Antes de seguir, deja resuelta la pregunta final. Saber hoy por qué canal avisar es lo que hace que, a medianoche, no tengas que pensar.",
+        "hablante": "narrador",
+        "icono": "lightbulb"
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-CIBER-M03-CIERRE",
+    "titulo": "Tus puertas, ordenadas",
+    "texto": "En este módulo trabajaste las tres puertas de tus cuentas:\n\n**La de adelante**: claves únicas, frases largas para las pocas que recuerdas y el gestor corporativo para el resto.\n\n**La segunda**: MFA en las cuentas que importan, con el método más resistente disponible, y la regla de no aprobar ni dictar nada que no pediste.\n\n**La de atrás**: códigos de respaldo, recuperación al día y verificación por canales que tú eliges.\n\nNinguna de ellas es infalible por sí sola. Juntas, y con la costumbre de avisar a tiempo, hacen que entrar a tu cuenta sea mucho más difícil que entrar a otra.",
+    "voz": "Si miras hacia atrás, el módulo empezó con una notificación a medianoche y terminó con una política que la gente puede cumplir. En el medio aprendiste algo que vale para todo el curso: los controles técnicos ayudan mucho, pero siempre hay un momento en que una persona decide. Y esa decisión se vuelve fácil cuando la regla es clara y avisar no da miedo. En el próximo módulo dejamos las cuentas y salimos con Javier a la calle: su notebook, el Wi-Fi de un café y un martes de teletrabajo.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Cambia esta semana la clave que más repites, empezando por el correo de trabajo, y guarda las nuevas en el gestor de la empresa.",
+      "Revisa qué método de MFA tienen tu correo y tu gestor, y pide subirlo de nivel si existe una opción más resistente.",
+      "Deja anotado, en un lugar que encuentres de noche, por qué canal avisar si recibes una notificación o un pedido de código que no esperabas."
+    ],
+    "siguiente": "Módulo 4: Dispositivos, redes y teletrabajo. Acompañas a Javier en un martes de trabajo móvil, del café a la oficina de un cliente y de vuelta a su casa en Maipú."
+  },
+  "glosario": [
+    { "termino": "Frase de contraseña", "definicion": "Contraseña formada por varias palabras elegidas al azar, sin relación entre sí. Es larga, fácil de recordar y difícil de adivinar." },
+    { "termino": "Gestor de contraseñas", "definicion": "Programa que guarda tus claves cifradas en una bóveda, genera claves distintas para cada sitio y las rellena solo en la dirección correcta." },
+    { "termino": "Clave maestra", "definicion": "La única clave que recuerdas para abrir el gestor de contraseñas. Debe ser una frase larga, única y protegida con MFA." },
+    { "termino": "Relleno de credenciales", "definicion": "Ataque que prueba en muchos sitios los correos y claves obtenidos en filtraciones, aprovechando que la gente repite contraseñas." },
+    { "termino": "MFA (autenticación multifactor)", "definicion": "Verificación que pide dos o más pruebas de tipos distintos para entrar a una cuenta, por ejemplo la clave y un código o aprobación en el celular." },
+    { "termino": "Fatiga de MFA", "definicion": "Técnica que consiste en enviar muchas solicitudes de aprobación seguidas para que la persona, por cansancio o distracción, termine aprobando una." },
+    { "termino": "Coincidencia de números", "definicion": "Configuración de la app autenticadora que obliga a escribir un número que aparece en la pantalla de inicio de sesión. Dificulta las aprobaciones distraídas." },
+    { "termino": "Passkey", "definicion": "Forma de iniciar sesión sin contraseña, con un par de llaves digitales guardadas en tu dispositivo y desbloqueadas con huella, rostro o PIN. Solo funciona en el sitio verdadero, por lo que resiste el phishing." },
+    { "termino": "Llave de seguridad física", "definicion": "Dispositivo pequeño que se conecta o acerca al equipo para confirmar el inicio de sesión. Como la passkey, solo responde al sitio verdadero." },
+    { "termino": "Códigos de respaldo", "definicion": "Códigos de un solo uso que permiten entrar a una cuenta si pierdes tu método principal de verificación. Se guardan en un lugar seguro, como el gestor." }
+  ],
+  "fuentes": ["CIB-NIST80063B", "CIB-CISA-MFA", "CIB-FIDO", "CIB-CISA-PHISH", "CIB-INCIBE", "CIB-NISTCSF2", "CIB-LEY21459"],
+  "recursos": ["SEG360-REC05", "SEG360-REC07", "SEG360-REC10"],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG031",
+      "titulo": "Javier frente a la pantalla de inicio de sesión",
+      "uso": "Apertura de la lección 1 (contraseñas y gestores): situación cotidiana de alguien que debe cambiar una clave en la oficina.",
+      "prompt": "Editorial realistic photograph, soft natural window light, a Chilean man in his mid-thirties, administrative and finance assistant, sitting at a tidy desk in the second-floor administrative office of a mid-sized office-supply distributor in Santiago, looking thoughtfully at his laptop while holding a work smartphone in one hand; the laptop screen shows a generic login form with blurred, unreadable fields; no sticky notes on the monitor, no readable text, no logos, no brand names; colleagues working out of focus in the background; muted bluish graphite and white palette with subtle violet accents; documentary style, candid, not posed, shallow depth of field.",
+      "alt": "Un hombre en una oficina administrativa mira la pantalla de inicio de sesión de su notebook mientras sostiene el celular de la empresa."
+    },
+    {
+      "id": "SEG360-IMG032",
+      "titulo": "La notificación de medianoche",
+      "uso": "Presentación del módulo y apertura del laboratorio: el momento en que llega una solicitud de aprobación que nadie pidió.",
+      "prompt": "Editorial realistic photograph at night in a modest Santiago apartment bedroom, a Chilean man in his mid-thirties sitting up in bed, just woken, looking at a smartphone on the nightstand whose screen glows with a generic approve or deny prompt shown as two abstract buttons, no readable text; dim warm bedside lamp mixed with cool blue screen light; ordinary bedding, a glass of water, no logos or brands; muted bluish graphite palette with a subtle violet accent from the screen glow; documentary style, tense but calm mood, candid, not posed.",
+      "alt": "De noche, un hombre recién despertado mira desde la cama un celular que muestra una solicitud para aprobar o rechazar un inicio de sesión."
+    },
+    {
+      "id": "SEG360-IMG033",
+      "titulo": "Nacho verifica una solicitud de reseteo",
+      "uso": "Lección 3 (recuperación de acceso): la persona de soporte que no actúa en la misma llamada y verifica por un canal registrado.",
+      "prompt": "Editorial realistic photograph, a Chilean IT support technician in his forties wearing a headset, standing in a small, tidy equipment room of a mid-sized distribution company in Santiago, with a closed network rack and a small desk; he is on a phone call while checking a support ticket on a monitor with blurred, unreadable content, attentive and calm expression, one hand ready to write a note; natural light from a small window plus cool overhead light; no logos, no brands, no readable text; muted bluish graphite and white palette with subtle violet accents; documentary style, candid.",
+      "alt": "Un técnico de soporte con audífonos atiende una llamada en la sala de equipos mientras revisa un registro en el monitor antes de actuar."
+    }
+  ],
+  "minutos_desglose": { "lecciones": 120, "laboratorio": 50, "intro_cierre_recursos": 10 }
+}

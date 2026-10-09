@@ -1,0 +1,1613 @@
+{
+  "id": "SEG360-EPP-M05",
+  "ruta": "EPP",
+  "numero": 5,
+  "titulo": "Inspección, cuidado y recambio",
+  "subtitulo": "Revisar el EPP antes de usarlo, cuidarlo entre turnos y saber cuándo pedir uno nuevo",
+  "resultado": "Ante un EPP, su ficha y su registro, inspeccionarlo, registrar defectos y solicitar reposición o retiro de servicio según los criterios del fabricante.",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-EPP-M05-INTRO",
+    "titulo": "El EPP no avisa cuando deja de proteger",
+    "texto": "En Pehuén el EPP se entrega, se usa… y muchas veces se olvida hasta que falla. Un casco que pasó dos veranos en la luneta de la camioneta, un respirador que vive en el bolsillo del polerón, unos guantes con un corte «chiquitito».\n\nEn este módulo vas a revisar el EPP con método, cuidarlo para que llegue entero al próximo turno y pedir su reposición con datos, sin costo para ti.",
+    "voz": "Hay una pregunta que Patricia, la prevencionista, le hace a todo el mundo cuando ve un EPP gastado: ¿y esto desde cuándo no protege? Casi nadie sabe responder. No porque no le importe, sino porque nadie le enseñó a mirar. El EPP no avisa cuando se degrada. El sol, los productos de aseo, un golpe o un mal guardado lo van debilitando sin ruido. En este módulo vas a aprender a revisarlo antes de usarlo, a cuidarlo entre turnos y a saber cuándo sacarlo de servicio y cómo pedir uno nuevo.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG055",
+    "logros": [
+      "Inspeccionar casco, lentes, guantes, fono, respirador y calzado antes de usarlos, y decidir si se usan, se retiran o se consultan.",
+      "Limpiar, guardar y transportar el EPP de modo que no se dañe ni se contamine.",
+      "Registrar defectos y pedir reposición o retiro de servicio según el fabricante y el procedimiento de la empresa."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-EPP-M05-L01",
+      "titulo": "Inspeccionar antes de usar",
+      "resultado": "Ante un EPP de uso habitual, revisarlo con método antes de usarlo y decidir si se usa, se retira o se consulta, sin intentar repararlo.",
+      "minutos": 40,
+      "fuentes": [
+        "EPP-FABRICANTE",
+        "EPP-ISP-GUIAS",
+        "SST-DS18",
+        "SST-DS594"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M05-L01-P01",
+          "tipo": "apertura",
+          "titulo": "Siete cincuenta, frente al armario",
+          "escena": "Son las 7:50 del lunes. Camila saca un casco de la repisa del armario de EPP, toma un par de guantes de la caja y un fono que estaba colgado de un clavo. Héctor pasa con su café: «Ese fono lo usaba el chico que se fue en marzo». El camión de Embalajes del Litoral llega a las 8:30.",
+          "pregunta": "¿Cuánto demora revisar un EPP antes de usarlo? ¿Y cuánto puede costar no hacerlo?",
+          "texto": "Un EPP puede verse bien y no proteger. La única forma de saberlo es revisarlo con método, cada vez, antes de ponértelo.\n\nEn esta lección vas a aprender una revisión corta que te dice si el equipo **se usa, se retira o se consulta**.",
+          "voz": "Fíjate en lo que hizo Camila: tomó lo que había, como hace casi todo el mundo un lunes temprano. No hay nada raro en eso. El problema es que ese casco, esos guantes y ese fono tienen historia, y Camila no la conoce. ¿Dónde estuvieron guardados? ¿Se golpearon? ¿Alguien los modificó? Vamos a armar una revisión que se hace en uno o dos minutos y que responde justo esas preguntas, antes de que el equipo esté en tu cabeza o en tus manos.",
+          "imagen": "SEG360-IMG055",
+          "icono": "scan-eye",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Mirar, probar, comparar y decidir",
+          "texto": "La inspección antes de usar no es un trámite: es la última oportunidad de descubrir que la protección falló antes de que falle contigo adentro.\n\nTú haces una revisión **visual y de funcionamiento** antes de cada uso. La empresa organiza además revisiones periódicas, repone y lleva el registro. Los criterios los fija el **fabricante**.",
+          "bloques": [
+            {
+              "icono": "eye",
+              "titulo": "Mirar",
+              "texto": "Fisuras, cortes, deformaciones, decoloración, piezas faltantes, suciedad que no sale. Por fuera y por dentro, con buena luz."
+            },
+            {
+              "icono": "hand",
+              "titulo": "Probar",
+              "texto": "Ajustes, elásticos, hebillas, válvulas y cierres: que funcionen y sujeten."
+            },
+            {
+              "icono": "file-text",
+              "titulo": "Comparar",
+              "texto": "Con la ficha del fabricante o el checklist de la empresa, no con «cómo estaba antes»."
+            },
+            {
+              "icono": "clipboard-check",
+              "titulo": "Decidir",
+              "texto": "Se usa, se retira o se consulta. Si dudas, no se usa hasta resolverlo."
+            }
+          ],
+          "nota": {
+            "tipo": "terreno",
+            "texto": "Revisar no es reparar. Si encuentras un defecto, no lo arreglas con cinta, pegamento o un nudo: lo dejas fuera de uso y avisas."
+          },
+          "voz": "Piensa en esta revisión como la que haces antes de cruzar la calle: rápida, pero con atención de verdad. Primero miras con calma, por fuera y por dentro. Después pruebas lo que se mueve o se ajusta, porque un elástico cansado no se nota a la vista. Luego comparas con lo que dice el fabricante, porque la memoria engaña y la costumbre más. Y al final decides. Si algo no te convence, el equipo no se usa hasta que alguien con criterio lo revise. Esa duda no es exageración: es parte del método.",
+          "profundiza": "La responsabilidad sobre el estado del EPP es compartida, pero no es igual para todos. La empresa debe proporcionar el EPP adecuado al riesgo y sin costo para la persona trabajadora, según el DS 594, y además debe asegurarse de que se mantenga en condiciones: definir quién inspecciona, cada cuánto, cómo se registra y cómo se repone. En Chile, los EPP deben contar con certificación de calidad según el DS 18 de 1982, y el Instituto de Salud Pública publica guías técnicas sobre su selección y uso.\n\nEl fabricante, por su parte, entrega en el folleto o en la ficha técnica las instrucciones de inspección, limpieza, almacenamiento, piezas de repuesto y criterios de retiro de cada modelo. Por eso dos cascos o dos respiradores parecidos pueden tener criterios distintos.\n\nA ti te corresponde revisar antes de cada uso, usar y cuidar el equipo según lo que te enseñaron y avisar cuando algo no está bien. Si no te entregaron la información para revisarlo, también es algo que puedes pedir.",
+          "icono": "clipboard-check",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P03",
+          "tipo": "video",
+          "titulo": "Inspección de EPP en un minuto",
+          "video_id": "SEG360-VID12",
+          "texto": "Mira cómo se revisan cuatro equipos comunes en la bodega de Pehuén: casco, lentes, guantes y fono. Fíjate en el orden y en dónde se detiene la mirada. No se repara nada: se observa, se registra y se avisa.",
+          "voz": "Antes de practicar, mira esta demostración corta. Pon atención en qué parte de cada equipo se revisa primero y en lo que se hace cuando aparece un defecto.",
+          "icono": "eye",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P04",
+          "tipo": "inspeccion",
+          "titulo": "El casco de la repisa",
+          "objeto": "Casco de seguridad tomado de la repisa del armario de EPP de la bodega",
+          "modelo": "casco",
+          "consigna": "Revisa el casco que tomó Camila. Para cada observación decide si es aceptable, si el casco debe retirarse o si hay que consultar antes de usarlo. Gira el modelo para ver la carcasa, la suspensión y el marcado interior.",
+          "observaciones": [
+            {
+              "texto": "La carcasa tiene rayas superficiales en la parte superior, sin fisuras ni hundimientos.",
+              "estado": "aceptable",
+              "feedback": "Las rayas superficiales por uso normal no suelen comprometer la protección. Lo que buscas son fisuras, hundimientos, zonas blanqueadas o deformación. Si una raya es profunda o te deja dudas, consulta."
+            },
+            {
+              "texto": "Con buena luz se ven grietas muy finas en el ala y la superficie está opaca, como tiza.",
+              "estado": "retirar",
+              "feedback": "Ese aspecto calcáreo con grietas finas es una señal típica de degradación del plástico por sol o calor. El casco ya no responde como fue diseñado: se retira, se rotula y se pide reposición."
+            },
+            {
+              "texto": "Una de las cintas de la suspensión está cortada.",
+              "estado": "retirar",
+              "feedback": "La suspensión mantiene la distancia entre la carcasa y la cabeza y absorbe parte del impacto. Con una cinta cortada esa función falla. No se amarra ni se cose: se deja fuera de uso y se pide la suspensión de repuesto que indique el fabricante o un casco nuevo."
+            },
+            {
+              "texto": "La fecha moldeada en el interior se lee bien, pero no sabes qué vida útil declara este fabricante.",
+              "estado": "consultar",
+              "feedback": "Bien que la fecha se lea. Pero la fecha sola no te dice si el casco sigue vigente: necesitas el criterio del fabricante y el registro de la empresa. Consulta a Marisol o a Patricia antes de asumir nada."
+            },
+            {
+              "texto": "La banda de sudor está sucia, pero entera y bien sujeta.",
+              "estado": "aceptable",
+              "feedback": "Es un tema de higiene, no de protección. El casco se puede usar, y conviene avisar para limpiar o cambiar la banda según indique el fabricante."
+            },
+            {
+              "texto": "Alguien le hizo dos perforaciones a la carcasa para colgarle una linterna.",
+              "estado": "retirar",
+              "feedback": "Perforar la carcasa debilita su estructura y puede anular la protección para la que fue certificado. Los accesorios van solo en las ranuras previstas y con modelos que el fabricante declara compatibles."
+            },
+            {
+              "texto": "Tiene un adhesivo grande de un club de fútbol pegado encima.",
+              "estado": "consultar",
+              "feedback": "Algunos adhesivos y pinturas pueden dañar ciertos plásticos o tapar una fisura. Revisa qué permite la ficha del fabricante y consulta. No lo despegues con solvente: eso sí puede dañarlo."
+            },
+            {
+              "texto": "La banda de ajuste gira y traba bien en todas las posiciones.",
+              "estado": "aceptable",
+              "feedback": "Un ajuste que traba mantiene el casco en su lugar cuando te agachas o miras hacia arriba. Esto está bien."
+            }
+          ],
+          "texto": "Revisa el casco como si fueras tú quien se lo va a poner. Cada observación tiene una decisión: aceptable, retirar o consultar.",
+          "voz": "Este es el casco que tomó Camila de la repisa. Gíralo, acércate a la carcasa y después mira por dentro, donde está la suspensión. Ojo con dos trampas comunes: pensar que todo lo que tiene rayas está malo, y pensar que todo lo que se ve limpio está bueno. Para cada observación, pregúntate si afecta la protección o no, y si tienes la información para decidirlo. Cuando no la tengas, consultar también es una respuesta correcta.",
+          "icono": "hard-hat",
+          "practica_formativa": true,
+          "hablante": "narrador"
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P05",
+          "tipo": "tarjetas",
+          "titulo": "Aceptable, retirar o consultar",
+          "consigna": "Da vuelta cada tarjeta para ver qué significa cada decisión y cómo se ve en terreno.",
+          "tarjetas": [
+            {
+              "frente": "Aceptable",
+              "icono": "badge-check",
+              "reverso": "El equipo cumple lo que pide el fabricante y funciona. Puede tener desgaste normal que no afecta la protección, como rayas superficiales. Se usa y se sigue cuidando."
+            },
+            {
+              "frente": "Retirar",
+              "icono": "triangle-alert",
+              "reverso": "Hay un defecto que compromete la protección: fisuras, cortes, piezas faltantes, modificaciones o un golpe fuerte. Se deja fuera de uso, se rotula, se registra y se pide reposición."
+            },
+            {
+              "frente": "Consultar",
+              "icono": "circle-help",
+              "reverso": "Falta información o tienes una duda razonable: no sabes la vida útil, no reconoces una pieza o la ficha no lo aclara. No se usa hasta que alguien con criterio lo revise."
+            },
+            {
+              "frente": "Fuera de uso, bien rotulado",
+              "icono": "clipboard-list",
+              "reverso": "Un EPP retirado que vuelve a la caja sin rótulo termina en la cabeza o en las manos de otra persona. Se separa y se rotula «fuera de uso», con fecha y motivo."
+            },
+            {
+              "frente": "¿Y si no hay repuesto?",
+              "icono": "megaphone",
+              "reverso": "La tarea que exige ese EPP no se hace hasta que haya uno en buen estado o hasta que la jefatura organice otra forma segura. Un EPP dañado no es «mejor que nada»."
+            }
+          ],
+          "texto": "Tres decisiones posibles y dos reglas que las acompañan. Úsalas cada vez que revises un equipo.",
+          "voz": "Yo uso estas tres palabras todos los días: aceptable, retirar, consultar. La que más cuesta es la tercera, porque a nadie le gusta decir no sé. Pero en una bodega, no sé es una respuesta muy profesional, siempre que vaya seguida de voy a preguntar. Y una cosa que he visto demasiadas veces: el casco malo vuelve a la caja porque nadie le puso un rótulo, y al otro día lo usa alguien que no estaba cuando se detectó el problema. Separar y rotular corta esa cadena.",
+          "hablante": "patricia",
+          "icono": "list-checks",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P06",
+          "tipo": "inspeccion",
+          "titulo": "Los lentes del cajón",
+          "objeto": "Lentes de seguridad guardados sueltos en el cajón de la mesa de despacho",
+          "modelo": "lentes",
+          "consigna": "Gira los lentes y revisa micas, protecciones laterales, marco, patillas y marcado. Decide para cada observación.",
+          "observaciones": [
+            {
+              "texto": "Las micas tienen rayas que se cruzan justo en la línea de visión.",
+              "estado": "retirar",
+              "feedback": "Las rayas en la zona central dificultan ver bien, cansan la vista y te empujan a sacarte los lentes «un ratito». Además, pueden indicar que la mica recibió impactos. Se retiran y se reponen."
+            },
+            {
+              "texto": "Falta la protección lateral del lado derecho.",
+              "estado": "retirar",
+              "feedback": "Sin protección lateral, una partícula o una salpicadura puede entrar por el costado. El lente ya no ofrece la protección con la que fue certificado."
+            },
+            {
+              "texto": "Las patillas abren y cierran bien, y el marco no está torcido.",
+              "estado": "aceptable",
+              "feedback": "Un marco derecho y patillas firmes mantienen el lente en su lugar. Esto está bien."
+            },
+            {
+              "texto": "El marcado grabado en la patilla está borroso y casi no se lee.",
+              "estado": "consultar",
+              "feedback": "Sin marcado legible no puedes confirmar qué protección tiene ni si es el modelo que entrega la empresa. Puede que sirva, pero eso lo confirma quien tiene el registro y la ficha."
+            },
+            {
+              "texto": "Las micas tienen polvo y huellas de dedos.",
+              "estado": "aceptable",
+              "feedback": "Suciedad no es defecto, pero no los uses así porque reducen la visión. Se limpian como indica el fabricante, normalmente con agua y jabón neutro, y se secan con un paño suave."
+            },
+            {
+              "texto": "Una mica tiene una pequeña trizadura en la esquina inferior.",
+              "estado": "retirar",
+              "feedback": "Una trizadura, aunque sea pequeña y esté en una esquina, debilita la mica frente a un impacto. Se retiran."
+            },
+            {
+              "texto": "Alguien pegó cinta aislante en el puente «para que no resbalen».",
+              "estado": "consultar",
+              "feedback": "La cinta tapa parte del marco y puede esconder una fisura. Y lo más importante: si se resbalan, quizás el modelo o la talla no son los adecuados para esa persona. Eso se informa para cambiarlo."
+            }
+          ],
+          "texto": "Lentes que llevaban semanas sueltos en un cajón, entre huinchas y lápices. Revísalos antes de que alguien los use para abrir cajas.",
+          "voz": "Estos lentes estaban sueltos en el cajón de la mesa de despacho, junto a la huincha, los lápices y el cartonero. Ya eso dice algo de cómo han vivido. Mira primero las micas a contraluz, después los costados y al final el marcado. Fíjate en la última observación: la cinta en el puente no es solo una modificación, es una pista. Alguien tenía un problema con esos lentes y lo resolvió solo, sin contárselo a nadie.",
+          "icono": "glasses",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P07",
+          "tipo": "decision",
+          "titulo": "El fono del clavo",
+          "situacion": "Marisol le pide a Camila apoyar media hora en la zona de la prensa de cartón, donde la evaluación de ruido indica usar protección auditiva. El único fono disponible es el del clavo: una almohadilla está rajada y se asoma la espuma interior. El camión llega en 25 minutos.",
+          "pregunta": "¿Qué debería hacer Camila?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "Usar el fono igual: algo protege, y es solo media hora.",
+              "correcta": false,
+              "feedback": "La almohadilla rajada rompe el sello alrededor de la oreja y el ruido entra por ahí. Un fono sin sello protege mucho menos de lo que dice su ficha, y nadie sabe cuánto. «Algo protege» no es un criterio."
+            },
+            {
+              "texto": "Ponerle cinta a la almohadilla para cerrar la rajadura y entrar.",
+              "correcta": false,
+              "feedback": "La cinta no devuelve la forma ni la blandura de la almohadilla, así que el sello sigue fallando. Y es una modificación: arreglar el EPP no es tu tarea."
+            },
+            {
+              "texto": "Dejar el fono fuera de uso y rotulado, avisar a Marisol y no entrar a la zona de la prensa hasta tener protección auditiva en buen estado.",
+              "correcta": true,
+              "feedback": "Así es. Separas el equipo dañado para que nadie más lo use, avisas a quien organiza el trabajo y no te expones mientras tanto. Marisol puede conseguir otro fono, tapones adecuados o reorganizar la tarea."
+            },
+            {
+              "texto": "Usar sus audífonos de música con cancelación de ruido, que le tapan bien los oídos.",
+              "correcta": false,
+              "feedback": "Los audífonos de música no son protección auditiva certificada y, si suenan, suman más ruido. No reemplazan al EPP."
+            }
+          ],
+          "explicacion": "Encontrar un defecto justo cuando hay apuro es lo más común. La decisión segura no depende de cuánto falta para el camión: un EPP defectuoso se separa, se avisa y se espera una alternativa. Organizar esa alternativa le corresponde a la jefatura.",
+          "texto": "Un defecto, un reloj corriendo y una tarea que alguien tiene que hacer. ¿Qué decides?",
+          "voz": "Esta situación se repite en todas las bodegas: el equipo malo aparece justo cuando no hay tiempo. Y el ruido tiene una trampa, porque no duele ni avisa. El daño al oído se acumula de a poco, turno tras turno, y cuando se nota ya no tiene vuelta. Piensa qué haría Camila si nadie la estuviera apurando, y después pregúntate por qué el apuro debería cambiar esa respuesta.",
+          "icono": "ear",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevarte de esta lección",
+          "ideas": [
+            "Un EPP puede verse bien y no proteger: se revisa con método antes de cada uso.",
+            "Mirar, probar, comparar con el fabricante y decidir: se usa, se retira o se consulta.",
+            "Revisar no es reparar: el equipo dañado se separa, se rotula y se avisa, aunque haya apuro."
+          ],
+          "pregunta": "¿Qué EPP usas tú o ves usar en tu trabajo, y qué es lo primero que mirarías mañana antes de ponértelo?",
+          "texto": "Cierra la lección con estas tres ideas y una pregunta para tu propio trabajo.",
+          "voz": "Lo que viste hoy cabe en un minuto por equipo. Mirar, probar, comparar y decidir. Lo difícil no es la técnica, es hacerlo siempre, también el día del camión apurado. Antes de seguir, piensa en tu propio trabajo: qué equipo usas o ves usar, y qué es lo primero que mirarías mañana. Si no sabes qué mirar en ese equipo, ya tienes una buena pregunta para tu jefatura.",
+          "icono": "lightbulb",
+          "hablante": "narrador",
+          "practica_formativa": false
+        }
+      ]
+    },
+    {
+      "id": "SEG360-EPP-M05-L02",
+      "titulo": "Limpiar, guardar y transportar",
+      "resultado": "Ante distintas formas de limpiar, guardar y transportar el EPP, elegir las que lo mantienen en condiciones y proponer mejoras cuando faltan lugares o recursos.",
+      "minutos": 38,
+      "fuentes": [
+        "EPP-FABRICANTE",
+        "EPP-ISP-RESP",
+        "EPP-ISP-GUIAS"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M05-L02-P01",
+          "tipo": "apertura",
+          "titulo": "Dos veranos en la luneta",
+          "escena": "Héctor guarda su casco en la luneta trasera de la camioneta de mantención: «Ahí no estorba y siempre lo tengo a mano». Su respirador de media cara cuelga del cuello durante la colación y después va al bolsillo del polerón. Los guantes de nitrilo que usa con el desengrasante se secan encima de los bidones de producto.",
+          "pregunta": "¿Qué le está pasando a ese EPP mientras nadie lo usa?",
+          "texto": "El EPP también se daña cuando no se usa. Sol, calor, químicos, presión y polvo siguen trabajando entre un turno y otro.\n\nEn esta lección vas a ver cómo **limpiar, guardar y transportar** el EPP para que llegue entero al próximo uso.",
+          "voz": "Héctor no es descuidado. Al contrario: tiene su equipo siempre a mano y lo usa harto. El problema es dónde vive ese equipo cuando no está puesto. La luneta de una camioneta en enero puede ponerse más caliente de lo que aguanta un plástico. Un bolsillo aplasta. Un bidón abierto deja vapores. Nada de eso se nota de un día para otro, y por eso es tan fácil pasarlo por alto.",
+          "icono": "sun",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P02",
+          "tipo": "explicacion",
+          "titulo": "Los enemigos del EPP guardado",
+          "texto": "Lo que deteriora el EPP entre un uso y otro casi nunca se ve en el momento. Se acumula hasta que el equipo falla cuando más lo necesitas.",
+          "bloques": [
+            {
+              "icono": "sun",
+              "titulo": "Sol y calor",
+              "texto": "La luneta o el tablero de un vehículo, un techo de lata o una estufa pueden degradar plásticos, elásticos y espumas."
+            },
+            {
+              "icono": "droplets",
+              "titulo": "Químicos",
+              "texto": "Vapores y salpicaduras de productos de aseo atacan carcasas, micas, elásticos y guantes."
+            },
+            {
+              "icono": "box",
+              "titulo": "Aplastamiento",
+              "texto": "Cajas encima o bolsos apretados deforman el sello del respirador, la diadema del fono y la carcasa del casco."
+            },
+            {
+              "icono": "wind",
+              "titulo": "Polvo y humedad",
+              "texto": "Ensucian el interior del respirador y de los guantes, y favorecen hongos y mal olor."
+            }
+          ],
+          "nota": {
+            "tipo": "ojo",
+            "texto": "Nunca guardes el respirador colgando del cuello ni en el bolsillo: su interior se contamina y el sello se deforma. La próxima vez ya no sellará igual."
+          },
+          "voz": "Cuando llegué a Pehuén, una de las primeras cosas que hice fue abrir la camioneta de mantención. Encontré dos cascos en la luneta, opacos, con ese polvillo blanco que suelta el plástico cuando ya está cansado. Nadie lo había hecho mal a propósito: era el único lugar donde no estorbaban. Por eso siempre pregunto dos cosas, cómo se guarda el equipo y dónde se supone que debería guardarse. Muchas veces la segunda pregunta no tiene respuesta, y ahí está el problema de fondo.",
+          "hablante": "patricia",
+          "profundiza": "Las guías técnicas del Instituto de Salud Pública sobre protección respiratoria recomiendan guardar el respirador limpio y seco, en un lugar protegido del sol, de temperaturas extremas, del polvo y de los contaminantes, y de forma que la pieza facial y las válvulas no se deformen. Muchos fabricantes indican hacerlo en una bolsa o contenedor cerrado, separado de los filtros cuando corresponde.\n\nLa misma lógica vale para el resto del EPP. Los plásticos de cascos y micas se degradan con la radiación ultravioleta y el calor; los elásticos pierden tensión; las espumas de los fonos se endurecen. Los productos de aseo, incluso diluidos, liberan vapores que con el tiempo atacan algunos materiales.\n\nHay además un tema de higiene: el EPP de uso personal no se comparte y se guarda separado del de otras personas, de la ropa sucia y de la comida. A eso se le llama evitar la contaminación cruzada.\n\nSi en tu lugar de trabajo no hay un lugar adecuado para guardar el EPP, eso es información que la empresa necesita para resolverlo.",
+          "imagen": "SEG360-IMG056",
+          "icono": "shield-alert",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P03",
+          "tipo": "pestanas",
+          "titulo": "Limpiar sin dañar, equipo por equipo",
+          "pestanas": [
+            {
+              "titulo": "Casco",
+              "icono": "hard-hat",
+              "texto": "Agua tibia y jabón neutro, con un paño suave. Nada de solventes, diluyentes ni bencina: pueden dañar la carcasa sin que se note. Seca a la sombra. La banda de sudor se lava o se cambia según indique el fabricante."
+            },
+            {
+              "titulo": "Lentes y antiparras",
+              "icono": "glasses",
+              "texto": "Enjuaga primero para sacar el polvo; después, agua con jabón neutro o el limpiador que indique el fabricante, y seca con un paño suave. El papel o la manga del polerón rayan las micas. En las antiparras, revisa que la ventilación no quede tapada."
+            },
+            {
+              "titulo": "Fono y tapones",
+              "icono": "ear",
+              "texto": "Copas y almohadillas con un paño húmedo y jabón suave, sin sumergir el fono. Los tapones desechables se botan después de usarlos. Los reutilizables se lavan como diga el fabricante y se guardan en su estuche."
+            },
+            {
+              "titulo": "Respirador",
+              "icono": "wind",
+              "texto": "Sigue el folleto del fabricante: normalmente se retiran los filtros, se lava la pieza facial con agua tibia y jabón suave, se enjuaga y se seca al aire. Los filtros no se lavan ni se soplan con aire comprimido."
+            },
+            {
+              "titulo": "Guantes reutilizables",
+              "icono": "hand",
+              "texto": "Depende del material y del producto con que se usaron. Algunos procedimientos indican enjuagarlos puestos antes de sacarlos, para no tocar producto con la piel. Se secan por dentro y por fuera, a la sombra. Los desechables no se reutilizan."
+            }
+          ],
+          "texto": "Cada EPP se limpia distinto, y una limpieza mal hecha puede dañarlo más que la suciedad. Revisa cada pestaña.",
+          "voz": "Hay una tentación muy comprensible: si algo está sucio, usar lo más fuerte que haya a mano. En una distribuidora de artículos de aseo, eso es fácil, porque productos sobran. Pero los solventes, el cloro puro o el aire comprimido pueden dejar un equipo limpísimo y dañado. La regla general es agua, jabón suave, paño blando y secar a la sombra. Y cuando el fabricante diga otra cosa, manda el fabricante.",
+          "profundiza": "El folleto del fabricante es la referencia para limpiar y desinfectar cada EPP, porque los materiales cambian de un modelo a otro. Algunos respiradores admiten toallas desinfectantes específicas; otros no. Algunas micas tienen tratamientos antiempañantes que se dañan con ciertos limpiadores.\n\nTres errores frecuentes: usar solventes o diluyentes para sacar manchas de pintura o grasa, lo que puede debilitar plásticos sin dejar huella visible; secar al sol o junto a una estufa, lo que acelera la degradación de elásticos, espumas y plásticos; y soplar filtros con aire comprimido, lo que daña el medio filtrante y puede liberar el contaminante retenido hacia quien está cerca.\n\nSi trabajaste con un producto químico, la limpieza del EPP también es parte de no llevarte el producto a la casa: se hace en el lugar definido, con las manos protegidas cuando corresponde, y después te lavas las manos.",
+          "icono": "droplets",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P04",
+          "tipo": "clasificar",
+          "titulo": "¿Dónde lo dejo?",
+          "consigna": "Clasifica cada forma de guardar o transportar el EPP según si lo protege o lo daña.",
+          "categorias": [
+            {
+              "id": "bien",
+              "nombre": "Lo protege",
+              "icono": "shield-check",
+              "descripcion": "Limpio, seco, sin presión, lejos del sol, del calor y de los químicos."
+            },
+            {
+              "id": "mal",
+              "nombre": "Lo daña o lo contamina",
+              "icono": "shield-alert",
+              "descripcion": "Lo expone a calor, químicos, aplastamiento o suciedad."
+            }
+          ],
+          "elementos": [
+            {
+              "texto": "Casco en la luneta trasera de la camioneta, todo el verano.",
+              "categoria": "mal",
+              "feedback": "La luneta concentra sol y calor por horas. Es una de las formas más rápidas de degradar un casco."
+            },
+            {
+              "texto": "Respirador limpio y seco, en una bolsa cerrada dentro del casillero personal.",
+              "categoria": "bien",
+              "feedback": "Así queda protegido del polvo, de los vapores y de la presión, y nadie más lo usa."
+            },
+            {
+              "texto": "Respirador colgando del cuello durante la colación.",
+              "categoria": "mal",
+              "feedback": "El interior queda expuesto al polvo, a la comida y a tu ropa, y el arnés tira y deforma la pieza facial."
+            },
+            {
+              "texto": "Respirador en el bolsillo del polerón.",
+              "categoria": "mal",
+              "feedback": "El bolsillo aplasta el sello y le mete pelusas por dentro. Al ponértelo de nuevo, puede no sellar."
+            },
+            {
+              "texto": "Lentes en su funda, dentro del casillero.",
+              "categoria": "bien",
+              "feedback": "La funda evita rayas en las micas y golpes en el marco."
+            },
+            {
+              "texto": "Guantes de nitrilo secándose encima de los bidones de desengrasante.",
+              "categoria": "mal",
+              "feedback": "Quedan expuestos a vapores y gotas del mismo producto del que deberían protegerte, y se mezcla lo sucio con lo que se va a usar."
+            },
+            {
+              "texto": "Fono colgado de un gancho en el casillero, sin nada encima.",
+              "categoria": "bien",
+              "feedback": "Sin peso encima, las almohadillas no se aplastan y la diadema no se deforma."
+            },
+            {
+              "texto": "Cascos apilados unos dentro de otros en una caja, con cajas de producto encima.",
+              "categoria": "mal",
+              "feedback": "El peso deforma carcasas y suspensiones. Además, en una caja común se pierde el control de qué casco está en qué estado."
+            },
+            {
+              "texto": "EPP personal en el bolso de trabajo, separado de la ropa sucia y de la colación, al ir a un cliente.",
+              "categoria": "bien",
+              "feedback": "Transportarlo separado evita golpes y contaminación cruzada. Bien pensado."
+            },
+            {
+              "texto": "Zapatos de seguridad mojados secándose pegados a la estufa.",
+              "categoria": "mal",
+              "feedback": "El calor directo reseca y deforma el cuero y puede despegar la suela. Se secan a temperatura ambiente, con buena ventilación."
+            }
+          ],
+          "texto": "Diez situaciones reales de Pehuén. Algunas protegen el equipo; otras lo van gastando sin que nadie se dé cuenta.",
+          "voz": "Aquí no hay trucos: cada situación la he visto en alguna bodega. Antes de clasificar, imagina el equipo una semana después de estar guardado así. ¿Llegará igual al próximo turno? Fíjate también en el transporte, porque el EPP pasa harto tiempo en mochilas, camionetas y bolsos, y ahí se golpea, se aplasta y se mezcla con cosas que no debería.",
+          "icono": "package",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P05",
+          "tipo": "proceso",
+          "titulo": "Tres minutos al final del turno",
+          "pasos": [
+            {
+              "titulo": "Sácatelo sin contaminarte",
+              "icono": "hand",
+              "texto": "Primero lo más sucio, en el orden que indique el procedimiento; por ejemplo, los guantes, sin tocar su exterior con la piel. Después lávate las manos."
+            },
+            {
+              "titulo": "Revísalo",
+              "icono": "search",
+              "texto": "Mira si se dañó durante el turno. Es más fácil detectarlo ahora, con calma, que mañana con apuro."
+            },
+            {
+              "titulo": "Límpialo y sécalo",
+              "icono": "droplets",
+              "texto": "Como indica el fabricante. Seca a la sombra, nunca al sol ni junto a la estufa."
+            },
+            {
+              "titulo": "Guárdalo en su lugar",
+              "icono": "lock",
+              "texto": "En tu casillero o en el lugar que defina la empresa: lo limpio separado de lo sucio, sin nada encima."
+            },
+            {
+              "titulo": "Avisa lo que viste",
+              "icono": "megaphone",
+              "texto": "Si algo se dañó o se gastó, anótalo y avísalo hoy, para que mañana haya reposición."
+            }
+          ],
+          "texto": "La mejor inspección del día siguiente empieza al terminar el turno. Esta rutina toma unos tres minutos.",
+          "voz": "A las seis de la tarde nadie quiere quedarse ni un minuto más, y se entiende. Por eso esta rutina tiene que ser corta y estar en el lugar correcto. Fíjate en el último paso: avisar hoy. Si el elástico del respirador se cortó a las cinco y lo dices recién mañana a las ocho, la reposición llega tarde y alguien termina trabajando sin equipo. Avisar al cierre del turno le da tiempo a la jefatura para resolver.",
+          "profundiza": "Para que esta rutina funcione, la empresa tiene que poner las condiciones: un lugar para lavarse las manos, un espacio para limpiar el EPP sin mezclarlo con productos, un lugar de guarda adecuado y un canal simple para avisar. Si alguna de esas cosas falta, la rutina se vuelve difícil y la gente busca atajos.\n\nEl orden para sacarse el EPP importa sobre todo cuando trabajaste con productos químicos: la idea es no tocar con la piel las superficies contaminadas. El procedimiento de tu empresa o la hoja de datos de seguridad del producto pueden indicar un orden específico.\n\nSi en tu bodega no hay casilleros o el que tienes no se cierra, no es un detalle: es una condición que hace probable que el EPP se pierda, se comparta o se guarde mal. Plantéalo a tu jefatura o al Comité Paritario.",
+          "icono": "clock",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P06",
+          "tipo": "dialogo",
+          "titulo": "«Siempre lo he guardado así»",
+          "lineas": [
+            {
+              "personaje": "hector",
+              "texto": "Patricia, el respirador me lo echo al bolsillo porque si lo dejo en la bodega alguien me lo saca."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "Te entiendo. Que te lo saquen es un problema real y hay que resolverlo. ¿Me lo prestas un segundo?"
+            },
+            {
+              "personaje": "hector",
+              "texto": "Toma. Está limpiecito, lo uso harto."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "Mira el sello: quedó doblado aquí, y tiene pelusas del bolsillo por dentro. Cuando te lo pongas, esta parte no va a quedar pegada a la cara."
+            },
+            {
+              "personaje": "hector",
+              "texto": "Pero siempre me lo he puesto así y nunca he sentido olor."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "No sentir olor no prueba que esté sellando. Hay productos que casi no huelen, o que se sienten cuando ya respiraste harto. ¿Y si vemos con Marisol un casillero con llave para ti?"
+            }
+          ],
+          "pregunta": "¿Cuál es la mejor salida para el problema de Héctor?",
+          "opciones": [
+            {
+              "texto": "Que Héctor siga usando el bolsillo, pero lave el respirador más seguido.",
+              "correcta": false,
+              "feedback": "Lavarlo ayuda con la suciedad, pero no evita que el bolsillo deforme el sello. El problema de fondo sigue ahí."
+            },
+            {
+              "texto": "Pedir a la empresa un lugar de guarda personal y cerrado, revisar si ese respirador necesita reposición y que Héctor lo guarde ahí, limpio y en su bolsa.",
+              "correcta": true,
+              "feedback": "Ataca la causa: Héctor lo guarda en el bolsillo porque no tiene dónde dejarlo seguro. Con un lugar adecuado, la buena práctica se vuelve la más fácil. Y el respirador deformado se revisa antes de volver a usarlo."
+            },
+            {
+              "texto": "Que Héctor deje el respirador en la caja común del armario, al alcance de todos.",
+              "correcta": false,
+              "feedback": "Un respirador es de uso personal: se ajusta a una cara y se contamina con el uso. En una caja común se mezcla, se presta y se pierde el control de su estado."
+            },
+            {
+              "texto": "Hacerle una amonestación escrita para que no lo vuelva a hacer.",
+              "correcta": false,
+              "feedback": "Sancionar no le da a Héctor un lugar donde guardarlo. Patricia pregunta qué hizo fácil hacerlo mal, y la respuesta es la falta de un lugar seguro."
+            }
+          ],
+          "explicacion": "Cuando alguien guarda mal su EPP, casi siempre hay una razón práctica detrás. Encontrarla y resolverla con la empresa funciona mejor que retarlo, y además mejora las condiciones para todo el equipo.",
+          "texto": "Patricia encuentra a Héctor con el respirador en el bolsillo. Lee la conversación y decide.",
+          "voz": "Me gustan estas conversaciones porque casi siempre termino aprendiendo algo. Héctor no estaba siendo porfiado: estaba cuidando su equipo de la única forma que tenía a mano. Si yo me hubiera quedado solo con que el bolsillo está prohibido, él habría seguido haciéndolo, pero a escondidas. Cuando la buena práctica es la difícil, la gente no la hace. Mi trabajo, y el de la empresa, es que sea la fácil.",
+          "hablante": "patricia",
+          "icono": "message-square",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P07",
+          "tipo": "mito_realidad",
+          "titulo": "Mitos del cuidado del EPP",
+          "afirmaciones": [
+            {
+              "texto": "Si el casco está limpio y sin rayas, está en buen estado.",
+              "es_verdad": false,
+              "explicacion": "La degradación por sol, calor o químicos, y el daño de un golpe, pueden no verse. Por eso se revisa con método y se respetan los criterios del fabricante."
+            },
+            {
+              "texto": "Lavar el respirador con bencina o diluyente lo deja más limpio.",
+              "es_verdad": false,
+              "explicacion": "Los solventes dañan el material de la pieza facial y del sello, aunque quede reluciente. Se limpia como dice el fabricante, normalmente con agua tibia y jabón suave."
+            },
+            {
+              "texto": "Los filtros del respirador se pueden limpiar soplándolos con aire comprimido.",
+              "es_verdad": false,
+              "explicacion": "Soplarlos daña el medio filtrante y libera lo que retuvieron. Los filtros se cambian según el programa definido y el fabricante; no se limpian."
+            },
+            {
+              "texto": "El EPP de uso personal se guarda separado del de otras personas y de la ropa sucia.",
+              "es_verdad": true,
+              "explicacion": "Así se evita la contaminación cruzada y se mantiene el control del estado de cada equipo."
+            },
+            {
+              "texto": "Dejar el EPP en la camioneta al sol es lo mismo que dejarlo en la bodega.",
+              "es_verdad": false,
+              "explicacion": "Dentro de un vehículo al sol la temperatura sube mucho más que en una bodega. Plásticos, espumas y elásticos se degradan más rápido."
+            },
+            {
+              "texto": "Si no tienes un lugar adecuado para guardar tu EPP, es algo que debes informar.",
+              "es_verdad": true,
+              "explicacion": "Que haya condiciones para guardar el EPP es parte de entregarlo bien. Tu aviso permite que la empresa lo resuelva."
+            }
+          ],
+          "texto": "Frases que se escuchan en cualquier bodega. Decide si son verdad o mito y lee por qué.",
+          "voz": "Algunas de estas frases suenan muy razonables, y por eso duran tanto. Lee cada una con calma y piensa en lo que realmente le pasa al material, no en cómo se ve. Ojo con las que tienen que ver con productos de limpieza: en una distribuidora de artículos de aseo es fácil creer que más fuerte es mejor.",
+          "icono": "circle-help",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevarte de esta lección",
+          "ideas": [
+            "El EPP se daña también guardado: sol, calor, químicos, aplastamiento y polvo trabajan entre turnos.",
+            "Se limpia como dice el fabricante, sin solventes ni aire comprimido, y se seca a la sombra.",
+            "El respirador se guarda limpio, seco y cerrado; nunca colgando del cuello ni en el bolsillo."
+          ],
+          "pregunta": "¿Dónde queda tu EPP, o el de tu equipo, entre un turno y otro? ¿Qué cambiarías o pedirías para que se guarde mejor?",
+          "texto": "Tres ideas para llevarte y una pregunta para mirar tu propio lugar de trabajo.",
+          "voz": "Hoy miramos al EPP cuando nadie lo está usando, que es la mayor parte de su vida. Quédate con esto: el lugar donde se guarda importa tanto como la forma en que se usa. Y si ese lugar no existe o no sirve, no es un problema tuyo que debas resolver con un bolsillo: es una condición que la empresa necesita conocer. Piensa en tu propio trabajo antes de pasar a la siguiente lección.",
+          "icono": "lightbulb",
+          "hablante": "narrador",
+          "practica_formativa": false
+        }
+      ]
+    },
+    {
+      "id": "SEG360-EPP-M05-L03",
+      "titulo": "Recambio y retiro de servicio",
+      "resultado": "Ante un EPP gastado, dañado o con vida útil cumplida, decidir su retiro según el fabricante, el procedimiento interno y la inspección, y seguir el flujo de registro y reposición.",
+      "minutos": 42,
+      "fuentes": [
+        "EPP-FABRICANTE",
+        "SST-DS594",
+        "SST-DS18",
+        "EPP-ISP-GUIAS",
+        "EPP-ISP-RESP"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M05-L03-P01",
+          "tipo": "apertura",
+          "titulo": "«Dime cada cuánto y lo pongo en la planilla»",
+          "escena": "Rodrigo revisa con Marisol el presupuesto del próximo año. Llama a Patricia: «Dime cada cuánto se cambia un casco, unos guantes, un fono, y lo dejo fijo en la planilla». Patricia abre en su celular la ficha de un casco, después la de otro, y le muestra que dicen cosas distintas.",
+          "pregunta": "¿Existe un plazo único para cambiar cada EPP?",
+          "texto": "La respuesta corta es no. La respuesta útil es que depende del **fabricante**, del **uso real** y de lo que muestre la **inspección**. Y eso se puede ordenar para que nadie trabaje con un equipo vencido o dañado.",
+          "voz": "La pregunta de Rodrigo es muy razonable. Un gerente necesita números para planificar compras, y un plazo fijo parece lo más simple. El problema es que el EPP no se gasta igual en todas partes. Un casco que pasa el día bajo techo no envejece como uno que vive al sol. Unos guantes que tocan desengrasante no duran lo mismo que unos que solo mueven cajas. En esta lección vas a ver cómo se decide de verdad cuándo un EPP sale de servicio.",
+          "imagen": "SEG360-IMG057",
+          "icono": "history",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P02",
+          "tipo": "explicacion",
+          "titulo": "No hay una vida útil universal",
+          "texto": "Un EPP sale de servicio por **tres caminos** que se suman, no se reemplazan uno a otro.",
+          "bloques": [
+            {
+              "icono": "file-text",
+              "titulo": "Lo que dice el fabricante",
+              "texto": "Vida útil declarada, criterios de retiro, piezas de repuesto y cómo leer la fecha de fabricación. Cambia de modelo a modelo."
+            },
+            {
+              "icono": "clipboard-list",
+              "titulo": "Lo que define la empresa",
+              "texto": "El procedimiento interno: quién inspecciona, cada cuánto, cómo se registra y cómo se pide y se entrega la reposición."
+            },
+            {
+              "icono": "search",
+              "titulo": "Lo que muestra la inspección",
+              "texto": "Un golpe, una fisura o un desgaste fuerte obligan a retirar antes de cualquier plazo, aunque el equipo sea nuevo."
+            }
+          ],
+          "nota": {
+            "tipo": "ojo",
+            "texto": "Un plazo es un máximo, no una garantía. Un casco «dentro de plazo» que recibió un golpe fuerte se retira igual."
+          },
+          "voz": "Rodrigo quería un número y le di tres fuentes. Al principio no le gustó mucho, lo reconozco. Pero cuando armamos la planilla con la fecha de entrega de cada equipo, la vida útil que declara cada fabricante y las inspecciones mensuales, pudo presupuestar mejor que con un número inventado. Lo que no hago nunca es decir los cascos duran tantos años y punto. Esa frase la he escuchado mil veces y casi nunca viene de una ficha.",
+          "hablante": "patricia",
+          "profundiza": "Cada tipo de EPP tiene su propia lógica de recambio. Los guantes desechables son de un solo uso. Los filtros de un respirador se cambian según un programa que la empresa define considerando el contaminante, su concentración, el tiempo de uso y la información del fabricante, y de inmediato si se dañan, se mojan o cuesta respirar. Algunos equipos tienen piezas de repuesto, como la suspensión de un casco, las almohadillas de un fono o las válvulas y el arnés de un respirador, que el fabricante indica cuándo y cómo cambiar, y que deben ser originales.\n\nEl calzado de seguridad se retira cuando la suela pierde el dibujo o se despega, cuando la puntera queda expuesta o cuando el cuero se rompe. La ropa de alta visibilidad, cuando las cintas reflectantes se despegan o pierden brillo.\n\nPara que todo esto funcione hace falta un registro de entrega: qué equipo, qué modelo, a quién y en qué fecha. Sin ese dato, ningún plazo se puede aplicar.",
+          "icono": "file-text",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P03",
+          "tipo": "modelo3d",
+          "titulo": "Respirador: qué se cambia y qué se retira",
+          "modelo": "respirador",
+          "consigna": "Gira el respirador y toca cada parte para ver qué se revisa, qué tiene repuesto y quién decide su recambio.",
+          "partes": [
+            {
+              "parte": "pieza_facial",
+              "titulo": "Pieza facial",
+              "texto": "El cuerpo del respirador. Se retira si tiene grietas, rigidez, deformación permanente o si el material se ve pegajoso. No se repara."
+            },
+            {
+              "parte": "sello",
+              "titulo": "Sello",
+              "texto": "La zona que toca la cara. Si está doblado, endurecido o cortado, el aire entra por ahí sin pasar por los filtros. Por eso se guarda sin aplastar."
+            },
+            {
+              "parte": "valvula_exhalacion",
+              "titulo": "Válvula de exhalación",
+              "texto": "Deja salir el aire que exhalas. Debe estar presente, limpia, plana y con su tapa. Es un repuesto del fabricante: se cambia por uno original, no se improvisa."
+            },
+            {
+              "parte": "valvulas_inhalacion",
+              "titulo": "Válvulas de inhalación",
+              "texto": "Están detrás de los filtros. Si faltan o están deformadas, el respirador deja de funcionar como debe."
+            },
+            {
+              "parte": "filtros",
+              "titulo": "Filtros",
+              "texto": "Se eligen según el contaminante y se cambian según el programa que define la empresa con la información del fabricante, y de inmediato si se dañan, se mojan o cuesta respirar. Solo del mismo fabricante y para ese modelo."
+            },
+            {
+              "parte": "arnes",
+              "titulo": "Arnés",
+              "texto": "Sostiene el respirador contra la cara. Si el elástico perdió tensión o una hebilla no traba, el sello se pierde al moverte. Tiene repuesto original."
+            }
+          ],
+          "pregunta": "Mientras limpia, Héctor empieza a sentir el olor del desengrasante dentro del respirador. ¿Qué corresponde?",
+          "opciones": [
+            {
+              "texto": "Apretar más el arnés y seguir trabajando.",
+              "correcta": false,
+              "feedback": "Puede ser un problema de sello, pero también de filtros saturados o inadecuados para ese producto. Apretar a ciegas no resuelve la duda, y mientras tanto Héctor sigue respirando el contaminante."
+            },
+            {
+              "texto": "Salir de la zona, sacarse el respirador en aire limpio y avisar para revisar sello, filtros y si estos son los adecuados para ese producto.",
+              "correcta": true,
+              "feedback": "Primero se detiene la exposición. Después se busca la causa con quien corresponde: el ajuste, el estado de los filtros o si esos filtros sirven para ese contaminante."
+            },
+            {
+              "texto": "Cambiar los filtros por unos que hay en una caja, aunque sean de otra marca.",
+              "correcta": false,
+              "feedback": "Los filtros deben ser los que indica el fabricante para esa pieza facial y para ese contaminante. Una unión entre marcas distintas puede no sellar."
+            },
+            {
+              "texto": "Apurarse para terminar antes y respirar menos rato el producto.",
+              "correcta": false,
+              "feedback": "Apurarse no reduce la exposición de forma segura y aumenta los errores. Si el respirador no está protegiendo, se sale de la zona."
+            }
+          ],
+          "texto": "El respirador es el EPP con más piezas que se cambian. Conocerlas te ayuda a saber qué pedir y qué no improvisar.",
+          "voz": "Gira el respirador con calma. Vas a ver que tiene piezas que se reponen, como los filtros, las válvulas y el arnés, y piezas que, si se dañan, obligan a retirar el equipo completo. Una idea importante: percibir olor o sabor del producto dentro del respirador es una señal de alerta, pero no sentirlo no garantiza que esté protegiendo. Por eso los filtros se cambian según un programa definido, y no solo cuando algo huele raro.",
+          "icono": "wind",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P04",
+          "tipo": "inspeccion",
+          "titulo": "Los zapatos de Héctor",
+          "objeto": "Zapatos de seguridad que Héctor usa todos los días en mantención",
+          "modelo": "zapato",
+          "consigna": "Revisa los zapatos de Héctor: suela, puntera, caña y plantilla. Decide para cada observación.",
+          "observaciones": [
+            {
+              "texto": "La suela está gastada hasta quedar lisa en el talón y en la punta.",
+              "estado": "retirar",
+              "feedback": "Sin dibujo, el zapato pierde agarre. En el piso mojado de la bodega de aseo eso es una caída esperando ocurrir. El desgaste fuerte de la suela es motivo de reposición."
+            },
+            {
+              "texto": "El cuero de la punta está roto y se ve la puntera por debajo.",
+              "estado": "retirar",
+              "feedback": "Con la puntera a la vista, el cuero ya no la sostiene ni la cubre, entra humedad y no sabes si recibió un golpe. Se retira y se pide reposición."
+            },
+            {
+              "texto": "La caña tiene polvo y manchas de pintura, pero el cuero está entero y flexible.",
+              "estado": "aceptable",
+              "feedback": "Manchas y polvo no afectan la protección. Se limpian como indica el fabricante y se siguen usando."
+            },
+            {
+              "texto": "Hay un clavo incrustado en la suela que no salió por dentro.",
+              "estado": "consultar",
+              "feedback": "Si el zapato tiene plantilla antiperforación, puede haber hecho su trabajo, pero ella o la suela pueden haber quedado dañadas. Muéstralo y consulta si se reemplaza."
+            },
+            {
+              "texto": "La plantilla de confort está aplastada y a Héctor le duelen los pies al final del turno.",
+              "estado": "consultar",
+              "feedback": "La plantilla de confort puede tener repuesto. Y el dolor es un dato importante: puede ser la talla, el modelo o el desgaste. Contarlo no es quejarse, es información para elegir mejor."
+            },
+            {
+              "texto": "Los cordones están deshilachados y uno tiene un nudo al medio.",
+              "estado": "aceptable",
+              "feedback": "No compromete la protección del zapato, así que se puede usar. Pero un cordón que se corta en una escalera es un tropiezo: pide cordones nuevos."
+            },
+            {
+              "texto": "Héctor le cortó la caña por detrás porque le rozaba el tobillo.",
+              "estado": "retirar",
+              "feedback": "Modificar el zapato cambia su protección y su sujeción. El roce era una señal de que la talla o el modelo no le acomodaban: eso se informa para cambiarlo, no se corta."
+            }
+          ],
+          "texto": "Zapatos con harto uso y harta historia. Algunos detalles se arreglan con un cordón; otros piden un par nuevo.",
+          "voz": "El calzado de seguridad es de los EPP que más se usan hasta el final, porque uno se acostumbra a sus zapatos y no quiere cambiarlos. Revisa la suela, la punta, la caña y la plantilla. Pon atención en las dos observaciones que tienen que ver con molestias. Cuando alguien modifica su equipo porque le duele, no está siendo irresponsable: está resolviendo un problema que nadie más resolvió. La tarea es que ese dolor llegue a quien puede cambiar el modelo o la talla.",
+          "icono": "footprints",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P05",
+          "tipo": "comparacion",
+          "titulo": "Retirar «a ojo» o retirar con registro",
+          "izquierda": {
+            "titulo": "A ojo y de palabra",
+            "icono": "circle-help",
+            "puntos": [
+              "«Está medio gastado, úsalo esta semana»",
+              "El EPP dañado vuelve a la caja común",
+              "Nadie sabe cuándo se entregó cada equipo",
+              "La reposición se pide cuando alguien se acuerda",
+              "Se descubre que faltan fonos el día que se necesitan"
+            ]
+          },
+          "derecha": {
+            "titulo": "Con criterio y registro",
+            "icono": "clipboard-check",
+            "puntos": [
+              "Se retira según el fabricante, el procedimiento y la inspección",
+              "El EPP retirado se separa y se rotula «fuera de uso»",
+              "Hay un registro de entrega con fecha, equipo y firma",
+              "La reposición se pide con datos: qué, por qué y cuántos",
+              "La empresa puede anticipar compras y presupuestar"
+            ]
+          },
+          "conclusion": "El registro no es burocracia: permite que el EPP llegue a tiempo y que nadie trabaje con un equipo vencido o dañado. Y te protege a ti, porque deja constancia de lo que pediste y de lo que recibiste.",
+          "texto": "Dos formas de manejar el recambio en una misma bodega. Compara qué pasa con cada una.",
+          "voz": "Las dos columnas describen bodegas reales, y la de la izquierda no es de gente floja: es de gente que trabaja sin un sistema. Mira la última línea de cada lado. En una, las faltas se descubren el día que se necesitan. En la otra, Rodrigo puede comprar con tiempo. El registro de entrega es la pieza que une todo: sin saber cuándo se entregó un equipo, ningún criterio de recambio se puede aplicar.",
+          "profundiza": "El registro de entrega de EPP suele incluir el nombre de la persona, la fecha, el tipo de equipo, el modelo, la talla, la cantidad y la firma de quien lo recibe. Muchas empresas agregan si se entregó la instrucción de uso y cuidado. Ese registro le sirve a la empresa para demostrar que entregó el EPP sin costo, como exige el DS 594, y para planificar el recambio.\n\nA ti también te sirve: si un equipo se daña y pides reposición, el registro muestra cuándo lo recibiste y cuánto uso tenía. Cuando firmes, revisa que lo anotado coincida con lo que realmente te entregaron y que el equipo esté en buen estado.\n\nEl EPP retirado tampoco desaparece sin dejar rastro. Se separa, se rotula, se registra el motivo y se dispone según el procedimiento interno, para que no vuelva a circular. Algunos equipos contaminados con productos químicos requieren una disposición especial que define la empresa.",
+          "icono": "scale",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P06",
+          "tipo": "ordenar",
+          "titulo": "De «está malo» a «llegó el nuevo»",
+          "consigna": "Ordena los pasos para retirar un EPP dañado y conseguir su reposición, desde que detectas el problema.",
+          "pasos": [
+            {
+              "id": "a",
+              "texto": "Detectas el defecto en la inspección y no usas el equipo."
+            },
+            {
+              "id": "b",
+              "texto": "Lo separas y lo rotulas «fuera de uso», con fecha y motivo."
+            },
+            {
+              "id": "c",
+              "texto": "Registras el defecto en la planilla o el formulario que defina la empresa."
+            },
+            {
+              "id": "d",
+              "texto": "Solicitas la reposición a tu jefatura por el canal definido."
+            },
+            {
+              "id": "e",
+              "texto": "Recibes el equipo nuevo, lo inspeccionas y firmas el registro de entrega."
+            },
+            {
+              "id": "f",
+              "texto": "El equipo retirado se dispone según el procedimiento, para que no vuelva a circular."
+            }
+          ],
+          "orden": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "alternativas_validas": [
+            [
+              "a",
+              "b",
+              "d",
+              "c",
+              "e",
+              "f"
+            ],
+            [
+              "a",
+              "b",
+              "c",
+              "d",
+              "f",
+              "e"
+            ],
+            [
+              "a",
+              "b",
+              "d",
+              "c",
+              "f",
+              "e"
+            ]
+          ],
+          "feedback_ok": "Así fluye. Lo primero es no usar el equipo y sacarlo de circulación con un rótulo; después se registra y se pide la reposición, en el orden que defina tu empresa. El equipo nuevo se inspecciona antes de firmar, porque también puede venir con defectos.",
+          "feedback_error": "Revisa la lógica: antes de cualquier trámite, el equipo dañado se deja de usar y se separa con un rótulo, para que nadie lo tome mientras tanto. El registro y la solicitud vienen después. Y el equipo nuevo se inspecciona al recibirlo, antes de firmar.",
+          "texto": "Del momento en que encuentras el defecto al momento en que tienes un equipo nuevo hay varios pasos. Ordénalos.",
+          "voz": "Este flujo parece obvio, pero en muchas bodegas se corta a la mitad. El equipo se deja de usar, pero nadie lo rotula. O se pide la reposición de palabra y nadie lo registra. Fíjate en el paso de recibir el equipo nuevo: también se inspecciona. Un EPP recién sacado de la caja puede venir con un defecto de fábrica, o puede no ser el modelo o la talla que pediste.",
+          "icono": "route",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P07",
+          "tipo": "quiz",
+          "titulo": "¿Quién paga, quién pide, quién decide?",
+          "preguntas": [
+            {
+              "enunciado": "Los guantes de Camila se rompieron trabajando. Alguien le comenta: «Los nuevos te los van a descontar de la liquidación». ¿Qué es lo correcto?",
+              "opciones": [
+                {
+                  "texto": "Aceptarlo, porque se rompieron mientras ella los usaba.",
+                  "correcta": false,
+                  "feedback": "El desgaste y el daño por el trabajo son parte normal de la vida del EPP. La empresa debe proporcionarlo sin costo."
+                },
+                {
+                  "texto": "Pedir la reposición: la empresa debe entregar el EPP sin costo para la trabajadora. Si hay dudas, se plantea con respeto a la jefatura o a Patricia.",
+                  "correcta": true,
+                  "feedback": "Así es. El DS 594 establece que el empleador proporciona el EPP sin costo. Reponerlo cuando se daña en el trabajo es parte de esa obligación."
+                },
+                {
+                  "texto": "Comprar unos guantes por su cuenta en la ferretería para no complicarse.",
+                  "correcta": false,
+                  "feedback": "Los que compre pueden no ser los adecuados para el riesgo ni estar certificados. Y la obligación de entregarlos es de la empresa."
+                }
+              ]
+            },
+            {
+              "enunciado": "El casco de Héctor no tiene daños visibles, pero la ficha del fabricante indica que ya cumplió su vida útil declarada. ¿Qué corresponde?",
+              "opciones": [
+                {
+                  "texto": "Seguir usándolo mientras no se vea dañado.",
+                  "correcta": false,
+                  "feedback": "La vida útil declarada considera una degradación que no siempre se ve. Que se vea bien no basta."
+                },
+                {
+                  "texto": "Pintarlo para que se vea como nuevo.",
+                  "correcta": false,
+                  "feedback": "La pintura no le devuelve sus propiedades y puede dañar el plástico."
+                },
+                {
+                  "texto": "Retirarlo y pedir reposición: el criterio del fabricante cuenta, aunque el casco se vea bien.",
+                  "correcta": true,
+                  "feedback": "Correcto. El plazo del fabricante es un máximo; la inspección puede adelantarlo, pero nunca alargarlo."
+                }
+              ]
+            },
+            {
+              "enunciado": "Recibes unos lentes de seguridad nuevos. ¿Qué debería quedar anotado en el registro de entrega?",
+              "opciones": [
+                {
+                  "texto": "Solo tu firma, para demostrar que los recibiste.",
+                  "correcta": false,
+                  "feedback": "Una firma sola no dice qué recibiste ni cuándo. Sin esos datos, no sirve para planificar el recambio."
+                },
+                {
+                  "texto": "La fecha, el equipo y su modelo, la cantidad, a quién se entrega y si recibiste la instrucción de uso, con tu firma.",
+                  "correcta": true,
+                  "feedback": "Así el registro sirve para todos: la empresa planifica, y tú tienes constancia de lo que recibiste."
+                },
+                {
+                  "texto": "Nada, si los lentes vienen en su bolsa sellada.",
+                  "correcta": false,
+                  "feedback": "El envase sellado no reemplaza el registro. La entrega se anota igual."
+                }
+              ]
+            },
+            {
+              "enunciado": "Perdiste tus lentes de seguridad en el andén. ¿Qué haces?",
+              "opciones": [
+                {
+                  "texto": "Trabajar sin lentes hasta que aparezcan.",
+                  "correcta": false,
+                  "feedback": "Mientras tanto quedas expuesto. Perder un EPP no te obliga a trabajar sin él."
+                },
+                {
+                  "texto": "Avisar al tiro a tu jefatura y pedir reposición antes de hacer tareas que los requieran.",
+                  "correcta": true,
+                  "feedback": "Avisar rápido permite reponerlos y que no hagas la tarea expuesto. El procedimiento interno dirá cómo se gestiona la pérdida."
+                },
+                {
+                  "texto": "Usar los lentes de sol que tienes en la mochila.",
+                  "correcta": false,
+                  "feedback": "Los lentes de sol no están hechos para resistir impactos ni salpicaduras. No son EPP."
+                }
+              ]
+            }
+          ],
+          "texto": "Cuatro situaciones cotidianas sobre reposición. Elige la respuesta y lee el porqué.",
+          "voz": "Estas preguntas tocan temas que a veces da vergüenza plantear, como quién paga o qué pasa si perdiste algo. Responde pensando en lo que dice la norma y en lo que te protege, no en lo que es más cómodo decir en el momento. Si en tu trabajo alguna de estas situaciones se resuelve distinto, anótala: puede ser una buena pregunta para tu jefatura o para el Comité Paritario.",
+          "icono": "circle-help",
+          "hablante": "narrador",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M05-L03-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevarte de esta lección",
+          "ideas": [
+            "No hay una vida útil universal: manda el fabricante, el procedimiento interno y lo que muestre la inspección.",
+            "El equipo retirado se separa, se rotula y se registra; la reposición se pide con datos.",
+            "La empresa entrega y repone el EPP sin costo; el registro de entrega le sirve a ella y a ti."
+          ],
+          "pregunta": "En tu trabajo, ¿sabes a quién le pides la reposición de un EPP y dónde queda registrado? Si no lo sabes, ¿a quién se lo preguntarías?",
+          "texto": "Tres ideas para cerrar la lección y una pregunta para tu propio trabajo.",
+          "voz": "Rodrigo se quedó sin su número único, pero con algo mejor: un sistema que le dice cuándo comprar y por qué. Para ti, lo importante es saber cómo funciona ese sistema en tu trabajo. A quién se le pide, cómo se registra, qué pasa con el equipo retirado. Si hoy no lo sabes, no es culpa tuya, pero sí es algo que vale la pena preguntar. Después de esta lección viene el laboratorio, donde vas a hacer la revisión completa del armario.",
+          "icono": "lightbulb",
+          "hablante": "narrador",
+          "practica_formativa": false
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-EPP-M05-LAB",
+    "titulo": "Laboratorio: la revisión del lunes en la bodega",
+    "resultado": "Ante un armario de EPP con equipos en distintos estados y una ficha de práctica, inspeccionar cada equipo, registrar sus defectos y redactar una solicitud de reposición accionable que considere la tarea programada.",
+    "minutos": 50,
+    "fuentes": [
+      "EPP-FABRICANTE",
+      "EPP-ISP-RESP",
+      "EPP-ISP-AUD",
+      "SST-DS594"
+    ],
+    "pantallas": [
+      {
+        "id": "SEG360-EPP-M05-LAB-P01",
+        "tipo": "apertura",
+        "titulo": "El armario no se revisa solo",
+        "escena": "Lunes, 8:00. Antes de la limpieza grande del jueves, Marisol les pide a Camila y Héctor la revisión mensual del armario de EPP de la bodega. Patricia dejó la ficha de práctica de los respiradores, la planilla de registro y una nota pegada en la puerta: «Revisen, registren y me mandan la solicitud. Lo que no esté claro, a consulta».",
+        "pregunta": "¿Qué tiene que tener una revisión para que sirva de verdad?",
+        "texto": "En este laboratorio revisas los equipos del armario, registras lo que encuentras y redactas la solicitud de reposición.\n\nTómate tu tiempo: esta vez no hay camión esperando.",
+        "voz": "Hasta ahora practicaste cada cosa por separado. Aquí las juntas, como en una mañana real de trabajo. Vas a leer una ficha, revisar varios equipos, decidir qué se usa, qué se retira y qué se consulta, y al final escribir la solicitud que le llegará a Marisol. Hay un detalle que importa: el jueves viene una limpieza profunda con desengrasante. Lo que encuentres hoy define con qué equipo se va a trabajar ese día.",
+        "imagen": "SEG360-IMG057",
+        "icono": "warehouse",
+        "hablante": "narrador",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P02",
+        "tipo": "explicacion",
+        "titulo": "Cómo vamos a trabajar",
+        "texto": "Vas a hacer lo mismo que Camila y Héctor: leer la ficha, inspeccionar, decidir y registrar.\n\nPor cada equipo anota **qué viste, dónde, qué decides y por qué**. Una revisión que dice «fono malo» no le sirve a nadie. Una que dice «fono 3: almohadilla izquierda agrietada, sin sello; retirado y rotulado» permite reponer al tiro.",
+        "bloques": [
+          {
+            "icono": "search",
+            "titulo": "Inspecciona",
+            "texto": "Con buena luz, por dentro y por fuera, comparando con la ficha."
+          },
+          {
+            "icono": "pen-line",
+            "titulo": "Registra",
+            "texto": "Equipo y número o ubicación, defecto, decisión y fecha."
+          },
+          {
+            "icono": "send",
+            "titulo": "Solicita",
+            "texto": "Qué falta, cuánto, para cuándo y qué se hace mientras tanto."
+          }
+        ],
+        "nota": {
+          "tipo": "ojo",
+          "texto": "No se repara ni se bota nada. Lo dañado se separa y se rotula; lo dudoso se consulta."
+        },
+        "voz": "Una revisión mensual es valiosa solo si alguien puede actuar con lo que se anotó. Por eso les pedí a Camila y a Héctor que escriban como si la persona que lee no hubiera estado ahí. Qué equipo, qué le pasa, qué decidieron. Y algo que siempre recalco: lo que no se puede resolver hoy no se deja en blanco. Se anota como consulta, con la pregunta concreta. Una buena pregunta escrita vale más que una suposición.",
+        "hablante": "patricia",
+        "icono": "clipboard-list",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P03",
+        "tipo": "ficha",
+        "titulo": "La ficha del respirador de media cara",
+        "ficha": {
+          "titulo": "Ficha de práctica · Respirador de media cara R-200: inspección y cuidado",
+          "subtitulo": "Pieza facial reutilizable con filtros o cartuchos de la serie R · Producto ficticio con fines de aprendizaje",
+          "campos": [
+            {
+              "etiqueta": "Tipo",
+              "valor": "Pieza facial de media cara, reutilizable, con dos filtros intercambiables."
+            },
+            {
+              "etiqueta": "Tallas",
+              "valor": "S, M y L. La talla se define con prueba de ajuste, no por apariencia."
+            },
+            {
+              "etiqueta": "Filtros compatibles",
+              "valor": "Solo filtros y cartuchos de la serie R del mismo fabricante. El tipo depende del contaminante: confírmalo con la prevencionista."
+            },
+            {
+              "etiqueta": "Inspección antes de cada uso",
+              "valor": "Pieza facial y sello sin grietas, deformaciones ni rigidez; válvulas de inhalación y exhalación presentes, limpias y sin deformar; arnés y hebillas en buen estado; filtros bien montados."
+            },
+            {
+              "etiqueta": "Verificación de sello",
+              "valor": "Cada vez que te lo pongas, haz la verificación de presión positiva y negativa que indica el folleto. No reemplaza la prueba de ajuste."
+            },
+            {
+              "etiqueta": "Recambio de filtros",
+              "valor": "Según el programa de cambio que defina la empresa para el contaminante y las condiciones de uso. De inmediato si están dañados o mojados, si cuesta respirar o si percibes olor o sabor del contaminante. Anotar la fecha de instalación."
+            },
+            {
+              "etiqueta": "Limpieza",
+              "valor": "Después de cada uso, sin filtros: agua tibia y jabón suave; enjuagar y secar al aire. No usar solventes."
+            },
+            {
+              "etiqueta": "Almacenamiento",
+              "valor": "Limpio y seco, en bolsa o contenedor cerrado, protegido del sol, del calor, del polvo y de productos químicos, sin aplastar la pieza facial."
+            },
+            {
+              "etiqueta": "Repuestos",
+              "valor": "Válvulas, arnés y filtros solo originales de este fabricante. No mezclar piezas de otras marcas."
+            },
+            {
+              "etiqueta": "Vida útil",
+              "valor": "Depende de las condiciones de uso, mantención y almacenamiento. Retirar si una pieza sin repuesto está dañada."
+            }
+          ],
+          "advertencias": [
+            "No usar en atmósferas con deficiencia de oxígeno ni en espacios confinados.",
+            "No usar si el vello facial u otro elemento interfiere con el sello.",
+            "Si percibes olor, mareo o irritación, sal de la zona y avisa.",
+            "Ficha de práctica para el curso: en tu trabajo, usa siempre la ficha y el folleto del fabricante de tu equipo."
+          ]
+        },
+        "preguntas": [
+          {
+            "enunciado": "Uno de los respiradores tiene un filtro original y otro de una marca distinta que «calza igual». Según la ficha, ¿qué corresponde?",
+            "opciones": [
+              {
+                "texto": "Usarlo, si el filtro calza firme.",
+                "correcta": false,
+                "feedback": "Que calce no significa que selle ni que sea adecuado para el contaminante. La ficha es clara: solo filtros de este fabricante para este modelo."
+              },
+              {
+                "texto": "No usarlo hasta reponer el filtro con uno original y compatible, y registrarlo.",
+                "correcta": true,
+                "feedback": "Así es. La ficha pide repuestos originales del mismo fabricante. Se registra para que la reposición llegue."
+              },
+              {
+                "texto": "Sacar el filtro distinto y usarlo con un solo filtro.",
+                "correcta": false,
+                "feedback": "Sin uno de los filtros, el aire entra sin filtrar por ese lado. Nunca se usa así."
+              }
+            ]
+          },
+          {
+            "enunciado": "La ficha no dice cada cuántas horas se cambian los filtros. ¿Por qué?",
+            "opciones": [
+              {
+                "texto": "Porque los filtros duran indefinidamente si no se mojan.",
+                "correcta": false,
+                "feedback": "Los filtros se saturan o se agotan con el uso. Su duración depende de varias condiciones."
+              },
+              {
+                "texto": "Porque depende del contaminante, de su concentración y del tiempo de uso; el programa lo define la empresa con la información del fabricante.",
+                "correcta": true,
+                "feedback": "Correcto. Por eso la ficha remite al programa de cambio de la empresa y pide anotar la fecha de instalación."
+              },
+              {
+                "texto": "Porque se cambian solo cuando se siente olor.",
+                "correcta": false,
+                "feedback": "El olor es una señal de alerta para salir de la zona, pero no es el criterio de cambio: hay contaminantes que casi no se huelen."
+              }
+            ]
+          },
+          {
+            "enunciado": "¿Cómo dice la ficha que se guarda el respirador?",
+            "opciones": [
+              {
+                "texto": "Colgado de un gancho junto a los productos de aseo, para que se ventile.",
+                "correcta": false,
+                "feedback": "Junto a los productos queda expuesto a sus vapores. La ficha pide protegerlo de los químicos."
+              },
+              {
+                "texto": "En el bolsillo, para tenerlo siempre a mano.",
+                "correcta": false,
+                "feedback": "El bolsillo aplasta la pieza facial y la ensucia. Es justo lo que la ficha pide evitar."
+              },
+              {
+                "texto": "Limpio y seco, en bolsa o contenedor cerrado, protegido de sol, calor, polvo y químicos, sin aplastar.",
+                "correcta": true,
+                "feedback": "Así queda listo para el próximo uso y el sello conserva su forma."
+              }
+            ]
+          }
+        ],
+        "texto": "Antes de revisar los respiradores, lee la ficha de práctica que dejó Patricia. Te va a servir de referencia para la inspección.",
+        "voz": "Esta ficha es tu vara de medir. Léela completa, incluidas las advertencias, que es donde suelen estar las cosas más importantes. Pon atención en lo que dice y también en lo que no dice. No vas a encontrar un número mágico de horas para los filtros, y no es un olvido: es porque ese número depende de dónde y cómo se usa el respirador.",
+        "icono": "file-text",
+        "hablante": "narrador",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P04",
+        "tipo": "inspeccion",
+        "titulo": "Respirador número 2 del armario",
+        "objeto": "Respirador de media cara número 2, con filtros montados, tomado del armario de EPP",
+        "modelo": "respirador",
+        "consigna": "Inspecciona el respirador usando la ficha como referencia. Decide para cada observación si es aceptable, si se retira o si hay que consultar.",
+        "observaciones": [
+          {
+            "texto": "El sello de la pieza facial tiene un pliegue que no se recupera.",
+            "estado": "retirar",
+            "feedback": "Un sello con deformación permanente no se adapta a la cara: el aire entra por el pliegue sin pasar por los filtros. Según la ficha, se retira."
+          },
+          {
+            "texto": "Falta la tapa de la válvula de exhalación.",
+            "estado": "retirar",
+            "feedback": "Sin la válvula completa, puede entrar aire sin filtrar al inhalar. Es un repuesto original: el respirador queda fuera de uso hasta reponerla."
+          },
+          {
+            "texto": "Uno de los filtros es de otra marca y está sujeto con cinta de embalaje.",
+            "estado": "retirar",
+            "feedback": "Filtro no compatible y una unión improvisada con cinta: dos razones para no usarlo. Se separa, se rotula y se piden filtros originales."
+          },
+          {
+            "texto": "Los filtros no tienen anotada la fecha de instalación y nadie sabe cuánto uso tienen.",
+            "estado": "consultar",
+            "feedback": "Sin ese dato no puedes saber si siguen dentro del programa de cambio. Consulta a Patricia y deja anotado que, desde ahora, la fecha se registra."
+          },
+          {
+            "texto": "El elástico del arnés está estirado: aun en la posición más ajustada, queda suelto.",
+            "estado": "retirar",
+            "feedback": "Sin tensión, el respirador no se sostiene contra la cara y el sello se pierde al moverte. El arnés tiene repuesto original: fuera de uso hasta cambiarlo."
+          },
+          {
+            "texto": "La pieza facial está limpia, guardada en su bolsa cerrada y con una etiqueta con el nombre de quien lo usa.",
+            "estado": "aceptable",
+            "feedback": "Esto está bien: limpio, protegido y asignado a una persona. Lo que falla en este respirador son otras piezas, no su guarda."
+          },
+          {
+            "texto": "Las válvulas de inhalación están presentes, planas y sin suciedad.",
+            "estado": "aceptable",
+            "feedback": "Las válvulas de inhalación están en buen estado. Bien que lo hayas revisado aunque estén detrás de los filtros."
+          }
+        ],
+        "texto": "Este es el respirador que más se usa en las limpiezas. Revísalo pieza por pieza.",
+        "voz": "Este respirador tiene un poco de todo, y eso es bastante realista. Partes que están impecables y partes que lo dejan fuera de uso. No te quedes con la primera falla que encuentres: en una revisión de verdad se anota todo, porque cada defecto es un repuesto distinto que hay que pedir. Y fíjate en la diferencia entre lo que ves y lo que no sabes. Una fecha que falta no es un defecto del equipo, pero sí es un hueco que hay que llenar.",
+        "icono": "wind",
+        "hablante": "narrador",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P05",
+        "tipo": "inspeccion",
+        "titulo": "Los fonos del gancho",
+        "objeto": "Cuatro fonos colgados del gancho del armario de EPP",
+        "modelo": "fono",
+        "consigna": "Revisa los fonos del gancho. Cada observación corresponde a uno de ellos. Decide para cada una.",
+        "observaciones": [
+          {
+            "texto": "Fono 1: las almohadillas están duras y agrietadas.",
+            "estado": "retirar",
+            "feedback": "Endurecidas y agrietadas ya no se adaptan al contorno de la cabeza y el sello se pierde. Suelen tener repuesto: fuera de uso hasta cambiarlas."
+          },
+          {
+            "texto": "Fono 2: la diadema fue abierta a la fuerza «para que no apriete».",
+            "estado": "retirar",
+            "feedback": "Abrir la diadema le quita la presión que mantiene el sello. Si un fono aprieta demasiado, es un dato para buscar otro modelo, no un motivo para deformarlo."
+          },
+          {
+            "texto": "Fono 3: una copa tiene un orificio hecho para pasar el cable de unos audífonos.",
+            "estado": "retirar",
+            "feedback": "Por ese orificio entra el ruido, y el equipo ya no es el que se certificó. Se retira."
+          },
+          {
+            "texto": "Fono 4: el marcado de la copa se lee bien y coincide con el modelo del registro.",
+            "estado": "aceptable",
+            "feedback": "Bien: sabes qué modelo es y puedes buscar su ficha. Es un buen punto de partida."
+          },
+          {
+            "texto": "Fono 4: las copas tienen polvo por fuera, sin daños.",
+            "estado": "aceptable",
+            "feedback": "El polvo se limpia con un paño húmedo. No afecta la protección."
+          },
+          {
+            "texto": "Fono 4: a una copa le falta la espuma interior y no sabes si es un repuesto del fabricante.",
+            "estado": "consultar",
+            "feedback": "Algunos modelos traen una espuma interior que forma parte de la atenuación. Sin saber si falta una pieza o si el modelo es así, consulta antes de usarlo."
+          }
+        ],
+        "texto": "Cuatro fonos colgados del mismo gancho. Ninguno tiene dueño y todos se ven «más o menos».",
+        "voz": "Los fonos del gancho son de uso compartido, y eso tiene su historia. Como no son de nadie, nadie se hace cargo cuando algo se gasta. Y como el ruido no duele, se usan aunque estén malos. Fíjate en el fono dos: alguien lo abrió porque le apretaba. Esa molestia era información valiosa, y se perdió. Si un modelo aprieta tanto que la gente lo deforma, quizás hay que buscar otro. Eso se resuelve conversando, no doblando la diadema.",
+        "hablante": "patricia",
+        "icono": "ear",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P06",
+        "tipo": "inspeccion",
+        "titulo": "Guantes para el desengrasante",
+        "objeto": "Pares de guantes de nitrilo reutilizables, de caña media, destinados a la limpieza con desengrasante",
+        "modelo": "guante",
+        "consigna": "Revisa los guantes que se usarían el jueves con el desengrasante. Decide para cada observación.",
+        "observaciones": [
+          {
+            "texto": "Un guante tiene un corte pequeño entre el pulgar y el índice.",
+            "estado": "retirar",
+            "feedback": "Por un corte pequeño entra producto, y queda atrapado contra la piel: puede ser peor que no usar guante. Se retira el par."
+          },
+          {
+            "texto": "En la palma de otro par, el recubrimiento se ve hinchado y pegajoso.",
+            "estado": "retirar",
+            "feedback": "Hinchazón, ablandamiento o pegajosidad indican que el producto está atacando el material. Además, es una señal de que puede no ser el guante adecuado para ese producto: avísalo."
+          },
+          {
+            "texto": "A un par le cortaron el puño «para que entre más aire».",
+            "estado": "retirar",
+            "feedback": "Con el puño cortado, el producto puede escurrir hacia la muñeca y entrar al guante. Es una modificación que anula parte de la protección."
+          },
+          {
+            "texto": "Un par está guardado mojado por dentro, en una bolsa cerrada.",
+            "estado": "consultar",
+            "feedback": "Esa humedad puede ser sudor o producto. Si fuera producto, ese guante ya no protege. Antes de usarlo se aclara, y se corrige la forma de secarlos."
+          },
+          {
+            "texto": "Un par está entero, sin cambio de color ni de textura, y no muestra fugas al revisarlo como indica el fabricante.",
+            "estado": "aceptable",
+            "feedback": "Este par está en condiciones. Revisarlo como indica el fabricante te da más confianza que solo mirarlo."
+          },
+          {
+            "texto": "El único par disponible en buen estado es talla L, y Camila usa S.",
+            "estado": "consultar",
+            "feedback": "No es un defecto del guante, pero uno muy grande baja la destreza, se engancha y puede dejar entrar producto por el puño. Pide la talla correcta: es parte de entregar un EPP adecuado."
+          },
+          {
+            "texto": "Un guante tiene un leve cambio de color en la punta de los dedos.",
+            "estado": "consultar",
+            "feedback": "Puede ser solo una mancha o el primer signo de degradación. Compara con la ficha del fabricante y consulta antes de usarlo."
+          }
+        ],
+        "texto": "El jueves se trabaja con desengrasante concentrado. Revisa los guantes con eso en mente.",
+        "voz": "Con los guantes químicos hay que mirar dos cosas a la vez: si el guante está dañado y si el guante es el que corresponde. Un guante que se hincha o se pone pegajoso está diciéndote ambas cosas. Y pon atención a la talla. Un guante grande no es un detalle de comodidad: cambia cómo tomas las cosas y deja espacio para que entre el producto. Que la empresa tenga la talla de cada persona es parte de entregar bien el EPP.",
+        "icono": "hand",
+        "hablante": "narrador",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P07",
+        "tipo": "clasificar",
+        "titulo": "La planilla del armario",
+        "consigna": "Estos son otros equipos que encontraron Camila y Héctor en el armario. Ubica cada uno en la columna de la planilla que corresponde.",
+        "categorias": [
+          {
+            "id": "usar",
+            "nombre": "Se puede usar",
+            "icono": "badge-check",
+            "descripcion": "En buen estado y con la información necesaria."
+          },
+          {
+            "id": "retirar",
+            "nombre": "Retirar y pedir reposición",
+            "icono": "trash-2",
+            "descripcion": "Tiene un defecto que compromete la protección o no se debe reutilizar."
+          },
+          {
+            "id": "consultar",
+            "nombre": "Consultar antes de usar",
+            "icono": "circle-help",
+            "descripcion": "Falta información o hay una duda razonable."
+          }
+        ],
+        "elementos": [
+          {
+            "texto": "Caja de tapones desechables sellada, dentro de la fecha que indica el envase.",
+            "categoria": "usar",
+            "feedback": "Sellados y vigentes, se pueden usar. Recuerda que los desechables se botan después de cada uso."
+          },
+          {
+            "texto": "Antiparras con el elástico cortado y amarrado con un nudo.",
+            "categoria": "retirar",
+            "feedback": "El nudo cambia la tensión y puede soltarse en plena tarea. El elástico se repone con el repuesto del fabricante o se cambian las antiparras."
+          },
+          {
+            "texto": "Casco con la carcasa sana, entregado a alguien que ya no trabaja en Pehuén; nadie sabe si se golpeó.",
+            "categoria": "consultar",
+            "feedback": "Se ve bien, pero no conoces su historia ni su fecha de entrega. Antes de reasignarlo, se revisa con el registro y el criterio del fabricante."
+          },
+          {
+            "texto": "Chaleco reflectante con las cintas despegadas y opacas.",
+            "categoria": "retirar",
+            "feedback": "Sin cintas que reflejen, el chaleco no cumple su función con poca luz o de noche en el andén."
+          },
+          {
+            "texto": "Lentes de seguridad nuevos, en su bolsa original y con el marcado legible.",
+            "categoria": "usar",
+            "feedback": "Nuevos y con marcado: se pueden usar, después de la inspección de siempre."
+          },
+          {
+            "texto": "Zapatos de seguridad con la suela despegada en la punta.",
+            "categoria": "retirar",
+            "feedback": "Una suela despegada es un tropiezo seguro y deja la puntera sin soporte. Se piden zapatos nuevos."
+          },
+          {
+            "texto": "Protector facial con el visor rayado en la parte de abajo, fuera de la línea de visión.",
+            "categoria": "consultar",
+            "feedback": "Depende de cuánto afecte la visión y de lo que diga el fabricante. Que lo vea alguien con criterio antes de usarlo."
+          },
+          {
+            "texto": "Tapones reutilizables sucios, sueltos en el cajón, sin su estuche.",
+            "categoria": "retirar",
+            "feedback": "Algo que va dentro del oído no puede estar sucio y sin control. Se retiran y se reponen, y se corrige la forma de guardarlos."
+          },
+          {
+            "texto": "Guantes de nitrilo desechables usados, devueltos a su caja.",
+            "categoria": "retirar",
+            "feedback": "Los desechables son de un solo uso. Al devolverlos a la caja se mezclan con los nuevos y se pierde el control. Se botan según el procedimiento."
+          }
+        ],
+        "texto": "Además de los respiradores, fonos y guantes, en el armario había de todo. Completa la planilla.",
+        "voz": "Esto es lo que pasa en cualquier armario de EPP que no se revisa seguido: hay equipo nuevo, equipo que ya cumplió y equipo que nadie sabe de dónde salió. Fíjate en el casco de la persona que se fue. Muchos lo reasignarían sin pensarlo, porque se ve bien. Pero un equipo sin historia es un equipo sin información, y eso es justamente lo que se consulta.",
+        "icono": "clipboard-list",
+        "hablante": "narrador",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P08",
+        "tipo": "construir",
+        "titulo": "Registro y solicitud de reposición",
+        "consigna": "Con lo que encontraste, completa el registro de defectos y redacta la solicitud de reposición para Marisol, con copia a Patricia.",
+        "contexto": "Hallazgos principales de la revisión: respirador número 2 con sello deformado, válvula de exhalación sin tapa, un filtro de otra marca sujeto con cinta y arnés estirado; filtros sin fecha de instalación. Fono 1 con almohadillas agrietadas, fono 2 con diadema forzada, fono 3 perforado. Guantes de nitrilo: un par con corte, uno con recubrimiento hinchado, uno con el puño cortado; solo hay talla L y Camila usa S. Antiparras con elástico amarrado. Chaleco con cintas despegadas. El jueves está programada la limpieza profunda con desengrasante concentrado.",
+        "campos": [
+          {
+            "id": "registro",
+            "etiqueta": "Registro de defectos",
+            "ayuda": "Por cada equipo: cuál es, qué defecto tiene, qué decidiste (retirar o consultar) y qué hiciste con él.",
+            "tipo": "texto_largo",
+            "min_palabras": 40
+          },
+          {
+            "id": "solicitud",
+            "etiqueta": "Solicitud de reposición",
+            "ayuda": "Qué necesitas, cuántos, para cuándo y por qué. Escríbela para que Marisol pueda actuar sin tener que preguntarte nada más.",
+            "tipo": "texto_largo",
+            "min_palabras": 60
+          },
+          {
+            "id": "mientras",
+            "etiqueta": "Mientras llega la reposición",
+            "ayuda": "¿Qué tareas no deberían hacerse con los equipos disponibles hasta que llegue lo nuevo?",
+            "tipo": "texto",
+            "min_palabras": 15
+          },
+          {
+            "id": "consulta",
+            "etiqueta": "Consultas para Patricia",
+            "ayuda": "¿Qué dudas le planteas, de forma concreta?",
+            "tipo": "texto",
+            "min_palabras": 10
+          }
+        ],
+        "criterios": [
+          {
+            "criterio": "Precisión del registro",
+            "niveles": [
+              "Menciona equipos «malos» sin decir cuáles ni qué tienen.",
+              "Identifica algunos equipos y defectos, con omisiones importantes.",
+              "Identifica la mayoría de los equipos con su defecto y su decisión.",
+              "Cada equipo aparece identificado, con defecto concreto, decisión y lo que se hizo con él (separado y rotulado)."
+            ]
+          },
+          {
+            "criterio": "Decisiones justificadas",
+            "niveles": [
+              "Las decisiones no se explican o contradicen la ficha.",
+              "Algunas decisiones se justifican, otras parecen al azar.",
+              "Las decisiones son coherentes con la ficha y la inspección.",
+              "Distingue con claridad lo que se retira de lo que se consulta, y explica por qué en cada caso."
+            ]
+          },
+          {
+            "criterio": "Solicitud accionable",
+            "niveles": [
+              "Pide «comprar EPP» sin detalle.",
+              "Indica qué falta, pero sin cantidades, tallas o plazo.",
+              "Indica qué, cuántos y para cuándo.",
+              "Indica qué, cuántos, tallas o modelos compatibles, plazo ligado a la tarea del jueves y por qué es necesario."
+            ]
+          },
+          {
+            "criterio": "Continuidad segura",
+            "niveles": [
+              "Propone trabajar el jueves con lo que hay.",
+              "Menciona el riesgo, pero no dice qué no se debe hacer.",
+              "Indica qué tareas no se hacen hasta tener el EPP adecuado.",
+              "Indica qué no se hace, quién decide la alternativa y qué consultas quedan abiertas para Patricia."
+            ]
+          }
+        ],
+        "ejemplo_solido": "Registro (lunes 8:00–9:30, armario bodega): Respirador 2: sello con pliegue permanente, válvula de exhalación sin tapa, filtro izquierdo de otra marca con cinta, arnés sin tensión. Retirado, rotulado «fuera de uso». Filtros de los demás respiradores sin fecha de instalación: consulta. Fono 1 almohadillas agrietadas, fono 2 diadema deformada, fono 3 copa perforada: retirados y rotulados. Guantes nitrilo: par con corte, par con palma hinchada, par con puño cortado: retirados. Antiparras con elástico amarrado y chaleco sin cintas: retirados.\n\nSolicitud: Marisol, para la limpieza del jueves necesitamos: 1 respirador de media cara del mismo modelo (o los repuestos originales: válvula, arnés y 2 filtros), 3 fonos o almohadillas de repuesto según el modelo, 4 pares de guantes de nitrilo reutilizables (2 talla S para Camila, 2 talla M), 1 par de antiparras y 1 chaleco reflectante. Idealmente el miércoles, para inspeccionarlos antes.\n\nMientras: no hacer la limpieza con desengrasante concentrado ni entrar a la zona de la prensa sin respirador, guantes y fono en buen estado. Si no llegan, que Marisol decida cómo reprogramar.\n\nConsultas a Patricia: ¿cuál es el programa de cambio de filtros para el desengrasante? ¿El guante de nitrilo que tenemos es el adecuado, considerando que uno se hinchó?",
+        "ejemplo_debil": "«Marisol, hay varias cosas malas en el armario, hay que comprar fonos y guantes. Saludos.» Es mejorable porque no dice qué equipos fallaron ni por qué, no da cantidades, tallas ni plazo, no menciona el respirador, no dice qué se hizo con los equipos dañados y no plantea qué pasa con la limpieza del jueves si no llega la reposición.",
+        "texto": "Es la parte que transforma la revisión en una solución. Escribe tu registro y tu solicitud, y después compárala con los criterios.",
+        "voz": "Aquí escribes tú. Imagina que Marisol lee tu solicitud entre dos camiones, de pie en el andén. Tiene que entender en un minuto qué falta, cuánto y para cuándo, sin tener que buscarte para preguntar. Y piensa en el jueves: si la reposición no llega, ¿qué no debería hacerse? Esa línea es tan importante como la lista de compras, porque es la que evita que alguien limpie con un equipo que ya sabemos que no protege.",
+        "icono": "pen-line",
+        "practica_formativa": true,
+        "hablante": "narrador"
+      },
+      {
+        "id": "SEG360-EPP-M05-LAB-P09",
+        "tipo": "cierre_leccion",
+        "titulo": "Lo que deja la revisión del lunes",
+        "ideas": [
+          "Una revisión útil identifica cada equipo, su defecto concreto y la decisión tomada.",
+          "Lo dañado se separa y se rotula; lo dudoso se consulta con una pregunta concreta.",
+          "La solicitud de reposición dice qué, cuántos, para cuándo y qué no se hace mientras tanto."
+        ],
+        "pregunta": "Si tuvieras que revisar mañana el EPP de tu área, ¿qué te faltaría para hacerlo bien: la ficha, el registro, un lugar, tiempo o alguien a quién consultar?",
+        "texto": "Cierra el laboratorio con estas tres ideas y una pregunta sobre tu propio trabajo.",
+        "voz": "Lo que hiciste en este laboratorio es exactamente lo que necesita una bodega para que el EPP no falle el día que más importa. No hace falta ser especialista. Hace falta mirar con método, escribir con claridad y preguntar lo que no sabes. Antes de pasar al cierre del módulo, piensa en tu propio lugar de trabajo: qué te faltaría para hacer una revisión así, y a quién se lo pedirías.",
+        "icono": "lightbulb",
+        "hablante": "narrador",
+        "practica_formativa": false
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-EPP-M05-CIERRE",
+    "titulo": "Revisado, cuidado y repuesto a tiempo",
+    "texto": "Un EPP protege solo si llega en buen estado al momento de usarlo. Para eso se **revisa** antes de cada uso, se **cuida** entre turnos y se **repone** según el fabricante, el procedimiento y lo que muestre la inspección.\n\nNada de eso depende solo de ti: la empresa entrega el EPP sin costo, define el procedimiento y pone los lugares para guardarlo. Tu parte es mirar con método, no improvisar y avisar con datos.",
+    "voz": "Si miras atrás, este módulo fue sobre la vida del EPP cuando nadie le presta atención. Antes de ponérselo, en el casillero, en la camioneta, en el armario. Ahí es donde se gana o se pierde la protección. Te llevas una revisión de un minuto, una forma de guardar que no daña y un flujo para retirar y pedir reposición. Y una idea de fondo: cuando el sistema falla, la solución no es arreglarlo tú con cinta, sino contarlo para que se arregle de verdad.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Esta semana, antes de usar un EPP, haz la revisión completa: mirar, probar, comparar y decidir.",
+      "Identifica dónde se guarda el EPP en tu área y si lo protege del sol, del calor, de los químicos y del aplastamiento.",
+      "Averigua a quién se le pide la reposición en tu trabajo y dónde queda el registro de entrega."
+    ],
+    "siguiente": "En el último módulo de la ruta vas a juntarlo todo: cómo combinar varios EPP sin que uno anule al otro, qué hacer cuando el EPP incomoda, falla o no alcanza, y cómo plantearlo a la jefatura y al Comité Paritario."
+  },
+  "glosario": [
+    {
+      "termino": "Inspección previa al uso",
+      "definicion": "Revisión visual y de funcionamiento que hace la persona antes de cada uso de un EPP para decidir si se usa, se retira o se consulta."
+    },
+    {
+      "termino": "Retiro de servicio",
+      "definicion": "Decisión de dejar definitivamente fuera de uso un EPP porque está dañado, modificado o cumplió su vida útil. Se separa, se rotula y se registra."
+    },
+    {
+      "termino": "Fuera de uso",
+      "definicion": "Rótulo que identifica un EPP que no debe usarse, con fecha y motivo, para que nadie lo tome por error."
+    },
+    {
+      "termino": "Vida útil declarada",
+      "definicion": "Plazo máximo de uso que indica el fabricante para un modelo. No es una garantía: una inspección puede obligar a retirar el equipo antes."
+    },
+    {
+      "termino": "Registro de entrega",
+      "definicion": "Documento donde consta qué EPP se entregó, a quién, en qué fecha y en qué cantidad, con la firma de quien lo recibe."
+    },
+    {
+      "termino": "Reposición",
+      "definicion": "Entrega de un EPP nuevo o de un repuesto original para reemplazar uno dañado, gastado o perdido. La empresa lo entrega sin costo para la persona trabajadora."
+    },
+    {
+      "termino": "Programa de cambio de filtros",
+      "definicion": "Criterio que define la empresa, con información del fabricante, para cambiar los filtros de un respirador según el contaminante y las condiciones de uso."
+    },
+    {
+      "termino": "Contaminación cruzada",
+      "definicion": "Traspaso de suciedad o de un producto de un objeto a otro, por ejemplo al guardar EPP limpio junto a ropa sucia o a productos químicos."
+    },
+    {
+      "termino": "Repuesto original",
+      "definicion": "Pieza del mismo fabricante indicada para ese modelo de EPP, como válvulas, arnés, filtros, suspensión o almohadillas."
+    }
+  ],
+  "fuentes": [
+    "EPP-FABRICANTE",
+    "EPP-ISP-GUIAS",
+    "EPP-ISP-RESP",
+    "EPP-ISP-AUD",
+    "SST-DS594",
+    "SST-DS18"
+  ],
+  "recursos": [
+    "SEG360-REC09"
+  ],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG055",
+      "titulo": "Revisión del armario de EPP",
+      "uso": "Apertura del módulo y de la lección 1: muestra la revisión de EPP antes de usarlo como una tarea cotidiana de la bodega.",
+      "prompt": "Realistic editorial photograph inside a light warehouse of a mid-sized office and cleaning supplies distributor in Santiago, Chile. Two adult Chilean workers, a young woman in her twenties and a man in his fifties, both in work clothes and safety shoes, standing at a metal workbench next to an open grey storage cabinet with shelves of personal protective equipment: white hard hats, safety glasses in pouches, earmuffs hanging on hooks, boxes of gloves. The woman holds a hard hat upside down inspecting its inner suspension under good light; the man looks at a pair of safety glasses against the light. A clipboard with a blank checklist on the bench. Natural daylight from a high window, calm focused mood, people working not posing. Sober palette of bluish graphite and white with discreet teal green accents. No readable text, no logos, no brands.",
+      "alt": "Dos personas de la bodega revisan EPP junto a un armario abierto: ella mira la suspensión interior de un casco y él revisa unos lentes de seguridad a contraluz, con un checklist sobre la mesa."
+    },
+    {
+      "id": "SEG360-IMG056",
+      "titulo": "EPP bien guardado",
+      "uso": "Lección 2: ejemplo de almacenamiento correcto del EPP en casilleros, para contrastar con las malas prácticas descritas en la lección.",
+      "prompt": "Realistic editorial photograph of a row of grey metal personal lockers in the changing area of a light warehouse in Santiago, Chile. One locker is open, showing properly stored personal protective equipment: a clean half-face respirator inside a closed transparent resealable bag on an upper shelf, safety glasses in a soft pouch, earmuffs hanging from a hook with nothing on top, a white hard hat on its own shelf, away from any chemicals. An adult Chilean man in his fifties in work clothes is placing the bagged respirator on the shelf. Soft natural light, tidy but realistic, lived-in workplace. Sober palette of bluish graphite and white with discreet teal green accents. No readable text, no logos, no brands.",
+      "alt": "Casillero abierto con el EPP bien guardado: respirador limpio en una bolsa cerrada, lentes en su funda, fono colgado sin peso encima y casco en su repisa, lejos de productos químicos."
+    },
+    {
+      "id": "SEG360-IMG057",
+      "titulo": "EPP retirado y registro",
+      "uso": "Lección 3 y laboratorio: muestra el EPP retirado separado y rotulado, y el registro de reposición.",
+      "prompt": "Realistic editorial photograph at a workbench in a light warehouse in Santiago, Chile. An adult Chilean woman in her forties, a safety advisor in a teal work vest, and a woman in her thirties, warehouse supervisor, review a clipboard together. Beside them, a clearly separated plastic bin holds damaged personal protective equipment set aside: a faded hard hat with a cracked brim, earmuffs with cracked cushions, gloves with a visible cut, each with a blank paper tag tied to it. On the other side, new equipment still in sealed packaging. Natural light, serious but friendly working mood, people working not posing. Sober palette of bluish graphite and white with discreet teal green accents. No readable text, no logos, no brands.",
+      "alt": "La prevencionista y la jefa de bodega revisan un registro junto a una caja con EPP dañado separado y rotulado, y a su lado equipos nuevos aún en su envase."
+    }
+  ],
+  "minutos_desglose": {
+    "lecciones": 120,
+    "laboratorio": 50,
+    "intro_cierre_recursos": 10
+  }
+}

@@ -1,0 +1,676 @@
+{
+  "id": "SEG360-CASO-EPP-1",
+  "ruta": "EPP",
+  "modulo": "SEG360-EPP-M04",
+  "titulo": "Despacho con lluvia",
+  "subtitulo": "Cajas con fleje, bidones de desengrasante y un andén mojado: qué se cambia antes y qué cubre cada guante",
+  "resultado": "Ante una carga con varios riesgos residuales, pide la información que falta, propone controles previos al EPP, arma un conjunto de protección por tarea descartando la combinación que no calza y explica por qué el equipo que se ve más robusto no siempre es el adecuado.",
+  "protagonista": "camila",
+  "duracion_min": 25,
+  "presentacion": {
+    "texto": "Martes de junio, 16:10. Llueve fuerte en Quilicura y el camión de Ferretería Los Aromos sale a las 17:30 desde el andén 2.\n\nCamila tiene que cargar cajas de artículos de oficina, algunas con esquineros de **fleje metálico**, y un pallet de **bidones de desengrasante**. Va a usar la transpaleta, y la zona de carga queda a pocos metros de la **envolvedora**.\n\nTú decides por ella. No hay una sola respuesta, pero cada decisión cambia lo que pasa después.",
+    "voz": "Es una de esas tardes de invierno en que oscurece temprano y el andén se llena de agua. Camila lleva tres semanas en Pehuén y quiere hacerlo bien, aunque le cuesta preguntar. En este caso decides por ella. Fíjate en el orden de las cosas: qué se puede cambiar antes de pensar en guantes, qué información falta y cuándo un equipo que se ve más firme no es el que conviene.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG073"
+  },
+  "variables": [
+    {
+      "id": "riesgo",
+      "nombre": "Exposición al riesgo",
+      "inicial": 3,
+      "visible": true,
+      "icono": "triangle-alert",
+      "bueno": "bajo"
+    },
+    {
+      "id": "tiempo",
+      "nombre": "Minutos para que salga el camión",
+      "inicial": 80,
+      "visible": true,
+      "icono": "clock",
+      "bueno": "alto"
+    },
+    {
+      "id": "confianza",
+      "nombre": "Confianza del equipo",
+      "inicial": 2,
+      "visible": true,
+      "icono": "users",
+      "bueno": "alto"
+    }
+  ],
+  "evidencias": [
+    {
+      "id": "e_hoja_carga",
+      "titulo": "Hoja de carga · Ferretería Los Aromos",
+      "icono": "clipboard-list",
+      "inicial": true,
+      "contenido": "Cliente: Ferretería Los Aromos\nSalida: andén 2, 17:30\nCarga:\n• 24 cajas de artículos de oficina (8 con esquineros de fleje metálico)\n• 1 pallet con 12 bidones de 10 litros de desengrasante alcalino DG-40\nMedio: transpaleta manual\nObservación: la zona 3 queda junto a la envolvedora de pallets"
+    },
+    {
+      "id": "e_ficha_a",
+      "titulo": "Ficha de práctica · Guante A, nitrilo de puño largo",
+      "icono": "hand",
+      "inicial": false,
+      "contenido": "Ficha de práctica\nUso previsto: manipulación de productos de aseo indicados en la tabla del fabricante.\nQuímicos: protege frente a los productos que figuran en esa tabla y por un tiempo limitado. La resistencia cambia según el químico: revisa la hoja de datos del producto.\nCorte: resistencia baja. Un borde metálico lo puede rajar.\nDestreza: alta. Permite tomar objetos chicos y manipular film.\nCon líquidos: no absorbe. Agarre en mojado: regular.\nFrío: no aísla.\nAdvertencias: cámbialo si se raja, se hincha o se pone pegajoso. No lo uses para manipular bordes cortantes."
+    },
+    {
+      "id": "e_ficha_b",
+      "titulo": "Ficha de práctica · Guante B, cuero anticorte con forro",
+      "icono": "hand",
+      "inicial": false,
+      "contenido": "Ficha de práctica\nUso previsto: manipulación en seco de materiales con bordes cortantes, como fleje o planchas.\nCorte: resistencia alta en palma y dedos.\nQuímicos: no protege. El cuero absorbe líquidos y puede mantener el producto contra la piel.\nDestreza: baja. Cuesta tomar objetos chicos, etiquetas o el borde del film.\nCon líquidos: absorbe agua; mojado se pone pesado, pierde agarre y deja de abrigar.\nAdvertencias: no lo uses cerca de máquinas con partes que giran o rodillos donde pueda quedar atrapado. Retíralo si está empapado o contaminado con un producto químico."
+    },
+    {
+      "id": "e_hds",
+      "titulo": "Hoja de datos de seguridad · Desengrasante DG-40 (resumen)",
+      "icono": "file-text",
+      "inicial": false,
+      "contenido": "Producto: desengrasante alcalino concentrado DG-40.\nPeligros: provoca irritación de la piel y lesiones oculares graves si salpica.\nManipulación: mantén el envase cerrado. No lo mezcles con otros productos, en especial con cloro o ácidos. Envase dañado o con escurrimiento: no se despacha; se deja en bandeja antiderrame, señalizado, y se avisa a la jefatura.\nProtección indicada: guantes resistentes a químicos (nitrilo, según la tabla del fabricante) y antiparras si hay riesgo de salpicadura.\nPrimeros auxilios: piel: retira la ropa contaminada y lava con abundante agua; si la molestia sigue, busca atención. Ojos: enjuaga de inmediato con abundante agua durante varios minutos, con los párpados abiertos, y busca atención."
+    },
+    {
+      "id": "e_registro",
+      "titulo": "Registro de entrega de EPP · Camila Vergara",
+      "icono": "clipboard-check",
+      "inicial": false,
+      "contenido": "Trabajadora: Camila Vergara · Auxiliar de bodega\n• Zapatos de seguridad, talla 38 · entregados el 2 de junio\n• Chaleco de alta visibilidad · entregado el 2 de junio\n• Parka impermeable, talla L · entregada el 2 de junio · Observación: solicitó talla M, no había stock\n• Guantes de cuero anticorte, 1 par · entregados el 2 de junio\n• Guantes de nitrilo · caja de uso común en el armario de EPP del andén\n• Antiparras · sin entrega · Observación: «por entregar cuando llegue el pedido»\nEntregó: Marisol Fuentes, jefa de bodega · Firma de la trabajadora: sí"
+    }
+  ],
+  "nodos": [
+    {
+      "id": "n1",
+      "titulo": "Zona 3, cuatro y diez",
+      "imagen": "SEG360-IMG073",
+      "escena": "Marisol le pasa la hoja de carga a Camila: «Son las 24 cajas de la zona 3 y el pallet de bidones. El camión ya viene. Los guantes están en el armario, los de siempre». Afuera llueve fuerte y el agua entra por el borde del andén. Héctor está envolviendo pallets de otro pedido a un par de metros.",
+      "voz": "Marisol no está siendo descuidada: tiene tres despachos esta tarde y confía en que Camila sabe lo que hace. Camila, en cambio, siente el reloj encima. Ese es el momento en que uno se salta pasos sin darse cuenta. Antes de mover una sola caja, piensa qué necesitas saber de este andén, de esta carga y de esta lluvia.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué hace Camila primero?",
+      "opciones": [
+        {
+          "texto": "Va al armario y saca los guantes más gruesos que encuentre: con esta carga, mientras más gruesos, mejor.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "apuro_epp",
+          "siguiente": "n2",
+          "feedback": "Partir por el guante es partir por el final. Todavía no sabes qué riesgos hay ni si ese guante calza con ellos."
+        },
+        {
+          "texto": "Recorre la zona de carga cinco minutos sin tocar nada: piso, bidones, ruta y envolvedora.",
+          "efectos": {
+            "tiempo": -5
+          },
+          "marca": "recorrido",
+          "siguiente": "n2",
+          "feedback": "Cinco minutos bien gastados. Ves lo que la hoja de carga no dice: el piso brilla, un bidón tiene la tapa chueca y la ruta pasa pegada a la envolvedora."
+        },
+        {
+          "texto": "Empieza al tiro con las cajas en la transpaleta: si adelanta ahora, después le sobra tiempo para revisar los bidones con calma.",
+          "efectos": {
+            "riesgo": 1,
+            "tiempo": 5
+          },
+          "marca": "carga_directa",
+          "siguiente": "n2",
+          "feedback": "Avanzas rápido, pero a la tercera pasada la rueda de la transpaleta patina en el agua y la carga se te viene encima. Alcanzas a frenarla."
+        }
+      ]
+    },
+    {
+      "id": "n2",
+      "titulo": "El andén con lluvia",
+      "imagen": "SEG360-IMG073",
+      "escena": "El toldo cubre solo la mitad del andén. Donde termina, el piso está mojado y resbaloso, y la transpaleta deja una huella de barro. Con la lluvia y la tarde oscura, cuesta ver el camión que viene retrocediendo. La ruta más corta pasa a medio metro de la envolvedora, que gira con el film estirado.",
+      "condicion_texto": [
+        {
+          "si": "carga_directa",
+          "texto": "Ya llevas tres cajas en la transpaleta y casi se te va en el agua. Recién ahora miras con calma: el toldo cubre solo la mitad del andén, el piso está resbaloso y el camión retrocede entre la lluvia. La ruta más corta pasa a medio metro de la envolvedora, que gira con el film estirado."
+        },
+        {
+          "si": "apuro_epp",
+          "texto": "Con los guantes de cuero puestos sales al andén. El toldo cubre solo la mitad; el resto está mojado y resbaloso. El camión retrocede entre la lluvia y la ruta más corta pasa a medio metro de la envolvedora, que gira con el film estirado. Con estos guantes, tomar una etiqueta ya te cuesta."
+        }
+      ],
+      "voz": "Mira el andén como lo miraría Patricia. Ninguno de estos riesgos se resuelve con un guante. El agua, la oscuridad, el camión en movimiento y la máquina que gira están antes que cualquier equipo de protección. Lo que quede después, eso sí, lo cubre el EPP. La pregunta es cuánto puedes cambiar del lugar y de la forma de trabajar antes de llegar a ese punto.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué propone Camila antes de pensar en el EPP?",
+      "opciones": [
+        {
+          "texto": "Pone cartones en el piso mojado para que no resbale y sigue con el plan.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "parche",
+          "siguiente": "n3",
+          "feedback": "El cartón mojado se desarma y queda igual o más resbaloso. Además, la transpaleta lo arrastra y te deja un obstáculo nuevo."
+        },
+        {
+          "texto": "Le propone a Marisol cargar bajo el toldo, poner conos y señal de piso mojado, que alguien guíe al camión y pasar por el pasillo 2.",
+          "efectos": {
+            "riesgo": -2,
+            "tiempo": -10,
+            "confianza": 1
+          },
+          "marca": "controles",
+          "siguiente": "n3",
+          "feedback": "Marisol lo piensa dos segundos y dice que sí. Pierdes diez minutos, pero el riesgo que queda es más chico y más fácil de cubrir con EPP."
+        },
+        {
+          "texto": "Nada por ahora: en invierno siempre está así y eso no depende de ella. Mejor concentrarse en elegir bien el EPP, que es lo que sí puede controlar.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "sin_controles",
+          "siguiente": "n3",
+          "feedback": "«Siempre está así» es justo lo que hace que nadie lo cambie. El EPP queda cargando con riesgos que se podían bajar antes."
+        }
+      ]
+    },
+    {
+      "id": "n3",
+      "titulo": "Un bidón que brilla",
+      "imagen": "SEG360-IMG074",
+      "escena": "En el pallet de bidones, uno tiene la tapa mal enroscada y un hilo de líquido en el costado. La etiqueta dice «Desengrasante alcalino DG-40. Irritante» y poco más: el resto está corrido por la humedad. Nadie le ha pasado a Camila la hoja de datos del producto.",
+      "voz": "Cuando trabajaba en otra distribuidora, vi a un chiquillo apretar una tapa así, con la mano, para que el bidón no se viera mal en el despacho. La rosca estaba rota y se mojó entero el brazo. No era descuido: nadie le había dicho qué tenía ese bidón ni qué hacer con uno dañado. Por eso, antes que el guante, viene la información.",
+      "hablante": "patricia",
+      "pregunta": "¿Qué hace Camila con el bidón y con lo que no sabe?",
+      "opciones": [
+        {
+          "texto": "Aprieta bien la tapa con la mano, limpia el costado con un paño para que no se vea feo en el despacho y deja el bidón con los demás.",
+          "efectos": {
+            "riesgo": 2
+          },
+          "marca": "bidon_manipulado",
+          "desbloquea": [
+            "e_ficha_a",
+            "e_ficha_b"
+          ],
+          "siguiente": "n3b",
+          "feedback": "La tapa no enrosca: la rosca está rota. Al apretar, el bidón cede y te escurre producto por la mano."
+        },
+        {
+          "texto": "Lee lo que se alcanza de la etiqueta. Si dice «irritante», cualquier guante sirve.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "solo_etiqueta",
+          "desbloquea": [
+            "e_ficha_a",
+            "e_ficha_b"
+          ],
+          "siguiente": "n4",
+          "feedback": "«Irritante» te dice que hay que protegerse, pero no con qué ni qué hacer si salpica. Y el bidón dañado sigue en la carga."
+        },
+        {
+          "texto": "No lo toca: lo señaliza y le pide a Marisol la hoja de datos y revisar juntas los demás bidones.",
+          "efectos": {
+            "riesgo": -1,
+            "tiempo": -5
+          },
+          "marca": "hds",
+          "desbloquea": [
+            "e_hds",
+            "e_ficha_a",
+            "e_ficha_b"
+          ],
+          "siguiente": "n4",
+          "feedback": "Marisol saca la hoja de la carpeta del estante y revisan el pallet: otro bidón tiene el sello roto. Esos dos van a la bandeja antiderrame y hoy no viajan."
+        }
+      ]
+    },
+    {
+      "id": "n3b",
+      "titulo": "La tapa no cerraba",
+      "imagen": "SEG360-IMG074",
+      "escena": "El desengrasante le corre a Camila por la muñeca y se mete bajo la manga de la parka. Al principio no siente nada; al minuto empieza a picar. Héctor la ve desde la envolvedora y apaga la máquina.",
+      "voz": "Aquí no hay que hacerse la valiente ni esperar a ver si se pasa. Lo que Camila haga en los próximos minutos importa más que lo que ya pasó. No le toca diagnosticar nada. Le toca detener el contacto, usar el agua como dice la hoja de datos, avisar y dejar que alguien con más información decida si necesita atención.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué hace Camila?",
+      "opciones": [
+        {
+          "texto": "Deja el bidón, se saca guante y parka con cuidado, se lava con abundante agua en el lavamanos y le pide a Héctor que avise a Marisol y traiga la hoja de datos.",
+          "efectos": {
+            "tiempo": -15,
+            "confianza": 1
+          },
+          "marca": "hds",
+          "desbloquea": [
+            "e_hds"
+          ],
+          "siguiente": "n4",
+          "feedback": "Héctor trae la hoja: dice lavar con abundante agua y buscar atención si la molestia sigue. Marisol separa el bidón en la bandeja antiderrame y anota lo que pasó. Pierdes un cuarto de hora, pero cortaste el contacto a tiempo."
+        },
+        {
+          "texto": "Se seca con el paño, se baja la manga y sigue: es poquito, y no quiere atrasar el camión ni que Marisol piense que es exagerada.",
+          "efectos": {
+            "riesgo": 2
+          },
+          "marca": "sin_lavado",
+          "siguiente": "n4",
+          "feedback": "El paño reparte el producto y la manga lo deja pegado a la piel. A los diez minutos la muñeca está roja y sigues cargando."
+        }
+      ]
+    },
+    {
+      "id": "n4",
+      "titulo": "Dos cajas de guantes",
+      "imagen": "SEG360-IMG074",
+      "escena": "En el armario de EPP, junto al andén, hay dos cajas de guantes, cada una con su ficha de práctica pegada en la tapa: la A, de nitrilo de puño largo, y la B, de cuero anticorte con forro. Ábrelas en tus evidencias. Ocho de las cajas a cargar tienen esquineros de fleje con bordes filosos. Los bidones van en su pallet.",
+      "condicion_texto": [
+        {
+          "si": "hds",
+          "texto": "Con la hoja de datos a mano, Camila mira las dos cajas de guantes del armario de EPP, cada una con su ficha de práctica pegada en la tapa: la A, de nitrilo de puño largo, y la B, de cuero anticorte con forro. Ábrelas en tus evidencias. Ocho cajas tienen esquineros de fleje con bordes filosos. Los bidones van en su pallet."
+        }
+      ],
+      "voz": "Las dos fichas dicen la verdad, y ninguna dice que su guante sirve para todo. Uno aguanta el químico pero se raja con un borde metálico. El otro aguanta el corte, pero se empapa, pierde agarre y te quita destreza. Elegir bien no es encontrar el guante perfecto. Es saber qué parte de la tarea cubre cada uno y qué parte se resuelve de otra forma.",
+      "hablante": "narrador",
+      "pregunta": "¿Cómo resuelve Camila los guantes para esta carga?",
+      "opciones": [
+        {
+          "texto": "El de nitrilo para todo: el químico es lo más peligroso.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "nitrilo_todo",
+          "desbloquea": [
+            "e_registro"
+          ],
+          "siguiente": "n5",
+          "feedback": "Frente al producto protege, si la hoja lo indica. Pero el primer esquinero de fleje lo raja, y un guante rajado ya no protege de nada."
+        },
+        {
+          "texto": "El de cuero para todo: es el más grueso, el más firme y el que usa todo el mundo en el andén. Si aguanta el fleje, aguanta cualquier cosa, y además abriga las manos con este frío.",
+          "efectos": {
+            "riesgo": 2
+          },
+          "marca": "cuero_todo",
+          "desbloquea": [
+            "e_registro"
+          ],
+          "siguiente": "n5",
+          "feedback": "Para el fleje sirve. Pero si un bidón gotea, el cuero absorbe el producto y lo deja contra la piel. Y mojado por la lluvia pierde agarre."
+        },
+        {
+          "texto": "Uno para cada parte: cuero solo para las cajas con fleje, lejos de la envolvedora; nitrilo, el que pide la hoja, si toca un bidón. El pallet va en transpaleta.",
+          "solo_si": "hds",
+          "efectos": {},
+          "marca": "guantes_por_tarea",
+          "desbloquea": [
+            "e_registro"
+          ],
+          "siguiente": "n5",
+          "feedback": "Cada guante hace lo que su ficha dice que hace. Y como los bidones van en pallet, casi no los tocas."
+        },
+        {
+          "texto": "Cuero para las cajas con fleje y nitrilo para los bidones, aunque no sabe si ese nitrilo sirve para este producto.",
+          "salvo_si": "hds",
+          "efectos": {},
+          "marca": "guantes_sin_hds",
+          "siguiente": "n4b",
+          "feedback": "La lógica es buena. Pero el nitrilo no resiste igual a todos los químicos, y sin la hoja de datos estás suponiendo."
+        }
+      ]
+    },
+    {
+      "id": "n4b",
+      "titulo": "¿Y si el nitrilo no sirve?",
+      "imagen": "SEG360-IMG074",
+      "escena": "En la ficha A, Camila lee la advertencia: «La resistencia cambia según el químico: revisa la hoja de datos del producto». No tiene esa hoja. Marisol está en la oficina del andén, a veinte metros, hablando por teléfono con el chofer.",
+      "voz": "Preguntar le cuesta a Camila. Tres semanas en una pega nueva y una jefa ocupada no ayudan. Pero esta es justo la pregunta que alguien tiene que hacer, y sale mucho más barata ahora que después de una salpicadura. Fíjate también en lo otro: interrumpir dos minutos no es lo mismo que molestar.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué hace Camila?",
+      "opciones": [
+        {
+          "texto": "No quiere interrumpir a Marisol en plena llamada. Usa el nitrilo para los bidones igual y sigue.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "supone",
+          "desbloquea": [
+            "e_registro"
+          ],
+          "siguiente": "n5",
+          "feedback": "Puede que funcione, puede que no. Lo decidiste sin saberlo, y nadie más sabe que lo supusiste."
+        },
+        {
+          "texto": "Espera que Marisol corte y le pide la hoja de datos del desengrasante.",
+          "efectos": {
+            "tiempo": -8
+          },
+          "marca": "hds",
+          "desbloquea": [
+            "e_hds"
+          ],
+          "siguiente": "n4",
+          "feedback": "Marisol te pasa la hoja: pide guantes de nitrilo y protección ocular si hay salpicadura. Revisan el pallet y los dos bidones dañados van a la bandeja antiderrame. Ahora vuelves al armario con datos."
+        }
+      ]
+    },
+    {
+      "id": "n5",
+      "titulo": "La parka, la capucha y la envolvedora",
+      "imagen": "SEG360-IMG073",
+      "escena": "Hace ocho grados y llueve de lado. La parka de Camila es talla L y le queda grande: las mangas cuelgan y los cordones de la capucha bailan. Si se pone la capucha, las antiparras del armario se empañan al tiro. Revisa el registro de entrega de EPP. La envolvedora sigue girando junto al pallet que hay que ir a buscar.",
+      "condicion_texto": [
+        {
+          "si": "cuero_todo",
+          "texto": "Hace ocho grados y llueve de lado. La parka de Camila es talla L y le queda grande: las mangas cuelgan y los cordones de la capucha bailan. Con los guantes de cuero, cada vez que pasa junto a la envolvedora siente que el film se le pega a los dedos. Si se pone la capucha, las antiparras se empañan al tiro. Revisa el registro de entrega de EPP."
+        },
+        {
+          "si": "controles",
+          "texto": "Hace ocho grados y llueve de lado. La ruta por el pasillo 2 aleja a Camila de la envolvedora, pero el pallet de cajas quedó envuelto justo al lado y hay que ir a buscarlo. Su parka es talla L y le queda grande: mangas que cuelgan, cordones sueltos. Con capucha, las antiparras se empañan. Revisa el registro de entrega de EPP."
+        }
+      ],
+      "voz": "La ropa también es protección, y también puede ser el problema. Una parka grande abriga, pero una manga suelta o un cordón cerca de algo que gira es justo lo que una máquina puede tomar. Y unas antiparras empañadas son peores que no ver: crees que vas protegida y no ves el camión. Mira el registro de entrega, porque ahí está parte de la explicación.",
+      "hablante": "patricia",
+      "pregunta": "¿Cómo resuelve Camila la ropa y el paso junto a la envolvedora?",
+      "opciones": [
+        {
+          "texto": "Se sube la capucha, se pone las antiparras por si salpica algo y pasa rápido junto a la envolvedora: mientras menos rato esté ahí, menos riesgo.",
+          "efectos": {
+            "riesgo": 2
+          },
+          "marca": "enganche",
+          "siguiente": "n5b",
+          "feedback": "Las antiparras se empañan a los pocos pasos. Mientras las acomodas, pasas más cerca de la máquina de lo que creías."
+        },
+        {
+          "texto": "Se saca la parka y queda con el polerón y el chaleco: así no hay mangas sueltas ni cordones que se enganchen, y total es un rato.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "sin_parka",
+          "siguiente": "n6",
+          "feedback": "Te mueves mejor, pero a los diez minutos estás empapada y con las manos tiesas. Con frío se pierde fuerza y tacto, justo lo que pide el fleje."
+        },
+        {
+          "texto": "Puños cerrados, cordones adentro, chaleco encima, antiparras solo para los bidones. Y le pide a Héctor parar la envolvedora cuando ella pase.",
+          "efectos": {
+            "tiempo": -5,
+            "confianza": 1
+          },
+          "marca": "enganche_controlado",
+          "siguiente": "n6",
+          "feedback": "Héctor detiene la máquina cuando le haces la seña. Con el chaleco te ve bien, y tú lo ves a él."
+        }
+      ]
+    },
+    {
+      "id": "n5b",
+      "titulo": "El film tira de la manga",
+      "imagen": "SEG360-IMG073",
+      "escena": "El film pegajoso se adhiere a la manga suelta de la parka y tira el brazo de Camila hacia el pallet que gira. Héctor aprieta la parada de emergencia y la máquina se detiene. Camila se suelta. No hay lesión, pero le tiemblan las piernas.",
+      "voz": "Esto fue un casi accidente. No terminó en lesión, pero pudo terminar. Lo más común después de un susto así es decir que no pasó nada y seguir, sobre todo con el camión esperando. Pero lo que pasó trae información valiosa: una parka de otra talla, una ruta pegada a la máquina y unas antiparras que no funcionan con capucha.",
+      "hablante": "narrador",
+      "pregunta": "Y ahora, ¿qué hace Camila?",
+      "opciones": [
+        {
+          "texto": "Le dice a Héctor que no pasó nada y que no le cuente a nadie: no quiere que Marisol piense que no sabe trabajar, y el camión está esperando.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "oculta",
+          "siguiente": "n6",
+          "feedback": "Héctor se queda callado, pero incómodo. La manga sigue suelta y la ruta sigue pegada a la máquina."
+        },
+        {
+          "texto": "Ajusta la parka, guarda las antiparras para los bidones, acuerda con Héctor que pare la máquina cuando ella pase y le cuenta a Marisol el casi accidente.",
+          "efectos": {
+            "tiempo": -8,
+            "confianza": 1
+          },
+          "marca": "enganche_controlado",
+          "siguiente": "n6",
+          "feedback": "Marisol anota el casi accidente para revisarlo con Patricia. El susto no se pierde: se convierte en una mejora."
+        }
+      ]
+    },
+    {
+      "id": "n6",
+      "titulo": "Rodrigo pregunta cuánto falta",
+      "imagen": "SEG360-IMG073",
+      "escena": "Son las cinco. Rodrigo llama a Marisol: el cliente quiere saber si el camión sale a la hora. Marisol se acerca a Camila: «¿Cómo vamos? Rodrigo está encima».",
+      "condicion_texto": [
+        {
+          "si": "sin_controles",
+          "texto": "Son las cinco. La transpaleta ya patinó dos veces en el agua del borde del andén. Rodrigo llama a Marisol: el cliente quiere saber si el camión sale a la hora. Marisol se acerca a Camila: «¿Cómo vamos? Rodrigo está encima»."
+        },
+        {
+          "si": "parche",
+          "texto": "Son las cinco. Los cartones del piso ya están deshechos y la transpaleta patina sobre ellos. Rodrigo llama a Marisol: el cliente quiere saber si el camión sale a la hora. Marisol se acerca a Camila: «¿Cómo vamos? Rodrigo está encima»."
+        }
+      ],
+      "voz": "La presión de tiempo no es mala intención de nadie. Rodrigo quiere cumplirle al cliente y Marisol quiere cumplirle a Rodrigo. Lo que Camila diga ahora puede bajar esa presión o subirla. Con datos concretos, una jefatura puede decidir. Con un «todo bien» o con un «así no se puede», no.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué le responde Camila?",
+      "opciones": [
+        {
+          "texto": "«Todo bien», y acelera: lleva las cajas de dos en dos para alcanzar.",
+          "efectos": {
+            "riesgo": 2,
+            "tiempo": 10
+          },
+          "marca": "apuro",
+          "siguiente": "n7",
+          "feedback": "Ganas diez minutos, pero con dos cajas no ves dónde pisas ni dónde quedan los bordes de fleje."
+        },
+        {
+          "texto": "«Me salté algo: el borde del andén está muy resbaloso. Necesito diez minutos para pasar lo que queda bajo el toldo, poner conos y que alguien guíe al camión. Así terminamos sin accidentes».",
+          "salvo_si": "controles",
+          "efectos": {
+            "riesgo": -2,
+            "tiempo": -15,
+            "confianza": 1
+          },
+          "marca": "controles",
+          "siguiente": "n7",
+          "feedback": "Marisol pide a alguien del local que guíe al camión. Quedas más justa de tiempo, pero lo que falta se hace en seco."
+        },
+        {
+          "texto": "«Vamos bien: quedan nueve cajas y el pallet. En veinte minutos cerramos y, si algo cambia, te aviso al tiro».",
+          "solo_si": "controles",
+          "efectos": {
+            "tiempo": -2,
+            "confianza": 1
+          },
+          "marca": "aviso_hechos",
+          "siguiente": "n7",
+          "feedback": "Marisol le pasa el dato exacto a Rodrigo. Nadie tiene que adivinar ni presionar a ciegas."
+        },
+        {
+          "texto": "«Así no se puede trabajar. Que lo cargue otro».",
+          "efectos": {
+            "tiempo": -10,
+            "confianza": -1
+          },
+          "marca": "sin_propuesta",
+          "siguiente": "n7",
+          "feedback": "Puede que algo esté fallando, pero Marisol no sabe qué. Se queda con la presión de Rodrigo y sin nada que proponerle."
+        }
+      ]
+    },
+    {
+      "id": "n7",
+      "titulo": "«Ponte los de cuero, son más firmes»",
+      "imagen": "SEG360-IMG074",
+      "escena": "Mientras Camila mueve el pallet de bidones con guantes de nitrilo, Héctor se acerca: «Ponte los de cuero, son más firmes. Esos de goma no aguantan nada». Lo dice con buena intención; lleva años en esta bodega.",
+      "condicion_texto": [
+        {
+          "si": "cuero_todo",
+          "texto": "Héctor ve a Camila con los guantes de cuero y asiente: «Bien, esos son los más firmes. Los de goma no aguantan nada». Pero los dos guantes están empapados por la lluvia y a Camila se le resbala el borde del film."
+        },
+        {
+          "si": "nitrilo_todo",
+          "texto": "Héctor ve que el guante de nitrilo de Camila tiene un tajo en el índice, justo donde tomó un esquinero de fleje. «Ponte los de cuero, son más firmes», le dice. «Esos de goma no aguantan nada». Lo dice con buena intención."
+        }
+      ],
+      "voz": "Héctor tiene años de bodega y lo dice con cariño. Y en algo tiene razón: el cuero aguanta mejor un borde filoso. Pero más grueso no significa más protegido para todo. Esta conversación se repite en todas las bodegas, y responderla bien, sin hacer sentir mal al otro, también es parte del trabajo.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué le responde Camila?",
+      "opciones": [
+        {
+          "texto": "«Da lo mismo cuál, Héctor. Lo importante es andar con guantes, y estos ya los tengo puestos».",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "cualquiera",
+          "siguiente": "n8",
+          "feedback": "Así se pierde lo que mostraban las fichas. Un guante equivocado puede dar más confianza que protección."
+        },
+        {
+          "texto": "Le da la razón a Héctor, se pone los de cuero y termina con ellos todo lo que queda, cajas y bidones: él sabe más de esto.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "cuero_final",
+          "siguiente": "n8",
+          "feedback": "Para las cajas con fleje habría estado bien. Para el pallet de bidones, el cuero absorbe cualquier goteo y lo deja contra la piel."
+        },
+        {
+          "texto": "«Para el fleje, sí. Pero el cuero absorbe líquido y, cerca del film, se engancha. Uno para cada cosa».",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "explica_robusto",
+          "siguiente": "n8",
+          "feedback": "Héctor se queda mirando la ficha B: «No lo había pensado así». La próxima vez, a lo mejor él se lo explica a otro."
+        }
+      ]
+    },
+    {
+      "id": "n8",
+      "titulo": "Antes de que salga el camión",
+      "imagen": "SEG360-IMG075",
+      "escena": "El camión está cargado y el chofer firma la guía. Marisol tiene abierto el registro de entrega de EPP en la tablet para anotar lo que se usó esta tarde, y le pregunta a Camila si hay algo que reportar.",
+      "voz": "Terminar la carga no es terminar el trabajo. Lo que Camila vio esta tarde le sirve a la próxima persona que cargue con lluvia, y también a Marisol, que es quien puede pedir otra talla, otras antiparras o un toldo más largo. Cuesta hablar cuando una es nueva. Justamente por eso vale tanto.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué le dice Camila a Marisol?",
+      "opciones": [
+        {
+          "texto": "Le pide anotar: parka de su talla, antiparras que no se empañen, un toldo que cubra el andén y revisar el bidón dañado con el proveedor.",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "reporte",
+          "siguiente": "FIN",
+          "feedback": "Marisol lo anota y dice que el jueves lo ve con Patricia. Pediste cosas concretas, no un reclamo."
+        },
+        {
+          "texto": "«Nada, todo bien». No quiere que piensen que se queja.",
+          "efectos": {},
+          "marca": "sin_reporte",
+          "siguiente": "FIN",
+          "feedback": "Marisol firma y cierra. El próximo día de lluvia, otra persona va a encontrar la misma parka grande, las mismas antiparras y el mismo toldo corto."
+        },
+        {
+          "texto": "Le dice que todo esto lo va a llevar al Comité Paritario, para que quede claro quién no hizo su pega en esta bodega y que reten a alguien de una vez.",
+          "efectos": {
+            "confianza": -1
+          },
+          "marca": "reporte_culpa",
+          "siguiente": "FIN",
+          "feedback": "El Comité Paritario sí es un buen lugar para llevar esto, pero para mejorar condiciones, no para buscar culpables. Dicho así, Marisol se pone a la defensiva."
+        }
+      ]
+    }
+  ],
+  "finales": [
+    {
+      "id": "f_seguro",
+      "tipo": "seguro",
+      "titulo": "Carga lista, sin atajos",
+      "texto": "El camión de Los Aromos sale con algunos minutos de holgura. La carga se armó bajo el toldo, los bidones dañados quedaron en la bandeja antiderrame y cada guante se usó para lo que dice su ficha.\n\nMarisol se queda con una lista concreta para Patricia: otra talla de parka, antiparras que no se empañen y un toldo que cubra el andén completo. Lo que hoy resolviste con ingenio, mañana puede quedar resuelto para todos.",
+      "voz": "Fíjate en el orden de lo que hiciste. Primero cambiaste el lugar y la ruta, después pediste la información que faltaba y recién entonces elegiste los guantes, uno para cada parte de la tarea. Y al final dejaste por escrito lo que no estaba bien. Así se ve una tarde de lluvia bien resuelta: no sin riesgos, sino con los riesgos en su lugar.",
+      "hablante": "narrador",
+      "condicion": {
+        "riesgo_max": 2,
+        "confianza_min": 4,
+        "requiere_marcas": [
+          "controles",
+          "hds",
+          "guantes_por_tarea",
+          "enganche_controlado",
+          "explica_robusto",
+          "reporte"
+        ],
+        "excluye_marcas": [
+          "bidon_manipulado",
+          "enganche",
+          "apuro",
+          "sin_propuesta",
+          "oculta"
+        ]
+      }
+    },
+    {
+      "id": "f_contacto",
+      "tipo": "inseguro",
+      "titulo": "El bidón que no debía viajar",
+      "texto": "El camión sale, pero la tarde dejó una marca: el desengrasante del bidón dañado llegó a la piel de Camila. Un envase con la tapa rota no se arregla con la mano; se separa, se señaliza y se avisa.\n\nLo que pasó tiene explicación: nadie le había pasado la hoja de datos ni le habían dicho qué hacer con un bidón dañado. Eso también hay que cambiarlo.",
+      "voz": "Apretar esa tapa parecía lo más responsable: dejar el bidón presentable y no atrasar el despacho. Pero el envase ya estaba dañado, y la información que te habría frenado no estaba a mano. Si te tocó lavarte, hiciste bien en cortar el contacto. Lo importante ahora es que la próxima persona tenga la hoja y sepa que un bidón dañado no viaja.",
+      "hablante": "narrador",
+      "condicion": {
+        "requiere_marcas": [
+          "bidon_manipulado"
+        ]
+      }
+    },
+    {
+      "id": "f_parcial",
+      "tipo": "parcial",
+      "titulo": "Salió el camión, quedaron cabos sueltos",
+      "texto": "El camión sale a la hora y nadie se lastima. Pero algunas decisiones quedaron a medio camino: un riesgo que se podía cambiar antes y se dejó al EPP, un guante elegido sin toda la información, un aviso que no llegó o que llegó sin datos.\n\nNada de eso explotó hoy. Que no haya pasado nada no significa que la forma de trabajar haya estado bien.",
+      "voz": "Esta tarde salió bien, y eso vale. Pero mira dónde estuvo la suerte. Quizás en el piso que no te botó, en el bidón que no goteó o en la manga que no se enganchó. Vuelve a mirar las decisiones donde dudaste. Ahí está lo que puedes hacer distinto la próxima vez que llueva en el andén.",
+      "hablante": "narrador",
+      "condicion": {
+        "riesgo_max": 4
+      }
+    },
+    {
+      "id": "f_inseguro",
+      "tipo": "inseguro",
+      "titulo": "A tiempo, pero de pura suerte",
+      "texto": "El camión alcanza a salir, pero Camila terminó la carga con demasiada exposición encima: un andén que nadie cambió, equipos que no calzaban con la tarea y avisos que no se dieron.\n\nCuando todo depende de que no pase nada, tarde o temprano pasa. La buena noticia es que cada una de esas decisiones se puede tomar distinto.",
+      "voz": "No te quedes con la sensación de que te fue mal. Quédate con la pregunta de Patricia: qué hizo que fuera tan fácil hacerlo así. La presión del camión, la parka grande, el armario sin la hoja de datos. Nada de eso es culpa de Camila, pero todo eso se puede ver, decir y cambiar. Vuelve a jugar el caso y prueba otro orden.",
+      "hablante": "narrador",
+      "condicion": {}
+    }
+  ],
+  "regla_final": "Se evalúa en orden. Final seguro: exposición de 2 o menos, confianza de 4 o más, controles previos aplicados (al inicio o recuperados después), hoja de datos pedida, guantes elegidos por tarea, ropa ajustada sin pasar junto a la envolvedora, explicación a Héctor y reporte final, sin haber manipulado el bidón dañado, sin casi accidente, sin apurar la carga ni negarse sin propuesta y sin ocultar nada. Si no, y Camila manipuló el bidón dañado: final de contacto con el producto. Si no, con exposición de 4 o menos: final parcial. En cualquier otro caso: final inseguro.",
+  "debrief": {
+    "titulo": "Lo que pasó y por qué",
+    "puntos": [
+      "Primero se cambia el lugar y la forma de trabajar: cargar bajo techo, demarcar, secar, guiar al camión y alejar la ruta de la envolvedora. El EPP cubre lo que queda, no lo que se podía evitar.",
+      "Antes de elegir guante se pide la información que falta: la hoja de datos del producto y el estado de los envases. Un bidón dañado no se arregla con la mano: se separa, se señaliza y se avisa.",
+      "Ningún guante sirve para todo. El nitrilo resiste ciertos químicos pero se raja con el fleje; el cuero aguanta el corte pero absorbe líquidos, se moja y quita destreza. Se usa uno para cada parte de la tarea, según su ficha.",
+      "Más robusto no es más adecuado: un guante grueso cerca de algo que gira, una parka holgada o unas antiparras que se empañan con la capucha pueden crear un riesgo nuevo.",
+      "Avisar con hechos y dejar registro (la talla de la parka, las antiparras que faltan, el toldo corto) es lo que permite que la próxima tarde de lluvia sea distinta."
+    ],
+    "voz": "Cuando reviso un caso así no pregunto quién se equivocó. Pregunto qué hizo que fuera fácil hacerlo mal. Aquí había un camión apurado, una parka de otra talla, un armario sin la hoja de datos y un toldo que no alcanza. Camila tomó decisiones con lo que tenía. Lo que tú puedes llevarte es el orden: cambiar primero lo que se puede cambiar, pedir la información y elegir cada equipo para su parte de la tarea.",
+    "hablante": "patricia",
+    "pregunta_transferencia": "Piensa en una tarea tuya donde uses el mismo guante o la misma protección para todo. ¿Qué parte de esa tarea cubre bien, qué parte no cubre y qué podrías cambiar antes de llegar al EPP?"
+  },
+  "imagenes": [
+    {
+      "id": "SEG360-IMG073",
+      "titulo": "El andén con lluvia",
+      "uso": "Presentación del caso y nodos del andén. Muestra el despacho bajo la lluvia con controles en su lugar: carga bajo el toldo, conos y señal de piso mojado, chaleco de alta visibilidad y camión guiado.",
+      "prompt": "Realistic editorial photograph, overcast late afternoon in June with steady rain, at the loading dock of a mid-sized office and cleaning supplies distributor in Santiago, Chile. A Chilean woman in her mid-twenties, warehouse assistant, wearing a fitted dark waterproof jacket with cuffs closed, a high-visibility vest over it and safety shoes, pulls a manual pallet jack loaded with cardboard boxes under a metal canopy. The concrete is wet with reflections; yellow cones and a wet floor sign mark the edge of the dry area. In the background a delivery truck reverses toward the dock with its lights on, guided by a coworker in a high-visibility vest. A pallet wrapping machine stands stopped a few meters away. Candid, not posed. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text, no logos, no real brands.",
+      "alt": "Una auxiliar de bodega con parka ajustada y chaleco reflectante tira una transpaleta con cajas bajo el toldo del andén mientras llueve. Conos y una señal de piso mojado marcan el borde, y un compañero guía al camión que retrocede."
+    },
+    {
+      "id": "SEG360-IMG074",
+      "titulo": "Dos guantes y un bidón dañado",
+      "uso": "Nodos del bidón y de la elección de guantes. Muestra dos tipos de guantes para comparar y un bidón dañado ya separado en una bandeja antiderrame y señalizado, como corresponde.",
+      "prompt": "Realistic editorial close-up photograph in a warehouse next to a loading dock, soft natural light from an open roller door on a rainy day. On a metal shelf, two open boxes of work gloves side by side: long-cuff green nitrile chemical gloves and thick lined leather cut-resistant gloves. A young Chilean woman's hands hold one glove of each type, comparing them. In the background, a pallet of white plastic 10-liter jerrycans of cleaning degreaser wrapped in film, and to one side a single jerrycan with a stained side set apart on a yellow spill tray with a small warning cone. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text or labels, no logos, no real brands.",
+      "alt": "Unas manos comparan un guante de nitrilo de puño largo con un guante grueso de cuero, frente a dos cajas de guantes. Atrás hay un pallet de bidones y un bidón manchado separado en una bandeja antiderrame, con un cono de advertencia."
+    },
+    {
+      "id": "SEG360-IMG075",
+      "titulo": "Lo que queda anotado",
+      "uso": "Nodo final del caso. Muestra a la jefa de bodega y a la auxiliar revisando el registro después de cargar el camión, en la zona demarcada bajo el toldo.",
+      "prompt": "Realistic editorial photograph at dusk on a rainy day, under the canopy of a warehouse loading dock in Santiago, Chile. A Chilean woman in her forties, warehouse supervisor in a dark work jacket, holds a tablet while a younger woman warehouse assistant in a high-visibility vest points at it, both talking calmly. Behind them a loaded delivery truck with its doors closed, cones marking the dry loading area, and a stopped pallet wrapping machine with its safety guard in place. Wet pavement reflecting warm lights. Candid, not posed. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text on the tablet, no logos, no real brands.",
+      "alt": "La jefa de bodega y una auxiliar conversan frente a una tablet bajo el toldo del andén, con el camión ya cargado atrás y la zona de carga demarcada con conos."
+    }
+  ]
+}

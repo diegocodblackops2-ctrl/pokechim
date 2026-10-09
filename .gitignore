@@ -15,3 +15,10 @@ originales_medios/
 
 # Banco de evaluación ofuscado (se genera con build_publico.py desde el paquete privado; solo viaja en el ZIP SCORM)
 curso/data/eval.js
+
+# ── SEG360: material PRIVADO (bancos, claves, rúbricas con anclas, guía de corrección). Nunca al repo público ──
+SEG360/docente_privado/
+SEG360/exportaciones/privado/
+SEG360/desarrollo/dist/
+SEG360/originales_medios/
+SEG360/desarrollo/curso/data/eval*.js

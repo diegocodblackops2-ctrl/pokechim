@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID09",
+  "titulo": "El EPP va al final de la fila",
+  "modulo": "SEG360-EPP-M01",
+  "pantalla": "SEG360-EPP-M01-L01-P04",
+  "objetivo": "Explicar con un ejemplo de la bodega por qué el EPP se ubica al final de la jerarquía de controles y reconocer cuándo una propuesta de EPP se salta un control previo.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG043", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "Una caja de EPP no es un plan",
+      "voz": "Llegó la caja con guantes, lentes y chalecos nuevos. Da tranquilidad, y está bien que la dé. Pero antes de abrirla hay una fila que respetar.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["trash-2", "refresh-cw", "wrench", "clipboard-list", "hard-hat"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Eliminar, sustituir, separar, organizar, proteger",
+      "voz": "Primero se intenta eliminar el peligro. Si no se puede, se cambia por algo menos peligroso. Después se separa a la persona con barreras o ayudas mecánicas, y se organiza el trabajo. Recién al final viene el EPP.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "escena3d", "ref": "bodega", "foco": "envolvedora", "movimiento": "recorrido" },
+      "texto_en_pantalla": "La reja va antes que el guante",
+      "voz": "Mira la envolvedora. Sin su reja, el peligro es quedar atrapado por una pieza que gira. Un guante no resuelve eso, y cerca de esa pieza puede engancharse. La respuesta está más arriba en la fila: volver a poner la reja.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "escena3d", "ref": "bodega", "foco": "cartonero", "movimiento": "recorrido" },
+      "texto_en_pantalla": "Primero la herramienta, después el guante",
+      "voz": "Ahora el cartonero de hoja fija. Si se cambia por uno retráctil, la hoja se esconde sola al soltarlo. Igual queda algo de riesgo mientras cortas, y para eso sí sirve un guante anticorte.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "modelo3d", "ref": "operario", "movimiento": "giro" },
+      "texto_en_pantalla": "Lo que queda, se cubre",
+      "voz": "Eso que queda después de los controles se llama riesgo residual. Ahí trabaja el EPP: protege a una persona, en una parte del cuerpo, si está bien elegido y bien puesto.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "iconos", "ref": ["clipboard-list", "user-check", "clock", "list-checks"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Tarea, persona, tiempo, compatibilidad",
+      "voz": "Y para elegirlo bien se mira la tarea real, a la persona que lo va a usar, cuánto rato está expuesta y si funciona junto con lo demás que usa.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "El EPP es la última barrera, no la primera" },
+      "texto_en_pantalla": "La última barrera, no la primera",
+      "voz": "El EPP importa, y mucho. Pero cuando aparece primero en la conversación, conviene preguntar qué se saltó en la fila.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: fotografía de la jefa de bodega y la prevencionista revisando una caja abierta con lentes, guantes y chalecos nuevos sobre la mesa de despacho; la imagen se acerca lentamente. Escena 2: aparecen en fila cinco íconos: un basurero, unas flechas en círculo, una llave, una lista y un casco, que representan eliminar, sustituir, controles de ingeniería, controles administrativos y EPP. Escena 3: recorrido por la bodega en 3D hasta la envolvedora de pallets, con su reja de protección apoyada en la pared. Escena 4: la cámara se acerca a la mesa, donde hay un cuchillo cartonero de hoja fija abierto. Escena 5: una figura de trabajador en 3D gira lentamente para mostrar las zonas del cuerpo que protege el EPP. Escena 6: cuatro íconos en secuencia: una lista, una persona con un visto bueno, un reloj y una lista de verificación. Escena 7: texto grande en pantalla: «El EPP es la última barrera, no la primera»."
+}

@@ -1,0 +1,702 @@
+{
+  "id": "SEG360-CASO-EPP-2",
+  "ruta": "EPP",
+  "modulo": "SEG360-EPP-M06",
+  "titulo": "Turno de limpieza profunda",
+  "subtitulo": "Un desengrasante concentrado, un rincón sin aire y un armario que no alcanza: cómo frenar sin quedar como «la que hace problema»",
+  "resultado": "Ante una tarea con EPP insuficiente o incompatible, propone una alternativa segura, comunica la falla a supervisión con hechos y una propuesta, y no sigue trabajando expuesta.",
+  "protagonista": "camila",
+  "duracion_min": 25,
+  "presentacion": {
+    "texto": "Sábado, 8:30. La bodega está cerrada y Marisol dejó una orden: limpieza profunda del **sector C** antes de que el lunes venga gente de Ferretería Los Aromos.\n\nHéctor y Camila tienen un **desengrasante concentrado** que hay que diluir, un rincón con **poca ventilación** y un armario de EPP que no está a la altura de la tarea.\n\nTú juegas como Camila. Tu desafío: resolver la mañana sin seguir expuesta y sin quedar como «la que hace problema».",
+    "voz": "Los sábados la bodega suena distinto. No hay camiones ni clientes, solo el ruido del portón y la radio de Héctor. Es el día perfecto para limpiar a fondo, y también el día en que hay menos gente a quien preguntar. En este caso vas a ser Camila. Vas a tener que decidir qué hacer cuando el equipo que hay no sirve para la tarea, y cómo decirlo sin pelear con nadie.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG076"
+  },
+  "variables": [
+    {
+      "id": "riesgo",
+      "nombre": "Exposición al riesgo",
+      "inicial": 2,
+      "visible": true,
+      "icono": "triangle-alert",
+      "bueno": "bajo"
+    },
+    {
+      "id": "avance",
+      "nombre": "Avance de la limpieza",
+      "inicial": 0,
+      "visible": true,
+      "icono": "list-checks",
+      "bueno": "alto"
+    },
+    {
+      "id": "confianza",
+      "nombre": "Confianza del equipo",
+      "inicial": 4,
+      "visible": true,
+      "icono": "users",
+      "bueno": "alto"
+    }
+  ],
+  "evidencias": [
+    {
+      "id": "e_orden",
+      "titulo": "Orden de trabajo · Limpieza profunda sector C",
+      "icono": "clipboard-list",
+      "inicial": true,
+      "contenido": "Fecha: sábado, de 8:30 a 13:00\nResponsables: Héctor Paredes y Camila Vergara\nTareas:\n• Retirar cartones y despejar pasillos del sector C\n• Barrer y ordenar estanterías bajas\n• Desengrasar piso y estanterías con desengrasante DG-40, diluido según la hoja de datos\nSupervisión: Marisol Fuentes, de turno por teléfono\nVisita: Rodrigo Muñoz pasa a las 11:30\nObservación: el lunes visita la bodega personal de Ferretería Los Aromos"
+    },
+    {
+      "id": "e_armario",
+      "titulo": "Lo que hay en el armario de EPP",
+      "icono": "box",
+      "inicial": true,
+      "contenido": "• Guantes de látex desechables, delgados (quedan pocos pares)\n• Lentes de seguridad sin protección lateral (2)\n• Mascarillas desechables para polvo (1 caja)\n• Botas de goma (2 pares)\n• Pecheras plásticas (3)\nNo hay: guantes de nitrilo, antiparras ni protector facial."
+    },
+    {
+      "id": "e_hds",
+      "titulo": "Hoja de datos de seguridad · Desengrasante DG-40 (resumen)",
+      "icono": "file-text",
+      "inicial": false,
+      "contenido": "Producto: desengrasante alcalino concentrado DG-40.\nPeligros: provoca irritación de la piel y lesiones oculares graves si salpica. Sus vapores pueden irritar las vías respiratorias en lugares cerrados.\nUso: diluir según la tabla del fabricante para cada superficie, agregando el producto al agua y no al revés. No mezclar con otros productos, en especial con cloro o ácidos.\nVentilación: usar en lugares bien ventilados. Si no es posible, consultar al prevencionista antes de usarlo.\nProtección indicada: guantes resistentes a químicos (nitrilo, según la tabla del fabricante) y protección ocular hermética, tipo antiparras, al diluir o cuando haya riesgo de salpicadura.\nPrimeros auxilios: ojos: enjuagar de inmediato con abundante agua durante varios minutos, con los párpados abiertos, y buscar atención. Inhalación: llevar a la persona al aire fresco y, si la molestia sigue, buscar atención. Piel: retirar la ropa contaminada y lavar con abundante agua."
+    },
+    {
+      "id": "e_ficha_mascarilla",
+      "titulo": "Ficha de práctica · Mascarilla desechable para polvo",
+      "icono": "wind",
+      "inicial": false,
+      "contenido": "Ficha de práctica\nUso previsto: polvo y partículas, por ejemplo al barrer o mover cartones.\nNo protege: frente a gases ni vapores de productos químicos.\nAjuste: necesita sellar contra la cara. El vello facial en la zona de contacto impide el sello.\nAdvertencias: cámbiala si está húmeda, sucia o deformada. No la uses como protección para vapores aunque la aprietes."
+    },
+    {
+      "id": "e_patricia",
+      "titulo": "Mensaje de Patricia",
+      "icono": "message-square",
+      "inicial": false,
+      "contenido": "«Gracias por avisar con detalle. Con ese armario no se hace la parte con desengrasante: el látex delgado no es el guante que pide la hoja, y los lentes sin protección lateral no sirven para diluir. Hoy hagan lo que no lleva químico, con el portón abierto. El lunes temprano llevo nitrilo y antiparras y vemos juntos la dilución. Lo de Héctor: con barba de varios días, ninguna mascarilla ni respirador que dependa del sello le va a sellar. Para esta tarea la respuesta no es una mascarilla, es organizarla con buena ventilación y el producto diluido como dice la hoja, para no necesitarla. Si algo cambia, lo evaluamos juntos.»"
+    },
+    {
+      "id": "e_solicitud",
+      "titulo": "Solicitud de EPP y reprogramación",
+      "icono": "send",
+      "inicial": false,
+      "contenido": "Para: Marisol Fuentes · Copia: Patricia Soto\nTarea: desengrase del sector C con DG-40\nLo que pide la hoja de datos: guantes de nitrilo, antiparras al diluir, buena ventilación\nLo que había: látex delgado, lentes sin protección lateral, mascarillas para polvo\nCondición del lugar: sector C sin ventilación con el portón cerrado\nPropuesta: reponer nitrilo y antiparras; revisar con Patricia la dilución y cómo hacer la tarea sin depender de una mascarilla; desengrase el lunes temprano con el portón abierto\nHecho hoy: retiro de cartones, barrido y orden del sector C"
+    }
+  ],
+  "nodos": [
+    {
+      "id": "m1",
+      "titulo": "Sábado, ocho y media",
+      "imagen": "SEG360-IMG076",
+      "escena": "Héctor ya llenó un balde con agua y tiene al lado el bidón de desengrasante concentrado. «Le echamos un buen chorro, como siempre, y en dos horas está listo», dice. El sector C está al fondo, con el portón del andén cerrado por el frío. Huele a encierro.",
+      "voz": "Héctor lleva años haciendo esta limpieza y conoce cada mancha del piso. No está apurando a Camila por mala onda: quiere terminar temprano y hacerlo bien. Camila lleva tres semanas y le cuesta frenar a alguien con tanta experiencia. Pero hay cosas que no se saben a ojo, y la cantidad de producto es una de ellas.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué hace Camila antes de que Héctor vierta el producto?",
+      "opciones": [
+        {
+          "texto": "Se pone todo lo que hay en el armario, látex, lentes y mascarilla, y le dice a Héctor que parta.",
+          "efectos": {
+            "riesgo": 1,
+            "avance": 5
+          },
+          "marca": "epp_disponible",
+          "siguiente": "m2",
+          "feedback": "Te sientes protegida, pero no sabes si lo que llevas sirve para este producto. Todavía nadie ha mirado la hoja de datos."
+        },
+        {
+          "texto": "Prepara los paños mientras Héctor diluye a ojo, que él sabe.",
+          "efectos": {
+            "riesgo": 2,
+            "avance": 5
+          },
+          "marca": "a_ojo",
+          "siguiente": "m2",
+          "feedback": "Héctor vierte un buen chorro directo del bidón. Algunas gotas saltan fuera del balde y el olor sube al tiro."
+        },
+        {
+          "texto": "Le pide cinco minutos para leer la hoja de datos: dilución, EPP y ventilación.",
+          "efectos": {},
+          "marca": "hds",
+          "desbloquea": [
+            "e_hds"
+          ],
+          "siguiente": "m2",
+          "feedback": "Héctor resopla, pero espera. La hoja está en la carpeta del estante de productos, junto al bidón con la etiqueta medio borrada."
+        }
+      ]
+    },
+    {
+      "id": "m2",
+      "titulo": "El armario de EPP",
+      "imagen": "SEG360-IMG077",
+      "escena": "Camila abre el armario. Quedan guantes de látex delgados, dos lentes de seguridad sin protección lateral y una caja de mascarillas desechables para polvo. No hay guantes de nitrilo ni antiparras. Héctor no se afeita desde el lunes y trae barba de varios días.",
+      "condicion_texto": [
+        {
+          "si": "hds",
+          "texto": "Con la hoja de datos en la mano, Camila abre el armario. La hoja pide guantes resistentes a químicos, antiparras al diluir y buena ventilación. En el armario quedan guantes de látex delgados, dos lentes sin protección lateral y mascarillas desechables para polvo. Héctor no se afeita desde el lunes y trae barba de varios días."
+        }
+      ],
+      "voz": "Aquí es donde mucha gente hace lo que puede con lo que tiene, y se entiende: nadie quiere dejar la pega botada. Pero ojo con una trampa. Sumar equipos que no corresponden no suma protección. Dos guantes delgados no hacen uno resistente, y una mascarilla para polvo no filtra vapores por mucho que la aprietes. Y con barba, nada que dependa del sello va a sellar.",
+      "hablante": "patricia",
+      "pregunta": "¿Qué concluye Camila del EPP disponible?",
+      "opciones": [
+        {
+          "texto": "Se usa lo que hay: algo protege, y Héctor se afeita para la próxima.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "con_lo_que_hay",
+          "desbloquea": [
+            "e_ficha_mascarilla"
+          ],
+          "siguiente": "m3",
+          "feedback": "«Algo protege» suena razonable, pero un lente sin protección lateral es justo por donde entra una salpicadura al diluir. Y la barba de Héctor no es el problema de fondo."
+        },
+        {
+          "texto": "No alcanza, y sumar no lo arregla: nada de eso es lo que pide la hoja, y con barba nada le sella a Héctor. Hay que cambiar el plan.",
+          "solo_si": "hds",
+          "efectos": {
+            "riesgo": -1
+          },
+          "marca": "diagnostico",
+          "desbloquea": [
+            "e_ficha_mascarilla"
+          ],
+          "siguiente": "m3",
+          "feedback": "Ese es el diagnóstico. No dices «no se puede»: dices qué falta y por qué."
+        },
+        {
+          "texto": "«Doble látex, la mascarilla bien apretada con el elástico cruzado y los lentes bien calzados: así queda reforzado y partimos al tiro».",
+          "efectos": {
+            "riesgo": 2
+          },
+          "marca": "refuerzo_casero",
+          "desbloquea": [
+            "e_ficha_mascarilla"
+          ],
+          "siguiente": "m3",
+          "feedback": "Dos capas de látex siguen sin ser el guante que pide el producto, y la mascarilla de polvo no filtra vapores. Lo reforzado es la sensación, no la protección."
+        },
+        {
+          "texto": "Antes de concluir nada, busca la hoja de datos del producto para comparar.",
+          "salvo_si": "hds",
+          "efectos": {},
+          "marca": "hds",
+          "desbloquea": [
+            "e_hds",
+            "e_ficha_mascarilla"
+          ],
+          "siguiente": "m2b",
+          "feedback": "Bien pensado. Sin saber qué pide el fabricante, no puedes decir si el EPP alcanza."
+        }
+      ]
+    },
+    {
+      "id": "m2b",
+      "titulo": "La hoja de datos dice otra cosa",
+      "imagen": "SEG360-IMG077",
+      "escena": "La hoja pide guantes resistentes a químicos, antiparras al diluir y usar el producto en lugares ventilados. Nada de eso calza con el armario: látex delgado, lentes sin lateral, mascarillas para polvo. Y Héctor, con barba de varios días.",
+      "voz": "Ahora Camila tiene algo más que una sensación: tiene el documento del fabricante. Esa diferencia pesa harto cuando hay que conversarlo con Héctor y después con Marisol. Ya no es la opinión de la nueva contra la experiencia de él. Es lo que dice la hoja, y eso se puede mostrar.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué concluye ahora?",
+      "opciones": [
+        {
+          "texto": "Ya que están ahí y Héctor tiene el balde listo, partir con lo que hay y tener harto cuidado al diluir.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "con_lo_que_hay",
+          "siguiente": "m3",
+          "feedback": "Leíste la hoja y decidiste no seguirla. Tener cuidado no reemplaza unas antiparras cuando salta una gota."
+        },
+        {
+          "texto": "El EPP no alcanza para la parte con químico. Hay que cambiar el plan antes de diluir.",
+          "efectos": {
+            "riesgo": -1
+          },
+          "marca": "diagnostico",
+          "siguiente": "m3",
+          "feedback": "Directo y con respaldo. Ahora falta ver cómo se lo dices a Héctor."
+        }
+      ]
+    },
+    {
+      "id": "m3",
+      "titulo": "«Siempre lo hemos hecho así»",
+      "imagen": "SEG360-IMG076",
+      "escena": "Camila le dice a Héctor que no está segura de que el EPP alcance. Héctor se cruza de brazos: «Llevo doce años haciendo esto con lo que hay y nunca ha pasado nada. Siempre lo hemos hecho así».",
+      "condicion_texto": [
+        {
+          "si": "a_ojo",
+          "texto": "El balde ya tiene el producto y el olor se siente en todo el pasillo. Camila le dice a Héctor que no está segura de que el EPP alcance. Héctor se cruza de brazos: «Llevo doce años haciendo esto con lo que hay y nunca ha pasado nada. Siempre lo hemos hecho así»."
+        }
+      ],
+      "voz": "Que nunca haya pasado nada es cierto, y Héctor lo vivió. Lo que no dice esa frase es cuántas veces estuvo cerca, ni si el producto y la bodega son los mismos de antes. Camila no necesita ganarle la discusión. Necesita que los dos terminen la mañana sanos, y que Héctor no sienta que la nueva lo vino a corregir.",
+      "hablante": "narrador",
+      "pregunta": "¿Cómo se lo plantea Camila?",
+      "opciones": [
+        {
+          "texto": "«Te pueden multar por esto, Héctor. Es ilegal».",
+          "efectos": {
+            "confianza": -1
+          },
+          "marca": "amenaza",
+          "siguiente": "m4",
+          "feedback": "Héctor se pone a la defensiva y deja de escuchar. La conversación pasa a ser sobre quién tiene la razón, no sobre cómo trabajar."
+        },
+        {
+          "texto": "«Tú sabes más de esto que yo. Mira lo que dice la hoja de los ojos: ¿cómo lo hacemos sin quedar expuestos?».",
+          "solo_si": "hds",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "alianza",
+          "siguiente": "m4",
+          "feedback": "Héctor lee la hoja con el ceño fruncido. «Esto de las antiparras no lo sabía», dice. Ahora están del mismo lado."
+        },
+        {
+          "texto": "«Tú sabes más de esto que yo. ¿Me ayudas a buscar la hoja de datos? Así vemos qué pide el fabricante y lo hacemos bien los dos».",
+          "salvo_si": "hds",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "hds",
+          "desbloquea": [
+            "e_hds"
+          ],
+          "siguiente": "m4",
+          "feedback": "Héctor sabe exactamente en qué carpeta está. Al leerla dice: «Esto de las antiparras no lo sabía»."
+        },
+        {
+          "texto": "Se queda callada y le sostiene el balde mientras él diluye: no quiere quedar como la que hace problema, y él tiene doce años de experiencia.",
+          "efectos": {
+            "riesgo": 2
+          },
+          "marca": "incidente_ojo",
+          "siguiente": "m3i",
+          "feedback": "Héctor vierte el concentrado desde el bidón, casi a la altura de tu cara. Una salpicadura salta por el costado."
+        }
+      ]
+    },
+    {
+      "id": "m3i",
+      "titulo": "Una gota en el ojo",
+      "imagen": "SEG360-IMG076",
+      "escena": "La salpicadura entra por el costado del lente, justo donde no hay protección lateral. A Camila le arde el ojo derecho y lo cierra por reflejo. Héctor deja el bidón en el suelo, asustado. El lavaojos está junto al estante de productos de limpieza, a diez metros.",
+      "voz": "Ahora lo único que importa son los próximos minutos. No hay que diagnosticar nada ni probar remedios caseros. La hoja de datos dice qué hacer con los ojos, y el lavaojos está ahí justamente para esto. Avisar no es exagerar: es dejar que alguien con más información decida si Camila necesita que la vean.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué hacen?",
+      "opciones": [
+        {
+          "texto": "Camila se frota el ojo con la manga, espera un rato a que deje de arder y siguen, para no asustar a nadie un sábado.",
+          "efectos": {
+            "riesgo": 2,
+            "avance": 10
+          },
+          "marca": "sin_lavado",
+          "siguiente": "m4",
+          "feedback": "Frotar reparte el producto, y la manga puede tener más. El ardor baja un rato y vuelve, y siguen con el mismo EPP."
+        },
+        {
+          "texto": "Héctor la lleva al lavaojos y ella se enjuaga con abundante agua, sin frotarse. Él para la tarea y llama a Marisol para que coordine que la revisen.",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "lavado",
+          "siguiente": "m5b",
+          "feedback": "Marisol pide que nadie siga con el desengrasante y que Héctor acompañe a Camila a la mutualidad. Cortaron la exposición a tiempo."
+        }
+      ]
+    },
+    {
+      "id": "m4",
+      "titulo": "Lo que se puede hacer esta mañana",
+      "imagen": "SEG360-IMG078",
+      "escena": "Son las 9:15. La orden dice desengrasar el sector C, pero el armario no tiene lo que pide la tarea. Quedan casi cuatro horas de turno, el portón del andén sigue cerrado y en el estante hay también un limpiador neutro listo para usar.",
+      "condicion_texto": [
+        {
+          "si": "sin_lavado",
+          "texto": "Son las 9:15. A Camila todavía le molesta el ojo, pero siguen. La orden dice desengrasar el sector C y el armario no tiene lo que pide la tarea. El portón del andén sigue cerrado y en el estante hay también un limpiador neutro listo para usar."
+        }
+      ],
+      "voz": "Cuando el EPP no alcanza, la salida no es hacer lo mismo con más cuidado. Es cambiar el plan. A veces se ventila, a veces se cambia el orden de las tareas, a veces se usa otro producto o la dilución que pide la hoja, y a veces la parte riesgosa se reprograma. Lo que no cambia es que nadie sigue trabajando expuesto mientras se resuelve.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué propone Camila para la mañana?",
+      "opciones": [
+        {
+          "texto": "Partir con el desengrasante en el fondo, con el portón cerrado para no enfriar la bodega ni que entre polvo, pero solo un rato y con la mascarilla puesta.",
+          "efectos": {
+            "riesgo": 2,
+            "avance": 20
+          },
+          "marca": "incidente_resp",
+          "siguiente": "m4i",
+          "feedback": "Avanzan rápido los primeros veinte minutos. Después el olor ya no se va del pasillo."
+        },
+        {
+          "texto": "Abrir portón y puerta lateral, y hacer lo que no lleva químico: cartones, barrer, ordenar. El desengrasante espera al nitrilo y las antiparras.",
+          "efectos": {
+            "riesgo": -1,
+            "avance": 30
+          },
+          "marca": "alternativa",
+          "siguiente": "m5",
+          "feedback": "A las once el sector C está despejado y barrido. Falta el desengrase, pero nadie respiró vapores ni se arriesgó los ojos."
+        },
+        {
+          "texto": "Diluirlo el doble de lo normal, «para que sea más suave», y partir con lo que hay.",
+          "efectos": {
+            "riesgo": 1,
+            "avance": 25
+          },
+          "marca": "dilucion_inventada",
+          "siguiente": "m5",
+          "feedback": "Inventar la dilución no es seguir la hoja: puede que no limpie y haya que repasar. Y al diluir, el concentrado igual puede saltar a los ojos."
+        },
+        {
+          "texto": "Revisar con Patricia si el limpiador neutro sirve para el piso y con qué EPP. Mientras responde, ventilar y barrer.",
+          "solo_si": "hds",
+          "efectos": {
+            "riesgo": -1,
+            "avance": 25
+          },
+          "marca": "alternativa",
+          "siguiente": "m5",
+          "feedback": "Le mandas a Patricia una foto de la etiqueta. Mientras tanto, el portón abierto cambia el aire del sector en minutos."
+        }
+      ]
+    },
+    {
+      "id": "m4i",
+      "titulo": "Un olor que pica",
+      "imagen": "SEG360-IMG076",
+      "escena": "Después de veinte minutos fregando en el fondo, a Héctor le pica la garganta y empieza a toser. A Camila le lloran los ojos. Las mascarillas de polvo están húmedas y el olor del desengrasante llena el pasillo.",
+      "voz": "El cuerpo está avisando. Una mascarilla para polvo no frena vapores, y en un rincón sin ventilación el producto se acumula. Lo primero no es aguantar ni terminar la parte que falta. Es salir de ahí, dejar que entre aire y avisar a quien corresponde.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué hacen?",
+      "opciones": [
+        {
+          "texto": "Abren un poco el portón, se cambian la mascarilla por una nueva y siguen: les falta poco, ya están ahí y afuera hace frío.",
+          "efectos": {
+            "riesgo": 2,
+            "avance": 15
+          },
+          "marca": "sigue_expuesta",
+          "siguiente": "m5",
+          "feedback": "Terminan el pasillo, pero Héctor sigue tosiendo a mediodía y a Camila le duele la cabeza."
+        },
+        {
+          "texto": "Dejan todo, salen al aire libre, abren el portón desde afuera y avisan a Marisol. Si la tos sigue, que revisen a Héctor.",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "salida_aire",
+          "desbloquea": [
+            "e_hds"
+          ],
+          "siguiente": "m5",
+          "feedback": "Al aire libre, la tos de Héctor baja. Marisol pide que no vuelvan a entrar hasta que el sector esté ventilado y que Héctor vaya a la mutualidad si la molestia sigue."
+        }
+      ]
+    },
+    {
+      "id": "m5",
+      "titulo": "El mensaje a Marisol",
+      "imagen": "SEG360-IMG078",
+      "escena": "Marisol está de turno por teléfono y Rodrigo pasa a las 11:30 a ver cómo va la bodega. Camila tiene el celular en la mano y no quiere sonar como que se está quejando.",
+      "condicion_texto": [
+        {
+          "si": "salida_aire",
+          "texto": "Héctor ya respira mejor en el andén. Marisol sabe que hubo un problema con el olor, pero no los detalles, y Rodrigo pasa a las 11:30. Camila tiene el celular en la mano y tiene que explicar qué falló sin que suene a excusa ni a reclamo."
+        }
+      ],
+      "voz": "Avisar bien es una habilidad, no un rasgo de carácter. Un buen aviso tiene tres partes: lo que viste, lo que falta y lo que propones. Sin adjetivos y sin culpables. Así Marisol puede decidir rápido, y Rodrigo, que apoya la prevención cuando ve datos concretos, tiene con qué apoyarla.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué mensaje le manda Camila a Marisol?",
+      "opciones": [
+        {
+          "texto": "«Marisol, perdona que te moleste un sábado, pero el EPP está malo y así no se puede trabajar. Avísame qué hacemos».",
+          "efectos": {
+            "confianza": -1
+          },
+          "marca": "aviso_vago",
+          "siguiente": "m6",
+          "feedback": "Marisol no sabe qué está malo ni qué necesitas. Te llama apurada y la conversación parte mal."
+        },
+        {
+          "texto": "No le escribe: hacen lo que se pueda y el lunes que vean ellos.",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "sin_aviso",
+          "siguiente": "m6",
+          "feedback": "Nadie sabe por qué la tarea quedó así. Marisol termina llamando ella, preocupada por el silencio."
+        },
+        {
+          "texto": "«Marisol, la hoja del DG-40 pide nitrilo, antiparras y ventilación. Hay látex delgado, lentes sin lateral y mascarillas de polvo, y Héctor trae barba de varios días. Propongo hoy lo sin químico y el desengrase con el EPP correcto».",
+          "solo_si": "hds",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "aviso_hechos",
+          "siguiente": "m6",
+          "feedback": "Marisol responde en dos minutos: «Gracias por el detalle. Déjame hablarlo con Rodrigo»."
+        },
+        {
+          "texto": "«Marisol, el EPP que hay no me da confianza para el desengrasante y no encuentro la hoja de datos. ¿Me dices dónde está o paramos esa parte hasta revisarla?».",
+          "salvo_si": "hds",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "aviso_hechos",
+          "desbloquea": [
+            "e_hds"
+          ],
+          "siguiente": "m6",
+          "feedback": "Marisol te dice en qué carpeta está la hoja y que paren el desengrase mientras lo revisan. Pediste ayuda con un dato concreto."
+        }
+      ]
+    },
+    {
+      "id": "m5b",
+      "titulo": "Contarlo bien",
+      "imagen": "SEG360-IMG078",
+      "escena": "Camila ya se enjuagó el ojo y espera a Héctor para ir a que la revisen. Marisol sabe que hubo una salpicadura, pero no los detalles, y tiene que decidir qué se hace con el resto de la mañana antes de que Rodrigo pase a las 11:30. Le pide a Camila que le escriba qué pasó.",
+      "voz": "Después de un susto, lo primero que sale es pedir disculpas o quitarle importancia. Ninguna de las dos cosas ayuda a Marisol a decidir. Lo que sirve es contar qué pasó, en qué condiciones y qué propones para lo que queda. No se trata de buscar culpables, ni a Héctor ni a ti. Se trata de que no vuelva a pasar.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué le escribe Camila?",
+      "opciones": [
+        {
+          "texto": "«Perdón, Marisol, fue culpa mía por no fijarme. Ya estoy bien, no es nada».",
+          "efectos": {
+            "riesgo": 1
+          },
+          "marca": "minimiza",
+          "siguiente": "m6",
+          "feedback": "Marisol se queda tranquila, pero sin datos. No sabe que los lentes no tienen protección lateral, y el desengrase podría seguir igual."
+        },
+        {
+          "texto": "«Marisol: al diluir me saltó desengrasante al ojo derecho por el costado del lente, que no tiene protección lateral. Me enjuagué en el lavaojos. En el armario solo hay látex delgado y mascarillas para polvo. Propongo no seguir con el producto hoy».",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "aviso_hechos",
+          "siguiente": "m6",
+          "feedback": "Con ese mensaje Marisol entiende qué pasó, por qué y qué hacer ahora. Ya lo puede reportar como corresponde."
+        },
+        {
+          "texto": "«Marisol, Héctor me salpicó con el producto. Él siempre lo hace así».",
+          "efectos": {
+            "confianza": -1
+          },
+          "marca": "aviso_culpa",
+          "siguiente": "m6",
+          "feedback": "Es un dato, pero puesto como acusación. Héctor se siente apuntado y lo importante, que faltaban antiparras, queda en segundo plano."
+        }
+      ]
+    },
+    {
+      "id": "m6",
+      "titulo": "«¿No se puede hacer igual, con cuidado?»",
+      "imagen": "SEG360-IMG078",
+      "escena": "Marisol llama: «Rodrigo quiere la bodega impecable para el lunes, viene gente de Los Aromos. ¿No se puede hacer igual, con cuidado? Son dos horas». Patricia no trabaja los sábados, pero dejó dicho que le escriban si hay dudas con productos químicos.",
+      "condicion_texto": [
+        {
+          "si": "lavado",
+          "texto": "Marisol llama, preocupada por lo que pasó. «Rodrigo igual pregunta si se puede terminar hoy, porque el lunes viene gente de Los Aromos. ¿Qué hacemos con lo que falta?». Patricia no trabaja los sábados, pero dejó dicho que le escriban si hay dudas con productos químicos."
+        },
+        {
+          "si": "salida_aire",
+          "texto": "Marisol llama, preocupada por la tos de Héctor. «Rodrigo igual pregunta si se puede terminar hoy, porque el lunes viene gente de Los Aromos. ¿Qué hacemos con lo que falta?». Patricia no trabaja los sábados, pero dejó dicho que le escriban si hay dudas con productos químicos."
+        }
+      ],
+      "voz": "La presión no desaparece porque Camila tenga razón. Marisol tiene que responderle a Rodrigo, y Rodrigo tiene un cliente que viene el lunes. Lo que puede cambiar esta conversación es una propuesta que cuide a las personas y que también resuelva la bodega. Y Patricia, aunque hoy no está, puede orientar con un mensaje.",
+      "hablante": "narrador",
+      "pregunta": "¿Qué propone Camila?",
+      "opciones": [
+        {
+          "texto": "«Ya, lo hacemos con cuidado y rapidito, abrimos un poco el portón y listo». No quiere complicar más a Marisol.",
+          "efectos": {
+            "riesgo": 2,
+            "avance": 30
+          },
+          "marca": "cede",
+          "siguiente": "m7",
+          "feedback": "Terminan el desengrase con el mismo EPP. La bodega queda limpia, pero los dos pasaron dos horas expuestos y nada cambió para la próxima."
+        },
+        {
+          "texto": "Le dice que ella no lo hace, pero que Héctor puede hacerlo solo si quiere: total, él tiene la experiencia y siempre lo ha hecho así.",
+          "efectos": {
+            "riesgo": 1,
+            "confianza": -1
+          },
+          "marca": "traspasa",
+          "siguiente": "m7",
+          "feedback": "Te sacas el riesgo de encima, pero se lo dejas a Héctor, con barba y sin antiparras. El problema sigue igual; solo cambia de persona."
+        },
+        {
+          "texto": "Consultar a Patricia y dejar el desengrase para el lunes temprano, con nitrilo y antiparras. Hoy: barrer, ordenar y ventilar.",
+          "efectos": {
+            "avance": 10,
+            "confianza": 1
+          },
+          "marca": "reprogramada",
+          "desbloquea": [
+            "e_patricia"
+          ],
+          "siguiente": "m7",
+          "feedback": "Patricia responde a la media hora y respalda el plan. Marisol se lo pasa a Rodrigo con los datos, y él lo aprueba."
+        }
+      ]
+    },
+    {
+      "id": "m7",
+      "titulo": "Lo que queda por escrito",
+      "imagen": "SEG360-IMG078",
+      "escena": "Mediodía. Rodrigo pasó por la bodega, miró el sector C y preguntó qué faltaba. Antes de terminar la jornada, Camila tiene en el celular el formulario de solicitud de EPP y el cuaderno de novedades de la bodega.",
+      "condicion_texto": [
+        {
+          "si": "lavado",
+          "texto": "Camila volvió de la mutualidad con indicación de avisar si la molestia vuelve. Antes de irse, Camila tiene en el celular el formulario de solicitud de EPP y el cuaderno de novedades de la bodega."
+        },
+        {
+          "si": "cede",
+          "texto": "Mediodía. El sector C quedó desengrasado y Rodrigo se fue conforme. A Camila le molestan un poco las manos y Héctor dice que el olor «es normal». Antes de terminar la jornada, Camila tiene en el celular el formulario de solicitud de EPP y el cuaderno de novedades de la bodega."
+        }
+      ],
+      "voz": "Lo que no queda escrito se olvida el lunes. Y lo que se olvida vuelve a pasar otro sábado, con otra persona. Escribir no es acusar. Es dejarle al equipo y al Comité Paritario los datos para pedir lo que falta: guantes, antiparras, ventilación en el fondo y una forma de hacer esta tarea que no dependa de la suerte.",
+      "hablante": "patricia",
+      "pregunta": "¿Qué deja registrado Camila?",
+      "opciones": [
+        {
+          "texto": "Una nota en el cuaderno: «Héctor no quería usar EPP».",
+          "efectos": {
+            "confianza": -1
+          },
+          "marca": "culpa",
+          "siguiente": "FIN",
+          "feedback": "No es justo ni ayuda: Héctor usó lo que había. Lo que faltaba era el EPP correcto, y esa nota pone el foco en la persona equivocada."
+        },
+        {
+          "texto": "Una solicitud con hechos: lo que pide la hoja, lo que había, la falta de ventilación y la propuesta. Y el reporte, si hubo incidente.",
+          "efectos": {
+            "confianza": 1
+          },
+          "marca": "registro",
+          "desbloquea": [
+            "e_solicitud"
+          ],
+          "siguiente": "FIN",
+          "feedback": "Marisol la reenvía a Patricia y la lleva a la próxima reunión del Comité Paritario. El sábado siguiente, el armario tiene lo que pide la hoja."
+        },
+        {
+          "texto": "Nada: ya se habló todo por teléfono con Marisol, y escribirlo le parece agrandar algo que ya está resuelto y que nadie le pidió.",
+          "efectos": {},
+          "marca": "sin_registro",
+          "siguiente": "FIN",
+          "feedback": "La conversación existió, pero el lunes nadie recuerda los detalles. El armario sigue con látex delgado."
+        }
+      ]
+    }
+  ],
+  "finales": [
+    {
+      "id": "f_seguro",
+      "tipo": "seguro",
+      "titulo": "Tarea reprogramada, con el EPP correcto",
+      "texto": "El sábado el sector C queda despejado, barrido y ventilado. El desengrase se hace el lunes a primera hora, con guantes de nitrilo, antiparras, el portón abierto y la dilución que indica la hoja, revisada con Patricia.\n\nNadie quedó expuesto y nadie quedó como «la que hace problema»: Camila llegó con hechos, una propuesta y la hoja de datos en la mano. Y Héctor fue el primero en ponerse las antiparras.",
+      "voz": "No hiciste todo el sábado, y eso estuvo bien. Hiciste lo que se podía hacer sin exponerte, avisaste con datos y propusiste una salida que Marisol pudo defender ante Rodrigo. Fíjate que la tarea no se suspendió por miedo: se reprogramó con el equipo correcto. Esa diferencia es la que hace que la próxima vez te escuchen.",
+      "hablante": "narrador",
+      "condicion": {
+        "riesgo_max": 2,
+        "confianza_min": 6,
+        "requiere_marcas": [
+          "alternativa",
+          "aviso_hechos",
+          "reprogramada",
+          "registro"
+        ],
+        "excluye_marcas": [
+          "incidente_ojo",
+          "incidente_resp",
+          "cede",
+          "traspasa",
+          "dilucion_inventada"
+        ]
+      }
+    },
+    {
+      "id": "f_ojo",
+      "tipo": "inseguro",
+      "titulo": "Una salpicadura que se pudo evitar",
+      "texto": "La gota de desengrasante entró por donde el lente no protegía: el costado. El ojo de Camila quedó irritado y la mañana cambió de prioridad.\n\nLa salpicadura no fue mala suerte. Había un concentrado que se diluía a la altura de la cara, lentes sin protección lateral y una costumbre de «hacerlo con lo que hay». De ahí sale el aprendizaje: lavaojos al tiro, avisar, reportar, y que el armario tenga antiparras antes de que se vuelva a diluir.",
+      "voz": "Quedarse callada para no hacer problema es muy humano, sobre todo cuando eres nueva. Pero aquí el silencio terminó en un ojo irritado. Si fuiste al lavaojos y avisaste, hiciste lo que correspondía en ese momento. Ahora piensa en el momento anterior: qué podrías haber dicho antes de sostener ese balde.",
+      "hablante": "narrador",
+      "condicion": {
+        "requiere_marcas": [
+          "incidente_ojo"
+        ]
+      }
+    },
+    {
+      "id": "f_respiratorio",
+      "tipo": "inseguro",
+      "titulo": "El aire del fondo",
+      "texto": "Veinte minutos con el portón cerrado bastaron para que el desengrasante llenara el pasillo y Héctor terminara tosiendo. Las mascarillas de polvo no estaban hechas para vapores, y con barba ninguna habría sellado.\n\nLo que se aprende aquí no es que Héctor debió afeitarse. Es que una tarea con químicos en un lugar cerrado se organiza con ventilación y el producto bien diluido antes de pensar en mascarillas.",
+      "voz": "El frío de la mañana hizo que cerrar el portón pareciera lo lógico. Y la mascarilla en la cara daba la sensación de estar protegidos. Ninguna de las dos cosas era cierta. Si salieron al aire libre y avisaron, cortaron la exposición a tiempo. Lo importante ahora es que la próxima limpieza parta con el portón abierto.",
+      "hablante": "narrador",
+      "condicion": {
+        "requiere_marcas": [
+          "incidente_resp"
+        ]
+      }
+    },
+    {
+      "id": "f_parcial",
+      "tipo": "parcial",
+      "titulo": "A medias y con exposición",
+      "texto": "La mañana terminó sin un incidente visible, pero tampoco bien resuelta. Parte de la limpieza se hizo con un EPP que no correspondía, o sin avisar, o con un plan que nadie dejó por escrito.\n\nEl lunes el armario sigue igual, y el próximo sábado alguien va a volver a decir «siempre lo hemos hecho así». Que no haya pasado nada hoy no significa que la tarea estuviera bien organizada.",
+      "voz": "Esta vez no hubo ojos irritados ni tos, y eso vale. Pero mira dónde estuvo la protección de verdad: en la suerte. Vuelve a las decisiones donde dudaste. Quizás faltó la hoja de datos, quizás el aviso no tuvo hechos o quizás cediste ante la presión. Cualquiera de esas decisiones, tomada distinto, cambia el final.",
+      "hablante": "narrador",
+      "condicion": {}
+    }
+  ],
+  "regla_final": "Se evalúa en orden. Final seguro: exposición de 2 o menos, confianza de 6 o más, alternativa segura aplicada, aviso con hechos a Marisol, tarea reprogramada y solicitud registrada, sin incidentes, sin ceder ante la presión, sin traspasar la tarea a Héctor y sin inventar la dilución. Si no, y hubo salpicadura en el ojo: final del incidente ocular con aprendizaje. Si no, y hubo irritación por vapores: final del incidente respiratorio con aprendizaje. En cualquier otro caso: tarea hecha a medias y con exposición.",
+  "debrief": {
+    "titulo": "Lo que pasó y por qué",
+    "puntos": [
+      "Con EPP insuficiente o incompatible, la salida no es «hacer lo que se pueda»: es cambiar el plan. Ventilar, adelantar lo que no lleva químico, usar otro producto o la dilución que indica la hoja, o reprogramar la parte riesgosa.",
+      "Sumar equipos que no corresponden no suma protección: doble látex no es un guante resistente, una mascarilla de polvo no filtra vapores y, con barba, nada que dependa del sello va a sellar.",
+      "Ante «siempre lo hemos hecho así», sirve reconocer la experiencia del otro y apoyarse en la hoja de datos. La conversación deja de ser quién tiene la razón y pasa a ser cómo lo hacemos sin exponernos.",
+      "Un buen aviso tiene tres partes: lo que viste, lo que falta y lo que propones. Eso no es hacer problema: es darle a la jefatura con qué decidir.",
+      "Si hay una salpicadura o irritación: detener la tarea, lavaojos o aire fresco según la hoja de datos, avisar y buscar atención. Después, reportar para que no se repita.",
+      "Dejar por escrito la solicitud, sin culpables, es lo que hace que el armario cambie y que el Comité Paritario pueda empujar la mejora."
+    ],
+    "voz": "Cuando reviso un caso así no pregunto quién se equivocó. Pregunto qué hizo que fuera fácil hacerlo mal. Un sábado con poca gente, un armario incompleto, el frío que invita a cerrar el portón y una frase que pesa: siempre lo hemos hecho así. Camila no tenía que ganarle a nadie. Tenía que frenar a tiempo, proponer algo y avisar con hechos. Eso se aprende, y se practica.",
+    "hablante": "patricia",
+    "pregunta_transferencia": "¿Qué tarea de tu trabajo se hace «como siempre» con un equipo que no calza del todo? Escribe cómo se lo plantearías a tu jefatura: qué viste, qué falta y qué propones mientras se resuelve."
+  },
+  "imagenes": [
+    {
+      "id": "SEG360-IMG076",
+      "titulo": "Antes de diluir",
+      "uso": "Presentación del caso y nodos con Héctor. Muestra el momento previo a la tarea: los dos leen la hoja de datos junto al balde y al bidón cerrado, en el fondo poco ventilado de la bodega. No muestra la dilución ni una práctica insegura.",
+      "prompt": "Realistic editorial photograph, Saturday morning, cool dim light in the back aisle of a mid-sized office and cleaning supplies distributor warehouse in Santiago, Chile, with a closed metal roller door at the end. A Chilean man in his late fifties with several days of gray stubble, maintenance worker in a dark work jacket, and a Chilean woman in her mid-twenties, warehouse assistant, stand side by side reading a printed safety data sheet in a binder. Next to them on the concrete floor, a plastic bucket of water and a closed white jerrycan of concentrated degreaser. Shelves of cleaning products in the background. Candid, attentive expressions, not posed. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text, no logos, no real brands.",
+      "alt": "En el fondo de la bodega, con el portón cerrado, un hombre mayor con barba de varios días y una auxiliar joven leen juntos una hoja de datos en una carpeta. A sus pies hay un balde con agua y un bidón de desengrasante cerrado."
+    },
+    {
+      "id": "SEG360-IMG077",
+      "titulo": "Un armario que no alcanza",
+      "uso": "Nodos del armario y de la hoja de datos. Es un ejemplo de EPP insuficiente para la tarea con desengrasante: guantes de látex delgados, lentes sin protección lateral y mascarillas para polvo. No es un conjunto recomendado.",
+      "prompt": "Realistic editorial still-life photograph of an open metal PPE cabinet in a warehouse, soft side light. On the shelves: a box of thin disposable latex gloves almost empty, two pairs of basic safety glasses without side shields, a box of disposable dust masks, two pairs of rubber boots and folded plastic aprons. Clearly no chemical-resistant gloves and no goggles. A hand holds a printed safety data sheet in front of the cabinet, slightly out of focus. The image illustrates insufficient equipment for a chemical cleaning task, an example of a condition to be corrected. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text, no logos, no real brands.",
+      "alt": "Armario de EPP abierto con una caja casi vacía de guantes de látex delgados, dos lentes sin protección lateral y mascarillas para polvo. Una mano sostiene una hoja de datos delante del armario."
+    },
+    {
+      "id": "SEG360-IMG078",
+      "titulo": "Portón abierto y un plan nuevo",
+      "uso": "Nodos de la alternativa, del aviso y del registro. Muestra la alternativa segura: bodega ventilada con el portón abierto, tareas sin químico en marcha y Camila escribiendo el aviso a su jefatura.",
+      "prompt": "Realistic editorial photograph, Saturday late morning, inside a mid-sized distribution warehouse in Santiago, Chile, with the loading dock roller door wide open letting in daylight and fresh air. In the foreground a Chilean woman in her mid-twenties, warehouse assistant in a work jacket, types a message on her phone with a calm, focused expression. Behind her, a Chilean man in his late fifties sweeps the concrete floor and flattened cardboard is stacked neatly for recycling. The concentrated degreaser jerrycan sits closed on its shelf, unused. Candid, not posed. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text on the phone, no logos, no real brands.",
+      "alt": "Con el portón del andén abierto y la bodega iluminada, una auxiliar escribe un mensaje en su celular mientras atrás un compañero barre el piso. El bidón de desengrasante está cerrado en su estante."
+    }
+  ]
+}

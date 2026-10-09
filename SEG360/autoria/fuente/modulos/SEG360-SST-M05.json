@@ -1,0 +1,761 @@
+{
+  "id": "SEG360-SST-M05",
+  "ruta": "SST",
+  "numero": 5,
+  "titulo": "Ergonomía, fatiga y organización del trabajo",
+  "subtitulo": "Puesto, ritmo y equipo: cambiar el trabajo, no solo aguantarlo",
+  "resultado": "Ante un puesto y un proceso de trabajo descritos, proponer cambios factibles en el puesto, la tarea y la organización que reduzcan carga física, fatiga y riesgo psicosocial, sin reducirlo todo a «hacer pausas».",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-SST-M05-INTRO",
+    "titulo": "Las 13:10 en el local",
+    "texto": "Es mediodía en el local de atención de Pehuén. Hay seis personas en la fila, el celular de Daniela vibra con pedidos por WhatsApp y el notebook está sobre el mesón, tan bajo que lo mira con el cuello doblado. Su colación, otra vez, va a tener que esperar.\n\nEn este módulo vas a mirar el trabajo completo: **el puesto, la tarea y la forma en que se organiza la jornada**. Porque cuando el cuerpo y la cabeza se cansan, casi nunca es solo un tema de aguante.",
+    "voz": "A Daniela le duele el cuello desde hace meses. Le han dicho que haga pausas, que estire los brazos, que tome agua. Todo eso está bien, pero no explica por qué la fila se arma justo a la hora de su colación, ni por qué el notebook vive en un mesón pensado para clientes. En este módulo vamos a mirar el trabajo como lo mira alguien que quiere cambiarlo, no solo soportarlo. Vas a ajustar puestos, a distinguir pausas que sirven de pausas de adorno, a reconocer la carga psicosocial y, al final, a rediseñar la jornada de Daniela con propuestas que una jefatura podría aprobar mañana.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG019",
+    "logros": [
+      "Ajustar un puesto con pantalla o mesón y reconocer cuándo el problema no se resuelve solo con ajustes.",
+      "Distinguir pausas que recuperan de pausas de adorno y proponer cambios de tarea y de organización frente a la fatiga.",
+      "Reconocer factores de riesgo psicosocial, entender qué mide el cuestionario CEAL-SM y qué canales existen ante acoso o violencia.",
+      "Rediseñar la jornada de un puesto real con cambios factibles en el puesto, el proceso y la organización."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-SST-M05-L01",
+      "titulo": "Tu puesto: pantalla, silla, alcances y mesón",
+      "resultado": "Ante un puesto con pantalla o un mesón de atención, identificar los ajustes de silla, pantalla, iluminación y alcances que reducen la carga postural y reconocer cuándo se necesita un cambio de equipamiento o de tarea.",
+      "minutos": 40,
+      "fuentes": ["SST-TMERT", "SST-DS44", "SST-CT184", "SST-OIT"],
+      "pantallas": [
+        {
+          "id": "SEG360-SST-M05-L01-P01",
+          "tipo": "apertura",
+          "titulo": "El notebook que se quedó a vivir en la mesa",
+          "escena": "Son las 11:00 en la oficina del segundo piso. Daniela subió a cuadrar los pedidos de la semana en el notebook que comparte el equipo. Lleva cuarenta minutos con la cabeza inclinada hacia la pantalla, el mouse lejos y el sol de la ventana pegando de lado. Se frota el cuello sin darse cuenta.",
+          "pregunta": "¿Cuánto de ese dolor viene del cuerpo de Daniela y cuánto viene del puesto?",
+          "texto": "Nadie eligió que el puesto quedara así. Se fue armando de a poco: un notebook prestado, una silla que nadie reguló, una cortina que no cierra. Esa es justamente la historia que vamos a revisar.",
+          "voz": "Nadie hizo nada mal a propósito. El notebook llegó para una tarea corta y se quedó. La silla es buena, pero está regulada para otra persona. La ventana estaba ahí antes que el escritorio. Así se arman la mayoría de los puestos de trabajo: por acumulación, no por diseño. En esta lección vas a aprender a mirarlos al revés, preguntándote qué le está pidiendo el puesto al cuerpo durante ocho horas, y qué se puede cambiar sin esperar a que algo duela de verdad.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG020",
+          "icono": "laptop"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Ergonomía: el trabajo se adapta a la persona",
+          "texto": "La ergonomía estudia cómo calzan el trabajo y la persona: el puesto, las herramientas, la tarea y el tiempo. La idea central es simple: **se ajusta el trabajo a quien lo hace**, no al revés.\n\nEl cuerpo tolera bien casi cualquier postura por un rato. El problema aparece cuando se suman **postura forzada, repetición, fuerza y poco tiempo para recuperarse**, día tras día.",
+          "bloques": [
+            { "icono": "scan-eye", "titulo": "Postura", "texto": "Cuello doblado, hombros arriba, muñecas quebradas o brazos estirados por mucho rato." },
+            { "icono": "refresh-cw", "titulo": "Repetición", "texto": "El mismo gesto cientos de veces: digitar, escanear, girar el tronco hacia el mismo lado." },
+            { "icono": "clock", "titulo": "Recuperación", "texto": "Si el ritmo no deja respiros, los tejidos no alcanzan a recuperarse entre esfuerzos." }
+          ],
+          "nota": { "tipo": "norma", "texto": "El Ministerio de Salud tiene un protocolo para vigilar los trastornos musculoesqueléticos de extremidad superior (TMERT). Mira justamente estos factores: repetitividad, postura, fuerza y tiempos de recuperación." },
+          "voz": "Cuando alguien dice «me duele la espalda por mi mala postura», está contando la mitad de la historia. La postura casi nunca es una elección libre: es la respuesta del cuerpo a una pantalla baja, a un mouse lejos o a un mesón demasiado alto. Por eso la ergonomía no parte corrigiendo a la persona, parte mirando el puesto y la tarea. Y hay un factor que se olvida harto: el tiempo. Una postura incómoda por cinco minutos no es lo mismo que la misma postura durante toda la tarde, sin un respiro.",
+          "hablante": "narrador",
+          "profundiza": "Los trastornos musculoesqueléticos son lesiones de músculos, tendones, nervios y articulaciones que se desarrollan de a poco. Al principio aparecen como cansancio o molestia que se pasa con el descanso de la noche. Si la exposición sigue igual, la molestia empieza a durar más, a aparecer antes en la jornada y a interferir con el sueño o con actividades fuera del trabajo. En la extremidad superior son frecuentes el dolor de cuello y hombros, la tendinitis y el síndrome del túnel carpiano.\n\nEl protocolo TMERT del Minsal orienta a las empresas para identificar tareas con estos factores, evaluarlas y aplicar medidas. Lo interesante es que muchas medidas no son médicas ni caras: cambiar la altura de trabajo, acercar lo que se usa seguido, alternar tareas, repartir mejor los picos o agregar apoyos mecánicos. El Código del Trabajo, en su artículo 184, deja claro que la responsabilidad de proteger la salud es de la empresa, y el DS 44 pide identificar estos peligros en la matriz de riesgos como cualquier otro. Tu aporte es contar con precisión qué te pasa y en qué tarea.",
+          "icono": "scan-eye"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P03",
+          "tipo": "escena3d",
+          "titulo": "Recorre la oficina con ojos de ergonomía",
+          "escena": "oficina",
+          "variante": "inicial",
+          "modo": "detectar",
+          "consigna": "Recorre la oficina del segundo piso. Marca lo que es un riesgo y decide cuál priorizarías. Ojo: no todo lo que ves está mal.",
+          "texto": "Arrastra para mirar alrededor. Marca cada elemento como riesgo o como algo que está bien, y asígnale una prioridad.",
+          "puntos": [
+            { "objeto": "monitor_bajo", "titulo": "Notebook sin soporte", "texto": "El notebook está directo sobre el escritorio. Para leer, Daniela inclina el cuello hacia adelante y abajo durante toda la sesión.", "es_riesgo": true, "prioridad": "alta", "accion": "Elevar la pantalla con un soporte o una pantalla externa y usar teclado y mouse aparte. Si no hay equipos, pedirlos a la jefatura: es una mejora barata con mucho efecto." },
+            { "objeto": "silla", "titulo": "Silla ajustable", "texto": "La silla tiene regulación de altura, respaldo y apoyabrazos. Está regulada para alguien más alto, pero se puede ajustar.", "es_riesgo": false, "prioridad": null, "accion": "Ajustarla al inicio de cada sesión: pies apoyados, rodillas a la altura de las caderas o un poco más abajo, espalda apoyada. La silla está bien; falta usarla." },
+            { "objeto": "ventana_reflejo", "titulo": "Reflejo en la pantalla", "texto": "El sol de la ventana pega de lado en la pantalla. Para leer, la persona se acerca y entrecierra los ojos.", "es_riesgo": true, "prioridad": "media", "accion": "Regular la cortina y girar el escritorio para que la ventana quede al costado y no detrás ni delante de la pantalla. Si la cortina no funciona, reportarlo." },
+            { "objeto": "telefono", "titulo": "Teléfono de escritorio", "texto": "El teléfono está al alcance de la mano y tiene un auricular normal.", "es_riesgo": false, "prioridad": null, "accion": "Está bien ubicado. Si las llamadas son largas y hay que escribir al mismo tiempo, conviene un audífono con micrófono en vez de sujetar el auricular con el hombro." },
+            { "objeto": "cafe_teclado", "titulo": "Tazón junto al teclado y la regleta", "texto": "Un tazón de café lleno junto al teclado, a centímetros de la regleta.", "es_riesgo": true, "prioridad": "media", "accion": "Dejar los líquidos en otra superficie o en un lugar fijo lejos de equipos y conexiones. No es tema ergonómico, pero un derrame sobre la regleta es un riesgo eléctrico." },
+            { "objeto": "cajon_abierto", "titulo": "Cajón inferior abierto", "texto": "El cajón de abajo quedó abierto en la zona por donde se pasa hacia la impresora.", "es_riesgo": true, "prioridad": "media", "accion": "Cerrarlo después de usarlo. Si se usa tanto que vive abierto, mover lo que contiene a una altura cómoda: eso también es ergonomía." },
+            { "objeto": "zapatilla_cadena", "titulo": "Dos zapatillas en cadena", "texto": "Una zapatilla eléctrica enchufada a otra para alimentar el notebook, la lámpara y el cargador del celular.", "es_riesgo": true, "prioridad": "alta", "accion": "No agregar más equipos y avisar para que se reemplacen por una sola zapatilla certificada o un punto de conexión adicional, instalado por personal autorizado." },
+            { "objeto": "extintor_oficina", "titulo": "Extintor de la oficina", "texto": "El extintor está colgado, señalizado y sin nada delante.", "es_riesgo": false, "prioridad": null, "accion": "Mantener el acceso despejado. No es parte del puesto, pero es bueno saber dónde está." }
+          ],
+          "voz": "Recorre la oficina con calma, como si fuera tu primer día. Te vas a encontrar con cosas que afectan el cuerpo, como la pantalla o el reflejo, y otras que no son de ergonomía pero que igual están ahí, porque el trabajo real no viene separado por temas. Y no marques todo como riesgo: hay elementos que están bien, y reconocerlos también es parte de mirar con criterio.",
+          "hablante": "narrador",
+          "icono": "scan-eye"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P04",
+          "tipo": "proceso",
+          "titulo": "Ajustar un puesto con pantalla, en orden",
+          "texto": "El orden importa: si ajustas primero la pantalla y después la silla, vas a tener que volver a empezar. Parte por el cuerpo y termina por los objetos.",
+          "pasos": [
+            { "titulo": "Silla", "icono": "user-check", "texto": "Altura para que los pies queden apoyados en el piso y los muslos más o menos horizontales. Espalda contra el respaldo. Si no llegas al piso, pide un reposapiés." },
+            { "titulo": "Mesa, teclado y mouse", "icono": "hand", "texto": "Codos cerca del cuerpo, en ángulo cómodo, y antebrazos apoyados. Teclado y mouse juntos, a la altura de los codos, sin estirar el brazo." },
+            { "titulo": "Pantalla", "icono": "laptop", "texto": "Frente a ti, a una distancia de un brazo extendido. El borde superior a la altura de los ojos o un poco más abajo. Con notebook, eso exige soporte y teclado externo." },
+            { "titulo": "Luz y reflejos", "icono": "sun", "texto": "Ventanas al costado de la pantalla, no detrás ni al frente. Cortinas reguladas y brillo de pantalla parecido al del entorno." },
+            { "titulo": "Alcances", "icono": "route", "texto": "Lo que usas a cada rato, cerca: teléfono, documentos, lector de códigos. Lo ocasional, más lejos. Si giras el tronco cien veces al día, reordena." }
+          ],
+          "voz": "Este orden no es un capricho. La silla define dónde quedan tus codos y tus ojos, y desde ahí se ajusta todo lo demás. Un detalle práctico: el notebook es cómodo para llevar, pero no para trabajar horas. O la pantalla queda a buena altura y el teclado te obliga a subir los hombros, o el teclado queda bien y la pantalla te dobla el cuello. Por eso, para jornadas largas, el soporte y el teclado externo no son un lujo: son la forma de que el notebook sirva para lo que se está usando.",
+          "hablante": "narrador",
+          "profundiza": "No existe una postura perfecta que haya que mantener toda la jornada. Las recomendaciones de altura y distancia son puntos de partida razonables, no medidas exactas: una persona con lentes progresivos, por ejemplo, suele necesitar la pantalla algo más baja para no echar la cabeza hacia atrás. Lo que sí se busca es que la postura habitual sea neutra, es decir, con las articulaciones cerca de su posición de descanso, y que puedas cambiar de posición con facilidad.\n\nSi el puesto es compartido entre turnos, el ajuste tiene que ser rápido: sillas con palancas a mano, soportes regulables y una indicación visible de cómo regularlos. Si el puesto no permite ajustar, por ejemplo porque la mesa es fija y muy alta, el problema ya no es de la persona sino de equipamiento, y corresponde pedir el cambio a la jefatura. En Pehuén, Patricia propuso dejar una tarjeta plastificada con estos cinco pasos en cada puesto compartido.",
+          "imagen": "SEG360-IMG020",
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P05",
+          "tipo": "explicacion",
+          "titulo": "El mesón: de pie no es el problema, quieto sí",
+          "texto": "En el local, Daniela trabaja de pie frente a un mesón alto, diseñado para que el cliente apoye sus cosas. Para atender está bien. Para escribir en el notebook o en el celular, no tanto.\n\nTrabajar de pie no es malo en sí. Lo que cansa es **estar de pie sin moverse, sin apoyo y sin la opción de sentarse** cuando la tarea lo permite.",
+          "bloques": [
+            { "icono": "store", "titulo": "Altura según la tarea", "texto": "Atender, escribir y empacar piden alturas distintas. Un solo mesón no sirve para todo." },
+            { "icono": "footprints", "titulo": "Apoyo y alternancia", "texto": "Un apoyapié, una alfombra antifatiga y un taburete alto permiten cambiar de postura." },
+            { "icono": "route", "titulo": "Zona cercana", "texto": "Lo que se usa en cada atención, al alcance. Lo que se usa poco, más lejos o abajo." }
+          ],
+          "nota": { "tipo": "terreno", "texto": "Antes de comprar nada, observa una hora de trabajo real: qué se hace más veces, dónde y a qué altura. Las mejores ideas salen de ahí." },
+          "voz": "Cuando fui al local la primera vez, le pedí a Daniela que me mostrara un pedido completo. Atendió al cliente, buscó el pedido en el notebook, escribió por WhatsApp, imprimió la boleta y sacó la caja de abajo del mesón. Cinco tareas, cinco alturas distintas, todas en el mismo mesón. Ahí entendí que no era un problema de postura de Daniela: el mesón estaba hecho para recibir clientes, no para hacer todo eso. Y no hacía falta remodelar el local. Con un brazo para la pantalla, un taburete y cambiar dónde se guardan los pedidos, ya ganamos harto.",
+          "hablante": "patricia",
+          "profundiza": "Las tareas de pie se pueden ordenar según lo que exigen. Para trabajo de precisión, como escribir o revisar documentos, la superficie conviene más alta, cerca de la altura de los codos. Para tareas livianas, como atender o entregar, un poco por debajo de los codos. Para tareas que requieren fuerza hacia abajo, como cerrar cajas con huincha, todavía más baja. Por eso, en un mesón de atención, conviene separar zonas: una para atender, otra con la pantalla elevada y el teclado a la altura de los codos, y otra para manipular cajas.\n\nEstar mucho rato de pie y quieto dificulta la circulación en las piernas y carga la zona lumbar. Un apoyapié o una barra baja permite alternar el peso, y un taburete alto deja trabajar semisentado en momentos de menos público. Las alfombras antifatiga ayudan sobre pisos duros, siempre que tengan bordes biselados para no tropezar. Ninguna de estas ayudas reemplaza lo principal: que la organización de la jornada permita moverse y alternar tareas.",
+          "icono": "store"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P06",
+          "tipo": "quiz",
+          "titulo": "Ajustar con lo que hay (y saber cuándo pedir)",
+          "texto": "Cuatro situaciones de Pehuén. Para cada una, elige lo que harías primero. Lee el feedback de cada opción, incluso cuando aciertes: ahí está el porqué.",
+          "practica_formativa": true,
+          "preguntas": [
+            {
+              "enunciado": "Javier trabaja con el notebook en la mesa del comedor de la oficina. Mide 1,60 m y sus pies no llegan al piso cuando sube la silla para alcanzar el teclado. ¿Qué conviene?",
+              "opciones": [
+                { "texto": "Bajar la silla hasta que los pies toquen el piso, aunque el teclado quede a la altura del pecho.", "correcta": false, "feedback": "Resuelves los pies, pero subes los hombros y quiebras las muñecas para escribir. Cambias un problema por otro." },
+                { "texto": "Dejar la silla a la altura del teclado y pedir un reposapiés para apoyar los pies.", "correcta": true, "feedback": "Bien pensado. La altura de los codos manda respecto del teclado, y el reposapiés compensa la distancia al piso. Es barato y se pide a la jefatura." },
+                { "texto": "Sentarse en el borde de la silla para que los pies lleguen al piso.", "correcta": false, "feedback": "Pierdes el apoyo del respaldo y la espalda trabaja sola toda la jornada. Es una solución de cinco minutos, no de ocho horas." }
+              ]
+            },
+            {
+              "enunciado": "En el local, Daniela responde WhatsApp en el celular apoyado en el mesón, con la cabeza muy inclinada, unas 60 veces al día. ¿Cuál es el cambio con más efecto?",
+              "opciones": [
+                { "texto": "Recordarle que mantenga la espalda derecha cuando escribe.", "correcta": false, "feedback": "Pedir que corrija la postura sin cambiar dónde está la pantalla no dura: al tercer cliente, el cuello vuelve a bajar. La postura sigue al objeto." },
+                { "texto": "Hacer pausas para estirar el cuello cada hora.", "correcta": false, "feedback": "Las pausas ayudan a recuperar, pero no quitan la causa. Mientras la pantalla siga abajo, el cuello seguirá doblado entre pausa y pausa." },
+                { "texto": "Atender WhatsApp desde el computador, con la pantalla elevada y teclado, en vez del celular.", "correcta": true, "feedback": "Eso cambia la tarea y el puesto al mismo tiempo: la pantalla sube y escribir con teclado es más rápido. Además, deja el celular personal fuera del trabajo." },
+                { "texto": "Comprar un celular con pantalla más grande.", "correcta": false, "feedback": "Una pantalla más grande se lee mejor, pero sigue estando en el mesón, abajo. El problema es la altura, no el tamaño." }
+              ]
+            },
+            {
+              "enunciado": "Ajustaste la silla, elevaste la pantalla y moviste el escritorio para evitar el reflejo. Dos semanas después, Daniela sigue con dolor de hombro al final del día. ¿Qué haces?",
+              "opciones": [
+                { "texto": "Le dices que ya se hizo todo lo posible en el puesto.", "correcta": false, "feedback": "Ajustar el puesto es una parte. Si la molestia sigue, hay que mirar la tarea y la jornada: cuánto rato seguido digita, qué pasa en los picos, si hay tiempo para recuperarse." },
+                { "texto": "Le sugieres que se compre una crema antiinflamatoria.", "correcta": false, "feedback": "Tratar el síntoma no es prevenir. Y decidir tratamientos no es tu rol ni el de la jefatura." },
+                { "texto": "Lo informas a la jefatura y a Patricia, y Daniela consulta en el organismo administrador si el dolor persiste.", "correcta": true, "feedback": "Así se hace. La empresa revisa la tarea y la organización, y si el dolor sigue, se evalúa en la mutualidad. Una molestia que dura semanas es un dato, no una debilidad." }
+              ]
+            },
+            {
+              "enunciado": "Héctor dice que su silla «no tiene arreglo»: la palanca de altura está rota y se va bajando sola durante la mañana. ¿Qué corresponde?",
+              "opciones": [
+                { "texto": "Que la use igual y la vaya subiendo cada vez que baje.", "correcta": false, "feedback": "Eso significa que pasará buena parte de la mañana en una altura incorrecta. Un equipo dañado no se compensa con esfuerzo." },
+                { "texto": "Que la deje fuera de uso, lo informe y use otra silla ajustable mientras se repara o reemplaza.", "correcta": true, "feedback": "Correcto. Es el mismo criterio que con cualquier equipo dañado: no usar, informar y tener una alternativa. La reparación la hace quien corresponde." },
+                { "texto": "Que la arregle con un cintillo plástico, ya que conoce de máquinas.", "correcta": false, "feedback": "Héctor sabe de mantención, pero una reparación improvisada de un mecanismo de gas puede fallar de golpe. Si su rol incluye reparar sillas, lo hace con repuestos y según el fabricante, no con un cintillo." }
+              ]
+            }
+          ],
+          "voz": "Aquí no hay trucos. Son situaciones reales de una oficina y un local como los de Pehuén. Fíjate en un patrón: casi siempre la respuesta más efectiva cambia dónde está el objeto o cómo se hace la tarea, en vez de pedirle a la persona que aguante mejor. Si te equivocas, lee con calma el porqué y vuelve a intentarlo.",
+          "hablante": "narrador",
+          "icono": "clipboard-check"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P07",
+          "tipo": "mito_realidad",
+          "titulo": "Cinco frases que se escuchan en cualquier oficina",
+          "texto": "Decide si cada frase es verdad o mito. Después lee la explicación.",
+          "afirmaciones": [
+            { "texto": "Existe una postura correcta, y basta con mantenerla toda la jornada.", "es_verdad": false, "explicacion": "Cualquier postura mantenida por horas cansa, incluso la mejor. Lo que se busca es una postura neutra como base y la posibilidad de cambiar de posición con frecuencia." },
+            { "texto": "Con una silla cara se resuelven los problemas de espalda.", "es_verdad": false, "explicacion": "Una buena silla ayuda, pero si la pantalla está baja, el mouse lejos o la tarea no tiene respiros, la silla no lo compensa. Una silla regulada correctamente vale más que una cara mal ajustada." },
+            { "texto": "Un dolor que aparece en el trabajo y se pasa con el descanso no hay que contarlo.", "es_verdad": false, "explicacion": "Esa es justamente la etapa en que más se puede hacer. Cuando el dolor ya no se pasa con la noche, el daño suele estar más avanzado. Contarlo a tiempo permite cambiar el puesto antes." },
+            { "texto": "El notebook es un buen equipo para trabajar muchas horas seguidas si se usa con soporte y teclado externo.", "es_verdad": true, "explicacion": "Con soporte, teclado y mouse externos, el notebook funciona como un computador de escritorio. Sin ellos, siempre obliga a elegir entre el cuello y los hombros." },
+            { "texto": "Si el puesto ya está bien ajustado, la siguiente mejora suele estar en la tarea o en la organización.", "es_verdad": true, "explicacion": "Exacto. Cuántas horas seguidas se digita, si hay variación de tareas, cómo se reparten los picos: todo eso también pesa en el cuerpo." }
+          ],
+          "voz": "Estas frases las he escuchado en todas las empresas donde he trabajado, y algunas las dice gente con harta experiencia. Por eso vale la pena desarmarlas con calma. La que más me preocupa es la del dolor que se pasa con el descanso. Esa molestia del viernes en la tarde es la mejor oportunidad que tenemos para cambiar algo, antes de que se transforme en una licencia.",
+          "hablante": "patricia",
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-SST-M05-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "texto": "Antes de seguir, piensa en tu propio puesto, no en el de Daniela.",
+          "ideas": [
+            "La postura sigue a los objetos: si la pantalla está baja, el cuello baja. Cambia el puesto antes de pedirle a la persona que se corrija.",
+            "Ajusta en orden: silla, mesa y teclado, pantalla, luz y alcances. Con notebook, soporte y teclado externo para jornadas largas.",
+            "Si el puesto ya está ajustado y la molestia sigue, el siguiente cambio está en la tarea o en la organización, y la molestia se informa."
+          ],
+          "pregunta": "¿Qué objeto de tu puesto te obliga a una postura incómoda más veces al día, y qué cambio pedirías para moverlo?",
+          "voz": "Quédate con una idea por sobre las demás: el cuerpo se acomoda a lo que el puesto le pide. Si quieres cambiar una postura, cambia primero el puesto. Y si ya lo hiciste y algo sigue doliendo, no es que hayas fallado tú: es que hay que mirar la tarea y la jornada, que es justo lo que viene en la próxima lección.",
+          "hablante": "narrador"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-SST-M05-L02",
+      "titulo": "Fatiga, turnos y ritmo: pausas que sí sirven",
+      "resultado": "Ante una jornada con picos de trabajo, reconocer señales de fatiga y proponer medidas de tarea y organización, además de pausas efectivas, que reduzcan la acumulación de cansancio.",
+      "minutos": 40,
+      "fuentes": ["SST-TMERT", "SST-DS44", "SST-OIT", "SST-CT184"],
+      "pantallas": [
+        {
+          "id": "SEG360-SST-M05-L02-P01",
+          "tipo": "dialogo",
+          "titulo": "El tercer despacho del día",
+          "texto": "Son las 18:20 de un jueves de fin de mes. El último camión se atrasó y el equipo de bodega lleva casi diez horas trabajando.",
+          "lineas": [
+            { "personaje": "marisol", "texto": "Camila, ¿me confirmas el pedido de Los Aromos? Son 24 bultos." },
+            { "personaje": "camila", "texto": "Conté 24… espera. No, 22. O sea, volví a contar y me dio 23. Perdón, ya no sé." },
+            { "personaje": "marisol", "texto": "Tranquila, cuéntalo de nuevo. Yo estoy igual, hace rato que leo los códigos dos veces." },
+            { "personaje": "hector", "texto": "Esto pasa todos los fines de mes. Al final del día se nos cae una caja, se equivoca un pedido o alguien se golpea con la transpaleta." },
+            { "personaje": "camila", "texto": "Patricia nos dijo que hiciéramos pausas, pero hoy no había cómo. El camión estaba esperando." },
+            { "personaje": "marisol", "texto": "Y mañana voy a tener que llamar a Los Aromos para explicar por qué les faltaron dos cajas." }
+          ],
+          "pregunta": "¿Qué está mostrando esta conversación?",
+          "multiple": false,
+          "opciones": [
+            { "texto": "Que Camila todavía no domina el conteo y necesita más capacitación.", "correcta": false, "feedback": "Camila contaba bien en la mañana. Marisol, con años de experiencia, también está leyendo dos veces. Cuando el error aparece en todo el equipo al final del día, la causa no es la habilidad de una persona." },
+            { "texto": "Que la fatiga acumulada está produciendo errores y casi accidentes, y que el problema se repite por cómo se organizan los fines de mes.", "correcta": true, "feedback": "Eso es. Los errores de conteo, la caja que se cae y el golpe con la transpaleta son señales de fatiga. Y Héctor da un dato clave: pasa todos los fines de mes. Eso es organización, no mala suerte." },
+            { "texto": "Que el equipo no hizo las pausas que Patricia recomendó.", "correcta": false, "feedback": "Camila lo dice claro: no había cómo. Recomendar pausas sin cambiar la carga ni el horario del camión deja la decisión en el peor momento y en la persona con menos margen para decidir." }
+          ],
+          "explicacion": "La fatiga no se ve en un solo error: se ve en un patrón. Errores que aparecen al final del turno, en todo el equipo, en los mismos días del mes, apuntan a la carga y a la organización.",
+          "voz": "Escucha cómo hablan. Nadie está flojo ni descuidado: están cansados, y lo saben. Esa conversación pasa en muchas bodegas a esta hora. Fíjate en la frase de Héctor, porque es el dato más importante de todos: esto pasa todos los fines de mes. Cuando algo se repite con fecha, deja de ser un accidente y pasa a ser una característica de cómo trabajamos.",
+          "hablante": "narrador",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P02",
+          "tipo": "explicacion",
+          "titulo": "La fatiga no es flojera: es una alerta",
+          "texto": "La fatiga es la baja en la capacidad física o mental que aparece cuando el esfuerzo supera el tiempo para recuperarse. No avisa con un dolor fuerte: se nota en **errores, lentitud, olvidos e irritabilidad**.\n\nTiene varias fuentes que se suman: **la carga física, la carga mental, las horas trabajadas y el sueño**.",
+          "bloques": [
+            { "icono": "box", "titulo": "Física", "texto": "Levantar, caminar, estar de pie, repetir. Se recupera con descanso y variación." },
+            { "icono": "brain", "titulo": "Mental", "texto": "Atender, decidir, responder mensajes, cuidar que nada falle. Cansa aunque el cuerpo esté quieto." },
+            { "icono": "clock", "titulo": "Horas y sueño", "texto": "Jornadas largas, turnos que cambian y poco sueño reducen la atención, sobre todo al final del día." }
+          ],
+          "nota": { "tipo": "dato", "texto": "La fatiga sigue después del trabajo: el trayecto de vuelta a la casa también es parte del riesgo. Un accidente en ese trayecto puede estar cubierto por la Ley 16.744 como accidente de trayecto." },
+          "voz": "Hay una idea muy instalada de que el cansancio se vence con ganas. Y no es así. Cuando una persona está fatigada, su cerebro procesa más lento, se le escapan detalles y reacciona tarde, aunque ponga toda la voluntad del mundo. Por eso la fatiga es un tema de seguridad y no solo de bienestar. Y ojo con la fatiga mental: Daniela no levanta cajas, pero después de cien mensajes y una fila de clientes molestos, también llega al final del día con la atención agotada.",
+          "hablante": "narrador",
+          "profundiza": "La Organización Internacional del Trabajo ha descrito por años cómo la duración y la organización de la jornada influyen en la salud y la seguridad: jornadas extensas, horas extraordinarias frecuentes, turnos rotativos y trabajo nocturno se asocian con más fatiga, más errores y más accidentes, especialmente en las últimas horas.\n\nLa fatiga mental es más difícil de ver porque no se nota en el cuerpo. Aparece en tareas con mucha atención sostenida, interrupciones constantes, decisiones rápidas o trato con público en situaciones tensas. Las interrupciones tienen un costo escondido: cada vez que alguien deja una tarea para responder un mensaje, tarda en retomar el hilo, y en ese cambio aparecen los errores.\n\nTambién importa la recuperación fuera del trabajo. Si una persona se lleva el celular del trabajo a la casa y sigue respondiendo pedidos en la noche, no se recupera, aunque su jornada formal haya terminado. Eso es un tema de organización: definir horarios de atención y quién responde fuera de ellos.",
+          "icono": "brain"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P03",
+          "tipo": "tarjetas",
+          "titulo": "Señales de fatiga que sí se ven",
+          "consigna": "Da vuelta cada tarjeta. Piensa si has visto esa señal en ti o en tu equipo, y en qué momento del día.",
+          "texto": "La fatiga rara vez se anuncia con un «estoy agotado». Se asoma en detalles.",
+          "tarjetas": [
+            { "frente": "Errores que antes no cometías", "icono": "file-warning", "reverso": "Contar dos veces, digitar mal un RUT, mandar un pedido a la dirección equivocada. Si se concentran al final del turno, es fatiga." },
+            { "frente": "Irritabilidad y poca paciencia", "icono": "message-square", "reverso": "Contestar seco a un compañero o a un cliente. No es mal carácter: el cansancio baja la tolerancia." },
+            { "frente": "Ojos secos y cansados", "icono": "eye", "reverso": "Pantalla muchas horas sin pausas visuales. Pestañeas menos cuando te concentras en una pantalla." },
+            { "frente": "Olvidos y despistes", "icono": "circle-help", "reverso": "Dejar el cartonero abierto, no cerrar el cajón, olvidar avisar algo importante. Con fatiga, la memoria de corto plazo falla." },
+            { "frente": "Molestia que no se pasa con la noche", "icono": "heart-pulse", "reverso": "Un dolor que antes desaparecía con el descanso y ahora sigue al día siguiente. Es momento de informarlo." },
+            { "frente": "Cabeceo en el trayecto de vuelta", "icono": "route", "reverso": "Si te pasa manejando o en la micro, la fatiga ya es un riesgo serio. Coméntalo: la jornada puede estar mal distribuida." }
+          ],
+          "voz": "Algunas de estas señales las conoces de sobra, porque todos hemos tenido un día así. Lo interesante es mirarlas como datos y no como defectos personales. Si en tu equipo los errores se juntan después de las cinco de la tarde, eso es información valiosa para quien organiza el trabajo. Y la última tarjeta, la del trayecto, tómatela en serio.",
+          "hablante": "narrador",
+          "icono": "eye"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P04",
+          "tipo": "comparacion",
+          "titulo": "Más pausas o un trabajo distinto",
+          "texto": "Las pausas importan, pero solo son una herramienta. Compara dos respuestas de Pehuén al mismo problema: errores y golpes al final de los fines de mes.",
+          "izquierda": {
+            "titulo": "Solo «hacer pausas»",
+            "icono": "clock",
+            "puntos": [
+              "Se pide al equipo que haga pausas cuando pueda.",
+              "Nadie define cuándo ni quién cubre el puesto mientras tanto.",
+              "En los picos, las pausas son lo primero que se pierde.",
+              "La carga del fin de mes sigue cayendo en los mismos dos días.",
+              "Si alguien se equivoca, se le recuerda que debía descansar."
+            ]
+          },
+          "derecha": {
+            "titulo": "Pausas más cambios de tarea y organización",
+            "icono": "refresh-cw",
+            "puntos": [
+              "Pausas breves programadas, con reemplazo definido.",
+              "Rotación entre picking, etiquetado y recepción cada dos horas.",
+              "Pedidos grandes del fin de mes se acuerdan con los clientes para la semana anterior.",
+              "Hora de corte para pedidos del día, comunicada a ventas y al local.",
+              "Apoyo de otra área en los dos días más cargados del mes."
+            ]
+          },
+          "conclusion": "Una pausa sirve cuando está planificada, alguien cubre el puesto y la carga de trabajo permite tomarla. Y rinde mucho más cuando va junto con cambios en la tarea y en la organización de la jornada.",
+          "voz": "Mira la columna de la izquierda con honestidad. Es lo que pasa en muchas empresas, y no por mala intención: se recomiendan pausas porque es lo más fácil de decir. Pero si la carga sigue igual, la pausa termina dependiendo de la buena voluntad de cada persona, justo en el momento en que hay menos tiempo. La columna de la derecha pide más trabajo de la jefatura, pero cambia el problema de raíz.",
+          "hablante": "narrador",
+          "profundiza": "Las pausas efectivas comparten algunas características. Son breves y frecuentes, en vez de una sola pausa larga después de horas de esfuerzo continuo. Están programadas, para que no dependan de que la persona se atreva a pedirlas. Incluyen un cambio real: si alguien estuvo de pie, se sienta; si estuvo mirando la pantalla, mira lejos; si estuvo repitiendo un gesto, hace algo distinto. Y tienen un reemplazo definido, para que el puesto no quede sin atención.\n\nLa rotación de tareas funciona cuando las tareas que se alternan realmente usan el cuerpo de manera diferente. Pasar de levantar cajas a levantar otras cajas no es rotación. Alternar el picking con el etiquetado sentado, o la atención en el mesón con la gestión de pedidos en el computador, sí lo es.\n\nLas medidas de organización son las de mayor alcance: distribuir mejor los pedidos en el mes, definir horas de corte, ajustar la dotación en los picos conocidos y evitar que las horas extraordinarias se vuelvan costumbre. Estas decisiones son de la empresa y se incorporan en la gestión preventiva, no se dejan a cada persona.",
+          "icono": "refresh-cw"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P05",
+          "tipo": "explicacion",
+          "titulo": "Turnos, horas extra y la colación que no se toma",
+          "texto": "Tres cosas que en Pehuén aparecen una y otra vez:\n\n**Horas extra que se vuelven costumbre.** Una vez está bien; todas las semanas es una señal de que la dotación no alcanza.\n\n**La colación postergada.** Si cada día se corre para atender la fila, la jornada no tiene descanso real.\n\n**Turnos que cambian a última hora.** Desordenan el sueño y la vida familiar, y eso también se paga con atención.",
+          "nota": { "tipo": "ojo", "texto": "Las horas extraordinarias, la jornada y los descansos tienen reglas en el Código del Trabajo. Si tienes dudas sobre tu caso, consulta a tu jefatura, a Recursos Humanos o a la Dirección del Trabajo." },
+          "voz": "Te cuento lo que vi en Pehuén cuando revisamos las horas extra de un trimestre. No era que la gente quisiera quedarse: el último despacho siempre se corría, y siempre las mismas personas se quedaban. Cuando le mostramos a Rodrigo el gráfico, entendió al tiro que no era un tema de compromiso del equipo, era un tema de cómo se programaban los camiones. Y lo de la colación de Daniela es igual. Si la fila llega a la hora de almuerzo todos los días, la solución no es que ella almuerce más rápido.",
+          "hablante": "patricia",
+          "profundiza": "Una jornada sostenible tiene descansos reales dentro del día, entre un día y otro y durante la semana. Cuando uno de esos descansos se pierde de forma habitual, la recuperación se va acumulando como una deuda. Por eso es útil revisar datos simples: cuántas horas extra hace cada persona al mes, en qué días se concentran, quién toma su colación completa y quién no, y en qué horario aparecen los errores o incidentes.\n\nLos cambios de turno de último minuto tienen un costo que suele subestimarse. Alteran el sueño, dificultan organizar el cuidado de hijos o familiares y generan tensión. La previsibilidad, es decir, saber con anticipación cuándo se trabaja, es un factor protector.\n\nNada de esto se resuelve pidiéndole a cada persona que se organice mejor. Son decisiones de programación y dotación que toma la empresa, idealmente con información del equipo y del Comité Paritario. Si en tu área estas situaciones se repiten, contarlo con datos ayuda a que se vean.",
+          "imagen": "SEG360-IMG021",
+          "icono": "clock"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P06",
+          "tipo": "decision",
+          "titulo": "Diciembre viene pesado",
+          "situacion": "Rodrigo avisa que en diciembre los pedidos subirán cerca de un 40 por ciento, como todos los años. Su primera idea es que el equipo de bodega trabaje los sábados todo el mes. Patricia y Marisol tienen que proponer alternativas antes del viernes.",
+          "pregunta": "¿Qué medidas propondrías? Elige tres.",
+          "multiple": true,
+          "minimo": 3,
+          "maximo": 3,
+          "opciones": [
+            { "texto": "Acordar con los clientes grandes, como Ferretería Los Aromos, que adelanten sus pedidos a noviembre o los repartan en el mes.", "correcta": true, "feedback": "Reduce el pico en su origen. Es una medida de organización con los clientes, y muchas veces ellos también prefieren saber cuándo reciben." },
+            { "texto": "Reforzar con personal adicional en las semanas de mayor carga, con inducción previa de seguridad.", "correcta": true, "feedback": "Ajusta la dotación a la carga real. La inducción importa: una persona nueva en el peor momento del año sin inducción es un riesgo en sí misma." },
+            { "texto": "Entregar bebidas energéticas al equipo en las tardes.", "correcta": false, "feedback": "Pueden ocultar la sensación de cansancio, pero no recuperan. La fatiga sigue ahí, solo que menos visible, y eso puede ser peor." },
+            { "texto": "Programar una hora de corte de pedidos y rotar tareas cada dos horas durante diciembre.", "correcta": true, "feedback": "Ordena el día y reparte el esfuerzo. La hora de corte evita que el último despacho se corra siempre, y la rotación alterna exigencias distintas." },
+            { "texto": "Mantener los sábados, pero recordar al equipo que haga pausas activas.", "correcta": false, "feedback": "Las pausas activas no compensan perder el día de descanso semanal por un mes completo. La carga acumulada sigue creciendo." }
+          ],
+          "explicacion": "Las medidas más fuertes actúan sobre el pico mismo y sobre la distribución del trabajo. Las pausas siguen siendo útiles, pero dentro de una jornada razonable, no como compensación de una que no lo es.",
+          "voz": "Rodrigo no es el malo de esta historia. Tiene un problema real, los pedidos de diciembre, y su primera idea es la más conocida. Tu tarea es ayudarlo a ver que hay otras opciones que también cumplen con los clientes, pero sin dejar al equipo sin descanso por un mes. Piensa en el pico, en la dotación y en cómo se reparte el día.",
+          "hablante": "narrador",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P07",
+          "tipo": "reflexion",
+          "titulo": "Tu propio ritmo",
+          "texto": "Esta respuesta queda guardada para ti. Te servirá en el laboratorio y en tu plan de transferencia.",
+          "pregunta": "¿En qué momento de tu jornada o de tu mes te equivocas más o te sientes más agotado o agotada? ¿Qué parte de eso depende de cómo está organizado el trabajo?",
+          "ayuda": "Piensa en un día concreto de la semana pasada. Anota a qué hora apareció el cansancio, qué estabas haciendo y qué venía acumulándose desde antes: interrupciones, colación corta, un pico de pedidos, una tarea repetitiva. Después separa lo que podrías cambiar tú, como ordenar tus tareas, de lo que tendría que cambiar la jefatura, como la dotación o los horarios.",
+          "voz": "Tómate un par de minutos para esto. No tienes que mostrárselo a nadie. La idea es que encuentres tu propio patrón, porque casi todos lo tenemos: el lunes en la mañana, el viernes en la tarde, el cierre de mes. Cuando lo identificas, puedes conversarlo con tu jefatura con algo concreto en la mano.",
+          "hablante": "narrador",
+          "icono": "pen-line"
+        },
+        {
+          "id": "SEG360-SST-M05-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "texto": "La fatiga se previene antes de que aparezca, al organizar el trabajo.",
+          "ideas": [
+            "La fatiga es física y mental, se acumula con las horas y el poco descanso, y se nota en errores y casi accidentes antes que en el cuerpo.",
+            "Una pausa sirve si está programada, tiene reemplazo y cambia realmente lo que hace el cuerpo o la vista.",
+            "Las medidas más fuertes reparten la carga: hora de corte, rotación real, dotación en los picos y menos horas extra habituales."
+          ],
+          "pregunta": "Si mañana pudieras cambiar una sola cosa de cómo se organiza el trabajo en tu área para reducir el cansancio, ¿cuál sería y a quién se la propondrías?",
+          "voz": "Si te quedas con algo de esta lección, que sea esto: el cansancio que aparece siempre a la misma hora o en los mismos días no es un problema de voluntad, es una pista. Y las pistas sirven para cambiar la organización. En la próxima lección vamos a mirar otra carga que no se ve en el cuerpo: la que viene de la presión, el trato y la forma en que el equipo se coordina.",
+          "hablante": "narrador"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-SST-M05-L03",
+      "titulo": "Riesgo psicosocial y coordinación del equipo",
+      "resultado": "Ante situaciones de presión, trato con público y descoordinación, reconocer factores de riesgo psicosocial, elegir el canal que corresponde, incluido el procedimiento de la Ley Karin, y proponer medidas de coordinación del equipo.",
+      "minutos": 40,
+      "fuentes": ["SST-CEALSM", "SST-LEYKARIN", "SST-DS44", "SST-CT184", "SST-OIT"],
+      "pantallas": [
+        {
+          "id": "SEG360-SST-M05-L03-P01",
+          "tipo": "chat",
+          "titulo": "Un cliente que sube el tono",
+          "texto": "Son las 12:45. Daniela tiene cinco personas en la fila y este chat abierto en el computador del local.",
+          "canal": "whatsapp",
+          "contacto": { "nombre": "Cliente pedido 4471", "detalle": "Pedidos Pehuén · Local" },
+          "mensajes": [
+            { "de": "contacto", "texto": "Hola, ¿dónde está mi pedido? Me dijeron que hoy en la mañana.", "hora": "12:31" },
+            { "de": "yo", "texto": "Hola, buenas tardes. Lo reviso y le confirmo en unos minutos.", "hora": "12:33" },
+            { "de": "contacto", "texto": "¿Unos minutos? Llevo dos días esperando. Esto es una falta de respeto.", "hora": "12:38" },
+            { "de": "contacto", "texto": "Si no me responde ahora voy al local y le voy a dejar clarito lo inútil que es. Usted sabe que sé dónde trabaja.", "hora": "12:41" },
+            { "de": "contacto", "texto": "Contésteme.", "hora": "12:44" }
+          ],
+          "pregunta": "¿Qué debería hacer Daniela?",
+          "multiple": false,
+          "opciones": [
+            { "texto": "Responderle con el mismo tono para que entienda que no puede tratarla así.", "correcta": false, "feedback": "Es comprensible querer defenderse, pero responder en ese tono suele escalar la situación y deja a Daniela más expuesta. Defenderse es tarea de la empresa, con su protocolo." },
+            { "texto": "Ignorar los mensajes y seguir atendiendo la fila.", "correcta": false, "feedback": "Atender la fila está bien, pero quedarse sola con una amenaza no. El mensaje dice que vendrá al local: eso hay que informarlo para que alguien más esté atento." },
+            { "texto": "Responder breve, sin entrar en discusión, guardar los mensajes e informar de inmediato a Rodrigo para que se active el procedimiento de la empresa.", "correcta": true, "feedback": "Eso es. Mantiene la atención profesional, conserva la evidencia y pone el tema en manos de la jefatura. Una amenaza de un cliente es violencia en el trabajo y la empresa debe responder, no solo Daniela." },
+            { "texto": "Bloquear al cliente y no decir nada para no armar un problema.", "correcta": false, "feedback": "Bloquear puede ser parte de la respuesta, pero hacerlo sola y en silencio deja a la empresa sin saber que hay una amenaza, y a Daniela sin apoyo si la persona aparece en el local." }
+          ],
+          "explicacion": "El trato violento de clientes o proveedores no es «parte de la pega». La Ley Karin incluye la violencia ejercida por terceros, como clientes, y la empresa debe tener medidas para prevenirla y responder.",
+          "voz": "Lee los mensajes en orden y fíjate cómo cambia el tono. Primero es un reclamo, que es legítimo: el pedido está atrasado. Después pasa a un insulto y termina en una amenaza. Daniela está sola en el local, con una fila esperando. Lo que decida no puede depender solo de ella: para eso existen los procedimientos de la empresa.",
+          "hablante": "narrador",
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P02",
+          "tipo": "explicacion",
+          "titulo": "Lo psicosocial también es riesgo laboral",
+          "texto": "Los **factores de riesgo psicosocial** son condiciones de la organización del trabajo que pueden afectar la salud física y mental: cómo se reparte la carga, cuánto control tienes sobre tu tarea, el apoyo que recibes, el trato y el reconocimiento.\n\nNo se trata de que alguien sea «sensible» o «fuerte». Se trata de cómo está diseñado el trabajo.",
+          "bloques": [
+            { "icono": "gauge", "titulo": "Exigencias", "texto": "Carga y ritmo, exigencias emocionales como el trato con público molesto, interrupciones constantes." },
+            { "icono": "hand-helping", "titulo": "Control y apoyo", "texto": "Poder decidir cómo hacer la tarea, tener a quién preguntar y un liderazgo que responde." },
+            { "icono": "scale", "titulo": "Trato y equilibrio", "texto": "Reconocimiento, justicia, claridad de rol, equilibrio con la vida personal, ausencia de violencia y acoso." }
+          ],
+          "nota": { "tipo": "norma", "texto": "El riesgo psicosocial es parte de la gestión preventiva: se identifica en la matriz de riesgos como los demás peligros. La herramienta oficial para evaluarlo en Chile es el cuestionario CEAL-SM/SUSESO." },
+          "voz": "Durante mucho tiempo se pensó que la seguridad laboral era cascos y extintores. Pero hay riesgos que no se ven en la escena: una carga que nunca baja, un jefe que cambia las prioridades cada hora, clientes que gritan, la sensación de que nadie te respalda. Todo eso enferma, y está bien documentado. Lo importante es que estos factores se pueden mirar y cambiar igual que una pantalla baja. Por ejemplo, Daniela tiene mucha exigencia y poco control sobre cuándo llegan los pedidos. Eso es diseño del trabajo.",
+          "hablante": "narrador",
+          "profundiza": "Los estudios sobre salud laboral muestran que la combinación más dañina suele ser alta exigencia con bajo control y poco apoyo. Una persona con mucha carga pero con margen para organizarse y un equipo que la respalda lo pasa mucho mejor que otra con la misma carga, sin margen y sola. Por eso, muchas medidas efectivas no reducen el trabajo, sino que aumentan el control y el apoyo: permitir que la persona ordene sus prioridades, definir a quién recurrir, dar respaldo explícito frente a clientes difíciles.\n\nLas exigencias emocionales son especialmente relevantes en atención de público. Mantener la calma frente a personas molestas, contener la frustración propia y seguir atendiendo con amabilidad es un trabajo en sí mismo, aunque no aparezca en la descripción del cargo.\n\nEn Chile, el Ministerio de Salud tiene un protocolo de vigilancia de riesgos psicosociales en el trabajo que pide a las empresas medir estos factores con el cuestionario CEAL-SM/SUSESO y aplicar medidas según los resultados. El organismo administrador del seguro de la Ley 16.744 apoya a las empresas en ese proceso.",
+          "icono": "brain"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P03",
+          "tipo": "proceso",
+          "titulo": "El cuestionario CEAL-SM en Pehuén",
+          "texto": "En Pehuén, el cuestionario se aplicará en noviembre. Así funciona, en simple:",
+          "pasos": [
+            { "titulo": "Se organiza en conjunto", "icono": "users", "texto": "Un grupo con representantes de la empresa y de los trabajadores prepara la aplicación y la informa a todo el equipo." },
+            { "titulo": "Respondes en forma anónima", "icono": "lock", "texto": "Es voluntario y confidencial. Las preguntas tratan sobre cómo es tu trabajo, no sobre tu vida personal ni sobre personas con nombre." },
+            { "titulo": "Se analizan resultados por grupos", "icono": "search", "texto": "Los resultados se ven por áreas o centros de trabajo, nunca por persona. Muestran en qué dimensiones hay más riesgo." },
+            { "titulo": "Se conversan las causas", "icono": "message-square", "texto": "Con los equipos se discute qué está detrás de los resultados: un pico de carga, falta de claridad, el trato con público." },
+            { "titulo": "Se definen y siguen medidas", "icono": "clipboard-check", "texto": "La empresa define medidas, las incluye en su programa preventivo y revisa si funcionaron en la siguiente medición." }
+          ],
+          "voz": "El cuestionario sirve si la gente lo responde con honestidad y si después pasa algo con los resultados. Por eso los dos extremos importan. Responder pensando que te van a identificar no tiene sentido: el análisis es por grupos. Y una empresa que mide y después no cambia nada pierde la confianza del equipo para la próxima vez. En Pehuén, Rodrigo se comprometió a mostrar los resultados por área y a conversar las medidas en cada equipo.",
+          "hablante": "narrador",
+          "profundiza": "El cuestionario CEAL-SM/SUSESO fue desarrollado en Chile para evaluar los factores de riesgo psicosocial en el trabajo. Considera dimensiones como la carga de trabajo, las exigencias emocionales, el desarrollo profesional, el reconocimiento y la claridad de rol, la calidad del liderazgo, el compañerismo, el equilibrio entre trabajo y vida personal, y la presencia de violencia y acoso, entre otras.\n\nLo valioso del instrumento no es el puntaje en sí, sino la conversación que permite. Un resultado alto en exigencias emocionales en el local de atención, por ejemplo, abre preguntas concretas: ¿cuántos clientes molestos se atienden al día?, ¿hay respaldo cuando la situación se pone tensa?, ¿se puede rotar la atención en los horarios difíciles?\n\nLas medidas pueden ser de muchos tipos: cambios en la distribución del trabajo, capacitación a jefaturas en liderazgo, mejoras en la comunicación de prioridades, procedimientos frente a clientes agresivos, o ajustes en horarios. El organismo administrador acompaña a la empresa en la aplicación y en el diseño de las medidas.",
+          "icono": "clipboard-list"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P04",
+          "tipo": "pestanas",
+          "titulo": "La Ley Karin, en lo que te toca",
+          "texto": "La Ley 21.643, conocida como Ley Karin, está vigente desde agosto de 2024. Revisa cada pestaña: no necesitas saberte la ley, sí saber qué protege y a dónde ir.",
+          "pestanas": [
+            { "titulo": "Qué cubre", "icono": "shield-check", "texto": "Tres conductas: **acoso laboral**, **acoso sexual** y **violencia en el trabajo**. Esta última incluye la que ejercen personas externas, como clientes o proveedores, contra quienes trabajan." },
+            { "titulo": "Qué debe hacer la empresa", "icono": "building-2", "texto": "Tener un **protocolo de prevención** del acoso y la violencia, informarlo al equipo y contar con un **procedimiento de investigación** de denuncias, con medidas de resguardo para quien denuncia." },
+            { "titulo": "Dónde se denuncia", "icono": "megaphone", "texto": "Ante la propia empresa, según su procedimiento, o ante la **Dirección del Trabajo**. En Pehuén, el procedimiento está en el reglamento interno y en la intranet." },
+            { "titulo": "Qué no es", "icono": "circle-help", "texto": "No todo desacuerdo o exigencia es acoso. Una jefatura que pide cumplir plazos no acosa por eso. Pero un conflicto mal resuelto o una carga excesiva igual son riesgos psicosociales y se tratan por los canales de prevención." }
+          ],
+          "voz": "La Ley Karin cambió algo importante: dejó claro que la empresa tiene que prevenir el acoso y la violencia, no solo investigar cuando ya pasó. Y algo que a Daniela le interesa mucho: la violencia de un cliente también está cubierta. Este curso no te va a convertir en especialista en la ley, y no es la idea. Lo que necesitas es saber que existe un procedimiento, dónde está y que puedes usarlo sin miedo a represalias.",
+          "hablante": "narrador",
+          "profundiza": "La ley define el acoso laboral como una agresión u hostigamiento que puede ocurrir incluso una sola vez, y que menoscaba, maltrata o humilla a la persona, o amenaza o perjudica su situación laboral. El acoso sexual se refiere a requerimientos de carácter sexual no consentidos. La violencia en el trabajo ejercida por terceros abarca conductas de personas ajenas a la relación laboral, como clientes, proveedores o usuarios.\n\nEl protocolo de prevención que debe tener cada empresa incluye la identificación de los riesgos psicosociales relacionados, medidas para prevenirlos y la forma de informar al equipo. Frente a una denuncia, la empresa debe adoptar medidas de resguardo, como separar espacios de trabajo o redistribuir tiempos, y llevar adelante una investigación.\n\nPara la violencia de clientes, las medidas preventivas suelen ser concretas: procedimientos claros para responder a clientes agresivos, respaldo de la jefatura, no dejar a una persona sola en horarios conflictivos, señalética sobre el trato respetuoso y registro de los episodios. Si eres testigo de una situación de acoso o violencia, también puedes informarla.",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P05",
+          "tipo": "dialogo",
+          "titulo": "Los pedidos que nadie le avisó a la bodega",
+          "texto": "Reunión de diez minutos en la bodega, a las 8:30. Patricia pidió juntar a Daniela, Marisol y Rodrigo.",
+          "lineas": [
+            { "personaje": "marisol", "texto": "Ayer llegaron tres pedidos por WhatsApp al local a las 16:40 y nos enteramos a las 17:15, con el camión cargado." },
+            { "personaje": "daniela", "texto": "Es que no tengo cómo avisar al tiro. Estoy atendiendo y los mensajes se acumulan. Los paso cuando tengo un minuto." },
+            { "personaje": "rodrigo", "texto": "Pero no podemos decirle que no a Los Aromos. Son nuestro mejor cliente." },
+            { "personaje": "patricia", "texto": "Nadie está diciendo que no. Pregunto otra cosa: ¿quién decide hoy qué entra al despacho del día y hasta qué hora?" },
+            { "personaje": "marisol", "texto": "En la práctica, el último que escribe." },
+            { "personaje": "daniela", "texto": "Y yo quedo al medio. El cliente me reclama a mí y la bodega también." }
+          ],
+          "pregunta": "¿Qué medida atacaría mejor el problema de coordinación?",
+          "multiple": false,
+          "opciones": [
+            { "texto": "Pedirle a Daniela que revise WhatsApp con más frecuencia.", "correcta": false, "feedback": "Le suma una exigencia más a quien ya está al medio, sin cambiar quién decide ni cómo fluye la información. El problema volvería en el próximo pico." },
+            { "texto": "Definir una hora de corte para el despacho del día, un canal único hacia la bodega y que Rodrigo autorice las excepciones.", "correcta": true, "feedback": "Eso aclara roles: hay una regla conocida, un camino para la información y alguien con autoridad para las excepciones. Daniela deja de cargar sola con decisiones que no le corresponden." },
+            { "texto": "Que la bodega acepte todo lo que llegue hasta que salga el camión.", "correcta": false, "feedback": "Traslada el problema a la bodega: más apuro al final del día, más fatiga y más errores de despacho, como vimos en la lección anterior." },
+            { "texto": "Que los clientes escriban directo a Marisol en vez de al local.", "correcta": false, "feedback": "Cambia a quién le llegan los mensajes, pero Marisol está en el andén y tiene la misma dificultad para leerlos. Sin regla de corte, el problema solo se mueve." }
+          ],
+          "explicacion": "Muchos conflictos entre áreas no son de personas: son de roles poco claros. Cuando nadie sabe quién decide, la presión cae sobre quien está al medio.",
+          "voz": "Fíjate en la pregunta de Patricia, porque cambia toda la conversación. Ya no se trata de quién tiene la culpa del atraso, sino de quién decide. Cuando la respuesta es «el último que escribe», tienes un riesgo psicosocial en estado puro: alta exigencia, poco control y conflicto de rol para Daniela. Y la solución no pasa por que ella se esfuerce más.",
+          "hablante": "narrador",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P06",
+          "tipo": "explicacion",
+          "titulo": "Coordinar también es prevenir",
+          "texto": "Un equipo coordinado reduce la carga de todos. En Pehuén acordamos cinco cosas simples:",
+          "bloques": [
+            { "icono": "clock", "titulo": "Reglas conocidas", "texto": "Hora de corte del despacho, horario de atención del WhatsApp y quién autoriza excepciones." },
+            { "icono": "route", "titulo": "Un canal por tema", "texto": "Los pedidos van por el registro de pedidos, no por mensajes sueltos al celular de alguien." },
+            { "icono": "user-check", "titulo": "Respaldo explícito", "texto": "Frente a un cliente agresivo, la jefatura se hace cargo. Nadie queda solo." },
+            { "icono": "message-square", "titulo": "Diez minutos al día", "texto": "Una conversación breve al inicio del turno para ver prioridades y picos." }
+          ],
+          "nota": { "tipo": "terreno", "texto": "La quinta medida fue la más difícil: que Rodrigo dijera en voz alta, frente a todos, que respaldaría a Daniela si un cliente se molestaba por la hora de corte." },
+          "voz": "Cuando propuse estas medidas, alguien me dijo «pero eso no es prevención de riesgos, eso es gestión». Y sí, es gestión, y también es prevención. Una reunión de diez minutos que evita que tres pedidos lleguen tarde también evita la carrera del final del día, la caja que se cae y la discusión en el andén. Y el respaldo de la jefatura vale más que cualquier charla sobre manejo del estrés. Cuando Daniela supo que Rodrigo la iba a apoyar, la hora de corte dejó de ser una pelea.",
+          "hablante": "patricia",
+          "profundiza": "La coordinación del equipo influye en varios factores de riesgo psicosocial a la vez. La claridad de rol disminuye cuando las personas no saben qué se espera de ellas o reciben instrucciones contradictorias. El conflicto de rol aparece cuando alguien debe responder a exigencias incompatibles, como Daniela entre el cliente y la bodega. El apoyo social se fortalece cuando hay espacios regulares para pedir ayuda.\n\nLas reuniones breves al inicio del turno funcionan si son cortas, de pie, con un formato fijo: qué hay hoy, qué picos se esperan, qué problemas quedaron de ayer y quién necesita apoyo. No reemplazan la conversación individual, pero evitan que cada persona tenga que resolver sola lo que es del equipo.\n\nEl liderazgo pesa mucho. Una jefatura que comunica prioridades claras, cumple los acuerdos y respalda a su equipo frente a terceros reduce la carga psicosocial sin cambiar una sola tarea. Por eso, varias medidas que surgen del cuestionario CEAL-SM se dirigen a las jefaturas y no solo a los equipos.",
+          "imagen": "SEG360-IMG021",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P07",
+          "tipo": "clasificar",
+          "titulo": "¿A qué canal va cada situación?",
+          "consigna": "Arrastra cada situación al canal que corresponde primero. Algunas podrían ir a más de un lugar: elige por dónde parte.",
+          "texto": "Saber dónde llevar un problema es parte de prevenirlo.",
+          "categorias": [
+            { "id": "jefatura", "nombre": "Lo converso con mi jefatura", "icono": "message-square", "descripcion": "Problemas de carga, organización, coordinación o equipamiento del día a día." },
+            { "id": "prevencion", "nombre": "Prevención y Comité Paritario", "icono": "clipboard-check", "descripcion": "Riesgos que se repiten, medidas que no funcionan, propuestas de mejora para toda el área." },
+            { "id": "karin", "nombre": "Procedimiento de acoso y violencia", "icono": "shield-alert", "descripcion": "Situaciones de acoso laboral, acoso sexual o violencia de terceros, según el protocolo de la empresa." }
+          ],
+          "elementos": [
+            { "texto": "Un compañero comenta en forma reiterada sobre el cuerpo de una colega y le manda mensajes que ella no quiere recibir.", "categoria": "karin", "feedback": "Es una situación que podría constituir acoso sexual. Va por el procedimiento de la empresa o a la Dirección del Trabajo, con reserva y medidas de resguardo." },
+            { "texto": "Esta semana te tocó cubrir dos puestos porque falta una persona, y no te alcanza el tiempo para la colación.", "categoria": "jefatura", "feedback": "Es un problema de dotación y organización. Lo primero es conversarlo con la jefatura para que redistribuya o busque apoyo." },
+            { "texto": "Un cliente amenazó a Daniela por WhatsApp con ir al local a «dejarle las cosas claras».", "categoria": "karin", "feedback": "Es violencia de un tercero. Además de avisar de inmediato a la jefatura, se registra y se gestiona según el protocolo de prevención de la empresa." },
+            { "texto": "Desde hace tres meses, todos los fines de mes hay casi accidentes en la bodega por el apuro del último despacho.", "categoria": "prevencion", "feedback": "Es un patrón que se repite y afecta a toda el área. Merece análisis de Patricia y del Comité Paritario, con datos, para proponer cambios de fondo." },
+            { "texto": "La silla de tu puesto no baja lo suficiente y no alcanzas a apoyar los pies.", "categoria": "jefatura", "feedback": "Es un tema de equipamiento puntual. Se pide a la jefatura un reposapiés o un cambio de silla." },
+            { "texto": "Una jefatura grita y descalifica a la misma persona frente al equipo cada vez que se equivoca.", "categoria": "karin", "feedback": "Un trato humillante y reiterado puede constituir acoso laboral. Se informa por el procedimiento de la empresa; si quien acosa es la jefatura directa, el procedimiento indica otro destinatario o se puede acudir a la Dirección del Trabajo." },
+            { "texto": "El equipo nota que las pausas acordadas nunca se cumplen en el local y propone revisarlas en conjunto.", "categoria": "prevencion", "feedback": "Una medida preventiva que no funciona se revisa con prevención y el Comité Paritario, para entender por qué falla y rediseñarla." },
+            { "texto": "Hoy te enteraste a última hora de un cambio de turno para mañana y tienes que organizar el cuidado de tu hija.", "categoria": "jefatura", "feedback": "Es un tema de organización que conversas primero con la jefatura. Si los cambios de último minuto se vuelven habituales, también vale llevarlo a prevención." }
+          ],
+          "voz": "No hay que tenerle miedo a equivocarse de canal: los canales de una empresa se comunican entre sí. Pero partir por el correcto ahorra tiempo y protege mejor. Fíjate especialmente en las situaciones de trato: cuando hay humillación, amenaza o conducta sexual no deseada, ya no es una conversación de coordinación, es un tema del procedimiento de acoso y violencia.",
+          "hablante": "narrador",
+          "icono": "route"
+        },
+        {
+          "id": "SEG360-SST-M05-L03-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "texto": "El trabajo también pesa en la cabeza, y eso también se puede diseñar mejor.",
+          "ideas": [
+            "Los factores psicosociales son condiciones del trabajo: exigencias, control, apoyo, trato y claridad de rol. Se identifican y se controlan como cualquier otro riesgo.",
+            "El cuestionario CEAL-SM sirve si se responde con honestidad y si después se conversan y aplican medidas por área.",
+            "La Ley Karin cubre el acoso y la violencia, incluida la de clientes. Saber dónde está el procedimiento y usarlo es parte de cuidarte y cuidar a tu equipo."
+          ],
+          "pregunta": "En tu equipo, ¿hay alguna decisión que hoy toma «el último que escribe»? ¿Qué regla simple ayudaría a ordenarla?",
+          "voz": "Con esto cerramos las tres lecciones. Viste el puesto, la jornada y el equipo. Ahora viene lo más entretenido: vas a juntar todo para rediseñar el trabajo de Daniela en el laboratorio. No para que aguante mejor, sino para que su jornada sea distinta.",
+          "hablante": "narrador"
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-SST-M05-LAB",
+    "titulo": "Laboratorio: rediseñar la jornada de Daniela",
+    "resultado": "Ante el expediente del puesto de atención de Daniela, evaluar sus peligros principales y proponer por escrito cambios factibles en el puesto, el proceso y la organización, con un indicador para comprobar si funcionan.",
+    "minutos": 45,
+    "fuentes": ["SST-TMERT", "SST-CEALSM", "SST-LEYKARIN", "SST-DS44", "SST-LEY20949"],
+    "pantallas": [
+      {
+        "id": "SEG360-SST-M05-LAB-P01",
+        "tipo": "apertura",
+        "titulo": "Un día en el mesón",
+        "escena": "Lunes, 9:00. Daniela abre el local, enciende el notebook sobre el mesón alto y deja el celular al lado. Hasta las 12:00 llegan pedidos por WhatsApp y por correo, y algunos clientes a retirar. Entre las 12:30 y las 14:00 la fila no baja de cinco personas, justo en su horario de colación. En la tarde llegan los reclamos.",
+        "pregunta": "Si pudieras rediseñar este trabajo desde cero, ¿por dónde partirías?",
+        "texto": "Rodrigo le pidió a Patricia una propuesta concreta para el local, y Patricia te sumó a ti. Tienes el expediente, las ideas del módulo y una regla: **nada de soluciones que dependan solo de que Daniela aguante más**.",
+        "voz": "Este laboratorio tiene algo distinto: no hay una única respuesta correcta. Hay propuestas mejores y peores, y vas a aprender a distinguirlas. Primero vas a revisar el expediente de Daniela con calma, después vas a evaluar los riesgos de su puesto, vas a ordenar ideas de mejora y, al final, vas a escribir tu propia propuesta. Piensa como si de verdad Rodrigo la fuera a leer el viernes. Tiene que ser factible, concreta y clara.",
+        "hablante": "narrador",
+        "imagen": "SEG360-IMG019",
+        "icono": "store"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P02",
+        "tipo": "pestanas",
+        "titulo": "El expediente del local",
+        "texto": "Revisa las cinco pestañas. Toma nota de lo que te llame la atención: lo vas a necesitar.",
+        "pestanas": [
+          { "titulo": "El puesto", "icono": "store", "texto": "Mesón de atención alto, pensado para clientes. Notebook directo sobre el mesón, sin soporte ni teclado externo. Celular de la empresa para WhatsApp. Impresora de boletas a la derecha. Pedidos para retiro guardados en cajas en el piso, bajo el mesón. No hay taburete ni apoyapié. Piso de cerámica." },
+          { "titulo": "La jornada", "icono": "clock", "texto": "9:00 a 12:00: WhatsApp, correo y retiros. 12:30 a 14:00: fila de cinco a ocho personas; la colación se corre a las 14:30 o se acorta. 14:00 a 18:00: retiros, reclamos y coordinación con la bodega. Los pedidos por WhatsApp llegan todo el día, sin hora de corte. Daniela está sola en el local." },
+          { "titulo": "Los datos", "icono": "gauge", "texto": "Promedio de 70 mensajes de WhatsApp al día. Unas 25 cajas de retiro al día, entre 3 y 12 kilos. En el último mes, 9 días con colación de menos de 30 minutos. Tres episodios con clientes que gritaron o amenazaron. Dos pedidos que llegaron tarde a la bodega por semana, en promedio." },
+          { "titulo": "Lo que dice Daniela", "icono": "message-square", "texto": "«Me duele el cuello y el hombro derecho al final del día. Lo peor no es la fila, es que mientras atiendo me siguen llegando mensajes y siento que no estoy haciendo bien ninguna de las dos cosas. Cuando un cliente se pone pesado, no sé si puedo cortarle o no.»" },
+          { "titulo": "Lo que se puede", "icono": "building-2", "texto": "Rodrigo dice que no hay presupuesto para remodelar el local, pero sí para equipamiento menor. Hay una persona de administración que podría apoyar el local dos horas al día. Ferretería Los Aromos y otros dos clientes concentran la mitad de los pedidos por WhatsApp." }
+        ],
+        "voz": "Lee el expediente como lo leería alguien que va a proponer cambios. No busques solo lo que está mal: busca también los recursos que existen. La última pestaña es clave. Ahí hay margen para hacer cosas, y una propuesta que ignora lo posible es tan poco útil como una que pide un local nuevo. Y fíjate en lo que dice Daniela sobre hacer dos cosas a la vez. Esa frase dice mucho más que el dolor de cuello.",
+        "hablante": "narrador",
+        "profundiza": "Un expediente de puesto útil combina tres tipos de información. La descripción del puesto y del equipamiento, que se obtiene observando. La organización de la jornada, que muestra cuándo y cómo se concentran las exigencias. Y la experiencia de la persona, que aporta lo que ningún dato muestra: qué le cuesta más, qué le preocupa, qué cambiaría.\n\nEn este caso, conviene cruzar los datos. Setenta mensajes al día repartidos en ocho horas son unos nueve por hora, pero no llegan parejos: se acumulan en la mañana y siguen llegando durante la fila del mediodía. Las cajas de retiro pesan poco cada una, pero se levantan desde el piso unas 25 veces al día, con el tronco flexionado. Y los episodios con clientes, aunque sean tres en un mes, generan tensión todos los días, porque Daniela no sabe cuándo va a ocurrir el próximo ni qué respaldo tiene.\n\nEsa combinación de carga física, carga mental, exigencia emocional y poco control es lo que hace que este puesto sea un buen ejemplo de por qué no basta con las pausas.",
+        "icono": "file-text"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P03",
+        "tipo": "matriz",
+        "titulo": "Evalúa los peligros del puesto",
+        "consigna": "Para cada peligro, estima la probabilidad y la consecuencia con lo que sabes del expediente. Después compara con la evaluación de Patricia y lee su justificación.",
+        "texto": "No buscamos el número exacto: buscamos que tu estimación esté bien razonada.",
+        "peligros": [
+          { "id": "pz1", "texto": "Cuello flexionado al usar el notebook y el celular sobre el mesón durante gran parte de la jornada.", "probabilidad": 3, "consecuencia": 2, "justificacion": "Ocurre todos los días y por horas. Ya hay molestias que no se pasan al final del día. La consecuencia es un trastorno musculoesquelético que puede volverse crónico.", "control": "Pantalla elevada con soporte, teclado y mouse externos; atender WhatsApp desde el computador y no desde el celular." },
+          { "id": "pz2", "texto": "Levantar cajas de retiro desde el piso bajo el mesón, unas 25 veces al día.", "probabilidad": 3, "consecuencia": 2, "justificacion": "Las cajas pesan poco, pero la flexión de tronco se repite todo el día. Si se suman cajas más pesadas, la consecuencia aumenta.", "control": "Estante de retiros a la altura de la cintura, cerca del mesón, con las cajas más pesadas en el nivel medio." },
+          { "id": "pz3", "texto": "Estar de pie sin apoyo ni alternativa de sentarse durante casi toda la jornada.", "probabilidad": 3, "consecuencia": 1, "justificacion": "Es diario, pero sus efectos suelen ser cansancio y molestias en piernas y zona lumbar que se recuperan con descanso, si existe.", "control": "Taburete alto, apoyapié y alfombra antifatiga con bordes biselados; alternar con tareas sentadas." },
+          { "id": "pz4", "texto": "Violencia verbal o amenazas de clientes, en persona o por WhatsApp, estando sola en el local.", "probabilidad": 2, "consecuencia": 3, "justificacion": "Pasó tres veces en un mes. Las consecuencias pueden ser graves para la salud mental, y una amenaza puede escalar a una agresión física.", "control": "Procedimiento frente a clientes agresivos según el protocolo de prevención, respaldo de la jefatura, no estar sola en horarios críticos y registro de episodios." },
+          { "id": "pz5", "texto": "Colación postergada o acortada por la fila del mediodía.", "probabilidad": 3, "consecuencia": 2, "justificacion": "Pasó nueve días en un mes. Sin descanso real a mitad de jornada, la fatiga se acumula en la tarde, cuando llegan los reclamos.", "control": "Apoyo de administración en el horario de la fila y colación en un horario fijo con reemplazo." },
+          { "id": "pz6", "texto": "Atender la fila y responder mensajes al mismo tiempo, sin hora de corte para los pedidos.", "probabilidad": 3, "consecuencia": 2, "justificacion": "Es la queja principal de Daniela. La doble tarea aumenta la carga mental, los errores y la tensión con clientes y con la bodega.", "control": "Hora de corte para pedidos del día, mensaje automático con horarios de atención y bloque de respuesta de mensajes fuera del horario de la fila." }
+        ],
+        "voz": "Todos estos peligros tienen algo en común: se repiten todos los días. Eso sube la probabilidad. Donde vas a tener que pensar más es en la consecuencia. Un dolor de cuello que se vuelve crónico no es menor, y una amenaza de un cliente tampoco, aunque haya pasado solo tres veces. Si tu estimación difiere de la de Patricia, lee su justificación y pregúntate qué dato pesaste distinto.",
+        "hablante": "narrador",
+        "icono": "gauge"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P04",
+        "tipo": "clasificar",
+        "titulo": "Puesto, tarea u organización",
+        "consigna": "Estas son ideas que surgieron en una conversación con el equipo. Clasifica cada una según lo que cambia: el puesto, la tarea o la organización del trabajo.",
+        "texto": "Una buena propuesta combina cambios de los tres tipos. Primero hay que reconocerlos.",
+        "categorias": [
+          { "id": "puesto", "nombre": "Puesto", "icono": "store", "descripcion": "Equipamiento, alturas, alcances y distribución física." },
+          { "id": "tarea", "nombre": "Tarea o proceso", "icono": "list-checks", "descripcion": "Cómo se hace el trabajo: pasos, herramientas, secuencia." },
+          { "id": "organizacion", "nombre": "Organización", "icono": "users", "descripcion": "Horarios, dotación, roles, reglas y apoyos del equipo." }
+        ],
+        "elementos": [
+          { "texto": "Instalar un brazo o soporte para el notebook y usar teclado y mouse externos en el mesón.", "categoria": "puesto", "feedback": "Cambia el equipamiento y la altura de la pantalla. Es la medida más directa para el cuello." },
+          { "texto": "Mover las cajas de retiro a un estante a la altura de la cintura, junto al mesón.", "categoria": "puesto", "feedback": "Cambia la distribución física y elimina la flexión de tronco para sacar cajas del piso." },
+          { "texto": "Responder WhatsApp desde el computador, con respuestas guardadas para las consultas frecuentes.", "categoria": "tarea", "feedback": "Cambia cómo se hace la tarea: menos tiempo con el cuello abajo y menos digitación por mensaje." },
+          { "texto": "Activar un mensaje automático con el horario de atención y la hora de corte de pedidos.", "categoria": "tarea", "feedback": "Cambia el proceso de recepción de pedidos y baja la presión de responder al instante. Es parte de la tarea, apoyada por una regla de organización." },
+          { "texto": "Definir que los pedidos que lleguen después de las 15:00 se despachan al día siguiente, salvo excepción autorizada por Rodrigo.", "categoria": "organizacion", "feedback": "Es una regla de organización: aclara quién decide y quita a Daniela del medio del conflicto." },
+          { "texto": "Que la persona de administración apoye el local de 12:30 a 14:30.", "categoria": "organizacion", "feedback": "Ajusta la dotación en el pico conocido y permite que Daniela tome su colación completa." },
+          { "texto": "Acordar con Los Aromos y los otros dos clientes grandes que envíen sus pedidos por correo antes de las 11:00.", "categoria": "organizacion", "feedback": "Distribuye la carga con los clientes que más pedidos generan. Es organización del trabajo con terceros." },
+          { "texto": "Separar el mesón en una zona de atención y una zona de computador con taburete alto.", "categoria": "puesto", "feedback": "Cambia la distribución del puesto para que cada tarea tenga su altura y se pueda alternar entre de pie y semisentada." },
+          { "texto": "Establecer un procedimiento escrito frente a clientes agresivos, con un número de la jefatura para pedir apoyo inmediato.", "categoria": "organizacion", "feedback": "Define roles y respaldo frente a la violencia de terceros. Daniela deja de decidir sola qué hacer." }
+        ],
+        "voz": "Aquí no hay elementos trampa: todas las ideas son razonables. La gracia es reconocer qué tipo de cambio es cada una, porque una propuesta que solo tiene cambios de puesto deja la doble tarea y la colación sin resolver, y una que solo tiene cambios de organización deja el cuello igual. Algunas ideas tocan dos tipos a la vez. Elige el que pesa más.",
+        "hablante": "narrador",
+        "icono": "list-checks"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P05",
+        "tipo": "decision",
+        "titulo": "Rodrigo pide empezar por tres",
+        "situacion": "Rodrigo leyó las ideas y dice: «Me gustan, pero no podemos hacer todo el mismo mes. Elijan tres para partir el lunes y las demás las vemos en dos meses».",
+        "pregunta": "¿Qué combinación de tres medidas propondrías para partir?",
+        "multiple": true,
+        "minimo": 3,
+        "maximo": 3,
+        "opciones": [
+          { "texto": "Soporte para el notebook con teclado y mouse externos.", "correcta": true, "feedback": "Barata, rápida y ataca el peligro con más consecuencia física. Una buena primera medida de puesto." },
+          { "texto": "Apoyo de administración en el local de 12:30 a 14:30.", "correcta": true, "feedback": "Resuelve la colación, la doble tarea en el peor horario y el estar sola en el momento más tenso. Toca varios peligros a la vez." },
+          { "texto": "Hora de corte de pedidos, con excepciones autorizadas por Rodrigo, y mensaje automático de horarios.", "correcta": true, "feedback": "Reduce la carga mental, ordena la relación con la bodega y le da a Daniela una regla que la respalda. Cuesta poco y tiene mucho efecto." },
+          { "texto": "Pausas activas de cinco minutos cada dos horas.", "correcta": false, "feedback": "Pueden sumarse después, pero como primera medida no cambian la doble tarea, la altura de la pantalla ni la colación. Con el local igual, sería difícil tomarlas." },
+          { "texto": "Un taller de manejo del estrés para Daniela.", "correcta": false, "feedback": "Puede aportar, pero pone el foco en cómo Daniela reacciona y no en lo que genera la carga. Sin cambios en el trabajo, el estrés vuelve el lunes siguiente." }
+        ],
+        "explicacion": "Un buen primer paquete combina los tres tipos de cambio y apunta a los peligros con más probabilidad y consecuencia. Lo que queda para la segunda etapa, como el estante de retiros, el procedimiento frente a clientes agresivos o el acuerdo con clientes grandes, igual tiene que quedar comprometido con fecha.",
+        "voz": "Priorizar no es renunciar a lo demás. Es elegir por dónde partir para que se note el cambio rápido y para que Rodrigo vea resultados. Te recomiendo buscar una medida de puesto, una de tarea u organización que baje la carga mental, y una que resuelva la colación. Y una advertencia: el procedimiento frente a clientes agresivos no puede quedar muy atrás. No es de las primeras tres por costo y tiempo, pero no puede esperar meses.",
+        "hablante": "patricia",
+        "icono": "scale"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P06",
+        "tipo": "construir",
+        "titulo": "Escribe tu propuesta para el local",
+        "consigna": "Redacta la propuesta que Patricia le presentará a Rodrigo. Debe incluir al menos un cambio en el puesto, uno en la tarea o el proceso y uno en la organización, más cómo sabrán si funcionó.",
+        "contexto": "Usa el expediente: mesón alto, notebook sin soporte, celular para WhatsApp, cajas de retiro en el piso, fila de 12:30 a 14:00 con colación postergada, 70 mensajes al día sin hora de corte, tres episodios con clientes agresivos en un mes, una persona de administración disponible dos horas al día y presupuesto solo para equipamiento menor.",
+        "texto": "No necesitas un texto largo, pero sí concreto: qué se cambia, quién lo hace, cuándo, y cómo se va a medir.",
+        "practica_formativa": true,
+        "campos": [
+          { "id": "puesto", "etiqueta": "Cambio en el puesto", "ayuda": "Qué equipamiento o distribución cambia y qué peligro reduce.", "tipo": "texto_largo", "min_palabras": 25 },
+          { "id": "tarea", "etiqueta": "Cambio en la tarea o el proceso", "ayuda": "Qué se hace distinto en el día a día y por qué ayuda.", "tipo": "texto_largo", "min_palabras": 25 },
+          { "id": "organizacion", "etiqueta": "Cambio en la organización", "ayuda": "Horarios, dotación, roles, reglas o respaldo de la jefatura.", "tipo": "texto_largo", "min_palabras": 25 },
+          { "id": "indicador", "etiqueta": "Cómo sabremos si funcionó", "ayuda": "Uno o dos indicadores simples y cuándo revisarlos.", "tipo": "texto", "min_palabras": 12 },
+          { "id": "necesita", "etiqueta": "Qué se necesita y de quién", "ayuda": "Recursos, decisiones y responsables.", "tipo": "texto", "min_palabras": 12 }
+        ],
+        "criterios": [
+          { "criterio": "Cubre puesto, tarea y organización", "niveles": [
+            "Solo propone pausas o cambios en la conducta de Daniela.",
+            "Propone cambios de un solo tipo, por ejemplo solo equipamiento.",
+            "Incluye los tres tipos, pero alguno es vago o no se relaciona con el expediente.",
+            "Incluye los tres tipos, cada uno ligado a un peligro concreto del expediente."
+          ] },
+          { "criterio": "Factibilidad", "niveles": [
+            "Pide cosas fuera de lo posible, como remodelar el local o contratar a varias personas.",
+            "Las medidas son posibles, pero no dice quién las hace ni cuándo.",
+            "Las medidas son posibles y tienen responsable o plazo, no ambos.",
+            "Las medidas usan los recursos disponibles y tienen responsable y plazo."
+          ] },
+          { "criterio": "No carga la solución sobre la persona", "niveles": [
+            "La propuesta depende de que Daniela se esfuerce más, se apure o aguante.",
+            "Mezcla cambios reales con exigencias nuevas para Daniela.",
+            "Los cambios son del trabajo, pero no considera el respaldo frente a clientes.",
+            "Los cambios son del trabajo y la jefatura asume decisiones y respaldo explícito."
+          ] },
+          { "criterio": "Seguimiento", "niveles": [
+            "No dice cómo se sabrá si funcionó.",
+            "Dice que «se evaluará», sin indicador.",
+            "Tiene un indicador, pero sin fecha de revisión.",
+            "Tiene uno o dos indicadores simples y una fecha de revisión con Daniela."
+          ] }
+        ],
+        "ejemplo_solido": "Puesto: instalar esta semana un soporte para el notebook con teclado y mouse externos en una zona del mesón separada de la atención, con un taburete alto. Reduce la flexión de cuello, que es el peligro más frecuente. Lo compra administración; lo instala Héctor.\nTarea: responder WhatsApp desde el computador, con respuestas guardadas para las consultas frecuentes, en bloques a las 11:00, 14:30 y 16:30. El celular queda solo para emergencias.\nOrganización: hora de corte a las 15:00 para el despacho del día, con excepciones que autoriza solo Rodrigo; mensaje automático con horarios; apoyo de administración de 12:30 a 14:30 para que Daniela tome su colación completa a las 14:30. Rodrigo comunica al equipo que respalda la hora de corte frente a los clientes.\nIndicadores: días con colación completa y pedidos que llegan tarde a la bodega, revisados con Daniela en cuatro semanas.\nNecesita: presupuesto para soporte, teclado, mouse y taburete; decisión de Rodrigo sobre la hora de corte y el apoyo de administración.",
+        "ejemplo_debil": "Daniela debe hacer pausas activas cada una hora y tratar de mantener una buena postura. También sería bueno que responda los WhatsApp más rápido para que no se acumulen y que no se tome tan a pecho a los clientes molestos. Se evaluará más adelante.\n\nPor qué es débil: todas las medidas dependen de Daniela, no cambia ni el puesto ni la organización, le agrega una exigencia más (responder más rápido) y no tiene indicador ni plazo.",
+        "voz": "Escribe como si Rodrigo fuera a leer esto en cinco minutos entre dos reuniones. Concreto, ordenado y realista. Cuando termines, compara tu propuesta con los criterios y ubícate con honestidad en cada nivel. Después lee el ejemplo sólido y el débil. Si en algún criterio quedaste abajo, corrige y vuelve a mirar. Así se aprende a escribir propuestas que se aprueban.",
+        "hablante": "narrador",
+        "icono": "pen-line"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P07",
+        "tipo": "dialogo",
+        "titulo": "La propuesta llega a la mesa de Rodrigo",
+        "texto": "Viernes, 10:00. Patricia presenta la propuesta. Daniela está presente.",
+        "lineas": [
+          { "personaje": "rodrigo", "texto": "Me gusta, Patricia. El soporte y el taburete, firmado. Pero la hora de corte me complica. ¿Y si Los Aromos se molesta?" },
+          { "personaje": "patricia", "texto": "Por eso la propuesta dice que las excepciones las autorizas tú. No es un no al cliente: es que alguien con autoridad decide." },
+          { "personaje": "daniela", "texto": "Y la verdad, Rodrigo, hoy igual les fallamos. Dos pedidos por semana llegan tarde a la bodega porque yo no alcanzo a pasarlos." },
+          { "personaje": "rodrigo", "texto": "Mmm. ¿Y el apoyo de administración? Esa persona también tiene su pega." },
+          { "personaje": "patricia", "texto": "Son dos horas, en el pico de la fila. Y si en un mes no se nota en los indicadores, lo revisamos." },
+          { "personaje": "rodrigo", "texto": "Ya. Probemos un mes. Pero quiero ver los números." }
+        ],
+        "pregunta": "¿Qué hizo que Rodrigo aceptara probar?",
+        "multiple": false,
+        "opciones": [
+          { "texto": "Que Daniela le contara que le duele el cuello.", "correcta": false, "feedback": "El dolor de Daniela importa, pero en esta conversación no fue lo que movió la decisión. Rodrigo necesitaba ver que la propuesta resolvía también su problema." },
+          { "texto": "Que la propuesta conectó la salud de Daniela con un problema que Rodrigo ya tenía, tenía un plazo de prueba e indicadores claros.", "correcta": true, "feedback": "Eso es. Los pedidos atrasados eran un problema de Rodrigo. La prueba de un mes y los números le dan control sobre la decisión. Una propuesta preventiva se aprueba más fácil cuando resuelve más de una cosa." },
+          { "texto": "Que Patricia es la prevencionista y Rodrigo tiene que hacerle caso.", "correcta": false, "feedback": "Patricia asesora, pero las decisiones de organización son de la empresa. Su fuerza estuvo en los datos y en responder a la objeción, no en su cargo." }
+        ],
+        "explicacion": "Las propuestas preventivas se aprueban cuando muestran beneficios concretos, responden a las objeciones, se pueden probar y tienen cómo medirse. Rodrigo apoya la prevención cuando ve datos.",
+        "voz": "Esta conversación es muy parecida a muchas que he tenido. La primera reacción casi nunca es un sí completo, y está bien: la jefatura tiene que cuidar otras cosas. Lo que funcionó aquí fueron tres detalles. Daniela trajo un dato que Rodrigo no tenía, la propuesta respondía a su miedo con una regla de excepción, y le ofrecimos probar un mes, no cambiar todo para siempre. Eso baja la resistencia de cualquiera.",
+        "hablante": "patricia",
+        "icono": "message-square"
+      },
+      {
+        "id": "SEG360-SST-M05-LAB-P08",
+        "tipo": "cierre_leccion",
+        "titulo": "Lo que te deja el laboratorio",
+        "texto": "Rediseñar un trabajo no es hacer una lista de deseos: es elegir, justificar y medir.",
+        "ideas": [
+          "Una buena propuesta combina cambios en el puesto, la tarea y la organización, y cada cambio se conecta con un peligro concreto.",
+          "Factible significa con recursos reales, responsable y plazo. Priorizar es partir por lo que más reduce y menos cuesta, sin olvidar lo urgente.",
+          "Las propuestas se aprueban más fácil cuando resuelven también un problema de la jefatura y se pueden probar con indicadores."
+        ],
+        "pregunta": "¿Qué puesto de tu lugar de trabajo se parece al de Daniela, y cuál sería la primera medida de organización que propondrías para él?",
+        "voz": "Lo que hiciste en este laboratorio es exactamente lo que hace un Comité Paritario o una prevencionista cuando le toca mejorar un puesto. Observar, evaluar, priorizar, proponer y medir. Puedes hacerlo con tu propio puesto o con el de alguien de tu equipo. No necesitas un cargo para proponer: necesitas datos y una propuesta clara.",
+        "hablante": "narrador"
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-SST-M05-CIERRE",
+    "titulo": "Cambiar el trabajo, no solo aguantarlo",
+    "texto": "En este módulo miraste el trabajo en tres capas. **El puesto**: alturas, pantalla, silla, luz y alcances. **La jornada**: fatiga, pausas que sirven y medidas que reparten la carga. **El equipo**: factores psicosociales, el cuestionario CEAL-SM, la Ley Karin y la coordinación.\n\nLa idea que une todo: cuando algo duele o cansa, la pregunta no es cuánto más puede aguantar la persona, sino qué se puede cambiar en el trabajo.",
+    "voz": "Si vuelves a tu puesto mañana y miras la pantalla, la silla o la forma en que llegan los pedidos con otros ojos, este módulo cumplió su objetivo. Lo que más me interesa que te lleves es el hábito de preguntar qué hace que algo canse, y de proponer cambios concretos en lugar de soportar en silencio. En el próximo módulo, el último de la ruta, vamos a ver qué pasa cuando las cosas se salen de control: emergencias, incidentes y cómo aprender de ellos sin buscar culpables.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Ajusta tu puesto esta semana siguiendo el orden silla, teclado, pantalla, luz y alcances, y anota qué necesitas pedir.",
+      "Identifica en qué momento de tu jornada o del mes se acumula el cansancio en tu equipo y llévalo con datos a tu jefatura.",
+      "Averigua dónde está el procedimiento de prevención del acoso y la violencia de tu empresa y cuándo se aplica el cuestionario CEAL-SM.",
+      "Elige un puesto de tu área y escribe una propuesta breve con un cambio de puesto, uno de tarea y uno de organización."
+    ],
+    "siguiente": "Módulo 6: Emergencias, incidentes y aprendizaje. Vas a repasar el plan de emergencia, aprender a reportar incidentes sin miedo y a investigar para aprender. Termina con un caso en la bodega."
+  },
+  "glosario": [
+    { "termino": "Ergonomía", "definicion": "Disciplina que busca adaptar el trabajo a las personas: el puesto, las herramientas, las tareas y los tiempos, para reducir la carga y los errores." },
+    { "termino": "Postura neutra", "definicion": "Posición del cuerpo con las articulaciones cerca de su posición de descanso, que exige menos esfuerzo para mantenerse. Es un punto de partida, no una postura para mantener inmóvil." },
+    { "termino": "TMERT", "definicion": "Trastornos musculoesqueléticos de extremidad superior relacionados con el trabajo. El Minsal tiene un protocolo para vigilarlos que considera repetitividad, postura, fuerza y tiempos de recuperación." },
+    { "termino": "Fatiga", "definicion": "Disminución de la capacidad física o mental que aparece cuando el esfuerzo supera el tiempo de recuperación. Se nota en errores, lentitud e irritabilidad." },
+    { "termino": "Pausa efectiva", "definicion": "Pausa breve, programada, con reemplazo definido, que cambia realmente lo que hace el cuerpo o la vista. Complementa, pero no reemplaza, los cambios de tarea y organización." },
+    { "termino": "Rotación de tareas", "definicion": "Alternar entre tareas que exigen al cuerpo y a la mente de manera distinta, para repartir la carga. Pasar de una tarea a otra igual no es rotación." },
+    { "termino": "Factores de riesgo psicosocial", "definicion": "Condiciones de la organización del trabajo, como exigencias, control, apoyo, trato, claridad de rol y equilibrio con la vida personal, que pueden afectar la salud." },
+    { "termino": "CEAL-SM/SUSESO", "definicion": "Cuestionario oficial en Chile para evaluar los factores de riesgo psicosocial en el trabajo. Es anónimo y sus resultados se analizan por grupos para definir medidas." },
+    { "termino": "Ley Karin", "definicion": "Ley 21.643, vigente desde agosto de 2024, sobre prevención, investigación y sanción del acoso laboral, el acoso sexual y la violencia en el trabajo, incluida la de terceros como clientes." },
+    { "termino": "Hora de corte", "definicion": "Hora límite acordada para que un pedido entre en el despacho del mismo día. Ordena la carga y aclara quién decide las excepciones." }
+  ],
+  "recursos": ["SEG360-REC01", "SEG360-REC03", "SEG360-REC10"],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG019",
+      "titulo": "Daniela en el mesón a mediodía",
+      "uso": "Apertura del módulo y del laboratorio. Muestra un puesto de atención con condiciones a corregir: notebook directo sobre el mesón alto, cuello flexionado y fila de clientes. Es un ejemplo de situación a mejorar, no una práctica recomendada.",
+      "prompt": "Realistic editorial photograph, natural daylight mixed with soft interior light, inside the small customer pickup counter of a mid-sized office and cleaning supplies distributor in Santiago, Chile. A Chilean woman in her mid-thirties with dark hair tied back, wearing a plain graphite work polo, stands behind a tall service counter and looks down at a laptop lying flat on the counter, her neck visibly bent forward, while a smartphone rests next to the laptop. In the foreground, slightly out of focus, four or five adult customers of diverse ages wait in line. Cardboard boxes for order pickup are stacked on the floor under the counter. The scene clearly illustrates a workstation condition to be corrected (laptop too low, no stool, boxes on the floor), shown candidly, not posed. Sober palette of bluish graphite and white with discreet amber and rust accents. No readable text, no logos, no real brands, no screens with legible content.",
+      "alt": "Una mujer atiende detrás de un mesón alto con el notebook apoyado directamente sobre él, mirando hacia abajo con el cuello doblado, mientras una fila de clientes espera. Bajo el mesón hay cajas de pedidos en el piso."
+    },
+    {
+      "id": "SEG360-IMG020",
+      "titulo": "Puesto con pantalla bien ajustado",
+      "uso": "Lección 1: ejemplo de puesto ajustado (apertura y pasos para ajustar el puesto). Muestra la versión correcta: notebook en soporte, teclado y mouse externos, pies apoyados.",
+      "prompt": "Realistic editorial photograph, soft natural side light from a window with a half-closed blind, in the second-floor administrative office of a mid-sized distributor in Santiago, Chile. A Chilean woman in her thirties sits at a desk working, seen from a three-quarter side angle: her laptop is raised on a stand so the top of the screen is at eye level, she uses an external keyboard and mouse at elbow height, forearms relaxed, back supported by an adjustable office chair, both feet flat on a small footrest. The window is to the side of the screen, with no glare. A desk phone and a few folders within easy reach. She is focused on her work, not posing. Sober palette of bluish graphite and white with discreet amber accents. No readable text on screen or papers, no logos, no real brands.",
+      "alt": "Una trabajadora sentada frente a un notebook elevado en un soporte, con teclado y mouse externos a la altura de los codos, la espalda apoyada y los pies sobre un reposapiés. La ventana queda al costado de la pantalla."
+    },
+    {
+      "id": "SEG360-IMG021",
+      "titulo": "Reunión breve de coordinación",
+      "uso": "Lección 2 y Lección 3: turnos, organización y coordinación del equipo. Muestra una reunión breve de inicio de turno entre bodega, local y jefatura.",
+      "prompt": "Realistic editorial photograph, early morning natural light coming through the loading dock door of a light warehouse of a mid-sized distributor in Santiago, Chile. Four Chilean adults of diverse ages stand in a small circle having a short start-of-shift meeting next to a whiteboard with blurred, unreadable notes: a woman in her forties wearing a high-visibility vest (warehouse supervisor), a younger woman with a vest and safety shoes, a man in his fifties in a maintenance work jacket, and a man in his forties in a shirt holding a tablet (operations manager). A woman from the customer counter in a graphite polo joins them. Relaxed, attentive body language, one person speaking, others listening. Pallets neatly stored in marked areas in the background, clear walkways. Sober palette of bluish graphite and white with discreet amber accents. No readable text, no logos, no real brands.",
+      "alt": "Cinco personas de bodega, local y jefatura conversan de pie en una reunión breve al inicio del turno, junto a una pizarra, en una bodega ordenada con pasillos despejados."
+    }
+  ],
+  "minutos_desglose": { "lecciones": 120, "laboratorio": 45, "intro_cierre_recursos": 15 }
+}

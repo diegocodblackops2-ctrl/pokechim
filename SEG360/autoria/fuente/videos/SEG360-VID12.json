@@ -1,0 +1,90 @@
+{
+  "id": "SEG360-VID12",
+  "titulo": "Inspección de EPP en un minuto",
+  "modulo": "SEG360-EPP-M05",
+  "pantalla": "SEG360-EPP-M05-L01-P03",
+  "objetivo": "Reconocer qué se observa en un casco, unos lentes, unos guantes y un fono antes de usarlos, y saber que ante un defecto el equipo se deja fuera de uso, se registra y se avisa, sin repararlo.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": {
+        "tipo": "imagen",
+        "ref": "SEG360-IMG055",
+        "movimiento": "zoom_lento"
+      },
+      "texto_en_pantalla": "Un minuto antes de cada turno",
+      "voz": "Lunes, siete cincuenta, frente al armario de EPP. Antes de ponerte cualquier equipo, dale un minuto. Mira, prueba, compara y decide.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "casco",
+        "movimiento": "giro"
+      },
+      "texto_en_pantalla": "Casco: carcasa y suspensión",
+      "voz": "Partimos por el casco. Gíralo con buena luz y busca fisuras, hundimientos o una superficie opaca, como tiza. Después mira por dentro: las cintas de la suspensión enteras y la fecha moldeada legible.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "lentes",
+        "movimiento": "acercar:micas"
+      },
+      "texto_en_pantalla": "Lentes: micas y laterales",
+      "voz": "Ahora los lentes, contra la luz. Rayas en la línea de visión, trizaduras o una protección lateral que falta son motivo de retiro.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "guante",
+        "movimiento": "acercar:palma"
+      },
+      "texto_en_pantalla": "Guantes: cortes, hinchazón, puño",
+      "voz": "Los guantes se miran por fuera y por dentro. Cortes, agujeros, zonas hinchadas o pegajosas, cambios de color o un puño cortado. Si el fabricante indica una prueba de fugas, se hace como él dice.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "fono",
+        "movimiento": "acercar:almohadillas"
+      },
+      "texto_en_pantalla": "Fono: almohadillas y diadema",
+      "voz": "En el fono, todo depende del sello. Almohadillas blandas y enteras, copas sin perforaciones y una diadema que conserva su presión.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "eye",
+          "pen-line",
+          "megaphone"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "Observa, registra, avisa",
+      "voz": "Si encuentras un defecto, no lo arreglas. Dejas el equipo fuera de uso con un rótulo, anotas qué viste y avisas a tu jefatura para la reposición.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": {
+        "tipo": "texto",
+        "ref": "Si dudas, no lo uses: consulta"
+      },
+      "texto_en_pantalla": "Si dudas, no lo uses: consulta",
+      "voz": "Y cuando tengas dudas, la regla es simple: no lo uses y consulta. Ese minuto vale.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: un armario abierto con cascos, lentes, fonos y cajas de guantes en la bodega; la cámara se acerca lentamente mientras aparece el texto «Un minuto antes de cada turno». Escena 2: un casco blanco gira en 3D; se ve la carcasa por fuera y luego el interior, con las cintas de la suspensión y la fecha moldeada. Escena 3: unos lentes de seguridad se acercan hasta mostrar las micas y las protecciones laterales. Escena 4: un guante se acerca hasta la palma, donde se observan el recubrimiento y el puño. Escena 5: un fono se acerca a las almohadillas y la diadema. Escena 6: aparecen en secuencia tres íconos, un ojo, un lápiz y un megáfono, con el texto «Observa, registra, avisa». Escena 7: sobre fondo liso aparece la frase «Si dudas, no lo uses: consulta»."
+}

@@ -1,0 +1,1566 @@
+{
+  "id": "SEG360-CIBER-M06",
+  "ruta": "CIBER",
+  "numero": 6,
+  "titulo": "Incidentes: avisar temprano vale oro",
+  "subtitulo": "Reconocer señales, actuar en los primeros minutos y ayudar a que el trabajo siga",
+  "resultado": "Ante una sospecha de incidente después de un clic o un acceso extraño, reconocer las señales, reportar de inmediato por el canal correcto, preservar la información útil y apoyar la continuidad, sin ocultar, reenviar el riesgo ni hacer remediaciones no autorizadas.",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-CIBER-M06-INTRO",
+    "titulo": "Ocho minutos que hicieron la diferencia",
+    "texto": "A las 9:12, Daniela le escribe a Nacho: «Una clienta me dice que le llegó un correo mío con un link raro. Yo no lo mandé». A las 9:20 su cuenta estaba bloqueada y los clientes, avisados.\n\nNadie le preguntó «¿cómo pudiste?». Le dijeron: «Gracias por avisar al tiro».\n\nEste módulo es sobre esos minutos: qué notar, qué hacer, qué no tocar y cómo seguir trabajando.",
+    "voz": "En ciberseguridad hay una verdad incómoda: a pesar de todo lo que aprendiste en esta ruta, algún día alguien va a hacer clic donde no debía. Puede ser un colega, puede ser la jefatura, puedes ser tú. Lo que define cuánto daño hace ese clic no es el clic. Es cuánto tiempo pasa hasta que alguien avisa, y qué se hace mientras tanto. En este módulo vas a aprender a reconocer las señales, a actuar en los primeros minutos sin empeorar las cosas y a ayudar a que Pehuén siga funcionando. Y al final vas a vivir un viernes complicado.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG040",
+    "logros": [
+      "Reconocer señales de un posible incidente y distinguirlas de molestias que, por sí solas, no prueban nada.",
+      "Actuar en los primeros 15 minutos: reportar por el canal correcto, anotar, preservar la información y no hacer remediaciones por tu cuenta.",
+      "Apoyar la continuidad con canales alternativos y aportar a un aprendizaje sin culpa después del incidente."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-CIBER-M06-L01",
+      "titulo": "Señales de que algo anda mal",
+      "resultado": "Ante señales en el correo, el celular, los archivos o el equipo, distinguir las que justifican un aviso inmediato de las que, por sí solas, no prueban nada, y reaccionar sin destruir información útil.",
+      "minutos": 40,
+      "fuentes": [
+        "CIB-NISTCSF2",
+        "CIB-LEY21663",
+        "CIB-CSIRT",
+        "CIB-INCIBE"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M06-L01-P01",
+          "tipo": "apertura",
+          "titulo": "Correos que no escribiste",
+          "escena": "Martes, 8:15, teletrabajo. Javier abre su correo y encuentra en «Enviados» tres mensajes a clientes que él no escribió: «Actualización de datos bancarios para pagos». En el celular hay una notificación de las 6:58 que pedía aprobar un inicio de sesión. Aparece como aprobada. ¿La aprobó él? Estaba medio dormido.",
+          "pregunta": "¿Es un incidente o una coincidencia? ¿Y necesitas saberlo antes de avisar?",
+          "texto": "Javier tiene señales, pero no certeza. Esa es la situación normal: casi nunca vas a estar seguro.\n\nEn esta lección vas a aprender a reconocer las señales más comunes de un incidente y a no descartarlas solo porque «a lo mejor no es nada».",
+          "voz": "Fíjate en lo que pasa por la cabeza de Javier en este momento. Primero, la duda: a lo mejor es un error del sistema. Después, la vergüenza: a lo mejor aprobé esa notificación sin darme cuenta. Y al final, la tentación: borro esos correos, cambio la clave y aquí no ha pasado nada. Esa tentación es la que más daño hace. Ojo con algo: no necesitas certeza para avisar. Necesitas una sospecha razonable, y Javier la tiene de sobra.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG041",
+          "icono": "mail-warning",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Qué es un incidente y por qué la sospecha basta",
+          "texto": "Un **incidente de seguridad** es cualquier hecho que afecta, o puede afectar, la confidencialidad, la integridad o la disponibilidad de la información: que alguien vea lo que no debe, que algo se altere o que deje de estar disponible.\n\nNo tienes que confirmarlo. Tu parte es **notar y avisar**. Confirmar y contener es trabajo de TI.",
+          "bloques": [
+            {
+              "icono": "eye",
+              "titulo": "Tú ves lo que TI no ve",
+              "texto": "Un correo raro en tu bandeja, una notificación en tu celular, un archivo que no abre. Sin tu aviso, pueden pasar días."
+            },
+            {
+              "icono": "clock",
+              "titulo": "El tiempo juega en contra",
+              "texto": "Cada hora sin aviso es una hora en que alguien puede leer correos, desviar pagos o bloquear archivos."
+            },
+            {
+              "icono": "thumbs-up",
+              "titulo": "Una falsa alarma también sirve",
+              "texto": "Si no era nada, TI lo confirma y tú quedas tranquilo. Perdiste cinco minutos; nadie perdió nada más."
+            }
+          ],
+          "nota": {
+            "tipo": "dato",
+            "texto": "El marco de ciberseguridad NIST CSF 2.0, muy usado como referencia, ordena la gestión en seis funciones. Dos de ellas son **Detectar** y **Responder**. Detectar no es solo tarea de herramientas: las personas que notan algo raro también son parte de la detección."
+          },
+          "voz": "¿Te acuerdas de las tres palabras del módulo uno? Confidencialidad, integridad y disponibilidad. Un incidente es simplemente algo que pone en riesgo alguna de las tres. Si alguien entra a tu correo, se rompe la confidencialidad. Si cambia la cuenta bancaria de un proveedor en una planilla, la integridad. Si los archivos de la carpeta compartida no abren, la disponibilidad. No necesitas ponerle un nombre técnico. Basta con decir: vi esto, a esta hora, y me pareció raro.",
+          "hablante": "narrador",
+          "profundiza": "En la práctica, las organizaciones distinguen entre un evento, algo que ocurre y queda registrado, como un inicio de sesión, y un incidente, un evento que afecta o amenaza la seguridad. Esa distinción la hace TI con información que tú no tienes: registros, alertas y otros reportes. Por eso tu aviso es valioso aunque no estés seguro: puede ser la pieza que confirma algo que TI ya estaba viendo, o la primera señal de algo que nadie había detectado. El NIST Cybersecurity Framework 2.0 es un marco de gestión publicado en 2024 por el Instituto Nacional de Estándares y Tecnología de Estados Unidos. No es una ley chilena ni una certificación personal, pero muchas organizaciones lo usan para ordenar su trabajo. En Chile, la Ley 21.663, Ley Marco de Ciberseguridad, creó la Agencia Nacional de Ciberseguridad y el CSIRT Nacional, y establece deberes de reporte para ciertas organizaciones. Si una empresa como Pehuén tiene o no esos deberes, y qué debe reportar a quién, lo determina la propia empresa. Tu parte es siempre la misma: reportar internamente, de inmediato, por el canal definido.",
+          "icono": "shield-alert",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P03",
+          "tipo": "tarjetas",
+          "titulo": "Seis señales que conviene conocer",
+          "consigna": "Da vuelta las tarjetas. Algunas señales son claras por sí solas; otras solo importan cuando aparecen junto a otras.",
+          "texto": "Ninguna lista es completa, pero estas seis cubren la mayoría de los incidentes que le pueden tocar a una persona en una empresa como Pehuén.",
+          "tarjetas": [
+            {
+              "frente": "Correos que no enviaste",
+              "icono": "send",
+              "reverso": "Mensajes en «Enviados» que no escribiste, respuestas a correos que nunca mandaste o colegas y clientes que te preguntan por un mensaje tuyo raro. Es una de las señales más claras de que alguien usa tu cuenta."
+            },
+            {
+              "frente": "Reglas que no creaste",
+              "icono": "mail-warning",
+              "reverso": "Reglas que reenvían correos a otra dirección, los marcan como leídos o los mueven a una carpeta. Quien entra a una cuenta ajena suele dejar una para seguir leyendo sin que se note."
+            },
+            {
+              "frente": "MFA que no pediste",
+              "icono": "smartphone",
+              "reverso": "Una solicitud para aprobar un inicio de sesión que no iniciaste. Puede significar que alguien ya tiene tu contraseña. No la apruebes, y avisa aunque la hayas rechazado."
+            },
+            {
+              "frente": "Archivos raros o que no abren",
+              "icono": "file-warning",
+              "reverso": "Nombres cambiados, extensiones desconocidas, muchos archivos modificados a la vez o un archivo nuevo con «instrucciones». Puede ser un ransomware: un software que cifra los archivos y pide un pago para devolverlos."
+            },
+            {
+              "frente": "Ventanas que piden pago o llamar",
+              "icono": "shield-alert",
+              "reverso": "Avisos de que tus archivos están bloqueados y debes pagar, o falsos «virus detectado» con un número de soporte. No pagues, no llames, no hagas clic dentro del aviso: avisa a TI."
+            },
+            {
+              "frente": "Lentitud: sola, no prueba nada",
+              "icono": "gauge",
+              "reverso": "Un equipo lento puede deberse a una actualización, a muchas pestañas abiertas o a un disco lleno. Por sí sola no es señal de incidente. Pero si aparece junto a otras señales, sí vale la pena mencionarla."
+            }
+          ],
+          "voz": "Estas son las señales que más se repiten. Hay dos que quiero destacar. Las reglas de reenvío, porque son silenciosas: tu correo funciona perfecto, pero una copia de todo lo que dice factura se va a otra parte. Y el equipo lento, porque es lo que más se asocia con un virus y, por sí solo, es lo que menos dice. No descartes nada, pero tampoco veas fantasmas en todas partes.",
+          "hablante": "narrador",
+          "icono": "search",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P04",
+          "tipo": "escritorio",
+          "titulo": "El martes de Javier: revisar las señales",
+          "consigna": "Estás en el computador de Javier, el martes a las 8:20. Revisa cada señal y decide qué hacer. Tu rol no es investigar ni limpiar: es reconocer, preservar y avisar por un canal seguro.",
+          "texto": "Seis misiones. Casi todas las opciones incorrectas se eligen con buena intención: por eso el feedback te explica qué consecuencia tendrían.",
+          "usuario": "javier",
+          "misiones": [
+            {
+              "id": "m1",
+              "texto": "Revisa la notificación del celular de las 6:58",
+              "app": "telefono",
+              "elemento": "t1"
+            },
+            {
+              "id": "m2",
+              "texto": "Revisa el correo que aparece en «Enviados»",
+              "app": "correo",
+              "elemento": "c1"
+            },
+            {
+              "id": "m3",
+              "texto": "Revisa el aviso de rebote que llegó a la bandeja",
+              "app": "correo",
+              "elemento": "c2"
+            },
+            {
+              "id": "m4",
+              "texto": "Revisa las reglas de tu correo",
+              "app": "configuracion",
+              "elemento": "s1"
+            },
+            {
+              "id": "m5",
+              "texto": "Responde a Daniela, que te escribió por el chat",
+              "app": "chat",
+              "elemento": "h1"
+            },
+            {
+              "id": "m6",
+              "texto": "Avisa a Nacho",
+              "app": "telefono",
+              "elemento": "t2"
+            }
+          ],
+          "telefono": [
+            {
+              "id": "t1",
+              "tipo": "mfa",
+              "remitente": "Autenticador de Pehuén",
+              "texto": "Solicitud de inicio de sesión en tu cuenta de Pehuén. Ubicación aproximada: otra región. Estado: aprobada.",
+              "hora": "06:58",
+              "acciones": [
+                {
+                  "id": "t1a",
+                  "texto": "No darle importancia: si se aprobó, fue porque yo lo hice.",
+                  "correcta": false,
+                  "feedback": "No lo recuerdas, y a esa hora no estabas iniciando sesión. Una aprobación dudosa, junto con correos que no escribiste, es una señal fuerte."
+                },
+                {
+                  "id": "t1b",
+                  "texto": "Anotar la hora y el estado, e incluirlo en el aviso a Nacho, aunque no esté seguro de haberla aprobado yo.",
+                  "correcta": true,
+                  "feedback": "Justamente porque no estás seguro, hay que contarlo. Para TI, una aprobación a las 6:58 desde otra región es un dato clave para revisar la cuenta."
+                },
+                {
+                  "id": "t1c",
+                  "texto": "Borrar la notificación para que no me confunda más.",
+                  "correcta": false,
+                  "feedback": "Borrarla elimina información que a Nacho le sirve. Y no cambia lo que ya pasó."
+                }
+              ]
+            },
+            {
+              "id": "t2",
+              "tipo": "llamada",
+              "remitente": "Nacho Pérez – Soporte TI (contacto guardado)",
+              "texto": "Anexo 210 · Celular de soporte +56 9 0000 0210",
+              "hora": "08:25",
+              "acciones": [
+                {
+                  "id": "t2a",
+                  "texto": "Escribirle un correo desde mi cuenta con todo el detalle.",
+                  "correcta": false,
+                  "feedback": "Si tu cuenta está comprometida, quien la controla podría leer o borrar ese correo, o responderte haciéndose pasar por Nacho. Usa un canal que no dependa de tu correo."
+                },
+                {
+                  "id": "t2b",
+                  "texto": "Llamarlo ahora y contarle lo que vi, con las horas que anoté.",
+                  "correcta": true,
+                  "feedback": "Llamar es el canal correcto cuando tu correo puede estar comprometido. Le das hechos con hora: aprobación a las 6:58, regla creada a las 7:01, correos enviados a las 7:04."
+                },
+                {
+                  "id": "t2c",
+                  "texto": "Esperar hasta el jueves, que voy a la oficina, para contárselo en persona.",
+                  "correcta": false,
+                  "feedback": "Hasta el jueves, la regla seguiría reenviando facturas y los clientes podrían pagarle a otra cuenta. Avisar temprano vale oro."
+                }
+              ]
+            }
+          ],
+          "correo": [
+            {
+              "id": "c1",
+              "de_nombre": "Javier Contreras",
+              "de_correo": "javier.contreras@pehuen.example",
+              "para": "compras@losaromos.example; pagos@ferreteria-sur.invalid; adquisiciones@clientes-norte.example",
+              "asunto": "Actualización de datos bancarios para pagos",
+              "fecha": "Mar 07:04",
+              "cuerpo": "Estimados:\n\nLes informamos que, a partir de hoy, los pagos a Pehuén Distribución deben realizarse a la nueva cuenta indicada en el documento adjunto. Por favor, actualicen sus registros a la brevedad para evitar retrasos en sus despachos.\n\nSaludos cordiales,\nJavier Contreras\nAdministración y Finanzas",
+              "adjuntos": [
+                "Datos_bancarios_nuevos.pdf"
+              ],
+              "enlaces": [],
+              "acciones": [
+                {
+                  "id": "c1a",
+                  "texto": "Borrar el correo de «Enviados» para que no queden más copias.",
+                  "correcta": false,
+                  "feedback": "Borrarlo elimina evidencia que TI necesita para saber a quién se envió y qué decía, y no deshace el envío: los clientes ya lo recibieron."
+                },
+                {
+                  "id": "c1b",
+                  "texto": "No tocarlo, anotar a quiénes se envió y a qué hora, e informarlo a Nacho.",
+                  "correcta": true,
+                  "feedback": "Preservas la evidencia y tienes los datos que importan: destinatarios, hora y asunto. Con eso, Pehuén puede avisar a esos clientes por un canal seguro."
+                },
+                {
+                  "id": "c1c",
+                  "texto": "Responder a todos desde mi correo diciendo que ignoren el mensaje.",
+                  "correcta": false,
+                  "feedback": "La intención es buena, pero tu cuenta puede estar comprometida: quien la controla podría ver tu respuesta o seguir escribiendo. El aviso a clientes lo coordina Pehuén con TI, por un canal seguro."
+                }
+              ]
+            },
+            {
+              "id": "c2",
+              "de_nombre": "Sistema de correo",
+              "de_correo": "postmaster@pehuen.example",
+              "para": "javier.contreras@pehuen.example",
+              "asunto": "No se pudo entregar: Actualización de datos bancarios para pagos",
+              "fecha": "Mar 07:05",
+              "cuerpo": "Tu mensaje no se pudo entregar a pagos@ferreteria-sur.invalid porque la dirección no existe.",
+              "adjuntos": [],
+              "enlaces": [],
+              "acciones": [
+                {
+                  "id": "c2a",
+                  "texto": "Archivarlo: es solo un rebote.",
+                  "correcta": false,
+                  "feedback": "Este rebote es una prueba de que desde tu cuenta salieron correos que no escribiste. Vale la pena dejarlo donde está y mencionarlo."
+                },
+                {
+                  "id": "c2b",
+                  "texto": "Reenviarlo a mi correo personal, para tener una copia por si acaso.",
+                  "correcta": false,
+                  "feedback": "Sacar información de la empresa a tu correo personal crea otra copia fuera de control y no ayuda. La evidencia se queda donde está; TI la recupera."
+                },
+                {
+                  "id": "c2c",
+                  "texto": "Dejarlo donde está e incluirlo en el reporte como confirmación de los envíos.",
+                  "correcta": true,
+                  "feedback": "Bien. Un rebote parece un detalle, pero confirma la hora y uno de los destinatarios de un envío que no hiciste."
+                }
+              ]
+            }
+          ],
+          "configuracion": [
+            {
+              "id": "s1",
+              "titulo": "Reglas de la bandeja de entrada",
+              "estado": "Regla «Org»: si el asunto contiene «factura», «pago» o «transferencia», reenviar a respaldo.contable@correo-seguro.invalid, marcar como leído y mover a «Archivo». Creada hoy, 07:01.",
+              "acciones": [
+                {
+                  "id": "s1a",
+                  "texto": "Eliminar la regla de inmediato.",
+                  "correcta": false,
+                  "feedback": "Se entiende el impulso, pero borrarla elimina evidencia de cuándo se creó y hacia dónde reenviaba. Avisa y sigue las instrucciones de TI; si te piden eliminarla, lo haces en ese momento."
+                },
+                {
+                  "id": "s1b",
+                  "texto": "Sacarle una captura de pantalla, no tocarla y reportarla a Nacho.",
+                  "correcta": true,
+                  "feedback": "Preservas la información y la entregas a quien puede actuar. Esta regla es probablemente la señal más importante de todas: explica por qué podrías no estar viendo correos de pagos."
+                },
+                {
+                  "id": "s1c",
+                  "texto": "Dejarla: a lo mejor la creó TI para ordenar los correos.",
+                  "correcta": false,
+                  "feedback": "Una regla creada hoy a las 7:01, que reenvía facturas a un correo externo y las esconde, no es una regla de orden. Si dudas, pregunta, pero ahora."
+                }
+              ]
+            }
+          ],
+          "chat": [
+            {
+              "id": "h1",
+              "de": "Daniela Rojas",
+              "texto": "Javier, me llegó un correo tuyo con un PDF de datos bancarios nuevos. ¿Lo abro? ¿Hay que cambiar la cuenta en algún lado?",
+              "hora": "08:22",
+              "acciones": [
+                {
+                  "id": "h1a",
+                  "texto": "Decirle que lo reenvíe a todo el equipo para saber si alguien más lo recibió.",
+                  "correcta": false,
+                  "feedback": "Reenviarlo multiplica el riesgo: más personas con el archivo y más posibilidades de que alguien lo abra. TI puede buscar quién lo recibió sin que nadie lo reenvíe."
+                },
+                {
+                  "id": "h1b",
+                  "texto": "Decirle que no lo abra ni lo reenvíe, que lo deje en su bandeja y que se lo reporte a Nacho; tú también estás avisando.",
+                  "correcta": true,
+                  "feedback": "Cortas el riesgo para Daniela y sumas un reporte más para Nacho. Y como le escribes por el chat, no por tu correo, no dependes de la cuenta comprometida."
+                },
+                {
+                  "id": "h1c",
+                  "texto": "Decirle que lo abra para ver qué cuenta aparece, así se lo cuentas a Nacho.",
+                  "correcta": false,
+                  "feedback": "Abrir el adjunto podría ejecutar algo o llevarla a un sitio malicioso. No hace falta: Nacho puede analizarlo con cuidado."
+                }
+              ]
+            }
+          ],
+          "voz": "Este es el martes de Javier en cámara lenta. En la vida real, todo esto pasa en cinco minutos y con el corazón acelerado. Aquí puedes tomarte tu tiempo. Fíjate en un patrón: casi todas las opciones incorrectas son cosas que harías por buena intención. Borrar, avisar a todos, arreglarlo uno mismo. La buena intención no basta. La evidencia se preserva y el aviso va por un canal que no dependa del correo comprometido.",
+          "hablante": "narrador",
+          "icono": "laptop",
+          "practica_formativa": true
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P05",
+          "tipo": "clasificar",
+          "titulo": "¿Señal o ruido?",
+          "consigna": "Clasifica cada situación. No se trata de asustarse con todo, sino de saber qué merece un aviso inmediato.",
+          "texto": "Piensa en dos cosas: ¿tiene una explicación conocida? ¿Viene sola o junto a otras señales?",
+          "categorias": [
+            {
+              "id": "reportar",
+              "nombre": "Reportar ya",
+              "icono": "siren",
+              "descripcion": "Señal de posible incidente: avisa de inmediato por el canal oficial."
+            },
+            {
+              "id": "comentar",
+              "nombre": "Comentar a TI",
+              "icono": "message-square",
+              "descripcion": "Puede ser normal, pero conviene mencionarlo por el canal de soporte, sobre todo si se repite."
+            },
+            {
+              "id": "normal",
+              "nombre": "Normal",
+              "icono": "badge-check",
+              "descripcion": "Tiene una explicación conocida; no requiere aviso."
+            }
+          ],
+          "elementos": [
+            {
+              "texto": "Aparece una ventana que dice que tus archivos están cifrados y pide pagar para recuperarlos.",
+              "categoria": "reportar",
+              "feedback": "Es una señal clara de ransomware. No pagues ni intentes cerrar o arreglar nada por tu cuenta: avisa de inmediato y sigue las instrucciones de TI."
+            },
+            {
+              "texto": "Tu notebook está lento desde que TI avisó que instalaría actualizaciones esta mañana.",
+              "categoria": "normal",
+              "feedback": "Tiene una explicación conocida y anunciada. Si sigue lento mañana, coméntalo, pero no es señal de incidente."
+            },
+            {
+              "texto": "Encuentras en tu correo una regla de reenvío a una dirección externa que no creaste.",
+              "categoria": "reportar",
+              "feedback": "Es una de las señales más claras de que alguien entró a tu cuenta. No la borres: captúrala y avisa."
+            },
+            {
+              "texto": "Un cliente te dice que recibió un correo tuyo con un link que tú no enviaste.",
+              "categoria": "reportar",
+              "feedback": "Alguien está usando tu cuenta o haciéndose pasar por ti. En ambos casos, se reporta de inmediato."
+            },
+            {
+              "texto": "Te llega una solicitud de MFA justo cuando tú estabas iniciando sesión en el notebook nuevo.",
+              "categoria": "normal",
+              "feedback": "Coincide con algo que tú hiciste. Es el MFA funcionando como debe."
+            },
+            {
+              "texto": "Varios archivos de la carpeta compartida de bodega cambiaron de nombre y tienen una extensión que no conoces.",
+              "categoria": "reportar",
+              "feedback": "Puede ser el comienzo de un ataque que cifra archivos. Avisa de inmediato y no sigas abriéndolos."
+            },
+            {
+              "texto": "El computador anda lento hace una semana, sin ninguna otra cosa rara.",
+              "categoria": "comentar",
+              "feedback": "Sola, la lentitud no prueba nada: puede ser el disco, una actualización o un programa pesado. Igual conviene comentarlo a TI por el canal normal de soporte, sin urgencia."
+            },
+            {
+              "texto": "Te llega un correo de «cambio de contraseña realizado» y tú no la cambiaste.",
+              "categoria": "reportar",
+              "feedback": "Si no la cambiaste, alguien más pudo hacerlo. No uses el link del correo: avisa a TI por el canal oficial."
+            },
+            {
+              "texto": "El antivirus muestra que bloqueó una descarga y no dice nada más.",
+              "categoria": "comentar",
+              "feedback": "El control funcionó, pero vale la pena que TI lo sepa: puede repetirse en otros equipos o ser parte de algo más grande."
+            }
+          ],
+          "voz": "Este ejercicio tiene una trampa a propósito: las tres categorías existen. Si marcas todo como reportar ya, saturas a TI y pierdes credibilidad. Si marcas todo como normal, dejas pasar lo importante. Lo que buscamos es el criterio del medio. Una señal con explicación conocida, como una actualización avisada, es normal. Algo que se repite sin explicación, se comenta. Y lo que muestra que alguien más puede estar usando tu cuenta o tus archivos, se reporta al tiro.",
+          "hablante": "narrador",
+          "icono": "list-checks",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P06",
+          "tipo": "explicacion",
+          "titulo": "Cuando el aviso viene de afuera",
+          "texto": "Muchas veces la primera señal no la ves tú: la ve un cliente, un proveedor o un colega que recibe algo raro «de tu parte».\n\nCuando eso pasa, no lo minimices ni lo expliques con lo primero que se te ocurra. Agradece el aviso, pide un par de detalles y reporta.",
+          "bloques": [
+            {
+              "icono": "phone-call",
+              "titulo": "Agradece y pregunta",
+              "texto": "«Gracias por avisarme. ¿A qué hora te llegó y cuál era el asunto? ¿Abriste algo?»"
+            },
+            {
+              "icono": "hand",
+              "titulo": "No le pidas que lo reenvíe",
+              "texto": "Que lo deje donde está y no abra nada. TI se encarga de buscarlo."
+            },
+            {
+              "icono": "megaphone",
+              "titulo": "Reporta tú también",
+              "texto": "Aunque la otra persona no se haya preocupado, tú avisas a TI."
+            }
+          ],
+          "nota": {
+            "tipo": "terreno",
+            "texto": "Si el aviso llega por WhatsApp o por teléfono, anota de inmediato la hora y lo que te dijeron. Esos detalles se olvidan rápido."
+          },
+          "voz": "Yo me enteré por una clienta. Paula Reyes, de compras de Ferretería Los Aromos, me llamó a las nueve y diez: oye, Daniela, ¿tú me mandaste un link para ver una factura? Yo no había mandado nada. Lo primero que pensé fue decirle que seguro era spam y cortar, porque tenía el local lleno. Pero algo no me cuadró. Le pedí que no abriera nada, le pregunté la hora y el asunto, y le escribí a Nacho al tiro. A las nueve y veinte mi cuenta ya estaba bloqueada. Si hubiera esperado al final del día, quién sabe a cuántos clientes les habría llegado.",
+          "hablante": "daniela",
+          "profundiza": "Cuando alguien toma el control de una cuenta de correo, suele usarla para escribir a los contactos de esa persona, porque los mensajes llegan desde una dirección conocida y es más probable que los abran. Por eso, los primeros en notar el problema suelen ser los destinatarios, no la persona dueña de la cuenta. Algunas recomendaciones para recibir un aviso así: no niegues ni confirmes lo que no sabes; no le pidas al cliente que reenvíe el correo, porque eso lo expone y genera más copias; pídele solo datos básicos, como la hora, el asunto, si abrió el link o el adjunto y si ingresó algún dato; y explícale que Pehuén lo va a contactar si es necesario. La comunicación formal con clientes y proveedores sobre un incidente no la decide la persona afectada: la coordinan la jefatura y TI, para que sea coherente y no revele detalles que alguien podría aprovechar. En el caso de Daniela, el reporte rápido permitió que Pehuén enviara un aviso verificado a sus clientes esa misma mañana.",
+          "icono": "phone-call",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P07",
+          "tipo": "mito_realidad",
+          "titulo": "Lo que se dice cuando algo raro pasa",
+          "texto": "Decide si cada frase es verdadera o falsa. Son frases que se escuchan en cualquier oficina, y algunas suenan muy sensatas.",
+          "afirmaciones": [
+            {
+              "texto": "Si el antivirus no dijo nada, no pasó nada.",
+              "es_verdad": false,
+              "explicacion": "El antivirus detecta mucho, pero no todo. Si entregaste tu clave en una página falsa, por ejemplo, no queda nada raro en tu computador. Ninguna herramienta protege al cien por ciento."
+            },
+            {
+              "texto": "Si fue un error mío, mejor lo arreglo antes de contarlo.",
+              "es_verdad": false,
+              "explicacion": "Arreglarlo por tu cuenta puede borrar evidencia o dejar abierta una puerta que no ves. Y mientras tanto pasa el tiempo. Cuéntalo primero; TI te dirá qué hacer."
+            },
+            {
+              "texto": "Un equipo lento es señal segura de virus.",
+              "es_verdad": false,
+              "explicacion": "Puede ser muchas cosas. Sola, la lentitud no prueba nada. Junto con otras señales, sí vale la pena mencionarla."
+            },
+            {
+              "texto": "Reportar una sospecha que resulta no ser nada también ayuda.",
+              "es_verdad": true,
+              "explicacion": "TI confirma que no hay problema, aprende qué confunde a las personas y tú quedas tranquilo. Una empresa con algunas falsas alarmas está mejor que una donde nadie avisa."
+            },
+            {
+              "texto": "Una solicitud de MFA que no pediste puede significar que alguien ya tiene tu contraseña.",
+              "es_verdad": true,
+              "explicacion": "El MFA te pide aprobar porque alguien ingresó tu usuario y tu contraseña. Si no fuiste tú, rechaza, avisa y sigue las indicaciones de TI para cambiar la clave."
+            }
+          ],
+          "voz": "Estas frases tienen algo en común: todas invitan a esperar, a resolver en silencio o a confiar en que alguna herramienta ya se hizo cargo. Por eso son tan peligrosas. Ninguna es mala intención, son formas muy humanas de evitar un mal rato. Pero en un incidente, el mal rato de avisar es mucho más chico que el de explicar después por qué nadie dijo nada.",
+          "hablante": "narrador",
+          "icono": "circle-help",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: las señales",
+          "texto": "Reconocer una señal no es diagnosticar. Es darte cuenta de que algo no cuadra y ponerlo en manos de quien puede revisarlo.",
+          "ideas": [
+            "No necesitas certeza para avisar: una sospecha razonable basta.",
+            "Correos que no enviaste, reglas que no creaste, MFA que no pediste y archivos raros son señales claras; la lentitud sola, no.",
+            "Si el aviso viene de afuera, agradece, pide detalles y reporta: no lo minimices."
+          ],
+          "pregunta": "¿Cuál de estas señales podría pasarte inadvertida en tu trabajo diario? ¿Qué podrías hacer para notarla antes?",
+          "voz": "Antes de pasar a lo que se hace después del clic, piensa en tu propia rutina. Quizás nunca revisas las reglas de tu correo, o la carpeta de enviados, o las sesiones abiertas de tu cuenta. No tienes que convertirte en vigilante de tu computador. Basta con saber dónde mirar cuando algo te parece raro, y con tener claro que avisar es parte de tu trabajo.",
+          "hablante": "narrador",
+          "icono": "list-checks",
+          "practica_formativa": false
+        }
+      ]
+    },
+    {
+      "id": "SEG360-CIBER-M06-L02",
+      "titulo": "Después del clic: los primeros 15 minutos",
+      "resultado": "Ante un clic, un adjunto abierto o una clave ingresada en un sitio sospechoso, ordenar y ejecutar los primeros pasos: detenerse, reportar por un canal seguro, aislar solo si el procedimiento lo indica, anotar y preservar, sin reenviar, borrar, limpiar ni ocultar.",
+      "minutos": 40,
+      "fuentes": [
+        "CIB-NISTCSF2",
+        "CIB-CSIRT",
+        "CIB-INCIBE",
+        "CIB-CISA-PHISH"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M06-L02-P01",
+          "tipo": "chat",
+          "titulo": "«Me da vergüenza decirle a Nacho»",
+          "texto": "Jueves, 15:41. Te escribe Camila por el chat interno. Lleva tres semanas en Pehuén.",
+          "canal": "chat_interno",
+          "contacto": {
+            "nombre": "Camila Vergara",
+            "detalle": "Auxiliar de bodega"
+          },
+          "mensajes": [
+            {
+              "de": "contacto",
+              "texto": "Oye, ¿te puedo preguntar algo? Es medio vergonzoso.",
+              "hora": "15:41"
+            },
+            {
+              "de": "yo",
+              "texto": "Claro, dime.",
+              "hora": "15:41"
+            },
+            {
+              "de": "contacto",
+              "texto": "Me llegó un correo de «Remuneraciones» para revisar mi liquidación. Hice clic y puse mi correo y mi clave. Después la página se quedó en blanco.",
+              "hora": "15:42"
+            },
+            {
+              "de": "contacto",
+              "texto": "Fue hace como diez minutos. ¿Le digo a Nacho o mejor cambio la clave y listo? No quiero que piense que soy tonta, llevo tres semanas recién.",
+              "hora": "15:42"
+            },
+            {
+              "de": "contacto",
+              "texto": "Y otra cosa: ¿te reenvío el correo para que veas si era falso?",
+              "hora": "15:43"
+            }
+          ],
+          "pregunta": "¿Qué le respondes a Camila?",
+          "opciones": [
+            {
+              "texto": "Que cambie la clave al tiro y, si no pasa nada raro, no hace falta molestar a Nacho.",
+              "correcta": false,
+              "feedback": "Cambiar la clave ayuda, pero no basta: quien la usó puede haber dejado una regla de reenvío o una sesión abierta. Y si lo hace desde un equipo comprometido, la nueva clave también podría quedar expuesta. Nacho necesita saberlo."
+            },
+            {
+              "texto": "Que me reenvíe el correo para revisarlo y decirle si era falso.",
+              "correcta": false,
+              "feedback": "Reenviarlo pone el riesgo en tu bandeja y no cambia lo que hay que hacer: ya ingresó su clave, así que se reporta igual, sea falso o no."
+            },
+            {
+              "texto": "Que no me lo reenvíe. Que llame ahora a Nacho y le cuente todo, con la hora; si quiere, la acompaño. Nadie va a pensar que es tonta: avisar rápido es lo correcto.",
+              "correcta": true,
+              "feedback": "Le das tres cosas: qué hacer, que no está sola y que avisar no la deja mal. A los diez minutos todavía hay tiempo de cortar el acceso antes de que alguien use su cuenta."
+            },
+            {
+              "texto": "Que espere hasta mañana, para ver si pasa algo antes de alarmar a todos.",
+              "correcta": false,
+              "feedback": "Esperar es justo lo que aprovecha quien tiene la clave. En una tarde se pueden enviar cientos de correos desde su cuenta. Avisar temprano vale oro."
+            }
+          ],
+          "explicacion": "Muchas veces la primera persona a quien se le cuenta un clic no es TI, sino un colega. Si ese colega eres tú, tu respuesta puede acortar o alargar el incidente.",
+          "voz": "Este chat es más común de lo que crees. La gente nueva, la que se siente en evaluación o la que ya se equivocó una vez, es la que más duda en avisar. Y muchas veces la primera persona a quien le cuentan no es TI, es un colega de confianza. Si ese colega eres tú, lo que respondas puede definir si el incidente dura diez minutos o tres días. Fíjate también en la última pregunta de Camila. Parece un favor inocente, pero no lo es.",
+          "hablante": "narrador",
+          "icono": "message-square",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P02",
+          "tipo": "proceso",
+          "titulo": "Los primeros 15 minutos",
+          "texto": "Si hiciste clic, abriste un adjunto o ingresaste tu clave donde no debías, esto es lo que importa. Los detalles pueden variar según el procedimiento de tu empresa, pero lo primero es siempre igual: **detenerte y avisar**.",
+          "pasos": [
+            {
+              "titulo": "Detente",
+              "icono": "hand",
+              "texto": "No ingreses más datos ni sigas las instrucciones de la página o del archivo. No cierres todo a lo loco ni borres nada."
+            },
+            {
+              "titulo": "Avisa de inmediato",
+              "icono": "phone-call",
+              "texto": "Por el canal oficial; en Pehuén, Nacho: anexo 210 en horario de oficina o celular de soporte a cualquier hora. Si tu correo puede estar comprometido, no lo uses para avisar: llama o ve en persona."
+            },
+            {
+              "titulo": "Aísla si el procedimiento lo indica",
+              "icono": "wifi",
+              "texto": "Si la política lo dice o TI te lo pide, desconecta el Wi-Fi o el cable de red. **No apagues** el equipo si TI pide preservarlo: al apagarlo se pierde información útil."
+            },
+            {
+              "titulo": "Anota",
+              "icono": "pen-line",
+              "texto": "Hora, qué hiciste, qué viste, qué datos ingresaste, remitente y asunto. En papel o en otro dispositivo."
+            },
+            {
+              "titulo": "Preserva",
+              "icono": "folder-lock",
+              "texto": "No borres el correo ni vacíes la papelera, no reenvíes el mensaje a colegas, no instales «limpiadores». Deja todo como está."
+            },
+            {
+              "titulo": "Sigue las instrucciones y cuenta todo",
+              "icono": "users",
+              "texto": "Cambiar la clave desde otro dispositivo, revisar sesiones: lo que TI indique. Y aunque te dé vergüenza, cuenta todo lo que hiciste."
+            }
+          ],
+          "voz": "Fíjate en el paso tres, porque es el que más confunde. Mucha gente piensa que lo más seguro es apagar el computador. A veces no lo es: apagarlo puede borrar información que TI necesita para entender qué pasó. Por eso la regla es seguir el procedimiento de tu empresa. En Pehuén, Nacho pide desconectar el Wi-Fi o el cable, pero dejar el equipo encendido, salvo que él diga otra cosa. Y fíjate también en el paso dos: si sospechas de tu correo, no lo uses para avisar.",
+          "hablante": "narrador",
+          "profundiza": "Cada organización define su propio procedimiento de respuesta, y es normal que varíen. Algunas piden desconectar el equipo de la red de inmediato ante cualquier sospecha de software malicioso, para evitar que se propague a otros equipos o a la carpeta compartida. Otras prefieren que la persona espere instrucciones, porque tienen herramientas para aislar el equipo a distancia. Casi todas piden no apagarlo sin consultar, porque parte de la información que permite entender un ataque está en la memoria del equipo y se pierde al apagarlo. Lo que no cambia es el principio: actuar rápido sin destruir información. Si ingresaste tu contraseña en una página falsa, cambiarla es necesario, pero conviene hacerlo desde otro dispositivo de confianza y coordinado con TI, que además puede cerrar las sesiones abiertas y revisar si quedó alguna regla o acceso agregado. Si ingresaste datos bancarios o de una tarjeta, además hay que contactar al banco por sus canales oficiales. Anotar la hora con precisión parece un detalle, pero permite a TI buscar en los registros exactamente lo que pasó en ese momento.",
+          "icono": "clock",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P03",
+          "tipo": "video",
+          "titulo": "Los primeros 15 minutos después del clic",
+          "video_id": "SEG360-VID08",
+          "texto": "Un minuto y medio con lo esencial: qué hacer, qué no tocar y por qué el reloj importa.",
+          "voz": "Mira este video corto antes de la práctica. Vas a ver los mismos pasos, pero en una situación concreta, con el reloj corriendo.",
+          "hablante": "narrador",
+          "icono": "clock",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P04",
+          "tipo": "ordenar",
+          "titulo": "Ordena la respuesta de Javier",
+          "consigna": "Javier abrió un adjunto «Factura_octubre.html», ingresó su contraseña en la página que se abrió y, al ver una pantalla en blanco, se dio cuenta de que algo andaba mal. Ordena lo que debería hacer, de lo primero a lo último.",
+          "texto": "Hay más de un orden aceptable en algunos pasos, pero no en los dos primeros.",
+          "pasos": [
+            {
+              "id": "p1",
+              "texto": "Dejar de ingresar datos y cerrar esa pestaña, sin borrar el correo."
+            },
+            {
+              "id": "p2",
+              "texto": "Llamar a Nacho al anexo o al celular de soporte y contarle lo que pasó."
+            },
+            {
+              "id": "p3",
+              "texto": "Desconectar el Wi-Fi si Nacho lo pide, dejando el notebook encendido."
+            },
+            {
+              "id": "p4",
+              "texto": "Anotar la hora, el remitente, el asunto y qué datos ingresó."
+            },
+            {
+              "id": "p5",
+              "texto": "Cambiar la contraseña desde otro dispositivo, cuando Nacho lo indique."
+            },
+            {
+              "id": "p6",
+              "texto": "Avisar a su jefatura que está atendiendo un incidente y que puede atrasar un pago."
+            }
+          ],
+          "orden": [
+            "p1",
+            "p2",
+            "p3",
+            "p4",
+            "p5",
+            "p6"
+          ],
+          "alternativas_validas": [
+            [
+              "p1",
+              "p2",
+              "p4",
+              "p3",
+              "p5",
+              "p6"
+            ],
+            [
+              "p1",
+              "p4",
+              "p2",
+              "p3",
+              "p5",
+              "p6"
+            ]
+          ],
+          "feedback_ok": "Bien ordenado. Lo primero es dejar de entregar información y lo segundo, avisar: todo lo demás puede esperar unos minutos, el aviso no. Anotar puede ir justo antes o justo después de la llamada, siempre que sea pronto. El cambio de clave va coordinado con TI y desde otro equipo, y la jefatura se entera para reorganizar el trabajo, no para buscar culpables.",
+          "feedback_error": "Revisa la lógica. Primero se corta la exposición, dejando de ingresar datos, y de inmediato se avisa a TI. Cambiar la clave antes de avisar parece responsable, pero si el notebook está comprometido la nueva clave también puede quedar expuesta, y TI puede necesitar revisar la sesión antes. Desconectar la red va según el procedimiento o lo que pida TI. Avisar a la jefatura es importante, pero no reemplaza el aviso técnico.",
+          "voz": "Este ejercicio se parece mucho a lo que vas a hacer en el caso del final del módulo. Ordénalo pensando en qué se pierde si cada paso se atrasa. Si se atrasa el aviso, se pierde tiempo para cortar el acceso. Si se atrasa la anotación, se pierden detalles. Y si cambias la clave por tu cuenta antes de hablar con TI, a lo mejor no se pierde nada, o a lo mejor se pierde todo. Por eso el orden importa.",
+          "hablante": "narrador",
+          "icono": "list-checks",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P05",
+          "tipo": "comparacion",
+          "titulo": "Lo que ayuda y lo que empeora",
+          "texto": "Casi todo lo que empeora un incidente se hace con buena intención. Compara las dos columnas.",
+          "izquierda": {
+            "titulo": "Lo que ayuda",
+            "icono": "thumbs-up",
+            "puntos": [
+              "Avisar de inmediato, aunque no estés seguro.",
+              "Usar otro canal si tu correo puede estar comprometido.",
+              "Anotar hora, remitente, asunto y lo que hiciste.",
+              "Dejar el correo y los archivos donde están.",
+              "Desconectar la red si el procedimiento lo indica.",
+              "Contar todo, también lo que te da vergüenza."
+            ]
+          },
+          "derecha": {
+            "titulo": "Lo que empeora",
+            "icono": "triangle-alert",
+            "puntos": [
+              "Reenviar el correo a colegas «para preguntar».",
+              "Borrar el correo, vaciar la papelera o eliminar reglas.",
+              "Descargar un «limpiador» o un antivirus de internet.",
+              "Apagar el equipo sin consultar, si TI pide preservarlo.",
+              "Esperar al lunes «para no molestar».",
+              "Ocultarlo o contar solo una parte."
+            ]
+          },
+          "conclusion": "La regla de oro: **no arregles, no escondas, no reenvíes; avisa y preserva**.",
+          "voz": "Cuando me pasó a mí, mi primer impulso fue borrar todo lo de esa mañana. No por esconderlo, sino porque me daba no sé qué tener eso en mi correo. Nacho me explicó después que si lo hubiera borrado, le habría costado mucho más saber a quiénes les había llegado. También me contó de una persona de otra empresa que reenvió el correo falso a todo su equipo, preguntando si era real. Tres colegas hicieron clic. Con buena intención se puede hacer harto daño.",
+          "hablante": "daniela",
+          "icono": "scale",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P06",
+          "tipo": "decision",
+          "titulo": "Tu correo podría estar comprometido",
+          "situacion": "Sospechas que alguien entró a tu correo: hay mensajes enviados que no escribiste. Necesitas avisarle a Nacho ahora.",
+          "pregunta": "¿Qué canales son adecuados? Marca todos los que correspondan.",
+          "multiple": true,
+          "minimo": 1,
+          "maximo": 5,
+          "opciones": [
+            {
+              "texto": "Responder al último correo de soporte que tengo en la bandeja.",
+              "correcta": false,
+              "feedback": "Usa el mismo correo que sospechas comprometido. Quien lo controla podría leer tu aviso, borrarlo o responderte haciéndose pasar por Nacho."
+            },
+            {
+              "texto": "Llamarlo al anexo o al celular de soporte que tengo guardado de antes.",
+              "correcta": true,
+              "feedback": "Es un canal que no depende de tu correo, con un número que ya conocías. Ideal."
+            },
+            {
+              "texto": "Buscar en internet «soporte Pehuén» y llamar al número que aparezca.",
+              "correcta": false,
+              "feedback": "Los números que aparecen en buscadores o anuncios pueden ser falsos. Usa el número que la empresa te entregó o que ya tienes guardado."
+            },
+            {
+              "texto": "Ir a su puesto, si estoy en la oficina.",
+              "correcta": true,
+              "feedback": "En persona no hay dudas de quién habla con quién. Si estás en Pehuén, es lo más directo."
+            },
+            {
+              "texto": "Escribirle por el chat interno desde el celular de trabajo.",
+              "correcta": true,
+              "feedback": "Es un canal distinto al correo. Si sospechas que también tu cuenta de chat está comprometida, prefiere el teléfono."
+            }
+          ],
+          "explicacion": "Si el problema está en tu correo, el aviso no puede ir por tu correo. Por eso conviene tener, **antes** de cualquier incidente, el número de soporte guardado fuera del correo y saber cuál es el canal alternativo de tu empresa.",
+          "voz": "Esta decisión parece obvia cuando la lees con calma, pero en el momento no lo es. Lo primero que hace casi todo el mundo es escribir un correo, porque es lo que hacemos todo el día. Piensa en quién más podría leer ese correo si tu cuenta está tomada. Y piensa también en lo segundo que hace mucha gente: buscar el número en internet. Los estafadores lo saben y publican números falsos. El mejor canal es el que preparaste antes.",
+          "hablante": "narrador",
+          "icono": "phone-call",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P07",
+          "tipo": "quiz",
+          "titulo": "Chequeo: qué hacer y qué no",
+          "texto": "Cuatro situaciones, una decisión en cada una. Lee el feedback de todas las opciones, no solo de la que elegiste.",
+          "preguntas": [
+            {
+              "enunciado": "Abriste un adjunto y empezaron a aparecer archivos con nombres raros en tu carpeta. Nacho te pide por teléfono que no apagues el notebook. ¿Qué haces?",
+              "opciones": [
+                {
+                  "texto": "Lo apago igual, para que el virus no avance.",
+                  "correcta": false,
+                  "feedback": "Apagarlo puede borrar información que Nacho necesita, y él ya te dio una instrucción. Si te preocupa que se propague, pregúntale si debes desconectar la red."
+                },
+                {
+                  "texto": "Lo dejo encendido, desconecto el cable o el Wi-Fi si me lo indica y no lo sigo usando.",
+                  "correcta": true,
+                  "feedback": "Sigues la instrucción de TI, cortas la conexión si corresponde y no tocas nada más. Así se preserva la información y se limita el daño."
+                },
+                {
+                  "texto": "Lo dejo encendido y sigo trabajando en otra cosa mientras Nacho llega.",
+                  "correcta": false,
+                  "feedback": "Seguir usándolo puede cambiar o propagar el problema. Déjalo quieto."
+                }
+              ]
+            },
+            {
+              "enunciado": "Hoy te das cuenta de que un correo que abriste ayer era falso. Nadie más parece haberlo notado. ¿Qué haces?",
+              "opciones": [
+                {
+                  "texto": "Lo reporto ahora a Nacho, contando que lo abrí ayer y a qué hora, más o menos.",
+                  "correcta": true,
+                  "feedback": "Tarde es mejor que nunca. Un día de atraso no hace inútil el aviso: puede haber una regla, una sesión o un acceso que todavía se puede cortar."
+                },
+                {
+                  "texto": "Lo borro y no digo nada: ya pasó un día.",
+                  "correcta": false,
+                  "feedback": "Si alguien obtuvo acceso, sigue ahí. Borrar el correo solo le quita a TI la pista para encontrarlo."
+                },
+                {
+                  "texto": "Se lo reenvío a mis colegas para preguntarles si a ellos también les llegó.",
+                  "correcta": false,
+                  "feedback": "Reenviarlo multiplica el riesgo. TI puede buscar quién más lo recibió sin que nadie lo reenvíe."
+                }
+              ]
+            },
+            {
+              "enunciado": "Aparece en el navegador un aviso de «virus detectado» con un botón para descargar un limpiador gratis. ¿Qué haces?",
+              "opciones": [
+                {
+                  "texto": "Descargo el limpiador para resolverlo rápido.",
+                  "correcta": false,
+                  "feedback": "Es una trampa clásica: el supuesto limpiador puede ser el software malicioso. Instalar programas lo decide TI."
+                },
+                {
+                  "texto": "Llamo al número de soporte que aparece en el aviso.",
+                  "correcta": false,
+                  "feedback": "Esos números llevan a estafadores que piden acceso remoto a tu equipo o pagos."
+                },
+                {
+                  "texto": "Cierro la pestaña sin hacer clic dentro del aviso y le aviso a Nacho.",
+                  "correcta": true,
+                  "feedback": "Ciérrala desde la pestaña o la barra del navegador, no desde los botones del aviso, y reporta. Si no se cierra, deja de usar el equipo y avisa."
+                }
+              ]
+            },
+            {
+              "enunciado": "Javier ingresó su clave en una página falsa y avisó a tiempo. Una semana después, en una reunión, alguien pregunta «¿quién fue el del clic?». ¿Qué respuesta ayuda más a Pehuén?",
+              "opciones": [
+                {
+                  "texto": "Decir quién fue, para que tenga más cuidado.",
+                  "correcta": false,
+                  "feedback": "Apuntar a una persona hace que la próxima vez alguien dude en avisar. Lo útil es entender qué hizo creíble el engaño y qué funcionó."
+                },
+                {
+                  "texto": "Proponer revisar qué hizo creíble el correo y qué funcionó en la respuesta, sin nombres.",
+                  "correcta": true,
+                  "feedback": "Así se aprende sin culpa: se mejora el sistema y la gente sigue avisando rápido."
+                },
+                {
+                  "texto": "No decir nada: es tema de TI.",
+                  "correcta": false,
+                  "feedback": "TI lidera la respuesta, pero aprender de lo que pasó es tarea de todos. Callarse no ayuda a prevenir el próximo."
+                }
+              ]
+            }
+          ],
+          "voz": "Estas preguntas son las mismas que me hice yo después de mi incidente. La segunda me pegó fuerte, porque me habría pasado: darme cuenta un día después y pensar que ya no valía la pena decir nada. Nacho me dijo algo que no se me olvida: un aviso tarde le sirve, un silencio no le sirve nunca. Responde con calma y no te quedes solo con la opción que elegiste.",
+          "hablante": "daniela",
+          "icono": "clipboard-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: los primeros minutos",
+          "texto": "No necesitas saber qué tipo de ataque es. Necesitas saber qué hacer en los primeros minutos y qué no tocar.",
+          "ideas": [
+            "Lo primero siempre es detenerte y avisar; si tu correo puede estar comprometido, por otro canal.",
+            "Anota, preserva y deja el equipo como TI te indique: no apagues, borres ni limpies por tu cuenta.",
+            "No reenvíes el correo «para preguntar» y no ocultes nada: el tiempo y la información completa son lo que más ayuda."
+          ],
+          "pregunta": "¿Tienes guardado, fuera de tu correo, el número de quien te ayuda con TI en tu trabajo? Si no, ¿dónde lo vas a conseguir hoy?",
+          "voz": "Esta pregunta de cierre es casi una tarea. Saca tu celular y busca el número de soporte de tu trabajo. Si lo tienes, perfecto. Si no lo tienes, o solo lo tienes en una firma de correo, consíguelo hoy. Parece un detalle, pero en un incidente real ese número es la diferencia entre avisar en un minuto o en una hora.",
+          "hablante": "narrador",
+          "icono": "phone-call",
+          "practica_formativa": false
+        }
+      ]
+    },
+    {
+      "id": "SEG360-CIBER-M06-L03",
+      "titulo": "Continuidad, canales alternativos y aprendizaje",
+      "resultado": "Ante un incidente en curso y su revisión posterior, usar canales alternativos, distinguir lo que corresponde a cada rol, responder a clientes sin improvisar detalles y aportar a un aprendizaje sin culpa.",
+      "minutos": 40,
+      "fuentes": [
+        "CIB-NISTCSF2",
+        "CIB-LEY21663",
+        "CIB-LEY21719",
+        "CIB-CSIRT"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M06-L03-P01",
+          "tipo": "dialogo",
+          "titulo": "La reunión del lunes",
+          "texto": "Lunes, 9:00. Una semana después del incidente en la cuenta de Javier, Rodrigo reúne al equipo para revisar lo que pasó.",
+          "imagen": "SEG360-IMG042",
+          "lineas": [
+            {
+              "personaje": "rodrigo",
+              "texto": "Bueno, la pregunta es simple: ¿quién hizo clic?"
+            },
+            {
+              "personaje": "nacho",
+              "texto": "Rodrigo, si me permites, esa pregunta nos sirve poco. Lo que necesito saber es qué hizo creíble el correo y qué funcionó bien."
+            },
+            {
+              "personaje": "daniela",
+              "texto": "Funcionó que un cliente me avisó y yo le escribí a Nacho al tiro. Lo que no funcionó es que no tenía su celular guardado; lo tuve que buscar."
+            },
+            {
+              "personaje": "javier",
+              "texto": "El correo citaba una conversación mía con un cliente y hablaba de un pago que sí existía. Lo abrí porque parecía parte de mi pega."
+            },
+            {
+              "personaje": "nacho",
+              "texto": "Y además, la carpeta de pagos estuvo cuatro horas sin poder usarse mientras revisábamos. Los despachos se atrasaron porque nadie sabía cómo seguir sin ella."
+            },
+            {
+              "personaje": "rodrigo",
+              "texto": "Ok. Entonces, ¿qué cambiamos?"
+            }
+          ],
+          "pregunta": "¿Qué propuesta aporta más a esta reunión?",
+          "opciones": [
+            {
+              "texto": "Una capacitación obligatoria solo para quien hizo clic.",
+              "correcta": false,
+              "feedback": "Pone el foco en una persona y manda el mensaje de que avisar trae castigo. Además, el correo era creíble para cualquiera."
+            },
+            {
+              "texto": "Prohibir abrir adjuntos de correos externos.",
+              "correcta": false,
+              "feedback": "Pehuén recibe facturas y órdenes de compra por correo todos los días. Una prohibición así no se va a cumplir y empuja a buscar atajos."
+            },
+            {
+              "texto": "No hacer nada más: el incidente ya se resolvió.",
+              "correcta": false,
+              "feedback": "Se resolvió esta vez. Si no se aprende nada, la próxima va a costar lo mismo o más."
+            },
+            {
+              "texto": "Guardar el número de soporte fuera del correo, acordar cómo despachar sin la carpeta y preparar un aviso verificado a clientes para situaciones así.",
+              "correcta": true,
+              "feedback": "Son mejoras al sistema que salen de lo que pasó: canal alternativo, continuidad y comunicación. Sirven para el próximo incidente, le pase a quien le pase."
+            }
+          ],
+          "voz": "Esta reunión podría haber ido para otro lado. La pregunta de Rodrigo es la que surge en cualquier empresa, y no es mala intención: quiere entender. Pero fíjate cómo Nacho cambia la conversación. En vez de buscar a quién apuntar, pregunta qué funcionó y qué no. Así es como un incidente se convierte en mejoras concretas. Y así es como la próxima persona que haga clic va a avisar en cinco minutos y no en cinco días.",
+          "hablante": "narrador",
+          "icono": "users",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P02",
+          "tipo": "explicacion",
+          "titulo": "Responder y recuperar",
+          "texto": "Cuando hay un incidente, el trabajo de la empresa tiene dos grandes momentos, que el marco NIST CSF 2.0 llama **Responder** y **Recuperar**.\n\nResponder es contener el daño, entender qué pasó y comunicar. Recuperar es volver a operar con normalidad y quedar mejor que antes. En los dos, tu aporte cuenta.",
+          "bloques": [
+            {
+              "icono": "siren",
+              "titulo": "Responder",
+              "texto": "TI contiene: bloquea cuentas, aísla equipos, revisa registros. Tú aportas el aviso y la información, y sigues las instrucciones."
+            },
+            {
+              "icono": "refresh-cw",
+              "titulo": "Recuperar",
+              "texto": "Se restaura desde los backups, se verifica que todo esté bien y se vuelve a trabajar. Tú confirmas que tus archivos estén completos."
+            },
+            {
+              "icono": "lightbulb",
+              "titulo": "Aprender",
+              "texto": "Se revisa qué pasó para mejorar procesos, sin buscar culpables. Tú cuentas tu experiencia con honestidad."
+            }
+          ],
+          "nota": {
+            "tipo": "norma",
+            "texto": "En Chile, la Ley 21.663 creó la Agencia Nacional de Ciberseguridad (ANCI) y el CSIRT Nacional, y la Ley 21.719 establece deberes de seguridad sobre los datos personales. Qué se informa a las autoridades y cuándo lo decide la empresa; para eso necesita tu aviso interno temprano."
+          },
+          "voz": "No necesitas aprenderte el marco completo. Basta con entender que hay un momento de apagar el incendio y otro de volver a la normalidad, y que en los dos te van a necesitar. En el primero, para contar lo que viste. En el segundo, por ejemplo, para confirmar que la planilla que restauraron desde el backup es la correcta, o para retomar los despachos con un procedimiento alternativo. La recuperación no es solo técnica: es la empresa volviendo a funcionar.",
+          "hablante": "narrador",
+          "profundiza": "El NIST CSF 2.0 organiza la gestión de la ciberseguridad en seis funciones: Gobernar, Identificar, Proteger, Detectar, Responder y Recuperar. Responder incluye gestionar el incidente, analizarlo, comunicarlo a quien corresponde y contenerlo. Recuperar incluye ejecutar el plan de recuperación, verificar que lo restaurado esté completo y correcto, y comunicar el regreso a la normalidad. Es un marco de referencia, no una certificación ni una ley, y cada empresa lo adapta a su tamaño. Para una empresa como Pehuén, recuperar suele significar cosas concretas: restaurar una carpeta compartida desde el backup del día anterior, revisar qué se trabajó entre ese backup y el incidente, volver a habilitar cuentas con claves nuevas y MFA, y avisar a clientes o proveedores si se vieron afectados. Un backup que nunca se probó puede fallar justo cuando se necesita; por eso TI hace pruebas de restauración. Y un backup conectado todo el tiempo a la red puede quedar cifrado junto con todo lo demás: por eso se recomienda que al menos una copia esté separada.",
+          "icono": "route",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P03",
+          "tipo": "pestanas",
+          "titulo": "Seguir trabajando cuando algo falla",
+          "texto": "La **continuidad** es la capacidad de seguir atendiendo, despachando y pagando aunque un sistema falle. No se improvisa el día del incidente: se prepara antes. Revisa cada pestaña.",
+          "pestanas": [
+            {
+              "titulo": "Canales alternativos",
+              "icono": "phone-call",
+              "texto": "Si el correo o el chat están caídos o comprometidos, ¿cómo se avisa? En Pehuén: el celular de soporte de Nacho, un grupo de emergencia acordado y una lista impresa de contactos clave en administración y bodega. Tenlos guardados **fuera** del correo."
+            },
+            {
+              "titulo": "Backups",
+              "icono": "hard-drive",
+              "texto": "Copias de la información que TI hace periódicamente y que prueba que se puedan restaurar. Lo que guardas solo en el escritorio de tu computador o en un pendrive probablemente no tiene backup. Guarda tu trabajo en los espacios de la empresa."
+            },
+            {
+              "titulo": "Trabajar sin sistema",
+              "icono": "clipboard-list",
+              "texto": "Si la carpeta de pedidos no está disponible, ¿cómo se despacha? Una planilla de contingencia impresa, la lista de despachos del día anterior, pedidos por teléfono. Lo define la jefatura y se practica antes de necesitarlo."
+            },
+            {
+              "titulo": "Comunicación externa",
+              "icono": "megaphone",
+              "texto": "Qué se dice a clientes y proveedores, quién lo dice y por qué canal lo decide la gerencia con TI. Si un cliente te pregunta, no improvises detalles: dile lo que sí sabes y deriva."
+            },
+            {
+              "titulo": "Volver a la normalidad",
+              "icono": "refresh-cw",
+              "texto": "Claves nuevas, cuentas revisadas, archivos restaurados. Revisa que lo tuyo esté completo y avisa si falta algo: tú conoces tu trabajo mejor que nadie."
+            }
+          ],
+          "voz": "Piensa en lo que pasó en Pehuén: cuatro horas sin la carpeta de pagos y los despachos atrasados. No por el ataque en sí, sino porque nadie sabía cómo seguir sin esa carpeta. La continuidad es eso: tener pensado de antemano qué hacer si algo deja de funcionar. Y no solo para ciberataques. Sirve igual si se corta la luz, si se cae internet o si el sistema de facturación falla un viernes en la tarde.",
+          "hablante": "narrador",
+          "icono": "refresh-cw",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P04",
+          "tipo": "clasificar",
+          "titulo": "¿Quién hace qué durante un incidente?",
+          "consigna": "Clasifica cada acción según a quién le corresponde. Saber qué no te toca también es parte de responder bien.",
+          "texto": "Durante un incidente, cada rol tiene su parte. Hacer lo que no te corresponde, aunque sea con buena intención, puede empeorar las cosas.",
+          "categorias": [
+            {
+              "id": "tu",
+              "nombre": "Lo haces tú",
+              "icono": "user-check",
+              "descripcion": "Cualquier persona de Pehuén, sea cual sea su cargo."
+            },
+            {
+              "id": "ti",
+              "nombre": "Lo hace TI",
+              "icono": "wrench",
+              "descripcion": "Requiere conocimiento técnico, herramientas o permisos especiales."
+            },
+            {
+              "id": "gerencia",
+              "nombre": "Lo decide la gerencia",
+              "icono": "building-2",
+              "descripcion": "Decisiones de la empresa, con apoyo de TI y asesoría cuando hace falta."
+            }
+          ],
+          "elementos": [
+            {
+              "texto": "Reportar la sospecha por el canal oficial.",
+              "categoria": "tu",
+              "feedback": "Es la parte más importante de tu rol, y nadie puede hacerla por ti: solo tú sabes lo que viste."
+            },
+            {
+              "texto": "Anotar qué viste, qué hiciste y a qué hora.",
+              "categoria": "tu",
+              "feedback": "Tus notas son la base del análisis de TI. Mientras antes las escribas, más precisas serán."
+            },
+            {
+              "texto": "Bloquear la cuenta comprometida y cerrar todas sus sesiones.",
+              "categoria": "ti",
+              "feedback": "Requiere permisos de administración. Tú cambias tu clave cuando TI lo indique, pero cerrar sesiones y revisar la cuenta lo hace TI."
+            },
+            {
+              "texto": "Restaurar la carpeta compartida desde el backup.",
+              "categoria": "ti",
+              "feedback": "Restaurar mal puede sobrescribir lo bueno o devolver lo dañado. Es una tarea técnica."
+            },
+            {
+              "texto": "Decidir qué se les informa a los clientes y por qué canal.",
+              "categoria": "gerencia",
+              "feedback": "La comunicación externa compromete a la empresa: la define la gerencia con TI. Tú derivas y no improvisas detalles."
+            },
+            {
+              "texto": "Usar el canal alternativo acordado cuando el correo no funciona.",
+              "categoria": "tu",
+              "feedback": "El canal alternativo existe para que lo uses tú. Si no lo conoces, pregúntalo hoy, no el día del incidente."
+            },
+            {
+              "texto": "Decidir si se informa a una autoridad o se presenta una denuncia.",
+              "categoria": "gerencia",
+              "feedback": "Depende de obligaciones legales y de la situación. Lo decide la empresa, con asesoría."
+            },
+            {
+              "texto": "Abrir el adjunto malicioso para ver qué hace.",
+              "categoria": "ti",
+              "feedback": "Abrirlo «para ver» puede activarlo. Si hay que analizarlo, lo hace TI o un especialista, con herramientas seguras."
+            },
+            {
+              "texto": "Revisar que tus archivos restaurados estén completos y avisar si falta algo.",
+              "categoria": "tu",
+              "feedback": "Tú conoces tu trabajo mejor que nadie: eres quien puede notar que falta la planilla del martes."
+            }
+          ],
+          "voz": "Este ejercicio no es para que te laves las manos de lo que no te toca. Es para que sepas dónde está tu aporte y dónde podrías estorbar sin querer. Fíjate en el adjunto malicioso: la curiosidad de abrirlo para ver qué hace es muy humana, y es justamente lo que el atacante espera. Y fíjate en lo último: después de un incidente, tu revisión de lo restaurado es tan importante como la de TI.",
+          "hablante": "narrador",
+          "icono": "users",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P05",
+          "tipo": "decision",
+          "titulo": "«¿Es verdad que cambiaron la cuenta?»",
+          "situacion": "Durante el incidente en la cuenta de Javier, Paula Reyes, de Ferretería Los Aromos, llama al local. Le llegó un correo de Javier con una nueva cuenta bancaria para pagar la factura de octubre, y tiene que pagar hoy. Te pregunta si es verdad y qué pasó. En Pehuén, los datos bancarios nunca se cambian por correo.",
+          "pregunta": "¿Qué le respondes?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "Que no sabes, y que le pregunte directamente a Javier respondiendo el correo.",
+              "correcta": false,
+              "feedback": "Responder ese correo es hablar con quien controla la cuenta. Podrían «confirmarle» el cambio."
+            },
+            {
+              "texto": "Que es falso, y le explicas con detalle cómo entraron a la cuenta de Javier y qué está haciendo Nacho.",
+              "correcta": false,
+              "feedback": "La alerta es correcta, pero los detalles del incidente no te corresponde darlos, y pueden servirle a quien está detrás. Lo que la clienta necesita saber es que no pague y que la van a contactar."
+            },
+            {
+              "texto": "Que no pague a esa cuenta ni responda el correo, que Pehuén no cambia sus datos bancarios por correo y que administración la va a contactar por los canales de siempre. Le agradeces y lo reportas a Nacho.",
+              "correcta": true,
+              "feedback": "Cortas el riesgo inmediato, das la información que sí sabes con certeza y derivas lo demás. El reporte a Nacho le permite saber que el correo llegó a esta clienta."
+            },
+            {
+              "texto": "Que le confirmarás más tarde, cuando hables con Javier.",
+              "correcta": false,
+              "feedback": "Ella tiene que pagar hoy: si no le dices que no pague a esa cuenta, puede hacerlo. Lo que sí sabes, que Pehuén no cambia sus datos por correo, se lo puedes decir ahora."
+            }
+          ],
+          "explicacion": "Frente a un cliente, tu papel es cortar el riesgo inmediato, derivar a quien corresponde y reportar. Los detalles del incidente y la comunicación formal los maneja la empresa.",
+          "voz": "Una llamada muy parecida me tocó de verdad. La clienta estaba apurada y yo también. Lo que más me ayudó fue tener clara una sola cosa: en Pehuén los datos bancarios no se cambian por correo, nunca. Con eso pude decirle con tranquilidad que no pagara. Lo demás no me tocaba a mí explicarlo. Le pedí que no respondiera el correo, le dije que administración la iba a llamar y le avisé a Nacho al tiro.",
+          "hablante": "daniela",
+          "icono": "phone-call",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P06",
+          "tipo": "explicacion",
+          "titulo": "Aprender sin culpa",
+          "texto": "Después de un incidente, la pregunta útil no es «¿quién fue?», sino **«¿qué hizo que esto fuera fácil de que pasara, y qué funcionó?»**.\n\nCuando las personas sienten que avisar trae castigo, dejan de avisar o avisan tarde. Y en ciberseguridad, el silencio es lo más caro.",
+          "bloques": [
+            {
+              "icono": "search",
+              "titulo": "Hechos, no culpas",
+              "texto": "Qué pasó, en qué orden y con qué información contaba cada persona en ese momento."
+            },
+            {
+              "icono": "wrench",
+              "titulo": "Mejoras al sistema",
+              "texto": "Procesos de pago, canales de verificación, filtros, capacitación para todos y no solo para quien hizo clic."
+            },
+            {
+              "icono": "thumbs-up",
+              "titulo": "Reconocer lo que funcionó",
+              "texto": "Quien avisó rápido, quien no reenvió, quien verificó por teléfono. Eso es lo que se quiere repetir."
+            }
+          ],
+          "nota": {
+            "tipo": "ojo",
+            "texto": "Aprender sin culpa no significa que todo dé lo mismo. Ocultar un incidente o saltarse un control a propósito es distinto de equivocarse. Lo que se protege es el error honesto y el aviso a tiempo."
+          },
+          "voz": "Esto conecta con algo que dice Patricia, la prevencionista, en la ruta de prevención: qué hizo que eso fuera fácil de hacer mal. Es la misma lógica. Si el correo falso citaba una conversación real de Javier y hablaba de un pago que existía, el problema no es que Javier sea descuidado. El problema es que el proceso de pagos dependía de un correo. Cambias el proceso y proteges a todos. Y además, la próxima vez que alguien haga clic, va a levantar la mano al tiro.",
+          "hablante": "narrador",
+          "profundiza": "La revisión sin culpa, que en algunas organizaciones se llama análisis posterior al incidente, busca entender la secuencia de hechos y las condiciones que la hicieron posible. Algunas preguntas útiles: ¿qué información tenía la persona en ese momento?, ¿qué hacía creíble el engaño?, ¿qué controles existían y por qué no lo detuvieron?, ¿qué ayudó a detectarlo?, ¿cuánto tardó el aviso y por qué?, ¿qué vamos a cambiar y quién se hace cargo? El resultado son acciones concretas, con responsables y plazos, no una lista de personas a quienes llamar la atención. Esto no elimina la responsabilidad: si alguien desactiva un control a propósito, oculta un incidente o actúa de mala fe, eso se trata por los canales que correspondan. Pero la gran mayoría de los incidentes empieza con un error honesto de alguien que estaba haciendo su trabajo bajo presión. Tratar esos errores como faltas solo consigue que el próximo se esconda.",
+          "icono": "lightbulb",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P07",
+          "tipo": "checklist",
+          "titulo": "Tu kit de continuidad",
+          "consigna": "Marca lo que ya tienes y anota lo que te falta. Es tu preparación para el día en que algo falle.",
+          "texto": "Nada de esta lista requiere conocimientos técnicos. Todo se puede dejar listo en una tarde. En los recursos del módulo tienes la Ficha de reporte de incidente para tenerla a mano.",
+          "items": [
+            "Tengo guardado, fuera del correo, el teléfono de quien da soporte TI en mi trabajo.",
+            "Sé cuál es el canal oficial para reportar un incidente y cuál es el alternativo.",
+            "Sé dónde está la ficha o el formulario de reporte de incidentes.",
+            "Guardo mi trabajo en los espacios de la empresa que tienen backup, no solo en el escritorio o en un pendrive.",
+            "Sé cómo seguiría con mis tareas principales si el correo o la carpeta compartida no estuvieran disponibles.",
+            "Sé a quién derivar si un cliente o proveedor me pregunta por un incidente.",
+            "Tengo activado el MFA en mis cuentas de trabajo y sé qué hacer ante una solicitud que no pedí."
+          ],
+          "voz": "Después de mi incidente, hice esta lista en una tarde. Lo primero fue guardar el celular de soporte de Nacho con un nombre fácil de encontrar, porque ese día lo tuve que buscar. Después le pregunté a Marisol cómo despachamos si se cae la carpeta, y resulta que ella tenía una planilla impresa que nadie más conocía. Hazla con calma. Lo que falte, anótalo y pregúntalo esta semana.",
+          "hablante": "daniela",
+          "icono": "clipboard-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-CIBER-M06-L03-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: seguir y aprender",
+          "texto": "Un incidente no termina cuando se bloquea la cuenta. Termina cuando el trabajo vuelve a la normalidad y la empresa quedó mejor preparada.",
+          "ideas": [
+            "La continuidad se prepara antes: canales alternativos, backups probados y una forma de seguir trabajando.",
+            "Durante un incidente, cada quien en su rol: tú avisas, preservas y derivas; TI contiene; la gerencia decide lo externo.",
+            "Después, se aprende sin culpa: qué lo hizo fácil, qué funcionó y qué se cambia."
+          ],
+          "pregunta": "Si mañana tu correo dejara de funcionar todo el día, ¿cómo seguirías haciendo la parte más importante de tu trabajo?",
+          "voz": "Con esta lección cierras la parte teórica del módulo. Lo que viene es el laboratorio: un viernes en Pehuén, un clic y una serie de decisiones con el reloj corriendo. Vas a poder usar todo lo que viste en las tres lecciones. Y al final vas a escribir el reporte del incidente, como si se lo entregaras a Nacho.",
+          "hablante": "narrador",
+          "icono": "list-checks",
+          "practica_formativa": false
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-CIBER-M06-LAB",
+    "titulo": "Caso: el clic del viernes",
+    "resultado": "Ante un incidente simulado que comienza con un clic un viernes en la tarde, tomar decisiones encadenadas de reporte, preservación y continuidad, y redactar un reporte de incidente con línea de tiempo, hechos separados de suposiciones y lo que se preservó.",
+    "minutos": 50,
+    "fuentes": [
+      "CIB-NISTCSF2",
+      "CIB-CSIRT",
+      "CIB-INCIBE",
+      "CIB-LEY21719"
+    ],
+    "pantallas": [
+      {
+        "id": "SEG360-CIBER-M06-LAB-P01",
+        "tipo": "explicacion",
+        "titulo": "Antes del viernes",
+        "texto": "En este laboratorio vas a vivir un caso con decisiones encadenadas: lo que hagas al principio cambia la información que tienes después y el resultado final. No hay un único camino a un buen final, y equivocarte a mitad de camino no te condena: puedes corregir, aunque con un costo.\n\nAl terminar, vas a escribir el reporte del incidente como si se lo entregaras a Nacho.",
+        "bloques": [
+          {
+            "icono": "clock",
+            "titulo": "El reloj corre",
+            "texto": "Cada decisión toma tiempo. Lo que no haces también tiene consecuencias."
+          },
+          {
+            "icono": "eye",
+            "titulo": "Mira la evidencia",
+            "texto": "Revisa lo que aparece antes de decidir. No todo lo importante está a la vista al principio."
+          },
+          {
+            "icono": "pen-line",
+            "titulo": "Toma notas",
+            "texto": "Anota horas y hechos mientras avanzas: los vas a necesitar para tu reporte."
+          }
+        ],
+        "voz": "Este laboratorio es distinto a los anteriores. No vas a revisar una pantalla con calma y elegir: vas a vivir una tarde en la que las cosas pasan una detrás de otra. Algunas decisiones te van a parecer obvias y otras no tanto, porque tendrás poca información y alguien apurándote. Eso es a propósito. Así se sienten los incidentes de verdad. Ten a mano papel o una nota en tu celular, porque al final vas a necesitar las horas y los hechos.",
+        "hablante": "narrador",
+        "icono": "route",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P02",
+        "tipo": "tarjetas",
+        "titulo": "Tu kit para el viernes",
+        "consigna": "Repasa estas cuatro ideas antes de entrar al caso. Da vuelta cada tarjeta.",
+        "texto": "Lo que tengas claro antes de empezar es lo que vas a hacer cuando el reloj apriete.",
+        "tarjetas": [
+          {
+            "frente": "Canal oficial",
+            "icono": "phone-call",
+            "reverso": "En Pehuén: Nacho, al anexo 210 en horario de oficina o al celular de soporte, que contesta también fuera de horario. Es la primera llamada, no la última."
+          },
+          {
+            "frente": "Canal alternativo",
+            "icono": "smartphone",
+            "reverso": "Si tu correo puede estar comprometido, avisa por teléfono o en persona. Nunca respondiendo el correo sospechoso."
+          },
+          {
+            "frente": "Qué anotar",
+            "icono": "pen-line",
+            "reverso": "Hora, qué viste, qué hiciste, qué datos ingresaste, remitente, asunto y a quién más le llegó."
+          },
+          {
+            "frente": "Qué no tocar",
+            "icono": "hand",
+            "reverso": "No borres, no reenvíes, no limpies, no apagues sin consultar. Y no lo escondas."
+          }
+        ],
+        "voz": "Un consejo antes de que empieces. Los viernes en la tarde son traicioneros. Todos andan apurados, Nacho sale a las seis y una piensa: lo veo el lunes. Justamente por eso muchos ataques llegan esos días. A mí me sirve tener estas cuatro cosas claras antes, para no tener que pensarlas en el momento. Cuando el corazón está acelerado, una hace lo que ya tenía decidido.",
+        "hablante": "daniela",
+        "icono": "clipboard-list",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P03",
+        "tipo": "caso",
+        "titulo": "Caso: el clic del viernes",
+        "caso_id": "SEG360-CASO-CIBER-2",
+        "texto": "Es viernes, casi las seis, en el local de atención de Pehuén, y vas a decidir por Daniela. Un clic, un reloj que avanza y varias decisiones que cambian lo que pasa después. El caso se abre en pantalla completa. Anota lo que haces y a qué hora: lo vas a necesitar en la pantalla siguiente.",
+        "voz": "Cuando quieras, abre el caso. Tómate el tiempo que necesites en cada decisión y, si llegas a un final que no te convence, puedes volver a jugarlo.",
+        "hablante": "narrador",
+        "icono": "siren",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P04",
+        "tipo": "construir",
+        "titulo": "Tu reporte de incidente",
+        "consigna": "Escribe el reporte que le entregarías a Nacho después del caso. Usa lo que pasó en tu recorrido: si tomaste una mala decisión, inclúyela. Un buen reporte cuenta todo, también lo que no salió bien.",
+        "contexto": "Nacho lo va a usar para revisar registros, decidir qué contener y preparar el aviso a la gerencia. Lo lee alguien que no estaba ahí: tiene que entenderlo sin preguntarte nada. El ejemplo de nivel alto sigue uno de los recorridos posibles del caso, con un error incluido; tu recorrido puede haber sido otro.",
+        "texto": "Cuando termines, compara tu reporte con los criterios y con los ejemplos, y mejóralo si hace falta. La estructura es la misma de la Ficha de reporte de incidente de los recursos del módulo.",
+        "campos": [
+          {
+            "id": "hora",
+            "etiqueta": "Cuándo y cómo te diste cuenta",
+            "ayuda": "Hora aproximada del clic o del primer hecho, y hora en que notaste que algo andaba mal. Qué te hizo sospechar.",
+            "tipo": "texto",
+            "min_palabras": 15
+          },
+          {
+            "id": "hechos",
+            "etiqueta": "Qué pasó",
+            "ayuda": "Solo hechos, en orden: qué llegó, de quién decía venir, qué abriste, qué ingresaste. Si algo es una suposición, dilo.",
+            "tipo": "texto_largo",
+            "min_palabras": 40
+          },
+          {
+            "id": "acciones",
+            "etiqueta": "Qué hiciste y a qué hora",
+            "ayuda": "Cada acción con su hora: a quién avisaste y por qué canal, si desconectaste la red, si cambiaste algo.",
+            "tipo": "texto_largo",
+            "min_palabras": 30
+          },
+          {
+            "id": "preservado",
+            "etiqueta": "Qué no tocaste y qué preservaste",
+            "ayuda": "El correo, los archivos, las reglas, el equipo encendido o apagado. Si borraste o reenviaste algo, dilo también.",
+            "tipo": "texto_largo",
+            "min_palabras": 20
+          },
+          {
+            "id": "otros",
+            "etiqueta": "Quién más puede estar afectado",
+            "ayuda": "Colegas que recibieron lo mismo, clientes o proveedores, carpetas compartidas.",
+            "tipo": "texto",
+            "min_palabras": 10
+          }
+        ],
+        "criterios": [
+          {
+            "criterio": "Línea de tiempo",
+            "niveles": [
+              "Sin horas ni orden.",
+              "Algunas horas sueltas, sin un orden claro.",
+              "Orden claro, con horas aproximadas para lo principal.",
+              "Secuencia completa, con hora para cada hecho y acción relevante, incluido el momento del aviso."
+            ]
+          },
+          {
+            "criterio": "Hechos separados de suposiciones",
+            "niveles": [
+              "Mezcla opiniones y hechos, o culpa a alguien.",
+              "Mayormente hechos, pero con suposiciones presentadas como certezas.",
+              "Hechos claros; las suposiciones se insinúan sin marcarse.",
+              "Hechos precisos y suposiciones marcadas como tales («creo que», «no lo he confirmado»)."
+            ]
+          },
+          {
+            "criterio": "Preservación y honestidad",
+            "niveles": [
+              "No menciona qué se tocó o qué no.",
+              "Menciona lo que preservó, pero omite errores.",
+              "Menciona lo preservado y algún error, sin detalle.",
+              "Indica con claridad qué no tocó, qué preservó y, si los hubo, qué borró o reenvió, sin minimizarlo."
+            ]
+          },
+          {
+            "criterio": "Utilidad para actuar",
+            "niveles": [
+              "No permite a TI saber qué hacer.",
+              "Falta información clave, como los datos ingresados o las cuentas afectadas.",
+              "Permite actuar, pero TI tendría que preguntar algo importante.",
+              "TI puede actuar de inmediato: sabe qué cuenta, qué datos, qué equipos y quiénes más pueden estar afectados."
+            ]
+          }
+        ],
+        "ejemplo_solido": "**Cuándo:** viernes. A las 17:46 llegó el correo; a las 17:50 hice clic y a las 17:51 escribí mi usuario y mi contraseña del correo de Pehuén. Sospeché cuando la página quedó en blanco, y lo confirmé a las 17:53, con una notificación de inicio de sesión desde fuera de Chile que yo no había pedido.\n\n**Qué pasó:** el correo decía venir de «Seguimiento de Despachos» <avisos@seguimiento-envios.example>, con el asunto «Tu envío está retenido: confirma la entrega hoy». Hice clic en «Ver seguimiento» y llegué a una página que copiaba el ingreso al correo de Pehuén (correo-pehuen.seguimiento-envios.invalid). No ingresé datos bancarios. No vi que se descargara nada, pero no estoy segura.\n\n**Qué hice:** 17:52, le reenvié el correo a Marisol para preguntarle si le había llegado. 17:53, toqué «No fui yo» y saqué una captura. 17:56, llamé a Nacho al celular de soporte (no usé el correo) y le conté todo con horas. Nacho cerró mis sesiones y bloqueó la cuenta. Cuando me avisó, cambié la clave desde el computador de la oficina del segundo piso, escribiendo yo la dirección. Después llegó un SMS de «Pehuén TI» con un link para cambiar la clave: no lo abrí y se lo mandé a Nacho como captura. Revisamos las reglas del correo con él al teléfono: no había ninguna extraña.\n\n**Qué no toqué:** el correo del courier sigue en mi bandeja; no lo borré ni lo reenvié a nadie más. No instalé nada ni borré reglas. Mi error: el reenvío a Marisol de las 17:52.\n\n**Otros afectados:** Marisol abrió mi reenvío y el link le pidió la clave; le dije que no la escribiera y que se lo reportara a Nacho. Creo que el mismo correo llegó a más personas del local, pero no lo he confirmado.",
+        "ejemplo_debil": "Me llegó un correo raro del courier el viernes en la tarde y lo abrí, pero ya avisé y cambié la clave, así que está todo bien. Creo que fue culpa del filtro de correo, que no lo detectó.\n\n**Por qué es mejorable:** no tiene horas; no dice qué correo era ni qué datos se ingresaron; no aclara qué se preservó ni si se reenvió a alguien; da por resuelto algo que TI todavía tiene que revisar; y busca un culpable en vez de describir hechos.",
+        "voz": "Fíjate en un detalle del ejemplo de nivel alto: Daniela cuenta que le reenvió el correo a Marisol antes de llamar a Nacho. No se lo calla. Ese dato puede ser el más importante de todo el reporte, porque le dice a Nacho que hay otra persona en riesgo. Un reporte honesto, con un error incluido, vale mucho más que uno perfecto que esconde algo. Escribe con frases cortas, horas concretas y sin adjetivos.",
+        "hablante": "narrador",
+        "icono": "file-text",
+        "practica_formativa": true
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P05",
+        "tipo": "reflexion",
+        "titulo": "Una decisión que cambiarías",
+        "texto": "Mira hacia atrás en tu recorrido por el caso. No para juzgarte, sino para entender qué hace difícil decidir bien en el momento.",
+        "pregunta": "¿Qué decisión del caso cambiarías si lo jugaras de nuevo? ¿Qué te hizo difícil tomarla bien en el momento: el tiempo, la vergüenza, la falta de información o la presión de otra persona?",
+        "ayuda": "No hay respuesta correcta. Piensa en qué situación de tu propio trabajo se parece a esa presión, y qué podrías dejar preparado desde ya para decidir mejor: un número guardado, una conversación con tu jefatura, una regla personal como «primero aviso, después veo».",
+        "voz": "Cuando yo pienso en mi incidente, lo que más me costó no fue saber qué hacer. Fue decidirme a hacerlo con el local lleno y un cliente esperando. Por eso esta pregunta no es sobre lo que sabías, sino sobre lo que te frenó. Si identificas eso, ya tienes la mitad del trabajo hecho para la próxima vez.",
+        "hablante": "daniela",
+        "icono": "lightbulb",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P06",
+        "tipo": "explicacion",
+        "titulo": "Lo que te llevas de esta ruta",
+        "texto": "Terminaste los seis módulos de la ruta de ciberseguridad. Todos apuntan a lo mismo: **reconocer, verificar, proteger lo proporcional y avisar a tiempo**, dentro de lo que te corresponde.\n\nEstas cuatro ideas resumen lo que practicaste y lo que vas a aplicar en la evaluación final.",
+        "bloques": [
+          {
+            "icono": "folder-lock",
+            "titulo": "Información y accesos",
+            "texto": "Saber qué vale, compartir lo mínimo y cuidar tus credenciales con gestor, MFA y passkeys."
+          },
+          {
+            "icono": "mail-warning",
+            "titulo": "Engaños",
+            "texto": "La urgencia y la autoridad son el anzuelo. Se verifica por un canal independiente, no respondiendo el mensaje."
+          },
+          {
+            "icono": "laptop",
+            "titulo": "Equipos, lugares y herramientas",
+            "texto": "Actualizar, bloquear, trabajar fuera de la oficina y usar IA sin saltarse la política."
+          },
+          {
+            "icono": "bell-ring",
+            "titulo": "Incidentes",
+            "texto": "La sospecha basta. Avisar temprano, preservar y no arreglar por tu cuenta."
+          }
+        ],
+        "voz": "Mira cuánto camino hiciste. Empezaste preguntándote qué información vale y por qué te buscan a ti. Pasaste por correos bien escritos que no eran lo que parecían, por notificaciones que no pediste, por un martes de teletrabajo, por carpetas compartidas de más y por herramientas de IA. Y terminaste en lo que pasa cuando algo sale mal. El hilo es siempre el mismo: no se trata de saberlo todo, sino de detenerte, verificar y avisar a tiempo.",
+        "hablante": "narrador",
+        "profundiza": "La evaluación final de la ruta presenta situaciones de trabajo nuevas, parecidas a las que practicaste, pero no iguales. Se te va a pedir que decidas qué hacer y, en algunos casos, que expliques por qué. No mide si recuerdas definiciones de memoria, sino si aplicas el criterio en contextos distintos: otro remitente, otra carpeta, otra herramienta, otra hora del día. Para prepararte, más que releer todo, conviene repasar las prácticas donde dudaste y volver a leer el feedback de tus errores, porque ahí está la explicación de cada criterio. También te sirve tener a mano los recursos de la ruta: la Tarjeta de verificación de solicitudes, la Guía de permisos y datos y la Ficha de reporte de incidente. Y antes de empezar, completa o revisa tu Plan personal de transferencia: escribir qué vas a cambiar en tu trabajo es la mejor forma de ordenar lo aprendido.",
+        "icono": "badge-check",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P07",
+        "tipo": "checklist",
+        "titulo": "Antes de la evaluación final",
+        "consigna": "Usa esta lista para prepararte. No es un requisito: es una forma de llegar con confianza.",
+        "texto": "Si dudas en algún punto, vuelve al módulo que corresponde y repasa la práctica de ese tema.",
+        "items": [
+          "Repasé las prácticas de la ruta donde más dudé y releí su feedback.",
+          "Puedo explicar con mis palabras por qué se verifica por un canal independiente y no respondiendo el mensaje.",
+          "Sé qué hacer ante una solicitud de MFA que no pedí.",
+          "Puedo decidir qué permiso dar a un archivo según quién lo necesita, para qué y por cuánto tiempo.",
+          "Sé qué información no va a una herramienta de IA no autorizada.",
+          "Puedo describir en orden los primeros pasos después de un clic y lo que no se toca.",
+          "Completé mi Plan personal de transferencia con al menos dos cambios concretos para mi trabajo."
+        ],
+        "voz": "Esta lista no es para estudiar de memoria. Es para que notes dónde te sientes firme y dónde todavía dudas. Si dudas en algo, no te preocupes: vuelve a esa práctica, equivócate otra vez si hace falta y lee con calma el feedback. Esa es la mejor preparación. Y el Plan personal de transferencia vale la pena hacerlo en serio, porque al final lo que importa es lo que cambias en tu trabajo.",
+        "hablante": "narrador",
+        "icono": "list-checks",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-CIBER-M06-LAB-P08",
+        "tipo": "cierre_leccion",
+        "titulo": "Para llevar: el viernes y la ruta",
+        "texto": "Un caso, un reporte y una ruta completa. Esto es lo que vale la pena llevarse.",
+        "ideas": [
+          "Un buen reporte tiene horas, separa hechos de suposiciones y cuenta también lo que salió mal.",
+          "Lo que haces en los primeros minutos pesa más que cualquier arreglo posterior.",
+          "La ruta se resume en reconocer, verificar, proteger lo proporcional y avisar a tiempo."
+        ],
+        "pregunta": "¿Qué es lo primero que vas a cambiar en tu trabajo la próxima semana a partir de esta ruta?",
+        "voz": "Llegaste al final de la ruta de ciberseguridad. Antes de la evaluación, tómate un minuto con esta última pregunta. No pienses en lo que deberías cambiar en teoría, sino en una sola cosa concreta que puedas hacer el lunes. Guardar un número, revisar una carpeta, preguntar por la herramienta de IA autorizada. Las grandes mejoras en seguridad casi siempre empiezan así, con algo chico que alguien decidió hacer.",
+        "hablante": "narrador",
+        "icono": "badge-check",
+        "practica_formativa": false
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-CIBER-M06-CIERRE",
+    "titulo": "Avisar temprano, siempre",
+    "texto": "Un incidente no se mide por el error que lo empezó, sino por el tiempo que pasa hasta que alguien avisa y por lo que se hace mientras tanto.\n\nTu parte es clara: **notar, avisar por un canal seguro, anotar y preservar**. Lo demás lo hace el equipo, contigo.",
+    "voz": "Terminas este módulo, y con él la ruta de ciberseguridad. Si tuvieras que resumirla en una frase, sería esta: reconocer, verificar, proteger lo justo y avisar a tiempo. Nada de eso exige ser experto en informática. Exige atención, un poco de método y la confianza de que avisar es lo correcto, aunque te dé vergüenza. Si alguna vez te toca a ti, acuérdate de Daniela y de sus ocho minutos. Y si le toca a un colega, que encuentre en ti a alguien que lo acompañe a avisar, no a alguien que lo juzgue.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Hoy mismo, guarda fuera de tu correo el teléfono de quien da soporte TI en tu trabajo y averigua cuál es el canal alternativo para reportar.",
+      "Busca o pide la ficha de reporte de incidentes de tu empresa y revisa qué datos te pedirían; si no existe, usa la ficha de este módulo como base.",
+      "Conversa con tu equipo cómo seguirían trabajando un día sin correo o sin la carpeta compartida, y anota al menos una medida concreta."
+    ],
+    "siguiente": "Con esto completas los seis módulos de la ruta de ciberseguridad. Lo que sigue es la evaluación final de la ruta, donde vas a aplicar el criterio de todos los módulos en situaciones nuevas. Antes de empezarla, revisa tu Plan personal de transferencia y las prácticas donde más dudaste."
+  },
+  "glosario": [
+    {
+      "termino": "Incidente de seguridad",
+      "definicion": "Hecho que afecta, o puede afectar, la confidencialidad, la integridad o la disponibilidad de la información. Para reportarlo basta una sospecha razonable."
+    },
+    {
+      "termino": "Señal de incidente",
+      "definicion": "Algo observable que sugiere un posible incidente: correos que no enviaste, reglas que no creaste, una solicitud de MFA que no pediste, archivos renombrados o una ventana que pide pago."
+    },
+    {
+      "termino": "Regla de reenvío",
+      "definicion": "Configuración del correo que reenvía, mueve o marca mensajes de forma automática. Quien entra a una cuenta ajena suele crear una para seguir leyendo sin ser visto."
+    },
+    {
+      "termino": "Ransomware",
+      "definicion": "Software malicioso que bloquea o cifra archivos y pide un pago para recuperarlos. Ante una ventana así, no se paga ni se intenta arreglar: se avisa de inmediato."
+    },
+    {
+      "termino": "Contener",
+      "definicion": "Acciones de TI para limitar el daño de un incidente, como bloquear una cuenta, cerrar sesiones o aislar un equipo de la red."
+    },
+    {
+      "termino": "Preservar evidencia",
+      "definicion": "No borrar, reenviar ni modificar correos, archivos, reglas o equipos involucrados, para que TI pueda entender qué pasó."
+    },
+    {
+      "termino": "Canal alternativo",
+      "definicion": "Forma de avisar que no depende del sistema que puede estar comprometido, como el teléfono de soporte guardado fuera del correo o ir en persona."
+    },
+    {
+      "termino": "Backup",
+      "definicion": "Copia de seguridad de la información que hace TI y que se prueba periódicamente, para poder restaurarla si se pierde o se daña."
+    },
+    {
+      "termino": "Continuidad",
+      "definicion": "Capacidad de seguir atendiendo, despachando y pagando cuando un sistema falla, gracias a lo que se preparó antes."
+    },
+    {
+      "termino": "Aprendizaje sin culpa",
+      "definicion": "Revisión posterior a un incidente que busca entender qué lo hizo posible y qué funcionó, para mejorar procesos, en vez de buscar a quién culpar."
+    }
+  ],
+  "recursos": [
+    "SEG360-REC07",
+    "SEG360-REC10"
+  ],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG040",
+      "titulo": "Aviso temprano desde el local",
+      "uso": "Apertura del módulo: Daniela avisa por teléfono a soporte TI desde el mesón del local, con calma y decisión. Representa el aviso temprano como conducta esperada.",
+      "prompt": "Editorial realistic photograph, natural daylight from a storefront window, customer service counter of a mid-sized office and cleaning supplies distributor in Santiago, Chile. A Chilean woman in her late thirties, wearing a simple work polo, stands behind the counter holding a desk phone receiver to her ear while looking attentively at a computer monitor, her other hand writing a short note on a small paper pad. Calm, focused, decisive expression, mid-action, not posing. Monitor content blurred and unreadable. Shelves with boxed products softly out of focus in the background. Muted bluish graphite and white palette with subtle violet accents. No legible text, no logos, no real brands. 3:2 aspect ratio.",
+      "alt": "Daniela, desde el mesón del local, habla por teléfono mientras mira el computador y anota algo en un papel: está avisando a soporte TI de algo raro en su correo."
+    },
+    {
+      "id": "SEG360-IMG041",
+      "titulo": "Algo no cuadra en la bandeja",
+      "uso": "Apertura de la lección 1 y primera escena del microvideo: Javier, teletrabajando, descubre en su notebook correos enviados que él no escribió. Transmite sorpresa y duda, no pánico.",
+      "prompt": "Editorial realistic photograph, early morning natural light, small apartment living-dining area in Santiago, Chile, used as a home office. A Chilean man in his early thirties, casual sweater, sits at a dining table in front of a company laptop, leaning slightly toward the screen with a puzzled, concerned expression, one hand near his chin. A smartphone lies face up beside the laptop with a blurred notification glow. A cup of tea and a notebook nearby. Screen content blurred and unreadable. Muted bluish graphite and white palette with subtle violet accents. No legible text, no logos, no real brands. 3:2 aspect ratio.",
+      "alt": "Javier, en su mesa de teletrabajo, mira el notebook con extrañeza; a su lado, el celular muestra una notificación."
+    },
+    {
+      "id": "SEG360-IMG042",
+      "titulo": "Revisión sin culpa",
+      "uso": "Lección 3: reunión posterior a un incidente en la que el equipo de Pehuén revisa qué pasó y qué mejorar, sin buscar culpables.",
+      "prompt": "Editorial realistic photograph, soft natural light, small meeting room in the administrative office of a mid-sized distributor in Santiago, Chile. Four Chilean adults of diverse ages sit around a simple table: a man in his fifties (operations manager), a man in his forties with a lanyard (IT support), a woman in her late thirties in a work polo and a man in his early thirties. One of them points at a whiteboard with an abstract hand-drawn timeline of arrows and boxes, no legible words. Relaxed, collaborative body language, coffee cups and notebooks on the table, people listening to each other, not posing. Muted bluish graphite and white palette with subtle violet accents. No legible text, no logos, no real brands. 3:2 aspect ratio.",
+      "alt": "Cuatro personas de Pehuén conversan alrededor de una mesa frente a una pizarra con una línea de tiempo dibujada, revisando un incidente con tranquilidad."
+    }
+  ],
+  "minutos_desglose": {
+    "lecciones": 120,
+    "laboratorio": 50,
+    "intro_cierre_recursos": 10
+  }
+}

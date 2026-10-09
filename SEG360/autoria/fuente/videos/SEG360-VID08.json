@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID08",
+  "titulo": "Los primeros 15 minutos después del clic",
+  "modulo": "SEG360-CIBER-M06",
+  "pantalla": "SEG360-CIBER-M06-L02-P03",
+  "objetivo": "Ejecutar en orden los primeros pasos después de un clic o de ingresar una clave en un sitio sospechoso (detenerse, avisar por un canal seguro, aislar solo si se indica, anotar y preservar) y reconocer lo que no se debe hacer: reenviar, borrar, limpiar por cuenta propia u ocultar.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG041", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "Un clic, y el reloj parte",
+      "voz": "Jueves, cinco menos diez. Un correo que parecía de facturación, un clic y una clave ingresada. La página queda en blanco. ¿Y ahora qué?",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["hand", "circle-help"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Primero: detente",
+      "voz": "Lo primero es detenerte. No sigas ingresando datos, no cierres todo a lo loco y no borres nada.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "iconos", "ref": ["phone-call", "smartphone", "user-check"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Avisa por un canal seguro",
+      "voz": "Lo segundo, avisar por el canal oficial. Si sospechas de tu correo, llama o ve en persona: no avises desde la cuenta que puede estar tomada.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "iconos", "ref": ["wifi", "laptop"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Aísla solo si te lo indican",
+      "voz": "Si el procedimiento o TI lo indican, desconecta el Wi-Fi o el cable. Pero no apagues el equipo si te piden preservarlo: ahí hay información que sirve.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "iconos", "ref": ["pen-line", "clock"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Anota hora y hechos",
+      "voz": "Anota la hora, el remitente, el asunto y lo que ingresaste, en papel o en otro dispositivo. En una hora ya no te vas a acordar con precisión.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "iconos", "ref": ["send", "trash-2", "shield-alert"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "No reenvíes, no borres, no limpies",
+      "voz": "Y lo que no se hace. No reenvíes el correo a colegas para preguntar. No borres evidencia. No descargues limpiadores. Y no lo escondas.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "Avisar temprano vale oro" },
+      "texto_en_pantalla": "Avisar temprano vale oro",
+      "voz": "Quince minutos bien usados pueden cortar un incidente antes de que crezca. Nadie espera que no te equivoques nunca. Se espera que avises.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: Javier, en su mesa de teletrabajo, mira el notebook con extrañeza; a su lado, el celular muestra una notificación. Escena 2: aparecen una mano abierta en señal de alto y un signo de interrogación, para indicar que lo primero es detenerse. Escena 3: íconos de un teléfono, un celular y una persona verificada representan avisar a soporte por un canal que no sea el correo. Escena 4: íconos de Wi-Fi y de un notebook indican desconectar la red solo si el procedimiento lo pide, sin apagar el equipo. Escena 5: un lápiz y un reloj representan anotar la hora y los hechos. Escena 6: íconos de enviar, basurero y escudo de alerta representan lo que no se hace: reenviar, borrar o intentar limpiar por cuenta propia. Escena 7: en letras grandes aparece la frase «Avisar temprano vale oro»."
+}

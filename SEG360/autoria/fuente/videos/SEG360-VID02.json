@@ -1,0 +1,99 @@
+{
+  "id": "SEG360-VID02",
+  "titulo": "Mirar sin tocar: cables, enchufes y equipos",
+  "modulo": "SEG360-SST-M03",
+  "pantalla": "SEG360-SST-M03-L02-P04",
+  "objetivo": "Revisar a la vista una zapatilla eléctrica y un alargador, reconocer señales de daño, sobrecarga o calentamiento, y decidir dejar de usarlos y avisar, sin abrirlos, repararlos ni probarlos.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": {
+        "tipo": "escena3d",
+        "ref": "oficina",
+        "foco": "zapatilla_cadena",
+        "movimiento": "recorrido"
+      },
+      "texto_en_pantalla": "Primero se mira, con las manos quietas",
+      "voz": "Antes de enchufar algo más, detente y mira. Todo lo que necesitas revisar se ve desde afuera.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "zapatilla_electrica",
+        "movimiento": "giro"
+      },
+      "texto_en_pantalla": "Carcasa: grietas, manchas, deformación",
+      "voz": "Recorre la carcasa con la vista. Una mancha café, un plástico deformado, una grieta. Son huellas de calor, la señal que no hace ruido.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "zapatilla_electrica",
+        "movimiento": "acercar:enchufes"
+      },
+      "texto_en_pantalla": "Enchufes firmes, sin bordes oscuros",
+      "voz": "Mira los enchufes. Un borde ennegrecido o un enchufe que queda suelto indican una conexión que se calienta. No hace falta probar nada.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "zapatilla_electrica",
+        "movimiento": "acercar:marcado"
+      },
+      "texto_en_pantalla": "El marcado dice cuánto aguanta",
+      "voz": "Debajo está el marcado: la tensión, la corriente máxima y la certificación. Si no está o no se lee, no sabes cuánto soporta, y eso se consulta.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "alargador",
+        "movimiento": "acercar:aislacion"
+      },
+      "texto_en_pantalla": "Huincha aislante no es reparación",
+      "voz": "En el alargador, sigue el cable de punta a punta. Si la aislación está cortada, reseca o parchada con huincha, el alargador ya no protege. La huincha solo esconde el daño.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "alargador",
+        "movimiento": "acercar:carrete"
+      },
+      "texto_en_pantalla": "Enrollado aguanta menos",
+      "voz": "Y si es de carrete, mira la etiqueta. Enrollado soporta menos que desenrollado, porque el calor se acumula vuelta sobre vuelta.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": {
+        "tipo": "escena3d",
+        "ref": "bodega",
+        "foco": "zapatilla_sobrecargada",
+        "movimiento": "recorrido"
+      },
+      "texto_en_pantalla": "Mira también qué está conectado",
+      "voz": "Ahora mira el conjunto: un hervidor junto al notebook y la impresora, un alargador cruzando el pasillo. Importa cuánto se le pide a todo junto.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 8,
+      "visual": {
+        "tipo": "texto",
+        "ref": "No usar, avisar, derivar"
+      },
+      "texto_en_pantalla": "No usar. Avisar. Derivar.",
+      "voz": "Si ves daño, deja de usarlo, avisa con lo que viste y deja que lo resuelva quien está autorizado. Nunca lo abras, lo repares ni lo pruebes. Y si hay humo o chispas, no lo toques: aléjate y activa la emergencia.",
+      "hablante": "patricia"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: recorrido por la oficina administrativa de Pehuén que se detiene en dos zapatillas eléctricas conectadas en cadena bajo un escritorio; nadie las toca. Escena 2: una zapatilla eléctrica en 3D gira lentamente mostrando su carcasa, con una mancha café y una zona deformada junto a un enchufe. Escena 3: acercamiento a los enchufes de la zapatilla; uno tiene el borde ennegrecido. Escena 4: la zapatilla se da vuelta y se ve la etiqueta con su marcado. Escena 5: un alargador en 3D; la cámara recorre el cable hasta un tramo envuelto en huincha aislante despegada. Escena 6: acercamiento al carrete del alargador y a su etiqueta de capacidad enrollado y desenrollado. Escena 7: recorrido por la mesa de despacho de la bodega, con una zapatilla que alimenta seis equipos, entre ellos un hervidor, y un alargador cruzando el pasillo. Escena 8: sobre fondo liso aparece el texto «No usar. Avisar. Derivar.» mientras la voz de Patricia resume qué hacer y qué no hacer."
+}

@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID10",
+  "titulo": "Casco: partes y señales de retiro",
+  "modulo": "SEG360-EPP-M02",
+  "pantalla": "SEG360-EPP-M02-L01-P05",
+  "objetivo": "Reconocer las partes principales del casco, cómo trabajan juntas y las señales que indican sacarlo de uso, entendiendo que los plazos de recambio los define el fabricante.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "modelo3d", "ref": "casco", "movimiento": "giro" },
+      "texto_en_pantalla": "Un casco son varias piezas",
+      "voz": "Desde afuera, un casco parece una sola pieza de plástico. Pero lo que te protege es un sistema, y cada parte tiene su trabajo.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "modelo3d", "ref": "casco", "movimiento": "explosionado" },
+      "texto_en_pantalla": "Carcasa y suspensión trabajan juntas",
+      "voz": "La carcasa reparte la fuerza del golpe. La suspensión la mantiene separada de tu cabeza y absorbe parte de la energía. Si una de las dos falla, el casco ya no protege igual.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "modelo3d", "ref": "casco", "movimiento": "acercar:banda_ajuste" },
+      "texto_en_pantalla": "Firme, sin apretar",
+      "voz": "La banda de ajuste va en la nuca. Tiene que quedar firme, sin apretar. Si al agacharte el casco se mueve, no está bien ajustado. Y cuando la tarea lo pide, el barboquejo evita que se caiga.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "modelo3d", "ref": "casco", "movimiento": "acercar:marcado" },
+      "texto_en_pantalla": "El marcado cuenta su historia",
+      "voz": "Por dentro, el casco tiene datos moldeados, como la fecha de fabricación. Con esos datos y el folleto del fabricante sabes si todavía está dentro de su plazo.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "iconos", "ref": ["search", "sun", "hammer", "triangle-alert"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Señales para sacarlo de uso",
+      "voz": "Fisuras, deformación, una superficie descolorida o como tiza por el sol, una suspensión cortada o un golpe fuerte, aunque no se note. Cualquiera de esas señales basta para dejarlo fuera de uso.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG048", "movimiento": "fijo" },
+      "texto_en_pantalla": "Si dudas: fuera de uso y avisas",
+      "voz": "Si tienes dudas, no lo arreglas ni lo usas igual. Lo dejas aparte, avisas a tu jefatura o a la prevencionista y pides otro.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "No hay vida útil universal: manda el fabricante" },
+      "texto_en_pantalla": "No hay vida útil universal",
+      "voz": "Y ojo con el dato que pasa de boca en boca. No existe un plazo igual para todos los cascos. Cada fabricante declara el suyo, y la carcasa y la suspensión pueden tener plazos distintos.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: un casco de seguridad en 3D gira lentamente sobre fondo neutro. Escena 2: el casco se separa en sus piezas, como un despiece: la carcasa arriba, la suspensión textil debajo, la banda de ajuste, la banda de sudor y el barboquejo. Escena 3: acercamiento a la banda de ajuste de la nuca, con su rueda de regulación. Escena 4: acercamiento al interior de la carcasa, donde se ve el marcado moldeado con un reloj de fecha. Escena 5: cuatro íconos en secuencia: una lupa, un sol, un martillo y un triángulo de advertencia, que representan revisar, daño por sol, golpe y señal de alerta. Escena 6: fotografía de la prevencionista revisando un casco junto al encargado de mantención en la bodega. Escena 7: texto grande en pantalla: «No hay vida útil universal: manda el fabricante»."
+}

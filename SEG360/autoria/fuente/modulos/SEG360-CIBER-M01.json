@@ -1,0 +1,945 @@
+{
+  "id": "SEG360-CIBER-M01",
+  "ruta": "CIBER",
+  "numero": 1,
+  "titulo": "La información que vale (y por qué te buscan a ti)",
+  "subtitulo": "Qué información cuidas, qué puede salir mal y cómo protegerla según tu rol",
+  "resultado": "Ante documentos y datos de trabajo, clasificarlos según confidencialidad, integridad y disponibilidad, reconocer datos personales y elegir accesos y canales proporcionales a su rol.",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-CIBER-M01-INTRO",
+    "titulo": "Lo que tienes en las manos vale más de lo que crees",
+    "texto": "Un lunes cualquiera en Pehuén pasan por tus manos listas de clientes, cotizaciones, liquidaciones, claves y datos bancarios de proveedores. Para ti es la pega de todos los días. Para alguien que quiere estafar a la empresa, es justo lo que anda buscando.\n\nEn este módulo vas a aprender a mirar esa información con otros ojos: qué vale, qué puede salir mal y cómo cuidarla **sin complicarte la vida ni la de tu equipo**.",
+    "voz": "Piensa en lo último que hiciste en el computador antes de empezar este curso. A lo mejor respondiste un correo de un cliente, revisaste una planilla o mandaste una foto de una guía de despacho. Nada especial, ¿cierto? Bueno, para alguien de afuera eso puede ser una mina de oro. No porque tú seas descuidado, sino porque la información de una empresa se mueve por las manos de todas las personas que trabajan en ella. En las próximas horas vamos a recorrer la oficina de Pehuén, vamos a ordenar su carpeta compartida y vas a terminar sabiendo qué cuidar primero y por dónde mover cada cosa.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG025",
+    "logros": [
+      "Reconocer qué información, equipos y accesos de tu trabajo valen para la empresa y para quien quiere aprovecharse de ella.",
+      "Clasificar documentos según confidencialidad, integridad y disponibilidad, y distinguir cuándo contienen datos personales o sensibles.",
+      "Elegir accesos y canales proporcionales a la información y a tu rol, sin bloquear el trabajo de los demás."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-CIBER-M01-L01",
+      "titulo": "Qué proteges: información, activos y personas",
+      "resultado": "Ante un puesto de trabajo de Pehuén, identificar qué información, soportes, accesos y personas son activos valiosos y explicar por qué cualquier rol puede ser objetivo de un ataque.",
+      "minutos": 38,
+      "fuentes": ["CIB-NISTCSF2", "CIB-INCIBE", "CIB-LEY21663", "CIB-CSIRT"],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M01-L01-P01",
+          "tipo": "apertura",
+          "titulo": "Un martes con todo a la vista",
+          "escena": "Son las 9:10 en la oficina del segundo piso. En la bandeja de la impresora quedaron unas liquidaciones de sueldo desde ayer. En el monitor de al lado hay un post-it amarillo con algo que parece una clave. Javier está en teletrabajo, pero su computador quedó con la sesión abierta, y en la pizarra todavía se lee la clave del Wi-Fi.",
+          "pregunta": "Si tú quisieras perjudicar a Pehuén, ¿qué te llevarías primero de esta oficina?",
+          "texto": "Nada de esto parece grave. Nadie ha robado nada y todos están trabajando.\n\nPero cada objeto de esta escena guarda algo que vale: datos de personas, accesos a cuentas, información para engañar a un cliente. Esta lección parte por ahí: **saber qué estás cuidando** antes de pensar en cómo cuidarlo.",
+          "voz": "Mira la escena con calma, como si fuera la primera vez que entras a esa oficina. Las liquidaciones, el post-it, la sesión abierta, la pizarra. Ninguna de esas cosas la dejó ahí una mala persona; las dejó gente apurada, con mucho trabajo y sin un lugar mejor donde ponerlas. Por eso no vamos a buscar culpables. Vamos a hacer otra pregunta: qué podría hacer alguien con lo que está a la vista. Cuando aprendes a hacerte esa pregunta, empiezas a ver tu propio puesto de otra manera.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG026",
+          "icono": "scan-eye"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Un activo no es solo un archivo",
+          "texto": "En seguridad se habla de **activos de información**: todo lo que tiene valor para la empresa porque guarda, procesa o mueve información.\n\nNo son solo planillas. También son los equipos donde están, las cuentas que dan acceso a ellas y las personas que saben cosas. Si falla cualquiera de esas piezas, la información queda expuesta.",
+          "bloques": [
+            { "icono": "file-text", "titulo": "Información", "texto": "Base de clientes, cotizaciones, liquidaciones, datos bancarios de proveedores, guías de despacho." },
+            { "icono": "laptop", "titulo": "Soportes", "texto": "Notebook, celular del local, carpeta compartida, correo, pendrive, papel impreso." },
+            { "icono": "key-round", "titulo": "Accesos", "texto": "Cuentas de usuario, claves, permisos sobre carpetas, la llave de la sala de equipos." },
+            { "icono": "users", "titulo": "Personas", "texto": "Lo que sabes de procesos, clientes y horarios, y lo que le cuentas a quien te pregunta." }
+          ],
+          "nota": { "tipo": "dato", "texto": "El marco de ciberseguridad del NIST, versión 2.0, incluye entre sus funciones la de «Identificar»: no puedes proteger bien algo que no sabes que tienes." },
+          "voz": "Cuando alguien escucha la palabra ciberseguridad, suele imaginar servidores, cables y pantallas con letras verdes. Pero en una empresa como Pehuén, lo que más vale está en lugares bien comunes. La planilla de cuentas bancarias que usa Javier para pagar. El celular del local donde Daniela recibe pedidos. La clave que abre el correo de cobranza. Y algo que se olvida siempre: lo que las personas saben. Un atacante puede conseguir mucho solo con saber quién paga a los proveedores y qué día lo hace.",
+          "hablante": "narrador",
+          "profundiza": "En gestión de seguridad, un inventario de activos es la lista de lo que la organización necesita proteger: información, aplicaciones, equipos, servicios externos y personas con conocimiento clave. No hace falta que tú mantengas ese inventario; normalmente lo hace TI junto con las jefaturas. Lo que sí te toca es reconocer los activos que pasan por tu puesto. Una pregunta práctica para hacerlo: ¿qué uso todos los días que, si desapareciera, se filtrara o se alterara, me dejaría sin poder trabajar o afectaría a alguien? En Pehuén, por ejemplo, el celular del local es un activo aunque sea un equipo barato, porque ahí están las conversaciones con clientes, sus direcciones y sus pedidos. Y la persona que conoce el procedimiento de pagos también es un activo: si se va de vacaciones sin dejar a nadie que lo sepa hacer, la empresa queda expuesta. Mirar los activos de esta forma amplia te ayuda a entender por qué la seguridad no es solo un tema de TI.",
+          "icono": "box"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P03",
+          "tipo": "tarjetas",
+          "titulo": "Por qué te buscan a ti",
+          "consigna": "Da vuelta cada tarjeta. Cada persona de Pehuén maneja algo que le interesa a quien quiere engañar a la empresa.",
+          "tarjetas": [
+            { "frente": "Javier · Administración y finanzas", "icono": "banknote", "reverso": "Paga a proveedores y ve sus datos bancarios. Si alguien logra que cambie una cuenta, el dinero se va a otro lado sin que nadie lo note por semanas." },
+            { "frente": "Daniela · Local de atención", "icono": "store", "reverso": "Tiene nombres, teléfonos y direcciones de clientes, y recibe decenas de mensajes al día. Es fácil mezclar un mensaje falso entre tantos verdaderos." },
+            { "frente": "Marisol · Bodega", "icono": "warehouse", "reverso": "Conoce horarios de despacho, rutas y qué mercadería sale cuándo. Esa información sirve para desviar un pedido o robar una carga." },
+            { "frente": "Nacho · Soporte TI", "icono": "wrench", "reverso": "Tiene permisos amplios sobre los sistemas. Una sola cuenta suya comprometida abre muchas puertas a la vez." },
+            { "frente": "Camila · Recién llegada", "icono": "user-check", "reverso": "Todavía no conoce los procedimientos ni a todas las personas. Un mensaje que diga «te escribo de parte de Rodrigo» le cuesta más ponerlo en duda." }
+          ],
+          "voz": "Hay una idea que vale la pena desarmar: que los ataques son para las empresas grandes o para los gerentes. En la práctica, quien quiere engañar a una empresa busca la puerta más fácil, y esa puerta muchas veces es una persona con acceso a algo concreto y con poco tiempo para pensar. Fíjate que ninguna de estas tarjetas habla de personas descuidadas. Habla de lo que cada rol tiene en las manos. Ese es el motivo por el que te buscan a ti: no por quién eres, sino por lo que puedes hacer con un clic.",
+          "hablante": "narrador",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P04",
+          "tipo": "mito_realidad",
+          "titulo": "Lo que se dice en la colación",
+          "afirmaciones": [
+            { "texto": "Pehuén es una empresa mediana; a los atacantes les interesan las grandes.", "es_verdad": false, "explicacion": "Muchos fraudes apuntan justamente a empresas medianas y pequeñas: tienen dinero que mover, menos controles y una sola persona de TI. No hace falta ser grande para ser rentable para alguien." },
+            { "texto": "A veces es más fácil engañar a una persona que romper un sistema.", "es_verdad": true, "explicacion": "Convencer a alguien de que entregue una clave o cambie una cuenta bancaria cuesta menos que vulnerar un sistema bien configurado. Por eso tu criterio es parte de la protección." },
+            { "texto": "Si no trabajo en finanzas, no tengo información que le sirva a nadie.", "es_verdad": false, "explicacion": "Datos de clientes, horarios de despacho, nombres de proveedores o tu propia cuenta de correo sirven para preparar un engaño más creíble contra otra persona de la empresa." },
+            { "texto": "Un papel con datos de clientes tirado en el basurero común también es un problema de seguridad.", "es_verdad": true, "explicacion": "La información no deja de valer porque esté impresa. Un documento en el basurero puede terminar en manos de cualquiera, y si tiene datos personales, la empresa responde por eso." },
+            { "texto": "Si TI tiene antivirus y respaldos, lo que yo haga no cambia mucho.", "es_verdad": false, "explicacion": "Las herramientas ayudan, pero ninguna protege al cien por ciento. Si tú entregas tu clave o mandas un archivo al lugar equivocado, ningún antivirus lo deshace." }
+          ],
+          "voz": "Estas frases las has escuchado, quizás las has dicho. No son tontas: tienen algo de lógica, y por eso se repiten. Lee cada una y decide si es verdad o no antes de ver la explicación. Ojo con las que suenan razonables, porque esas son las que más nos desarman. Una frase como «a nosotros no nos va a pasar» no protege a nadie, pero sí hace que bajemos la guardia justo cuando llega el mensaje bien hecho.",
+          "hablante": "narrador",
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P05",
+          "tipo": "escena3d",
+          "titulo": "Recorre la oficina y marca lo que ves",
+          "escena": "oficina",
+          "variante": "inicial",
+          "modo": "detectar",
+          "consigna": "Gira la vista y recorre la oficina administrativa y la sala de equipos. Marca los objetos que exponen información o accesos de Pehuén y asigna una prioridad. No todo lo que ves es un problema.",
+          "puntos": [
+            { "objeto": "postit_clave", "titulo": "Una clave pegada al monitor", "texto": "Cualquiera que pase, incluida una visita o una persona de aseo externa, puede leerla y usarla.", "es_riesgo": true, "prioridad": "alta", "accion": "Avisar con respeto a la dueña de la cuenta para que cambie esa clave y la guarde en el gestor de contraseñas que entregue la empresa. Retirar el post-it." },
+            { "objeto": "pc_desbloqueado", "titulo": "Sesión abierta sin nadie", "texto": "Con la sesión abierta, otra persona puede leer correos, enviar mensajes a nombre del dueño o abrir carpetas que no le corresponden.", "es_riesgo": true, "prioridad": "alta", "accion": "Si es tu puesto, bloquear la pantalla cada vez que te levantas. Si es de otra persona, avisarle o avisar a Nacho. Pedir que se active el bloqueo automático." },
+            { "objeto": "impresora_documentos", "titulo": "Liquidaciones olvidadas", "texto": "Son datos personales de compañeros: sueldo, descuentos, previsión. Cualquiera que pase por la impresora puede leerlos.", "es_riesgo": true, "prioridad": "alta", "accion": "Retirarlas sin leerlas y entregarlas en sobre cerrado a quien gestiona remuneraciones. Proponer impresión segura con código para documentos de este tipo." },
+            { "objeto": "pizarra_datos", "titulo": "La pizarra que todos ven", "texto": "La clave del Wi-Fi y el RUT de un cliente quedan a la vista de visitas, proveedores y cualquier persona que entre a una reunión.", "es_riesgo": true, "prioridad": "media", "accion": "Borrar lo que no debe estar a la vista y avisar a Nacho para que evalúe cambiar la clave del Wi-Fi. Los datos de clientes se consultan en el sistema, no en la pizarra." },
+            { "objeto": "documentos_basurero", "titulo": "Papeles con datos en la basura", "texto": "Cotizaciones y guías con nombres, direcciones y teléfonos de clientes terminan en el basurero común.", "es_riesgo": true, "prioridad": "media", "accion": "Retirarlos y destruirlos según lo que defina la empresa, por ejemplo con triturador. Avisar a la jefatura para que haya un lugar claro donde dejar papeles con datos." },
+            { "objeto": "pendrive_desconocido", "titulo": "Un pendrive sin dueño", "texto": "Nadie sabe de quién es ni qué tiene. Conectarlo «para ver de quién es» puede instalar algo dañino en el computador.", "es_riesgo": true, "prioridad": "media", "accion": "No conectarlo en ningún equipo. Entregárselo a Nacho contando dónde se encontró." },
+            { "objeto": "rack_abierto", "titulo": "La sala de equipos abierta", "texto": "Ahí están el router y los equipos de red. Además se usa para guardar cajas, lo que obliga a dejar la puerta abierta.", "es_riesgo": true, "prioridad": "media", "accion": "Avisar a Nacho y a la jefatura. La sala se mantiene cerrada y se despeja: no es bodega." },
+            { "objeto": "telefono", "titulo": "El teléfono de escritorio", "texto": "El aparato está bien. Lo que importa es cómo se usa: a quién le das información cuando llaman.", "es_riesgo": false, "prioridad": null, "accion": "Nada que corregir en el equipo. Ojo con las llamadas que piden datos: eso lo verás en el módulo de engaños." },
+            { "objeto": "extintor_oficina", "titulo": "Extintor a mano", "texto": "Está señalizado, accesible y con su tarjeta al día.", "es_riesgo": false, "prioridad": null, "accion": "Nada que corregir. Es una buena condición y no tiene relación con la información." }
+          ],
+          "voz": "Tómate tu tiempo para recorrer la oficina. Acércate a los escritorios, mira la impresora, entra a la sala de equipos. No se trata de marcar todo lo que veas: hay cosas que están bien y conviene reconocerlas. Cuando marques algo, piensa también en la prioridad. Una clave a la vista o una sesión abierta se pueden usar en segundos; otras cosas son un riesgo, pero dan un poco más de margen. Fíjate en que casi todo se resuelve con avisar y con hábitos sencillos, no con tecnología cara.",
+          "hablante": "narrador",
+          "profundiza": "Priorizar es tan importante como detectar. Una forma simple de hacerlo es preguntarte dos cosas: qué tan fácil es que alguien lo aproveche y qué tan grave sería si pasara. La clave en el post-it es fácil de aprovechar y da acceso a todo lo que esa persona puede hacer en los sistemas: prioridad alta. Las liquidaciones exponen datos de compañeros que la empresa está obligada a proteger: también alta. La pizarra o el basurero son serios, pero dependen de quién entre a la oficina o revise la basura: prioridad media. Fíjate además en que varios de estos problemas tienen una causa de diseño, no de descuido personal. Si no hay impresión segura, las liquidaciones van a seguir quedando en la bandeja. Si no hay triturador, los papeles van a seguir yendo al basurero. Si no hay gestor de contraseñas, las claves van a seguir apareciendo en post-its. Cuando avises, cuenta también la causa: así la solución dura más que un día.",
+          "icono": "building-2"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P06",
+          "tipo": "decision",
+          "titulo": "Una tarde para proteger el local",
+          "situacion": "Nacho tiene una sola tarde libre esta semana para reforzar la seguridad del local de atención. Te pide ayuda: «Dime qué tres cosas del local protegerías primero; el resto lo vemos el próximo mes».",
+          "pregunta": "¿Qué tres activos priorizas?",
+          "multiple": true,
+          "minimo": 3,
+          "maximo": 3,
+          "opciones": [
+            { "texto": "Los afiches de promociones pegados en la vitrina.", "correcta": false, "feedback": "Son información pública: están hechos para que todos los vean. Si alguien les saca una foto, no pasa nada." },
+            { "texto": "El celular del local, con el WhatsApp de pedidos y las conversaciones con clientes.", "correcta": true, "feedback": "Ahí hay nombres, direcciones, pedidos y la confianza de los clientes. Si alguien lo usa o lo suplanta, puede engañarlos a nombre de Pehuén." },
+            { "texto": "La planilla de clientes del local, con RUT, teléfonos y direcciones.", "correcta": true, "feedback": "Son datos personales que la empresa debe proteger, y sirven para preparar engaños muy creíbles contra esos mismos clientes." },
+            { "texto": "La cuenta de correo de pedidos del local.", "correcta": true, "feedback": "Una cuenta de correo es una llave: con ella se puede leer el historial, enviar mensajes falsos que salen del correo real y recuperar claves de otros servicios." },
+            { "texto": "La lista de precios que se entrega impresa a cualquier cliente.", "correcta": false, "feedback": "Ya es pública. Lo que sí importa es que nadie pueda modificarla sin control, pero no compite con los datos de clientes ni con las cuentas." }
+          ],
+          "explicacion": "Cuando hay poco tiempo, se protege primero lo que da acceso a muchas cosas (cuentas, celular) y lo que afecta a personas (datos de clientes). La información pública también se cuida, pero de otra forma: que nadie la altere.",
+          "voz": "Esta es una situación muy real: nunca hay tiempo para protegerlo todo de una vez. Por eso es tan útil saber priorizar. Antes de elegir, pregúntate dos cosas para cada opción: qué podría hacer alguien con esto y a quién afectaría. Vas a notar que algunas cosas importan mucho porque abren otras puertas, como una cuenta de correo, y otras importan porque detrás hay personas de carne y hueso.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P07",
+          "tipo": "explicacion",
+          "titulo": "Cuando se pierde información, se pierde más",
+          "texto": "Un problema de seguridad casi nunca se queda en «se perdió un archivo». Tiene efectos en cadena:",
+          "bloques": [
+            { "icono": "banknote", "titulo": "Dinero", "texto": "Pagos desviados, pedidos despachados a quien no corresponde, horas de trabajo para recuperar todo." },
+            { "icono": "clock", "titulo": "Operación", "texto": "Si no se puede abrir la planilla de rutas, el camión no sale y el cliente espera." },
+            { "icono": "user-x", "titulo": "Personas", "texto": "Clientes o compañeros cuyos datos quedan expuestos y pueden ser víctimas de engaños." },
+            { "icono": "handshake", "titulo": "Confianza", "texto": "Un cliente que recibe un mensaje falso a nombre de Pehuén no siempre vuelve." }
+          ],
+          "nota": { "tipo": "norma", "texto": "La Ley 21.663, Ley Marco de Ciberseguridad (2024), creó la Agencia Nacional de Ciberseguridad (ANCI) y el CSIRT Nacional, que publica alertas y recomendaciones útiles para cualquier organización." },
+          "voz": "Te cuento algo que me pasó en el local. Una vez se nos cayó el correo de pedidos un día entero. Parece poca cosa, pero ese día tuve que llamar uno por uno a los clientes que esperaban respuesta, anotar pedidos en un cuaderno y después pasarlos al sistema. Terminé a las nueve de la noche. Y eso que no se perdió ningún dato. Desde ahí entendí que la información no es solo algo que se roba: también es algo que, si falla, te deja sin poder trabajar.",
+          "hablante": "daniela",
+          "profundiza": "Las consecuencias de un incidente se suelen agrupar en impacto económico, operacional, sobre las personas, reputacional y legal. En una empresa como Pehuén, estos impactos se mezclan. Un correo falso que logra cambiar la cuenta de un proveedor genera una pérdida de dinero, pero también horas de trabajo de Javier y Rodrigo para reclamar al banco, una conversación incómoda con el proveedor real y, si se filtraron datos de clientes, la obligación de evaluar a quién hay que informar. Por eso, cuando la empresa te pide cuidar la información, no es por desconfianza ni por cumplir un trámite: es porque el costo de un error rara vez lo paga una sola persona. Esto también funciona al revés: un aviso temprano tuyo puede ahorrar la mayor parte de esos costos. En el módulo de incidentes vas a practicar justamente eso.",
+          "icono": "trending-down"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "ideas": [
+            "Un activo de información no es solo un archivo: también son los equipos, las cuentas, los permisos y lo que las personas saben.",
+            "Te buscan por lo que puedes hacer con tu acceso, no por tu cargo. Cada rol de Pehuén maneja algo que sirve para un engaño.",
+            "Priorizar ayuda: primero lo que abre muchas puertas y lo que afecta a personas, y siempre contando la causa cuando avisas."
+          ],
+          "pregunta": "Piensa en tu puesto: ¿cuáles son los tres activos de información que, si fallaran mañana, más te costaría reemplazar?",
+          "texto": "Antes de seguir, piensa en tu propio puesto de trabajo con lo que acabas de ver.",
+          "voz": "Hasta aquí aprendiste a ver tu puesto como lo vería alguien que busca una puerta de entrada. No para vivir con miedo, sino para saber qué cuidar primero. Responde la pregunta pensando en tu trabajo real, no en Pehuén. En la próxima lección vamos a ver qué significa cuidar bien esa información en un día normal, con tres palabras que vas a escuchar harto en esta ruta.",
+          "hablante": "narrador"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-CIBER-M01-L02",
+      "titulo": "Confidencialidad, integridad y disponibilidad en un día normal",
+      "resultado": "Ante situaciones cotidianas de Pehuén, distinguir si está en juego la confidencialidad, la integridad o la disponibilidad de la información, y proponer una protección proporcional que no bloquee el trabajo.",
+      "minutos": 42,
+      "fuentes": ["CIB-NISTCSF2", "CIB-INCIBE"],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M01-L02-P01",
+          "tipo": "apertura",
+          "titulo": "Tres problemas en una semana",
+          "escena": "El lunes, Camila encontró en la impresora la liquidación de un compañero y la leyó sin querer. El miércoles, Ferretería Los Aromos recibió una cotización con un precio mal escrito que alguien había cambiado en la planilla. El jueves, Javier estaba con licencia y nadie pudo abrir la planilla de pagos, porque estaba solo en su notebook.",
+          "pregunta": "¿Qué tienen en común estos tres problemas, si ninguno fue un ataque?",
+          "texto": "Ninguno de los tres fue un hackeo. Y los tres le costaron algo a Pehuén: una persona molesta, un cliente confundido y un pago atrasado.\n\nEn esta lección vas a usar tres palabras para ordenar lo que puede salir mal con la información: **confidencialidad, integridad y disponibilidad**.",
+          "voz": "Fíjate que en esta historia no hay ningún delincuente. Hay una impresora, una planilla compartida y un notebook. Mucha gente cree que la seguridad de la información se trata solo de ataques, pero buena parte de los problemas aparecen así, en el día a día, por cómo está organizado el trabajo. Las tres palabras que vas a aprender ahora sirven para nombrar qué fue lo que falló en cada caso. Y cuando sabes nombrarlo, es mucho más fácil explicarlo y proponer una solución.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG025",
+          "icono": "calendar"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P02",
+          "tipo": "pestanas",
+          "titulo": "Las tres preguntas de siempre",
+          "pestanas": [
+            { "titulo": "Confidencialidad", "icono": "eye-off", "texto": "**¿La ve solo quien debe verla?**\n\nLa información llega únicamente a las personas autorizadas. Falla cuando una liquidación queda en la impresora, cuando se reenvía una planilla de clientes a un correo personal o cuando alguien escucha datos de un cliente en el mesón." },
+            { "titulo": "Integridad", "icono": "badge-check", "texto": "**¿Está correcta y sin cambios indebidos?**\n\nLa información es exacta y solo la modifica quien debe, de forma controlada. Falla cuando alguien cambia un precio por error, cuando circulan dos versiones del stock o cuando un correo falso altera la cuenta bancaria de un proveedor." },
+            { "titulo": "Disponibilidad", "icono": "clock", "texto": "**¿Está ahí cuando se necesita?**\n\nLas personas autorizadas pueden usar la información en el momento en que la necesitan. Falla cuando un archivo vive solo en un notebook, cuando se corta internet y no hay plan B o cuando un virus bloquea la carpeta compartida." },
+            { "titulo": "Las tres juntas", "icono": "scale", "texto": "**Se equilibran entre sí.**\n\nSi encierras una planilla para que nadie la vea, quizás nadie pueda usarla cuando falte su dueño. Si todos pueden editarla, cualquiera la puede alterar. Proteger bien es encontrar el punto justo para cada información." }
+          ],
+          "voz": "Recorre las cuatro pestañas. Las tres primeras son preguntas que puedes hacerte frente a cualquier archivo o dato: quién lo ve, si está correcto y si está disponible. Vas a notar que cada una tiene ejemplos muy cotidianos de Pehuén, porque así es en la realidad. La cuarta pestaña es la más importante. Las tres cosas tiran para lados distintos, y el trabajo de cuidar la información consiste justamente en equilibrarlas. Proteger no es ponerle candado a todo.",
+          "hablante": "narrador",
+          "profundiza": "Estas tres propiedades se conocen en el mundo de la seguridad como la «tríada CID», por sus iniciales. Aparecen en prácticamente todos los marcos de gestión, incluido el marco de ciberseguridad del NIST. Algunas organizaciones agregan otras propiedades, como la autenticidad (que se pueda confiar en quién envió algo) o la trazabilidad (que se pueda saber quién hizo qué cambio y cuándo). Para tu trabajo diario, con las tres básicas alcanza. Un truco para usarlas: cuando te pidan algo que involucra información, recorre las tres preguntas en orden. ¿Quién va a ver esto? ¿Quién lo puede cambiar y cómo sabré si cambió? ¿Qué pasa si no está disponible mañana? Si alguna respuesta te incomoda, hay algo que ajustar antes de seguir. Fíjate además en que la integridad es la menos visible de las tres: una filtración se nota, un sistema caído se nota, pero un número cambiado puede pasar semanas sin que nadie lo vea.",
+          "icono": "shield-check"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P03",
+          "tipo": "clasificar",
+          "titulo": "¿Qué fue lo que falló?",
+          "consigna": "Lee cada situación de Pehuén y arrástrala a la propiedad que se vio afectada principalmente.",
+          "categorias": [
+            { "id": "confidencialidad", "nombre": "Confidencialidad", "icono": "eye-off", "descripcion": "Alguien vio o recibió información que no le correspondía." },
+            { "id": "integridad", "nombre": "Integridad", "icono": "badge-check", "descripcion": "La información quedó incorrecta o fue alterada sin control." },
+            { "id": "disponibilidad", "nombre": "Disponibilidad", "icono": "clock", "descripcion": "La información no estuvo cuando se necesitaba." }
+          ],
+          "elementos": [
+            { "texto": "Daniela comenta en voz alta, con la fila llena, cuánto le debe a Pehuén otro cliente.", "categoria": "confidencialidad", "feedback": "Un dato de un cliente llegó a oídos de personas que no tenían por qué saberlo. La confidencialidad no es solo digital: también se rompe en voz alta." },
+            { "texto": "Alguien cambia por error un precio en la planilla de cotizaciones y nadie lo nota en una semana.", "categoria": "integridad", "feedback": "La información quedó incorrecta. Fíjate en lo de «nadie lo nota»: los problemas de integridad suelen ser silenciosos." },
+            { "texto": "El día del despacho grande, la planilla de rutas está solo en el notebook de Javier, que está con licencia.", "categoria": "disponibilidad", "feedback": "La información existía y estaba correcta, pero nadie pudo usarla cuando se necesitaba. Depender de un solo equipo o de una sola persona es un riesgo de disponibilidad." },
+            { "texto": "Un correo falso logra que se registre otra cuenta bancaria para un proveedor y se paga ahí.", "categoria": "integridad", "feedback": "El dato bancario fue alterado de forma indebida. Es uno de los fraudes más caros, y empieza como un problema de integridad." },
+            { "texto": "Se corta internet en el local y no hay ninguna forma alternativa de tomar pedidos.", "categoria": "disponibilidad", "feedback": "No hay ataque ni filtración, pero el trabajo se detiene. Tener un plan B, aunque sea un formulario en papel, es parte de cuidar la disponibilidad." },
+            { "texto": "Hay dos versiones del archivo de stock y Marisol despacha con la antigua.", "categoria": "integridad", "feedback": "La información con la que se trabajó no era la correcta. Una sola versión vigente, en un lugar conocido, protege la integridad." },
+            { "texto": "La clave del Wi-Fi de la oficina queda escrita en la pizarra que ven las visitas.", "categoria": "confidencialidad", "feedback": "Un dato de acceso quedó a la vista de personas no autorizadas. Lo que pase después depende de quién la lea." },
+            { "texto": "Un programa malicioso bloquea la carpeta compartida y nadie puede abrir las guías de despacho.", "categoria": "disponibilidad", "feedback": "El efecto inmediato es que la información no se puede usar. Este tipo de ataque, a veces, también se lleva copias de los datos, así que puede afectar la confidencialidad: por eso se reporta al tiro." },
+            { "texto": "Se envía por correo la base de clientes a un proveedor de despacho que solo necesitaba las direcciones del día.", "categoria": "confidencialidad", "feedback": "El proveedor recibió más datos de los que necesitaba para su tarea. Compartir de más es una forma muy común de romper la confidencialidad." }
+          ],
+          "voz": "Ahora te toca a ti. Algunas situaciones son fáciles; otras pueden tocar más de una propiedad, y está bien que lo dudes. Elige la que se vio afectada primero o con más fuerza. Cuando veas el feedback, fíjate en el detalle: muchas veces lo que define la categoría es una palabra, como «nadie lo nota» o «solo en el notebook».",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P04",
+          "tipo": "dialogo",
+          "titulo": "La planilla que nadie más puede abrir",
+          "lineas": [
+            { "personaje": "nacho", "texto": "Javier, el jueves nadie pudo pagar a los proveedores. La planilla estaba solo en tu notebook." },
+            { "personaje": "javier", "texto": "Es que ahí están las cuentas bancarias. Si la pongo en la carpeta compartida, cualquiera la puede ver o cambiar." },
+            { "personaje": "nacho", "texto": "Entiendo, y tienes razón en cuidarla. Pero si te enfermas o se te echa a perder el notebook, Pehuén no puede pagar." },
+            { "personaje": "javier", "texto": "¿Y entonces? ¿La dejo para todos y listo?" },
+            { "personaje": "nacho", "texto": "Tampoco. Pensemos quién tiene que verla, quién tiene que cambiarla y quién la necesita si tú no estás." },
+            { "personaje": "javier", "texto": "Rodrigo aprueba los pagos. Y la Marisol a veces me pregunta si ya le pagamos a un transportista, pero no necesita ver las cuentas." }
+          ],
+          "pregunta": "¿Qué propuesta equilibra mejor confidencialidad, integridad y disponibilidad?",
+          "opciones": [
+            { "texto": "Dejar la planilla en el notebook de Javier y hacer una copia en un pendrive que él guarde en su casa.", "correcta": false, "feedback": "Se gana una copia, pero la disponibilidad sigue dependiendo de Javier, y un pendrive con cuentas bancarias fuera de la oficina agrega un riesgo de confidencialidad." },
+            { "texto": "Moverla a una carpeta de Finanzas con respaldo: Javier edita, Rodrigo puede verla y aprobar, y nadie más tiene acceso. Marisol consulta el estado de los pagos a Javier.", "correcta": true, "feedback": "Así la información está disponible aunque falte Javier, solo la modifica quien corresponde y la ven dos personas con una razón concreta. Marisol obtiene lo que necesita sin ver datos bancarios." },
+            { "texto": "Ponerla en la carpeta compartida general con una contraseña y mandar la contraseña por el chat del equipo.", "correcta": false, "feedback": "Una contraseña que conoce todo el equipo no protege mucho. Además, cualquiera con la clave podría editar las cuentas, lo que pone en riesgo la integridad." },
+            { "texto": "Imprimirla y guardarla en un cajón con llave, para no depender del computador.", "correcta": false, "feedback": "Resuelve parcialmente la disponibilidad, pero un papel se desactualiza rápido y no deja registro de cambios. Además, alguien tiene que tener la llave." }
+          ],
+          "explicacion": "La buena solución no maximiza una sola propiedad: da acceso a las personas justas, con el nivel justo, y asegura que la información siga disponible aunque falte alguien.",
+          "voz": "Esta conversación es muy común en las empresas medianas. Javier no está siendo desordenado: está protegiendo algo valioso de la única forma que se le ocurre. Y Nacho no lo está retando: le está mostrando el otro lado del problema. Antes de elegir, piensa en las tres preguntas que aprendiste. Quién necesita ver esta planilla, quién necesita cambiarla y qué pasa si Javier no está.",
+          "hablante": "narrador",
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P05",
+          "tipo": "comparacion",
+          "titulo": "Candado para todo o protección a la medida",
+          "texto": "Cuando la protección es exagerada, la gente busca atajos. Y los atajos suelen ser peores que el riesgo original.",
+          "izquierda": {
+            "titulo": "Candado para todo",
+            "icono": "lock",
+            "puntos": [
+              "Todas las carpetas cerradas; para cualquier cosa hay que pedirle acceso a Javier o a Nacho.",
+              "Como el acceso tarda, la gente se manda los archivos por WhatsApp personal.",
+              "Las claves cambian tan seguido que terminan anotadas en post-its.",
+              "Nadie sabe dónde está la versión vigente, porque cada uno guarda su copia."
+            ]
+          },
+          "derecha": {
+            "titulo": "Protección a la medida",
+            "icono": "shield-check",
+            "puntos": [
+              "Lo público está a la vista; lo interno, abierto para el equipo; lo delicado, solo para quien lo usa.",
+              "Hay un canal autorizado y cómodo para compartir, así nadie necesita inventar atajos.",
+              "Las claves se guardan en un gestor y se usa verificación en dos pasos donde importa.",
+              "Una sola versión de cada archivo, en un lugar conocido, con respaldo."
+            ]
+          },
+          "conclusion": "Proteger bien no es poner más trabas: es poner las trabas justas en el lugar correcto y dejar fácil lo que es seguro.",
+          "voz": "Yo viví el lado izquierdo. Hubo una época en que para abrir la lista de precios tenía que esperar a que alguien me diera acceso, y con el local lleno no podía esperar. ¿Qué hacíamos? Nos mandábamos la planilla por WhatsApp entre nosotras. Imagínate: queriendo cuidar la información, terminamos con copias en celulares personales. Cuando Nacho ordenó los permisos y dejó abierto lo que tenía que estar abierto, dejamos de hacer esos atajos. Ahí entendí que la seguridad tiene que ser cómoda para funcionar.",
+          "hablante": "daniela",
+          "profundiza": "Cuando una medida de seguridad hace muy difícil el trabajo, las personas encuentran formas de saltársela. A esto se le suele llamar «seguridad en la sombra»: copias personales, cuentas compartidas, aplicaciones no autorizadas. No es mala voluntad: es la respuesta lógica a un diseño que no pensó en cómo se trabaja de verdad. Por eso las buenas prácticas de seguridad hablan de proporcionalidad y de mínimo privilegio. Mínimo privilegio significa que cada persona tiene acceso a lo que necesita para su tarea, ni más ni menos. Proporcionalidad significa que el nivel de protección corresponde al valor y la sensibilidad de la información. Si en tu trabajo te encuentras usando un atajo porque el camino oficial es imposible, lo útil no es esconderlo: es contarle a tu jefatura o a TI por qué lo haces. Esa información les sirve para ajustar el diseño.",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P06",
+          "tipo": "escritorio",
+          "titulo": "Una mañana en el computador del local",
+          "consigna": "Estás en el computador del local con la sesión de Daniela. Resuelve cada misión pensando en confidencialidad, integridad y disponibilidad. No se trata de bloquearlo todo: algunas cosas hay que dejarlas fluir.",
+          "usuario": "daniela",
+          "misiones": [
+            { "id": "m1", "texto": "Responde la solicitud de Ferretería Los Aromos", "app": "correo", "elemento": "c1" },
+            { "id": "m2", "texto": "Atiende el pedido de Marisol para armar las rutas", "app": "correo", "elemento": "c2" },
+            { "id": "m3", "texto": "Revisa cómo está compartida la lista de precios", "app": "archivos", "elemento": "f1" },
+            { "id": "m4", "texto": "Decide qué hacer con la planilla de clientes del escritorio", "app": "archivos", "elemento": "f2" },
+            { "id": "m5", "texto": "Revisa la configuración de bloqueo de pantalla", "app": "configuracion", "elemento": "s1" },
+            { "id": "m6", "texto": "Responde el WhatsApp de la clienta", "app": "telefono", "elemento": "t1" },
+            { "id": "m7", "texto": "Lee el mensaje de Nacho en el chat interno", "app": "chat", "elemento": "h1" }
+          ],
+          "correo": [
+            {
+              "id": "c1",
+              "de_nombre": "Compras · Ferretería Los Aromos",
+              "de_correo": "compras@losaromos.example",
+              "para": "pedidos.local@pehuen.example",
+              "asunto": "Cotización papel fotocopia y bolsas de basura",
+              "fecha": "Martes 9:12",
+              "cuerpo": "Hola Daniela:\n\nComo todos los meses, ¿nos puedes cotizar 20 cajas de papel fotocopia tamaño carta y 15 paquetes de bolsas de basura industriales?\n\nSi pueden despachar el jueves, mejor.\n\nSaludos,\nEquipo de Compras\nFerretería Los Aromos",
+              "adjuntos": [],
+              "enlaces": [],
+              "acciones": [
+                { "id": "c1a", "texto": "Preparar la cotización en el sistema y responderle desde el correo del local.", "correcta": true, "feedback": "Es un cliente conocido, por su canal habitual, pidiendo algo normal. Responderle bien y a tiempo también es cuidar la información: la disponibilidad incluye que el negocio funcione." },
+                { "id": "c1b", "texto": "Adjuntar la planilla completa de precios con costos y márgenes para que elijan.", "correcta": false, "feedback": "La planilla con costos y márgenes es información interna. El cliente solo necesita los precios de lo que pidió." },
+                { "id": "c1c", "texto": "Reportarlo como sospechoso porque pide despacho rápido.", "correcta": false, "feedback": "No hay señales de engaño: remitente habitual, pedido coherente y nada fuera de lo normal. Pedir un despacho el jueves no es urgencia sospechosa, es comercio." }
+              ]
+            },
+            {
+              "id": "c2",
+              "de_nombre": "Marisol Fuentes",
+              "de_correo": "marisol.fuentes@pehuen.example",
+              "para": "daniela.rojas@pehuen.example",
+              "asunto": "Rutas de mañana",
+              "fecha": "Martes 9:40",
+              "cuerpo": "Dani, para armar las rutas de mañana necesito las direcciones de los clientes que retiran por despacho. ¿Me las pasas? Gracias.\n\nMarisol",
+              "adjuntos": [],
+              "enlaces": [],
+              "acciones": [
+                { "id": "c2a", "texto": "Adjuntarle la planilla completa de clientes con RUT, teléfonos, direcciones y deudas.", "correcta": false, "feedback": "Marisol necesita direcciones de los despachos de mañana, no el RUT ni las deudas de todos los clientes. Mandar de más es un problema de confidencialidad, aunque sea a una compañera." },
+                { "id": "c2b", "texto": "Compartirle desde la carpeta del local la vista de despachos de mañana, solo con nombre y dirección de entrega.", "correcta": true, "feedback": "Le das lo que necesita para su tarea, desde el lugar autorizado y sin copias sueltas por correo. Eso es mínimo privilegio en la práctica." },
+                { "id": "c2c", "texto": "Responderle que no puede ser porque son datos personales.", "correcta": false, "feedback": "Los datos personales se pueden usar para la finalidad para la que se recogieron, y despachar pedidos es justamente una de ellas. Negarlo afecta la disponibilidad y el servicio al cliente." }
+              ]
+            }
+          ],
+          "archivos": [
+            {
+              "id": "f1",
+              "nombre": "Lista_precios_publico_2026.pdf",
+              "ubicacion": "Carpeta compartida › Local › Precios",
+              "compartido": "Cualquier persona con el link · puede editar",
+              "clasificacion": "Pública",
+              "acciones": [
+                { "id": "f1a", "texto": "Dejarlo como está: es información pública.", "correcta": false, "feedback": "Que sea pública resuelve la confidencialidad, pero no la integridad. Con permiso de edición, cualquiera con el link podría cambiar precios." },
+                { "id": "f1b", "texto": "Cambiar a «Cualquier persona con el link · solo puede ver».", "correcta": true, "feedback": "Bien visto. La lista sigue disponible para los clientes, pero nadie puede alterarla desde afuera. Proteges la integridad sin quitar disponibilidad." },
+                { "id": "f1c", "texto": "Borrar el archivo para que nadie lo toque.", "correcta": false, "feedback": "Los clientes y el equipo lo usan. Borrarlo afecta la disponibilidad y obliga a buscar atajos." }
+              ]
+            },
+            {
+              "id": "f2",
+              "nombre": "Clientes_local_con_RUT.xlsx",
+              "ubicacion": "Escritorio del computador del local",
+              "compartido": "Sin respaldo · hay otra copia en el pendrive del local",
+              "clasificacion": "Confidencial",
+              "acciones": [
+                { "id": "f2a", "texto": "Moverla a la carpeta del local en la carpeta compartida, con acceso solo para el equipo del local, y borrar la copia del pendrive.", "correcta": true, "feedback": "Así queda una sola versión, con respaldo y con acceso limitado. Resuelves de una vez integridad, disponibilidad y confidencialidad." },
+                { "id": "f2b", "texto": "Dejarla en el escritorio, que es más rápido para abrirla.", "correcta": false, "feedback": "Es cómodo, pero si se echa a perder el computador se pierde. Y las dos copias, la del escritorio y la del pendrive, terminan siendo distintas." },
+                { "id": "f2c", "texto": "Mandársela a tu correo personal para tener un respaldo.", "correcta": false, "feedback": "Un respaldo fuera de los sistemas de la empresa saca datos personales de clientes de su lugar protegido. El respaldo lo da la carpeta compartida, no tu correo." }
+              ]
+            }
+          ],
+          "configuracion": [
+            {
+              "id": "s1",
+              "titulo": "Bloqueo automático de pantalla",
+              "estado": "Nunca",
+              "acciones": [
+                { "id": "s1a", "texto": "Dejarlo en «Nunca»: atiendo público y me molesta tener que desbloquear.", "correcta": false, "feedback": "Es justamente en un local con público donde más importa: cuando sales a buscar un pedido, cualquier persona del otro lado del mesón queda frente a una sesión abierta." },
+                { "id": "s1b", "texto": "Cambiarlo a 5 minutos y además bloquear a mano cada vez que te alejas del mesón.", "correcta": true, "feedback": "El bloqueo automático es la red de seguridad; el hábito de bloquear al levantarte es la protección principal. Las dos cosas juntas funcionan bien." },
+                { "id": "s1c", "texto": "Cambiarlo a 2 horas, para que no interrumpa.", "correcta": false, "feedback": "Dos horas es casi lo mismo que nunca. El tiempo debe ser corto para que sirva de algo." }
+              ]
+            }
+          ],
+          "telefono": [
+            {
+              "id": "t1",
+              "tipo": "whatsapp",
+              "remitente": "Sra. Inés · clienta frecuente",
+              "texto": "Hola Daniela, ¿me puedes decir si mi vecino del 12, don Raúl, ya retiró su pedido? Es que se lo voy a ir a dejar yo, ¿me das su dirección nueva?",
+              "hora": "10:05",
+              "acciones": [
+                { "id": "t1a", "texto": "Darle la información: es una clienta conocida y quiere ayudar.", "correcta": false, "feedback": "Su intención puede ser buena, pero los datos de don Raúl son de él. La confianza en la persona no cambia a quién le pertenece la información." },
+                { "id": "t1b", "texto": "Responderle con amabilidad que no puedes compartir datos de otro cliente y ofrecer que don Raúl te escriba para autorizar el retiro.", "correcta": true, "feedback": "Proteges la confidencialidad sin cortar el servicio: ofreces un camino que respeta a ambos clientes." },
+                { "id": "t1c", "texto": "No responderle.", "correcta": false, "feedback": "Ignorarla no protege más y deja a una clienta sin respuesta. Siempre se puede decir que no con amabilidad y ofrecer una alternativa." }
+              ]
+            }
+          ],
+          "chat": [
+            {
+              "id": "h1",
+              "de": "Nacho Pérez · Soporte TI",
+              "texto": "Dani, mañana a las 8:30 voy a reiniciar el computador del local por actualizaciones. Guarda lo que tengas abierto antes de irte hoy. Gracias.",
+              "hora": "11:20",
+              "acciones": [
+                { "id": "h1a", "texto": "Responderle que ok y guardar los archivos antes de irte.", "correcta": true, "feedback": "Es un aviso coherente, por el canal interno habitual, sin links ni solicitudes de claves. Actualizar los equipos es parte de cuidar la disponibilidad y la seguridad." },
+                { "id": "h1b", "texto": "Reportarlo como sospechoso, por si acaso.", "correcta": false, "feedback": "No todo mensaje de TI es sospechoso. Este no pide nada riesgoso ni usa un canal raro. Desconfiar de todo agota y hace que los avisos de verdad pierdan peso." },
+                { "id": "h1c", "texto": "Pedirle que no lo reinicie porque mañana hay mucho público.", "correcta": false, "feedback": "Es razonable conversar el horario, pero no evitar la actualización. Si 8:30 complica, puedes proponer otra hora, no saltarte el cambio." }
+              ]
+            }
+          ],
+          "voz": "Este es el computador del local en una mañana normal. Hay de todo: un cliente, una compañera, un archivo mal guardado, una configuración y un aviso de TI. No todo es un problema y no todo se resuelve cerrando. Para cada misión, recorre las tres preguntas: quién ve esto, quién lo puede cambiar y qué pasa si no está disponible. Si te equivocas, lee el feedback con calma y vuelve a intentar.",
+          "hablante": "narrador",
+          "practica_formativa": true,
+          "icono": "laptop"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P07",
+          "tipo": "quiz",
+          "titulo": "Chequeo rápido: el punto justo",
+          "preguntas": [
+            {
+              "enunciado": "Héctor tiene en su celular personal fotos de las fichas de mantención de las máquinas, para revisarlas en terreno. ¿Qué es lo más razonable?",
+              "opciones": [
+                { "texto": "Que las borre y vuelva a la carpeta de papel.", "correcta": false, "feedback": "La necesidad de Héctor es real: consultar fichas en terreno. Quitarle la herramienta sin alternativa lo empuja a otro atajo." },
+                { "texto": "Que converse con Nacho para tener acceso a esas fichas desde un equipo o aplicación autorizada, y entonces borre las fotos del celular personal.", "correcta": true, "feedback": "Se mantiene la disponibilidad que Héctor necesita, pero en un lugar con control y respaldo. Las fichas no son muy sensibles, pero ordenar el canal evita que luego se mezclen con información que sí lo es." },
+                { "texto": "Nada: las fichas de mantención no le interesan a nadie.", "correcta": false, "feedback": "Probablemente no son muy sensibles, pero conviene que la información de la empresa viva en lugares de la empresa, con respaldo y versión vigente." }
+              ]
+            },
+            {
+              "enunciado": "Javier descubre que en la planilla de proveedores alguien cambió el teléfono de contacto de Embalajes del Litoral y no sabe quién fue. ¿Qué propiedad está en juego y qué hace?",
+              "opciones": [
+                { "texto": "Integridad. No usa ese teléfono hasta confirmarlo con el dato registrado de antes, y avisa a Nacho para revisar quién hizo el cambio.", "correcta": true, "feedback": "Un dato de contacto alterado sin explicación es una señal de alerta: podría preparar un fraude. Usar el dato anterior confiable y avisar es lo prudente." },
+                { "texto": "Confidencialidad. Cambia la contraseña de la planilla.", "correcta": false, "feedback": "Nadie vio algo que no debía: alguien cambió un dato. Cambiar la clave puede ayudar después, pero primero hay que no usar el dato dudoso y averiguar qué pasó." },
+                { "texto": "Disponibilidad. Llama al nuevo número para preguntar si es el correcto.", "correcta": false, "feedback": "Llamar al número sospechoso para confirmar si es real es justamente lo que alguien que lo cambió esperaría. Verifica con un dato que ya conocías." }
+              ]
+            },
+            {
+              "enunciado": "Marisol propone que la planilla de stock la editen las 14 personas de bodega «para que todos la tengan al día». ¿Qué le dirías?",
+              "opciones": [
+                { "texto": "Que está perfecto: así hay más disponibilidad.", "correcta": false, "feedback": "Más gente editando aumenta el riesgo de errores y versiones cruzadas. La disponibilidad se logra dejando que todos vean, no que todos editen." },
+                { "texto": "Que todos puedan verla, que editen dos o tres personas responsables de registrar movimientos, y que quede el historial de cambios activado.", "correcta": true, "feedback": "Todos tienen la información al día, pero los cambios los hacen pocas personas y quedan registrados. Se equilibran integridad y disponibilidad." },
+                { "texto": "Que solo la vea ella, y que el resto le pregunte.", "correcta": false, "feedback": "Eso convierte a Marisol en un cuello de botella. Cuando no esté, nadie sabrá qué hay en bodega." }
+              ]
+            },
+            {
+              "enunciado": "Rodrigo pide que la base de clientes quede en un pendrive «por si se cae internet». ¿Cuál es la mejor respuesta?",
+              "opciones": [
+                { "texto": "Proponer que Nacho revise un respaldo autorizado y cifrado, y un plan alternativo para tomar pedidos sin conexión, en vez de un pendrive suelto.", "correcta": true, "feedback": "La preocupación de Rodrigo es legítima: es disponibilidad. La respuesta es un respaldo controlado, no una copia que se puede perder en una mochila." },
+                { "texto": "Hacerlo: lo pidió el gerente.", "correcta": false, "feedback": "Que lo pida la jefatura no cambia el riesgo. Un pendrive con datos de clientes se pierde fácil y no tiene control de acceso. Se puede atender su necesidad de otra forma." },
+                { "texto": "Decirle que no se puede, porque los pendrives están prohibidos.", "correcta": false, "feedback": "Cerrar la conversación deja sin resolver lo que le preocupa. Mejor ofrecer una alternativa que cumpla su objetivo." }
+              ]
+            }
+          ],
+          "voz": "Cuatro situaciones cortas para practicar el equilibrio. En ninguna hay un villano: hay personas de Pehuén con necesidades reales. Fíjate en que la mejor respuesta casi nunca es «sí a todo» ni «no a todo». Es entender qué necesita la persona y darle un camino que cuide la información al mismo tiempo.",
+          "hablante": "narrador",
+          "icono": "clipboard-check"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "ideas": [
+            "Confidencialidad: que la información la vea solo quien debe. Integridad: que esté correcta y sin cambios indebidos. Disponibilidad: que esté cuando se necesita.",
+            "Las tres se equilibran. Encerrar todo afecta la disponibilidad; abrir todo pone en riesgo la confidencialidad y la integridad.",
+            "Cuando la protección es incómoda, aparecen los atajos. Lo útil es contar por qué ocurren para ajustar el diseño."
+          ],
+          "pregunta": "¿Qué archivo de tu trabajo depende hoy de una sola persona o de un solo equipo, y qué pasaría si esa persona faltara una semana?",
+          "texto": "Cierra la lección mirando tu propio trabajo con las tres preguntas.",
+          "voz": "Ya tienes las tres preguntas que vas a usar en el resto de la ruta: quién ve, si está correcto y si está disponible. Te propongo que esta semana se las hagas a un solo archivo de tu trabajo, el que más usas. Muchas veces la respuesta revela algo que nadie había mirado. En la próxima lección vamos a meternos en un tipo de información que merece un cuidado especial: los datos de las personas.",
+          "hablante": "narrador"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-CIBER-M01-L03",
+      "titulo": "Datos personales y responsabilidades según tu rol",
+      "resultado": "Ante información de clientes, trabajadores y proveedores, reconocer datos personales y sensibles, aplicar los principios básicos de la Ley 21.719 al recogerlos, usarlos, compartirlos y eliminarlos, y distinguir qué le corresponde decidir a cada rol.",
+      "minutos": 42,
+      "fuentes": ["CIB-LEY21719", "CIB-NISTCSF2", "CIB-INCIBE"],
+      "pantallas": [
+        {
+          "id": "SEG360-CIBER-M01-L03-P01",
+          "tipo": "apertura",
+          "titulo": "«Quiero que me borren de su lista»",
+          "escena": "Daniela sube a la oficina con un papel en la mano. En el local, un cliente le reclamó porque recibe mensajes de promociones de Pehuén que nunca pidió, y le exigió que lo borren de todas partes. Daniela no sabe si puede borrarlo ella misma de la planilla, si tiene que preguntarle a alguien o si hay datos que no se pueden borrar.",
+          "pregunta": "¿Quién decide qué se hace con los datos de ese cliente: Daniela, Pehuén o el propio cliente?",
+          "texto": "El cliente tiene razón en preguntar. Daniela tiene razón en dudar.\n\nEn esta lección vas a ver qué es un **dato personal**, qué cambia con la Ley 21.719 de protección de datos personales y qué le toca a cada rol cuando una persona pregunta por su información.",
+          "voz": "Esto me pasó a mí. El caballero estaba molesto, con justa razón: le llegaban mensajes de ofertas todas las semanas y él nunca los había pedido. Yo tenía la planilla abierta y lo primero que pensé fue borrar su fila y listo. Pero después me quedé pensando: ¿y si tiene facturas o un despacho en curso? ¿Y si lo borro yo y en otra planilla sigue apareciendo? Ahí me di cuenta de que no tenía idea de cómo se hacía bien. Por eso subí a la oficina.",
+          "hablante": "daniela",
+          "imagen": "SEG360-IMG025",
+          "icono": "user-x"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P02",
+          "tipo": "explicacion",
+          "titulo": "Qué es un dato personal",
+          "texto": "Un **dato personal** es cualquier información que identifica a una persona natural o que permite identificarla: nombre, RUT, teléfono, correo, dirección, patente de su auto, su imagen en una cámara.\n\nAlgunos datos son **sensibles**, porque su mal uso puede generar discriminación o daño grave: salud, datos biométricos como la huella, afiliación sindical, creencias religiosas u orientación sexual, entre otros. Esos piden un cuidado mayor.",
+          "bloques": [
+            { "icono": "user", "titulo": "De clientes", "texto": "Nombre, teléfono, dirección de despacho, historial de pedidos, RUT de la persona." },
+            { "icono": "users", "titulo": "De compañeros", "texto": "Liquidaciones, licencias médicas, huella del reloj control, contactos de emergencia." },
+            { "icono": "building-2", "titulo": "De empresas", "texto": "El RUT de una empresa no es un dato personal, pero el nombre y el celular de su contacto sí lo son." }
+          ],
+          "nota": { "tipo": "ojo", "texto": "Un dato puede no identificar a nadie por sí solo y sí hacerlo combinado con otros: «el cliente de la casa azul de la esquina que retira los martes» identifica a una persona." },
+          "voz": "La definición es más amplia de lo que la mayoría cree. No hace falta tener el nombre completo y el RUT para que algo sea un dato personal. Una foto de la cámara del local, una patente anotada en una guía o un número de celular ya permiten llegar a una persona. Fíjate también en la diferencia con las empresas: Ferretería Los Aromos, como empresa, no tiene datos personales. Pero la persona de compras que te escribe todos los meses sí, y su nombre y su correo merecen el mismo cuidado que los de cualquier cliente.",
+          "hablante": "narrador",
+          "profundiza": "La ley chilena distingue entre el titular de los datos, que es la persona a quien se refieren, y quien los trata, que en tu caso es Pehuén como empresa. Tratar datos incluye casi cualquier cosa que se haga con ellos: recogerlos, registrarlos, guardarlos, consultarlos, modificarlos, compartirlos o eliminarlos. Por eso, aunque tú solo «mires» una planilla, ya estás participando de un tratamiento de datos que la empresa debe hacer de forma correcta. Los datos sensibles tienen reglas más exigentes, y en general solo se pueden tratar en casos específicos que la ley contempla, como el consentimiento de la persona o el cumplimiento de obligaciones laborales. En una empresa como Pehuén, los datos sensibles más habituales están en remuneraciones y personas: licencias médicas, información de salud para adecuar un puesto, afiliación sindical o datos biométricos del reloj control. Si tu trabajo toca alguno de estos, conviene que preguntes a tu jefatura cuáles son las reglas internas para manejarlos.",
+          "icono": "fingerprint"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P03",
+          "tipo": "explicacion",
+          "titulo": "La Ley 21.719, en simple",
+          "texto": "La **Ley 21.719** de protección de datos personales se publicó en diciembre de 2024 y entra en plena vigencia el **1 de diciembre de 2026**. Moderniza las reglas en Chile y crea una autoridad especializada que fiscaliza su cumplimiento.\n\nPara tu trabajo, lo central son algunos principios y los derechos de las personas:",
+          "bloques": [
+            { "icono": "scale", "titulo": "Licitud", "texto": "Los datos se tratan con una base válida, como el consentimiento, un contrato o una obligación legal." },
+            { "icono": "route", "titulo": "Finalidad", "texto": "Se usan para el propósito para el que se recogieron, no para otra cosa." },
+            { "icono": "gauge", "titulo": "Proporcionalidad", "texto": "Solo los datos necesarios, solo el tiempo necesario." },
+            { "icono": "lock", "titulo": "Seguridad", "texto": "Se protegen con medidas adecuadas contra pérdida, filtración o alteración." }
+          ],
+          "nota": { "tipo": "norma", "texto": "Las personas titulares pueden, entre otros derechos, acceder a sus datos, pedir que se corrijan, que se eliminen u oponerse a ciertos usos. La empresa debe tener un procedimiento para responder." },
+          "voz": "No necesitas saberte la ley de memoria; para eso están las personas que asesoran a la empresa. Lo que sí te sirve es entender su lógica, porque es bastante de sentido común. Si un cliente te dio su dirección para recibir un despacho, esa dirección es para despachar, no para mandarle promociones ni para pasársela a otro. Si para entregar un pedido basta con el nombre y la dirección, no hace falta pedirle el RUT. Y si los datos ya no se necesitan, no tienen por qué quedarse guardados para siempre en tres planillas distintas.",
+          "hablante": "narrador",
+          "profundiza": "La Ley 21.719 actualiza a fondo la normativa chilena anterior sobre protección de datos personales y la acerca a estándares internacionales. Además de los principios de licitud, finalidad, proporcionalidad y seguridad, la ley considera otros, como la calidad de los datos, la responsabilidad de quien los trata, la transparencia y la confidencialidad. También crea la Agencia de Protección de Datos Personales, que puede fiscalizar y sancionar. Para una empresa como Pehuén, esto se traduce en tareas concretas que normalmente lidera la gerencia con apoyo especializado: saber qué datos tiene y para qué, informar a las personas cómo se usan, definir quién accede a qué, tener medidas de seguridad, responder las solicitudes de los titulares y gestionar los incidentes que afecten datos personales. Tu parte no es interpretar la ley, sino aplicar en tu tarea lo que la empresa defina y avisar cuando algo no calza. Si tienes dudas sobre un caso concreto, la respuesta correcta es preguntar a quien la empresa designe, no adivinar.",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P04",
+          "tipo": "proceso",
+          "titulo": "La vida de un dato en Pehuén",
+          "texto": "Cada dato personal pasa por etapas. En cada una puedes aplicar los principios con una pregunta simple.",
+          "pasos": [
+            { "titulo": "Recoger", "icono": "clipboard-list", "texto": "¿Lo necesito para esta tarea? Para un despacho bastan nombre, dirección y un teléfono de contacto. Si la persona pregunta para qué lo pides, tienes que poder explicarlo." },
+            { "titulo": "Usar", "icono": "route", "texto": "¿Lo estoy usando para lo que se pidió? El teléfono que se dio para coordinar un retiro no se usa para promociones sin autorización." },
+            { "titulo": "Guardar", "icono": "folder-lock", "texto": "¿Está en un lugar autorizado, con acceso limitado y respaldo? No en el escritorio del computador, en un pendrive ni en el celular personal." },
+            { "titulo": "Compartir", "icono": "share-2", "texto": "¿Quien lo recibe lo necesita, y lo mando por un canal adecuado? Al transportista, la dirección del día; no la base completa." },
+            { "titulo": "Eliminar", "icono": "trash-2", "texto": "¿Sigue siendo necesario? Cuando no, se elimina según lo que defina la empresa: papeles al triturador, archivos de forma segura, sin copias olvidadas." }
+          ],
+          "voz": "Este recorrido te sirve para cualquier dato, sea de un cliente o de un compañero. La mayoría de los problemas aparece en las etapas del medio: datos que se usan para algo distinto a lo que se pidió, o que se guardan en lugares cómodos pero inseguros. Y hay una etapa que casi todos olvidamos: eliminar. Una planilla vieja con datos de clientes de hace cinco años no le sirve a nadie en Pehuén, pero le puede servir mucho a alguien de afuera.",
+          "hablante": "narrador",
+          "profundiza": "En la etapa de eliminación hay matices importantes. Algunos datos no se pueden eliminar de inmediato, porque hay obligaciones legales de conservarlos por un tiempo: por ejemplo, los documentos tributarios o la información laboral. Por eso, cuando una persona pide que se eliminen sus datos, la empresa revisa qué puede eliminar, qué debe bloquear o dejar de usar y qué debe conservar por obligación, y se lo explica a la persona. Esa revisión no la hace cada trabajador por su cuenta: la hace quien la empresa haya designado para atender estas solicitudes. Lo que sí está en tus manos es no generar copias innecesarias. Cada copia de una planilla en un correo, un pendrive o un celular es un lugar más donde ese dato tendrá que encontrarse y eliminarse algún día. Menos copias significa menos riesgo y menos trabajo.",
+          "icono": "refresh-cw"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P05",
+          "tipo": "clasificar",
+          "titulo": "¿Personal, sensible o ninguno?",
+          "consigna": "Clasifica cada información que circula en Pehuén según el tipo de dato.",
+          "categorias": [
+            { "id": "personal", "nombre": "Dato personal", "icono": "user", "descripcion": "Identifica o permite identificar a una persona natural." },
+            { "id": "sensible", "nombre": "Dato sensible", "icono": "fingerprint", "descripcion": "Dato personal que, mal usado, puede causar discriminación o daño grave." },
+            { "id": "no_personal", "nombre": "No es dato personal", "icono": "file-text", "descripcion": "No permite identificar a una persona natural." }
+          ],
+          "elementos": [
+            { "texto": "Nombre y celular de la clienta que retira pedidos en el local.", "categoria": "personal", "feedback": "Identifican directamente a una persona. Se usan para coordinar sus pedidos, no para otra cosa." },
+            { "texto": "RUT y razón social de Ferretería Los Aromos.", "categoria": "no_personal", "feedback": "Son datos de una empresa, no de una persona natural. Ojo: el nombre y el correo de su encargada de compras sí son datos personales." },
+            { "texto": "La licencia médica de un trabajador de bodega.", "categoria": "sensible", "feedback": "Es información de salud. Solo la manejan las personas que gestionan remuneraciones o personas, y nunca circula por chats de equipo." },
+            { "texto": "La huella digital registrada en el reloj control.", "categoria": "sensible", "feedback": "Los datos biométricos son sensibles: no se pueden cambiar como una clave si se filtran." },
+            { "texto": "La liquidación de sueldo de Camila.", "categoria": "personal", "feedback": "Es un dato personal con información delicada, como el sueldo y los descuentos. Si incluye información de salud, esa parte es sensible. En cualquier caso, la ve solo quien corresponde." },
+            { "texto": "La patente del auto de un cliente anotada en la guía de retiro.", "categoria": "personal", "feedback": "Una patente permite identificar a una persona. No parece delicado, pero es un dato personal." },
+            { "texto": "La lista de precios del catálogo 2026.", "categoria": "no_personal", "feedback": "Es información comercial, no identifica a nadie. Se cuida su integridad, no su confidencialidad." },
+            { "texto": "La afiliación al sindicato de una persona del equipo.", "categoria": "sensible", "feedback": "La afiliación sindical es un dato sensible. Su mal uso puede llevar a discriminación." },
+            { "texto": "El total de ventas del local en septiembre.", "categoria": "no_personal", "feedback": "Es un dato del negocio, no de una persona. Puede ser confidencial para Pehuén, pero no es dato personal." },
+            { "texto": "La grabación de la cámara del local donde se ve a clientes en la fila.", "categoria": "personal", "feedback": "La imagen de una persona la identifica. Las grabaciones se guardan con acceso limitado y por un tiempo definido." }
+          ],
+          "voz": "Algunas de estas te van a parecer evidentes y otras te van a hacer dudar, y está bien. Fíjate especialmente en dos cosas: cuándo un dato es de una empresa y cuándo es de una persona, y cuándo un dato personal pasa a ser sensible. Si te equivocas, el feedback te muestra el detalle que define la categoría. Esa misma pregunta te la vas a hacer después, en tu trabajo, frente a documentos reales.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P06",
+          "tipo": "tarjetas",
+          "titulo": "Quién responde por qué",
+          "consigna": "Da vuelta cada tarjeta para ver qué le toca a cada parte en el cuidado de los datos personales en Pehuén.",
+          "tarjetas": [
+            { "frente": "La empresa", "icono": "building-2", "reverso": "Decide para qué se usan los datos, define reglas y accesos, entrega herramientas seguras, capacita y responde ante las personas y la autoridad. Es la principal responsable." },
+            { "frente": "Las jefaturas", "icono": "user-check", "reverso": "Definen qué acceso necesita cada persona de su equipo, piden quitar accesos cuando alguien cambia de función o se va, y dan el ejemplo con cómo comparten información." },
+            { "frente": "Soporte TI", "icono": "wrench", "reverso": "Configura permisos, respaldos y equipos según lo que se decida, y ayuda a detectar problemas. No decide por sí solo qué datos se recogen ni para qué." },
+            { "frente": "Los proveedores", "icono": "truck", "reverso": "Si tratan datos por encargo de Pehuén, como el transportista, deben usarlos solo para esa tarea y protegerlos según lo acordado." },
+            { "frente": "Tú", "icono": "user", "reverso": "Usas solo los datos que necesitas para tu tarea, los guardas y compartes por los canales autorizados, no haces copias personales, derivas las solicitudes de los titulares y avisas al tiro si algo se filtró o se perdió." }
+          ],
+          "voz": "Fíjate en el orden de estas tarjetas. La responsabilidad principal de proteger los datos personales es de la empresa: ella decide para qué se usan y tiene que darte las herramientas y las reglas. Eso no te deja fuera, pero cambia la pregunta. No se trata de que tú cargues sola o solo con la protección de los datos, sino de que hagas bien tu parte y avises cuando las herramientas o las reglas no alcanzan. Si en tu trabajo no sabes por dónde se comparten ciertos datos, eso no es descuido tuyo: es algo que la empresa tiene que aclarar.",
+          "hablante": "narrador",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P07",
+          "tipo": "decision",
+          "titulo": "El cliente que pidió que lo borren",
+          "situacion": "Volvamos al cliente del local. Rodrigo le confirma a Daniela que en Pehuén las solicitudes sobre datos personales las recibe y responde él, con apoyo del asesor externo, y que hay un formulario para registrarlas. El cliente está esperando en el mesón.",
+          "pregunta": "¿Qué hace Daniela?",
+          "multiple": false,
+          "opciones": [
+            { "texto": "Borra la fila del cliente en la planilla del local y le dice que ya está listo.", "correcta": false, "feedback": "Parece rápido, pero el cliente puede seguir en otras planillas o en el sistema de facturación, y hay datos que la empresa quizás deba conservar. Le estaría prometiendo algo que no puede asegurar." },
+            { "texto": "Le explica que su solicitud se va a registrar y la responderá la persona encargada, registra sus datos de contacto en el formulario y, mientras tanto, deja de enviarle promociones desde el local.", "correcta": true, "feedback": "Eso es. Acoge la solicitud, la canaliza a quien puede responderla completa y deja de hacer lo que el cliente reclamó, sin prometer lo que no le corresponde decidir." },
+            { "texto": "Le dice que eso no se puede, porque los datos son de la empresa.", "correcta": false, "feedback": "Los datos son de la persona a quien se refieren, no de la empresa. El cliente tiene derecho a pedir que se eliminen o a oponerse a ciertos usos, y Pehuén tiene que responderle." },
+            { "texto": "Le pide que mande un correo a cualquier dirección de Pehuén y que alguien le va a contestar.", "correcta": false, "feedback": "Deja al cliente sin una respuesta clara y su solicitud se puede perder. Si hay un canal definido, se usa y se registra en el momento." }
+          ],
+          "explicacion": "Ante una solicitud sobre datos personales, tu parte es acoger, registrar y derivar al canal definido. La respuesta completa la da quien la empresa designó, porque necesita revisar todos los lugares donde están los datos y qué se debe conservar.",
+          "voz": "Fíjate en lo que hace bien la empresa en esta situación: tiene una persona responsable y un formulario. Eso facilita muchísimo el trabajo de Daniela, porque ya no tiene que improvisar. Ahora piensa qué necesita el cliente en ese momento. Necesita que lo tomen en serio, que le digan qué va a pasar y que dejen de mandarle mensajes. Todo eso Daniela lo puede dar, sin borrar nada por su cuenta.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "user-check"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P08",
+          "tipo": "reflexion",
+          "titulo": "Los datos que pasan por tus manos",
+          "pregunta": "¿Qué datos personales de clientes, compañeros o proveedores manejas en una semana normal? ¿Hay alguno que estés guardando en más lugares o por más tiempo del necesario?",
+          "ayuda": "Piensa en tu correo, tus planillas, tu celular, los papeles de tu escritorio y los grupos de mensajería. Anota al menos un dato que podrías dejar de copiar o eliminar de forma segura, y a quién le preguntarías cómo hacerlo.",
+          "texto": "Esta reflexión queda guardada para ti. Sé concreto: no hace falta que sea larga, sí que sea real.",
+          "voz": "Cuando hice este ejercicio me llevé una sorpresa. Tenía fotos de guías de despacho en mi celular personal, con nombres y direcciones de clientes, de hace más de un año. Las había sacado para no tener que bajar a buscar el papel. Nadie me las pidió y nunca las volví a mirar. No era mala intención, era costumbre. Revisa tu propio caso con calma: lo más probable es que encuentres algo así, y es justamente lo que vale la pena ordenar.",
+          "hablante": "daniela",
+          "icono": "pen-line"
+        },
+        {
+          "id": "SEG360-CIBER-M01-L03-P09",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "ideas": [
+            "Un dato personal es cualquier información que identifica a una persona natural o permite identificarla; los sensibles, como salud o biometría, piden más cuidado.",
+            "La Ley 21.719 pide usar los datos con una base válida, para su finalidad, solo los necesarios y con seguridad. Las personas pueden pedir acceso, corrección o eliminación.",
+            "La empresa es la principal responsable. Tu parte es usar lo justo, por canales autorizados, derivar las solicitudes y avisar a tiempo."
+          ],
+          "pregunta": "Si mañana un cliente o un compañero te pregunta qué datos suyos tiene la empresa, ¿sabes a quién derivarlo?",
+          "texto": "Antes del laboratorio, revisa si conoces el canal de tu propia empresa.",
+          "voz": "Con esto cierras la parte conceptual del módulo. Ya sabes qué es un activo, qué significan confidencialidad, integridad y disponibilidad, y qué hace distinto a un dato personal. Si no supiste responder la pregunta de esta pantalla, no te preocupes: es muy común. Anótala y pregúntala en tu trabajo. Ahora viene el laboratorio, donde vas a ayudar a ordenar la carpeta compartida de Pehuén.",
+          "hablante": "narrador"
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-CIBER-M01-LAB",
+    "titulo": "Laboratorio: ordenar la carpeta compartida de Pehuén",
+    "resultado": "Ante la carpeta compartida de Pehuén, clasificar documentos según su sensibilidad y su contenido de datos personales, corregir accesos excesivos o insuficientes y elegir canales proporcionales para compartirlos.",
+    "minutos": 50,
+    "fuentes": ["CIB-LEY21719", "CIB-NISTCSF2", "CIB-INCIBE"],
+    "pantallas": [
+      {
+        "id": "SEG360-CIBER-M01-LAB-P01",
+        "tipo": "apertura",
+        "titulo": "La carpeta donde hay de todo",
+        "escena": "Rodrigo le pide a Javier que, junto con Nacho, ordene la carpeta compartida «Pehuén_General». Ahí conviven el catálogo, las liquidaciones de septiembre, el contrato con Embalajes del Litoral, la base de clientes del local, las fotos del aniversario y un archivo de texto con la clave del router. Todo el personal puede abrir todo, y un par de archivos tienen un link público.",
+        "pregunta": "¿Por dónde empezarías a ordenar sin dejar a nadie sin poder trabajar el lunes?",
+        "texto": "En este laboratorio vas a hacer el trabajo completo: **clasificar** cada documento, **ajustar quién puede verlo o editarlo** y **resolver solicitudes reales** en el computador de Javier.\n\nNo hay una sola forma correcta de ordenar una carpeta, pero sí hay decisiones que protegen mejor que otras. En cada paso tendrás feedback para ajustar.",
+        "voz": "Casi todas las empresas tienen una carpeta así. Empezó ordenada, con dos o tres archivos, y con los años se fue llenando de todo. Nadie la desordenó a propósito: simplemente nunca hubo tiempo para revisarla. El desafío aquí no es solo esconder lo delicado. Es que cada persona encuentre lo que necesita, que lo delicado quede en manos de quien corresponde y que nadie tenga que inventar atajos. Vas a trabajar con Javier y con Nacho, paso a paso.",
+        "hablante": "narrador",
+        "imagen": "SEG360-IMG027",
+        "icono": "folder-open"
+      },
+      {
+        "id": "SEG360-CIBER-M01-LAB-P02",
+        "tipo": "explicacion",
+        "titulo": "Cuatro niveles y sus canales",
+        "texto": "Pehuén acordó **cuatro niveles** para clasificar su información. Cada nivel indica quién puede acceder y por qué canal se comparte.",
+        "bloques": [
+          { "icono": "megaphone", "titulo": "Pública", "texto": "Hecha para circular afuera: catálogo, horarios del local. Se comparte con link de solo lectura. Se cuida que nadie la altere." },
+          { "icono": "users", "titulo": "Interna", "texto": "Para el personal de Pehuén: procedimientos, turnos, fotos de actividades internas. Se comparte en la carpeta del equipo, no hacia afuera." },
+          { "icono": "folder-lock", "titulo": "Confidencial", "texto": "Para quienes la necesitan en su tarea: base de clientes, cotizaciones, contratos. Acceso con nombre y apellido, en la carpeta del área o por correo corporativo." },
+          { "icono": "lock", "titulo": "Restringida", "texto": "Para muy pocas personas: liquidaciones, licencias médicas, datos bancarios, claves. Carpeta con acceso nominativo y registro. Nunca por chat ni a correos personales." }
+        ],
+        "nota": { "tipo": "terreno", "texto": "Un buen criterio cuando dudes entre dos niveles: elige el más protector y pregunta. Es más fácil abrir después un acceso que recuperar un dato que ya salió." },
+        "voz": "Cada empresa define sus propios niveles, y no siempre con estos nombres. Lo importante es la idea: no toda la información pesa lo mismo, y el canal que usas para moverla tiene que estar a la altura. Un catálogo puede ir por WhatsApp sin problema. Una liquidación, nunca. Fíjate en que los niveles dicen dos cosas a la vez: quién puede ver y por dónde se comparte. Y fíjate también en que todo lo que lleva datos sensibles, cuentas bancarias o claves va al nivel más alto.",
+        "hablante": "narrador",
+        "profundiza": "Clasificar la información es asignarle un nivel según el daño que causaría si se filtrara, se alterara o no estuviera disponible. Lo normal es que la empresa defina los niveles en una política y que cada dueño de la información, por ejemplo la jefatura del área, decida el nivel de sus documentos. En la práctica, conviene que la clasificación sea simple: con cuatro niveles la gente la usa; con diez, nadie. Además, el nivel no lo da el tipo de archivo, sino su contenido: una planilla puede ser pública o restringida según lo que tenga adentro. Por eso hay que mirar el contenido antes de compartir. Un último punto: la clasificación no es para siempre. Una cotización es confidencial mientras se negocia, y quizás deje de serlo un año después. Una base de clientes, en cambio, sigue siendo confidencial mientras exista. Revisar de vez en cuando la carpeta, como en este laboratorio, es parte del trabajo.",
+        "icono": "layers"
+      },
+      {
+        "id": "SEG360-CIBER-M01-LAB-P03",
+        "tipo": "clasificar",
+        "titulo": "Clasifica los documentos de la carpeta",
+        "consigna": "Estos son los archivos que hoy están en «Pehuén_General». Asigna a cada uno el nivel que le corresponde según su contenido.",
+        "categorias": [
+          { "id": "publica", "nombre": "Pública", "icono": "megaphone", "descripcion": "Puede circular fuera de Pehuén." },
+          { "id": "interna", "nombre": "Interna", "icono": "users", "descripcion": "Solo para el personal de Pehuén." },
+          { "id": "confidencial", "nombre": "Confidencial", "icono": "folder-lock", "descripcion": "Solo para quienes la necesitan en su tarea." },
+          { "id": "restringida", "nombre": "Restringida", "icono": "lock", "descripcion": "Muy pocas personas, con acceso nominativo y registro." }
+        ],
+        "elementos": [
+          { "texto": "Catalogo_productos_2026.pdf", "categoria": "publica", "feedback": "Está hecho para los clientes. Lo que se cuida es que nadie pueda editarlo." },
+          { "texto": "Procedimiento_despacho_v3.docx", "categoria": "interna", "feedback": "Lo usa el personal y no tiene datos personales ni financieros. No está pensado para afuera, porque describe cómo opera la bodega." },
+          { "texto": "Fotos_aniversario_Pehuen.zip", "categoria": "interna", "feedback": "Muestran a personas del equipo. Compartirlas fuera de Pehuén requiere que esas personas estén de acuerdo. Dentro de la empresa, no hay problema." },
+          { "texto": "Cotizacion_Los_Aromos_octubre.pdf", "categoria": "confidencial", "feedback": "Tiene precios negociados con un cliente. Si la ve otro cliente o un competidor, Pehuén pierde en la negociación." },
+          { "texto": "Base_clientes_local.xlsx (nombres, RUT, teléfonos, direcciones)", "categoria": "confidencial", "feedback": "Son datos personales de clientes. Solo para el equipo del local y despacho, con acceso nominativo." },
+          { "texto": "Contrato_Embalajes_del_Litoral.pdf", "categoria": "confidencial", "feedback": "Tiene condiciones comerciales y datos de las partes. Lo necesitan administración y gerencia." },
+          { "texto": "Liquidaciones_septiembre.zip", "categoria": "restringida", "feedback": "Datos personales y de remuneraciones de todo el equipo, a veces con información de salud, como descuentos por licencia. Solo quien gestiona remuneraciones y gerencia." },
+          { "texto": "Licencias_medicas_2026.xlsx", "categoria": "restringida", "feedback": "Datos de salud: sensibles. Su lugar es una carpeta restringida, nunca la carpeta general." },
+          { "texto": "Datos_bancarios_proveedores.xlsx", "categoria": "restringida", "feedback": "Un cambio indebido aquí se traduce en pagos desviados. La integridad es crítica: pocas personas, con registro de cambios." },
+          { "texto": "Clave_wifi_y_router.txt", "categoria": "restringida", "feedback": "Una clave no debería vivir en un archivo de texto en una carpeta compartida. Corresponde a TI y su lugar es un gestor de contraseñas." }
+        ],
+        "voz": "Mira el contenido, no el nombre del archivo ni su formato. Pregúntate qué pasaría si este archivo llegara a la persona equivocada, si alguien lo cambiara sin permiso o si desapareciera mañana. Cuando dudes entre dos niveles, recuerda la regla de terreno: elige el más protector y pregunta. Y fíjate en las fotos del aniversario: no tienen nada de secreto, pero sí muestran a personas.",
+        "hablante": "narrador",
+        "practica_formativa": false,
+        "icono": "layers"
+      },
+      {
+        "id": "SEG360-CIBER-M01-LAB-P04",
+        "tipo": "permisos",
+        "titulo": "Ajusta quién puede ver y editar",
+        "consigna": "Para cada archivo, elige la forma de compartir que corresponde a su nivel y a quién lo necesita de verdad. Ojo: también hay accesos que están demasiado cerrados.",
+        "archivos": [
+          {
+            "id": "a1",
+            "nombre": "Base_clientes_local.xlsx",
+            "icono": "file-spreadsheet",
+            "contexto": "La usan Daniela y el equipo del local para coordinar retiros, y Marisol para armar rutas. Hace un mes alguien pegó el link en un grupo de WhatsApp de despacho donde también hay choferes externos.",
+            "actual": "Cualquier persona con el link · puede ver",
+            "opciones": [
+              { "texto": "Dejarlo así, porque solo pueden ver y no editar.", "correcta": false, "feedback": "Ver ya es un problema: el link circula en un grupo con externos. Para datos personales de clientes, «solo ver» no basta si cualquiera puede abrirlo." },
+              { "texto": "Quitar el link público y dar acceso con nombre al equipo del local (edición) y a Marisol (solo lectura). A los choferes, solo la hoja de rutas del día.", "correcta": true, "feedback": "Cada persona tiene lo que necesita, con su nombre, y el link que circulaba deja de funcionar. Los choferes reciben solo las direcciones del día, no la base completa." },
+              { "texto": "Borrar el archivo y pedir que cada uno anote sus clientes por su cuenta.", "correcta": false, "feedback": "Eso multiplica las copias y deja sin una versión confiable. El problema no es el archivo, es cómo está compartido." }
+            ]
+          },
+          {
+            "id": "a2",
+            "nombre": "Liquidaciones_septiembre.zip",
+            "icono": "file-lock",
+            "contexto": "Las prepara Javier. Rodrigo las revisa. Cada trabajador recibe la suya por separado.",
+            "actual": "Todo el personal de Pehuén · puede ver (está en la carpeta general)",
+            "opciones": [
+              { "texto": "Ponerle contraseña al archivo comprimido y mandar la contraseña por el chat general.", "correcta": false, "feedback": "Una contraseña que conoce todo el personal no protege nada. El problema sigue siendo quién tiene acceso." },
+              { "texto": "Moverlo a la carpeta «Remuneraciones», con acceso nominativo solo para Javier y Rodrigo, sin link, y entregar cada liquidación a su dueño por el canal individual.", "correcta": true, "feedback": "Así el archivo queda en manos de dos personas con una razón concreta, y cada trabajador recibe solo la suya." },
+              { "texto": "Dejarlo donde está y avisar por correo que nadie lo abra.", "correcta": false, "feedback": "Un aviso no es un control. Basta con que una persona lo abra por curiosidad para que se rompa la confidencialidad de todo el equipo." }
+            ]
+          },
+          {
+            "id": "a3",
+            "nombre": "Catalogo_productos_2026.pdf",
+            "icono": "file-text",
+            "contexto": "Daniela tiene que mandárselo a clientes varias veces al día. Hoy tiene que pedírselo a Javier cada vez.",
+            "actual": "Solo Javier · puede editar",
+            "opciones": [
+              { "texto": "Dejarlo así: más vale prevenir.", "correcta": false, "feedback": "Está demasiado cerrado. Es información pública, y tenerla bloqueada hace que Daniela termine guardando copias en su celular." },
+              { "texto": "Dar edición a todo el personal, para que cualquiera pueda actualizar precios.", "correcta": false, "feedback": "Ahora queda demasiado abierto para la integridad. Si cualquiera puede editar, cualquiera puede equivocarse con un precio." },
+              { "texto": "Javier sigue siendo el único que edita, y se crea un link de solo lectura que Daniela y los clientes pueden usar.", "correcta": true, "feedback": "Disponibilidad para quien lo necesita, integridad protegida. Daniela deja de depender de Javier para algo público." }
+            ]
+          },
+          {
+            "id": "a4",
+            "nombre": "Datos_bancarios_proveedores.xlsx",
+            "icono": "banknote",
+            "contexto": "Javier registra y paga. Rodrigo aprueba los pagos. Nadie más necesita las cuentas.",
+            "actual": "Todo el equipo de administración (5 personas) · puede editar",
+            "opciones": [
+              { "texto": "Solo Javier puede editar, Rodrigo puede ver, el historial de cambios queda activado y cada cambio de cuenta se verifica antes de registrarse.", "correcta": true, "feedback": "Así se protege la integridad: pocos editores, registro de quién cambió qué y verificación antes de tocar una cuenta. Este archivo vuelve en el próximo módulo." },
+              { "texto": "Las cinco personas pueden ver, pero solo Javier edita.", "correcta": false, "feedback": "Mejora la integridad, pero tres personas siguen viendo cuentas bancarias que no necesitan. Mínimo privilegio también aplica a la lectura." },
+              { "texto": "Dejarlo así, porque son personas de confianza.", "correcta": false, "feedback": "No se trata de desconfiar de alguien. Mientras más personas pueden editar, más cuentas hay que un atacante podría usar para cambiar un dato bancario." }
+            ]
+          },
+          {
+            "id": "a5",
+            "nombre": "Procedimiento_despacho_v3.docx",
+            "icono": "clipboard-list",
+            "contexto": "Lo escribió Marisol. El equipo de bodega lo necesita para trabajar, sobre todo las personas nuevas como Camila.",
+            "actual": "Solo Marisol · puede editar",
+            "opciones": [
+              { "texto": "Todo el equipo de bodega puede ver; Marisol sigue editando.", "correcta": true, "feedback": "Es información interna que el equipo necesita. Abrirla para lectura ayuda a que Camila y las personas nuevas trabajen mejor, sin arriesgar que cambie sin control." },
+              { "texto": "Publicarlo con link abierto para que también lo vean los choferes externos.", "correcta": false, "feedback": "Es interna: describe cómo opera la bodega. Si los choferes necesitan una parte, se les entrega esa parte." },
+              { "texto": "Dejarlo así: si alguien tiene dudas, le pregunta a Marisol.", "correcta": false, "feedback": "Un procedimiento que nadie puede leer no sirve de mucho. Y a Camila, que le cuesta preguntar, la deja sin apoyo." }
+            ]
+          }
+        ],
+        "voz": "Ahora pasas de clasificar a actuar. En cada archivo vas a ver para qué se usa, quién lo necesita y cómo está compartido hoy. Ojo, que no todos los problemas son de exceso: hay archivos que están tan cerrados que obligan a la gente a buscar atajos. La pregunta que te guía es siempre la misma: quién necesita esto para hacer su trabajo, y qué necesita, ver o editar.",
+        "hablante": "narrador",
+        "profundiza": "Al revisar permisos hay tres preguntas útiles. La primera es quién: cada acceso debería tener nombre y apellido, o un grupo bien definido, en vez de «cualquier persona con el link». La segunda es qué: ver, comentar o editar son niveles distintos, y la mayoría de las personas solo necesita ver. La tercera es hasta cuándo: los accesos a externos, como un proveedor o un asesor, deberían tener fecha de término. Los links públicos merecen atención especial, porque una vez que salen de tu control pueden reenviarse sin que lo sepas. Si encuentras uno en un archivo con datos personales, lo más importante es desactivarlo y contarlo, porque puede que la información ya haya sido vista. En el módulo de archivos compartidos y nube vas a profundizar en invitados, versiones y caducidad.",
+        "practica_formativa": false,
+        "icono": "share-2"
+      },
+      {
+        "id": "SEG360-CIBER-M01-LAB-P05",
+        "tipo": "escritorio",
+        "titulo": "Un viernes en el computador de Javier",
+        "consigna": "Ya clasificaste y ajustaste permisos. Ahora llegan las solicitudes del día. Desde el computador de Javier, resuelve cada misión eligiendo el acceso y el canal que corresponden.",
+        "usuario": "javier",
+        "misiones": [
+          { "id": "m1", "texto": "Decide qué hacer con el archivo de la clave del router", "app": "archivos", "elemento": "f1" },
+          { "id": "m2", "texto": "Revisa dónde quedaron las licencias médicas", "app": "archivos", "elemento": "f2" },
+          { "id": "m3", "texto": "Revisa cómo están compartidas las fotos del aniversario", "app": "archivos", "elemento": "f3" },
+          { "id": "m4", "texto": "Responde la solicitud de Daniela", "app": "correo", "elemento": "c1" },
+          { "id": "m5", "texto": "Responde el pedido de estado de cuenta de Ferretería Los Aromos", "app": "correo", "elemento": "c2" },
+          { "id": "m6", "texto": "Responde el mensaje de Marisol", "app": "chat", "elemento": "h1" }
+        ],
+        "archivos": [
+          {
+            "id": "f1",
+            "nombre": "Clave_wifi_y_router.txt",
+            "ubicacion": "Pehuén_General",
+            "compartido": "Todo el personal · puede ver",
+            "clasificacion": "Restringida",
+            "acciones": [
+              { "id": "f1a", "texto": "Moverlo a mi carpeta personal, para que solo yo lo vea.", "correcta": false, "feedback": "La clave ya estuvo a la vista de todo el personal, así que moverla no resuelve la exposición. Y las claves de la red no son de Javier: son de TI." },
+              { "id": "f1b", "texto": "Avisar a Nacho para que retire el archivo, cambie la clave si corresponde y la guarde en el gestor de contraseñas.", "correcta": true, "feedback": "Es lo correcto: la clave estuvo expuesta, así que hay que cambiarla, y eso le corresponde a quien administra la red. Tú detectas y avisas." },
+              { "id": "f1c", "texto": "Borrarlo y no decir nada, para no armar problema.", "correcta": false, "feedback": "Borrar el archivo no cambia la clave, que ya pudo ser copiada. Y Nacho prefiere que le avisen de más a que le avisen tarde." }
+            ]
+          },
+          {
+            "id": "f2",
+            "nombre": "Licencias_medicas_2026.xlsx",
+            "ubicacion": "Pehuén_General › Bodega",
+            "compartido": "Equipo de bodega (14 personas) · puede ver",
+            "clasificacion": "Restringida",
+            "acciones": [
+              { "id": "f2a", "texto": "Moverlo a «Remuneraciones», con acceso solo para quien gestiona licencias y gerencia, y avisar a Marisol por qué se movió.", "correcta": true, "feedback": "Son datos de salud. Quedan con las personas que los necesitan para gestionar licencias y pagos. Avisar a Marisol evita que se vuelva a subir a la carpeta de bodega." },
+              { "id": "f2b", "texto": "Dejarlo, porque a Marisol le sirve para saber quién falta.", "correcta": false, "feedback": "Marisol necesita saber quién está con licencia y hasta cuándo, no el diagnóstico ni los datos de salud de su equipo. Esa información se le puede dar sin abrir el archivo completo." },
+              { "id": "f2c", "texto": "Quitar solo la columna de diagnóstico y dejarlo donde está.", "correcta": false, "feedback": "Ayuda, pero el archivo sigue mostrando a 14 personas quién tuvo licencias y por cuánto tiempo, y quedan versiones con la columna en el historial. Se mueve completo." }
+            ]
+          },
+          {
+            "id": "f3",
+            "nombre": "Fotos_aniversario_Pehuen.zip",
+            "ubicacion": "Pehuén_General",
+            "compartido": "Cualquier persona con el link · puede ver",
+            "clasificacion": "Interna",
+            "acciones": [
+              { "id": "f3a", "texto": "Dejarlas así: son fotos de una fiesta.", "correcta": false, "feedback": "Son fotos de personas que no autorizaron que circularan fuera de la empresa. Que sea un tema alegre no cambia de quién es la imagen." },
+              { "id": "f3b", "texto": "Quitar el link público y dejarlas visibles solo para el personal de Pehuén.", "correcta": true, "feedback": "Las personas del equipo pueden verlas y descargarlas, pero ya no circulan afuera sin su acuerdo." },
+              { "id": "f3c", "texto": "Borrarlas.", "correcta": false, "feedback": "No hace falta: dentro de la empresa no son un problema. Basta con corregir cómo están compartidas." }
+            ]
+          }
+        ],
+        "correo": [
+          {
+            "id": "c1",
+            "de_nombre": "Daniela Rojas",
+            "de_correo": "daniela.rojas@pehuen.example",
+            "para": "javier.contreras@pehuen.example",
+            "asunto": "¿Me mandas la base de clientes?",
+            "fecha": "Viernes 16:40",
+            "cuerpo": "Javier, ¿me puedes mandar la base de clientes a mi correo personal (daniela.casa@correo.example)? Quiero avanzar el sábado desde la casa con los clientes que no han retirado. Gracias.\n\nDani",
+            "adjuntos": [],
+            "enlaces": [],
+            "acciones": [
+              { "id": "c1a", "texto": "Mandársela: es Daniela, y es para trabajar.", "correcta": false, "feedback": "La intención es buena, pero un correo personal no tiene los controles de la empresa, y la base terminaría fuera de Pehuén sin forma de saber quién más la ve." },
+              { "id": "c1b", "texto": "Responderle que la base no se envía a correos personales y ofrecerle la alternativa autorizada: trabajar desde el notebook de la empresa con acceso a la carpeta del local, o dejarlo para el lunes.", "correcta": true, "feedback": "Le dices que no a la forma, no a la necesidad, y le das un camino. Si el camino autorizado no existe o no funciona, eso se conversa con la jefatura." },
+              { "id": "c1c", "texto": "Mandarle solo las filas de los clientes que no han retirado, con nombre y teléfono.", "correcta": false, "feedback": "Es menos información, y eso está bien pensado, pero siguen siendo datos personales saliendo a una cuenta fuera de la empresa." }
+            ]
+          },
+          {
+            "id": "c2",
+            "de_nombre": "Compras · Ferretería Los Aromos",
+            "de_correo": "compras@losaromos.example",
+            "para": "javier.contreras@pehuen.example",
+            "asunto": "Estado de cuenta octubre",
+            "fecha": "Viernes 17:05",
+            "cuerpo": "Hola Javier:\n\n¿Nos puedes enviar el estado de cuenta de octubre para cuadrar las facturas? Lo necesitamos para el cierre del lunes.\n\nGracias,\nEquipo de Compras\nFerretería Los Aromos",
+            "adjuntos": [],
+            "enlaces": [],
+            "acciones": [
+              { "id": "c2a", "texto": "Mandarlo como adjunto, desde el correo corporativo, al contacto registrado de Ferretería Los Aromos.", "correcta": true, "feedback": "Es información confidencial del cliente, pedida por su canal habitual y enviada a su contacto registrado. Canal proporcional y destinatario correcto." },
+              { "id": "c2b", "texto": "Compartirles un link editable a la carpeta del cliente, para que se descarguen lo que quieran.", "correcta": false, "feedback": "Darles acceso a una carpeta completa, y además editable, es mucho más de lo que pidieron. Podrían ver o cambiar documentos que no les corresponden." },
+              { "id": "c2c", "texto": "Mandarlo por WhatsApp al celular que aparece en la firma, porque es más rápido.", "correcta": false, "feedback": "Este correo no trae firma con celular, y aunque la trajera, los documentos financieros de un cliente van por el canal formal y a un contacto que ya tengas registrado." }
+            ]
+          }
+        ],
+        "chat": [
+          {
+            "id": "h1",
+            "de": "Marisol Fuentes · Bodega",
+            "texto": "Javier, dame acceso a la carpeta de liquidaciones porfa. Quiero revisar si a la Camila le pagaron las horas extra de septiembre, me dijo que no le cuadra.",
+            "hora": "17:20",
+            "acciones": [
+              { "id": "h1a", "texto": "Darle acceso a la carpeta: es jefa y es por una trabajadora de su equipo.", "correcta": false, "feedback": "Su preocupación es legítima, pero con ese acceso Marisol vería las liquidaciones de todo Pehuén. Su rol necesita una respuesta sobre Camila, no la carpeta completa." },
+              { "id": "h1b", "texto": "Revisar yo las horas extra de Camila con el registro de asistencia y responderle a Marisol lo que corresponde a su rol, sin darle acceso a la carpeta.", "correcta": true, "feedback": "Se resuelve el problema de Camila, Marisol obtiene la información que necesita como jefatura y nadie ve datos que no le corresponden. Eso es mínimo privilegio con buena atención." },
+              { "id": "h1c", "texto": "Mandarle por el chat una captura de la liquidación de Camila.", "correcta": false, "feedback": "Una captura en un chat queda copiada fuera de la carpeta restringida. Y la liquidación tiene más datos de los que Marisol necesita para resolver el tema." }
+            ]
+          }
+        ],
+        "voz": "Este es el momento en que la carpeta ordenada se pone a prueba. Llegan solicitudes de compañeros y de un cliente, todas con buena intención y todas con algo de apuro, porque es viernes en la tarde. Fíjate en que casi ninguna se responde con un sí o un no a secas: se responde entendiendo qué necesita cada persona y dándole eso, por el canal que corresponde. Si te equivocas, el feedback te dice qué mirar distinto. Vuelve a intentarlo razonando.",
+        "hablante": "narrador",
+        "practica_formativa": true,
+        "icono": "laptop"
+      },
+      {
+        "id": "SEG360-CIBER-M01-LAB-P06",
+        "tipo": "checklist",
+        "titulo": "Tu propia carpeta, esta semana",
+        "consigna": "Elige las acciones que vas a hacer esta semana en tu propio trabajo. Marca solo las que de verdad puedes cumplir.",
+        "items": [
+          "Revisar los archivos que comparto y quitar los links públicos que tengan datos personales o información confidencial.",
+          "Buscar en mi celular y en mi correo copias de planillas o fotos de documentos con datos de clientes o compañeros, y eliminarlas si no las necesito.",
+          "Preguntar a mi jefatura cuáles son los niveles de clasificación de la empresa y por qué canal se comparte cada uno.",
+          "Identificar un archivo que dependa solo de mí y acordar con mi jefatura quién más debería poder acceder si falto.",
+          "Averiguar a quién se derivan las solicitudes de clientes o compañeros sobre sus datos personales.",
+          "Contarle a TI o a mi jefatura si estoy usando algún atajo porque el canal oficial no funciona."
+        ],
+        "texto": "Lo que hiciste en la carpeta de Pehuén también se puede hacer en la tuya, en pequeño.",
+        "voz": "Yo empecé por lo más simple: revisé qué cosas de la pega tenía en mi celular. Me demoré diez minutos y borré fotos de guías y planillas viejas que ya no necesitaba. Después le pregunté a Javier cómo compartir el catálogo sin tener que pedírselo cada vez, y resultó que se podía. No tienes que hacerlo todo esta semana. Elige dos o tres cosas que sí puedas cumplir y anótalas en tu plan personal.",
+        "hablante": "daniela",
+        "icono": "clipboard-check"
+      },
+      {
+        "id": "SEG360-CIBER-M01-LAB-P07",
+        "tipo": "cierre_leccion",
+        "titulo": "Lo que te llevas del laboratorio",
+        "ideas": [
+          "Clasifica por el contenido, no por el nombre ni el formato. Si dudas entre dos niveles, elige el más protector y pregunta.",
+          "Un acceso bien dado tiene nombre y apellido, el nivel justo (ver o editar) y fecha de término cuando es para alguien externo.",
+          "Responder bien una solicitud es entender qué necesita la persona y darle eso por el canal que corresponde, no decir sí o no a secas."
+        ],
+        "pregunta": "¿Qué archivo de tu trabajo crees que hoy está compartido con más personas de las que lo necesitan?",
+        "texto": "Terminaste el laboratorio. Antes de cerrar el módulo, piensa en la pregunta con tu trabajo real en mente.",
+        "voz": "Ordenaste una carpeta que tenía años de desorden, y lo hiciste sin dejar a nadie sin poder trabajar. Eso es lo más difícil: proteger sin bloquear. Fíjate que en ningún momento necesitaste saber de tecnología. Necesitaste preguntarte qué es cada cosa, quién la necesita y por dónde debe moverse. Esas mismas preguntas te van a servir en el próximo módulo, cuando alguien intente engañarte justamente para que le entregues esta información.",
+        "hablante": "narrador"
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-CIBER-M01-CIERRE",
+    "titulo": "Lo que vale, cuidado a la medida",
+    "texto": "En este módulo aprendiste a reconocer los activos de información de tu trabajo, a usar las preguntas de **confidencialidad, integridad y disponibilidad** para decidir cómo protegerlos, a distinguir datos personales y sensibles según la Ley 21.719 y a elegir accesos y canales proporcionales.\n\nLa idea de fondo: proteger no es cerrar todo. Es darle a cada información el cuidado que merece, sin bloquear el trabajo de nadie.",
+    "voz": "Llegaste al final del primer módulo de la ruta. Si tuviera que resumirlo en una frase, sería esta: la información que pasa por tus manos vale, y por eso te buscan a ti. No porque seas el eslabón débil, sino porque tienes acceso a algo que le sirve a otro. Ahora sabes mirar esa información, sabes ordenarla y sabes moverla por el canal correcto. En el próximo módulo vamos a ver cómo intentan quitártela: correos, mensajes, llamadas y códigos QR muy bien hechos, que juegan con la urgencia y la confianza.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Haz el inventario rápido de tu puesto: anota tres activos de información que usas a diario y qué pasaría si fallaran.",
+      "Antes de compartir un archivo, recorre las tres preguntas: quién lo ve, quién lo puede cambiar y qué pasa si no está disponible.",
+      "Averigua en tu empresa a quién se derivan las solicitudes sobre datos personales y cuáles son los niveles de clasificación vigentes."
+    ],
+    "siguiente": "Módulo 2 · Phishing y engaños: la urgencia como anzuelo. Vas a aprender a reconocer engaños bien escritos y a verificar por un canal independiente antes de actuar."
+  },
+  "glosario": [
+    { "termino": "Activo de información", "definicion": "Todo lo que tiene valor para la empresa porque guarda, procesa o mueve información: datos, equipos, cuentas, accesos y el conocimiento de las personas." },
+    { "termino": "Confidencialidad", "definicion": "Propiedad de la información que asegura que solo la vean o la reciban las personas autorizadas." },
+    { "termino": "Integridad", "definicion": "Propiedad de la información que asegura que esté correcta y completa, y que solo la modifique quien debe, de forma controlada." },
+    { "termino": "Disponibilidad", "definicion": "Propiedad de la información que asegura que las personas autorizadas puedan usarla cuando la necesitan." },
+    { "termino": "Dato personal", "definicion": "Cualquier información que identifica a una persona natural o que permite identificarla, como su nombre, RUT, teléfono, dirección, patente o imagen." },
+    { "termino": "Dato sensible", "definicion": "Dato personal cuyo mal uso puede causar discriminación o daño grave, como los de salud, los biométricos o la afiliación sindical. Requiere un cuidado mayor." },
+    { "termino": "Titular de datos", "definicion": "La persona a quien se refieren los datos personales. Puede pedir acceso, corrección o eliminación de sus datos, entre otros derechos." },
+    { "termino": "Clasificación de la información", "definicion": "Asignar a cada documento un nivel (por ejemplo pública, interna, confidencial o restringida) según el daño que causaría si se filtrara, alterara o perdiera." },
+    { "termino": "Mínimo privilegio", "definicion": "Principio según el cual cada persona tiene acceso solo a lo que necesita para su tarea, y con el nivel justo: ver, comentar o editar." },
+    { "termino": "Canal proporcional", "definicion": "Medio para compartir información que está a la altura de su nivel de sensibilidad: no es lo mismo mandar un catálogo que una liquidación." }
+  ],
+  "recursos": ["SEG360-REC06", "SEG360-REC10"],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG025",
+      "titulo": "La oficina administrativa de Pehuén",
+      "uso": "Apertura del módulo y de las lecciones 2 y 3: muestra el lugar donde circula la información de Pehuén en un día normal.",
+      "prompt": "Realistic editorial photograph of the second-floor administrative office of a mid-sized office and cleaning supplies distributor in Santiago, Chile. Four adult Chilean coworkers of diverse ages and appearances working naturally, not posing: a woman in her forties with a printed document walking toward a colleague, a man in his thirties typing on a laptop, another reviewing a spreadsheet on a monitor, a shared multifunction printer and filing shelves in the background. Natural daylight from side windows, modest functional furniture, plants, cables tidy. Muted bluish graphite and white palette with discreet violet accents in a lanyard and a folder. No legible text on screens or papers, no logos, no brand names. 35mm lens, eye level, shallow depth of field, documentary style.",
+      "alt": "Oficina administrativa con varias personas trabajando en computadores, una impresora multifuncional y estanterías con carpetas. Es el lugar por donde pasa a diario la información de clientes, proveedores y trabajadores."
+    },
+    {
+      "id": "SEG360-IMG026",
+      "titulo": "Información a la vista en el puesto de trabajo",
+      "uso": "Apertura de la lección 1. Es un ejemplo de condiciones a corregir: documentos olvidados en la impresora, una nota adhesiva en el monitor y una sesión abierta sin nadie en el puesto.",
+      "prompt": "Realistic editorial photograph, close medium shot of an empty office desk in a Chilean distribution company, showing conditions to correct for an information security training: a yellow sticky note attached to the edge of a monitor with illegible handwriting, the computer screen unlocked showing a blurred spreadsheet, and in the background a multifunction printer tray with several forgotten printed pages. A coffee mug and an empty chair pushed back, suggesting the person just left. Natural morning light, bluish graphite and white palette with a subtle violet accent. All text blurred and illegible, no logos, no brand names, no people in frame.",
+      "alt": "Puesto de trabajo vacío con una nota adhesiva pegada al monitor, la pantalla desbloqueada y documentos olvidados en la impresora del fondo. Es un ejemplo de información expuesta que se debe corregir."
+    },
+    {
+      "id": "SEG360-IMG027",
+      "titulo": "Ordenando la carpeta compartida",
+      "uso": "Apertura del laboratorio: dos personas revisan juntas la organización y los permisos de una carpeta compartida.",
+      "prompt": "Realistic editorial photograph of two adult Chilean coworkers sitting side by side at an office desk, reviewing a shared folder structure on a large monitor: a man in his thirties in a casual shirt pointing at the screen, and an IT support colleague in his late twenties with a notebook taking notes. The screen shows a blurred file explorer with folder icons and padlock symbols, no legible text. Calm, collaborative mood, natural afternoon light, modest office of a mid-sized distributor in Santiago. Bluish graphite and white palette with discreet violet accents. No logos, no brand names, documentary style, 35mm.",
+      "alt": "Dos compañeros de trabajo revisan juntos en un monitor una carpeta compartida con íconos de carpetas y candados, mientras uno toma notas. Representa el trabajo de ordenar y ajustar permisos."
+    }
+  ],
+  "minutos_desglose": { "lecciones": 122, "laboratorio": 50, "intro_cierre_recursos": 10 }
+}

@@ -1,0 +1,1590 @@
+{
+  "id": "SEG360-EPP-M04",
+  "ruta": "EPP",
+  "numero": 4,
+  "titulo": "Manos, pies, ropa y piel",
+  "subtitulo": "Guantes, calzado, ropa de trabajo y protección de la piel que se eligen por peligro y se usan como conjunto",
+  "resultado": "Ante una tarea con riesgos para manos, pies, cuerpo y piel, justificar un conjunto de protección considerando destreza, riesgo de enganche, compatibilidad y condiciones, sin imponer «guantes para todo».",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-EPP-M04-INTRO",
+    "titulo": "El guante que estaba a mano",
+    "texto": "Una mañana fría en el andén. Camila corta film con guantes de lana, ayuda con un desengrasante concentrado y acomoda un pallet en la envolvedora, todo con el mismo par. Más tarde, la chaqueta de agua le tapa el chaleco y los zapatos que le sacaron ampollas siguen en el casillero.\n\nEn este módulo vas a aprender a elegir la protección de manos, pies, cuerpo y piel **por peligro**, y a revisar que funcione **como conjunto**.",
+    "voz": "Las manos y los pies son los que más trabajan en una bodega, y la piel es la que más se olvida. En este módulo vamos a ver por qué no existe un guante para todo, qué hace de verdad cada parte de un zapato de seguridad, cuándo la ropa se convierte en un riesgo de enganche y cómo proteger la piel de productos de aseo, del frío y del sol del andén. Al final vas a enfrentar una tarde de lluvia con un despacho que no puede esperar, y vas a defender tus decisiones por escrito.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG052",
+    "logros": [
+      "Elegir el tipo de guante según el peligro, la destreza y la talla, y reconocer cuándo no se usan guantes por riesgo de enganche.",
+      "Explicar qué protege cada parte del calzado de seguridad y qué puede y no puede hacer un chaleco de alta visibilidad.",
+      "Leer la hoja de datos de seguridad de un producto de aseo y proteger la piel frente a químicos, frío y radiación UV, empezando por los controles previos.",
+      "Justificar un conjunto de protección para una tarea con varios riesgos, detectando incompatibilidades."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-EPP-M04-L01",
+      "titulo": "Guantes: no hay uno para todo",
+      "resultado": "Ante distintas tareas de bodega y aseo, elegir el tipo de guante según el peligro, la destreza y la talla, y reconocer cuándo no se deben usar guantes por riesgo de enganche con partes que giran.",
+      "minutos": 40,
+      "fuentes": [
+        "EPP-ISP-GUIAS",
+        "EPP-FABRICANTE",
+        "SST-DS594",
+        "SST-DS18",
+        "SST-DS44"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M04-L01-P01",
+          "tipo": "apertura",
+          "titulo": "Los guantes que estaban a mano",
+          "escena": "Son las 7:40 y hace frío en el andén. Camila tomó los guantes de lana que estaban en la mesa de despacho. Con ellos corta el film de un pallet con el cartonero, después ayuda a Héctor a llenar bidones con desengrasante concentrado y más tarde acomoda un pallet en la envolvedora. Los guantes son los mismos toda la mañana.",
+          "pregunta": "¿Puede un mismo par de guantes servir para cortar, para un químico y para trabajar junto a una máquina que gira?",
+          "texto": "Un guante que protege del frío puede no proteger del corte, dejar pasar un químico y, cerca de una máquina, convertirse en un peligro.\n\nEn esta lección vas a elegir guantes **por peligro**, pensando también en la **destreza**, la **talla** y en cuándo es mejor **no usarlos**.",
+          "voz": "Lo que hace Camila lo hemos hecho todos: agarrar lo que está a mano y seguir con la pega. Los guantes de lana le dan calor, y eso ya es algo. Pero en una sola mañana pasó por tres peligros distintos, y para dos de ellos esos guantes no hacen nada o incluso empeoran las cosas. Vamos a ver por qué no existe el guante para todo y cómo se elige el que corresponde.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG052",
+          "icono": "hand"
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P02",
+          "tipo": "tarjetas",
+          "titulo": "Un guante para cada peligro",
+          "consigna": "Da vuelta las tarjetas. Cada una es una familia de guantes con lo que protege y lo que no.",
+          "tarjetas": [
+            {
+              "frente": "Resistente al corte",
+              "icono": "scissors",
+              "reverso": "Fibras especiales que resisten el filo de zunchos, flejes y cartoneros. El nivel de resistencia viene en la ficha. Resistente no significa «a prueba de corte»: un filo con fuerza igual puede pasar."
+            },
+            {
+              "frente": "Químico",
+              "icono": "droplets",
+              "reverso": "Su material, por ejemplo nitrilo, neopreno o PVC, se elige según el producto. La hoja de datos de seguridad y la tabla del fabricante del guante dicen cuál sirve y por cuánto tiempo."
+            },
+            {
+              "frente": "Térmico para frío",
+              "icono": "thermometer",
+              "reverso": "Aísla del frío. Si además hay lluvia o agua, conviene que sea impermeable: un guante mojado enfría más que no usarlo."
+            },
+            {
+              "frente": "Uso general con recubrimiento",
+              "icono": "package",
+              "reverso": "Tejido con palma recubierta que mejora el agarre y protege de roces y astillas al mover cajas. No es para químicos ni para cortes fuertes."
+            },
+            {
+              "frente": "Desechable de nitrilo",
+              "icono": "refresh-cw",
+              "reverso": "Sirve para salpicaduras breves de algunos productos. No es para inmersión ni para trabajo pesado. Se cambia apenas se contamina o rompe."
+            },
+            {
+              "frente": "Sin guantes",
+              "icono": "triangle-alert",
+              "reverso": "Cerca de partes que giran, como un taladro de banco o el plato de la envolvedora, un guante puede engancharse y arrastrar la mano. Ahí, en general, no se usan."
+            }
+          ],
+          "voz": "Fíjate en la última tarjeta, porque es la que más sorprende. Uno tiende a pensar que con guantes siempre se está más protegido. Pero un guante tiene tela, costuras y holgura, y todo eso puede quedar atrapado por algo que gira. En las otras tarjetas, la idea se repite: cada guante resuelve un problema y no los demás. Por eso la pregunta nunca es «¿hay guantes?», sino «¿qué guante para qué peligro?».",
+          "hablante": "narrador",
+          "profundiza": "La selección de guantes parte por identificar el peligro de la tarea: mecánico, como cortes, abrasión o pinchazos; químico; térmico, por frío o calor; o biológico. Cada fabricante declara en la ficha técnica las prestaciones de su guante mediante niveles de desempeño ensayados, según el sistema de certificación que corresponda. Para químicos, importan tres conceptos: la degradación, que es el deterioro físico del material; la penetración, que es el paso del producto por costuras o poros; y la permeación, que es el paso a nivel molecular a través del material, aunque el guante se vea intacto. El fabricante informa el tiempo de paso para distintas sustancias. Por eso un guante puede ser excelente para un producto y no servir para otro. En Chile, los EPP deben contar con certificación de calidad según el DS 18, y la empresa debe entregarlos sin costo según el DS 594. Si una tarea involucra sustancias peligrosas fuera de los productos de aseo habituales, la selección se deriva a personal especializado."
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P03",
+          "tipo": "modelo3d",
+          "titulo": "Un guante por partes",
+          "modelo": "guante",
+          "consigna": "Gira el guante y toca cada parte. Piensa qué parte trabaja en cada tarea de Camila.",
+          "partes": [
+            {
+              "parte": "palma",
+              "titulo": "Palma",
+              "texto": "Es la que toca la carga y la herramienta. Concentra la protección contra roce y corte, y es la primera que se gasta. Se revisa antes de cada uso."
+            },
+            {
+              "parte": "dorso",
+              "titulo": "Dorso",
+              "texto": "En muchos guantes de uso general queda sin recubrir para que la mano respire. Eso es cómodo, pero deja pasar líquidos: no sirve para trabajos con agua o químicos."
+            },
+            {
+              "parte": "puno",
+              "titulo": "Puño",
+              "texto": "Su largo importa. Para químicos o agua se usa puño largo, por fuera o por dentro de la manga según el trabajo, para que el líquido no escurra hacia la muñeca."
+            },
+            {
+              "parte": "recubrimiento",
+              "titulo": "Recubrimiento",
+              "texto": "Capa que mejora el agarre y la resistencia. Su material y su extensión, solo palma o mano completa, definen para qué sirve. Si está pelado o agrietado, el guante ya no protege igual."
+            }
+          ],
+          "pregunta": "Camila va a manipular bidones de desengrasante concentrado. Tiene un guante con palma recubierta de nitrilo y dorso de tela. ¿Le sirve?",
+          "opciones": [
+            {
+              "texto": "Sí: el nitrilo es justamente el material de los guantes químicos, y como la palma es la que toca el bidón, el dorso de tela no hace diferencia.",
+              "correcta": false,
+              "feedback": "El nitrilo de la palma ayuda al agarre, pero el dorso de tela absorbe el líquido y lo deja en contacto con la piel. Un guante químico está diseñado para eso en toda su superficie."
+            },
+            {
+              "texto": "Sí, si se pone dos pares, uno encima del otro.",
+              "correcta": false,
+              "feedback": "Dos guantes de tela recubiertos siguen absorbiendo el líquido, y además se pierde destreza para manipular el bidón."
+            },
+            {
+              "texto": "No: necesita un guante químico completo, del material y largo de puño que indique la hoja de datos.",
+              "correcta": true,
+              "feedback": "Eso es. Lo que cuenta es la protección de todo el guante frente a ese producto, no solo que contenga un material resistente en una parte."
+            }
+          ],
+          "voz": "Dale una vuelta al guante. Lo que parece un detalle, como un dorso de tela o un puño corto, decide si sirve o no para una tarea. Un guante de uso general está pensado para que la mano respire y agarre bien las cajas. Ese mismo diseño es el que lo hace inútil frente a un líquido. No es que sea un mal guante: es un buen guante para otra cosa.",
+          "hablante": "narrador",
+          "icono": "hand"
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P04",
+          "tipo": "explicacion",
+          "titulo": "Proteger sin perder la mano",
+          "texto": "Un guante que impide trabajar bien termina en el bolsillo. Por eso, además del peligro, se considera:\n\n**Destreza**: cuánto puedes sentir y manejar con el guante puesto.\n**Talla**: un guante grande se resbala, se engancha y quita fuerza de agarre; uno chico cansa y se rompe.\n**La persona**: alergias, como al látex, o piel sensible.",
+          "bloques": [
+            {
+              "icono": "hand",
+              "titulo": "Destreza",
+              "texto": "Más grosor suele dar más protección, pero menos tacto. Se busca el equilibrio para la tarea."
+            },
+            {
+              "icono": "user-check",
+              "titulo": "Talla",
+              "texto": "Los guantes vienen en tallas. Pedir la tuya es parte del EPP, no un capricho."
+            },
+            {
+              "icono": "droplets",
+              "titulo": "Química invisible",
+              "texto": "Un guante químico puede verse intacto y estar dejando pasar el producto. Se usa y se cambia según el fabricante."
+            }
+          ],
+          "nota": {
+            "tipo": "terreno",
+            "texto": "Si sacarte un guante es la única forma de hacer bien una parte de la tarea, no lo resuelvas solo: cuéntalo. Puede faltar otro modelo, otra talla o un cambio en la tarea."
+          },
+          "voz": "Hace un tiempo vi a una persona trabajar con guantes de cuero gigantes para etiquetar cajas. Cada dos minutos se sacaba uno para despegar la etiqueta y se lo volvía a poner. Al final del día, más tiempo estuvo sin guante que con guante. El problema no era ella: era un guante que no servía para esa tarea. Cuando un EPP molesta tanto que la gente se lo saca, ese es un dato que me sirve, no una falta.",
+          "hablante": "patricia",
+          "profundiza": "La destreza es la capacidad de manipular objetos pequeños con el guante puesto, y suele disminuir a medida que aumenta el grosor o la rigidez del material. Las fichas técnicas de muchos guantes informan un nivel de destreza que permite comparar modelos. La talla se determina por la circunferencia y el largo de la mano, y una talla incorrecta reduce el agarre, aumenta la fatiga y puede generar pliegues que se enganchan. Las alergias son otro factor: el látex de caucho natural puede provocar reacciones en algunas personas, por lo que existen alternativas de nitrilo o neopreno. El uso prolongado de guantes impermeables hace transpirar la mano y puede irritar la piel; algunos fabricantes ofrecen guantes interiores de algodón y es importante secarse bien las manos. En el caso de los guantes para químicos, el fabricante informa el tiempo de paso para cada sustancia: superado ese tiempo, o si el guante se contamina por dentro, se cambia, aunque se vea bien."
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P05",
+          "tipo": "dialogo",
+          "titulo": "«Usa los míos, son mejores»",
+          "texto": "Camila tiene que cortar zunchos de pallets toda la mañana. Los guantes de corte de su talla se acabaron.",
+          "lineas": [
+            {
+              "personaje": "camila",
+              "texto": "Héctor, ¿hay guantes de corte? Los chicos se acabaron."
+            },
+            {
+              "personaje": "hector",
+              "texto": "Toma los míos, talla diez. Son los mejores que hay, aguantan todo."
+            },
+            {
+              "personaje": "camila",
+              "texto": "Me quedan grandes… se me dobla la punta de los dedos."
+            },
+            {
+              "personaje": "hector",
+              "texto": "Mejor, así tienes más protección. Yo uso esos desde hace años."
+            },
+            {
+              "personaje": "camila",
+              "texto": "Es que con el cartonero siento que se me resbala."
+            },
+            {
+              "personaje": "marisol",
+              "texto": "¿Qué pasa? Necesito esos pallets libres antes de las nueve."
+            }
+          ],
+          "pregunta": "¿Qué debería decirle Camila a Marisol?",
+          "opciones": [
+            {
+              "texto": "«Nada, Marisol. Héctor me pasó sus guantes de corte, que son de los buenos; me quedan un poco grandes, pero me acostumbro y salgo con los pallets antes de las nueve».",
+              "correcta": false,
+              "feedback": "Un guante grande le quita control sobre el cartonero, y eso aumenta la probabilidad de corte. Además, Marisol no se entera de que faltan guantes de su talla."
+            },
+            {
+              "texto": "«Voy a cortar sin guantes, con cuidado».",
+              "correcta": false,
+              "feedback": "Sin guantes, un resbalón del cartonero termina en la mano. «Con cuidado» no reemplaza la protección."
+            },
+            {
+              "texto": "«Me pongo un guante de lana debajo para que me queden justos».",
+              "correcta": false,
+              "feedback": "La lana no corrige la talla y cambia cómo se ajusta el guante. Se sigue perdiendo control y el guante puede engancharse."
+            },
+            {
+              "texto": "«Se acabaron los guantes de corte de mi talla y los de Héctor me quedan grandes: se me resbala el cartonero. ¿Pedimos reposición? Mientras, avanzo con otra tarea».",
+              "correcta": true,
+              "feedback": "Bien dicho. Explicas el problema, por qué importa y propones cómo seguir. Marisol puede decidir y gestionar la reposición."
+            }
+          ],
+          "voz": "Héctor lo hace con la mejor intención: le pasa sus propios guantes, que le han funcionado por años. Pero un guante de corte que queda grande no es «más protección». Es menos control sobre el cartonero, justo en la tarea donde el control importa. Escucha a Camila: ella ya está diciendo lo que pasa. Lo que falta es decírselo a quien puede resolverlo.",
+          "hablante": "narrador",
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P06",
+          "tipo": "decision",
+          "titulo": "El film se cortó en pleno giro",
+          "situacion": "Camila está envolviendo un pallet en la envolvedora. A mitad del ciclo, el film se corta y la punta queda colgando mientras el plato sigue girando. Camila tiene puestos guantes de uso general y estira la mano para tomar la punta y pegarla de nuevo.",
+          "pregunta": "¿Qué debería hacer?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "Detener la máquina con la parada del procedimiento, esperar que el plato quede quieto y recién ahí retomar el film. Si falta el resguardo, avisar.",
+              "correcta": true,
+              "feedback": "Eso es. Primero se detiene el movimiento; después se trabaja. Y si la reja o el resguardo están retirados, eso se informa: no es algo para resolver con guantes ni sin ellos."
+            },
+            {
+              "texto": "Tomar la punta rápido, ya que con guantes no se va a cortar con el film.",
+              "correcta": false,
+              "feedback": "El riesgo aquí no es el corte: es que el guante o el film se enrollen con el giro y arrastren la mano hacia el pallet o el plato."
+            },
+            {
+              "texto": "Sacarse los guantes para tener más control y tomar la punta del film justo cuando pasa frente a ella, sin acercar el cuerpo al plato que gira.",
+              "correcta": false,
+              "feedback": "Sin guantes se elimina el enganche del guante, pero sigue acercando la mano a una carga que gira. Nada se toma con la máquina en movimiento."
+            },
+            {
+              "texto": "Pedirle a Héctor que la tome él, que tiene más experiencia.",
+              "correcta": false,
+              "feedback": "La experiencia no cambia lo que hace una pieza que gira. Le estaría pasando el mismo riesgo a otra persona."
+            }
+          ],
+          "explicacion": "Cerca de partes que giran, el guante puede convertirse en el peligro: se engancha, se enrolla y arrastra la mano. En general, ahí no se usan guantes, salvo que la evaluación y el fabricante de la máquina indiquen un tipo específico. Pero la regla más importante es otra: no se meten las manos mientras la máquina se mueve.",
+          "voz": "Este es uno de esos momentos en que todo pasa en dos segundos. El film se corta, el plato sigue girando y la mano va sola. Lo que hay que mirar es qué está en movimiento, no qué tienes puesto. Acuérdate de lo que viste en la ruta de prevención sobre partes móviles y resguardos: la reja no se saca, y la máquina se detiene antes de acercarse.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "refresh-cw"
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P07",
+          "tipo": "clasificar",
+          "titulo": "¿Qué guante para qué tarea?",
+          "consigna": "Estas son tareas reales de una semana en Pehuén. Asigna a cada una el tipo de protección para las manos que corresponde. Lee el feedback de cada una: hay tareas parecidas con respuestas distintas.",
+          "categorias": [
+            {
+              "id": "corte",
+              "nombre": "Resistente al corte",
+              "icono": "scissors",
+              "descripcion": "Para filos de zunchos, flejes y cartonero."
+            },
+            {
+              "id": "quimico",
+              "nombre": "Químico según la hoja de datos",
+              "icono": "droplets",
+              "descripcion": "Material y largo de puño según el producto."
+            },
+            {
+              "id": "frio",
+              "nombre": "Térmico e impermeable con agarre",
+              "icono": "thermometer",
+              "descripcion": "Para frío con lluvia o humedad."
+            },
+            {
+              "id": "general",
+              "nombre": "Uso general recubierto",
+              "icono": "package",
+              "descripcion": "Para roces, astillas y agarre de cajas."
+            },
+            {
+              "id": "sin_guante",
+              "nombre": "Sin guantes: riesgo de enganche",
+              "icono": "triangle-alert",
+              "descripcion": "Junto a partes que giran."
+            }
+          ],
+          "elementos": [
+            {
+              "texto": "Cortar el film y los zunchos plásticos de diez pallets con el cartonero retráctil.",
+              "categoria": "corte",
+              "feedback": "El filo es el peligro principal. El guante de corte se complementa con un cartonero retráctil y cortando hacia afuera del cuerpo."
+            },
+            {
+              "texto": "Retirar flejes metálicos de un pallet de proveedor, que tienen bordes filosos.",
+              "categoria": "corte",
+              "feedback": "Los flejes metálicos cortan como cuchillos, sobre todo al soltarse. Guante de corte, y conviene usar la herramienta de corte de flejes adecuada."
+            },
+            {
+              "texto": "Llenar bidones con desengrasante concentrado en la sala de aseo, usando el dosificador.",
+              "categoria": "quimico",
+              "feedback": "Aunque el dosificador reduce mucho el contacto, puede haber salpicaduras. El material del guante lo dicen la hoja de datos del producto y el fabricante del guante."
+            },
+            {
+              "texto": "Lavar baldes y traperos con detergente diluido al final del turno.",
+              "categoria": "quimico",
+              "feedback": "Diluido no significa inofensivo para la piel si el contacto es diario. La hoja de datos indica qué guante usar; a menudo basta un guante de nitrilo de puño largo."
+            },
+            {
+              "texto": "Descargar cajas en el andén a las 7 de la mañana de un día de junio con lluvia.",
+              "categoria": "frio",
+              "feedback": "Frío y agua juntos: un guante térmico que se moja pierde aislamiento. Impermeable y con palma de buen agarre para no perder las cajas."
+            },
+            {
+              "texto": "Cargar cajas de resmas desde el pallet al camión en una mañana seca.",
+              "categoria": "general",
+              "feedback": "Roces, bordes de cartón y agarre: un guante de uso general recubierto da protección y destreza."
+            },
+            {
+              "texto": "Acomodar el pallet sobre el plato de la envolvedora, con la máquina detenida y sin posibilidad de partir.",
+              "categoria": "general",
+              "feedback": "Con la máquina detenida, el peligro es el roce y las astillas del pallet. Fíjate en la diferencia con trabajar junto a la máquina en movimiento."
+            },
+            {
+              "texto": "Perforar una placa en el taladro de banco del taller.",
+              "categoria": "sin_guante",
+              "feedback": "La broca gira y puede atrapar un guante. En general no se usan guantes aquí, salvo que el fabricante de la máquina y la evaluación indiquen otra cosa; se protegen los ojos y se fija la pieza con prensa."
+            },
+            {
+              "texto": "Vigilar el ciclo de la envolvedora junto al panel de mando, a un paso de la carga que gira, sin tocarla.",
+              "categoria": "sin_guante",
+              "feedback": "Junto a una carga que gira, un guante, un puño suelto o un cordón pueden ser tomados por el film. Aquí van las manos libres y lejos de la carga, la ropa ajustada y nada colgando. Y si hay que tocar el film o el pallet, primero se detiene la máquina."
+            }
+          ],
+          "voz": "Esta es una práctica para pensar con calma. Algunas tareas se parecen mucho entre sí y la respuesta cambia por un detalle: si la máquina está detenida o girando, si el producto está concentrado o diluido, si llueve o no. Si te equivocas, lee el feedback y vuelve a intentarlo. Lo que importa no es acertar al primer intento, sino ver qué dato de la tarea te cambia el guante.",
+          "hablante": "narrador",
+          "practica_formativa": true,
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-EPP-M04-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: guantes",
+          "ideas": [
+            "No hay un guante para todo: corte, químicos, frío y roce piden guantes distintos, y el producto y el fabricante dicen cuál.",
+            "Destreza y talla son parte de la protección: un guante grande o torpe se saca, se resbala o se engancha.",
+            "Cerca de partes que giran el guante puede ser el peligro. Y con o sin guantes, la máquina se detiene antes de acercar la mano."
+          ],
+          "pregunta": "Piensa en tu jornada: ¿usas el mismo par de guantes para tareas con peligros distintos? ¿Qué dato te falta para saber si sirven?",
+          "voz": "Si tuvieras que resumir la lección en una frase, sería esta: el guante correcto depende del peligro, de la tarea y de tu mano. Y a veces el guante correcto es ninguno, porque hay una máquina girando. En la próxima lección bajamos a los pies y subimos al cuerpo: calzado, ropa de trabajo y alta visibilidad.",
+          "hablante": "narrador"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-EPP-M04-L02",
+      "titulo": "Calzado, ropa de trabajo y alta visibilidad",
+      "resultado": "Ante el trabajo en bodega y andén, reconocer qué protege cada parte del calzado de seguridad, identificar prendas y accesorios con riesgo de enganche y usar la alta visibilidad sabiendo lo que puede y lo que no puede hacer.",
+      "minutos": 40,
+      "fuentes": [
+        "EPP-ISP-GUIAS",
+        "EPP-FABRICANTE",
+        "SST-DS594",
+        "SST-DS18",
+        "SST-DS44"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M04-L02-P01",
+          "tipo": "apertura",
+          "titulo": "Zapatillas de correr en el andén",
+          "escena": "Lunes, 7:50. Camila llega al andén con zapatillas de correr: los zapatos de seguridad nuevos le sacaron ampollas la semana pasada y los dejó en el casillero. Lleva un polerón con capucha y cordones largos, y la credencial colgando del cuello. El chaleco reflectante está en su mochila. El camión de Embalajes del Litoral ya está retrocediendo.",
+          "pregunta": "¿Qué de lo que lleva puesto la protege, y qué podría jugarle en contra?",
+          "texto": "Lo que llevas en los pies y en el cuerpo también es protección, o también es riesgo.\n\nEn esta lección vas a ver qué protege cada parte del **calzado de seguridad**, qué prendas se **enganchan** y qué hace de verdad un **chaleco de alta visibilidad**.",
+          "voz": "Camila no es descuidada. Tuvo un problema real con sus zapatos y lo resolvió como pudo, con lo que tenía. El polerón la abriga y la credencial la tiene que mostrar. Pero en el andén hay pallets con clavos, una transpaleta, una envolvedora y un camión retrocediendo. Vamos a mirar lo que lleva puesto con esos peligros en mente, empezando por los pies.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG053",
+          "icono": "footprints"
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P02",
+          "tipo": "modelo3d",
+          "titulo": "El zapato de seguridad por dentro",
+          "modelo": "zapato",
+          "consigna": "Gira el zapato y abre cada parte. Relaciona cada una con un peligro del andén.",
+          "partes": [
+            {
+              "parte": "puntera",
+              "titulo": "Puntera",
+              "texto": "Protege los dedos de impactos y aplastamientos: una caja que cae o la rueda de una transpaleta. Puede ser de acero o de material compuesto. Después de un golpe fuerte puede quedar deformada aunque por fuera no se note."
+            },
+            {
+              "parte": "plantilla_antiperforacion",
+              "titulo": "Plantilla antiperforación",
+              "texto": "Lámina dentro de la suela que impide que un clavo o una grapa del pallet atraviese el zapato. No todos los modelos la traen: se revisa en la ficha."
+            },
+            {
+              "parte": "suela",
+              "titulo": "Suela",
+              "texto": "Da agarre y estabilidad. Su resistencia al deslizamiento depende del dibujo, del material y de su desgaste. Una suela lisa en un andén mojado es una caída esperando ocurrir."
+            },
+            {
+              "parte": "cana",
+              "titulo": "Caña",
+              "texto": "La parte que sube por el tobillo. Una caña más alta da soporte y protege de golpes y salpicaduras; se elige según la tarea."
+            }
+          ],
+          "pregunta": "En el andén hay pallets de proveedores con clavos salidos. ¿Qué parte del zapato es la que responde a ese peligro?",
+          "opciones": [
+            {
+              "texto": "La puntera, porque es la parte más dura.",
+              "correcta": false,
+              "feedback": "La puntera protege los dedos de golpes desde arriba o el frente. Un clavo entra por abajo, por la suela."
+            },
+            {
+              "texto": "La caña, porque al ser alta y rígida mantiene todo el pie dentro de una estructura reforzada, incluida la planta.",
+              "correcta": false,
+              "feedback": "La caña protege el tobillo. Contra un clavo que entra por la planta, no hace nada."
+            },
+            {
+              "texto": "La plantilla antiperforación, que debe venir declarada en la ficha del modelo.",
+              "correcta": true,
+              "feedback": "Exacto. Y como no todos los zapatos de seguridad la traen, conviene confirmarlo en la ficha cuando hay pallets con clavos."
+            }
+          ],
+          "voz": "Un zapato de seguridad no es un zapato reforzado en general. Cada parte responde a un peligro concreto. La puntera mira hacia arriba, a lo que cae o aplasta. La plantilla mira hacia abajo, a lo que pincha. La suela mira al piso, a lo que resbala. Por eso, cuando alguien dice «tengo zapatos de seguridad», la pregunta útil es: ¿de seguridad contra qué?",
+          "hablante": "narrador",
+          "profundiza": "Los fabricantes clasifican el calzado de seguridad según las prestaciones que incorpora y lo marcan en el producto y en la ficha. Algunas prestaciones habituales son la puntera de protección contra impacto y compresión, la plantilla resistente a la perforación, la suela con resistencia al deslizamiento en distintas superficies, la resistencia a hidrocarburos, la absorción de energía en el talón y propiedades eléctricas, como el calzado antiestático o dieléctrico, que corresponden a trabajos específicos y se seleccionan por especialistas. En Chile, el calzado de seguridad debe contar con certificación de calidad según el DS 18. La selección parte de la evaluación de la tarea: qué puede caer, qué puede pinchar, en qué piso se trabaja y si hay agua, aceite o químicos. Después del impacto fuerte de un objeto pesado sobre la puntera, se recomienda reemplazar el calzado, porque la puntera puede haber perdido su capacidad de protección."
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P03",
+          "tipo": "decision",
+          "titulo": "Los zapatos que sacan ampollas",
+          "situacion": "Los zapatos de seguridad que le entregaron a Camila hace dos semanas le sacan ampollas en el talón. El viernes terminó cojeando. Hoy tiene turno completo en bodega y andén.",
+          "pregunta": "¿Qué es lo más adecuado?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "Seguir usando las zapatillas de correr hasta que se le pasen las ampollas.",
+              "correcta": false,
+              "feedback": "Las zapatillas no tienen puntera ni plantilla, y su suela no está pensada para el andén mojado. Se resuelve un problema abriendo otros."
+            },
+            {
+              "texto": "Avisar a Marisol que el calzado le provoca ampollas, pedir revisar talla o modelo, y acordar qué tareas hacer hoy mientras se resuelve.",
+              "correcta": true,
+              "feedback": "Eso es. La incomodidad que lastima es una falla del EPP para esa persona, y la empresa debe resolverla. Mientras tanto, se ajusta el trabajo del día para no exponerla."
+            },
+            {
+              "texto": "Cortar el talón del zapato para que no le roce.",
+              "correcta": false,
+              "feedback": "Modificar el calzado puede dañar su estructura y deja de corresponder a lo certificado. Tampoco resuelve si el problema es la talla o el modelo."
+            },
+            {
+              "texto": "Ponerse los zapatos con dos pares de calcetines, aguantar unos días más y esperar que el cuero se amolde, como pasa casi siempre con el calzado nuevo.",
+              "correcta": false,
+              "feedback": "Algunos zapatos se ablandan con el uso, pero dos semanas con ampollas indican un problema de talla, horma o modelo. Aguantar lleva a lesiones y a que el zapato termine en el casillero."
+            }
+          ],
+          "explicacion": "Un EPP que lastima no se usa, o se usa mal. Avisarlo no es quejarse: es información que la empresa necesita para cambiar la talla, la horma o el modelo. A veces también ayudan calcetines adecuados o plantillas de confort compatibles, según indique el fabricante.",
+          "voz": "Esto pasa mucho más de lo que se cree. Los zapatos nuevos lastiman, la persona no quiere parecer reclamona y termina usando lo que tiene en casa. Si eliges pensando en Camila, fíjate en qué opción resuelve el problema de fondo sin dejarla expuesta mientras tanto.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "footprints"
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P04",
+          "tipo": "explicacion",
+          "titulo": "Lo que cuelga se engancha",
+          "texto": "La ropa de trabajo protege de roces, suciedad, frío o sol. Pero lo que **cuelga, flamea o queda suelto** puede quedar atrapado en una envolvedora, una transpaleta, una puerta enrollable o una caja que pasa.\n\nRopa a tu talla, mangas ajustadas en el puño, cierres cerrados y nada colgando cerca de partes en movimiento.",
+          "bloques": [
+            {
+              "icono": "shirt",
+              "titulo": "Ropa holgada",
+              "texto": "Mangas anchas, polerones largos o chaquetas abiertas se enganchan con facilidad."
+            },
+            {
+              "icono": "link",
+              "titulo": "Cordones y colgantes",
+              "texto": "Cordones de capucha, bufandas y credenciales al cuello: mejor guardados o con cinta que se suelte sola al tirar."
+            },
+            {
+              "icono": "hand",
+              "titulo": "Anillos, pulseras y relojes",
+              "texto": "Se enganchan en bordes y pueden causar lesiones graves en los dedos. Cerca de máquinas, se sacan."
+            },
+            {
+              "icono": "user",
+              "titulo": "Pelo largo",
+              "texto": "Tomado y recogido cuando se trabaja cerca de partes que giran."
+            }
+          ],
+          "nota": {
+            "tipo": "terreno",
+            "texto": "Si la ropa que entrega la empresa no es de tu talla o no sirve para el frío o la lluvia, eso se informa. No es un tema de gusto: es parte de la protección."
+          },
+          "voz": "En la bodega les digo siempre lo mismo: mírense en el espejo antes de bajar al andén y busquen lo que cuelga. El cordón del polerón, la credencial, la bufanda, la manga suelta. Cada una de esas cosas es una mano que le ofrecen a una máquina. No es por pinchar a nadie, la credencial hay que llevarla y el frío es real. Por eso existen cintas que se sueltan solas, chaquetas sin cordones y ropa a la talla. Si no las tienen, me avisan.",
+          "hablante": "patricia",
+          "profundiza": "El riesgo de enganche, o atrapamiento, ocurre cuando una prenda, el pelo o un accesorio queda tomado por una parte en movimiento y arrastra a la persona hacia la máquina. Las partes que giran, como ejes, rodillos, brocas o el plato de una envolvedora, y los puntos donde dos partes se juntan, son los más peligrosos. La protección principal está en la máquina: resguardos instalados, paradas de emergencia accesibles y procedimientos de detención antes de intervenir. La ropa de trabajo complementa esos controles: prendas a la talla, puños ajustados, sin elementos colgantes y con cierres que se mantienen cerrados. Para credenciales, existen cintas con cierre de seguridad que se separan al recibir un tirón. Los anillos merecen atención especial porque un enganche puede causar lesiones graves en el dedo. La empresa entrega la ropa de trabajo que corresponde al riesgo y a las condiciones, como frío o lluvia, sin costo para la persona trabajadora, según el DS 594."
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P05",
+          "tipo": "modelo3d",
+          "titulo": "El chaleco: de día y de noche",
+          "modelo": "chaleco",
+          "consigna": "Gira el chaleco y toca cada parte. Fíjate en qué parte trabaja de día y cuál con poca luz.",
+          "partes": [
+            {
+              "parte": "material_fluorescente",
+              "titulo": "Material fluorescente",
+              "texto": "Es el fondo de color intenso. Destaca con luz de día porque transforma parte de la luz en un color más brillante. De noche, sin luz, casi no se ve."
+            },
+            {
+              "parte": "cintas_reflectantes",
+              "titulo": "Cintas reflectantes",
+              "texto": "Devuelven la luz hacia su fuente, por ejemplo los focos de un camión. Son las que te hacen visible al atardecer, de noche o con lluvia. Si están sucias, peladas o tapadas, no funcionan."
+            },
+            {
+              "parte": "cierre",
+              "titulo": "Cierre",
+              "texto": "Cerrado, el chaleco no flamea y las cintas rodean el cuerpo para que te vean desde cualquier lado. Algunos modelos tienen cierres que se sueltan al recibir un tirón."
+            }
+          ],
+          "pregunta": "Son las 18:30 de un día de invierno y está oscuro. Camila lleva el chaleco abierto y su parka encima, tapando las cintas de la espalda. ¿Qué pasa con su visibilidad?",
+          "opciones": [
+            {
+              "texto": "Baja mucho: de noche dependen de las cintas reflectantes, y tapadas o con el chaleco abierto, no la ven desde todos los ángulos.",
+              "correcta": true,
+              "feedback": "Así es. Un conductor que retrocede mira por el espejo y necesita ver las cintas. El chaleco va cerrado y por encima de la ropa de abrigo."
+            },
+            {
+              "texto": "Nada importante: el frente del chaleco queda a la vista, y el color fluorescente es lo que más destaca cuando los focos del camión la iluminan.",
+              "correcta": false,
+              "feedback": "De noche, el fluorescente casi no se ve. Lo que funciona con los focos son las cintas, y las de la espalda quedaron tapadas."
+            },
+            {
+              "texto": "Mejora, porque la parka es de color oscuro y contrasta.",
+              "correcta": false,
+              "feedback": "Un color oscuro de noche es justamente lo que menos se ve. El contraste que importa es el de las cintas iluminadas por los focos."
+            }
+          ],
+          "voz": "El chaleco tiene dos trabajos distintos según la hora. De día trabaja el color. Con poca luz trabajan las cintas, que funcionan como los ojos de gato de la carretera: devuelven la luz de los focos hacia el conductor. Por eso un chaleco tapado por una parka, abierto o con las cintas sucias pierde justo lo que lo hace útil al atardecer, que es cuando más se despacha en invierno.",
+          "hablante": "narrador",
+          "icono": "shirt"
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P06",
+          "tipo": "comparacion",
+          "titulo": "Que te vean no es lo mismo que estar a salvo",
+          "texto": "El chaleco ayuda a que un conductor te vea. Pero hay situaciones en que no te puede ver, por bien vestido que estés.",
+          "izquierda": {
+            "titulo": "Lo que hace el chaleco",
+            "icono": "eye",
+            "puntos": [
+              "Aumenta la probabilidad de que te vean antes.",
+              "Funciona si está limpio, cerrado, a la vista y en buen estado.",
+              "Depende de que el conductor mire hacia donde estás.",
+              "No sirve si estás en un punto ciego del camión."
+            ]
+          },
+          "derecha": {
+            "titulo": "Lo que va antes del chaleco",
+            "icono": "route",
+            "puntos": [
+              "Separar peatones de camiones y transpaletas con zonas demarcadas.",
+              "Una persona que guíe las maniobras de retroceso según el procedimiento.",
+              "Alarma de retroceso y espejos del vehículo en buen estado.",
+              "Buena iluminación del andén y regla clara: nadie detrás de un camión que retrocede."
+            ]
+          },
+          "conclusion": "La alta visibilidad es una capa más, no la solución. Primero se organiza el tránsito para que personas y vehículos no se crucen; después, el chaleco ayuda en lo que queda.",
+          "voz": "Cada vez que bajo al andén hago la misma pregunta: si este camión retrocede ahora, ¿dónde está la gente? Un conductor tiene espejos, pero también zonas donde no ve nada, aunque estés vestido de fluorescente de pies a cabeza. Por eso no me quedo tranquila solo porque todos llevan chaleco. Me quedo tranquila cuando está demarcado por dónde se camina, cuando alguien guía la maniobra y cuando nadie se para detrás del camión. Eso protege a todos, con chaleco o sin él.",
+          "hablante": "patricia",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P07",
+          "tipo": "mito_realidad",
+          "titulo": "Pies, ropa y chaleco: ¿verdad o mito?",
+          "afirmaciones": [
+            {
+              "texto": "Con zapatos de seguridad puedo poner el pie cerca de la rueda de la transpaleta sin problema.",
+              "es_verdad": false,
+              "explicacion": "La puntera protege los dedos, pero no el empeine, el talón ni el tobillo. Y ninguna puntera está pensada para que la uses como freno."
+            },
+            {
+              "texto": "Las cintas reflectantes son las que te hacen visible con poca luz.",
+              "es_verdad": true,
+              "explicacion": "Devuelven la luz de los focos hacia el conductor. De día, en cambio, trabaja más el material fluorescente."
+            },
+            {
+              "texto": "Un chaleco abierto que flamea cumple igual su función.",
+              "es_verdad": false,
+              "explicacion": "Abierto, las cintas no rodean el cuerpo y el chaleco puede engancharse. Se usa cerrado y a la talla, por encima de la ropa de abrigo."
+            },
+            {
+              "texto": "La ropa holgada es más segura porque deja moverse mejor.",
+              "es_verdad": false,
+              "explicacion": "Moverse cómodo es importante, pero la ropa holgada se engancha. Se busca ropa a la talla que permita moverse sin que nada cuelgue."
+            },
+            {
+              "texto": "Avisar que un zapato o una prenda no te queda bien es parte de usar bien el EPP.",
+              "es_verdad": true,
+              "explicacion": "Un EPP que no calza no protege igual y termina abandonado. Avisar permite cambiar talla o modelo."
+            },
+            {
+              "texto": "Si un zapato de seguridad recibió el golpe de una caja pesada y se ve bien, se puede seguir usando sin más.",
+              "es_verdad": false,
+              "explicacion": "La puntera puede haberse deformado por dentro. Se informa y se revisa según lo que indique el fabricante, que suele recomendar reemplazarlo."
+            }
+          ],
+          "voz": "Seis frases que se escuchan en cualquier bodega. Algunas suenan lógicas y no lo son, y otras parecen obvias pero se olvidan todos los días. Cuando decidas, pregúntate qué parte del zapato, de la ropa o del chaleco está trabajando en cada caso, y qué no puede hacer.",
+          "hablante": "narrador",
+          "icono": "lightbulb"
+        },
+        {
+          "id": "SEG360-EPP-M04-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: pies, ropa y visibilidad",
+          "ideas": [
+            "Cada parte del calzado responde a un peligro: puntera a lo que cae, plantilla a lo que pincha, suela a lo que resbala. Si te lastima, se avisa.",
+            "Lo que cuelga se engancha: ropa a la talla, nada suelto cerca de partes en movimiento, credencial con cinta de seguridad.",
+            "El chaleco funciona limpio, cerrado y a la vista, y nunca reemplaza la separación entre personas y vehículos."
+          ],
+          "pregunta": "Antes de tu próxima jornada, mírate como lo haría Patricia: ¿qué llevas puesto que podría engancharse o taparte?",
+          "voz": "Fíjate que en toda la lección la protección dependió de cosas muy concretas: la talla de un zapato, un cordón de polerón, una parka encima del chaleco. Son detalles de todos los días, y por eso mismo se pierden. En la próxima lección vamos a la protección que más se olvida, la de la piel, frente a productos de aseo, frío y sol.",
+          "hablante": "narrador"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-EPP-M04-L03",
+      "titulo": "La piel: productos de aseo, frío y sol",
+      "resultado": "Ante tareas con productos de aseo concentrados, frío o radiación UV, leer la información de seguridad del producto, proponer controles antes del EPP y elegir la protección de piel y ojos que corresponde a las condiciones.",
+      "minutos": 40,
+      "fuentes": [
+        "EPP-LEY20096",
+        "EPP-FABRICANTE",
+        "SST-DS594",
+        "SST-DS44",
+        "EPP-ISP-GUIAS"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M04-L03-P01",
+          "tipo": "explicacion",
+          "titulo": "La piel también es una puerta",
+          "texto": "La piel es el órgano más grande del cuerpo y está expuesta todo el día. En una bodega como la de Pehuén recibe tres golpes frecuentes:\n\n**Productos de aseo concentrados**, que irritan, queman o provocan dermatitis con el contacto repetido.\n**Frío y humedad**, que entumecen y dañan.\n**Radiación UV del sol** en el andén, que se acumula año a año.",
+          "bloques": [
+            {
+              "icono": "droplets",
+              "titulo": "Químicos",
+              "texto": "La dermatitis de contacto aparece de a poco: piel roja, seca, agrietada. No es «tener la piel delicada»."
+            },
+            {
+              "icono": "thermometer",
+              "titulo": "Frío",
+              "texto": "Con agua y viento, las manos y los pies pierden calor rápido y se pierde destreza."
+            },
+            {
+              "icono": "sun",
+              "titulo": "Sol",
+              "texto": "La radiación UV daña la piel y los ojos aunque esté nublado y aunque no queme en el momento."
+            }
+          ],
+          "nota": {
+            "tipo": "ojo",
+            "texto": "Si notas manos rojas, agrietadas o con picazón después de trabajar con productos de aseo, avísalo. Puede ser el producto, el guante o la forma de trabajar."
+          },
+          "voz": "La piel tiene mala fama de dura. Aguanta el frío, aguanta el cloro, aguanta el sol del andén. Y como aguanta, nadie la mira hasta que ya está dañada. En mi experiencia, la piel de las manos es de lo primero que se resiente en las personas que hacen aseo, y casi siempre se resuelve cambiando algo en el producto, en el guante o en la forma de diluir. Por eso hoy vamos a mirar la piel como lo que es: una puerta de entrada.",
+          "hablante": "patricia",
+          "profundiza": "La dermatitis de contacto es una de las enfermedades de la piel más frecuentes relacionadas con el trabajo. Puede ser irritativa, cuando un producto daña directamente la piel por contacto repetido, como ocurre con detergentes, desengrasantes o el trabajo húmedo prolongado, o alérgica, cuando la persona se sensibiliza a una sustancia y reacciona aun con cantidades pequeñas. Los productos de aseo concentrados, como algunos desengrasantes alcalinos o productos con cloro, pueden además causar quemaduras químicas en piel y ojos. El frío actúa de otra forma: la exposición prolongada, sobre todo con humedad y viento, reduce la circulación en manos y pies, disminuye la destreza y puede llegar a dañar los tejidos. La radiación ultravioleta solar produce daño acumulativo en la piel y en los ojos; en Chile, la exposición es alta en gran parte del año, especialmente en primavera y verano y en las horas cercanas al mediodía. En los tres casos, la jerarquía de controles es la misma: primero cambiar el producto, el lugar o el horario, y después proteger."
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P02",
+          "tipo": "ficha",
+          "titulo": "Lo que dice el desengrasante",
+          "texto": "Este es un extracto de la hoja de datos de seguridad del desengrasante que Héctor diluye cada semana. Léelo antes de responder.",
+          "ficha": {
+            "titulo": "Ficha de práctica · Extracto de hoja de datos de seguridad",
+            "subtitulo": "Desengrasante alcalino concentrado DG-40 · Producto ficticio con fines de aprendizaje",
+            "campos": [
+              {
+                "etiqueta": "Peligros principales",
+                "valor": "Provoca irritación de la piel y lesiones oculares graves"
+              },
+              {
+                "etiqueta": "Uso indicado",
+                "valor": "Diluir según la tabla del envase, agregando el producto al agua, preferentemente con dosificador"
+              },
+              {
+                "etiqueta": "Incompatibilidades",
+                "valor": "No mezclar con ácidos ni con productos que contengan cloro"
+              },
+              {
+                "etiqueta": "Controles de ingeniería",
+                "valor": "Ventilación general del recinto; dosificador cerrado para la dilución"
+              },
+              {
+                "etiqueta": "Protección de manos",
+                "valor": "Guantes de nitrilo o neopreno de puño largo; verificar resistencia química y tiempo de uso con el fabricante del guante"
+              },
+              {
+                "etiqueta": "Protección de ojos y rostro",
+                "valor": "Antiparras de protección química; protector facial adicional al trasvasijar volúmenes grandes"
+              },
+              {
+                "etiqueta": "Protección del cuerpo",
+                "valor": "Delantal impermeable y ropa de manga larga"
+              },
+              {
+                "etiqueta": "Protección respiratoria",
+                "valor": "No requerida en condiciones normales de uso con ventilación adecuada"
+              },
+              {
+                "etiqueta": "Primeros auxilios: piel",
+                "valor": "Retirar la ropa contaminada y lavar con abundante agua. Buscar atención médica si la irritación sigue"
+              },
+              {
+                "etiqueta": "Primeros auxilios: ojos",
+                "valor": "Enjuagar con abundante agua durante varios minutos, levantando los párpados. Buscar atención médica de inmediato"
+              }
+            ],
+            "advertencias": [
+              "Mantener en su envase original, rotulado y cerrado.",
+              "No trasvasijar a botellas de bebida ni envases sin rótulo.",
+              "Leer la hoja de datos completa antes de usar."
+            ]
+          },
+          "preguntas": [
+            {
+              "enunciado": "Se acabaron los guantes de nitrilo de puño largo. En el baño hay guantes desechables delgados de látex. ¿Qué haces?",
+              "opciones": [
+                {
+                  "texto": "Los uso igual: el látex es impermeable, el contacto es solo un rato y, si me cae algo, me saco el guante y me lavo al tiro.",
+                  "correcta": false,
+                  "feedback": "La hoja indica material y largo de puño específicos. Un guante delgado y corto puede romperse o dejar escurrir el producto hacia la muñeca, y el producto daña la piel y los ojos."
+                },
+                {
+                  "texto": "Me pongo dos pares de látex para compensar.",
+                  "correcta": false,
+                  "feedback": "Dos guantes del material equivocado siguen siendo del material equivocado, y el puño sigue siendo corto."
+                },
+                {
+                  "texto": "No diluyo hasta tener el guante que indica la hoja de datos; aviso para reponer y, si se puede, adelanto otra tarea.",
+                  "correcta": true,
+                  "feedback": "Bien. Con un concentrado que daña la piel y los ojos, el guante no se improvisa. Es un caso claro para avisar y esperar la reposición."
+                }
+              ]
+            },
+            {
+              "enunciado": "Héctor usa sus lentes ópticos para diluir, «porque igual tapan». ¿Qué dice la hoja?",
+              "opciones": [
+                {
+                  "texto": "Que se usan antiparras de protección química, y protector facial adicional al trasvasijar volúmenes grandes.",
+                  "correcta": true,
+                  "feedback": "Así es. Las antiparras sellan alrededor de los ojos. Existen modelos que se pueden usar sobre lentes ópticos; la compatibilidad se revisa."
+                },
+                {
+                  "texto": "Que basta cualquier lente que cubra los ojos de frente, porque las salpicaduras vienen desde el balde, que está abajo y adelante.",
+                  "correcta": false,
+                  "feedback": "Los lentes ópticos no están hechos para salpicaduras químicas: dejan los costados, arriba y abajo descubiertos."
+                },
+                {
+                  "texto": "Que no hace falta protección ocular si hay ventilación.",
+                  "correcta": false,
+                  "feedback": "La ventilación no detiene una salpicadura. Son controles para riesgos distintos."
+                }
+              ]
+            },
+            {
+              "enunciado": "Camila propone agregarle un chorro de cloro al balde «para que limpie más». ¿Qué responde la hoja?",
+              "opciones": [
+                {
+                  "texto": "Que se puede, siempre que el recinto tenga buena ventilación y se use poca cantidad de cloro.",
+                  "correcta": false,
+                  "feedback": "La hoja no lo permite con ninguna condición. Ventilar no vuelve segura una mezcla incompatible."
+                },
+                {
+                  "texto": "Que no se mezcla con productos que contengan cloro.",
+                  "correcta": true,
+                  "feedback": "Correcto. La sección de incompatibilidades está para esto. Mezclar productos de aseo puede generar reacciones peligrosas o liberar gases."
+                },
+                {
+                  "texto": "Que no dice nada al respecto, así que se puede.",
+                  "correcta": false,
+                  "feedback": "Sí lo dice, en «Incompatibilidades». Vale la pena leer esa sección antes que cualquier otra."
+                }
+              ]
+            },
+            {
+              "enunciado": "Una salpicadura le cae a Héctor en el antebrazo, sobre la manga de algodón. ¿Qué corresponde según la hoja?",
+              "opciones": [
+                {
+                  "texto": "Retirar la ropa contaminada, lavar con abundante agua, avisar y buscar atención si la irritación sigue.",
+                  "correcta": true,
+                  "feedback": "Eso dice la hoja. Y después, se revisa por qué la manga no estaba protegida: delantal, manga impermeable o una forma de diluir que evite salpicar."
+                },
+                {
+                  "texto": "Secar la manga con un paño limpio y seguir trabajando, porque si no arde ni pica en el primer minuto el producto no alcanzó a tocar la piel.",
+                  "correcta": false,
+                  "feedback": "Un producto alcalino puede seguir dañando la piel aunque al principio no arda. La manga mojada lo mantiene en contacto con la piel."
+                },
+                {
+                  "texto": "Ponerle crema humectante para calmar la piel.",
+                  "correcta": false,
+                  "feedback": "La crema puede atrapar el producto contra la piel. Primero se retira la ropa contaminada y se lava con agua."
+                }
+              ]
+            }
+          ],
+          "voz": "Esta hoja es de práctica, pero las reales se parecen bastante. No hace falta leerla de corrido como una novela: aprende a ir directo a las secciones que te sirven. Qué peligros tiene, qué no se mezcla, qué protección pide y qué hacer si algo sale mal. Con esas cuatro preguntas resuelves casi todo lo que necesitas antes de abrir el bidón.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "file-text"
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P03",
+          "tipo": "chat",
+          "titulo": "«Es un ratito nomás»",
+          "canal": "whatsapp",
+          "contacto": {
+            "nombre": "Héctor Paredes",
+            "detalle": "Mantención y aseo"
+          },
+          "mensajes": [
+            {
+              "de": "contacto",
+              "texto": "Cami, ¿me ayudas a llenar los bidones con el desengrasante? Estoy atrasado con la limpieza del local.",
+              "hora": "10:12"
+            },
+            {
+              "de": "contacto",
+              "texto": "El dosificador se trabó, así que hay que diluir a mano con el jarro. Los guantes largos están en el armario de EPP.",
+              "hora": "10:12"
+            },
+            {
+              "de": "contacto",
+              "texto": "Las antiparras no te las pongas, se empañan y es un ratito nomás.",
+              "hora": "10:13"
+            }
+          ],
+          "pregunta": "Eres Camila. ¿Qué le respondes a Héctor?",
+          "opciones": [
+            {
+              "texto": "«Dale, voy al tiro».",
+              "correcta": false,
+              "feedback": "Con el dosificador trabado aumenta la posibilidad de salpicar, y sin antiparras los ojos quedan expuestos a un producto que causa lesiones graves."
+            },
+            {
+              "texto": "«Mejor uso mis lentes de sol, no se empañan».",
+              "correcta": false,
+              "feedback": "Los lentes de sol no protegen de salpicaduras: dejan los costados abiertos y no están hechos para químicos."
+            },
+            {
+              "texto": "«Te ayudo, pero con antiparras: sin dosificador vamos a salpicar más. Si se empañan, pedimos otras. ¿Le avisamos a Marisol del dosificador?».",
+              "correcta": true,
+              "feedback": "Bien. Ayudas sin exponerte, explicas por qué y levantas los dos problemas de fondo: el dosificador trabado y unas antiparras que se empañan."
+            },
+            {
+              "texto": "«No puedo, Héctor, eso no me corresponde. Diluir productos es tarea de mantención y yo no estoy capacitada; mejor pídele ayuda a otra persona».",
+              "correcta": false,
+              "feedback": "Negarte deja a Héctor con el mismo problema y con la idea de diluir sin protección. Se puede ayudar de forma segura; y si de verdad no te sientes preparada, lo dices proponiendo una alternativa, como avisar a Marisol."
+            }
+          ],
+          "explicacion": "Cuando un control falla, como el dosificador, el riesgo sube y la protección importa más, no menos. Un EPP incómodo, como unas antiparras que se empañan, no se deja de usar: se informa para cambiarlo por uno que funcione.",
+          "voz": "Héctor no le está pidiendo nada raro a Camila. Está atrasado, el dosificador falló y las antiparras le molestan. Las tres cosas son reales. Fíjate que la respuesta buena no es la más heroica ni la más tajante: es la que ayuda a Héctor y, al mismo tiempo, hace visible lo que está fallando para que alguien lo arregle.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P04",
+          "tipo": "pestanas",
+          "titulo": "Frío y lluvia en el andén",
+          "texto": "En invierno, el andén de Pehuén amanece a pocos grados y muchas veces con lluvia. Revisa cada pestaña.",
+          "pestanas": [
+            {
+              "titulo": "Primero el lugar y el tiempo",
+              "icono": "home",
+              "texto": "Techo o cortavientos en la zona de carga, un lugar temperado cerca para pausas y bebida caliente, y rotación de tareas para no pasar horas seguidas a la intemperie. Esto va antes que la ropa."
+            },
+            {
+              "titulo": "Capas",
+              "icono": "shirt",
+              "texto": "Varias capas abrigan más que una sola gruesa y se pueden ajustar. La capa exterior, impermeable. Sin cordones colgando ni prendas sueltas cerca de máquinas."
+            },
+            {
+              "titulo": "Manos",
+              "icono": "hand",
+              "texto": "Guantes térmicos impermeables con buen agarre. Si se mojan por dentro, se cambian: un guante mojado enfría. Tener un par de recambio ayuda."
+            },
+            {
+              "titulo": "Pies",
+              "icono": "footprints",
+              "texto": "Calzado de seguridad impermeable y calcetines que mantengan el calor. Calcetines secos de recambio en el casillero."
+            },
+            {
+              "titulo": "Señales de alerta",
+              "icono": "bell-ring",
+              "texto": "Dedos entumecidos, blancos o que duelen; temblor fuerte; torpeza para tomar cosas. Si aparecen, ve a un lugar temperado y avisa. No es para aguantar."
+            }
+          ],
+          "voz": "El frío en el andén se combate en ese orden: primero el lugar, después la organización, al final la ropa. Un cortavientos o un techo hacen más que cualquier parka. Y ojo con el agua: la ropa y los guantes mojados sacan el calor del cuerpo mucho más rápido. Si en una mañana de junio los dedos se te ponen blancos o no los sientes, eso no se aguanta, se avisa.",
+          "hablante": "narrador",
+          "profundiza": "La exposición al frío reduce el flujo de sangre hacia manos y pies para conservar el calor del cuerpo. Eso disminuye la sensibilidad y la destreza, aumenta el riesgo de que se resbale una carga o de cometer errores con herramientas, y en exposiciones prolongadas puede dañar los tejidos. La humedad y el viento aceleran mucho la pérdida de calor. Por eso las medidas más efectivas son las que reducen la exposición: proteger la zona de trabajo del viento y la lluvia, organizar pausas en lugares temperados, ofrecer bebidas calientes y rotar las tareas al aire libre. La ropa de trabajo para frío debe permitir moverse, abrigar en capas y tener una capa exterior impermeable, sin elementos que se enganchen. Los guantes para frío deben equilibrar aislamiento y destreza: un guante muy grueso puede llevar a que la persona se lo saque para manipular cargas. La empresa entrega la ropa y los EPP adecuados a las condiciones del trabajo, sin costo, según el DS 594."
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P05",
+          "tipo": "explicacion",
+          "titulo": "Sol en el andén",
+          "texto": "Entre primavera y verano, el andén de Pehuén recibe sol directo a la hora de los despachos. La radiación UV daña la piel y los ojos, se acumula con los años y **traspasa las nubes**.\n\nEn Chile, la **Ley 20.096** establece que los empleadores deben adoptar medidas para proteger a quienes trabajan expuestos a radiación UV. El índice UV del día se informa públicamente y sirve para planificar.",
+          "bloques": [
+            {
+              "icono": "building-2",
+              "titulo": "Sombra y horario",
+              "texto": "Toldo o techo en la zona de carga y despachos más pesados fuera de las horas cercanas al mediodía."
+            },
+            {
+              "icono": "shirt",
+              "titulo": "Ropa y jockey",
+              "texto": "Manga larga liviana y jockey con legionario, que cubre nuca y orejas."
+            },
+            {
+              "icono": "glasses",
+              "titulo": "Ojos",
+              "texto": "Lentes de seguridad con filtro UV. Lentes oscuros sin filtro pueden ser peores."
+            },
+            {
+              "icono": "sun",
+              "titulo": "Bloqueador",
+              "texto": "En la piel que queda expuesta, aplicado antes de salir y repuesto según indica el envase."
+            }
+          ],
+          "nota": {
+            "tipo": "norma",
+            "texto": "La Ley 20.096 es el marco para la protección de trabajadores expuestos a radiación UV. Cómo se aplica en tu trabajo lo define la evaluación de riesgos de la empresa."
+          },
+          "voz": "La radiación ultravioleta tiene una trampa: no la sientes. El calor sí, pero el calor y la radiación no son lo mismo. Un día fresco de primavera, o nublado, puede tener radiación alta. Por eso las medidas parten por la sombra y el horario, siguen con ropa que cubre y el jockey con legionario, y terminan con el bloqueador, que es el complemento, no la base. Y para los ojos, lentes con filtro, porque un lente oscuro sin filtro dilata la pupila y deja entrar más radiación.",
+          "hablante": "narrador",
+          "profundiza": "La Ley 20.096, de 2006, estableció mecanismos de control aplicables a las sustancias agotadoras de la capa de ozono y, entre sus disposiciones, obliga a los empleadores a adoptar medidas para proteger eficazmente a los trabajadores que puedan estar expuestos a radiación ultravioleta. A partir de ese marco, la autoridad sanitaria ha emitido orientaciones técnicas para la gestión del riesgo. El índice UV es una medida de la intensidad de la radiación solar que puede dañar la piel; se publica a diario y aumenta en primavera y verano, en las horas cercanas al mediodía, en altura y sobre superficies que reflejan, como el agua o el cemento claro. Las medidas siguen la jerarquía de controles: sombra permanente o temporal en los lugares de trabajo, programación de las tareas al aire libre fuera de las horas de mayor radiación, ropa que cubra la piel, jockey o sombrero con protección para nuca y orejas, lentes con filtro UV y protector solar en la piel que queda expuesta, aplicado y repuesto según indique el fabricante. La empresa también debe informar a las personas sobre este riesgo."
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P06",
+          "tipo": "clasificar",
+          "titulo": "Proteger la piel empieza lejos de la piel",
+          "estilo": "piramide",
+          "consigna": "Patricia reunió propuestas del equipo para proteger la piel frente a productos de aseo, frío y sol. Ubica cada una en su nivel de la jerarquía de controles.",
+          "categorias": [
+            {
+              "id": "eliminacion",
+              "nombre": "Eliminación",
+              "icono": "trash-2",
+              "descripcion": "La exposición deja de existir para esa tarea."
+            },
+            {
+              "id": "sustitucion",
+              "nombre": "Sustitución",
+              "icono": "refresh-cw",
+              "descripcion": "Un producto o método menos peligroso."
+            },
+            {
+              "id": "ingenieria",
+              "nombre": "Ingeniería",
+              "icono": "wrench",
+              "descripcion": "Cambios físicos en el lugar o en el equipo."
+            },
+            {
+              "id": "administrativo",
+              "nombre": "Administrativo",
+              "icono": "clipboard-list",
+              "descripcion": "Organización, horarios, pausas y procedimientos."
+            },
+            {
+              "id": "epp",
+              "nombre": "EPP",
+              "icono": "shield-check",
+              "descripcion": "Protección personal para lo que queda."
+            }
+          ],
+          "elementos": [
+            {
+              "texto": "Armar los pallets dentro de la bodega techada y llevarlos al andén solo para cargar.",
+              "categoria": "eliminacion",
+              "feedback": "El armado deja de hacerse al sol y a la lluvia. La exposición de esa tarea desaparece; solo queda la carga."
+            },
+            {
+              "texto": "Cambiar el desengrasante concentrado por uno de menor peligrosidad que sirva para la misma limpieza.",
+              "categoria": "sustitucion",
+              "feedback": "Si el producto es menos agresivo para la piel y los ojos, el daño posible baja aunque alguien se salpique."
+            },
+            {
+              "texto": "Reparar el dosificador cerrado de la sala de aseo para no diluir a mano.",
+              "categoria": "ingenieria",
+              "feedback": "El dosificador separa a la persona del producto concentrado. Repararlo es un control de ingeniería."
+            },
+            {
+              "texto": "Instalar un toldo y un cortavientos sobre la zona de carga del andén.",
+              "categoria": "ingenieria",
+              "feedback": "Da sombra en verano y protege del viento y la lluvia en invierno: un mismo cambio físico para dos peligros."
+            },
+            {
+              "texto": "Programar los despachos más largos temprano en verano, lejos del mediodía.",
+              "categoria": "administrativo",
+              "feedback": "Organizar el horario baja la exposición a la radiación más intensa, sin cambiar el lugar."
+            },
+            {
+              "texto": "Pausas cortas en un lugar temperado con bebida caliente en las mañanas de invierno.",
+              "categoria": "administrativo",
+              "feedback": "Las pausas organizadas permiten recuperar calor antes de que se pierda destreza."
+            },
+            {
+              "texto": "Jockey con legionario, lentes con filtro UV y bloqueador para quienes cargan al sol.",
+              "categoria": "epp",
+              "feedback": "Protegen la piel y los ojos de la radiación que queda después del toldo y del horario."
+            },
+            {
+              "texto": "Guantes de nitrilo de puño largo, antiparras y delantal impermeable al diluir.",
+              "categoria": "epp",
+              "feedback": "Son la protección que pide la hoja de datos para el riesgo que queda con el dosificador funcionando."
+            },
+            {
+              "texto": "Rotular todos los envases de productos diluidos y prohibir usar botellas de bebida.",
+              "categoria": "administrativo",
+              "feedback": "Es un procedimiento que evita confusiones y contactos accidentales con el producto."
+            }
+          ],
+          "voz": "Mira cuántas de estas propuestas no tienen nada que ver con lo que la persona se pone encima. Un toldo, un dosificador que funcione, un producto menos agresivo, un horario distinto. Cada una de esas medidas protege la piel de todos, sin depender de que alguien se acuerde del bloqueador. Ubícalas en la pirámide y fíjate cuánto se puede hacer antes de llegar al último escalón.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P07",
+          "tipo": "quiz",
+          "titulo": "Piel, frío y sol en tres situaciones",
+          "texto": "Tres situaciones de una semana normal en Pehuén. Piensa en el peligro y en lo que va antes del EPP.",
+          "preguntas": [
+            {
+              "enunciado": "Es un día nublado de diciembre y Camila va a cargar un camión a la una de la tarde. «Hoy no necesito bloqueador, no hay sol». ¿Qué le dirías?",
+              "opciones": [
+                {
+                  "texto": "Que tiene razón: con nubes la radiación baja harto, y lo que realmente quema es el calor, que hoy casi no se siente.",
+                  "correcta": false,
+                  "feedback": "Las nubes no detienen toda la radiación UV, y a esa hora y en esa época suele ser alta. La sensación de calor no indica la radiación."
+                },
+                {
+                  "texto": "Que basta con que se ponga los lentes de sol que tenga.",
+                  "correcta": false,
+                  "feedback": "Los ojos importan, pero la piel también queda expuesta. Y un lente oscuro sin filtro UV puede ser peor que no usar lentes."
+                },
+                {
+                  "texto": "Que la radiación UV traspasa las nubes: jockey con legionario, lentes con filtro y bloqueador, y si se puede, cargar a otra hora.",
+                  "correcta": true,
+                  "feedback": "Bien. Las medidas no dependen de si se ve el sol, sino de la radiación y de la hora. Y si el despacho se puede reprogramar, mejor."
+                }
+              ]
+            },
+            {
+              "enunciado": "Después de tres semanas lavando baldes, Héctor tiene las manos rojas, secas y con grietas. «Es la piel, uno se acostumbra». ¿Qué corresponde?",
+              "opciones": [
+                {
+                  "texto": "Que lo informe para revisar el producto, el guante y el tiempo de trabajo húmedo, y que consulte si no mejora.",
+                  "correcta": true,
+                  "feedback": "Correcto. Las manos dañadas por el trabajo son una señal. Puede tratarse de una dermatitis de contacto y conviene revisarla a tiempo."
+                },
+                {
+                  "texto": "Que se ponga una buena crema humectante en la noche y antes de entrar al turno, que con eso la piel se protege sola del detergente.",
+                  "correcta": false,
+                  "feedback": "La crema puede ayudar, pero no corrige la causa. Si el contacto sigue, la piel no se recupera."
+                },
+                {
+                  "texto": "Que use guantes de lana debajo de los de goma para que no le roce.",
+                  "correcta": false,
+                  "feedback": "La lana absorbe humedad y la mantiene contra la piel. Si se necesita un guante interior, se elige uno indicado por el fabricante."
+                }
+              ]
+            },
+            {
+              "enunciado": "En una mañana de lluvia, a Camila se le mojaron por dentro los guantes térmicos. Le quedan dos horas en el andén. ¿Qué es lo mejor?",
+              "opciones": [
+                {
+                  "texto": "Seguir con ellos: mojados igual abrigan algo.",
+                  "correcta": false,
+                  "feedback": "Un guante mojado saca el calor de las manos más rápido. Se pierde destreza y aumenta el riesgo de que se resbale una caja."
+                },
+                {
+                  "texto": "Cambiarlos por un par seco y, si no hay, avisar para conseguir uno y hacer una pausa en un lugar temperado.",
+                  "correcta": true,
+                  "feedback": "Bien. Por eso conviene tener guantes de recambio. Y si se mojan seguido, quizás el modelo no es el adecuado para lluvia."
+                },
+                {
+                  "texto": "Sacárselos y trabajar con las manos al aire, que se secan más rápido que el guante y así recupera el tacto para tomar las cajas.",
+                  "correcta": false,
+                  "feedback": "Sin guantes, las manos se enfrían igual y además quedan expuestas a roces y cortes."
+                }
+              ]
+            }
+          ],
+          "voz": "Tres situaciones que pasan en cualquier temporada. En cada una hay una frase que suena razonable: no hay sol, uno se acostumbra, mojados igual abrigan. Esas frases son las que conviene desarmar, con calma y sin retar a nadie. Elige, lee el feedback y fíjate qué dato cambia la decisión.",
+          "hablante": "narrador",
+          "practica_formativa": false,
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-EPP-M04-L03-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar: la piel",
+          "ideas": [
+            "Antes de abrir un producto de aseo concentrado, la hoja de datos de seguridad dice qué no se mezcla, qué guante y qué protección ocular usar, y qué hacer si salpica.",
+            "Frío y sol se controlan primero con el lugar y el horario: techo, cortavientos, toldo, pausas y planificación según el índice UV.",
+            "La ropa, los guantes, el jockey con legionario, los lentes con filtro y el bloqueador protegen lo que queda. Y la piel dañada se informa, no se aguanta."
+          ],
+          "pregunta": "¿Qué producto, tarea o momento del día en tu trabajo expone más tu piel? ¿Qué cambio en el lugar o el horario lo reduciría?",
+          "voz": "La piel es paciente, y eso la hace fácil de olvidar. Ya tienes las preguntas para mirarla: qué la toca, cuánto rato y qué se puede cambiar antes de ponerle algo encima. En el laboratorio vas a juntar todo el módulo en una tarde de lluvia en el andén, con un despacho que no puede esperar.",
+          "hablante": "narrador"
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-EPP-M04-LAB",
+    "titulo": "Caso: despacho con lluvia",
+    "resultado": "Ante un despacho con lluvia, frío, cargas, una máquina que gira y tránsito de vehículos, justificar un conjunto de protección para manos, pies, cuerpo y piel que considere destreza, enganche, compatibilidad y condiciones, y explicar por qué el equipo más robusto no siempre es el adecuado.",
+    "minutos": 50,
+    "fuentes": [
+      "EPP-ISP-GUIAS",
+      "EPP-FABRICANTE",
+      "SST-DS594",
+      "SST-DS44",
+      "SST-DS18"
+    ],
+    "pantallas": [
+      {
+        "id": "SEG360-EPP-M04-LAB-P01",
+        "tipo": "apertura",
+        "titulo": "Martes, 16:10, llueve",
+        "escena": "Martes de junio, 16:10. Llueve fuerte en Quilicura y el camión de Ferretería Los Aromos sale a las 17:30 desde el andén 2. Camila tiene que cargar 24 cajas de artículos de oficina, ocho con esquineros de fleje metálico, y un pallet de bidones de desengrasante. Va con la transpaleta por un andén mojado, a pocos metros de la envolvedora, donde Héctor envuelve otro pedido. En el armario de EPP hay dos cajas de guantes distintas.",
+        "pregunta": "En esta sola tarea, ¿cuántos peligros distintos le quedan a las manos, los pies, el cuerpo y la piel?",
+        "texto": "Antes de entrar al caso, vas a preparar el terreno: leer las fichas de los dos guantes del armario y detectar una combinación que no funciona.\n\nRiesgos que quedan en esta tarea: **cortes** con el fleje, **contacto con el desengrasante** si un bidón gotea o salpica, **frío y lluvia**, **piso resbaladizo**, una **máquina que gira** y un **camión retrocediendo** con poca luz.",
+        "voz": "Este es el tipo de tarde en que se juntan todas las cosas que vimos en el módulo. Hay frío y agua, hay filo, hay un producto que irrita la piel y daña los ojos, hay una máquina que gira y hay un camión que no espera. Fíjate que varias cosas se pueden cambiar antes de pensar en guantes: dónde se carga, por dónde se pasa y quién guía al camión. Lo que quede después es riesgo residual, y ahí entra el EPP. Pero elegirlo bien en estas condiciones no es tan obvio.",
+        "hablante": "narrador",
+        "imagen": "SEG360-IMG054",
+        "icono": "cloud"
+      },
+      {
+        "id": "SEG360-EPP-M04-LAB-P02",
+        "tipo": "ficha",
+        "titulo": "El guante «que aguanta todo»",
+        "texto": "Héctor dice que este es el guante para toda la carga, porque es grueso, firme y abriga. Es la caja B del armario. Lee su ficha.",
+        "ficha": {
+          "titulo": "Ficha de práctica · Guante B, cuero anticorte con forro",
+          "subtitulo": "Guante para manipulación en seco de bordes cortantes · Producto ficticio con fines de aprendizaje",
+          "campos": [
+            {
+              "etiqueta": "Material",
+              "valor": "Cuero con refuerzo anticorte en palma y dedos; forro interior de algodón"
+            },
+            {
+              "etiqueta": "Uso previsto",
+              "valor": "Manipulación en seco de materiales con bordes cortantes, como fleje metálico o planchas"
+            },
+            {
+              "etiqueta": "Resistencia al corte",
+              "valor": "Alta en palma y dedos"
+            },
+            {
+              "etiqueta": "Resistencia a químicos",
+              "valor": "No protege. El cuero absorbe líquidos y puede mantener el producto contra la piel"
+            },
+            {
+              "etiqueta": "Destreza",
+              "valor": "Baja: cuesta tomar objetos chicos, etiquetas o el borde del film"
+            },
+            {
+              "etiqueta": "Con agua o lluvia",
+              "valor": "Absorbe agua; mojado se pone pesado, pierde agarre y deja de abrigar"
+            },
+            {
+              "etiqueta": "Cuidado",
+              "valor": "Secar a la sombra; retirar si está rajado, empapado o contaminado con un producto químico"
+            }
+          ],
+          "advertencias": [
+            "No usar cerca de máquinas con partes que giran o rodillos: puede quedar atrapado.",
+            "No apto para manipular productos químicos ni para trabajo con agua.",
+            "Retirar si está empapado o contaminado con un producto químico."
+          ]
+        },
+        "preguntas": [
+          {
+            "enunciado": "¿Sirve este guante para las ocho cajas con esquineros de fleje?",
+            "opciones": [
+              {
+                "texto": "No: el cuero no resiste el filo; para el fleje conviene el guante de nitrilo, que es más delgado y deja sentir el borde.",
+                "correcta": false,
+                "feedback": "Es al revés. Esta ficha declara resistencia al corte alta en palma y dedos, y un guante delgado de nitrilo se raja con un borde metálico."
+              },
+              {
+                "texto": "Sí, y además sirve para toda la carga, porque si aguanta el fleje aguanta cualquier cosa.",
+                "correcta": false,
+                "feedback": "Para el fleje sí. Pero la ficha dice que no protege de químicos y que mojado pierde agarre: aguantar el corte no lo hace servir para todo."
+              },
+              {
+                "texto": "Sí, para esa parte de la tarea: la ficha lo declara para bordes cortantes, en seco.",
+                "correcta": true,
+                "feedback": "Exacto. Una misma tarea puede pedir dos guantes distintos en momentos distintos. Para el fleje, este es el que corresponde, idealmente bajo el toldo."
+              }
+            ]
+          },
+          {
+            "enunciado": "Uno de los bidones gotea por el costado. ¿Qué dice la ficha sobre tomarlo con este guante?",
+            "opciones": [
+              {
+                "texto": "Que no: el cuero absorbe el producto y lo mantiene contra la piel. Para el bidón corresponde el guante que indique la hoja de datos.",
+                "correcta": true,
+                "feedback": "Bien. Un guante que absorbe el líquido puede ser peor que no tenerlo. Y un bidón que gotea, además, se separa, se señaliza y se avisa."
+              },
+              {
+                "texto": "Que sí, porque el forro interior impide que el líquido llegue a la mano.",
+                "correcta": false,
+                "feedback": "El forro es de algodón: absorbe todavía más. La ficha es clara: no protege de químicos."
+              },
+              {
+                "texto": "Que da lo mismo, porque en el andén el desengrasante viene cerrado y diluido por la lluvia.",
+                "correcta": false,
+                "feedback": "Los bidones vienen concentrados, y la hoja de datos dice que el producto irrita la piel y daña los ojos. Que llueva no lo diluye en tu mano."
+              }
+            ]
+          },
+          {
+            "enunciado": "Camila tiene que ir a buscar el pallet que quedó junto a la envolvedora, que sigue girando. ¿Qué dice la ficha?",
+            "opciones": [
+              {
+                "texto": "Que es ideal para eso, porque el cuero grueso resiste si el film tira de la mano.",
+                "correcta": false,
+                "feedback": "Grueso y firme es justo lo que una pieza que gira puede atrapar. La ficha lo advierte expresamente."
+              },
+              {
+                "texto": "Que no se use cerca de máquinas con partes que giran: puede quedar atrapado.",
+                "correcta": true,
+                "feedback": "Así es. Y fíjate que no se resuelve cambiando de guante: cerca de algo que gira, primero se detiene la máquina."
+              },
+              {
+                "texto": "Nada; eso lo decide cada persona según su experiencia.",
+                "correcta": false,
+                "feedback": "La ficha sí lo dice, en las advertencias. Leerlas es parte de usar el EPP."
+              }
+            ]
+          }
+        ],
+        "voz": "Héctor tiene un buen argumento: es el guante más firme del armario y el que usa todo el mundo en el andén. Para una parte de la tarea, es justo el que corresponde. Pero lee la ficha completa, sobre todo lo que dice del agua, de los químicos y de las máquinas. Vas a ver que aguantar el corte no significa servir para todo.",
+        "hablante": "narrador",
+        "practica_formativa": false,
+        "icono": "hand"
+      },
+      {
+        "id": "SEG360-EPP-M04-LAB-P03",
+        "tipo": "ficha",
+        "titulo": "El guante delgado del armario",
+        "texto": "La caja A del armario tiene guantes de nitrilo de puño largo. Héctor dice que «esos de goma no aguantan nada». Lee su ficha pensando en los bidones y en el fleje.",
+        "ficha": {
+          "titulo": "Ficha de práctica · Guante A, nitrilo de puño largo",
+          "subtitulo": "Guante reutilizable para productos de aseo · Producto ficticio con fines de aprendizaje",
+          "campos": [
+            {
+              "etiqueta": "Material",
+              "valor": "Nitrilo sin forro, puño largo hasta medio antebrazo"
+            },
+            {
+              "etiqueta": "Uso previsto",
+              "valor": "Manipulación de los productos de aseo que figuran en la tabla del fabricante, por un tiempo limitado"
+            },
+            {
+              "etiqueta": "Resistencia química",
+              "valor": "Depende del producto: revisa la tabla del fabricante y la hoja de datos de seguridad del producto"
+            },
+            {
+              "etiqueta": "Resistencia al corte",
+              "valor": "Baja: un borde metálico lo puede rajar"
+            },
+            {
+              "etiqueta": "Destreza",
+              "valor": "Alta: permite tomar objetos chicos y manipular film"
+            },
+            {
+              "etiqueta": "Con agua y frío",
+              "valor": "No absorbe; agarre en mojado regular; no aísla del frío"
+            }
+          ],
+          "advertencias": [
+            "Cámbialo si se raja, se hincha o se pone pegajoso.",
+            "No lo uses para manipular bordes cortantes.",
+            "No lo uses cerca de partes en movimiento."
+          ]
+        },
+        "preguntas": [
+          {
+            "enunciado": "¿Puede Camila usar este guante para tomar un bidón de desengrasante DG-40?",
+            "opciones": [
+              {
+                "texto": "Sí: el nitrilo resiste todos los productos de aseo, así que no hace falta revisar nada más.",
+                "correcta": false,
+                "feedback": "El nitrilo resiste algunos productos y por un tiempo. La ficha manda a revisar la tabla del fabricante y la hoja de datos de ese producto."
+              },
+              {
+                "texto": "Sí, si se pone dos pares, uno encima del otro, para tener más resistencia.",
+                "correcta": false,
+                "feedback": "Doblar el guante no cambia si el material resiste ese producto. Lo que responde la pregunta es la hoja de datos."
+              },
+              {
+                "texto": "Probablemente sí, pero hay que confirmarlo con la hoja de datos del producto y la tabla del fabricante del guante.",
+                "correcta": true,
+                "feedback": "Bien. Esa respuesta está en la hoja de datos. Sin ella, estás suponiendo, y por eso en el caso vale la pena pedirla."
+              }
+            ]
+          },
+          {
+            "enunciado": "¿Y para las cajas con esquineros de fleje?",
+            "opciones": [
+              {
+                "texto": "Sí: como es delgado, Camila siente el borde y lo puede esquivar.",
+                "correcta": false,
+                "feedback": "Sentir el borde no lo hace resistente. La ficha dice resistencia al corte baja: un esquinero lo puede rajar, y un guante rajado tampoco protege del producto."
+              },
+              {
+                "texto": "No: la ficha dice que un borde metálico lo puede rajar. Para el fleje corresponde otro guante.",
+                "correcta": true,
+                "feedback": "Exacto. Cada guante cubre una parte de la tarea: el nitrilo para el producto, si la hoja lo confirma, y otro guante para el fleje."
+              },
+              {
+                "texto": "Sí, si toma las cajas con cuidado y de a una.",
+                "correcta": false,
+                "feedback": "El cuidado ayuda, pero no cambia lo que el guante puede hacer. La ficha es clara."
+              }
+            ]
+          }
+        ],
+        "voz": "Lo que dice Héctor tiene algo de cierto: este guante no aguanta un borde metálico. Pero para otra parte de la tarea, el bidón, es el que tiene sentido, si la hoja de datos lo confirma. Fíjate en la línea de la resistencia química. No dice que sirva para cualquier producto: dice que depende. Esa palabra te va a hacer falta en el caso.",
+        "hablante": "narrador",
+        "practica_formativa": false,
+        "icono": "hand"
+      },
+      {
+        "id": "SEG360-EPP-M04-LAB-P04",
+        "tipo": "decision",
+        "titulo": "Una combinación que no funciona",
+        "situacion": "Ya en el andén, Camila lleva la parka impermeable talla L que le entregaron, aunque pidió M: le queda grande y le tapa el chaleco. Se puso la capucha, con los cordones colgando, y las antiparras se le empañan. Va con los guantes de cuero de la caja B, empapados por la lluvia, y tiene que pasar junto a la envolvedora, que sigue girando, para ir a buscar el pallet.",
+        "pregunta": "¿Qué cambio propones antes de seguir?",
+        "multiple": false,
+        "opciones": [
+          {
+            "texto": "Que se saque la parka para que el chaleco quede a la vista y no cuelgue nada: es solo una hora, y la visibilidad frente al camión es lo más importante.",
+            "correcta": false,
+            "feedback": "Resuelve la visibilidad, pero la deja mojada y con frío por una hora, y con las manos tiesas se pierde fuerza y tacto. Hay formas de tener las dos protecciones."
+          },
+          {
+            "texto": "Que siga así, pero que pase rápido junto a la envolvedora para estar menos rato cerca.",
+            "correcta": false,
+            "feedback": "Pasar rápido con mangas sueltas, cordones colgando y guantes gruesos no cambia lo que la máquina puede tomar. Y con las antiparras empañadas ve menos, no más."
+          },
+          {
+            "texto": "Que cambie los guantes de cuero por los de nitrilo, que no se empapan, y siga igual con lo demás.",
+            "correcta": false,
+            "feedback": "El nitrilo no se empapa, pero el problema sigue: la parka tapa el chaleco, los cordones cuelgan y la máquina gira. Ningún guante se acerca a algo que gira."
+          },
+          {
+            "texto": "Chaleco cerrado por encima de la parka, puños cerrados y cordones adentro, antiparras solo para los bidones y pedir que paren la envolvedora cuando pase. Y avisar a Marisol lo de la talla.",
+            "correcta": true,
+            "feedback": "Eso es. Resuelves la incompatibilidad sin sacrificar una protección por otra, alejas lo que cuelga de la máquina y haces visible lo que falta para la próxima vez."
+          }
+        ],
+        "explicacion": "Cada EPP puede estar bien por separado y fallar en conjunto. La parka grande tapó el chaleco y dejó mangas y cordones sueltos cerca de una máquina, la capucha empañó las antiparras y el guante «más firme» quedó empapado y torpe. Revisar el conjunto antes de empezar es tan importante como elegir cada pieza.",
+        "voz": "Aquí está la incompatibilidad que te quería mostrar. Ninguna de las piezas está mala. La parka es buena para la lluvia, el chaleco es bueno para que te vean y las antiparras son buenas para los bidones. El problema aparece cuando se juntan: una tapa a la otra, y lo que sobra cuelga cerca de una máquina. Yo siempre le pido al equipo que, antes de bajar al andén, se mire entero, no por partes.",
+        "hablante": "patricia",
+        "practica_formativa": false,
+        "icono": "triangle-alert"
+      },
+      {
+        "id": "SEG360-EPP-M04-LAB-P05",
+        "tipo": "caso",
+        "titulo": "Caso: despacho con lluvia",
+        "caso_id": "SEG360-CASO-EPP-1",
+        "texto": "Ahora te toca tomar las decisiones en el andén, junto a Camila. Cada elección cambia lo que pasa después: la protección, el tiempo para el despacho y la confianza del equipo. Si te equivocas a mitad de camino, todavía puedes corregir.",
+        "voz": "Ya leíste las fichas y viste la combinación que falla. Ahora la tarde corre de verdad. Decide pensando en todo el conjunto y en todo el equipo, no solo en la pieza que tienes en la mano.",
+        "hablante": "narrador",
+        "icono": "route"
+      },
+      {
+        "id": "SEG360-EPP-M04-LAB-P06",
+        "tipo": "construir",
+        "titulo": "Tu conjunto, con argumentos",
+        "consigna": "Después del caso, arma y justifica el conjunto de protección para el despacho con lluvia. Escribe con tus palabras, compárate con los criterios y los ejemplos, y reescribe lo que quede débil.",
+        "contexto": "Tarea: cargar 24 cajas de artículos de oficina, ocho con esquineros de fleje metálico, y un pallet con 12 bidones de desengrasante DG-40, que irrita la piel y daña los ojos, en el camión de Ferretería Los Aromos. Llueve, hace ocho grados y está oscureciendo. Se usa la transpaleta por un andén mojado, la envolvedora gira a pocos metros y el camión retrocede. Lo que ya existe: un toldo que cubre la mitad del andén y la parada de emergencia de la envolvedora. En el armario de EPP: guante A, de nitrilo de puño largo; guante B, de cuero anticorte con forro; antiparras y chalecos de alta visibilidad. Camila tiene zapatos de seguridad y una parka impermeable talla L que le queda grande.",
+        "campos": [
+          {
+            "id": "conjunto",
+            "etiqueta": "Tu conjunto de protección, parte por parte",
+            "ayuda": "Manos, pies, cuerpo y visibilidad, ojos y piel. Para cada uno, di qué usarías y en qué momento de la tarea.",
+            "tipo": "texto_largo",
+            "min_palabras": 60
+          },
+          {
+            "id": "robusto",
+            "etiqueta": "Por qué el equipo «más robusto» no siempre es el adecuado",
+            "ayuda": "Usa el ejemplo del guante B u otro del caso. Habla de destreza, talla, enganche o compatibilidad.",
+            "tipo": "texto_largo",
+            "min_palabras": 40
+          },
+          {
+            "id": "antes",
+            "etiqueta": "Qué control va antes del EPP en esta tarea",
+            "ayuda": "Piensa en el lugar, la máquina, el tránsito y el horario.",
+            "tipo": "texto_largo",
+            "min_palabras": 25
+          },
+          {
+            "id": "aviso",
+            "etiqueta": "Qué informarías y a quién",
+            "ayuda": "Lo que falta o no calza, dicho de forma que la jefatura pueda resolverlo.",
+            "tipo": "texto_largo",
+            "min_palabras": 20
+          }
+        ],
+        "criterios": [
+          {
+            "criterio": "El conjunto responde a cada peligro de la tarea",
+            "niveles": [
+              "Nombra EPP sueltos sin relacionarlos con la tarea, o propone «guantes para todo».",
+              "Cubre algunos peligros, pero deja fuera el corte, la visibilidad o el frío.",
+              "Propone protección para manos, pies, cuerpo, visibilidad y ojos acorde a cada peligro.",
+              "Además distingue momentos de la tarea, por ejemplo guante anticorte para las cajas con fleje y nitrilo para los bidones si la hoja de datos lo confirma, sin guantes ni nada colgando cerca de la envolvedora en marcha."
+            ]
+          },
+          {
+            "criterio": "Explica por qué lo más robusto no siempre sirve",
+            "niveles": [
+              "Afirma que lo más grueso o resistente siempre protege más.",
+              "Dice que no siempre sirve, sin dar razones.",
+              "Da una razón concreta: talla, destreza, enganche o incompatibilidad.",
+              "Da varias razones conectadas con la ficha y el caso, y muestra cómo un EPP robusto puede aumentar otro riesgo."
+            ]
+          },
+          {
+            "criterio": "Pone controles antes del EPP",
+            "niveles": [
+              "No menciona controles fuera del EPP.",
+              "Menciona un control general, como «tener cuidado».",
+              "Propone al menos un control concreto: cargar bajo el toldo, detener la envolvedora antes de pasar cerca o que alguien guíe al camión.",
+              "Propone controles concretos sobre el lugar, la máquina y el tránsito, y reconoce el riesgo que queda."
+            ]
+          },
+          {
+            "criterio": "Comunica lo que falta",
+            "niveles": [
+              "No informa nada o solo se queja.",
+              "Informa de forma vaga, sin decir qué falta.",
+              "Dice qué falta o no calza y a quién se lo diría.",
+              "Dice qué falta, por qué importa, a quién y qué propone mientras se resuelve."
+            ]
+          }
+        ],
+        "ejemplo_solido": "Antes del EPP: cargar bajo el toldo, poner conos y señal de piso mojado, que alguien guíe al camión y pasar por el pasillo 2, lejos de la envolvedora; si hay que ir al pallet que está a su lado, Héctor la detiene antes. Pido la hoja de datos del desengrasante y separo cualquier bidón dañado en la bandeja antiderrame. Manos: guante B de cuero anticorte solo para las cajas con fleje, en seco y lejos de la máquina; guante A de nitrilo para los bidones, si la hoja confirma que resiste ese producto. Pies: zapatos de seguridad con puntera y suela antideslizante, porque el piso está mojado. Cuerpo: parka con puños cerrados y cordones adentro, y el chaleco cerrado por encima. Ojos: antiparras cuando manipulo un bidón o hay derrame, bajo el toldo para no necesitar la capucha en ese momento. El guante B es el más robusto, pero mojado pierde agarre, absorbe el producto si un bidón gotea y su ficha advierte que se puede atrapar en partes que giran: me protegería del fleje y me expondría a otros riesgos. A Marisol le diría que la parka talla L me queda grande y había pedido M, que faltan antiparras que no se empañen con la capucha y que el toldo no cubre todo el andén; mientras tanto, cargo bajo el toldo y no paso junto a la envolvedora en marcha.",
+        "ejemplo_debil": "Usaría los guantes de cuero porque son los más gruesos y protegen de todo, la parka para no mojarme y zapatos de seguridad. — Es mejorable porque elige un solo guante para todos los peligros sin revisar el agua, el producto ni el enganche, deja el chaleco tapado por la parka, no menciona controles antes del EPP y no informa lo que falta.",
+        "voz": "Este es el cierre de tu trabajo en el caso, y es una práctica en serio. No se trata de hacer una lista de todo lo que hay en el armario. Se trata de explicar por qué cada pieza está ahí, en qué momento se usa y por qué la más robusta a veces es la que te pone en peligro. Después revisa los criterios con honestidad. Si un campo quedó corto, reescríbelo: esa segunda versión es donde más se aprende.",
+        "hablante": "narrador",
+        "practica_formativa": true,
+        "icono": "pen-line"
+      },
+      {
+        "id": "SEG360-EPP-M04-LAB-P07",
+        "tipo": "cierre_leccion",
+        "titulo": "Lo que te llevas del andén",
+        "ideas": [
+          "Un conjunto de protección se arma por peligro y por momento de la tarea: el mismo despacho puede pedir dos guantes distintos.",
+          "Lo más robusto no siempre es lo adecuado: talla, destreza, enganche y compatibilidad pueden convertir una buena pieza en un problema.",
+          "Antes del EPP están el toldo, la máquina detenida y alguien que guíe al camión. Y lo que falta o no calza se informa a quien puede resolverlo."
+        ],
+        "pregunta": "Piensa en una tarea de tu trabajo con varios peligros a la vez. ¿Tu conjunto de protección funciona como conjunto, o hay piezas que se estorban?",
+        "voz": "Lo que hiciste en este laboratorio es lo que hago yo cada vez que miro una tarea: separar los peligros, ver qué control va primero y después armar la protección como un conjunto. Y fíjate que la mejor respuesta casi nunca fue la pieza más cara o más gruesa. Fue la que calzaba, la que no se enganchaba y la que dejaba trabajar bien.",
+        "hablante": "patricia"
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-EPP-M04-CIERRE",
+    "titulo": "Protección que se arma como conjunto",
+    "texto": "Guantes, calzado, ropa y protección de la piel no se eligen por costumbre ni por lo robusto que se ven: se eligen **por peligro**, por **momento de la tarea** y por **la persona** que los usa.\n\nY antes de cualquiera de ellos, se pregunta qué se puede cambiar en el lugar, la máquina, el producto o el horario.",
+    "voz": "Si miras el módulo completo, la misma idea apareció una y otra vez: el EPP correcto depende del peligro, de la tarea y de la persona, y además tiene que convivir con el resto del equipo. Un guante grueso cerca de una máquina, una chaqueta encima del chaleco o un zapato que lastima son ejemplos de buena protección que falla por no mirar el conjunto. Lleva estas preguntas a tu propio trabajo, y cuando algo no calce, dilo.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Revisa los guantes que usas en tu trabajo y anota para qué peligro sirve cada uno y para cuál no.",
+      "Antes de tu próxima jornada, mírate entero y busca lo que cuelga, lo que te tapa o lo que no es de tu talla.",
+      "Busca la hoja de datos de seguridad de un producto de aseo que uses o veas usar, y revisa qué guante y qué protección ocular indica."
+    ],
+    "siguiente": "En el módulo 5, «Inspección, cuidado y recambio», vas a aprender a revisar un EPP antes de usarlo, a limpiarlo y guardarlo bien, y a decidir con criterios del fabricante cuándo pedir reposición o retirarlo de servicio."
+  },
+  "glosario": [
+    {
+      "termino": "Resistencia al corte",
+      "definicion": "Capacidad de un guante de resistir el filo, declarada por el fabricante con un nivel de desempeño. Resistente no significa a prueba de corte."
+    },
+    {
+      "termino": "Permeación",
+      "definicion": "Paso de un producto químico a través del material de un guante a nivel molecular, aunque el guante se vea intacto. El fabricante informa el tiempo de paso para cada sustancia."
+    },
+    {
+      "termino": "Destreza",
+      "definicion": "Capacidad de manipular objetos con el guante puesto. Suele bajar cuando el guante es más grueso o rígido."
+    },
+    {
+      "termino": "Riesgo de enganche",
+      "definicion": "Posibilidad de que una prenda, un guante, el pelo o un accesorio quede atrapado por una parte en movimiento y arrastre a la persona hacia la máquina."
+    },
+    {
+      "termino": "Puntera de seguridad",
+      "definicion": "Refuerzo del calzado que protege los dedos de impactos y aplastamientos. Puede ser de acero o de material compuesto."
+    },
+    {
+      "termino": "Plantilla antiperforación",
+      "definicion": "Lámina dentro de la suela que impide que clavos u objetos punzantes atraviesen el calzado. No todos los modelos la incluyen."
+    },
+    {
+      "termino": "Material fluorescente",
+      "definicion": "Material de color intenso que destaca con luz de día. Con poca luz casi no se ve."
+    },
+    {
+      "termino": "Cinta reflectante",
+      "definicion": "Material que devuelve la luz hacia su fuente, como los focos de un vehículo. Es lo que hace visible a una persona con poca luz."
+    },
+    {
+      "termino": "Dermatitis de contacto",
+      "definicion": "Inflamación de la piel causada por el contacto con un producto irritante o al que la persona es alérgica. Se manifiesta con enrojecimiento, sequedad, grietas o picazón."
+    },
+    {
+      "termino": "Índice UV",
+      "definicion": "Medida de la intensidad de la radiación ultravioleta solar que puede dañar la piel y los ojos. Se publica a diario y sirve para planificar medidas de protección."
+    }
+  ],
+  "fuentes": [
+    "EPP-ISP-GUIAS",
+    "EPP-FABRICANTE",
+    "EPP-LEY20096",
+    "SST-DS594",
+    "SST-DS44",
+    "SST-DS18"
+  ],
+  "recursos": [
+    "SEG360-REC08"
+  ],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG052",
+      "titulo": "Guantes sobre la mesa de despacho",
+      "uso": "Apertura del módulo y de la lección de guantes: muestra la variedad de guantes disponibles y la pregunta de cuál corresponde a cada tarea.",
+      "prompt": "Realistic editorial photograph, cool morning natural light in a light warehouse dispatch area. A young Chilean woman in her early twenties, warehouse assistant wearing a closed high-visibility vest over a fleece jacket, stands at a dispatch table looking thoughtfully at several pairs of work gloves laid out side by side: knitted gloves with a coated palm, grey cut-resistant gloves, long waterproof PVC gloves, insulated winter gloves and a box of disposable nitrile gloves. In the background, pallets with cardboard boxes and a stretch-wrapping machine at rest with its guard in place. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text, no logos, no brands. Documentary style, not posed.",
+      "alt": "Camila mira varios pares de guantes distintos sobre la mesa de despacho: de uso general, de corte, de PVC largo, térmicos y desechables de nitrilo."
+    },
+    {
+      "id": "SEG360-IMG053",
+      "titulo": "Calzado en el casillero",
+      "uso": "Apertura de la lección de calzado, ropa y alta visibilidad: contraste entre calzado de seguridad y zapatillas de correr, sin mostrar a nadie trabajando con calzado inadecuado.",
+      "prompt": "Realistic editorial photograph, natural light in a small staff locker room of a distribution warehouse. On a wooden bench, a pair of black leather safety boots with visible reinforced toe sits next to a pair of everyday running shoes. A young Chilean woman, seated, is tying the laces of one safety boot while a high-visibility vest and a hooded sweatshirt hang from an open locker behind her. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text, no logos, no brands. Documentary style, not posed.",
+      "alt": "Camila se amarra un zapato de seguridad sentada en una banca del camarín. A su lado hay unas zapatillas de correr y en el casillero cuelgan un chaleco reflectante y un polerón con capucha."
+    },
+    {
+      "id": "SEG360-IMG054",
+      "titulo": "Despacho con lluvia en el andén",
+      "uso": "Apertura del laboratorio: tarde de lluvia en el andén con controles existentes y EPP bien usados, como punto de partida del caso.",
+      "prompt": "Realistic editorial photograph at dusk, light rain, a loading dock of a mid-sized distribution warehouse in Santiago. A partly covered dock area with a metal canopy, yellow floor markings separating a pedestrian walkway, wet concrete reflecting warm lamp light. A delivery truck is parked backed up to the dock with its lights on. A young Chilean woman and a man in his late fifties prepare a stretch-wrapped pallet next to a hand pallet truck; both wear waterproof work jackets with closed high-visibility vests over them, safety boots and work gloves. A pallet wrapping machine with its guard installed is visible behind them. Sober palette of bluish graphite and white with discreet teal-green accents. No readable text, no logos, no brands. Documentary style, not posed.",
+      "alt": "Atardecer con lluvia en el andén. Camila y Héctor preparan un pallet envuelto junto a una transpaleta, con chaquetas impermeables y chalecos reflectantes por encima. Hay techo parcial, demarcación en el piso y un camión estacionado."
+    }
+  ],
+  "minutos_desglose": {
+    "lecciones": 120,
+    "laboratorio": 50,
+    "intro_cierre_recursos": 10
+  }
+}

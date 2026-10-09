@@ -1,0 +1,113 @@
+{
+  "id": "SEG360-VID11",
+  "titulo": "Respirador: por qué el sello manda",
+  "modulo": "SEG360-EPP-M03",
+  "pantalla": "SEG360-EPP-M03-L03-P03",
+  "objetivo": "Explicar por qué un respirador protege solo si el aire pasa por los filtros, reconocer cómo la barba, la talla, la forma de la cara y los lentes pueden romper el sello, y distinguir el chequeo de sello que hace la persona de la prueba de ajuste que hace personal competente.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "wind",
+          "shield-check",
+          "triangle-alert"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "El aire busca el camino fácil",
+      "voz": "Con un respirador puesto, el aire tiene dos caminos: pasar por el filtro o colarse por el borde. Y siempre elige el más fácil.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "respirador",
+        "movimiento": "acercar:sello"
+      },
+      "texto_en_pantalla": "El sello: donde la pieza toca la piel",
+      "voz": "Este borde es el sello. Si queda pegado a la piel en todo su contorno, el aire pasa por los filtros. Si queda una rendija, entra aire de la sala sin filtrar.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "respirador",
+        "movimiento": "acercar:filtros"
+      },
+      "texto_en_pantalla": "Buen filtro con fuga: poca protección",
+      "voz": "Por eso un filtro excelente no compensa una fuga: puedes estar respirando polvo por el costado.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "user",
+          "scan-eye",
+          "glasses"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "Barba, talla, cara y lentes",
+      "voz": "¿Qué rompe el sello? Barba o vello en la zona del borde, aunque sea de un par de días. Una talla que no corresponde, la forma de la cara, una cicatriz, o la patilla de unos lentes.",
+      "hablante": "patricia"
+    },
+    {
+      "n": 5,
+      "visual": {
+        "tipo": "modelo3d",
+        "ref": "respirador",
+        "movimiento": "giro"
+      },
+      "texto_en_pantalla": "No hay una talla para todos",
+      "voz": "Apretar más el arnés no arregla una talla equivocada: deforma la pieza y abre fugas en otro lado. Por eso existen tallas y modelos distintos.",
+      "hablante": "patricia"
+    },
+    {
+      "n": 6,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "user-check",
+          "refresh-cw",
+          "circle-check"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "Tu parte: el chequeo de sello",
+      "voz": "Cada vez que te lo pones, haces el chequeo de sello con presión negativa y positiva, como indica el fabricante. Si entra aire por el borde y no lo corriges, no entras y avisas.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "clipboard-check",
+          "badge-check",
+          "users"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "La prueba de ajuste no es un video",
+      "voz": "Ese chequeo no es la prueba de ajuste. La prueba la hace personal competente, con un procedimiento, para comprobar que ese modelo y esa talla sellan en tu cara. Este video te ayuda a entender el sello, pero no la reemplaza.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 8,
+      "visual": {
+        "tipo": "texto",
+        "ref": "Sin sello, no hay protección"
+      },
+      "texto_en_pantalla": "Sin sello, no hay protección",
+      "voz": "Así que la próxima vez que alguien te diga que un respirador se ve firme, pregunta otra cosa: ¿quién comprobó que me sella?",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: aparecen en secuencia un ícono de viento, uno de escudo y uno de advertencia, mientras el texto dice que el aire busca el camino fácil. Escena 2: un respirador de media cara en 3D se acerca hasta mostrar el borde de goma que toca la piel, marcado como el sello. Escena 3: la cámara se mueve hacia los filtros y una flecha muestra aire que entra por el costado, junto al texto «buen filtro con fuga: poca protección». Escena 4: íconos de una persona, de un rostro escaneado y de unos lentes representan la barba, la talla, la forma de la cara y los lentes como causas de fuga. Escena 5: el respirador gira completo mientras el texto indica que no hay una talla para todos. Escena 6: íconos de una persona verificada y de flechas circulares acompañan la explicación del chequeo de sello que hace cada persona al ponerse el respirador. Escena 7: íconos de un portapapeles con visto bueno, una insignia y un grupo de personas indican que la prueba de ajuste la hace personal competente con un procedimiento y que el video no la reemplaza. Escena 8: en letras grandes aparece la frase «Sin sello, no hay protección»."
+}

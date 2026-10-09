@@ -1,0 +1,243 @@
+{
+  "id": "SEG360",
+  "version": "1.0.0",
+  "titulo": "Seguridad 360: prevención, ciberseguridad y protección personal",
+  "titulo_corto": "Seguridad 360",
+  "institucion": "Dibork Learning",
+  "competencia_general": "Ante situaciones habituales de oficina, atención de público, bodega liviana, zona de equipos y teletrabajo, reconocer peligros físicos, digitales y de exposición personal, priorizarlos y tomar decisiones de control, protección y reporte coherentes con la jerarquía de controles, las políticas de la organización y los límites de su propio rol, comunicándolas por los canales que correspondan.",
+  "publico": "Personas adultas de equipos administrativos, atención de público, comercio, servicios y operaciones generales, con distintos niveles de experiencia digital.",
+  "requisitos": "Lectura funcional en español y manejo básico de un navegador. No requiere experiencia técnica en prevención ni en informática.",
+  "alcance": "Formación preventiva transversal. No reemplaza la inducción específica del puesto, la evaluación presencial de destrezas, la selección profesional de EPP, la habilitación eléctrica, el trabajo en altura, la operación de maquinaria, el manejo de sustancias peligrosas, la formación en primeros auxilios ni los procedimientos propios de cada empresa. No acredita por sí solo el cumplimiento de las obligaciones preventivas del empleador.",
+  "horas_estimadas": { "total": 57, "por_ruta": 19, "nota": "Horas de trabajo efectivo estimadas por actividad (ver Matriz_tiempos.csv). Deben validarse en un piloto." },
+  "rutas": [
+    {
+      "id": "SEG360-R1-SST", "codigo": "SST", "titulo": "Prevención de riesgos y seguridad en el trabajo", "color": "#A64B00",
+      "certificado": "Prevención de riesgos y seguridad en el trabajo",
+      "resultado": "Ante escenas y expedientes de trabajo simulados, identificar peligros, estimar y priorizar riesgos, proponer controles según la jerarquía y comunicar o reportar condiciones e incidentes por el canal que corresponda, sin intervenir fuera de su autorización.",
+      "modulos": [
+        { "id": "SEG360-SST-M01", "titulo": "Cultura preventiva: mirar antes de que pase",
+          "resultado": "Ante un incidente de trabajo simulado, distinguir peligro, exposición y riesgo, separar hechos de suposiciones y decidir a quién informar y cómo, reconociendo las responsabilidades de la empresa, las jefaturas, el Comité Paritario y cada persona.",
+          "lecciones": [
+            { "id": "SEG360-SST-M01-L01", "titulo": "Peligro, exposición y riesgo: tres palabras que cambian decisiones" },
+            { "id": "SEG360-SST-M01-L02", "titulo": "Quién responde por qué: empresa, jefaturas, Comité Paritario y tú" },
+            { "id": "SEG360-SST-M01-L03", "titulo": "Avisar a tiempo: hechos, suposiciones y canales" }
+          ],
+          "laboratorio": { "id": "SEG360-SST-M01-LAB", "titulo": "Laboratorio: la caja que se cayó en el andén" },
+          "imagenes": ["SEG360-IMG007", "SEG360-IMG008", "SEG360-IMG009"], "video": "SEG360-VID01", "caso": null, "escena3d": "bodega" },
+        { "id": "SEG360-SST-M02", "titulo": "Identificar peligros y elegir controles",
+          "resultado": "Ante una escena de trabajo, identificar peligros, estimar su probabilidad y consecuencia con una matriz simplificada, justificar controles según la jerarquía antes de proponer EPP y señalar el riesgo residual y los límites de la evaluación.",
+          "lecciones": [
+            { "id": "SEG360-SST-M02-L01", "titulo": "Mirar el trabajo real, no el del papel" },
+            { "id": "SEG360-SST-M02-L02", "titulo": "Evaluar y priorizar con una matriz simple (y sus límites)" },
+            { "id": "SEG360-SST-M02-L03", "titulo": "Jerarquía de controles y riesgo residual" }
+          ],
+          "laboratorio": { "id": "SEG360-SST-M02-LAB", "titulo": "Laboratorio: inspección de la zona de despacho" },
+          "imagenes": ["SEG360-IMG010", "SEG360-IMG011", "SEG360-IMG012"], "video": null, "caso": null, "escena3d": "bodega" },
+        { "id": "SEG360-SST-M03", "titulo": "Orden, circulación y electricidad de uso común",
+          "resultado": "Ante condiciones de orden, circulación e instalaciones eléctricas de uso común, detectar condiciones anormales y decidir qué no usar, qué aislar según el procedimiento y qué derivar a personal autorizado, sin manipular instalaciones.",
+          "lecciones": [
+            { "id": "SEG360-SST-M03-L01", "titulo": "Pasillos, escaleras y salidas: caídas que se ven venir" },
+            { "id": "SEG360-SST-M03-L02", "titulo": "Cables, enchufes, alargadores y zapatillas eléctricas" },
+            { "id": "SEG360-SST-M03-L03", "titulo": "Equipo dañado: no usar, aislar según protocolo y derivar" }
+          ],
+          "laboratorio": { "id": "SEG360-SST-M03-LAB", "titulo": "Caso: la entrega de las cinco" },
+          "imagenes": ["SEG360-IMG013", "SEG360-IMG014", "SEG360-IMG015"], "video": "SEG360-VID02", "caso": "SEG360-CASO-SST-1", "escena3d": "oficina" },
+        { "id": "SEG360-SST-M04", "titulo": "Herramientas, partes móviles y cargas",
+          "resultado": "Ante dos formas de organizar una tarea con herramientas, máquinas o cargas, comparar sus riesgos, elegir la organización más segura factible y explicar cuándo debe intervenir personal autorizado.",
+          "lecciones": [
+            { "id": "SEG360-SST-M04-L01", "titulo": "Herramientas manuales y eléctricas: elegir, revisar, usar y guardar" },
+            { "id": "SEG360-SST-M04-L02", "titulo": "Partes móviles y resguardos: por qué la reja no se saca" },
+            { "id": "SEG360-SST-M04-L03", "titulo": "Cargas y almacenamiento: la espalda no es una grúa" }
+          ],
+          "laboratorio": { "id": "SEG360-SST-M04-LAB", "titulo": "Laboratorio: dos formas de armar el picking" },
+          "imagenes": ["SEG360-IMG016", "SEG360-IMG017", "SEG360-IMG018"], "video": "SEG360-VID03", "caso": null, "escena3d": "bodega" },
+        { "id": "SEG360-SST-M05", "titulo": "Ergonomía, fatiga y organización del trabajo",
+          "resultado": "Ante un puesto y un proceso de trabajo descritos, proponer cambios factibles en el puesto, la tarea y la organización que reduzcan carga física, fatiga y riesgo psicosocial, sin reducirlo todo a «hacer pausas».",
+          "lecciones": [
+            { "id": "SEG360-SST-M05-L01", "titulo": "Tu puesto: pantalla, silla, alcances y mesón" },
+            { "id": "SEG360-SST-M05-L02", "titulo": "Fatiga, turnos y ritmo: pausas que sí sirven" },
+            { "id": "SEG360-SST-M05-L03", "titulo": "Riesgo psicosocial y coordinación del equipo" }
+          ],
+          "laboratorio": { "id": "SEG360-SST-M05-LAB", "titulo": "Laboratorio: rediseñar la jornada de Daniela" },
+          "imagenes": ["SEG360-IMG019", "SEG360-IMG020", "SEG360-IMG021"], "video": null, "caso": null, "escena3d": "oficina" },
+        { "id": "SEG360-SST-M06", "titulo": "Emergencias, incidentes y aprendizaje",
+          "resultado": "Ante una emergencia o incidente simulado con prioridades concurrentes, activar la respuesta que corresponde a su rol, evacuar o resguardar según el plan y redactar un reporte útil para prevenir, sin buscar culpables.",
+          "lecciones": [
+            { "id": "SEG360-SST-M06-L01", "titulo": "El plan de emergencia: vías, zonas, aviso y roles" },
+            { "id": "SEG360-SST-M06-L02", "titulo": "Incidentes y casi accidentes: contarlos sin miedo" },
+            { "id": "SEG360-SST-M06-L03", "titulo": "Investigar para aprender: causas, no culpables" }
+          ],
+          "laboratorio": { "id": "SEG360-SST-M06-LAB", "titulo": "Caso: humo en la bodega" },
+          "imagenes": ["SEG360-IMG022", "SEG360-IMG023", "SEG360-IMG024"], "video": "SEG360-VID04", "caso": "SEG360-CASO-SST-2", "escena3d": "bodega" }
+      ]
+    },
+    {
+      "id": "SEG360-R2-CIBER", "codigo": "CIBER", "titulo": "Ciberseguridad aplicada al trabajo", "color": "#6240C5",
+      "certificado": "Ciberseguridad aplicada al trabajo",
+      "resultado": "Ante mensajes, accesos, dispositivos, archivos compartidos e incidentes simulados, reconocer señales de riesgo, verificar por canales independientes, aplicar controles proporcionales a la información y su rol, y reportar a tiempo sin ocultar, reenviar el riesgo ni realizar remediaciones no autorizadas.",
+      "modulos": [
+        { "id": "SEG360-CIBER-M01", "titulo": "La información que vale (y por qué te buscan a ti)",
+          "resultado": "Ante documentos y datos de trabajo, clasificarlos según confidencialidad, integridad y disponibilidad, reconocer datos personales y elegir accesos y canales proporcionales a su rol.",
+          "lecciones": [
+            { "id": "SEG360-CIBER-M01-L01", "titulo": "Qué proteges: información, activos y personas" },
+            { "id": "SEG360-CIBER-M01-L02", "titulo": "Confidencialidad, integridad y disponibilidad en un día normal" },
+            { "id": "SEG360-CIBER-M01-L03", "titulo": "Datos personales y responsabilidades según tu rol" }
+          ],
+          "laboratorio": { "id": "SEG360-CIBER-M01-LAB", "titulo": "Laboratorio: ordenar la carpeta compartida de Pehuén" },
+          "imagenes": ["SEG360-IMG025", "SEG360-IMG026", "SEG360-IMG027"], "video": null, "caso": null, "escena3d": "oficina" },
+        { "id": "SEG360-CIBER-M02", "titulo": "Phishing y engaños: la urgencia como anzuelo",
+          "resultado": "Ante correos, mensajes, QR y llamadas simulados, identificar señales de ingeniería social más allá de la ortografía, pedir verificaciones por canales independientes y justificar la acción.",
+          "lecciones": [
+            { "id": "SEG360-CIBER-M02-L01", "titulo": "Ingeniería social: urgencia, autoridad y confianza" },
+            { "id": "SEG360-CIBER-M02-L02", "titulo": "Correo, WhatsApp, SMS, QR y llamadas" },
+            { "id": "SEG360-CIBER-M02-L03", "titulo": "Cuando escribe «el jefe» o «el proveedor»" }
+          ],
+          "laboratorio": { "id": "SEG360-CIBER-M02-LAB", "titulo": "Caso: cambio de cuenta del proveedor" },
+          "imagenes": ["SEG360-IMG028", "SEG360-IMG029", "SEG360-IMG030"], "video": "SEG360-VID05", "caso": "SEG360-CASO-CIBER-1", "escena3d": null },
+        { "id": "SEG360-CIBER-M03", "titulo": "Accesos: contraseñas, gestores, MFA y passkeys",
+          "resultado": "Ante una política de acceso y solicitudes de autenticación simuladas, configurar prácticas razonables de contraseñas, gestor, MFA y passkeys, y responder correctamente a una aprobación MFA inesperada o a una solicitud de recuperación sospechosa.",
+          "lecciones": [
+            { "id": "SEG360-CIBER-M03-L01", "titulo": "Contraseñas únicas y gestores" },
+            { "id": "SEG360-CIBER-M03-L02", "titulo": "MFA y passkeys: qué protegen y qué no" },
+            { "id": "SEG360-CIBER-M03-L03", "titulo": "Recuperar el acceso sin abrirle la puerta a otro" }
+          ],
+          "laboratorio": { "id": "SEG360-CIBER-M03-LAB", "titulo": "Laboratorio: la notificación que nadie pidió" },
+          "imagenes": ["SEG360-IMG031", "SEG360-IMG032", "SEG360-IMG033"], "video": "SEG360-VID06", "caso": null, "escena3d": null },
+        { "id": "SEG360-CIBER-M04", "titulo": "Dispositivos, redes y teletrabajo",
+          "resultado": "Ante una jornada de trabajo móvil o remoto simulada, organizar el uso de dispositivos, redes y medios extraíbles sin exponer credenciales ni saltarse las políticas de la organización.",
+          "lecciones": [
+            { "id": "SEG360-CIBER-M04-L01", "titulo": "Actualizar, bloquear y descargar con criterio" },
+            { "id": "SEG360-CIBER-M04-L02", "titulo": "Pendrives, Wi-Fi y VPN, sin mitos" },
+            { "id": "SEG360-CIBER-M04-L03", "titulo": "Teletrabajo y trabajo en movimiento" }
+          ],
+          "laboratorio": { "id": "SEG360-CIBER-M04-LAB", "titulo": "Laboratorio: el martes de teletrabajo de Javier" },
+          "imagenes": ["SEG360-IMG034", "SEG360-IMG035", "SEG360-IMG036"], "video": null, "caso": null, "escena3d": "teletrabajo" },
+        { "id": "SEG360-CIBER-M05", "titulo": "Compartir archivos, nube e IA con criterio",
+          "resultado": "Ante archivos y espacios colaborativos simulados, corregir permisos excesivos aplicando mínimo privilegio y decidir qué información no debe entregarse a una herramienta de IA no autorizada.",
+          "lecciones": [
+            { "id": "SEG360-CIBER-M05-L01", "titulo": "Permisos y links: lo mínimo necesario" },
+            { "id": "SEG360-CIBER-M05-L02", "titulo": "Nube y colaboración: invitados, versiones y caducidad" },
+            { "id": "SEG360-CIBER-M05-L03", "titulo": "IA en el trabajo: qué sí, qué no y con qué herramienta" }
+          ],
+          "laboratorio": { "id": "SEG360-CIBER-M05-LAB", "titulo": "Laboratorio: auditoría de permisos de la carpeta de Finanzas" },
+          "imagenes": ["SEG360-IMG037", "SEG360-IMG038", "SEG360-IMG039"], "video": "SEG360-VID07", "caso": null, "escena3d": null },
+        { "id": "SEG360-CIBER-M06", "titulo": "Incidentes: avisar temprano vale oro",
+          "resultado": "Ante una sospecha de incidente después de un clic o un acceso extraño, reconocer las señales, reportar de inmediato por el canal correcto, preservar la información útil y apoyar la continuidad, sin ocultar, reenviar el riesgo ni hacer remediaciones no autorizadas.",
+          "lecciones": [
+            { "id": "SEG360-CIBER-M06-L01", "titulo": "Señales de que algo anda mal" },
+            { "id": "SEG360-CIBER-M06-L02", "titulo": "Después del clic: los primeros 15 minutos" },
+            { "id": "SEG360-CIBER-M06-L03", "titulo": "Continuidad, canales alternativos y aprendizaje" }
+          ],
+          "laboratorio": { "id": "SEG360-CIBER-M06-LAB", "titulo": "Caso: el clic del viernes" },
+          "imagenes": ["SEG360-IMG040", "SEG360-IMG041", "SEG360-IMG042"], "video": "SEG360-VID08", "caso": "SEG360-CASO-CIBER-2", "escena3d": null }
+      ]
+    },
+    {
+      "id": "SEG360-R3-EPP", "codigo": "EPP", "titulo": "Protección personal y uso seguro de EPP", "color": "#0B7360",
+      "certificado": "Protección personal y uso seguro de EPP",
+      "resultado": "Ante tareas con riesgos residuales, fichas de EPP y situaciones de uso simuladas, decidir si el EPP propuesto tiene sentido, detectar incompatibilidades y defectos, y comunicar fallas, incomodidades o información faltante, sin tratar el EPP como sustituto del control del riesgo.",
+      "modulos": [
+        { "id": "SEG360-EPP-M01", "titulo": "EPP: la última barrera, no la primera",
+          "resultado": "Ante una tarea y un EPP propuesto, decidir si el EPP tiene sentido o si falta un control previo o un dato esencial, reconociendo requisitos de certificación y cuándo pedir apoyo especializado.",
+          "lecciones": [
+            { "id": "SEG360-EPP-M01-L01", "titulo": "Riesgo residual: por qué el EPP va al final" },
+            { "id": "SEG360-EPP-M01-L02", "titulo": "Elegir por exposición: tarea, peligro y persona" },
+            { "id": "SEG360-EPP-M01-L03", "titulo": "Certificación, entrega y apoyo especializado" }
+          ],
+          "laboratorio": { "id": "SEG360-EPP-M01-LAB", "titulo": "Laboratorio: ¿tiene sentido este EPP?" },
+          "imagenes": ["SEG360-IMG043", "SEG360-IMG044", "SEG360-IMG045"], "video": "SEG360-VID09", "caso": null, "escena3d": "bodega" },
+        { "id": "SEG360-EPP-M02", "titulo": "Cabeza, ojos y rostro",
+          "resultado": "Ante fichas y configuraciones de protección de cabeza, ojos y rostro, comparar sus prestaciones y límites y detectar una combinación que no protege adecuadamente.",
+          "lecciones": [
+            { "id": "SEG360-EPP-M02-L01", "titulo": "El casco por dentro: partes, ajuste y retiro" },
+            { "id": "SEG360-EPP-M02-L02", "titulo": "Ojos y rostro: lentes, antiparras y protector facial" },
+            { "id": "SEG360-EPP-M02-L03", "titulo": "Cuando dos protecciones no se llevan bien" }
+          ],
+          "laboratorio": { "id": "SEG360-EPP-M02-LAB", "titulo": "Laboratorio: tres fichas y una combinación que falla" },
+          "imagenes": ["SEG360-IMG046", "SEG360-IMG047", "SEG360-IMG048"], "video": "SEG360-VID10", "caso": null, "escena3d": null },
+        { "id": "SEG360-EPP-M03", "titulo": "Oídos y vías respiratorias",
+          "resultado": "Ante situaciones de exposición a ruido y a contaminantes del aire, explicar por qué la protección auditiva y respiratoria no se elige por apariencia, qué datos se necesitan y por qué una prueba de ajuste no se reemplaza con un video.",
+          "lecciones": [
+            { "id": "SEG360-EPP-M03-L01", "titulo": "Ruido: cuando el oído no avisa" },
+            { "id": "SEG360-EPP-M03-L02", "titulo": "Protección respiratoria: tipos, filtros y límites" },
+            { "id": "SEG360-EPP-M03-L03", "titulo": "Ajuste y prueba de ajuste: el sello lo es todo" }
+          ],
+          "laboratorio": { "id": "SEG360-EPP-M03-LAB", "titulo": "Laboratorio: la mascarilla que «se ve más firme»" },
+          "imagenes": ["SEG360-IMG049", "SEG360-IMG050", "SEG360-IMG051"], "video": "SEG360-VID11", "caso": null, "escena3d": null },
+        { "id": "SEG360-EPP-M04", "titulo": "Manos, pies, ropa y piel",
+          "resultado": "Ante una tarea con riesgos para manos, pies, cuerpo y piel, justificar un conjunto de protección considerando destreza, riesgo de enganche, compatibilidad y condiciones, sin imponer «guantes para todo».",
+          "lecciones": [
+            { "id": "SEG360-EPP-M04-L01", "titulo": "Guantes: no hay uno para todo" },
+            { "id": "SEG360-EPP-M04-L02", "titulo": "Calzado, ropa de trabajo y alta visibilidad" },
+            { "id": "SEG360-EPP-M04-L03", "titulo": "La piel: productos de aseo, frío y sol" }
+          ],
+          "laboratorio": { "id": "SEG360-EPP-M04-LAB", "titulo": "Caso: despacho con lluvia" },
+          "imagenes": ["SEG360-IMG052", "SEG360-IMG053", "SEG360-IMG054"], "video": null, "caso": "SEG360-CASO-EPP-1", "escena3d": null },
+        { "id": "SEG360-EPP-M05", "titulo": "Inspección, cuidado y recambio",
+          "resultado": "Ante un EPP, su ficha y su registro, inspeccionarlo, registrar defectos y solicitar reposición o retiro de servicio según los criterios del fabricante.",
+          "lecciones": [
+            { "id": "SEG360-EPP-M05-L01", "titulo": "Inspeccionar antes de usar" },
+            { "id": "SEG360-EPP-M05-L02", "titulo": "Limpiar, guardar y transportar" },
+            { "id": "SEG360-EPP-M05-L03", "titulo": "Recambio y retiro de servicio" }
+          ],
+          "laboratorio": { "id": "SEG360-EPP-M05-LAB", "titulo": "Laboratorio: la revisión del lunes en la bodega" },
+          "imagenes": ["SEG360-IMG055", "SEG360-IMG056", "SEG360-IMG057"], "video": "SEG360-VID12", "caso": null, "escena3d": null },
+        { "id": "SEG360-EPP-M06", "titulo": "Uso integrado y comunicación",
+          "resultado": "Ante una tarea con EPP insuficiente, incompatible o incómodo, resolverla proponiendo una alternativa segura, comunicando la falla a supervisión y sin seguir trabajando expuesto.",
+          "lecciones": [
+            { "id": "SEG360-EPP-M06-L01", "titulo": "El conjunto, no la pieza" },
+            { "id": "SEG360-EPP-M06-L02", "titulo": "Me molesta, se rompió, no alcanza: qué hacer" },
+            { "id": "SEG360-EPP-M06-L03", "titulo": "Hablar con la jefatura y el Comité Paritario" }
+          ],
+          "laboratorio": { "id": "SEG360-EPP-M06-LAB", "titulo": "Caso: turno de limpieza profunda" },
+          "imagenes": ["SEG360-IMG058", "SEG360-IMG059", "SEG360-IMG060"], "video": null, "caso": "SEG360-CASO-EPP-2", "escena3d": "bodega" }
+      ]
+    }
+  ],
+  "imagenes_generales": {
+    "SEG360-IMG001": "Portada del curso",
+    "SEG360-IMG002": "Orientación: el equipo de Pehuén",
+    "SEG360-IMG003": "Portada de la ruta SST",
+    "SEG360-IMG004": "Portada de la ruta CIBER",
+    "SEG360-IMG005": "Portada de la ruta EPP",
+    "SEG360-IMG006": "Cierre y certificados"
+  },
+  "imagenes_casos": {
+    "SEG360-CASO-SST-1": ["SEG360-IMG061", "SEG360-IMG062", "SEG360-IMG063"],
+    "SEG360-CASO-SST-2": ["SEG360-IMG064", "SEG360-IMG065", "SEG360-IMG066"],
+    "SEG360-CASO-CIBER-1": ["SEG360-IMG067", "SEG360-IMG068", "SEG360-IMG069"],
+    "SEG360-CASO-CIBER-2": ["SEG360-IMG070", "SEG360-IMG071", "SEG360-IMG072"],
+    "SEG360-CASO-EPP-1": ["SEG360-IMG073", "SEG360-IMG074", "SEG360-IMG075"],
+    "SEG360-CASO-EPP-2": ["SEG360-IMG076", "SEG360-IMG077", "SEG360-IMG078"]
+  },
+  "personajes": {
+    "patricia": "SEG360-PER01", "marisol": "SEG360-PER02", "camila": "SEG360-PER03", "rodrigo": "SEG360-PER04",
+    "daniela": "SEG360-PER05", "javier": "SEG360-PER06", "nacho": "SEG360-PER07", "hector": "SEG360-PER08"
+  },
+  "videos": {
+    "SEG360-VID01": { "modulo": "SEG360-SST-M01", "titulo": "Del peligro al incidente: la cadena que se puede cortar" },
+    "SEG360-VID02": { "modulo": "SEG360-SST-M03", "titulo": "Mirar sin tocar: cables, enchufes y equipos" },
+    "SEG360-VID03": { "modulo": "SEG360-SST-M04", "titulo": "Antes de levantar la caja" },
+    "SEG360-VID04": { "modulo": "SEG360-SST-M06", "titulo": "Del aviso a la zona de seguridad" },
+    "SEG360-VID05": { "modulo": "SEG360-CIBER-M02", "titulo": "Anatomía de un engaño bien escrito" },
+    "SEG360-VID06": { "modulo": "SEG360-CIBER-M03", "titulo": "La notificación que no pediste" },
+    "SEG360-VID07": { "modulo": "SEG360-CIBER-M05", "titulo": "Un link, demasiados permisos" },
+    "SEG360-VID08": { "modulo": "SEG360-CIBER-M06", "titulo": "Los primeros 15 minutos después del clic" },
+    "SEG360-VID09": { "modulo": "SEG360-EPP-M01", "titulo": "El EPP va al final de la fila" },
+    "SEG360-VID10": { "modulo": "SEG360-EPP-M02", "titulo": "Casco: partes y señales de retiro" },
+    "SEG360-VID11": { "modulo": "SEG360-EPP-M03", "titulo": "Respirador: por qué el sello manda" },
+    "SEG360-VID12": { "modulo": "SEG360-EPP-M05", "titulo": "Inspección de EPP en un minuto" }
+  },
+  "recursos": {
+    "SEG360-REC01": "Guía de observación de riesgos",
+    "SEG360-REC02": "Registro de incidentes y casi accidentes",
+    "SEG360-REC03": "Ficha de jerarquía de controles",
+    "SEG360-REC04": "Checklist de teletrabajo seguro",
+    "SEG360-REC05": "Tarjeta de verificación de solicitudes",
+    "SEG360-REC06": "Guía de permisos y datos",
+    "SEG360-REC07": "Ficha de reporte de incidente de ciberseguridad",
+    "SEG360-REC08": "Matriz orientativa de selección de EPP",
+    "SEG360-REC09": "Checklist de inspección y recambio de EPP",
+    "SEG360-REC10": "Plan personal de transferencia"
+  }
+}

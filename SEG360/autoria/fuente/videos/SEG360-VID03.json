@@ -1,0 +1,112 @@
+{
+  "id": "SEG360-VID03",
+  "titulo": "Antes de levantar la caja",
+  "modulo": "SEG360-SST-M04",
+  "pantalla": "SEG360-SST-M04-L03-P03",
+  "objetivo": "Antes de mover una carga, hacerse en orden las preguntas que permiten evitar o reducir el levantamiento manual: peso, necesidad de levantarla, ayudas mecánicas, división de la carga, recorrido y ubicación, y dejar la técnica como última capa.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": {
+        "tipo": "imagen",
+        "ref": "SEG360-IMG018",
+        "movimiento": "zoom_lento"
+      },
+      "texto_en_pantalla": "Antes de levantar, pregunta",
+      "voz": "Antes de agacharte a tomar una caja, hay algunas preguntas que te ahorran mucho más que cualquier técnica. Vamos en orden.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": {
+        "tipo": "escena3d",
+        "ref": "bodega",
+        "foco": "caja_pesada",
+        "movimiento": "recorrido"
+      },
+      "texto_en_pantalla": "¿Cuánto pesa? Lee el rótulo",
+      "voz": "Primero, cuánto pesa. Esta caja dice treinta y dos kilos: sobre el máximo de veinticinco que fija la ley, y de veinte para mujeres y menores de dieciocho. A mano, no va.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "circle-help",
+          "route",
+          "package"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "¿Hay que levantarla de verdad?",
+      "voz": "Segundo, si de verdad hay que levantarla. A veces la caja puede etiquetarse en el piso, o ir directo al pallet sin pasar por la mesa.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": {
+        "tipo": "escena3d",
+        "ref": "bodega",
+        "foco": "transpaleta",
+        "movimiento": "recorrido"
+      },
+      "texto_en_pantalla": "Primero, la ayuda mecánica",
+      "voz": "Tercero, con qué se mueve. Transpaleta, carro o lo que haya. Si está ocupada, se espera o se avisa a la jefatura. Esperar quince minutos no es perder el tiempo.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "box",
+          "users",
+          "megaphone"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "Dividir, pedir ayuda, avisar",
+      "voz": "Cuarto, si se puede dividir la carga o pedir ayuda. Y si llega así todas las semanas, avisar: quizás el proveedor puede mandarla en otro formato.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": {
+        "tipo": "escena3d",
+        "ref": "bodega",
+        "foco": "estante_pesado_arriba",
+        "movimiento": "recorrido"
+      },
+      "texto_en_pantalla": "Lo pesado, abajo o al medio",
+      "voz": "Quinto, dónde está y dónde va. Lo pesado arriba obliga a cargar sobre los hombros cada vez. Reordenar el estante evita miles de levantamientos.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": {
+        "tipo": "iconos",
+        "ref": [
+          "footprints",
+          "hand",
+          "package"
+        ],
+        "movimiento": "secuencia"
+      },
+      "texto_en_pantalla": "Si va a mano: cerca y sin girar",
+      "voz": "Y recién al final, si la carga está dentro de lo permitido y va a mano: camino despejado, pies firmes, la carga cerca del cuerpo, sin girar el tronco y sin tapar la vista.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 8,
+      "visual": {
+        "tipo": "texto",
+        "ref": "La espalda no es una grúa"
+      },
+      "texto_en_pantalla": "La espalda no es una grúa",
+      "voz": "La técnica ayuda, pero llega última. Lo que más protege tu espalda es todo lo que pasó antes de agacharte.",
+      "hablante": "patricia"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: fotografía de un pasillo de bodega con estanterías, una caja grande en el piso y una transpaleta; la imagen se acerca lentamente. Escena 2: recorrido 3D por la bodega de Pehuén hasta una caja en el piso con un rótulo de 32 kilos. Escena 3: aparecen en secuencia los íconos de una pregunta, una ruta y un paquete. Escena 4: la cámara se acerca a la transpaleta estacionada en su zona demarcada. Escena 5: aparecen en secuencia íconos de una caja, de dos personas y de un megáfono. Escena 6: recorrido hasta un estante con cajas pesadas en el nivel superior y cajas livianas abajo. Escena 7: íconos de pies, una mano y un paquete, que representan postura firme, agarre y carga cerca del cuerpo. Escena 8: sobre fondo liso aparece la frase «La espalda no es una grúa» mientras habla Patricia."
+}

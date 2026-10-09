@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID06",
+  "titulo": "La notificación que no pediste",
+  "modulo": "SEG360-CIBER-M03",
+  "pantalla": "SEG360-CIBER-M03-L02-P04",
+  "objetivo": "Reconocer que una solicitud de aprobación MFA no iniciada significa que la contraseña está comprometida, y responder en orden: rechazar, no entregar códigos ni aprobaciones a supuesto soporte, cambiar la clave desde el gestor y avisar con la hora y lo ocurrido, también si se aprobó por error.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG032", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "23:40. No estás iniciando sesión.",
+      "voz": "Son las once y cuarenta de la noche. El celular vibra en el velador: alguien quiere entrar a tu correo de trabajo y te pregunta si eres tú.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["key-round", "unlock", "smartphone"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Tu clave ya no es secreta",
+      "voz": "Esa notificación solo aparece después de que alguien escribió tu contraseña correcta. La primera puerta ya cayó. La segunda eres tú.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "iconos", "ref": ["bell-ring", "bell-ring", "bell-ring", "clock"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Una, otra y otra más",
+      "voz": "A veces llega una, y otra, y otra. Es a propósito: apuestan a que, con sueño o con apuro, apruebes solo para que deje de sonar.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "iconos", "ref": ["phone-call", "message-square", "mail-warning"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Y después, el falso soporte",
+      "voz": "Después puede llegar una llamada, un mensaje o un correo de un supuesto soporte que te pide aprobar o dictar un código para protegerte. Soporte nunca necesita eso.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "escena3d", "ref": "teletrabajo", "foco": "celular_trabajo", "movimiento": "recorrido" },
+      "texto_en_pantalla": "Si no lo pediste: rechaza",
+      "voz": "Si no estás iniciando sesión en ese momento, la respuesta es simple: rechaza. No apruebes para ver qué pasa, ni escribas un número que no ves en tu propia pantalla.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "iconos", "ref": ["refresh-cw", "folder-lock", "send"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Cambia la clave. Avisa con la hora.",
+      "voz": "Luego cambia esa contraseña desde el gestor, nunca desde un link. Y avisa a soporte por el canal de siempre, con la hora y lo que viste.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "¿Aprobaste por error? Avisa igual, ahora." },
+      "texto_en_pantalla": "¿Aprobaste por error? Avisa ahora.",
+      "voz": "Y si ya aprobaste, no te lo guardes. A cualquiera le puede pasar. Avisar a tiempo es lo que permite cerrar la puerta antes de que alguien la use.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: de noche, un hombre recién despertado mira desde la cama un celular que brilla en el velador con una solicitud para aprobar o rechazar un inicio de sesión. Texto: «23:40. No estás iniciando sesión». Escena 2: aparecen en secuencia una llave, un candado abierto y un celular. Texto: «Tu clave ya no es secreta». Escena 3: tres campanas de notificación aparecen una tras otra junto a un reloj. Texto: «Una, otra y otra más». Escena 4: aparecen un teléfono sonando, una burbuja de mensaje y un sobre con señal de alerta. Texto: «Y después, el falso soporte». Escena 5: recorrido por el living de un departamento hasta un celular sobre la mesa con una notificación de aprobación en la pantalla. Texto: «Si no lo pediste: rechaza». Escena 6: aparecen una flecha circular de cambio, una carpeta con candado y un avión de papel de envío. Texto: «Cambia la clave. Avisa con la hora». Escena 7: frase grande en pantalla: «¿Aprobaste por error? Avisa igual, ahora»."
+}

@@ -1,0 +1,80 @@
+{
+  "pantallas": [
+    {
+      "id": "SEG360-ORI-P01", "tipo": "apertura", "titulo": "Bienvenida a Seguridad 360",
+      "escena": "Un martes cualquiera en Pehuén Distribución: Camila prepara un despacho en la bodega, Javier revisa facturas desde su casa y Daniela atiende el local mientras le llegan mensajes al celular. Nada parece urgente. Justo ahí es donde se juega la seguridad.",
+      "pregunta": "¿Qué cosas de tu día de trabajo nunca te has detenido a mirar?",
+      "texto": "Este curso no es una lista de reglas. Es un lugar para practicar decisiones: mirar, detectar, decidir, equivocarte sin costo y volver a intentarlo.",
+      "voz": "Hola, qué bueno tenerte por acá. Durante este curso vas a acompañar a las personas de Pehuén Distribución, una empresa como muchas en Chile, con oficina, local de atención, bodega y gente que trabaja desde la casa. Vas a recorrer sus espacios, revisar sus correos, inspeccionar sus equipos y tomar decisiones en momentos de presión. La idea no es memorizar, sino que salgas mirando tu propio trabajo con otros ojos.",
+      "hablante": "narrador", "imagen": "SEG360-IMG002"
+    },
+    {
+      "id": "SEG360-ORI-P02", "tipo": "pestanas", "titulo": "Tres rutas, tres certificados",
+      "texto": "Puedes hacer una ruta, dos o las tres. Cada una tiene su propia evaluación y su propio certificado.",
+      "pestanas": [
+        { "titulo": "Prevención de riesgos", "icono": "hard-hat", "texto": "Peligros, riesgos y controles en la oficina, el local y la bodega: orden, electricidad de uso común, herramientas, cargas, ergonomía, emergencias y cómo reportar para aprender. **Seis módulos, cerca de 19 horas.**" },
+        { "titulo": "Ciberseguridad", "icono": "shield-check", "texto": "Información, phishing y engaños, contraseñas, MFA y passkeys, dispositivos y teletrabajo, permisos en la nube, uso de IA con datos de trabajo y qué hacer ante un incidente. **Seis módulos, cerca de 19 horas.**" },
+        { "titulo": "Protección personal y EPP", "icono": "glasses", "texto": "Cuándo tiene sentido un EPP, cómo elegirlo, revisarlo, cuidarlo y combinarlo, y qué hacer cuando no alcanza o falla. **Seis módulos, cerca de 19 horas.**" }
+      ],
+      "voz": "Las tres rutas se pueden tomar en cualquier orden. Si trabajas en bodega, quizás te convenga partir por prevención y protección personal. Si pasas el día en el computador, la de ciberseguridad te va a hacer sentido de inmediato. Igual te recomiendo hacer las tres: los riesgos no se ordenan por departamento.",
+      "hablante": "narrador"
+    },
+    {
+      "id": "SEG360-ORI-P03", "tipo": "tarjetas", "titulo": "Las personas de Pehuén",
+      "consigna": "Dales vuelta para conocerlas. Las vas a encontrar en todo el curso.",
+      "tarjetas": [
+        { "frente": "Patricia Soto", "icono": "clipboard-check", "reverso": "Prevencionista de riesgos. Viene tres días a la semana. Su pregunta favorita: «¿qué hizo que eso fuera fácil de hacer mal?»." },
+        { "frente": "Marisol Fuentes", "icono": "warehouse", "reverso": "Jefa de bodega. Conoce cada rincón y vive pendiente del horario de los despachos." },
+        { "frente": "Camila Vergara", "icono": "package", "reverso": "Auxiliar de bodega. Lleva pocas semanas, tiene ganas de hacerlo bien y a veces le cuesta preguntar." },
+        { "frente": "Daniela Rojas", "icono": "store", "reverso": "Encargada del local. Atiende público y pedidos por WhatsApp y correo. Le llegan muchos mensajes al día." },
+        { "frente": "Javier Contreras", "icono": "laptop", "reverso": "Administración y finanzas. Paga a los proveedores y teletrabaja martes y jueves." },
+        { "frente": "Nacho Pérez", "icono": "monitor-cog", "reverso": "Soporte TI. Prefiere que le avisen de más a que le avisen tarde." }
+      ],
+      "voz": "Te presento a algunas personas con las que vas a trabajar. También están Rodrigo, el gerente de operaciones, y Héctor, que se encarga de la mantención y del aseo industrial. Ninguna de estas personas es villana ni descuidada. Se equivocan como cualquiera, bajo presión, con apuro o con poca información. Por eso son un buen espejo.",
+      "hablante": "narrador"
+    },
+    {
+      "id": "SEG360-ORI-P04", "tipo": "proceso", "titulo": "Cómo se avanza",
+      "texto": "Cada módulo sigue un recorrido, pero ninguno es igual a otro.",
+      "pasos": [
+        { "titulo": "Presentación", "icono": "flag", "texto": "Una situación de Pehuén y lo que vas a lograr al terminar." },
+        { "titulo": "Tres lecciones", "icono": "book-open", "texto": "Explicaciones cortas, ejemplos, escenas en 3D, tarjetas, decisiones y comprobaciones. Cada lección termina con tres ideas para llevar." },
+        { "titulo": "Laboratorio o caso", "icono": "flask-conical", "texto": "Una práctica larga: inspeccionar una escena, resolver un caso con decisiones o trabajar en el computador simulado." },
+        { "titulo": "Cierre", "icono": "flag-triangle-right", "texto": "Qué te llevas a tu trabajo y qué sigue." },
+        { "titulo": "Evaluación de la ruta", "icono": "badge-check", "texto": "Al completar los seis módulos: situaciones aplicadas y una tarea que revisa un docente." }
+      ],
+      "voz": "Puedes moverte libremente por el curso y volver a cualquier pantalla. Lo que sí cuenta para completar una lección es que hagas sus actividades: cuando respondes, la pantalla queda marcada con un punto verde junto al título. Tu avance se guarda solo, así que puedes cortar y seguir otro día justo donde quedaste.",
+      "hablante": "narrador"
+    },
+    {
+      "id": "SEG360-ORI-P05", "tipo": "explicacion", "titulo": "Tu forma de estudiar",
+      "texto": "Arriba a la derecha tienes tres botones:\n- **Texto de la narración:** todo lo que dice la voz, para leerlo cuando quieras.\n- **Ajustes:** sonidos, música, subtítulos, tamaño del texto, contraste y movimiento.\n- **Índice:** el mapa completo del curso y tu avance.",
+      "bloques": [
+        { "icono": "volume-2", "titulo": "Con o sin audio", "texto": "Cada pantalla trae su narración, pero todo se puede seguir leyendo. Nada te obliga a escuchar para avanzar." },
+        { "icono": "keyboard", "titulo": "Con teclado", "texto": "Todo funciona con teclado. Alt + flecha derecha pasa a la siguiente pantalla." },
+        { "icono": "rotate-3d", "titulo": "Escenas en 3D", "texto": "Arrastra para mirar alrededor y usa la rueda o dos dedos para acercarte. Siempre hay una versión en lista." }
+      ],
+      "voz": "Estudia como te acomode. Si estás en la micro o en un lugar con ruido, activa los subtítulos o lee el texto de la narración. Si algo se mueve demasiado, en ajustes puedes reducir las animaciones. Y si una escena en tres dimensiones no carga en tu equipo, tienes la misma actividad en formato de lista, justo debajo.",
+      "hablante": "narrador", "icono": "sliders-horizontal"
+    },
+    {
+      "id": "SEG360-ORI-P06", "tipo": "explicacion", "titulo": "Lo que este curso es y lo que no",
+      "texto": "Seguridad 360 es formación preventiva para el trabajo de todos los días. Te prepara para **reconocer, decidir y avisar a tiempo**.\n\nNo reemplaza la inducción de tu puesto, la capacitación práctica en terreno ni las habilitaciones para trabajos de alto riesgo, como electricidad, altura, maquinaria, espacios confinados o sustancias peligrosas. Tampoco reemplaza los procedimientos propios de tu empresa: si algo de aquí se contradice con ellos, pregunta a tu jefatura o a quien asesora en prevención.",
+      "nota": { "tipo": "ojo", "texto": "Pehuén Distribución y sus personas son un caso creado para este curso. Los correos, documentos, fichas y datos de las actividades son de práctica." },
+      "voz": "Una cosa importante antes de empezar. Cuando el curso te muestre un peligro, la respuesta casi nunca va a ser que lo arregles tú. Va a ser que lo reconozcas, que detengas la exposición si es seguro hacerlo, que mantengas distancia y que avises a quien corresponde. Ese es el tipo de decisión que vamos a practicar, una y otra vez.",
+      "hablante": "narrador", "icono": "shield-alert"
+    },
+    {
+      "id": "SEG360-ORI-P07", "tipo": "cierre_leccion", "titulo": "Listo para partir",
+      "texto": "Antes de elegir tu ruta, quédate con esto:",
+      "ideas": [
+        "Vas a practicar decisiones reales, con consecuencias, sin riesgo para nadie.",
+        "Equivocarte aquí es parte del aprendizaje: el feedback te explica por qué.",
+        "Al terminar cada ruta, la evaluación y el certificado son tuyos."
+      ],
+      "pregunta": "¿Qué te gustaría resolver mejor en tu trabajo después de este curso?",
+      "voz": "Eso es todo para empezar. Elige tu primera ruta y nos vemos adentro. Y recuerda: mirar antes de que pase siempre sale más barato que explicar después por qué pasó.",
+      "hablante": "narrador"
+    }
+  ]
+}

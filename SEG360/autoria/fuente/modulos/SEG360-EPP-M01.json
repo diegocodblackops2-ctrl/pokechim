@@ -1,0 +1,1640 @@
+{
+  "id": "SEG360-EPP-M01",
+  "ruta": "EPP",
+  "numero": 1,
+  "titulo": "EPP: la última barrera, no la primera",
+  "subtitulo": "Cuándo un EPP tiene sentido, qué tiene que cumplir y cuándo pedir apoyo especializado",
+  "resultado": "Ante una tarea y un EPP propuesto, decidir si el EPP tiene sentido o si falta un control previo o un dato esencial, reconociendo requisitos de certificación y cuándo pedir apoyo especializado.",
+  "horas": 3.0,
+  "intro": {
+    "id": "SEG360-EPP-M01-INTRO",
+    "titulo": "La caja que llegó el lunes",
+    "texto": "El lunes llegó a la bodega una caja grande: guantes anticorte, lentes de seguridad, chalecos y fonos para todo el equipo de operaciones. Rodrigo la mandó a comprar después de un susto en la envolvedora de pallets. Hubo alivio general.\n\nEn este módulo vas a mirar esa caja con otros ojos: **qué protege de verdad, qué no alcanza a cubrir y qué tendría que haber pasado antes de abrirla**. También vas a ver qué tiene que cumplir un EPP para que puedas confiar en él y cuándo una decisión no te toca a ti, sino a una persona especializada.",
+    "voz": "Empezamos la ruta de protección personal con una caja. Una caja llena de cosas útiles, compradas con buena intención, que llegó a la bodega de Pehuén después de un susto. Lo que vamos a hacer en este módulo es aprender a preguntarle cosas a esa caja. Para qué tarea es cada pieza, qué riesgo cubre y cuál no, qué se hizo antes de llegar a ella. Al final vas a poder mirar cualquier EPP que te entreguen y decir con fundamento si tiene sentido, si falta algo antes o si falta un dato para decidir.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG043",
+    "logros": [
+      "Explicar qué es el riesgo residual y por qué el EPP se ubica al final de la jerarquía de controles.",
+      "Analizar una tarea por exposición, considerando peligro, persona, duración, talla y compatibilidad, antes de aceptar un EPP.",
+      "Reconocer los requisitos básicos de un EPP en Chile y distinguir cuándo la decisión requiere apoyo especializado."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-EPP-M01-L01",
+      "titulo": "Riesgo residual: por qué el EPP va al final",
+      "resultado": "Ante un peligro de la bodega y una propuesta de EPP, distinguir si se aplicaron antes los controles de mayor nivel y explicar qué riesgo residual cubre el EPP.",
+      "minutos": 40,
+      "fuentes": [
+        "SST-DS44",
+        "SST-CT184",
+        "SST-OIT",
+        "SST-DS594",
+        "SST-LEY20949"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M01-L01-P01",
+          "tipo": "apertura",
+          "titulo": "Guantes nuevos para una reja que no está",
+          "escena": "Es jueves en la bodega. Hace dos semanas, a Camila se le enganchó la manga del polerón en la envolvedora de pallets: la reja de protección llevaba meses apoyada en la pared. Alcanzó a soltarse y no pasó a mayores. Hoy llegó la respuesta: una caja con guantes anticorte y lentes para todo el equipo. Héctor la abre y comenta: «Con esto ya estamos cubiertos».",
+          "pregunta": "¿Qué cambió en la envolvedora con esta compra?",
+          "texto": "La compra es real y la preocupación también. Pero la reja sigue apoyada en la pared y la máquina gira igual que antes.\n\nEn esta lección vas a ver por qué el EPP es **la última barrera y no la primera**, y qué significa eso cuando tienes una caja de guantes en la mano y un pallet esperando.",
+          "voz": "Esta escena pasa en muchas empresas, y casi siempre con buena intención. Hubo un susto, alguien se preocupó y compró protección. El detalle es que el peligro sigue exactamente donde estaba. La envolvedora gira igual, la reja sigue en el suelo y ahora además hay guantes cerca de una pieza que gira. Antes de decidir si esa caja ayuda, vamos a ordenar la conversación: qué se puede hacer sobre el peligro, qué riesgo queda después y qué parte de eso le toca al EPP.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG043",
+          "icono": "hard-hat",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Riesgo residual: lo que queda después",
+          "texto": "**Riesgo residual** es el riesgo que queda después de aplicar sobre el peligro todos los controles razonables.\n\nEl EPP está pensado para eso: para lo que queda. No para tapar un peligro que se podía eliminar, cambiar por algo menos peligroso o separar con una barrera.\n\nPor eso la pregunta útil no es «¿qué EPP le pongo?», sino **«¿qué hicimos antes y qué queda?»**.",
+          "bloques": [
+            {
+              "icono": "triangle-alert",
+              "titulo": "Peligro",
+              "texto": "Lo que puede hacer daño: una pieza que gira, la hoja de un cartonero, un producto que salpica."
+            },
+            {
+              "icono": "shield-check",
+              "titulo": "Controles",
+              "texto": "Lo que se hace sobre el peligro y el lugar: eliminar, sustituir, separar con barreras, organizar el trabajo."
+            },
+            {
+              "icono": "hard-hat",
+              "titulo": "Riesgo residual",
+              "texto": "Lo que queda. Ahí entra el EPP, junto con los demás controles, nunca en su reemplazo."
+            }
+          ],
+          "nota": {
+            "tipo": "norma",
+            "texto": "El DS 44 de 2024, que regula la gestión preventiva de los riesgos laborales en Chile, ordena las medidas según la jerarquía de controles. El EPP está al final de esa jerarquía."
+          },
+          "voz": "Piensa en el cartonero. Si lo cambias por uno retráctil, la hoja se esconde sola cuando sueltas el gatillo. Ya bajaste harto el riesgo de corte, y no dependiste de que nadie se acordara de nada. Pero igual queda algo: la hoja sigue siendo filosa mientras cortas. Eso que queda es el riesgo residual. Y para eso sí tiene sentido un guante anticorte. El orden importa porque los controles de arriba trabajan solos, todos los días, y el EPP depende de que la persona lo tenga, le quede bien y lo use bien en cada momento.",
+          "hablante": "narrador",
+          "profundiza": "El Código del Trabajo, en su artículo 184, obliga al empleador a tomar todas las medidas necesarias para proteger eficazmente la vida y la salud de las personas trabajadoras. Eficazmente es la palabra clave: una medida que depende de que cada persona, en cada momento, haga todo bien, es menos eficaz que una que actúa sobre el peligro mismo. El EPP tiene límites que conviene conocer: protege solo a quien lo usa, solo en la zona del cuerpo que cubre y solo si fue bien elegido para ese peligro, está en buen estado y bien ajustado. Además, cuando falla muchas veces no avisa: un guante con un corte pequeño o un fono mal puesto se ven igual que uno que funciona. Nada de esto significa que el EPP sea poco importante. Significa que se elige después de preguntar qué se hizo antes, y que se revisa cada vez que cambia la tarea, la herramienta o el producto. El riesgo residual nunca es cero, y por eso el EPP casi siempre tiene un lugar en el conjunto.",
+          "icono": "shield-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P03",
+          "tipo": "clasificar",
+          "titulo": "Ordena los controles en la pirámide",
+          "estilo": "piramide",
+          "consigna": "Estas son medidas que se propusieron en Pehuén para distintos peligros de la bodega. Lleva cada una al nivel de la jerarquía que le corresponde. Fíjate en qué hace la medida, no en lo cara o lo moderna que parezca.",
+          "categorias": [
+            {
+              "id": "eliminacion",
+              "nombre": "Eliminar",
+              "icono": "trash-2",
+              "descripcion": "Quitar el peligro: que ya no exista en la tarea."
+            },
+            {
+              "id": "sustitucion",
+              "nombre": "Sustituir",
+              "icono": "refresh-cw",
+              "descripcion": "Cambiar algo peligroso por algo que lo sea menos."
+            },
+            {
+              "id": "ingenieria",
+              "nombre": "Controles de ingeniería",
+              "icono": "wrench",
+              "descripcion": "Separar a la persona del peligro con algo físico: rejas, protectores, ayudas mecánicas."
+            },
+            {
+              "id": "administrativo",
+              "nombre": "Controles administrativos",
+              "icono": "clipboard-list",
+              "descripcion": "Cambiar cómo se organiza el trabajo: procedimientos, instrucción, señalización, turnos."
+            },
+            {
+              "id": "epp",
+              "nombre": "EPP",
+              "icono": "hard-hat",
+              "descripcion": "Proteger a la persona del riesgo que queda."
+            }
+          ],
+          "elementos": [
+            {
+              "texto": "Reordenar el estante para que nada de uso diario quede sobre la altura de los hombros, y así nadie tenga que subirse a una escalera.",
+              "categoria": "eliminacion",
+              "feedback": "Aquí no se protege la subida a la escalera: se elimina la necesidad de subir. Si la tarea ya no existe, el peligro tampoco. Es el nivel más alto, y muchas veces sale más barato de lo que parece."
+            },
+            {
+              "texto": "Cambiar el cartonero de hoja fija por uno retráctil.",
+              "categoria": "sustitucion",
+              "feedback": "La tarea de cortar sigue existiendo, pero con una herramienta menos peligrosa: la hoja se esconde sola al soltar el gatillo. Eso es sustituir."
+            },
+            {
+              "texto": "Comprar el producto de aseo listo para usar, en vez del concentrado que hay que diluir.",
+              "categoria": "sustitucion",
+              "feedback": "Se sigue limpiando, pero con un producto menos agresivo y sin el paso de trasvasijar y diluir, que es donde más salpica. Cambiar el producto es sustituir."
+            },
+            {
+              "texto": "Reinstalar la reja de protección de la envolvedora y que la máquina no parta si la reja no está puesta.",
+              "categoria": "ingenieria",
+              "feedback": "Es una barrera física entre la mano y la pieza que gira. No depende de que alguien se acuerde: está ahí siempre. Que la máquina no parta sin la reja lo hace todavía más confiable."
+            },
+            {
+              "texto": "Mover la caja de 32 kilos con transpaleta en vez de cargarla a mano.",
+              "categoria": "ingenieria",
+              "feedback": "La transpaleta es una ayuda mecánica: la fuerza la pone el equipo y no la espalda. Además, 32 kilos supera el máximo de 25 kilos que la Ley 20.949 fija para el manejo manual por una persona."
+            },
+            {
+              "texto": "Establecer que la envolvedora solo la opera personal instruido, con una revisión de la reja antes de partir cada turno.",
+              "categoria": "administrativo",
+              "feedback": "Es una regla sobre cómo se organiza el trabajo. Ayuda, pero depende de que se cumpla cada día. Por eso complementa a la reja, no la reemplaza."
+            },
+            {
+              "texto": "Poner señal de piso mojado y avisar por radio mientras se limpia un derrame.",
+              "categoria": "administrativo",
+              "feedback": "Señalizar y avisar organiza la circulación mientras el peligro existe. No saca el líquido del piso: por eso es un control administrativo."
+            },
+            {
+              "texto": "Usar guantes anticorte al cortar zunchos, además del cortador de zunchos con hoja protegida.",
+              "categoria": "epp",
+              "feedback": "Fíjate en el «además»: primero se cambió la herramienta y el guante cubre lo que queda. Así es como el EPP tiene sentido."
+            },
+            {
+              "texto": "Usar lentes de seguridad con protección lateral al cortar zunchos plásticos tensos.",
+              "categoria": "epp",
+              "feedback": "Un zuncho tenso puede saltar al cortarlo. Pararse al lado y usar un buen cortador reduce el riesgo, y los lentes cubren lo que todavía puede llegar a los ojos."
+            }
+          ],
+          "texto": "Cada medida protege, pero no todas protegen igual. Las de arriba actúan sobre el peligro; las de abajo dependen más de lo que hace cada persona en cada momento.",
+          "voz": "Vamos a armar la pirámide con medidas de verdad, sacadas de la bodega de Pehuén. Ojo con una trampa típica: pensar que lo más caro o lo más tecnológico va arriba. No es así. Reordenar un estante no cuesta casi nada y es de lo más alto que hay, porque hace desaparecer la tarea peligrosa. Pregúntate en cada caso si la medida cambia el peligro, si lo separa de la persona, si organiza el trabajo o si protege el cuerpo de quien está expuesto.",
+          "hablante": "narrador",
+          "profundiza": "La jerarquía de controles ordena las medidas según qué tan confiables son, no según su costo. Eliminar y sustituir actúan sobre el origen del peligro. Los controles de ingeniería ponen algo físico entre la persona y el peligro: una reja, una guarda, un sistema que impide partir la máquina, una transpaleta. Los controles administrativos cambian procedimientos, horarios, señalización o instrucción, y funcionan mientras la organización los sostiene. El EPP protege el cuerpo de una persona y depende de la selección, el ajuste, el estado y el uso. En la práctica casi siempre se combinan varios niveles. Lo que la jerarquía pide es no saltarse los de arriba sin haberlos considerado, y dejar escrito por qué no fueron posibles cuando no lo son.",
+          "icono": "list-checks",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P04",
+          "tipo": "video",
+          "titulo": "El EPP va al final de la fila",
+          "video_id": "SEG360-VID09",
+          "texto": "Un minuto y medio para ver por qué la fila de los controles tiene ese orden, y qué pasa cuando alguien se la salta.",
+          "voz": "Mira este video corto antes de seguir. Fíjate sobre todo en la envolvedora y en el cartonero: son los dos ejemplos que vamos a volver a usar.",
+          "hablante": "narrador",
+          "icono": "route",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P05",
+          "tipo": "mito_realidad",
+          "titulo": "Lo que se escucha en la bodega",
+          "afirmaciones": [
+            {
+              "texto": "Si la empresa entrega EPP, ya cumplió con proteger a su gente.",
+              "es_verdad": false,
+              "explicacion": "Entregar EPP sin costo es una obligación, pero no la única. El deber de proteger eficazmente exige también controlar el riesgo antes, instruir, mantener los equipos y revisar que todo funcione en la práctica."
+            },
+            {
+              "texto": "Un EPP bien elegido igual puede crear un riesgo nuevo.",
+              "es_verdad": true,
+              "explicacion": "Un guante cerca de una pieza que gira puede engancharse y arrastrar la mano. Un fono puede tapar la alarma de retroceso de un camión. Unas antiparras empañadas quitan visión. Por eso el EPP se elige mirando la tarea completa."
+            },
+            {
+              "texto": "Si alguien no usa el EPP, el problema es esa persona.",
+              "es_verdad": false,
+              "explicacion": "Antes de culpar, conviene preguntar qué hizo fácil no usarlo: la talla, el calor, que no se pueda trabajar con él, que no estaba a mano o que la presión del despacho no daba tiempo. Casi siempre hay algo del diseño del trabajo que corregir."
+            },
+            {
+              "texto": "Hay tareas en que el EPP es un control importante, porque el peligro no se puede eliminar del todo.",
+              "es_verdad": true,
+              "explicacion": "Al lavar el andén con hidrolavadora siempre habrá salpicaduras. Se puede delimitar la zona y regular la presión, pero la protección de ojos y cara sigue siendo clave. El EPP no es el primero, pero tampoco es un adorno."
+            },
+            {
+              "texto": "Mientras más EPP te pongas, más protegido estás.",
+              "es_verdad": false,
+              "explicacion": "Sumar piezas sin criterio trae calor, cansancio, menos visibilidad y combinaciones que no funcionan juntas. Lo que protege es el EPP adecuado a la exposición, no la cantidad."
+            },
+            {
+              "texto": "El EPP protege solo a quien lo usa, y solo si está bien puesto.",
+              "es_verdad": true,
+              "explicacion": "Los lentes de Camila no protegen a quien pasa al lado, y un casco con la suspensión suelta no hace bien su trabajo. Los controles de más arriba, en cambio, protegen a todas las personas que pasan por ese lugar."
+            }
+          ],
+          "texto": "Estas frases se dicen con total convicción en muchas bodegas. Algunas son ciertas y otras no. Decide en cada una y lee la explicación: ahí está lo que importa.",
+          "voz": "Estas frases las he escuchado en casi todas las bodegas donde me ha tocado trabajar. Y las dice gente con experiencia, no gente descuidada. Lo que pasa es que el EPP se ve, se toca y se puede contar. Una reja bien puesta no la nota nadie, pero una caja de guantes nuevos se ve en la foto. Por eso es tan fácil pensar que el EPP es la solución. Cuando decidas en cada frase, piensa en una persona concreta de la bodega haciendo una tarea concreta.",
+          "hablante": "patricia",
+          "icono": "message-square",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P06",
+          "tipo": "escena3d",
+          "titulo": "Dónde el EPP sería la respuesta equivocada",
+          "escena": "bodega",
+          "variante": "inicial",
+          "modo": "detectar",
+          "consigna": "Recorre la bodega de Pehuén. Marca lo que es un riesgo y define su prioridad. En cada punto, piensa si un EPP serviría, si iría después de otro control o si no tiene nada que ver. Ojo: no todo lo que ves está mal.",
+          "puntos": [
+            {
+              "objeto": "envolvedora",
+              "titulo": "Envolvedora sin reja",
+              "texto": "La reja de protección de la envolvedora está apoyada en la pared. La máquina se sigue usando todos los días.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Avisar a Marisol para que la máquina quede fuera de uso hasta reinstalar la reja. No se opera sin ella. Guantes no: cerca de una pieza que gira pueden engancharse y empeorar el atrapamiento."
+            },
+            {
+              "objeto": "borde_anden",
+              "titulo": "Borde del andén sin cadena",
+              "texto": "El andén está sin cadena ni demarcación y no hay camión.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Pedir cadena o barrera y demarcación del borde. Un chaleco reflectante no evita caer del andén: el control es físico."
+            },
+            {
+              "objeto": "escalera_tijera",
+              "titulo": "Escalera con peldaño trizado",
+              "texto": "La escalera de tijera tiene un peldaño trizado y está lista para usarse.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Dejarla fuera de uso con tarjeta, avisar y pedir reposición. Ningún EPP compensa una escalera dañada; mejor aún, reordenar para no tener que subir."
+            },
+            {
+              "objeto": "derrame",
+              "titulo": "Derrame de producto de aseo",
+              "texto": "Hay un charco de líquido de aseo junto al estante de productos de limpieza.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Señalizar, avisar y limpiar según el procedimiento y la hoja de datos de seguridad del producto. Los guantes y la protección ocular para limpiar los define esa hoja, no la costumbre. Después, revisar por qué se derramó."
+            },
+            {
+              "objeto": "caja_pesada",
+              "titulo": "Caja de 32 kilos en el piso",
+              "texto": "Una caja rotulada con 32 kilos espera ser llevada al estante.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Moverla con transpaleta o ayuda mecánica: supera el máximo legal de 25 kilos para una persona. Una faja no hace más liviana la caja ni es la solución."
+            },
+            {
+              "objeto": "estante_pesado_arriba",
+              "titulo": "Lo pesado arriba",
+              "texto": "Las cajas pesadas están en el nivel superior del estante y las livianas abajo.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Reubicar lo pesado en los niveles bajos. Un casco no es la respuesta a cajas mal ubicadas: primero se ordena el estante."
+            },
+            {
+              "objeto": "cartonero",
+              "titulo": "Cartonero abierto",
+              "texto": "Un cuchillo cartonero de hoja fija quedó abierto sobre la mesa.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Cerrarlo y guardarlo, y proponer cartoneros retráctiles. Con esa herramienta, un guante anticorte sí tiene sentido para el riesgo que queda al cortar."
+            },
+            {
+              "objeto": "transpaleta",
+              "titulo": "Transpaleta en su lugar",
+              "texto": "La transpaleta manual está estacionada en su zona demarcada.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Está bien. Así no estorba el paso y está a mano para no cargar a pulso."
+            },
+            {
+              "objeto": "extintor",
+              "titulo": "Extintor accesible",
+              "texto": "El extintor está señalizado, accesible y con su tarjeta.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Está como debe. Solo mantener el acceso despejado."
+            },
+            {
+              "objeto": "botiquin",
+              "titulo": "Botiquín señalizado",
+              "texto": "El botiquín está señalizado y a la vista.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Correcto. Que todos sepan dónde está y quién lo repone."
+            }
+          ],
+          "texto": "Esta vez no buscas solo lo que está mal. Para cada riesgo, decide además si el EPP tiene algo que hacer ahí o si sería tapar el problema con una caja de guantes.",
+          "voz": "Recorre la bodega con calma, como si fuera tu primer día y nadie te hubiera dicho que esto es normal. Vas a encontrar varios peligros y también cosas que están bien. Cuando marques algo, no te quedes en el qué; piensa en el cómo. Si tu primera idea para un peligro es un EPP, detente un segundo y pregúntate si hay algo que se pueda hacer antes, sobre el lugar o sobre la herramienta. Esa pausa es exactamente lo que estamos entrenando.",
+          "hablante": "narrador",
+          "profundiza": "Priorizar es decidir qué se atiende primero cuando no se puede todo al mismo tiempo. Las prioridades altas suelen combinar una consecuencia grave posible, como un atrapamiento o una caída de altura, con una exposición frecuente o fácil. Fíjate que en las prioridades más altas de esta bodega el EPP no resuelve nada: la reja, la cadena del andén y la escalera dañada se corrigen con controles físicos o retirando el equipo. En el derrame y el cartonero, en cambio, el EPP sí tiene un papel, pero después de contener, señalizar y cambiar la herramienta. Tu rol en la detección no es reparar: es reconocer, avisar a quien puede decidir y, si corresponde, dejar de usar lo que está dañado según el procedimiento.",
+          "icono": "scan-eye",
+          "practica_formativa": true
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P07",
+          "tipo": "decision",
+          "titulo": "La reja o los guantes",
+          "situacion": "Rodrigo te para en el pasillo: «El técnico que instala la reja de la envolvedora viene recién el mes que viene, está copado. Mientras tanto, ¿le pasamos guantes anticorte a quien la opere y seguimos? Tenemos tres despachos grandes esta semana».",
+          "pregunta": "¿Qué le respondes a Rodrigo?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "Que sí: con guantes anticorte el riesgo queda cubierto mientras llega el técnico.",
+              "correcta": false,
+              "feedback": "El peligro de la envolvedora no es principalmente el corte, sino quedar atrapado: la pieza gira y arrastra. Un guante cerca de esa pieza puede engancharse y tirar la mano hacia adentro. El guante no cubre ese riesgo y puede empeorarlo."
+            },
+            {
+              "texto": "Que la opere solo Héctor, porque conoce la máquina hace años.",
+              "correcta": false,
+              "feedback": "La experiencia de Héctor vale, pero la pieza gira igual para él que para cualquiera. Un descuido de un segundo basta, y la experiencia no reemplaza una barrera física."
+            },
+            {
+              "texto": "Que no se opere sin reja: mientras tanto se envuelve a mano con el dispensador manual, y le pido a Patricia y a Héctor que vean si hay una protección provisoria segura.",
+              "correcta": true,
+              "feedback": "Bien. Detienes la exposición al peligro principal, propones una forma concreta de seguir despachando y llevas la pregunta de la protección provisoria a quienes saben. Envolver a mano toma más tiempo: ese costo es una decisión de la jefatura, no un riesgo que se traspasa a quien opera."
+            },
+            {
+              "texto": "Que se siga usando con cuidado, sin ropa suelta y con las mangas arremangadas.",
+              "correcta": false,
+              "feedback": "No usar ropa suelta cerca de máquinas es una buena práctica siempre. Pero «con cuidado» depende de la atención en cada vuelta, durante todo el turno y con apuro. Frente a un atrapamiento es un control muy débil."
+            }
+          ],
+          "explicacion": "Cuando falta un control de ingeniería, la respuesta no es compensarlo con EPP, sino dejar de exponerse a ese peligro y buscar otra forma de hacer el trabajo mientras se corrige. Tú no decides solo: propones, avisas y llevas la pregunta a quien corresponde.",
+          "texto": "Rodrigo no es descuidado: tiene despachos comprometidos y está buscando una salida rápida. Tu respuesta tiene que proteger y, al mismo tiempo, darle una alternativa para seguir trabajando.",
+          "voz": "Fíjate en cómo viene planteada la pregunta. No es «¿nos arriesgamos?», es «¿le pasamos guantes y seguimos?». Suena responsable, porque incluye protección. Pero la protección no calza con el peligro. Además, hay una presión real: tres despachos grandes. Una buena respuesta no ignora esa presión, le ofrece a Rodrigo otra forma de cumplir. Elige pensando en qué le pasaría a una mano con guante si se acerca a una pieza que gira.",
+          "hablante": "narrador",
+          "icono": "scale",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "ideas": [
+            "El EPP cubre el riesgo residual: lo que queda después de eliminar, sustituir, separar y organizar.",
+            "Un EPP mal pensado puede crear un riesgo nuevo, como un guante cerca de una pieza que gira.",
+            "Si falta un control de más arriba, no se compensa con EPP: se deja de exponer a la persona y se avisa."
+          ],
+          "pregunta": "Piensa en un EPP que usas o ves usar en tu trabajo. ¿Qué se hizo antes sobre ese peligro? Si no lo sabes, ¿a quién se lo podrías preguntar?",
+          "texto": "Antes de seguir, vuelve a la caja que llegó el lunes. Ya sabes qué preguntarle.",
+          "voz": "Llegamos al final de la primera lección. Si te quedas con una sola idea, que sea esta: el EPP es la última barrera, no la primera. No porque sea poco importante, sino porque depende de demasiadas cosas para ser lo único que hay entre una persona y un peligro. En la próxima lección vamos a ver cómo se elige un EPP cuando sí corresponde, mirando la tarea real y a la persona que lo va a usar.",
+          "hablante": "narrador",
+          "icono": "lightbulb",
+          "practica_formativa": false
+        }
+      ]
+    },
+    {
+      "id": "SEG360-EPP-M01-L02",
+      "titulo": "Elegir por exposición: tarea, peligro y persona",
+      "resultado": "Ante una tarea de bodega o local, identificar los datos de exposición necesarios para elegir un EPP: tarea real, peligro, parte del cuerpo, duración, características de la persona, talla y compatibilidad.",
+      "minutos": 40,
+      "fuentes": [
+        "SST-DS44",
+        "SST-DS594",
+        "EPP-ISP-GUIAS",
+        "EPP-FABRICANTE",
+        "EPP-LEY20096"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M01-L02-P01",
+          "tipo": "dialogo",
+          "titulo": "Los guantes que se resbalan",
+          "lineas": [
+            {
+              "personaje": "marisol",
+              "texto": "Camila, ¿y los guantes? Te los entregué el lunes."
+            },
+            {
+              "personaje": "camila",
+              "texto": "Es que se me resbalan las cajas. Son talla L y me quedan grandes. Pensé que era yo la que no sabía usarlos."
+            },
+            {
+              "personaje": "marisol",
+              "texto": "Eran los que quedaban. Revisa en el armario de EPP si hay de otra talla."
+            },
+            {
+              "personaje": "hector",
+              "texto": "Quedan talla M, pero de los gruesos para el frío. Con esos no vas a poder ni despegar la huincha."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "Esperen un poco. Antes de buscar otro guante: Camila, ¿qué haces exactamente con las manos durante el turno?"
+            },
+            {
+              "personaje": "camila",
+              "texto": "Armo cajas, corto huincha con el cartonero, saco productos de aseo del estante. Casi todo el día."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "Y gracias por decirlo. Que un guante no te quede bien no es culpa tuya: es un dato que nos faltaba."
+            }
+          ],
+          "pregunta": "¿Qué habría que aclarar primero, antes de entregarle otro guante a Camila?",
+          "opciones": [
+            {
+              "texto": "La talla correcta: con un guante M se resuelve.",
+              "correcta": false,
+              "feedback": "La talla importa, y mucho. Pero si no sabes contra qué la tiene que proteger el guante, puedes entregarle uno de su talla que igual no sirva para la tarea, como los gruesos del armario."
+            },
+            {
+              "texto": "Qué peligros hay en cada tarea que hace con las manos, cuánto rato y qué destreza necesita, y recién ahí la talla.",
+              "correcta": true,
+              "feedback": "Eso es elegir por exposición. Cortar con cartonero, el roce del cartón y el contacto con productos de aseo son peligros distintos que pueden pedir guantes distintos, o un control previo, como un cartonero retráctil."
+            },
+            {
+              "texto": "Qué guantes usan las otras auxiliares, para que todas tengan lo mismo.",
+              "correcta": false,
+              "feedback": "Uniformar es cómodo para comprar, pero dos personas con el mismo cargo pueden hacer tareas distintas y tener manos distintas. Lo que usan otras no responde a qué necesita Camila."
+            },
+            {
+              "texto": "Cuál es el guante más resistente del catálogo, para ir a la segura.",
+              "correcta": false,
+              "feedback": "Más resistencia suele significar menos destreza y más calor. Si no puede despegar la huincha, se lo va a sacar. Un guante que no se usa no protege."
+            }
+          ],
+          "texto": "Una escena chica que muestra algo grande: el EPP se entregó, pero nadie preguntó para qué tarea ni en qué talla. Lee la conversación y decide qué faltó.",
+          "voz": "Fíjate en lo que dice Camila: «pensé que era yo la que no sabía usarlos». Esa frase se repite mucho, sobre todo en gente nueva a la que le cuesta preguntar. Y fíjate en la respuesta de Patricia. No busca a quién culpar, busca el dato que falta. Ese cambio de pregunta, de «por qué no lo usas» a «qué haces con las manos», es el corazón de esta lección.",
+          "hablante": "narrador",
+          "icono": "users",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P02",
+          "tipo": "proceso",
+          "titulo": "Seis preguntas antes de elegir",
+          "pasos": [
+            {
+              "titulo": "La tarea real",
+              "icono": "clipboard-list",
+              "texto": "¿Qué se hace, con qué herramienta, dónde y cómo? Mira la tarea como ocurre, no como dice la descripción del cargo."
+            },
+            {
+              "titulo": "El peligro y la zona del cuerpo",
+              "icono": "triangle-alert",
+              "texto": "¿Corte, impacto, salpicadura, ruido, polvo, frío, sol? ¿Qué parte del cuerpo queda expuesta y desde dónde viene?"
+            },
+            {
+              "titulo": "Lo que ya se controló",
+              "icono": "shield-check",
+              "texto": "¿Qué se hizo sobre el peligro? Si algo se puede eliminar, sustituir o separar, va primero. El EPP cubre lo que queda."
+            },
+            {
+              "titulo": "Duración y frecuencia",
+              "icono": "clock",
+              "texto": "¿Cinco minutos a la semana o todo el turno? Cambia el nivel de protección necesario y cuánta comodidad hace falta para que se use."
+            },
+            {
+              "titulo": "La persona",
+              "icono": "user-check",
+              "texto": "Talla, lentes ópticos, alergias a materiales, mano dominante y otras condiciones que la persona informe por la vía que corresponda."
+            },
+            {
+              "titulo": "Compatibilidad",
+              "icono": "list-checks",
+              "texto": "¿Funciona junto con otros EPP, con la herramienta y en ese ambiente? ¿Deja ver, oír y moverse lo necesario?"
+            }
+          ],
+          "texto": "Elegir un EPP no parte por un catálogo: parte por estas seis preguntas, en este orden. Si alguna no tiene respuesta, ese es el dato que falta antes de comprar o entregar.",
+          "voz": "Estas seis preguntas son las que hace una prevencionista cuando le piden «un guante para la bodega». Parecen muchas, pero en la práctica se responden rápido si conoces el trabajo, y nadie lo conoce mejor que quien lo hace. Fíjate en la tercera: aparece antes de hablar de la persona y de la talla. Si el peligro se puede reducir, la pregunta por el EPP cambia completamente. Y fíjate en la última, la compatibilidad, que es donde fallan muchas buenas elecciones.",
+          "hablante": "narrador",
+          "profundiza": "La matriz de identificación de peligros y evaluación de riesgos que exige el DS 44 es el lugar donde estas preguntas quedan registradas para cada tarea. Si en tu empresa existe, el EPP que corresponde a cada tarea debería salir de ahí, junto con los controles previos. En la práctica, conviene mirar la tarea mientras se hace y conversar con quienes la hacen: muchas veces la descripción escrita no menciona que también se corta huincha, que se trabaja al sol del andén o que se sube a un pallet para alcanzar algo. La duración importa porque la exposición se acumula y porque la tolerancia a un EPP incómodo baja con las horas. Las características de la persona se consideran con respeto por su privacidad: nadie tiene que explicar en público una condición de salud, basta con que se pueda informar por un canal reservado y que la empresa ofrezca alternativas.",
+          "icono": "route",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P03",
+          "tipo": "modelo3d",
+          "titulo": "Mira a la persona completa",
+          "modelo": "operario",
+          "consigna": "Gira la figura y toca cada zona. En cada una verás qué conviene preguntarse en las tareas de Pehuén antes de pensar en un EPP para esa parte del cuerpo.",
+          "partes": [
+            {
+              "parte": "cabeza",
+              "titulo": "Cabeza",
+              "texto": "¿Puede caer algo desde arriba o hay estructuras bajas con las que golpearse? Antes del casco: ¿se puede ordenar el estante para que lo pesado no quede arriba?"
+            },
+            {
+              "parte": "ojos",
+              "titulo": "Ojos",
+              "texto": "¿Algo puede saltar, salpicar o rebotar? Cortar zunchos, trasvasijar productos y lavar con hidrolavadora son los casos típicos. ¿Desde qué dirección viene?"
+            },
+            {
+              "parte": "oidos",
+              "titulo": "Oídos",
+              "texto": "¿Hay que levantar la voz para hablar a un metro? Eso es una señal, no una medición. Saber cuánto ruido hay y por cuánto rato requiere una evaluación."
+            },
+            {
+              "parte": "vias_respiratorias",
+              "titulo": "Vías respiratorias",
+              "texto": "¿Hay polvo, vapores u olores fuertes? La protección respiratoria no se elige por apariencia: depende del contaminante y se define con apoyo especializado."
+            },
+            {
+              "parte": "manos",
+              "titulo": "Manos",
+              "texto": "¿Corte, roce, productos de aseo, frío? Cada peligro pide algo distinto, y la destreza para la tarea también cuenta."
+            },
+            {
+              "parte": "pies",
+              "titulo": "Pies",
+              "texto": "¿Pueden caer cajas o rodar una transpaleta sobre el pie? ¿Hay piso mojado o resbaloso? La talla y la horma también protegen."
+            },
+            {
+              "parte": "cuerpo",
+              "titulo": "Cuerpo",
+              "texto": "¿Hay tránsito de camiones en el andén, calor, frío o sol? La ropa de trabajo y la alta visibilidad dependen de dónde y cuándo se trabaja."
+            }
+          ],
+          "pregunta": "Camila va a cortar los zunchos plásticos de un pallet recién llegado, que vienen bien tensos. ¿Qué zonas quedan más expuestas en esa tarea?",
+          "opciones": [
+            {
+              "texto": "Cabeza y pies, porque el pallet es pesado.",
+              "correcta": false,
+              "feedback": "El pallet ya está en el piso y Camila no lo va a mover. En esta tarea el peligro está en el zuncho que se suelta y en la herramienta de corte."
+            },
+            {
+              "texto": "Ojos y manos: el zuncho puede saltar al cortarlo y la herramienta corta.",
+              "correcta": true,
+              "feedback": "Así es. Por eso, antes del EPP, conviene un cortador de zunchos con hoja protegida y pararse al lado del zuncho, no frente a él. Después, lentes con protección lateral y guantes para lo que queda."
+            },
+            {
+              "texto": "Oídos y vías respiratorias, por el ambiente de la bodega.",
+              "correcta": false,
+              "feedback": "Pueden ser relevantes en otras tareas, pero cortar zunchos no genera ruido fuerte ni contaminantes en el aire. Elegir por exposición es mirar esta tarea, no la bodega en general."
+            },
+            {
+              "texto": "Todo el cuerpo: lo seguro es el equipo completo.",
+              "correcta": false,
+              "feedback": "Ponerse todo da sensación de seguridad, pero agrega calor, molestias y combinaciones que no siempre funcionan. Lo que protege es cubrir bien las zonas expuestas."
+            }
+          ],
+          "texto": "El EPP se piensa por zonas del cuerpo, pero siempre a partir de una tarea concreta. Gira la figura y revisa qué preguntar en cada zona.",
+          "voz": "Esta figura te va a acompañar en toda la ruta. Hoy no le vamos a poner nada todavía, solo vamos a mirarla. Cada zona tiene sus propias preguntas, y casi siempre la primera no es qué EPP ponerle, sino qué se puede hacer para que el peligro no llegue a esa parte del cuerpo. Fíjate también en las zonas donde el curso te va a decir que la elección no te toca a ti, como las vías respiratorias.",
+          "hablante": "narrador",
+          "icono": "user-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P04",
+          "tipo": "tarjetas",
+          "titulo": "Datos que cambian la elección",
+          "consigna": "Da vuelta cada tarjeta. Cada una es un dato que, si nadie pregunta, puede hacer que un buen EPP no sirva.",
+          "tarjetas": [
+            {
+              "frente": "La talla",
+              "icono": "hand",
+              "reverso": "Un guante grande se resbala y se puede enganchar; uno chico aprieta y cansa la mano. Con los zapatos y los cascos pasa lo mismo. Se prueba, no se adivina."
+            },
+            {
+              "frente": "Lentes ópticos",
+              "icono": "glasses",
+              "reverso": "Los lentes de seguridad comunes no van encima de los ópticos. Existen modelos diseñados para usarse sobre ellos o con graduación. Se conversa con la jefatura."
+            },
+            {
+              "frente": "Alergias a materiales",
+              "icono": "triangle-alert",
+              "reverso": "Hay personas que reaccionan al látex o a otros materiales. Se informa por un canal reservado y se busca una alternativa equivalente."
+            },
+            {
+              "frente": "Calor y humedad",
+              "icono": "thermometer",
+              "reverso": "Lo que funciona en la bodega en julio puede ser insoportable en el andén en enero. Si el EPP da mucho calor, la gente se lo saca: eso es parte del análisis."
+            },
+            {
+              "frente": "Cuánto rato",
+              "icono": "clock",
+              "reverso": "Un fono incómodo se aguanta diez minutos, no ocho horas. En tareas largas, la comodidad no es un lujo: es lo que hace que la protección se mantenga puesta."
+            },
+            {
+              "frente": "Otro EPP al mismo tiempo",
+              "icono": "list-checks",
+              "reverso": "Antiparras con respirador, casco con fono, lentes con protector facial: cada pieza puede funcionar sola y fallar en conjunto. Se prueban juntas."
+            }
+          ],
+          "texto": "El mismo EPP puede proteger bien a una persona y mal a otra. Estos seis datos son los que más seguido se pasan por alto.",
+          "voz": "Cuando reviso por qué alguien no usaba su EPP, casi nunca encuentro flojera. Encuentro un guante dos tallas más grande, unos lentes de seguridad puestos encima de los ópticos que se caían, una persona con alergia que no se atrevió a decirlo delante de todos. Son datos que nadie preguntó. Por eso, cuando te entreguen un EPP, no te quedes callado si algo no calza. Lo que tú sabes de tu cuerpo y de tu tarea es justamente lo que falta para elegir bien.",
+          "hablante": "patricia",
+          "icono": "circle-help",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P05",
+          "tipo": "comparacion",
+          "titulo": "Por cargo o por exposición",
+          "izquierda": {
+            "titulo": "La lista por cargo",
+            "icono": "clipboard-list",
+            "puntos": [
+              "«Auxiliar de bodega: guantes, zapatos de seguridad y chaleco.»",
+              "Se entrega lo mismo a todas las personas del cargo.",
+              "No pregunta qué tarea, cuánto rato ni con qué herramienta.",
+              "Si cambia la tarea o el producto, la lista sigue igual.",
+              "Fácil de comprar y de controlar; difícil que proteja bien a todos."
+            ]
+          },
+          "derecha": {
+            "titulo": "La elección por exposición",
+            "icono": "scan-eye",
+            "puntos": [
+              "Parte de la tarea real y del riesgo que queda después de los controles.",
+              "Considera talla, duración, persona y compatibilidad.",
+              "Puede dar resultados distintos para dos personas con el mismo cargo.",
+              "Se revisa cuando cambia la tarea, la herramienta o el producto.",
+              "Se apoya en la matriz de riesgos y en la ficha del fabricante."
+            ]
+          },
+          "conclusion": "La lista por cargo sirve como punto de partida para comprar, pero la decisión de qué protege a quién se toma mirando la exposición. Dos auxiliares de bodega pueden necesitar cosas distintas si una corta zunchos todo el día y la otra atiende el mesón de retiro de pedidos.",
+          "texto": "Muchas empresas manejan el EPP con una lista por cargo. No está mal como orden administrativo, pero no reemplaza la pregunta por la tarea. Compara las dos formas de decidir.",
+          "voz": "La lista por cargo tiene una ventaja enorme: es simple. Se compra en cantidad, se entrega igual a todos y se controla con una firma. El problema aparece cuando la realidad no calza con la lista. Daniela, del local, también recibe cajas algunas mañanas. Héctor hace tareas que nadie más hace. Camila, en tres semanas, ya ha hecho cinco tareas distintas. Mirar por exposición no significa empezar de cero: significa usar la lista como borrador y ajustarla a lo que pasa de verdad.",
+          "hablante": "narrador",
+          "profundiza": "En la práctica, muchas empresas combinan ambas formas. La matriz de riesgos identifica las tareas y sus peligros; a partir de ella se define un estándar por puesto, que después se ajusta por persona: talla, lentes ópticos, alergias, mano dominante. Lo importante es que la lista se mantenga viva. Si llega un producto de aseo nuevo, si se cambia una herramienta o si alguien empieza a hacer una tarea que antes no hacía, la pregunta por el EPP se vuelve a abrir. Una buena señal de que la lista quedó desactualizada es que la gente empieza a pedir cosas que no están en ella, o deja de usar las que sí están.",
+          "icono": "scale",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P06",
+          "tipo": "quiz",
+          "titulo": "Cuatro tareas, cuatro decisiones",
+          "preguntas": [
+            {
+              "enunciado": "Daniela atiende el local y una vez al día ayuda a recibir cajas livianas de papel. Le entregan el mismo kit de la bodega. ¿Qué tiene más sentido revisar?",
+              "opciones": [
+                {
+                  "texto": "Nada: si es el kit de bodega, está cubierta.",
+                  "correcta": false,
+                  "feedback": "Puede quedar sobreprotegida en algunas cosas y sin protección en otras. El kit de bodega responde a tareas que Daniela no hace."
+                },
+                {
+                  "texto": "Qué hace exactamente al recibir: si corta huincha, si hay bordes filosos y cuánto rato. Puede bastar un guante de manipulación, o ninguno si el corte se hace con una herramienta segura.",
+                  "correcta": true,
+                  "feedback": "Bien. Por exposición, la respuesta puede ser poco EPP y bien elegido. Lo importante es haberlo preguntado."
+                },
+                {
+                  "texto": "Que use guantes anticorte siempre, por si acaso.",
+                  "correcta": false,
+                  "feedback": "Un guante anticorte todo el día en el mesón le quita destreza para el teclado, el dinero y los pedidos. «Por si acaso» no es un criterio de exposición."
+                }
+              ]
+            },
+            {
+              "enunciado": "Camila usa lentes ópticos y le entregan lentes de seguridad estándar para cortar zunchos. ¿Qué corresponde?",
+              "opciones": [
+                {
+                  "texto": "Que se ponga los de seguridad encima de los ópticos.",
+                  "correcta": false,
+                  "feedback": "Los lentes de seguridad estándar no están hechos para ir encima de otros lentes: quedan inestables, dejan espacios y se caen al mirar hacia abajo."
+                },
+                {
+                  "texto": "Que use solo sus lentes ópticos, que igual tapan los ojos.",
+                  "correcta": false,
+                  "feedback": "Los lentes ópticos comunes no están diseñados para resistir impactos ni tienen protección lateral. Pueden incluso romperse con el golpe."
+                },
+                {
+                  "texto": "Avisar y pedir una alternativa compatible: lentes de seguridad diseñados para usarse sobre ópticos, o lentes de seguridad graduados, según lo que defina la empresa.",
+                  "correcta": true,
+                  "feedback": "Así es. El dato de los lentes ópticos cambia la elección, y la empresa debe entregar una protección que funcione para ella."
+                }
+              ]
+            },
+            {
+              "enunciado": "En enero, el andén llega a 32 grados y casi nadie usa el chaleco reflectante grueso que se entregó. ¿Qué haces si te toca opinar?",
+              "opciones": [
+                {
+                  "texto": "Propongo una amonestación para quien no lo use.",
+                  "correcta": false,
+                  "feedback": "Sancionar sin preguntar deja el problema donde estaba: el chaleco sigue siendo insoportable con calor. Patricia preguntaría qué hizo fácil sacárselo."
+                },
+                {
+                  "texto": "Pregunto por qué no se usa y propongo buscar un chaleco más liviano que cumpla la misma función, además de revisar cómo se ordena el tránsito de camiones en el andén.",
+                  "correcta": true,
+                  "feedback": "Bien. Atiendes la causa, que es el calor, sin perder la protección, y miras también los controles de más arriba, como separar el tránsito de personas y camiones."
+                },
+                {
+                  "texto": "Que se use solo cuando hay camiones, para que no moleste tanto.",
+                  "correcta": false,
+                  "feedback": "Suena razonable, pero en el andén los camiones llegan sin aviso y en movimiento. Es una regla difícil de cumplir. Mejor resolver el calor del chaleco."
+                }
+              ]
+            },
+            {
+              "enunciado": "Héctor va a lavar el andén con hidrolavadora toda una mañana. Le entregan lentes de seguridad con protección lateral. ¿Qué falta considerar?",
+              "opciones": [
+                {
+                  "texto": "Que las salpicaduras de agua con suciedad pueden entrar por los bordes de los lentes, y que la tarea es larga. Probablemente necesite antiparras y protector facial, según las fichas.",
+                  "correcta": true,
+                  "feedback": "Así es. El tipo de peligro, salpicaduras que rebotan desde el piso, y la duración cambian la elección. Lo verás en detalle en el próximo módulo."
+                },
+                {
+                  "texto": "Nada, los lentes con protección lateral sirven para todo.",
+                  "correcta": false,
+                  "feedback": "Los lentes con protección lateral protegen bien de partículas que vienen de frente o del lado, pero no sellan alrededor del ojo. Con agua que rebota, no alcanzan."
+                },
+                {
+                  "texto": "Que se los cambie cada media hora para que no se empañen.",
+                  "correcta": false,
+                  "feedback": "El empañamiento es un problema real, pero no es lo principal aquí. Primero hay que tener una protección adecuada a las salpicaduras."
+                }
+              ]
+            }
+          ],
+          "texto": "Cuatro situaciones de Pehuén. En cada una, aplica las seis preguntas: tarea, peligro, lo ya controlado, duración, persona y compatibilidad.",
+          "voz": "Ahora te toca a ti. No vas a encontrar respuestas del tipo «siempre guantes» o «nunca lentes». Vas a encontrar personas distintas haciendo tareas distintas. Antes de elegir, imagina a cada una trabajando: dónde está, qué tiene en las manos, cuánto rato lleva, qué calor hace. Si una opción te suena bien pero no responde a la tarea concreta, desconfía.",
+          "hablante": "narrador",
+          "icono": "clipboard-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P07",
+          "tipo": "explicacion",
+          "titulo": "Que te quede bien también protege",
+          "texto": "Un EPP que no te queda bien protege menos y, además, se deja de usar. La talla, el ajuste y la comodidad **son parte de la protección**, no un detalle.\n\nSi algo molesta, aprieta, se resbala o se empaña, eso es información útil para la empresa. Decirlo a tiempo es lo que permite corregir la elección.",
+          "bloques": [
+            {
+              "icono": "hand",
+              "titulo": "Prueba",
+              "texto": "Pídelo en tu talla y pruébalo haciendo la tarea, no parado frente al mesón de entrega."
+            },
+            {
+              "icono": "megaphone",
+              "titulo": "Avisa",
+              "texto": "Si algo no calza, dilo a tu jefatura o a la prevencionista. No es reclamo: es un dato."
+            },
+            {
+              "icono": "scissors",
+              "titulo": "No lo adaptes",
+              "texto": "Cortar, perforar o modificar un EPP cambia cómo protege. Si no sirve así, se pide otro."
+            }
+          ],
+          "nota": {
+            "tipo": "terreno",
+            "texto": "Si te entregan un EPP sin preguntarte la talla, pregunta tú. Es más fácil cambiarlo el primer día que después de tres semanas usándolo mal."
+          },
+          "voz": "Cuando Camila me dijo que pensaba que era ella la que no sabía usar los guantes, me acordé de muchas otras personas. La gente nueva suele creer que el problema es suyo y se acomoda como puede. Se arremanga el guante, se aprieta el casco con un elástico, se sube los lentes cuando se empañan. Todo eso es improvisar sobre un equipo que tiene que protegerte. Lo que yo pido es más simple: que me lo digan. Y mi trabajo, y el de la empresa, es hacer fácil que se diga.",
+          "hablante": "patricia",
+          "profundiza": "La comodidad y el ajuste se relacionan directamente con la protección. Un guante que sobra en las puntas de los dedos reduce el agarre y puede engancharse. Un casco que se mueve no queda en su lugar en el momento del golpe. Un fono que no sella bien deja pasar más ruido del que indica su ficha. Por eso los fabricantes entregan tablas de tallas e instrucciones de ajuste, y conviene que la entrega incluya una prueba con la persona. Cuando un EPP genera molestias persistentes, como dolor de cabeza, irritación de la piel o presión detrás de las orejas, no se trata de aguantar: se informa y se buscan alternativas equivalentes. Si la molestia aparece después de usarlo por un tiempo, también sirve informarlo, porque puede indicar que el modelo no es adecuado para la duración de la tarea.",
+          "imagen": "SEG360-IMG044",
+          "icono": "user-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "ideas": [
+            "El EPP se elige por exposición: tarea real, peligro, zona del cuerpo, lo ya controlado, duración, persona y compatibilidad.",
+            "Dos personas con el mismo cargo pueden necesitar protecciones distintas.",
+            "Si un EPP no te queda bien o molesta, avisar es parte de usarlo bien."
+          ],
+          "pregunta": "Elige una tarea que haces seguido. ¿Cuál de las seis preguntas sería más difícil de responder hoy, y quién en tu trabajo tiene esa respuesta?",
+          "texto": "Ya sabes cómo se piensa una elección. Ahora falta ver qué tiene que cumplir el EPP que llega y hasta dónde puedes decidir tú.",
+          "voz": "Cerramos la segunda lección. Lo más importante que viste es que elegir un EPP es un trabajo de preguntas, no de catálogo. Y que varias de esas preguntas solo las puede responder la persona que hace la tarea. En la próxima lección vamos a ver qué tiene que cumplir un EPP para que puedas confiar en él, quién lo paga y cuándo la decisión ya no es tuya ni de tu jefatura, sino de alguien especializado.",
+          "hablante": "narrador",
+          "icono": "lightbulb",
+          "practica_formativa": false
+        }
+      ]
+    },
+    {
+      "id": "SEG360-EPP-M01-L03",
+      "titulo": "Certificación, entrega y apoyo especializado",
+      "resultado": "Ante un EPP que llega a la bodega o una tarea con protecciones especiales, reconocer los requisitos de entrega sin costo, certificación de calidad e instrucciones del fabricante, y derivar a apoyo especializado lo que excede el alcance del curso.",
+      "minutos": 35,
+      "fuentes": [
+        "SST-DS594",
+        "SST-DS18",
+        "SST-ISP-EPP",
+        "EPP-ISP-GUIAS",
+        "EPP-FABRICANTE",
+        "SST-LEY16744"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-EPP-M01-L03-P01",
+          "tipo": "apertura",
+          "titulo": "Iguales y a mitad de precio",
+          "escena": "Héctor llega con una bolsa de lentes de seguridad comprados en una tienda del barrio. «Son iguales a los que nos dan y salen a mitad de precio», dice, y los deja en el mesón. No traen folleto ni marcas en el marco. Esa misma tarde, Camila te cuenta que un compañero del turno tarde le dijo que en Pehuén cada uno se compra sus zapatos de seguridad.",
+          "pregunta": "¿Qué tiene que cumplir un EPP, y quién lo pone, para que puedas confiar en él?",
+          "texto": "Dos situaciones de un mismo día. Una sobre **qué EPP sirve** y otra sobre **quién lo entrega**. Las dos tienen respuesta en la normativa chilena y en algo muy concreto: la información del fabricante.",
+          "voz": "Héctor no está haciendo nada raro. Ve dos lentes parecidos, uno cuesta la mitad, y piensa en ahorrarle plata a la empresa. Y el compañero de Camila repite algo que alguien le dijo a él. Las dos situaciones son comunes y las dos esconden un problema. En esta lección vamos a ver qué tiene que cumplir un EPP en Chile, quién lo paga y qué parte de las decisiones sobre protección personal no se pueden resolver con este curso.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG045",
+          "icono": "badge-check",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P02",
+          "tipo": "pestanas",
+          "titulo": "Lo que tiene que cumplir un EPP",
+          "pestanas": [
+            {
+              "titulo": "Sin costo",
+              "icono": "scale",
+              "texto": "El DS 594, en su artículo 53, establece que el empleador debe proporcionar a las personas trabajadoras, libres de costo, los EPP adecuados al riesgo, junto con la instrucción para usarlos correctamente. No se cobran, no se descuentan y no se le pide a nadie que los compre."
+            },
+            {
+              "titulo": "Certificación de calidad",
+              "icono": "badge-check",
+              "texto": "El DS 18 de 1982 exige que los EPP cuenten con certificación de calidad. El Instituto de Salud Pública mantiene información sobre EPP certificados y guías técnicas. Un EPP sin respaldo no es una alternativa, aunque se vea igual."
+            },
+            {
+              "titulo": "Información del fabricante",
+              "icono": "file-text",
+              "texto": "La ficha técnica y el folleto dicen contra qué protege, contra qué no, tallas, cómo se ajusta, cómo se limpia, cómo se guarda y cuándo se retira. Es la referencia para usarlo bien."
+            },
+            {
+              "titulo": "Instrucción de uso",
+              "icono": "users",
+              "texto": "Recibir un EPP no es lo mismo que saber usarlo. La entrega viene con instrucción práctica: cómo se pone, cómo se revisa y qué hacer si falla."
+            },
+            {
+              "titulo": "Mantención y reposición",
+              "icono": "refresh-cw",
+              "texto": "Si se daña, se pierde o cumple el criterio de retiro del fabricante, se repone. La entrega y la reposición quedan registradas, y tú cuidas el equipo y avisas cuando algo falla."
+            }
+          ],
+          "texto": "Cinco condiciones para que un EPP sea una protección confiable y no solo un objeto parecido a una. Revisa cada pestaña.",
+          "voz": "Ninguna de estas cinco condiciones es un trámite. La entrega sin costo existe para que nadie tenga que elegir entre su bolsillo y su seguridad. La certificación existe porque dos lentes pueden verse idénticos y resistir un impacto de forma muy distinta. Y la información del fabricante existe porque cada modelo tiene sus propios límites. Fíjate en que hay obligaciones de la empresa y también cosas que te tocan a ti: usarlo, cuidarlo y avisar cuando falla.",
+          "hablante": "narrador",
+          "profundiza": "El artículo 53 del DS 594 se refiere a EPP adecuados al riesgo a cubrir, lo que conecta con la lección anterior: no basta con entregar cualquier EPP, tiene que corresponder a la exposición. El mismo decreto establece que la persona trabajadora debe usarlos mientras esté expuesta al riesgo. La certificación de calidad, regulada por el DS 18, busca asegurar que el EPP cumple con requisitos de desempeño verificados. Si tienes dudas sobre un modelo, la vía razonable es pedir a la prevencionista o a la jefatura que verifique la documentación del proveedor y la información disponible en el ISP. En el campus encontrarás guías técnicas del ISP en la sección de fuentes de este módulo. Recuerda que cada EPP tiene su ficha: lo que vale para un modelo no se traspasa automáticamente a otro parecido.",
+          "icono": "file-text",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P03",
+          "tipo": "ordenar",
+          "titulo": "Cuando llega un EPP nuevo",
+          "consigna": "Llegaron lentes de seguridad nuevos para el equipo de despacho. Ordena los pasos que deberían seguirse antes de que queden en uso.",
+          "pasos": [
+            {
+              "id": "a",
+              "texto": "Confirmar que es lo que se pidió para esa tarea, según la matriz de riesgos."
+            },
+            {
+              "id": "b",
+              "texto": "Revisar el marcado del producto y su etiqueta."
+            },
+            {
+              "id": "c",
+              "texto": "Leer la ficha y las instrucciones del fabricante: qué protege y qué no."
+            },
+            {
+              "id": "d",
+              "texto": "Verificar con la prevencionista que el proveedor respalda la certificación de calidad."
+            },
+            {
+              "id": "e",
+              "texto": "Probar talla y ajuste con cada persona que los va a usar."
+            },
+            {
+              "id": "f",
+              "texto": "Registrar la entrega e instruir el uso, la revisión y el cuidado."
+            }
+          ],
+          "orden": [
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f"
+          ],
+          "alternativas_validas": [
+            [
+              "a",
+              "c",
+              "b",
+              "d",
+              "e",
+              "f"
+            ]
+          ],
+          "feedback_ok": "Bien. Primero confirmas que corresponde a la tarea, después que el producto es lo que dice ser y que está respaldado, y recién al final lo ajustas a cada persona y dejas registro. Así nadie usa un EPP que todavía no se sabe si sirve.",
+          "feedback_error": "Revisa la lógica: no tiene sentido probar talla ni registrar la entrega de algo que todavía no sabes si corresponde a la tarea o si está certificado. Primero se verifica el producto, después se ajusta a la persona y al final se entrega con instrucción.",
+          "texto": "Recibir un EPP tiene su orden. Si se salta un paso, puede quedar en uso algo que no protege lo que se esperaba.",
+          "voz": "Imagina la caja abierta sobre la mesa de despacho y a todo el equipo esperando sus lentes nuevos. La tentación es repartirlos al tiro. Pero hay preguntas que conviene hacer antes. Ordena los pasos pensando qué pasaría si uno de ellos se hace demasiado tarde. Por ejemplo, ¿qué pasa si descubres que no estaban certificados después de que todos firmaron que los recibieron?",
+          "hablante": "narrador",
+          "icono": "list-checks",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P04",
+          "tipo": "decision",
+          "titulo": "¿Me compro los zapatos?",
+          "situacion": "Camila te escribe: «Me dijeron que acá cada uno se compra sus zapatos de seguridad y después pides que te devuelvan la plata, si es que. Vi unos baratos en la feria. ¿Los compro? Mañana me toca recibir el camión y no quiero llegar sin zapatos».",
+          "pregunta": "¿Qué le dices a Camila?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "Que los compre, pero que guarde la boleta para pedir el reembolso.",
+              "correcta": false,
+              "feedback": "Los EPP los entrega la empresa sin costo. Que se compren y después se pida reembolso traslada el costo y el riesgo a la persona, y además nadie verifica si los zapatos están certificados o son adecuados."
+            },
+            {
+              "texto": "Que mañana vaya con zapatillas y tenga cuidado al recibir el camión.",
+              "correcta": false,
+              "feedback": "Si la tarea requiere calzado de seguridad, no corresponde hacerla sin él. «Tener cuidado» no protege el pie de una caja que cae."
+            },
+            {
+              "texto": "Que no los compre: los EPP los entrega la empresa sin costo. Que hoy mismo le diga a Marisol su talla y, si no hay zapatos para mañana, que no reciba el camión sin ellos y se lo diga a Marisol.",
+              "correcta": true,
+              "feedback": "Bien. Corriges la información, la conectas con quien resuelve y cuidas que no haga la tarea expuesta mientras tanto. Si la práctica se repite, vale la pena comentarlo con Patricia o con el Comité Paritario."
+            },
+            {
+              "texto": "Que compre los de la feria, que total son iguales a los de la empresa.",
+              "correcta": false,
+              "feedback": "Pueden parecerse por fuera, pero sin certificación de calidad no sabes si la puntera o la suela resisten lo que deben. Y, en cualquier caso, no le corresponde a ella comprarlos."
+            }
+          ],
+          "explicacion": "El EPP adecuado al riesgo lo proporciona el empleador sin costo para la persona trabajadora, con instrucción para usarlo. Si alguien te dice otra cosa, lo útil es corregir con calma, avisar a quien puede resolver y no hacer la tarea expuesto mientras se resuelve.",
+          "texto": "A veces la información equivocada llega de un compañero con buena intención. Tu respuesta puede evitar que Camila gaste plata y que trabaje con algo que no protege.",
+          "voz": "Fíjate en lo que preocupa a Camila. No es la plata, es llegar mañana sin zapatos y quedar mal con Marisol. Esa preocupación es la que hace que la gente compre cualquier cosa en la feria. Tu respuesta tiene que hacerse cargo de las dos cosas: de la información equivocada y de qué hace mañana con el camión.",
+          "hablante": "narrador",
+          "icono": "message-square",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P05",
+          "tipo": "explicacion",
+          "titulo": "Hasta dónde llega este curso",
+          "texto": "Hay protecciones que **no se eligen, no se ajustan y no se usan con lo que aprendes aquí**. Requieren evaluar la exposición con mediciones, selección por especialistas, prueba de ajuste o una habilitación específica para la tarea.\n\nEn estos casos, tu papel es reconocer que la tarea las necesita, **no hacerla sin ellas** y avisar.",
+          "bloques": [
+            {
+              "icono": "wind",
+              "titulo": "Protección respiratoria",
+              "texto": "Mascarillas y respiradores: el tipo y el filtro dependen del contaminante y su concentración, y el ajuste se prueba en la persona."
+            },
+            {
+              "icono": "ladder",
+              "titulo": "Anticaídas",
+              "texto": "Arnés, cuerdas y puntos de anclaje: trabajo en altura con evaluación, equipo revisado y personas habilitadas."
+            },
+            {
+              "icono": "zap",
+              "titulo": "Protección dieléctrica",
+              "texto": "Guantes, calzado y herramientas para riesgo eléctrico: solo para personal autorizado a hacer trabajos eléctricos."
+            },
+            {
+              "icono": "droplets",
+              "titulo": "Productos químicos peligrosos",
+              "texto": "La hoja de datos de seguridad del producto y una persona especializada definen qué guante, qué protección ocular y qué otras medidas corresponden."
+            }
+          ],
+          "nota": {
+            "tipo": "ojo",
+            "texto": "Si te piden una tarea que necesita alguna de estas protecciones y no hay evaluación, equipo adecuado o habilitación, no la haces. Avisas a tu jefatura y a la prevencionista."
+          },
+          "voz": "Esto lo digo siempre en las capacitaciones, y lo digo en serio. Hay cosas que no se aprenden en un curso en línea, y está bien que sea así. Un respirador mal elegido o mal ajustado da una sensación de protección que no existe. Un arnés amarrado a cualquier fierro puede no aguantar una caída. Si te toca una tarea así, no es que no seas capaz. Es que esa decisión necesita otra preparación, otro equipo y otra persona. Tu aporte es enorme igual: darte cuenta y avisar antes de empezar.",
+          "hablante": "patricia",
+          "profundiza": "La protección respiratoria es un buen ejemplo de por qué estas protecciones requieren apoyo especializado. No basta con que una mascarilla se vea firme: el tipo de filtro tiene que corresponder al contaminante, la capacidad tiene que ser suficiente para la concentración y el sello con la cara tiene que comprobarse con una prueba de ajuste, que depende de la forma de la cara, de la barba y de otros factores. En el trabajo en altura, el sistema completo importa: el arnés, la conexión, el punto de anclaje y el plan de rescate. En riesgo eléctrico, la habilitación y el procedimiento son tan importantes como el equipo. Con los productos químicos, la hoja de datos de seguridad indica peligros y protecciones, y su interpretación conviene hacerla con la prevencionista. La mutualidad u organismo administrador de la Ley 16.744 también puede orientar a la empresa en estas evaluaciones. En el módulo 3 de esta ruta verás por qué la protección respiratoria no se elige por apariencia.",
+          "icono": "shield-alert",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P06",
+          "tipo": "chat",
+          "titulo": "¿Me prestas el arnés?",
+          "canal": "whatsapp",
+          "contacto": {
+            "nombre": "Héctor Paredes",
+            "detalle": "Mantención y aseo"
+          },
+          "mensajes": [
+            {
+              "de": "contacto",
+              "texto": "Oye, ¿sabes dónde quedó el arnés que estaba en el estante del fondo?",
+              "hora": "16:42"
+            },
+            {
+              "de": "contacto",
+              "texto": "Rodrigo me pidió limpiar las canaletas del techo del andén mañana temprano, antes de que llegue la lluvia.",
+              "hora": "16:42"
+            },
+            {
+              "de": "contacto",
+              "texto": "Es una pasadita no más, media hora. Lo amarro a la estructura y listo.",
+              "hora": "16:43"
+            },
+            {
+              "de": "yo",
+              "texto": "Déjame ver dónde está. ¿Quién lo revisó la última vez?",
+              "hora": "16:45"
+            },
+            {
+              "de": "contacto",
+              "texto": "Nadie, pero se ve bien. Lo usó el maestro que vino a pintar el año pasado.",
+              "hora": "16:46"
+            }
+          ],
+          "pregunta": "¿Qué le respondes a Héctor?",
+          "opciones": [
+            {
+              "texto": "Le digo dónde está y le pido que lo revise bien antes de usarlo.",
+              "correcta": false,
+              "feedback": "Revisarlo a ojo no resuelve lo principal: no se sabe su estado real, no hay un punto de anclaje evaluado y no está claro que la tarea esté planificada como trabajo en altura. Es una protección que no se improvisa."
+            },
+            {
+              "texto": "Le digo que mejor no use arnés, que con la escalera de tijera alcanza.",
+              "correcta": false,
+              "feedback": "Cambias un riesgo por otro, y la escalera de la bodega además tiene un peldaño trizado. Subir al techo del andén es trabajo en altura y necesita planificación."
+            },
+            {
+              "texto": "Le digo que no lo haga así: el trabajo en altura necesita evaluación, equipo revisado y persona habilitada. Le propongo avisarle ahora mismo a Rodrigo y a Patricia para que se programe bien, aunque la limpieza se corra.",
+              "correcta": true,
+              "feedback": "Bien. No le das el equipo ni una alternativa improvisada, y llevas la decisión a quienes pueden planificarla. Correr la limpieza tiene un costo, pero es menor que una caída desde el techo."
+            },
+            {
+              "texto": "Le digo que le pregunte al maestro que lo usó si el arnés está bueno.",
+              "correcta": false,
+              "feedback": "La opinión del maestro no reemplaza una revisión según el fabricante ni la evaluación de la tarea. Además, aunque el arnés estuviera bien, faltan el anclaje y el plan."
+            }
+          ],
+          "explicacion": "Un arnés no es protección por sí solo: es parte de un sistema que incluye la evaluación de la tarea, el anclaje, el equipo revisado, la habilitación de la persona y el plan de rescate. Cuando alguien quiere improvisarlo, lo que corresponde es frenar con respeto y llevar la decisión a quien la puede planificar.",
+          "texto": "Héctor conoce las máquinas y tiene años de oficio. Justamente por eso se siente capaz de resolverlo solo. Lee la conversación y decide qué le contestas.",
+          "voz": "Héctor no te está pidiendo permiso, te está pidiendo un dato: dónde quedó el arnés. Y lo plantea como algo menor, una pasadita de media hora. Así empiezan muchas historias de trabajo en altura. No tienes que darle una clase, ni tampoco tienes la autoridad para prohibirle nada. Pero sí puedes no ser parte de la improvisación y mover la decisión hacia quien corresponde.",
+          "hablante": "narrador",
+          "icono": "phone-call",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P07",
+          "tipo": "inspeccion",
+          "titulo": "Los lentes de la tienda del barrio",
+          "objeto": "Lentes de seguridad comprados por Héctor en una tienda del barrio",
+          "modelo": "lentes",
+          "consigna": "Revisa estos lentes como si tuvieras que decidir si entran a la caja de EPP de la bodega. Marca cada observación como aceptable, para retirar o para consultar.",
+          "observaciones": [
+            {
+              "texto": "No tienen ningún marcado en el marco, las micas ni las patillas.",
+              "estado": "retirar",
+              "feedback": "Sin marcado no hay forma de saber contra qué protegen, quién los fabricó ni si están certificados. No se ponen en uso. Si el proveedor entrega documentación, la prevencionista puede volver a evaluarlos."
+            },
+            {
+              "texto": "No traen folleto ni instrucciones del fabricante.",
+              "estado": "consultar",
+              "feedback": "Sin instrucciones no sabes cómo limpiarlos, cuándo cambiarlos ni qué no cubren. Se pide la información al proveedor antes de decidir."
+            },
+            {
+              "texto": "Tienen protecciones laterales integradas en el marco.",
+              "estado": "aceptable",
+              "feedback": "Es una característica útil para partículas que vienen de los lados. Por sí sola no demuestra que el lente resista impactos."
+            },
+            {
+              "texto": "Las micas están limpias y sin rayas.",
+              "estado": "aceptable",
+              "feedback": "Bien, el estado es bueno. Pero que se vean bien no dice nada sobre su resistencia: eso solo lo respalda la certificación."
+            },
+            {
+              "texto": "La bolsa dice «protección UV» y no menciona impactos.",
+              "estado": "consultar",
+              "feedback": "Proteger del sol no es lo mismo que resistir el golpe de un zuncho o una partícula. Para cortar zunchos importa la resistencia al impacto, y eso no está declarado."
+            },
+            {
+              "texto": "A Camila se le deslizan por la nariz cuando mira hacia abajo, y las patillas no se ajustan.",
+              "estado": "consultar",
+              "feedback": "Un lente que se desliza deja de cubrir justo cuando miras lo que estás cortando. Hay que probar otra talla u otro modelo."
+            },
+            {
+              "texto": "Son más livianos que los entregados y a Héctor le gustan más.",
+              "estado": "consultar",
+              "feedback": "La comodidad es un dato valioso: un lente cómodo se usa más. Vale la pena pedir que se evalúe un modelo liviano, pero certificado y con su ficha."
+            }
+          ],
+          "texto": "Héctor tiene razón en algo: los lentes livianos se usan más. Pero antes de que entren a la caja de la bodega, hay que revisar si se puede confiar en ellos.",
+          "voz": "Vamos a revisar los lentes que trajo Héctor sin despreciarlos. Algunas cosas que notó él son buenas, como que sean livianos y cómodos. Otras no se pueden saber mirándolos. Y esa es justamente la lección: un EPP no se evalúa solo por lo que se ve. Se evalúa por lo que dice su marcado, su ficha y su certificación. Si eso no existe, no hay cómo responder la pregunta más importante: ¿esto aguanta el golpe?",
+          "hablante": "patricia",
+          "icono": "glasses",
+          "practica_formativa": false
+        },
+        {
+          "id": "SEG360-EPP-M01-L03-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Lo que te llevas de esta lección",
+          "ideas": [
+            "La empresa entrega los EPP adecuados al riesgo sin costo, con instrucción de uso, y los repone cuando corresponde.",
+            "Un EPP necesita certificación de calidad, marcado e información del fabricante; parecerse a otro no basta.",
+            "Respiratoria, anticaídas, dieléctrica y química se derivan a apoyo especializado: si falta, la tarea no se hace."
+          ],
+          "pregunta": "Busca un EPP que uses o que haya en tu lugar de trabajo. ¿Tiene marcado? ¿Sabes dónde está su ficha o su folleto? Si no, ¿a quién se lo pedirías?",
+          "texto": "Ya tienes las tres piezas: el lugar del EPP en la jerarquía, cómo se elige por exposición y qué tiene que cumplir. En el laboratorio las vas a juntar.",
+          "voz": "Terminamos las lecciones del módulo. Ahora sabes que el EPP va al final, que se elige mirando la tarea y la persona, y que tiene que estar respaldado por su certificación y su ficha. También sabes dónde está el límite de lo que puedes decidir. En el laboratorio vas a usar todo eso junto, con varias tareas de Pehuén y una pregunta que se repite: ¿tiene sentido este EPP?",
+          "hablante": "narrador",
+          "icono": "lightbulb",
+          "practica_formativa": false
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-EPP-M01-LAB",
+    "titulo": "Laboratorio: ¿tiene sentido este EPP?",
+    "resultado": "Ante varias tareas de Pehuén con un EPP propuesto, dictaminar si el EPP tiene sentido, si falta un control previo o si falta un dato esencial, justificando con la jerarquía de controles y los datos de exposición.",
+    "minutos": 50,
+    "fuentes": [
+      "SST-DS44",
+      "SST-DS594",
+      "SST-DS18",
+      "EPP-ISP-GUIAS",
+      "EPP-FABRICANTE",
+      "SST-PREXOR"
+    ],
+    "pantallas": [
+      {
+        "id": "SEG360-EPP-M01-LAB-P01",
+        "tipo": "explicacion",
+        "titulo": "Tres respuestas posibles",
+        "texto": "En este laboratorio vas a revisar tareas reales de Pehuén, cada una con un EPP propuesto. Para cada una darás un dictamen con una de estas tres respuestas.\n\nNo hay trucos: a veces el EPP propuesto **sí tiene sentido**. Lo importante es poder explicar por qué.",
+        "bloques": [
+          {
+            "icono": "thumbs-up",
+            "titulo": "Tiene sentido",
+            "texto": "Los controles previos razonables están y el EPP cubre el riesgo que queda, con datos suficientes para elegirlo."
+          },
+          {
+            "icono": "shield-alert",
+            "titulo": "Falta un control previo",
+            "texto": "Antes del EPP hay algo que eliminar, sustituir o separar. Sin eso, el EPP tapa el problema."
+          },
+          {
+            "icono": "circle-help",
+            "titulo": "Falta un dato esencial",
+            "texto": "No se puede decidir sin saber algo más: el producto, la medición, la persona, la ficha."
+          }
+        ],
+        "nota": {
+          "tipo": "terreno",
+          "texto": "Cuando dudes entre dos respuestas, elige la que habría que resolver primero. Si falta un control y además falta un dato, el control suele ir antes."
+        },
+        "voz": "Este es el ejercicio que hago con las jefaturas cuando me piden una lista de compras de EPP. Tomamos tarea por tarea y nos preguntamos tres cosas. Si lo que se propone tiene sentido, si antes hay algo que corregir, o si nos falta un dato para decidir. Muchas veces la conversación termina con menos compras y más cambios en la bodega. Y otras veces termina confirmando que el EPP propuesto era el correcto. Las dos cosas están bien, siempre que se puedan explicar.",
+        "hablante": "patricia",
+        "profundiza": "Este dictamen es una forma simplificada de lo que se hace al revisar una matriz de riesgos. En una revisión formal se evalúa la probabilidad y la consecuencia de cada riesgo, se definen controles en orden jerárquico y se documenta el riesgo residual. Aquí te pedimos algo más acotado, pero muy útil en el día a día: mirar una propuesta de EPP y saber si conviene aceptarla, objetarla o pedir más información. Esa capacidad es valiosa en cualquier puesto, porque las propuestas de EPP suelen venir de personas con buena intención y poco tiempo, y una pregunta a tiempo evita compras inútiles y exposiciones innecesarias.",
+        "icono": "clipboard-check",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P02",
+        "tipo": "clasificar",
+        "titulo": "Nueve tareas, nueve dictámenes",
+        "consigna": "Lleva cada tarea con su EPP propuesto a la respuesta que corresponde. Lee el feedback de cada una, aunque aciertes: ahí está el razonamiento.",
+        "categorias": [
+          {
+            "id": "tiene_sentido",
+            "nombre": "Tiene sentido",
+            "icono": "thumbs-up",
+            "descripcion": "Los controles previos están y el EPP cubre lo que queda."
+          },
+          {
+            "id": "falta_control",
+            "nombre": "Falta un control previo",
+            "icono": "shield-alert",
+            "descripcion": "Hay algo que hacer sobre el peligro antes de pensar en EPP."
+          },
+          {
+            "id": "falta_dato",
+            "nombre": "Falta un dato esencial",
+            "icono": "circle-help",
+            "descripcion": "Sin cierta información no se puede elegir bien."
+          }
+        ],
+        "elementos": [
+          {
+            "texto": "Lavar el andén con hidrolavadora, con la zona delimitada y la presión regulada. EPP: antiparras aptas para salpicaduras, protector facial encima y botas de agua antideslizantes.",
+            "categoria": "tiene_sentido",
+            "feedback": "Hay controles previos, como delimitar la zona y regular la presión, y el EPP cubre lo que siempre queda: salpicaduras que rebotan y piso mojado. Las fichas de cada pieza tienen que confirmarlo."
+          },
+          {
+            "texto": "Cortar huincha con cartonero de hoja fija toda la mañana. EPP: guantes anticorte.",
+            "categoria": "falta_control",
+            "feedback": "Antes del guante, la herramienta: un cartonero retráctil o un cortador de seguridad reduce mucho el riesgo. Después, el guante para lo que queda."
+          },
+          {
+            "texto": "Operar la envolvedora mientras la reja está retirada. EPP: guantes anticorte.",
+            "categoria": "falta_control",
+            "feedback": "El peligro es el atrapamiento y la respuesta es la reja. Sin ella, la máquina no se opera. El guante podría incluso engancharse."
+          },
+          {
+            "texto": "Mover a mano cajas de 32 kilos desde el camión. EPP: faja lumbar.",
+            "categoria": "falta_control",
+            "feedback": "El peso supera el máximo de 25 kilos para manejo manual por una persona. Primero ayudas mecánicas o cambiar el embalaje con el proveedor. La faja no hace más liviana la caja."
+          },
+          {
+            "texto": "Limpiar los baños con un desincrustante nuevo de otro proveedor. EPP: guantes de nitrilo delgados y mascarilla desechable, «como siempre».",
+            "categoria": "falta_dato",
+            "feedback": "Falta la hoja de datos de seguridad del producto nuevo. Ella dice qué peligros tiene y qué protección corresponde. Si pide protección respiratoria, su selección requiere apoyo especializado. También conviene preguntar si se puede volver al producto anterior."
+          },
+          {
+            "texto": "Trabajar todo el turno cerca de la envolvedora, que es ruidosa. EPP: tapones de espuma.",
+            "categoria": "falta_dato",
+            "feedback": "Falta saber cuánto ruido hay y por cuánto tiempo se está expuesto: eso requiere una evaluación, no una impresión. Con ese dato se decide qué protección auditiva sirve y si hay controles sobre la máquina."
+          },
+          {
+            "texto": "Camila, que usa lentes ópticos, va a cortar zunchos. EPP: lentes de seguridad estándar.",
+            "categoria": "falta_dato",
+            "feedback": "Nadie consideró un dato de la persona: sus lentes ópticos. Los lentes de seguridad estándar no van encima. Se necesita una alternativa compatible."
+          },
+          {
+            "texto": "Cortar zunchos plásticos con un cortador de zunchos, parándose al lado. EPP: lentes de seguridad con protección lateral y guantes de manipulación.",
+            "categoria": "tiene_sentido",
+            "feedback": "La herramienta ya se cambió y la forma de cortar reduce el riesgo. El EPP cubre lo que queda: el zuncho que puede saltar y el roce."
+          },
+          {
+            "texto": "Ordenar en el estante productos de aseo en envases cerrados. EPP: guantes de manipulación para el roce del cartón.",
+            "categoria": "tiene_sentido",
+            "feedback": "Con envases cerrados no hay contacto con el producto. El guante de manipulación cubre el roce y los bordes del cartón. Si un envase está roto, la situación cambia."
+          }
+        ],
+        "texto": "Nueve propuestas de EPP que circularon en Pehuén. Algunas tienen sentido, otras se saltan un control y otras se deciden sin un dato clave.",
+        "voz": "Aquí vas a practicar en serio. Lee cada tarea completa, porque la diferencia muchas veces está en un detalle: la herramienta que se usa, si la reja está o no, si el producto es nuevo. Antes de decidir, haz el recorrido mental que ya conoces. Qué se hace, qué puede dañar, qué se controló antes, y qué no se sabe todavía. Si te equivocas, lee el feedback, piénsalo y vuelve a intentarlo.",
+        "hablante": "narrador",
+        "icono": "list-checks",
+        "practica_formativa": true
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P03",
+        "tipo": "decision",
+        "titulo": "El desincrustante nuevo",
+        "situacion": "Héctor recibe un desincrustante nuevo para los baños, de otro proveedor, porque el de siempre se agotó. Marisol le pasa guantes de nitrilo delgados y una mascarilla desechable, «como siempre». El bidón tiene pictogramas de peligro que Héctor no había visto en el producto anterior. Son las 7:30 y los baños tienen que estar listos a las 9:00.",
+        "pregunta": "¿Qué corresponde antes de empezar a limpiar?",
+        "multiple": false,
+        "opciones": [
+          {
+            "texto": "Usar dos pares de guantes, por si el producto es más fuerte.",
+            "correcta": false,
+            "feedback": "Doblar el guante no garantiza nada si el material no es resistente a ese producto. Además no resuelve lo que puede pasar con los ojos ni con lo que se respira."
+          },
+          {
+            "texto": "Abrir la puerta y la ventana del baño para ventilar, y empezar.",
+            "correcta": false,
+            "feedback": "Ventilar ayuda, pero no sabes si basta. Si el producto desprende vapores irritantes, la ventilación de un baño pequeño puede no ser suficiente. Primero hay que saber qué es."
+          },
+          {
+            "texto": "Pedir la hoja de datos de seguridad del producto y que Patricia revise qué protección exige; mientras tanto no se usa, y se pregunta si se puede conseguir el producto anterior.",
+            "correcta": true,
+            "feedback": "Bien. Sin la hoja no hay forma de saber qué EPP corresponde, y la protección respiratoria, si se necesita, se elige con apoyo especializado. Preguntar por el producto anterior es pensar en sustituir: un control de más arriba."
+          },
+          {
+            "texto": "Diluir el producto más de lo indicado para que sea menos agresivo.",
+            "correcta": false,
+            "feedback": "Cambiar la dilución por cuenta propia puede hacer que el producto no limpie y no resuelve el problema de no saber qué contiene. Es improvisar con algo que no conoces."
+          }
+        ],
+        "explicacion": "Un producto nuevo es una tarea nueva. La hoja de datos de seguridad dice qué peligros tiene y qué protección corresponde. Sin ese dato, el EPP de siempre puede no servir. El horario de los baños es un problema de organización que se conversa con la jefatura.",
+        "texto": "Una de las tareas del ejercicio anterior, ahora en detalle y con reloj. Decide qué corresponde antes de empezar.",
+        "voz": "Esta situación tiene todos los ingredientes de un problema típico. Un cambio que parece menor, un producto distinto porque el otro se acabó. Una costumbre, «como siempre». Y un horario apretado. Lo que cambió no se ve en el EPP, se ve en el bidón: esos pictogramas nuevos son la pista. Elige pensando en qué información te falta y quién te la puede dar.",
+        "hablante": "narrador",
+        "icono": "droplets",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P04",
+        "tipo": "quiz",
+        "titulo": "¿Qué dato falta?",
+        "preguntas": [
+          {
+            "enunciado": "Marisol quiere comprar fonos para quienes trabajan cerca de la envolvedora. ¿Qué dato es esencial antes de elegirlos?",
+            "opciones": [
+              {
+                "texto": "El color, para que se vean bien en la bodega.",
+                "correcta": false,
+                "feedback": "El color puede ayudar a ordenar, pero no dice nada sobre si el fono protege lo suficiente."
+              },
+              {
+                "texto": "Cuánto ruido hay y por cuánto tiempo se está expuesto, según una evaluación de ruido.",
+                "correcta": true,
+                "feedback": "Así es. Sin ese dato no se sabe si hace falta protección auditiva, de qué tipo, ni si hay que actuar sobre la máquina. Las evaluaciones de ruido siguen el protocolo correspondiente y se hacen con apoyo especializado."
+              },
+              {
+                "texto": "Qué fonos usa otra empresa que tiene una envolvedora parecida.",
+                "correcta": false,
+                "feedback": "La exposición depende de la máquina, del lugar y del tiempo de trabajo de cada persona. Copiar otra empresa no reemplaza evaluar la propia."
+              }
+            ]
+          },
+          {
+            "enunciado": "Para el andén en invierno piden guantes térmicos gruesos para todo el equipo de despacho. ¿Qué falta saber?",
+            "opciones": [
+              {
+                "texto": "Qué hacen con las manos: escanear con la pistola de códigos, firmar guías, manipular cajas. La destreza necesaria cambia el guante.",
+                "correcta": true,
+                "feedback": "Bien. Un guante grueso puede impedir usar la pistola o firmar, y se lo sacarán a cada rato. Puede haber guantes térmicos con buena destreza, o la necesidad de combinar."
+              },
+              {
+                "texto": "Si el proveedor tiene descuento por volumen.",
+                "correcta": false,
+                "feedback": "El precio importa para comprar, pero no para decidir si el guante sirve para la tarea."
+              },
+              {
+                "texto": "Nada: el frío es igual para todos.",
+                "correcta": false,
+                "feedback": "El frío puede ser parecido, pero las tareas no. Quien maneja la pistola necesita algo distinto que quien solo mueve cajas."
+              }
+            ]
+          },
+          {
+            "enunciado": "Llegaron zapatos de seguridad para tres personas nuevas del turno tarde. Se los entregan por número de calzado, sin probar. ¿Qué dato falta?",
+            "opciones": [
+              {
+                "texto": "La marca de los zapatos que usaban antes.",
+                "correcta": false,
+                "feedback": "Puede orientar, pero no reemplaza probarse el zapato que se va a usar."
+              },
+              {
+                "texto": "Si les gusta el diseño.",
+                "correcta": false,
+                "feedback": "Que guste ayuda a que se use, pero no es el dato esencial para que proteja y no lastime."
+              },
+              {
+                "texto": "La talla y la horma, probadas con cada persona caminando, y para qué peligro son la puntera y la suela según la ficha.",
+                "correcta": true,
+                "feedback": "Así es. El mismo número puede quedar distinto según la horma. Un zapato que aprieta o que baila genera lesiones y se deja de usar. Y la ficha confirma que protege contra lo que hay en la tarea."
+              }
+            ]
+          }
+        ],
+        "texto": "Tres propuestas de compra en las que falta información. Elige cuál es el dato que hay que conseguir antes de decidir.",
+        "voz": "Esta vez ya sabes que en todas falta un dato. Lo que tienes que identificar es cuál. Fíjate en que el dato que falta no siempre es técnico. A veces es tan simple como preguntarle a la persona qué hace con las manos, o pedirle que camine con los zapatos puestos. Otras veces sí requiere una medición. En los dos casos, decidir sin ese dato es apostar.",
+        "hablante": "narrador",
+        "icono": "circle-help",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P05",
+        "tipo": "comparacion",
+        "titulo": "Dos propuestas para el derrame",
+        "izquierda": {
+          "titulo": "La propuesta apurada",
+          "icono": "clock",
+          "puntos": [
+            "Un kit de derrame igual para todo: guantes, botas y mascarilla.",
+            "Se limpia rápido con lo que haya a mano.",
+            "No se revisa qué producto se derramó.",
+            "No se pregunta por qué pasó.",
+            "La próxima vez se repite igual."
+          ]
+        },
+        "derecha": {
+          "titulo": "La propuesta por exposición",
+          "icono": "scan-eye",
+          "puntos": [
+            "Primero señalizar y evitar que alguien pise o resbale.",
+            "Identificar el producto y revisar su hoja de datos de seguridad.",
+            "Limpiar con el material y la protección que esa hoja indica.",
+            "Si la hoja pide protección especial, pedir apoyo antes de limpiar.",
+            "Revisar la causa: envase dañado, estante, forma de trasvasijar."
+          ]
+        },
+        "conclusion": "Las dos propuestas incluyen EPP, pero solo una pregunta qué se derramó y por qué. La segunda tarda unos minutos más en partir y evita usar una protección equivocada o repetir el mismo derrame la semana siguiente.",
+        "texto": "Marisol y Patricia plantearon dos formas de responder a los derrames de producto de aseo en la bodega. Compara qué mira cada una.",
+        "voz": "Cuando Marisol propuso el kit de derrame, lo hizo pensando en la velocidad, y tiene razón en algo: un derrame en el pasillo es un peligro para todos y hay que actuar rápido. Pero rápido no significa a ciegas. Un derrame de jabón líquido y uno de desincrustante no se limpian igual. Y si el derrame se repite cada semana en el mismo estante, el problema no está en el kit, está en el estante o en el envase. Por eso yo siempre miro el último punto de cada columna.",
+        "hablante": "patricia",
+        "profundiza": "Un kit de derrame es una buena herramienta, siempre que su contenido corresponda a los productos que realmente hay en la bodega. Para armarlo bien hace falta revisar las hojas de datos de seguridad de esos productos. Contener y señalizar suele poder hacerse de inmediato, porque no implica contacto directo con el producto. La limpieza en sí, en cambio, depende de qué se derramó: algunos productos de aseo comunes requieren poco más que guantes de manipulación, mientras otros, como ciertos desincrustantes o productos concentrados, pueden requerir protección de ojos, guantes de un material específico y ventilación. Y siempre conviene preguntarse qué hizo que el derrame fuera fácil: envases sin tapa, estantes inclinados o trasvasijes sin bomba.",
+        "icono": "droplets",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P06",
+        "tipo": "dialogo",
+        "titulo": "Un kit para todos",
+        "lineas": [
+          {
+            "personaje": "rodrigo",
+            "texto": "Patricia, el proveedor ofrece un kit estándar: casco, lentes, guantes, fono y chaleco para las veinte personas de operaciones. Sale barato y nos olvidamos del tema."
+          },
+          {
+            "personaje": "patricia",
+            "texto": "¿Y quiénes usan casco en Pehuén hoy, Rodrigo?"
+          },
+          {
+            "personaje": "rodrigo",
+            "texto": "Bueno, nadie todavía. Pero por si acaso."
+          },
+          {
+            "personaje": "marisol",
+            "texto": "Los fonos van a terminar colgados del cuello. Y con casco y chaleco grueso en enero, el andén es un horno."
+          },
+          {
+            "personaje": "patricia",
+            "texto": "El kit no es mala idea como base. Lo que no quiero es que nos dé la sensación de que ya resolvimos todo, y que la reja de la envolvedora siga en la pared."
+          },
+          {
+            "personaje": "rodrigo",
+            "texto": "¿Y qué propones? En dos semanas tengo reunión con el Comité Paritario y quiero llevar algo concreto."
+          }
+        ],
+        "pregunta": "¿Qué le propondrías a Rodrigo para esa reunión?",
+        "opciones": [
+          {
+            "texto": "Comprar el kit completo igual, porque es barato y no se pierde nada.",
+            "correcta": false,
+            "feedback": "Sí se pierde algo: plata en piezas que nadie usará, la sensación de que el tema está resuelto y la atención que necesitan los controles previos, como la reja y el cartonero."
+          },
+          {
+            "texto": "Una tabla por tarea con peligro, control previo, EPP para lo que queda y datos que faltan, más dos o tres compras urgentes que ya están justificadas.",
+            "correcta": true,
+            "feedback": "Bien. Le das algo concreto para mostrar, priorizas lo que protege de verdad y dejas visible qué falta averiguar. Así el Comité puede discutir con datos y no con impresiones."
+          },
+          {
+            "texto": "No comprar nada hasta tener una evaluación completa de todos los riesgos.",
+            "correcta": false,
+            "feedback": "Esperar a tenerlo todo puede dejar expuestas a personas en tareas donde ya se sabe qué hace falta, como los lentes para cortar zunchos. Se puede avanzar en lo claro mientras se averigua lo demás."
+          },
+          {
+            "texto": "Preguntarle al proveedor qué recomienda para una bodega.",
+            "correcta": false,
+            "feedback": "El proveedor conoce sus productos, pero no conoce las tareas de Pehuén. Su recomendación puede servir como información, no como decisión."
+          }
+        ],
+        "texto": "Rodrigo quiere resolver rápido y con buena intención. Marisol conoce el andén. Patricia busca que la compra no tape lo importante. Lee la conversación y decide qué propondrías.",
+        "voz": "Fíjate en que nadie en esta conversación está en contra de la prevención. Rodrigo quiere cumplir y tiene un presupuesto. Marisol sabe cómo se vive el andén en verano. Patricia sabe que una compra grande puede dar la sensación de que todo está resuelto. Una buena propuesta junta lo que cada uno sabe. Y algo más: Rodrigo apoya la prevención cuando ve datos concretos, así que lo que le propongas tiene que poder mostrarse.",
+        "hablante": "narrador",
+        "icono": "users",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P07",
+        "tipo": "construir",
+        "titulo": "Tu dictamen",
+        "consigna": "Elige una tarea de tu trabajo en la que se use o se haya propuesto un EPP. Si prefieres, usa una de Pehuén: cortar huincha en la mesa de despacho, lavar el andén o limpiar los baños con un producto nuevo. Escribe tu dictamen completo.",
+        "contexto": "Imagina que tu dictamen se va a leer en la próxima reunión del Comité Paritario. Tiene que ser claro para alguien que no conoce la tarea y concreto para quien tiene que decidir.",
+        "campos": [
+          {
+            "id": "tarea",
+            "etiqueta": "La tarea",
+            "ayuda": "Qué se hace, dónde, con qué herramienta o producto y cuánto rato.",
+            "tipo": "texto",
+            "min_palabras": 15
+          },
+          {
+            "id": "peligro",
+            "etiqueta": "El peligro y la zona del cuerpo",
+            "ayuda": "Qué puede dañar y a qué parte del cuerpo llega.",
+            "tipo": "texto",
+            "min_palabras": 12
+          },
+          {
+            "id": "control_previo",
+            "etiqueta": "Controles previos",
+            "ayuda": "Qué se hizo o se podría hacer antes del EPP: eliminar, sustituir, separar, organizar.",
+            "tipo": "texto_largo",
+            "min_palabras": 25
+          },
+          {
+            "id": "epp",
+            "etiqueta": "EPP para lo que queda",
+            "ayuda": "Qué EPP tiene sentido y por qué, considerando persona, duración y compatibilidad.",
+            "tipo": "texto_largo",
+            "min_palabras": 25
+          },
+          {
+            "id": "dato_faltante",
+            "etiqueta": "Dato que falta y a quién pedirlo",
+            "ayuda": "Qué no sabes todavía y quién lo puede responder o evaluar.",
+            "tipo": "texto",
+            "min_palabras": 12
+          },
+          {
+            "id": "dictamen",
+            "etiqueta": "Dictamen",
+            "ayuda": "Tiene sentido, falta un control previo o falta un dato esencial, en una frase con su razón.",
+            "tipo": "texto",
+            "min_palabras": 12
+          }
+        ],
+        "criterios": [
+          {
+            "criterio": "Describe la tarea real",
+            "niveles": [
+              "Nombra un cargo o un lugar, sin describir la tarea.",
+              "Describe la tarea en general, sin herramienta ni duración.",
+              "Describe la tarea con herramienta o producto y lugar.",
+              "Describe la tarea con herramienta o producto, lugar, duración y quién la hace."
+            ]
+          },
+          {
+            "criterio": "Considera los controles antes del EPP",
+            "niveles": [
+              "No menciona controles previos.",
+              "Menciona un control previo vago, como «tener cuidado».",
+              "Propone al menos un control concreto de eliminación, sustitución o ingeniería.",
+              "Propone controles concretos en orden jerárquico y explica qué riesgo queda después."
+            ]
+          },
+          {
+            "criterio": "Justifica el EPP por exposición",
+            "niveles": [
+              "Nombra un EPP sin justificar.",
+              "Justifica el EPP solo por el peligro general.",
+              "Justifica el EPP por el peligro y la zona del cuerpo, con algún dato de persona o duración.",
+              "Justifica por peligro, zona, duración, persona y compatibilidad, y menciona la ficha del fabricante."
+            ]
+          },
+          {
+            "criterio": "Reconoce límites y deriva",
+            "niveles": [
+              "No identifica información faltante.",
+              "Dice que falta información, sin precisar cuál.",
+              "Identifica el dato que falta y a quién pedirlo.",
+              "Identifica el dato, a quién pedirlo y qué hacer mientras tanto, derivando a apoyo especializado si corresponde."
+            ]
+          }
+        ],
+        "ejemplo_solido": "Tarea: Camila corta huincha y zunchos plásticos en la mesa de despacho cerca de cuatro horas por turno, con un cartonero de hoja fija. Peligro: corte en manos y dedos; zuncho que salta hacia los ojos. Controles previos: cambiar el cartonero por uno retráctil y comprar un cortador de zunchos con hoja protegida; instruir a cortar parándose al lado del zuncho. Después de eso queda el riesgo de corte al manipular la hoja y el de partículas o zuncho hacia los ojos. EPP: guantes anticorte de su talla, con destreza suficiente para despegar huincha, y lentes de seguridad con protección lateral; como Camila usa lentes ópticos, se requiere un modelo diseñado para ir sobre ellos o graduado, según su ficha. Dato que falta: qué modelo de lentes compatibles entrega la empresa; se lo pido a Marisol y Patricia. Mientras, Camila no corta zunchos sin protección ocular. Dictamen: falta un control previo, el cambio de herramienta, y un dato de la persona; el EPP tiene sentido una vez resueltos.",
+        "ejemplo_debil": "Tarea: bodega. Peligro: cortes. EPP: guantes anticorte para todos, porque es más seguro. Dictamen: tiene sentido. Es mejorable porque no describe la tarea real, no considera cambiar la herramienta antes del guante, no dice nada sobre talla, destreza o los ojos, y da por resuelto algo sin verificar ningún dato.",
+        "texto": "Ahora el dictamen es tuyo y de principio a fin. Usa los seis campos y después compara tu respuesta con los criterios y los ejemplos.",
+        "voz": "Esta es la parte más importante del laboratorio, porque aquí no eliges entre opciones, construyes tu propia respuesta. Si puedes, elige una tarea de tu trabajo real. Si no se te ocurre ninguna, usa una de Pehuén. Escribe como si lo fuera a leer alguien que no conoce la tarea. Cuando termines, compara con los criterios con honestidad. No se trata de llegar al nivel más alto en todo a la primera, sino de ver qué te faltó mirar.",
+        "hablante": "narrador",
+        "icono": "pen-line",
+        "practica_formativa": false
+      },
+      {
+        "id": "SEG360-EPP-M01-LAB-P08",
+        "tipo": "cierre_leccion",
+        "titulo": "Lo que te llevas del laboratorio",
+        "ideas": [
+          "Ante un EPP propuesto hay tres respuestas: tiene sentido, falta un control previo o falta un dato esencial.",
+          "Un producto nuevo, una herramienta distinta o una persona con otras necesidades vuelven a abrir la pregunta.",
+          "Un buen dictamen se puede explicar a alguien que no conoce la tarea y deja claro qué hacer mientras tanto."
+        ],
+        "pregunta": "¿Qué EPP de tu trabajo te gustaría someter a este dictamen con tu jefatura o con el Comité Paritario? ¿Qué pregunta harías primero?",
+        "texto": "Ya hiciste el ejercicio completo: revisaste propuestas, encontraste lo que faltaba y escribiste tu propio dictamen.",
+        "voz": "Lo que hiciste en este laboratorio es algo que pocas personas saben hacer en una empresa: mirar una propuesta de EPP y decir con fundamento si tiene sentido. No para rechazarla por principio ni para aceptarla por costumbre, sino para que proteja de verdad. Guarda tu dictamen. Te va a servir en los próximos módulos, donde vamos a entrar en el detalle de cada tipo de protección, partiendo por la cabeza, los ojos y el rostro.",
+        "hablante": "narrador",
+        "icono": "lightbulb",
+        "practica_formativa": false
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-EPP-M01-CIERRE",
+    "titulo": "La caja, vista de nuevo",
+    "texto": "La caja que llegó el lunes sigue en la bodega. Ahora sabes qué preguntarle: **qué se hizo antes** sobre cada peligro, **para qué tarea y para quién** es cada pieza, **si está respaldada** por su certificación y su ficha, y **qué decisiones no te tocan a ti**.\n\nEl EPP no es un adorno ni un trámite. Es una protección real con límites reales, y funciona mejor cuando se elige con datos y se usa con información.",
+    "voz": "Cerramos el primer módulo de la ruta. Si vuelves a la bodega de Pehuén ahora, vas a ver lo mismo de antes, pero con otras preguntas. La reja de la envolvedora. El cartonero de hoja fija. Los guantes talla L de Camila. Los lentes sin marcado de Héctor. Cada uno es una conversación que ya sabes empezar. Y lo más importante: cuando no sepas algo, ya sabes que la respuesta correcta es preguntar a quien corresponde, no improvisar.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Elige un EPP que uses y pregúntate qué control previo existe sobre ese peligro. Si no lo sabes, pregúntalo a tu jefatura.",
+      "Revisa si tu EPP tiene marcado legible y si sabes dónde está su ficha o su folleto. Si falta, pídelo.",
+      "Si algo de tu EPP no te queda bien, molesta o no sirve para tu tarea, comunícalo esta semana con un dato concreto."
+    ],
+    "siguiente": "En el módulo 2 entramos en el detalle de la protección de cabeza, ojos y rostro: las partes del casco y cuándo se retira, la diferencia entre lentes, antiparras y protector facial, y las combinaciones que fallan aunque cada pieza sea buena."
+  },
+  "glosario": [
+    {
+      "termino": "EPP",
+      "definicion": "Elemento de protección personal: equipo que usa una persona para protegerse del riesgo que queda después de aplicar otros controles, como guantes, lentes, casco o calzado de seguridad."
+    },
+    {
+      "termino": "Riesgo residual",
+      "definicion": "Riesgo que permanece después de aplicar sobre el peligro los controles razonables. Es el que cubre el EPP."
+    },
+    {
+      "termino": "Jerarquía de controles",
+      "definicion": "Orden de preferencia de las medidas preventivas: eliminar, sustituir, controles de ingeniería, controles administrativos y, al final, EPP."
+    },
+    {
+      "termino": "Exposición",
+      "definicion": "Contacto de una persona con un peligro durante una tarea, considerando cómo, cuánto rato y con qué frecuencia ocurre."
+    },
+    {
+      "termino": "Certificación de calidad",
+      "definicion": "Respaldo de que un EPP cumple requisitos de desempeño verificados. En Chile la regula el DS 18 de 1982."
+    },
+    {
+      "termino": "Ficha del fabricante",
+      "definicion": "Documento técnico e instrucciones de un EPP: contra qué protege y contra qué no, tallas, ajuste, limpieza, almacenamiento y criterios de retiro."
+    },
+    {
+      "termino": "Compatibilidad",
+      "definicion": "Capacidad de un EPP de funcionar bien junto con otros EPP, con la herramienta y en el ambiente de trabajo, sin restar protección."
+    },
+    {
+      "termino": "Hoja de datos de seguridad",
+      "definicion": "Documento de un producto químico que informa sus peligros y las medidas de protección, manejo y emergencia que corresponden."
+    },
+    {
+      "termino": "Apoyo especializado",
+      "definicion": "Evaluación o decisión que requiere una persona con formación específica, como la selección de protección respiratoria, anticaídas, dieléctrica o para productos químicos."
+    }
+  ],
+  "recursos": [
+    "SEG360-REC03",
+    "SEG360-REC08"
+  ],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG043",
+      "titulo": "La caja de EPP recién llegada",
+      "uso": "Introducción del módulo y apertura de la lección 1. Muestra el momento en que llega una compra de EPP y el equipo la revisa con calma.",
+      "prompt": "Realistic editorial photograph inside a mid-sized office and cleaning supplies distribution warehouse in Santiago, Chile. Two adult Chilean women, a warehouse supervisor in her forties and an occupational safety advisor in her late thirties, stand at a packing table reviewing an open cardboard box with new personal protective equipment: safety glasses in plastic bags, work gloves and folded high-visibility vests. The advisor holds a printed product leaflet and points at it while the supervisor listens. In the background, metal shelving with boxes, a pallet wrapping machine standing still with its protective guard properly installed. Natural light from a loading dock door, muted bluish graphite and white palette with subtle teal-green accents. No legible text, no logos, no brand names. People working, not posing.",
+      "alt": "En la mesa de despacho de la bodega, la jefa de bodega y la prevencionista revisan una caja abierta con lentes, guantes y chalecos nuevos; la prevencionista lee el folleto del fabricante."
+    },
+    {
+      "id": "SEG360-IMG044",
+      "titulo": "Probarse los guantes haciendo la tarea",
+      "uso": "Lección 2, pantalla sobre talla, ajuste y comodidad. Muestra la buena práctica de probar el EPP con la persona y en la tarea real.",
+      "prompt": "Realistic editorial photograph in a light-duty warehouse in Santiago, Chile. A young adult Chilean woman, a new warehouse assistant, tries on a pair of well-fitting work gloves in her size while handling a cardboard box at a packing table; she flexes her fingers to check dexterity. Beside her, an occupational safety advisor holds two other pairs of gloves of different sizes and observes attentively, friendly expression. A retractable box cutter rests closed on the table. Natural daylight, muted bluish graphite and white palette with subtle teal-green accents. No legible text, no logos, no brand names. Candid working moment, not posed.",
+      "alt": "Una auxiliar de bodega se prueba guantes de su talla mientras manipula una caja y mueve los dedos para comprobar el agarre; la prevencionista sostiene otras tallas para comparar."
+    },
+    {
+      "id": "SEG360-IMG045",
+      "titulo": "Lentes sin marcado sobre el mesón",
+      "uso": "Apertura de la lección 3. Muestra la comparación entre lentes certificados con su ficha y lentes comprados sin información, como situación a revisar.",
+      "prompt": "Realistic editorial photograph, close medium shot on a warehouse counter in Santiago, Chile. On the left, a pair of safety glasses with side shields next to its printed technical leaflet; on the right, a small transparent bag with several cheap-looking glasses without any packaging information. The hands of a middle-aged Chilean maintenance worker and of a female safety advisor are visible as they compare both, the advisor holding the leaflet. Shelving and boxes softly blurred in the background. Natural light, muted bluish graphite and white palette with subtle teal-green accents. No legible text, no logos, no brand names.",
+      "alt": "Sobre un mesón, unos lentes de seguridad con su folleto técnico junto a una bolsa con lentes sin información; las manos del encargado de mantención y de la prevencionista los comparan."
+    }
+  ],
+  "minutos_desglose": {
+    "lecciones": 115,
+    "laboratorio": 50,
+    "intro_cierre_recursos": 15
+  }
+}

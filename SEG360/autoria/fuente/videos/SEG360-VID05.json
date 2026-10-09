@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID05",
+  "titulo": "Anatomía de un engaño bien escrito",
+  "modulo": "SEG360-CIBER-M02",
+  "pantalla": "SEG360-CIBER-M02-L01-P04",
+  "objetivo": "Reconocer, en un correo sin errores de redacción, las señales de ingeniería social que lo delatan (contexto creíble, autoridad, urgencia, secreto y cambio de procedimiento) y aplicar la respuesta: detenerse, verificar por un canal independiente y reportar.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG030", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "Jueves, 16:40. Cierre de semana.",
+      "voz": "Jueves en la tarde. Javier está cerrando los pagos de la semana y le llega un correo de gerencia. No tiene ni una falta de ortografía.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["mail", "calendar", "badge-check"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Contexto creíble",
+      "voz": "Primero, el contexto. El correo sabe que es fin de semana de pagos y menciona a un proveedor por su nombre. Eso no lo inventó: lo averiguó.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "iconos", "ref": ["crown", "pen-line"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Autoridad: firma de gerencia",
+      "voz": "Segundo, la autoridad. Firma Rodrigo, con su cargo completo. Cuesta cuestionar a quien aprueba tus pagos.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "iconos", "ref": ["hourglass", "lock"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Urgencia + secreto",
+      "voz": "Tercero, la presión. Hay que pagar antes de las cinco y no comentarlo con nadie, porque es una negociación delicada. Prisa y secreto juntos: la combinación clásica.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "iconos", "ref": ["banknote", "file-warning", "route"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Se salta el procedimiento",
+      "voz": "Cuarto, y el más importante: pide pagar a una cuenta nueva, sin orden de compra y sin la aprobación de siempre. Ese cambio de procedimiento es lo que lo delata, aunque todo lo demás esté perfecto.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "texto", "ref": "pehuen.example ≠ pehuen-cl.invalid" },
+      "texto_en_pantalla": "¿Y el remitente?",
+      "voz": "A veces el dominio del remitente tiene una letra de más. Pero si a alguien le robaron la cuenta, el correo sale de la dirección verdadera. Por eso no basta con mirar quién lo manda.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "escena3d", "ref": "oficina", "foco": "telefono", "movimiento": "recorrido" },
+      "texto_en_pantalla": "Frena. Verifica por otro camino. Reporta.",
+      "voz": "La respuesta es siempre la misma. Frenas, no respondes ese correo y llamas a Rodrigo a su anexo o le hablas en persona. Si no fue él, reportas. Dos minutos de verificación valen más que cualquier pago apurado.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: un trabajador en teletrabajo, con una factura impresa y el celular, está cerrando los pagos de la semana; el texto indica «Jueves, 16:40». Escena 2: aparecen en secuencia íconos de un sobre, un calendario y una insignia de verificación, con el título «Contexto creíble». Escena 3: íconos de una corona y una pluma, con el título «Autoridad: firma de gerencia». Escena 4: íconos de un reloj de arena y un candado, con el título «Urgencia más secreto». Escena 5: íconos de billetes, un documento con advertencia y una ruta, con el título «Se salta el procedimiento». Escena 6: en grande, la comparación entre el dominio real de la empresa y un dominio parecido falso, con la pregunta «¿Y el remitente?». Escena 7: recorrido por la oficina en 3D hasta detenerse en el teléfono de escritorio, con el mensaje final «Frena. Verifica por otro camino. Reporta»."
+}

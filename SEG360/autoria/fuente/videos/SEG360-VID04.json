@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID04",
+  "titulo": "Del aviso a la zona de seguridad",
+  "modulo": "SEG360-SST-M06",
+  "pantalla": "SEG360-SST-M06-L01-P04",
+  "objetivo": "Ante una alerta de incendio en la bodega, reconocer la secuencia de su rol básico en el plan de emergencia: alertar, activar el aviso, salir por la vía señalizada sin desvíos, reportarse en la zona de seguridad y no volver a entrar sin instrucción.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG022", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "Una emergencia se decide antes",
+      "voz": "Cuando alguien grita «¡humo!», no hay tiempo para leer un plan. Lo que haces en ese momento es lo que ya tenías claro desde antes.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["eye", "megaphone", "bell-ring"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Ves, alertas, activas",
+      "voz": "Ves humo o fuego. Te alejas y das la voz de alerta a quienes están cerca. Después activas la alarma o avisas al líder de evacuación, según el plan de tu área.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "escena3d", "ref": "bodega", "foco": "senal_evacuacion", "movimiento": "recorrido" },
+      "texto_en_pantalla": "Sigue la vía señalizada",
+      "voz": "Dejas lo que estás haciendo, sin volver por tus cosas, y sigues las señales de evacuación. Caminas rápido, sin correr. Si hay humo, avanzas agachado.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "escena3d", "ref": "bodega", "foco": "salida_bloqueada", "movimiento": "recorrido" },
+      "texto_en_pantalla": "Una salida con cajas no es salida",
+      "voz": "Esta salida tiene la señal, pero también tiene cajas delante. En una emergencia, eso obliga a todos a usar una sola vía. Por eso las salidas se revisan todos los días, no solo el día del simulacro.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "iconos", "ref": ["door-open", "footprints", "users"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Guía a quien no conoce el lugar",
+      "voz": "Si hay clientes o visitas, el líder del área los guía. Tú puedes ayudar diciéndoles con calma hacia dónde ir.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG022", "movimiento": "paneo_der" },
+      "texto_en_pantalla": "En la zona: repórtate",
+      "voz": "En la zona de seguridad te reportas con el líder para el conteo. Si alguien no está, le dices dónde lo viste por última vez. Esa información sirve para que Bomberos sepa a quién buscar y dónde.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "Nadie vuelve a entrar sin instrucción" },
+      "texto_en_pantalla": "Nadie vuelve a entrar sin instrucción",
+      "voz": "Y lo más importante: no vuelves a entrar, ni por la cartera ni por un compañero. Esperas la instrucción de la coordinación. Afuera, tu información vale más que cualquier rescate improvisado.",
+      "hablante": "patricia"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: una fotografía del equipo de Pehuén reunido en la zona de seguridad del estacionamiento se acerca lentamente; aparece el texto «Una emergencia se decide antes». Escena 2: aparecen en secuencia tres íconos, un ojo, un megáfono y una campana, con el texto «Ves, alertas, activas». Escena 3: un recorrido en 3D por el pasillo de la bodega avanza siguiendo la señal verde de vía de evacuación; texto «Sigue la vía señalizada». Escena 4: el recorrido se detiene frente a la salida de emergencia lateral, que tiene la señal visible pero cajas apiladas delante; texto «Una salida con cajas no es salida». Escena 5: tres íconos, una puerta abierta, huellas de pasos y un grupo de personas, con el texto «Guía a quien no conoce el lugar». Escena 6: la fotografía de la zona de seguridad se desplaza hacia la derecha y muestra a la líder de evacuación contando a las personas con una lista; texto «En la zona: repórtate». Escena 7: sobre fondo liso aparece en letras grandes la frase «Nadie vuelve a entrar sin instrucción», mientras habla la prevencionista."
+}

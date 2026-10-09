@@ -1,0 +1,1551 @@
+{
+  "id": "SEG360-SST-M02",
+  "ruta": "SST",
+  "numero": 2,
+  "titulo": "Identificar peligros y elegir controles",
+  "subtitulo": "Del recorrido a la propuesta: trabajo real, matriz simple, jerarquía y riesgo residual",
+  "resultado": "Ante una escena de trabajo, identificar peligros, estimar su probabilidad y consecuencia con una matriz simplificada, justificar controles según la jerarquía antes de proponer EPP y señalar el riesgo residual y los límites de la evaluación.",
+  "horas": 3.2,
+  "intro": {
+    "id": "SEG360-SST-M02-INTRO",
+    "titulo": "Catorce observaciones y una propuesta",
+    "texto": "Después de lo de la caja en el andén, Patricia y el Comité Paritario recorrieron la bodega y llenaron dos hojas: catorce observaciones. Rodrigo tiene presupuesto para partir con algunas este mes. Marisol propone «comprar guantes y zapatos nuevos para todos y listo».\n\nEn este módulo vas a aprender a mirar el trabajo como se hace de verdad, estimar y priorizar riesgos con una matriz simple y elegir controles que bajen el riesgo antes de pensar en EPP. Y a decir con claridad qué riesgo queda.",
+    "voz": "La propuesta de Marisol es la que se escucha en muchas empresas, y tiene sentido a primera vista. Comprar algo es rápido, se ve y da la sensación de haber hecho algo. Pero catorce observaciones no se resuelven con guantes. Algunas necesitan una cadena, otras un repuesto, otras cambiar cómo se aceptan los pedidos. En este módulo vas a aprender a ordenar esa lista: qué es más urgente, qué medida protege de verdad y qué riesgo queda después. Al final vas a inspeccionar la zona de despacho y redactar tu propia propuesta para el Comité.",
+    "hablante": "narrador",
+    "imagen": "SEG360-IMG011",
+    "logros": [
+      "Identificar peligros mirando el trabajo real, no solo el procedimiento, y conversando con quienes hacen la tarea.",
+      "Estimar y priorizar riesgos con una matriz simple de probabilidad y consecuencia, reconociendo sus límites.",
+      "Proponer controles según la jerarquía, justificar el EPP solo para el riesgo residual y declarar lo que queda y lo que no se evaluó."
+    ]
+  },
+  "lecciones": [
+    {
+      "id": "SEG360-SST-M02-L01",
+      "titulo": "Mirar el trabajo real, no el del papel",
+      "resultado": "Ante una tarea descrita en un procedimiento y observada en terreno, identificar los peligros del trabajo tal como se hace, incluidos los que aparecen por atajos, fallas o presión de tiempo, sin juzgar a quienes la realizan.",
+      "minutos": 40,
+      "fuentes": [
+        "SST-DS44",
+        "SST-OIT",
+        "SST-LEY20949"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-SST-M02-L01-P01",
+          "tipo": "apertura",
+          "titulo": "Lo que dice la hoja plastificada",
+          "escena": "Junto a la mesa de despacho hay una hoja plastificada: «Armar los pallets en la zona demarcada, con lo pesado abajo, y envolver con film». Lunes, 8:20. Patricia observa otra cosa: dos pallets armados en el pasillo, el rollo de film se acabó y Camila se sube a una caja para alcanzar el nivel superior del estante.",
+          "pregunta": "¿Está mal el procedimiento, está mal Camila o hay algo más?",
+          "texto": "El procedimiento describe el trabajo como debería ser. Lo que pasa de verdad depende de los plazos, el espacio, los equipos que funcionan y los que no, la experiencia de cada persona y lo que se acaba a mitad de turno.\n\nSi identificas peligros solo con el papel en la mano, siempre vas a llegar tarde.",
+          "voz": "Es fácil leer esta escena y pensar que Camila no sigue el procedimiento. Pero Patricia no anota eso. Anota preguntas. ¿Por qué se arma en el pasillo? ¿Dónde está la escalera? ¿Quién repone el film? Cada atajo que ves en una bodega tiene una razón detrás, y esa razón casi siempre es un peligro que el papel no muestra. En esta lección vas a aprender a mirar el trabajo como se hace de verdad, y no como dice la hoja.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG010",
+          "icono": "clipboard-list"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P02",
+          "tipo": "explicacion",
+          "titulo": "Trabajo prescrito y trabajo real",
+          "texto": "El **trabajo prescrito** es el que está en los procedimientos, las instrucciones y los planos. El **trabajo real** es el que las personas hacen para cumplir con lo que se les pide, con lo que tienen a mano.\n\nEntre los dos siempre hay distancia. No es un problema en sí: muchas veces la gente se adapta con criterio. Pero en esa distancia aparecen peligros que nadie evaluó, porque en el papel no existen.",
+          "bloques": [
+            {
+              "icono": "file-text",
+              "titulo": "Prescrito",
+              "texto": "Cómo debería hacerse, si todo funciona, hay tiempo y está todo el equipo."
+            },
+            {
+              "icono": "hand",
+              "titulo": "Real",
+              "texto": "Cómo se hace un lunes de fin de mes, sin film, con una persona menos."
+            },
+            {
+              "icono": "search",
+              "titulo": "La distancia",
+              "texto": "Ahí se esconden los peligros que hay que identificar."
+            }
+          ],
+          "nota": {
+            "tipo": "terreno",
+            "texto": "Cuando alguien se salta un paso, antes de corregirlo pregunta por qué. Muchas veces el atajo existe porque el paso oficial no se puede cumplir con lo que hay."
+          },
+          "voz": "Te cuento lo que pasa en casi todas las empresas. Alguien escribe un procedimiento con buena intención, en una oficina, pensando en un día normal. Después llega un día que no es normal. Falta un rollo de film, se adelanta un pedido, la escalera está mala. La persona que hace la tarea no se cruza de brazos: busca cómo sacar la pega. Ese ingenio es valioso, pero también es donde aparecen los riesgos que nadie miró. Por eso la identificación de peligros se hace mirando el trabajo y conversando con quien lo hace.",
+          "hablante": "patricia",
+          "profundiza": "El DS 44 de 2024 pide a las empresas identificar los peligros y evaluar los riesgos de sus actividades y registrarlos en una matriz. Esa matriz es tan buena como la información con que se construye. Si se arma solo leyendo procedimientos o con un recorrido rápido en un día tranquilo, va a dejar fuera lo que pasa cuando las cosas se complican.\n\nPor eso conviene identificar peligros con la participación de las personas que hacen la tarea, en distintos momentos: inicio y fin de turno, días de alta demanda, cambios de estación, cuando falla un equipo. La OIT promueve justamente esa participación como base de una cultura preventiva.\n\nLa distancia entre lo prescrito y lo real no se corrige solo exigiendo que se cumpla el papel. A veces el papel está mal y hay que cambiarlo. A veces faltan recursos para cumplirlo. A veces la tarea cambió y nadie actualizó el procedimiento. Las tres situaciones requieren respuestas distintas, y ninguna se resuelve con un «hay que seguir el procedimiento».",
+          "icono": "file-text"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P03",
+          "tipo": "proceso",
+          "titulo": "Cómo observar una tarea sin juzgarla",
+          "texto": "Cinco pasos para mirar el trabajo real. Sirven para un recorrido formal o para mirar tu propio puesto.",
+          "pasos": [
+            {
+              "titulo": "Explica para qué observas",
+              "icono": "message-square",
+              "texto": "Cuenta que buscas peligros del trabajo, no errores de personas. Si la gente siente que la están fiscalizando, va a hacer la tarea «como dice la hoja» mientras miras."
+            },
+            {
+              "titulo": "Mira un ciclo completo",
+              "icono": "refresh-cw",
+              "texto": "De principio a fin: preparar, hacer, terminar, guardar. Muchos peligros aparecen al inicio o al final, no en el centro de la tarea."
+            },
+            {
+              "titulo": "Pregunta por lo que no se ve",
+              "icono": "circle-help",
+              "texto": "¿Qué pasa cuando falla algo? ¿En el otro turno? ¿Los lunes, a fin de mes, con lluvia? ¿Qué es lo más incómodo de esta tarea?"
+            },
+            {
+              "titulo": "Anota peligros y exposición",
+              "icono": "pen-line",
+              "texto": "Qué puede hacer daño, quién se acerca, cuántas veces y en qué condiciones. Sin nombres de culpables."
+            },
+            {
+              "titulo": "Contrasta antes de concluir",
+              "icono": "users",
+              "texto": "Revisa lo anotado con quienes hacen la tarea y con el registro de incidentes y casi accidentes. Pueden corregirte o agregar algo."
+            }
+          ],
+          "voz": "El primer paso parece un trámite, pero define todo lo demás. Si llegas con cara de inspector, la gente va a trabajar como en el papel mientras la miras, y te vas a ir con una foto falsa. Si explicas que buscas peligros y no culpables, te van a mostrar los atajos, y los atajos son justamente lo que necesitas ver. El tercer paso también es clave: las mejores preguntas son las que empiezan con «qué pasa cuando».",
+          "hablante": "narrador",
+          "profundiza": "Observar una tarea es una habilidad que se entrena. Algunos errores frecuentes: mirar solo un momento de la tarea, mirar un día atípico por lo tranquilo, quedarse con lo primero que llama la atención y no ver lo cotidiano, o anotar conclusiones en vez de observaciones.\n\nUna buena observación se anota así: «La persona sube a una caja de cartón de unos 40 centímetros para alcanzar el tercer nivel del estante; la escalera de tijera tiene tarjeta de fuera de servicio». Una mala observación se anota así: «La trabajadora no respeta el procedimiento».\n\nLa primera abre preguntas útiles: ¿por qué no hay otra escalera?, ¿por qué lo que se usa seguido está tan alto? La segunda cierra la conversación y pone el foco en la persona.\n\nTambién conviene observar en distintos momentos y con distintas personas. Una persona con experiencia y una que recién llega hacen la misma tarea de forma distinta, y cada una se expone a cosas diferentes.",
+          "icono": "eye"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P04",
+          "tipo": "pestanas",
+          "titulo": "Familias de peligros en una distribuidora",
+          "texto": "Usa estas familias como lista mental cuando recorras un lugar. No son cajones cerrados: un mismo peligro puede caber en dos.",
+          "pestanas": [
+            {
+              "titulo": "Caídas y golpes",
+              "icono": "footprints",
+              "texto": "Pisos mojados o con desniveles, derrames, cables cruzados, escaleras dañadas, el borde del andén, objetos que caen de estantes o pallets, cajones abiertos en zonas de paso.\n\nEn Pehuén: la junta de la puerta 2, el derrame junto al estante de aseo, el pallet en el pasillo."
+            },
+            {
+              "titulo": "Máquinas y herramientas",
+              "icono": "wrench",
+              "texto": "Partes móviles que atrapan o aplastan, filos que cortan, equipos que se mueven solos o sin control.\n\nEn Pehuén: la envolvedora de pallets, la transpaleta, el cuchillo cartonero, la puerta del andén."
+            },
+            {
+              "titulo": "Electricidad e incendio",
+              "icono": "zap",
+              "texto": "Zapatillas sobrecargadas o en cadena, alargadores dañados, enchufes con marcas de calor, estufas junto a papel o cartón, salidas de emergencia bloqueadas.\n\nEn Pehuén: la zapatilla de la mesa de despacho con el hervidor, la estufa de la oficina."
+            },
+            {
+              "titulo": "Carga física y posturas",
+              "icono": "package",
+              "texto": "Levantar, empujar y arrastrar, alcanzar alto o bajo, repetir el mismo movimiento, trabajar con la pantalla muy baja.\n\nLa Ley 20.949 fija un máximo de 25 kilos para el manejo manual por una persona, y de 20 kilos para mujeres y menores de 18 años. Primero van las ayudas mecánicas."
+            },
+            {
+              "titulo": "Ambiente, químicos y organización",
+              "icono": "wind",
+              "texto": "Productos de aseo irritantes, poca ventilación, ruido, poca luz, frío o calor. Y también ritmos, plazos, turnos, presión de clientes y trato entre personas.\n\nLos peligros de la organización del trabajo no se ven en una foto, pero aparecen en todas las conversaciones."
+            }
+          ],
+          "voz": "Cuando recorras un lugar, tu cabeza va a ir directo a lo más llamativo: el cable en el suelo, el charco. Está bien, pero esta lista te ayuda a no quedarte ahí. Pasa por cada familia como si fuera una pregunta. ¿Hay algo que pueda hacer caer a alguien? ¿Alguna máquina? ¿Algo eléctrico? ¿Cargas? ¿Y cómo está organizado el trabajo? Esta última pregunta es la que más se olvida, y muchas veces es la que explica todas las demás.",
+          "hablante": "narrador",
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P05",
+          "tipo": "dialogo",
+          "titulo": "«Muéstrame cómo lo haces de verdad»",
+          "texto": "Patricia conversa con Camila y Héctor junto al estante del fondo.",
+          "lineas": [
+            {
+              "personaje": "patricia",
+              "texto": "Camila, ¿me muestras cómo armas un pallet de un pedido mixto? Como lo haces de verdad, no como dice la hoja."
+            },
+            {
+              "personaje": "camila",
+              "texto": "Ya. Primero junto todo en la mesa… bueno, cuando la mesa está libre. Si no, lo armo en el pasillo."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "¿Y qué pasa cuando lo que va abajo está en el nivel de arriba del estante?"
+            },
+            {
+              "personaje": "camila",
+              "texto": "Ahí necesito la escalera, pero tiene un peldaño trizado y Héctor le puso tarjeta. Entonces me subo a una caja firme, o espero a alguien más alto."
+            },
+            {
+              "personaje": "hector",
+              "texto": "La escalera nueva la pedimos hace un mes. Y el estante quedó así desde agosto: lo pesado arriba, porque abajo no cabían los bultos grandes."
+            },
+            {
+              "personaje": "patricia",
+              "texto": "Gracias, Héctor. Camila, ¿cuándo es más difícil esta tarea?"
+            },
+            {
+              "personaje": "camila",
+              "texto": "Los lunes y a fin de mes. Llegan todos los pedidos juntos y no da el tiempo para ordenar."
+            }
+          ],
+          "pregunta": "¿Qué peligro apareció en esta conversación que no se ve en el procedimiento?",
+          "opciones": [
+            {
+              "texto": "Que las cajas pesadas deben ir abajo en el pallet.",
+              "correcta": false,
+              "feedback": "Eso ya está en el procedimiento. Es una regla, no un peligro nuevo. Lo que la conversación muestra es por qué a veces no se puede cumplir."
+            },
+            {
+              "texto": "Subirse a una caja para alcanzar el nivel superior del estante, porque la escalera está fuera de servicio y lo pesado quedó arriba.",
+              "correcta": true,
+              "feedback": "Exacto. Es un peligro de caída y de sobreesfuerzo que no existe en el papel. Aparece porque se juntan dos condiciones: una escalera sin reemplazo y un estante mal ordenado. Y empeora los lunes y a fin de mes."
+            },
+            {
+              "texto": "Que Camila no conoce bien el procedimiento.",
+              "correcta": false,
+              "feedback": "Camila conoce el procedimiento: lo cita. El problema no es su conocimiento, sino las condiciones que le impiden cumplirlo."
+            },
+            {
+              "texto": "Que el film es caro y por eso se acaba.",
+              "correcta": false,
+              "feedback": "La falta de film es una condición importante, pero en esta conversación no se habló de su costo. Ojo con agregar suposiciones a lo que escuchaste."
+            }
+          ],
+          "explicacion": "Las preguntas de Patricia empiezan con «muéstrame» y «qué pasa cuando». No acusan, abren. Con dos preguntas apareció un peligro de caída, un estante mal ordenado, una compra atrasada y un patrón de días críticos. Nada de eso estaba en la hoja plastificada.",
+          "voz": "Escucha cómo pregunta Patricia. No dice por qué no sigues el procedimiento. Dice muéstrame cómo lo haces de verdad. Esa frase le da permiso a Camila para contar los atajos sin sentirse acusada. Y fíjate en Héctor: aporta el dato del estante y de la escalera pedida hace un mes. Con dos personas y tres preguntas, Patricia tiene más información que con cualquier recorrido sola.",
+          "hablante": "narrador",
+          "icono": "message-square"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P06",
+          "tipo": "escena3d",
+          "titulo": "La misma mirada, en la oficina",
+          "escena": "oficina",
+          "variante": "inicial",
+          "modo": "detectar",
+          "consigna": "Ahora practica en otro lugar: la oficina del segundo piso. Marca lo que es un riesgo y elige su prioridad. Ojo: no todo lo que ves es un problema, y marcar todo no es la respuesta.",
+          "texto": "Los peligros no son solo de bodega. En la oficina también hay trabajo real que no sale en ningún papel.",
+          "puntos": [
+            {
+              "objeto": "enchufe_quemado",
+              "titulo": "Enchufe con marcas de calor",
+              "texto": "El enchufe de pared tiene manchas oscuras alrededor. Es señal de que se ha calentado más de la cuenta, posiblemente por una mala conexión o sobrecarga.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Dejar de usarlo, avisar de inmediato a la jefatura y a mantención para que lo revise una persona autorizada. No abrirlo ni intentar repararlo."
+            },
+            {
+              "objeto": "zapatilla_cadena",
+              "titulo": "Dos zapatillas en cadena",
+              "texto": "Una zapatilla eléctrica enchufada a otra. Así se suman equipos sobre un solo enchufe y aumenta el riesgo de recalentamiento.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Avisar para que se instale una solución adecuada. Mientras tanto, no agregar más equipos."
+            },
+            {
+              "objeto": "estufa_papeles",
+              "titulo": "Estufa junto a cajas de papel",
+              "texto": "La estufa eléctrica está a pocos centímetros de cajas con papel. Si se calientan o la estufa se vuelca, hay riesgo de incendio.",
+              "es_riesgo": true,
+              "prioridad": "alta",
+              "accion": "Apagar la estufa y alejarla del papel, o mover las cajas. Avisar para definir un lugar seguro y permanente."
+            },
+            {
+              "objeto": "monitor_bajo",
+              "titulo": "Notebook sin soporte",
+              "texto": "La pantalla queda muy baja y obliga a inclinar el cuello. Quien trabaja ahí lo hace varias horas al día, todos los días.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Pedir un soporte y un teclado externo. El daño es lento, pero la exposición es diaria."
+            },
+            {
+              "objeto": "cajon_abierto",
+              "titulo": "Cajón abierto en zona de paso",
+              "texto": "El cajón inferior quedó abierto justo donde la gente pasa. Riesgo de tropiezo o golpe en la pierna.",
+              "es_riesgo": true,
+              "prioridad": "baja",
+              "accion": "Cerrarlo. Es una corrección inmediata que cualquiera puede hacer."
+            },
+            {
+              "objeto": "ventana_reflejo",
+              "titulo": "Reflejo fuerte en la pantalla",
+              "texto": "La luz de la ventana se refleja en el monitor. Obliga a forzar la vista y a adoptar posturas raras para leer.",
+              "es_riesgo": true,
+              "prioridad": "baja",
+              "accion": "Regular la cortina o reorientar el puesto. Si se repite, avisar para revisar la ubicación."
+            },
+            {
+              "objeto": "silla",
+              "titulo": "Silla ajustable",
+              "texto": "La silla tiene ajuste de altura y respaldo. Es una condición bien resuelta, siempre que la persona sepa ajustarla a su medida.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Ajustarla a tu cuerpo. Si no sabes cómo, pregunta."
+            },
+            {
+              "objeto": "extintor_oficina",
+              "titulo": "Extintor accesible",
+              "texto": "Extintor señalizado y sin obstáculos delante. Está bien.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Mantener el acceso despejado y avisar si se bloquea o su control está vencido."
+            }
+          ],
+          "voz": "Cambiamos de escenario a propósito. Si la mirada que estás entrenando sirve de verdad, tiene que funcionar también en una oficina. Aquí los peligros son más silenciosos. Un enchufe con manchas no hace ruido. Una pantalla baja no duele hoy. Fíjate en la exposición: quién está ahí y por cuánto tiempo. Y a la hora de priorizar, piensa en qué podría pasar si no se corrige hoy.",
+          "hablante": "narrador",
+          "icono": "building-2"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P07",
+          "tipo": "quiz",
+          "titulo": "Mirar el trabajo real",
+          "texto": "Tres situaciones para aplicar lo que viste.",
+          "preguntas": [
+            {
+              "enunciado": "Patricia quiere identificar los peligros de la preparación de pedidos. ¿Cuándo le conviene observar?",
+              "opciones": [
+                {
+                  "texto": "Un miércoles a media mañana, cuando hay poco movimiento y se puede mirar con calma.",
+                  "correcta": false,
+                  "feedback": "Es cómodo para observar, pero muestra el trabajo en su versión más fácil. Los peligros que aparecen con la presión de tiempo no van a estar."
+                },
+                {
+                  "texto": "En varios momentos, incluido un lunes de alta demanda, y conversando con quienes hacen la tarea.",
+                  "correcta": true,
+                  "feedback": "Bien. El trabajo cambia según el día y la carga. Observar en distintos momentos y preguntar a quienes lo hacen da una foto más completa."
+                },
+                {
+                  "texto": "No hace falta observar: basta con leer el procedimiento y el registro de accidentes.",
+                  "correcta": false,
+                  "feedback": "El procedimiento describe el trabajo prescrito y el registro solo muestra lo que ya pasó y se informó. Ninguno muestra los atajos de hoy."
+                }
+              ]
+            },
+            {
+              "enunciado": "Durante un recorrido ves a Héctor preparando la mezcla de limpieza sin guantes. ¿Qué anotas?",
+              "opciones": [
+                {
+                  "texto": "«Héctor no usa guantes.»",
+                  "correcta": false,
+                  "feedback": "Es una observación sobre la persona que no explica nada. ¿Hay guantes adecuados disponibles? ¿Le molestan? ¿Qué producto es?"
+                },
+                {
+                  "texto": "«Preparación diaria de desengrasante, unos diez minutos, sin ventilación y sin guantes. Preguntar si hay guantes adecuados disponibles y por qué no se usan.»",
+                  "correcta": true,
+                  "feedback": "Eso es una observación útil: describe la tarea, la exposición y las condiciones, y deja abierta una pregunta en vez de una conclusión."
+                },
+                {
+                  "texto": "Nada: Héctor tiene años de experiencia y sabe lo que hace.",
+                  "correcta": false,
+                  "feedback": "La experiencia no elimina la exposición. Un producto irritante afecta la piel de cualquiera, con o sin años de oficio."
+                }
+              ]
+            },
+            {
+              "enunciado": "En el recorrido aparece un atajo: la gente arma pallets en el pasillo cuando la mesa está ocupada. ¿Qué es lo más útil?",
+              "opciones": [
+                {
+                  "texto": "Recordar en la próxima charla que está prohibido armar en el pasillo.",
+                  "correcta": false,
+                  "feedback": "Si la causa es que no hay espacio, la prohibición solo va a hacer que el atajo se esconda. El peligro sigue ahí."
+                },
+                {
+                  "texto": "Registrar el peligro y preguntar por qué la mesa no alcanza: espacio, horarios o forma de organizar el picking.",
+                  "correcta": true,
+                  "feedback": "Así es. El atajo es una pista sobre una condición del trabajo. Entender su causa permite proponer un cambio real, como otra zona de armado o escalonar los pedidos."
+                },
+                {
+                  "texto": "Nada, si nadie se ha accidentado por eso.",
+                  "correcta": false,
+                  "feedback": "Ya viste en el módulo anterior que la falta de accidentes no demuestra que el riesgo sea bajo."
+                }
+              ]
+            }
+          ],
+          "voz": "En estas preguntas no hay trucos de memoria. Lo que importa es cómo miras. Antes de elegir, pregúntate cuál de las respuestas te daría más información útil para cambiar algo del trabajo. Y desconfía un poco de las respuestas que terminan la conversación rápido, como «ya está prohibido» o «tiene experiencia». Las mejores observaciones casi siempre abren una pregunta nueva.",
+          "hablante": "narrador",
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-SST-M02-L01-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar",
+          "ideas": [
+            "El procedimiento describe el trabajo prescrito; los peligros que más sorprenden viven en el trabajo real, en los atajos y las adaptaciones.",
+            "Para identificar peligros hay que observar ciclos completos, en distintos momentos, y preguntar «muéstrame» y «qué pasa cuando».",
+            "Un atajo no es un problema de la persona: es una pista sobre una condición que hay que entender y corregir."
+          ],
+          "pregunta": "¿Qué parte de tu propio trabajo haces distinto de como está escrito o de como te lo enseñaron? ¿Qué condición te lleva a hacerlo así y qué peligro podría tener?",
+          "texto": "Tres ideas para llevarte y una pregunta para mirar tu propio trabajo con honestidad.",
+          "voz": "Todos tenemos un atajo. Esa forma de hacer las cosas que no está en ningún papel pero que nos ahorra tiempo o nos resuelve un problema. Piensa en el tuyo. No para sentirte culpable, sino para preguntarte qué condición lo hace necesario y si esconde algún peligro. Esa es exactamente la pregunta que harías en una inspección.",
+          "hablante": "patricia",
+          "icono": "lightbulb"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-SST-M02-L02",
+      "titulo": "Evaluar y priorizar con una matriz simple (y sus límites)",
+      "resultado": "Ante una lista de peligros identificados, estimar su probabilidad y consecuencia con una matriz simplificada, priorizarlos justificando la estimación y reconocer lo que la matriz no muestra.",
+      "minutos": 40,
+      "fuentes": [
+        "SST-DS44",
+        "SST-LEY20949",
+        "SST-DS594"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-SST-M02-L02-P01",
+          "tipo": "apertura",
+          "titulo": "Todo parece urgente",
+          "escena": "Jueves, reunión del Comité Paritario. Sobre la mesa, la lista de catorce observaciones. Héctor quiere partir por la escalera; Marisol, por el desorden del pasillo; Rodrigo pregunta cuánto cuesta cada cosa. Patricia propone: «Antes de discutir, pongámosle un nivel a cada una. Y después discutimos el nivel».",
+          "pregunta": "¿Cómo se decide qué atender primero cuando todo parece urgente?",
+          "texto": "Cada persona mira la lista desde su experiencia, y todas tienen algo de razón. Sin un criterio común, gana quien habla más fuerte o lo que más se ve.\n\nUna matriz de riesgo simple ayuda a ordenar la conversación. No reemplaza el criterio: lo hace visible y discutible.",
+          "voz": "Esta escena se repite en cualquier comité, en cualquier empresa. Cada uno tiene su urgencia, y todas son legítimas. Héctor ve la escalera todos los días. Marisol tropieza con el pasillo. Rodrigo tiene que justificar cada peso que gasta. Lo que propone Patricia es simple y poderoso: un idioma común. No para que un número decida por las personas, sino para que la discusión sea sobre razones y no sobre quién insiste más.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG011",
+          "icono": "users"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P02",
+          "tipo": "explicacion",
+          "titulo": "Probabilidad por consecuencia",
+          "texto": "La matriz que usamos en este curso tiene dos ejes con tres niveles cada uno.\n\n**Probabilidad**: qué tan posible es que ocurra el daño con las condiciones actuales. Baja (1), media (2), alta (3).\n\n**Consecuencia**: qué tan grave sería el daño razonablemente esperable. Leve (1), seria (2), grave (3).\n\nAl multiplicarlas obtienes el **nivel de riesgo**: de 1 a 2 es bajo, de 3 a 4 es moderado, de 6 a 9 es alto.",
+          "bloques": [
+            {
+              "icono": "gauge",
+              "titulo": "Bajo: 1 y 2",
+              "texto": "Se controla con medidas de rutina y se vigila que no suba."
+            },
+            {
+              "icono": "triangle-alert",
+              "titulo": "Moderado: 3 y 4",
+              "texto": "Necesita medidas planificadas, con responsable y plazo."
+            },
+            {
+              "icono": "siren",
+              "titulo": "Alto: 6 y 9",
+              "texto": "Requiere acción prioritaria. Si no se puede controlar pronto, se detiene la exposición."
+            }
+          ],
+          "nota": {
+            "tipo": "norma",
+            "texto": "El DS 44 exige a las empresas una matriz de identificación de peligros y evaluación de riesgos. Cada empresa define su metodología: la de tu trabajo puede tener más niveles o criterios distintos. Esta versión simple sirve para aprender la lógica."
+          },
+          "voz": "No te asustes con la multiplicación, es más simple de lo que parece. Lo importante es la lógica. Un riesgo puede ser alto porque pasa muy seguido, aunque no sea tan grave, como tropezar en un pasillo estrecho. O porque es muy grave, aunque no pase tan seguido, como caer desde el andén. La matriz pone esos dos casos en la misma mesa y te obliga a pensar en ambos ejes, en vez de quedarte solo con el que más impresiona.",
+          "hablante": "narrador",
+          "profundiza": "Las matrices de riesgo se usan en todo el mundo, con muchas variantes: tres por tres, cuatro por cuatro, cinco por cinco, con colores o con números. Todas comparten la misma idea: combinar la probabilidad de un daño con su gravedad para comparar riesgos distintos y priorizar.\n\nAl estimar la probabilidad, piensa en las condiciones actuales, con los controles que existen hoy y funcionan de verdad. Si hay una cadena en el andén pero se deja abierta la mitad del tiempo, no cuenta como control completo.\n\nAl estimar la consecuencia, piensa en lo peor razonable, no en lo peor imaginable. Un corte con cartonero razonablemente puede requerir puntos; imaginar una amputación no ayuda a priorizar. Pero tampoco te quedes con lo más leve: una caída desde el andén razonablemente puede causar una fractura.\n\nEn las empresas, la matriz exigida por el DS 44 se complementa con el programa de trabajo preventivo, donde se definen las medidas, sus responsables y sus plazos. La matriz sin programa es un diagnóstico que no cambia nada.",
+          "icono": "gauge"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P03",
+          "tipo": "tarjetas",
+          "titulo": "Preguntas para estimar sin adivinar",
+          "consigna": "Da vuelta cada tarjeta. Son las preguntas que conviene hacerse antes de poner un número. Te van a servir en el ejercicio que sigue.",
+          "tarjetas": [
+            {
+              "frente": "¿Cuántas veces se expone alguien?",
+              "icono": "clock",
+              "reverso": "Una vez al mes no es lo mismo que veinte veces por turno. La frecuencia es la pista más fuerte para estimar la probabilidad."
+            },
+            {
+              "frente": "¿Cuántas personas?",
+              "icono": "users",
+              "reverso": "Un peligro en el pasillo principal expone a todo el equipo; uno en una bodega que se abre una vez por semana, a una persona. Más personas, más probabilidad de que a alguien le pase."
+            },
+            {
+              "frente": "¿Qué controles hay y funcionan?",
+              "icono": "shield-check",
+              "reverso": "Cuenta solo los controles que funcionan de verdad. Una tarjeta de fuera de servicio sirve si nadie usa el equipo; si la escalera sigue disponible junto al estante, el control es débil."
+            },
+            {
+              "frente": "¿Ya pasó o casi pasó?",
+              "icono": "history",
+              "reverso": "Los casi accidentes registrados son evidencia de probabilidad. Dos cajas caídas en un mes no son mala suerte."
+            },
+            {
+              "frente": "¿Qué es lo peor razonable?",
+              "icono": "heart-pulse",
+              "reverso": "Para la consecuencia, piensa en un daño que podría pasar de verdad con estas condiciones, no en el caso extremo ni en el más leve. Y recuerda los daños que se acumulan con el tiempo."
+            }
+          ],
+          "voz": "Estas preguntas son tu defensa contra el número inventado. Cuando alguien en una reunión dice que algo es probabilidad tres, la pregunta correcta es: ¿por qué? Si la respuesta es porque pasa todos los días, veinte veces, con todo el equipo, perfecto. Si la respuesta es porque me da miedo, hay que conversar más. Un número sin razones no sirve para priorizar.",
+          "hablante": "narrador",
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P04",
+          "tipo": "matriz",
+          "titulo": "Pon nivel a seis observaciones",
+          "consigna": "Estas son seis de las catorce observaciones del recorrido por la bodega. Para cada una, estima la probabilidad y la consecuencia con las condiciones que se describen. Después compara con la estimación de Patricia y lee su justificación. Si te alejas en más de un nivel, revisa qué dato no consideraste.",
+          "peligros": [
+            {
+              "id": "pm1",
+              "texto": "Charco de líquido de aseo junto al estante de productos de limpieza. Un envase gotea desde hace días y el pasillo es de alto tránsito en la preparación de pedidos.",
+              "probabilidad": 3,
+              "consecuencia": 2,
+              "justificacion": "Probabilidad alta: el envase gotea a diario y por ahí pasa todo el equipo con cajas que tapan la vista. Consecuencia seria: una caída en piso resbaladizo puede causar esguinces o fracturas, y el producto puede irritar la piel.",
+              "control": "Retirar el envase que gotea y revisar el almacenamiento; bandeja antiderrame bajo el estante; limpieza según procedimiento y señal de piso mojado mientras tanto."
+            },
+            {
+              "id": "pm2",
+              "texto": "Escalera de tijera con un peldaño trizado, todavía apoyada junto al estante y sin tarjeta de fuera de servicio.",
+              "probabilidad": 2,
+              "consecuencia": 3,
+              "justificacion": "Probabilidad media: no se usa todos los días, pero está a mano y sin advertencia. Consecuencia grave: una caída desde altura puede causar fracturas o golpes en la cabeza.",
+              "control": "Retirarla hoy de uso con tarjeta, guardarla donde no se pueda tomar y reponerla con una escalera certificada."
+            },
+            {
+              "id": "pm3",
+              "texto": "Cajas de 14 kilos en el nivel superior del estante, a 1,8 metros. Se bajan a mano varias veces por semana.",
+              "probabilidad": 2,
+              "consecuencia": 2,
+              "justificacion": "Probabilidad media: la tarea se repite varias veces por semana. Consecuencia seria: bajar peso sobre los hombros puede lesionar la espalda, y una caja que se resbala puede golpear la cabeza o los pies.",
+              "control": "Reordenar el estante: lo pesado entre la altura de las rodillas y la cintura, lo liviano arriba."
+            },
+            {
+              "id": "pm4",
+              "texto": "Cajas de 32 kilos que llegan en pallet. Hay transpaleta, pero para dejarlas en el nivel medio del estante se levantan a mano, casi todos los días.",
+              "probabilidad": 3,
+              "consecuencia": 2,
+              "justificacion": "Probabilidad alta: la tarea es casi diaria y la carga supera el máximo legal de 25 kilos para una persona. Consecuencia seria: lesiones de espalda que pueden dejar a alguien semanas sin trabajar.",
+              "control": "No manipular a mano en solitario; ayudas mecánicas para pasar de la transpaleta al estante; evaluar con el proveedor cajas más livianas."
+            },
+            {
+              "id": "pm5",
+              "texto": "Cuchillo cartonero de hoja fija que queda abierto sobre la mesa de despacho después de abrir cajas.",
+              "probabilidad": 2,
+              "consecuencia": 1,
+              "justificacion": "Probabilidad media: se usa varias veces al día y queda abierto donde otras personas apoyan las manos. Consecuencia leve a seria: un corte en la mano. Patricia lo deja en leve porque la hoja es corta, pero acepta un 2 bien justificado.",
+              "control": "Cambiar a cartonero de hoja retráctil y definir dónde se guarda."
+            },
+            {
+              "id": "pm6",
+              "texto": "Pasillo del fondo con dos tubos fluorescentes apagados desde hace dos semanas. Ahí se guardan productos de baja rotación.",
+              "probabilidad": 1,
+              "consecuencia": 2,
+              "justificacion": "Probabilidad baja: es un pasillo de poco tránsito. Consecuencia seria: con poca luz cuesta ver desniveles o cajas en el piso, y una caída puede causar una lesión importante.",
+              "control": "Reponer los tubos. Mientras tanto, no dejar cajas en el piso de ese pasillo."
+            }
+          ],
+          "voz": "Este es un ejercicio de criterio, no de adivinanza. La tolerancia es de un nivel en cada eje, porque personas razonables pueden ver las cosas un poco distinto. Lo que importa es que puedas decir por qué elegiste cada número. Cuando veas la estimación de Patricia, no te quedes solo con si acertaste. Lee la justificación y fíjate qué dato pesó en su decisión. Si quieres, vuelve a intentarlo con esa idea en la cabeza.",
+          "hablante": "narrador",
+          "practica_formativa": true,
+          "icono": "gauge"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P05",
+          "tipo": "comparacion",
+          "titulo": "Lo que la matriz muestra y lo que no",
+          "izquierda": {
+            "titulo": "Lo que la matriz te da",
+            "icono": "badge-check",
+            "puntos": [
+              "Un idioma común para comparar riesgos muy distintos.",
+              "Un orden de prioridad defendible ante la gerencia o el Comité.",
+              "Una forma de ver si una medida bajó el riesgo: antes y después.",
+              "Una obligación de explicar por qué se eligió cada número."
+            ]
+          },
+          "derecha": {
+            "titulo": "Lo que la matriz no te da",
+            "icono": "eye",
+            "puntos": [
+              "Certeza: los números son estimaciones de personas, no mediciones.",
+              "Los peligros que nadie vio en el recorrido.",
+              "La diferencia entre un daño que se recupera y uno irreversible, si todo queda en «grave».",
+              "Los riesgos de la organización del trabajo, si solo se miró el lugar."
+            ]
+          },
+          "conclusion": "La matriz es una herramienta para ordenar la conversación, no para terminarla. Un riesgo con nivel bajo pero con una solución fácil y barata se corrige igual. Y un nivel alto no dice qué medida tomar: eso viene en la lección siguiente.",
+          "texto": "Compara las dos columnas. Saber los límites de una herramienta es parte de usarla bien.",
+          "voz": "Una matriz es como un mapa. Te ayuda muchísimo a orientarte, pero no es el territorio. Te cuento lo que he visto: empresas con matrices preciosas, llenas de colores, que nunca miraron cómo se armaba un pallet un lunes. Y empresas que discutían durante una hora si algo era un cuatro o un seis, en vez de arreglar lo que costaba diez minutos. La matriz sirve para priorizar, no para posponer.",
+          "hablante": "patricia",
+          "profundiza": "Algunas limitaciones conocidas de las matrices de riesgo simples:\n\nComprimen la realidad. Con solo tres niveles, un esguince y una fractura expuesta pueden quedar ambos en «seria». Por eso, cuando la consecuencia posible es irreversible o puede afectar a varias personas, conviene marcarlo aparte.\n\nDependen de quién estima. Dos personas pueden dar números distintos al mismo peligro, y ambas con razones. Eso no es un defecto si se conversa: la diferencia suele revelar información que una de las dos no tenía.\n\nNo miden. Para ruido, iluminación, calidad del aire o exposición a sustancias, la estimación a ojo no basta. Se necesitan mediciones con instrumentos y profesionales con formación específica.\n\nPueden dar una falsa sensación de control. Una matriz completa no es un lugar seguro: lo que baja el riesgo son las medidas, con responsable y plazo, y su seguimiento.",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P06",
+          "tipo": "mito_realidad",
+          "titulo": "Lo que se dice de las matrices",
+          "texto": "Decide si cada frase es verdad o mito.",
+          "afirmaciones": [
+            {
+              "texto": "Si un riesgo sale bajo en la matriz, no hay que hacer nada.",
+              "es_verdad": false,
+              "explicacion": "Un riesgo bajo se mantiene vigilado y, si la solución es simple, se corrige igual. Cerrar un cajón o guardar un cartonero no necesita esperar turno."
+            },
+            {
+              "texto": "Un riesgo con consecuencia grave merece atención aunque su probabilidad sea baja.",
+              "es_verdad": true,
+              "explicacion": "Cuando lo que está en juego es una lesión grave o irreversible, una probabilidad baja no tranquiliza. Por eso la caída desde el andén o un atrapamiento se priorizan aunque «casi nunca pase»."
+            },
+            {
+              "texto": "Si dos personas estiman distinto el mismo peligro, una de las dos está equivocada.",
+              "es_verdad": false,
+              "explicacion": "Pueden tener información distinta. La diferencia es una invitación a conversar: quizás una sabe que la tarea se hace más seguido, o que el control no funciona."
+            },
+            {
+              "texto": "Para el ruido o la iluminación, la estimación a ojo no basta.",
+              "es_verdad": true,
+              "explicacion": "Esos agentes se miden con instrumentos y criterios técnicos. Puedes detectar que algo parece ruidoso u oscuro y avisarlo; la evaluación la hace personal con formación específica."
+            },
+            {
+              "texto": "Una vez hecha la matriz, el trabajo de evaluación terminó.",
+              "es_verdad": false,
+              "explicacion": "La matriz se revisa cuando cambian las tareas, los equipos, el lugar o cuando ocurre un incidente. Y sin un programa con medidas, responsables y plazos, es solo un diagnóstico."
+            }
+          ],
+          "voz": "Estas frases aparecen seguido en las reuniones. Algunas vienen de personas que quieren cerrar el tema rápido, otras de personas que confían demasiado en los números. Piensa cada una con calma y, sobre todo, fíjate en la explicación de las que te sorprendan.",
+          "hablante": "narrador",
+          "icono": "circle-help"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P07",
+          "tipo": "decision",
+          "titulo": "Dos niveles iguales, una sola decisión hoy",
+          "situacion": "En la reunión quedan dos riesgos con el mismo nivel 6. El derrame recurrente junto al estante de aseo: probabilidad alta, consecuencia seria. La escalera con el peldaño trizado: probabilidad media, consecuencia grave. Rodrigo dice: «Hoy puedo mover gente para resolver uno solo. ¿Cuál?».",
+          "pregunta": "¿Qué le propones a Rodrigo?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "El derrame, porque pasa más seguido y es el que más se ve.",
+              "correcta": false,
+              "feedback": "La frecuencia pesa, pero no es el único criterio. Retirar la escalera es más rápido y evita una lesión grave. El derrame se puede contener y señalizar mientras tanto."
+            },
+            {
+              "texto": "Da lo mismo: si tienen el mismo número, la prioridad es igual.",
+              "correcta": false,
+              "feedback": "El mismo número no significa lo mismo. Cuando el nivel empata, ayudan otras preguntas: ¿cuál puede dejar un daño irreversible?, ¿cuál se controla más rápido?, ¿qué se puede hacer con el otro mientras tanto?"
+            },
+            {
+              "texto": "La escalera: retirarla hoy cuesta poco y evita una consecuencia grave. Para el derrame, una medida provisoria hoy, como contener, señalizar y retirar el envase que gotea, y una solución definitiva esta semana.",
+              "correcta": true,
+              "feedback": "Bien razonado. A igual nivel, la gravedad posible y la rapidez del control inclinan la balanza. Y no dejas el derrame sin nada: le das una medida provisoria con plazo."
+            },
+            {
+              "texto": "Esperar a la próxima reunión del Comité para decidir con más información.",
+              "correcta": false,
+              "feedback": "Más información siempre ayuda, pero con dos riesgos altos identificados, esperar un mes deja a las personas expuestas. La matriz ya hizo su trabajo: ahora toca decidir."
+            }
+          ],
+          "explicacion": "La matriz te lleva hasta la puerta, pero la decisión final necesita criterio: gravedad e irreversibilidad, rapidez y costo del control, y qué se puede hacer mientras tanto con lo que no se alcanza a resolver hoy.",
+          "voz": "Este tipo de decisión es el día a día de cualquier jefatura. Nunca hay recursos para todo al mismo tiempo. Fíjate en que la respuesta más sólida no abandona ninguno de los dos riesgos. Elige qué se resuelve hoy y qué recibe una medida provisoria. Eso es priorizar de verdad: decidir el orden sin dejar a nadie expuesto sin protección.",
+          "hablante": "narrador",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-SST-M02-L02-P08",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar",
+          "ideas": [
+            "El nivel de riesgo combina probabilidad y consecuencia; cada número necesita una razón basada en la exposición y en los controles que funcionan de verdad.",
+            "La matriz ordena la conversación y permite priorizar, pero no mide, no ve lo que nadie observó y no decide la medida.",
+            "Ante niveles parecidos, pesan la gravedad irreversible, la rapidez del control y lo que se puede hacer mientras tanto."
+          ],
+          "pregunta": "Elige dos riesgos de tu propio trabajo. ¿Qué nivel le darías a cada uno y qué dato concreto te llevó a ese número?",
+          "texto": "Tres ideas para llevarte y una pregunta para practicar con tu propio trabajo.",
+          "voz": "Te propongo practicar esto con algo tuyo. Elige dos riesgos de tu trabajo, uno que te parezca evidente y otro que nadie comente. Ponles número y, sobre todo, escribe la razón de cada número. Vas a ver que el segundo, el que nadie comenta, a veces sale más alto de lo que esperabas.",
+          "hablante": "narrador",
+          "icono": "lightbulb"
+        }
+      ]
+    },
+    {
+      "id": "SEG360-SST-M02-L03",
+      "titulo": "Jerarquía de controles y riesgo residual",
+      "resultado": "Ante un riesgo evaluado, proponer controles siguiendo la jerarquía, desde eliminar hasta EPP, justificar por qué se elige cada nivel y explicar qué riesgo residual queda y cómo se vigila.",
+      "minutos": 40,
+      "fuentes": [
+        "SST-DS44",
+        "SST-DS594",
+        "SST-DS18",
+        "SST-LEY20949",
+        "SST-ISP-EPP"
+      ],
+      "pantallas": [
+        {
+          "id": "SEG360-SST-M02-L03-P01",
+          "tipo": "apertura",
+          "titulo": "«Riesgo cero, ¿o no?»",
+          "escena": "Un mes después. La zona de despacho se ve distinta: cadena en el andén, pallets en su zona, lo pesado abajo, la escalera trizada fuera de servicio. Rodrigo se saca una foto con Marisol frente al estante ordenado. «Riesgo cero, ¿o no?», le dice a Patricia. Ella sonríe y abre su libreta.",
+          "pregunta": "¿Qué riesgo bajó de verdad, cuál sigue ahí y por qué nunca llega a cero?",
+          "texto": "Los cambios son reales y vale la pena celebrarlos. Pero ninguna medida deja el riesgo en cero: siempre queda algo, el **riesgo residual**.\n\nEn esta lección vas a ver por qué algunas medidas protegen más que otras, cómo se ordenan en la **jerarquía de controles** y por qué el EPP va al final, no al principio.",
+          "voz": "La alegría de Rodrigo es justa. Hace un mes la bodega era otra. Pero la pregunta de Patricia en su libreta es la que viene ahora: ¿qué quedó? Porque siempre queda algo. La cadena hay que sacarla cuando llega el camión. La escalera nueva todavía no llega. Las cajas siguen pesando lo mismo. Saber qué queda no es aguar la fiesta. Es lo que permite que los cambios duren y que nadie baje la guardia donde no debe.",
+          "hablante": "narrador",
+          "imagen": "SEG360-IMG012",
+          "icono": "shield-check"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P02",
+          "tipo": "pestanas",
+          "titulo": "La jerarquía de controles, de arriba abajo",
+          "texto": "Los controles se ordenan de más a menos efectivos. Se parte por arriba y se baja solo cuando lo de arriba no es factible o no alcanza.",
+          "pestanas": [
+            {
+              "titulo": "1. Eliminar",
+              "icono": "trash-2",
+              "texto": "Hacer que el peligro desaparezca. Es lo más efectivo, porque no depende de nadie.\n\nEn Pehuén: sacar el hervidor de la mesa de despacho; rediseñar el flujo para que ningún pallet se arme en el pasillo peatonal; recibir ciertos productos en pallet completo para no manipular caja por caja."
+            },
+            {
+              "titulo": "2. Sustituir",
+              "icono": "refresh-cw",
+              "texto": "Cambiar algo peligroso por algo que lo sea menos.\n\nEn Pehuén: cuchillo cartonero de hoja retráctil en vez de hoja fija; un producto de limpieza menos irritante que limpie igual; cajas de 12 kilos en vez de 32, acordado con el proveedor."
+            },
+            {
+              "titulo": "3. Ingeniería",
+              "icono": "wrench",
+              "texto": "Separar a las personas del peligro con cambios físicos en el lugar o los equipos.\n\nEn Pehuén: cadena o barrera en el borde del andén; reja de la envolvedora con un dispositivo que detenga la máquina si se abre; canaletas para los cables; una mesa elevadora para pasar cajas al estante."
+            },
+            {
+              "titulo": "4. Administrativos",
+              "icono": "clipboard-list",
+              "texto": "Cambiar cómo se organiza el trabajo: procedimientos, señalización, capacitación, turnos, pausas, rotación, permisos.\n\nEn Pehuén: no aceptar pedidos adelantados sin confirmar con bodega; demarcar zonas; instruir el armado de pallets mixtos. Dependen de que las personas los cumplan, por eso son más frágiles."
+            },
+            {
+              "titulo": "5. EPP",
+              "icono": "hard-hat",
+              "texto": "Proteger a la persona cuando el peligro sigue ahí después de todo lo anterior.\n\nEn Pehuén: zapatos de seguridad para la caída de objetos sobre los pies; guantes para manipular cajas con bordes de zuncho. Es la última barrera: si falla, se pone mal o no se usa, no hay nada más entre la persona y el peligro."
+            }
+          ],
+          "voz": "Hay una forma sencilla de recordar esta jerarquía. Pregúntate: ¿de quién depende que esta medida funcione? Si eliminaste el peligro, no depende de nadie: ya no está. Si pusiste una barrera física, depende de que la barrera esté en su lugar. Si es un procedimiento, depende de que todos lo sigan, todos los días, incluso apurados. Y si es un elemento de protección personal, depende de que esa persona lo tenga, sea de su talla, esté en buen estado y lo use bien en cada momento. Mientras más abajo, más cosas tienen que salir bien.",
+          "hablante": "narrador",
+          "profundiza": "La jerarquía de controles es un principio reconocido internacionalmente y el DS 44 de 2024 la incorpora en la gestión preventiva chilena: las medidas se eligen priorizando la eliminación del peligro y bajando en la escala solo cuando lo superior no es factible.\n\nEn la práctica casi nunca se usa un solo nivel. Lo habitual es combinar: una medida de ingeniería que reduce mucho el riesgo, un procedimiento que ordena cómo se trabaja con ella, y EPP para lo que queda. Lo que la jerarquía evita es partir por abajo, comprando EPP o haciendo una charla cuando existía una solución más efectiva.\n\nSobre el EPP: en Chile, el DS 594 establece que el empleador debe proporcionarlo sin costo para la persona trabajadora, y el DS 18 de 1982 regula la certificación de calidad de los EPP. El Instituto de Salud Pública mantiene información sobre EPP certificados y guías técnicas. Elegir un EPP adecuado requiere conocer el riesgo residual concreto: no hay «un guante para todo» ni «un zapato para todo». La ruta de protección personal de este curso profundiza en eso.",
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P03",
+          "tipo": "ordenar",
+          "titulo": "Cinco medidas para la caja de 32 kilos",
+          "consigna": "Estas son cinco medidas propuestas para las cajas de 32 kilos que llegan en pallet y se dejan a mano en el estante. Ordénalas desde la más efectiva hasta la menos efectiva según la jerarquía de controles.",
+          "pasos": [
+            {
+              "id": "a",
+              "texto": "Entregar guantes con buen agarre a quienes manipulan esas cajas."
+            },
+            {
+              "id": "b",
+              "texto": "Acordar con el proveedor que el mismo producto venga en cajas de 12 kilos."
+            },
+            {
+              "id": "c",
+              "texto": "Despachar ese producto en el mismo pallet en que llega, sin manipular caja por caja."
+            },
+            {
+              "id": "d",
+              "texto": "Definir que esas cajas se mueven siempre entre dos personas, e instruir la técnica."
+            },
+            {
+              "id": "e",
+              "texto": "Instalar una mesa elevadora para pasar las cajas de la transpaleta al estante sin levantarlas."
+            }
+          ],
+          "orden": [
+            "c",
+            "b",
+            "e",
+            "d",
+            "a"
+          ],
+          "alternativas_validas": [],
+          "feedback_ok": "Bien ordenado. Despachar en el mismo pallet elimina la manipulación manual. Las cajas de 12 kilos sustituyen la carga por una menos pesada. La mesa elevadora es ingeniería: separa la espalda del peso. Mover entre dos es administrativo: funciona si siempre hay dos personas disponibles. Los guantes mejoran el agarre, pero no hacen más liviana la caja. En la práctica, Pehuén probablemente combine varias.",
+          "feedback_error": "Revisa con esta pregunta: ¿cuánto depende cada medida de que las personas hagan lo correcto en cada momento? Si el producto se despacha sin tocarlo, no depende de nadie. Si la caja pesa 12 kilos, la carga ya es menor para cualquiera. Una mesa elevadora funciona mientras esté y se use. «Siempre entre dos» depende de que haya dos personas libres, incluso un lunes de fin de mes. Y los guantes no cambian el peso que llega a la espalda.",
+          "texto": "Arrastra las medidas para ordenarlas. Piensa en de quién depende que cada una funcione.",
+          "voz": "Este ejercicio tiene una trampa interesante. Lo primero que se le ocurre a la mayoría es la medida de las dos personas, porque es la más conocida y la que se puede hacer al tiro. Y está bien hacerla mientras tanto. Pero fíjate en cuántas cosas tienen que salir bien para que funcione: que haya dos personas libres, que nadie esté apurado, que nadie diga «yo puedo solo». Las medidas de arriba no necesitan nada de eso.",
+          "hablante": "narrador",
+          "icono": "list-checks"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P04",
+          "tipo": "escena3d",
+          "titulo": "La bodega después de los cambios",
+          "escena": "bodega",
+          "variante": "corregida",
+          "modo": "explorar",
+          "consigna": "Recorre la bodega después de las mejoras. En cada punto, fíjate en dos cosas: qué riesgo bajó y qué riesgo residual queda. Los puntos marcados como riesgo son los que todavía necesitan atención.",
+          "texto": "Misma bodega, un mes después. Abre cada punto y lee qué cambió y qué sigue ahí.",
+          "puntos": [
+            {
+              "objeto": "borde_anden",
+              "titulo": "Cadena en el borde del andén",
+              "texto": "Bajó: cuando no hay camión, la cadena impide acercarse al borde. Queda: la cadena se saca para cargar y hay que volver a ponerla. Si alguien lo olvida, el borde vuelve a quedar abierto.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Verificar la cadena en cada despacho y evaluar con el Comité una barrera que se cierre sola o una alarma de puerta abierta."
+            },
+            {
+              "objeto": "envolvedora",
+              "titulo": "Reja de la envolvedora instalada",
+              "texto": "Bajó: la reja separa las manos de los rodillos en marcha. Queda: si el film se traba y alguien retira la reja para destrabarlo, el peligro vuelve completo.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Que solo personal autorizado destrabe la máquina, detenida y según el fabricante; avisar cada traba para resolver su causa."
+            },
+            {
+              "objeto": "escalera_tijera",
+              "titulo": "Escalera retirada con tarjeta",
+              "texto": "Bajó: nadie puede usar la escalera trizada. Queda, y es nuevo: mientras no llegue la de reemplazo, alguien puede subirse a una caja para alcanzar arriba.",
+              "es_riesgo": true,
+              "prioridad": "media",
+              "accion": "Reponer la escalera con fecha comprometida y, mientras tanto, dejar abajo todo lo que se usa seguido."
+            },
+            {
+              "objeto": "derrame",
+              "titulo": "Derrame contenido y señalizado",
+              "texto": "Bajó: el líquido está contenido y hay señal de piso mojado. Queda: el piso sigue resbaladizo hasta que se seque, y la señal solo advierte. Si el envase sigue goteando, el charco vuelve.",
+              "es_riesgo": true,
+              "prioridad": "baja",
+              "accion": "Limpiar según procedimiento y revisar el origen: el envase dañado y la forma de almacenar."
+            },
+            {
+              "objeto": "estante_pesado_arriba",
+              "titulo": "Lo pesado abajo",
+              "texto": "Bajó: ya no hay que bajar cajas pesadas desde sobre los hombros. Queda: las cajas siguen pesando lo mismo y se siguen levantando desde abajo.",
+              "es_riesgo": true,
+              "prioridad": "baja",
+              "accion": "Mantener el orden en cada reposición y usar ayudas mecánicas para las cajas más pesadas."
+            },
+            {
+              "objeto": "zapatilla_sobrecargada",
+              "titulo": "Regleta fija, sin hervidor",
+              "texto": "Bajó mucho: la regleta está fija, no tiene equipos de más y el hervidor salió de la bodega. El riesgo que queda es el de cualquier instalación en uso normal.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "No volver a sumar equipos y avisar si se calienta o tiene marcas."
+            },
+            {
+              "objeto": "salida_bloqueada",
+              "titulo": "Salida de emergencia despejada",
+              "texto": "Bajó: la salida está libre y la señal apunta a un camino real. Lo que queda es la tentación de volver a dejar cajas ahí en un día de mucha mercadería.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Demarcar en el piso la zona que debe estar libre y revisarla en las rondas."
+            },
+            {
+              "objeto": "cartonero",
+              "titulo": "Cartonero retráctil guardado",
+              "texto": "Bajó: la hoja se retrae sola al soltar y el cartonero tiene su lugar. Al usarlo sigue cortando, como debe ser.",
+              "es_riesgo": false,
+              "prioridad": null,
+              "accion": "Guardarlo después de cada uso y cambiar la hoja cuando pierda filo."
+            },
+            {
+              "objeto": "mesa_despacho",
+              "titulo": "Mesa de despacho con soporte",
+              "texto": "Bajó: el notebook está en un soporte, a la altura de los ojos. Queda: la silla sigue sin respaldo, y quien etiqueta pasa largos ratos sentado ahí.",
+              "es_riesgo": true,
+              "prioridad": "baja",
+              "accion": "Pedir una silla con respaldo y ajuste de altura."
+            }
+          ],
+          "voz": "Recorre la escena con calma y lee cada punto completo. Vas a notar algo interesante: en la escalera, el riesgo de la escalera trizada bajó, pero apareció uno nuevo, el de subirse a una caja. Eso pasa seguido. Una medida bien hecha puede crear otro riesgo si no se piensa qué pasa mientras tanto. Por eso el riesgo residual no se mira una vez y se archiva. Se vigila.",
+          "hablante": "narrador",
+          "icono": "scan-eye"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P05",
+          "tipo": "explicacion",
+          "titulo": "Riesgo residual: lo que queda, dicho en voz alta",
+          "texto": "El **riesgo residual** es el que queda después de aplicar los controles. Nunca es cero, y no hay que esconderlo: hay que decirlo, para que se sepa qué vigilar.\n\nPara cada riesgo controlado conviene dejar escrito qué queda, qué lo mantiene bajo control, quién lo vigila y qué señal indicaría que volvió a subir.\n\nSolo cuando ese riesgo residual está claro tiene sentido preguntarse si hace falta EPP, y para qué riesgo exactamente.",
+          "bloques": [
+            {
+              "icono": "eye",
+              "titulo": "Qué queda",
+              "texto": "El peligro y la exposición que siguen después de las medidas."
+            },
+            {
+              "icono": "shield-check",
+              "titulo": "Qué lo sostiene",
+              "texto": "La cadena, la reja, el procedimiento: lo que hay que mantener."
+            },
+            {
+              "icono": "bell-ring",
+              "titulo": "Señal de alerta",
+              "texto": "Lo que indicaría que volvió a subir: una traba, un casi accidente, un atajo."
+            }
+          ],
+          "nota": {
+            "tipo": "norma",
+            "texto": "El EPP lo entrega la empresa sin costo para la persona (DS 594) y debe contar con certificación de calidad (DS 18 de 1982). Elegirlo bien requiere conocer el riesgo residual concreto."
+          },
+          "voz": "Cuando entrego un informe, siempre agrego una columna que se llama qué queda. Al principio a las jefaturas no les gustaba, porque sentían que estaba diciendo que el trabajo no estaba terminado. Ahora la piden. ¿Por qué? Porque esa columna les dice exactamente qué tienen que mirar en sus rondas. La cadena del andén, por ejemplo: está buenísima, pero solo funciona si se vuelve a poner. Eso hay que decirlo en voz alta, no suponerlo.",
+          "hablante": "patricia",
+          "profundiza": "El riesgo residual se puede evaluar con la misma matriz: después de aplicar las medidas, se vuelve a estimar probabilidad y consecuencia. Normalmente las medidas de eliminación y sustitución bajan la consecuencia o hacen desaparecer el peligro; las de ingeniería y administrativas suelen bajar sobre todo la probabilidad.\n\nSi el riesgo residual sigue siendo alto, la tarea no debería hacerse así. Hay que buscar más controles o cambiar la forma de trabajar. Si es moderado, se aceptan las medidas con seguimiento. Si es bajo, se mantiene vigilado.\n\nEl EPP entra en esta etapa, no antes. Y su elección depende de la tarea concreta: no es lo mismo proteger los pies de la caída de una caja que proteger las manos de un producto químico o de un corte. Además, un EPP puede crear riesgos nuevos si no se elige bien. Por ejemplo, un guante cerca de rodillos en movimiento puede ser atrapado y arrastrar la mano.\n\nEl riesgo residual también es información para las personas: el DS 44 incluye el derecho a ser informadas de los riesgos y de las medidas. Saber qué queda es parte de ese derecho.",
+          "icono": "shield-alert"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P06",
+          "tipo": "decision",
+          "titulo": "«Compremos fajas y listo»",
+          "situacion": "Mientras se resuelve lo de las cajas de 32 kilos, Marisol encuentra en internet fajas lumbares y propone comprar una para cada persona de la bodega: «Así nadie se lesiona la espalda y no tenemos que cambiar nada».",
+          "pregunta": "¿Qué le respondes a Marisol?",
+          "multiple": false,
+          "opciones": [
+            {
+              "texto": "«Buena idea, y además así cumplimos con entregar EPP.»",
+              "correcta": false,
+              "feedback": "Entregar EPP sin costo es obligación de la empresa, pero entregar algo no significa controlar el riesgo. Una faja no hace más liviana una caja de 32 kilos, que además supera el máximo legal para una persona."
+            },
+            {
+              "texto": "«Una faja no reduce el peso que llega a la espalda. Primero veamos opciones más arriba: despachar en el mismo pallet, pedir cajas más livianas, una mesa elevadora. Mientras tanto, esas cajas se mueven entre dos o con ayuda mecánica.»",
+              "correcta": true,
+              "feedback": "Exacto. Apuntas a controles que cambian la carga o la forma de moverla, y propones una medida provisoria razonable. Si después de eso queda algún riesgo residual, recién ahí se pregunta qué protección personal tiene sentido, con apoyo especializado."
+            },
+            {
+              "texto": "«Mejor no hacemos nada hasta que llegue la mesa elevadora.»",
+              "correcta": false,
+              "feedback": "Esperar sin medidas provisorias deja a las personas expuestas semanas. Mientras llega la solución de fondo, hay que hacer algo hoy: mover entre dos, usar la transpaleta lo más posible, no levantar en solitario."
+            },
+            {
+              "texto": "«Las fajas, pero solo para quienes ya tienen dolor de espalda.»",
+              "correcta": false,
+              "feedback": "Esto convierte un problema de la tarea en un problema de algunas personas. Si la carga es excesiva, lo es para cualquiera. Y quien ya tiene molestias necesita evaluación, no un accesorio."
+            }
+          ],
+          "explicacion": "La propuesta de Marisol nace de una buena intención: quiere proteger a su equipo con algo que se puede comprar hoy. El problema es que parte por el final de la jerarquía y deja la tarea igual. La pregunta útil es: ¿qué cambia en la carga o en la forma de moverla?",
+          "voz": "Esta propuesta se escucha en muchas bodegas, y entiendo por qué. Comprar algo da la sensación de haber resuelto. Pero fíjate en la frase final de Marisol: y no tenemos que cambiar nada. Ahí está la señal. Cuando una medida promete proteger sin cambiar nada del trabajo, hay que mirarla con cuidado. Una caja de treinta y dos kilos sigue pesando treinta y dos kilos, con o sin faja.",
+          "hablante": "narrador",
+          "icono": "hard-hat"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P07",
+          "tipo": "comparacion",
+          "titulo": "Medidas que cambian el lugar y medidas que piden memoria",
+          "izquierda": {
+            "titulo": "Piden memoria",
+            "icono": "brain",
+            "puntos": [
+              "Un letrero que dice «cuidado con el borde».",
+              "Un recordatorio en la charla del lunes: «lo pesado abajo».",
+              "Una instrucción: «no meter la mano en la envolvedora».",
+              "Funcionan mientras todos se acuerden, incluso apurados."
+            ]
+          },
+          "derecha": {
+            "titulo": "Cambian el lugar o la tarea",
+            "icono": "wrench",
+            "puntos": [
+              "Una cadena o barrera en el borde del andén.",
+              "Un estante rediseñado con los niveles bajos para lo pesado.",
+              "Una reja que detiene la máquina si se abre.",
+              "Funcionan aunque alguien esté cansado o distraído."
+            ]
+          },
+          "conclusion": "Las medidas que piden memoria no son inútiles: muchas veces son el complemento necesario. Pero si son lo único, el riesgo depende de que nadie se equivoque nunca. Las personas se cansan, se distraen y se apuran; los buenos controles lo tienen en cuenta.",
+          "texto": "Compara las dos columnas pensando en un lunes de fin de mes, con tres camiones esperando.",
+          "voz": "Haz este ejercicio mental. Imagina el peor lunes del año: llegan todos los pedidos juntos, falta una persona, el camión está tocando la bocina. En ese momento, ¿cuál de las dos columnas te protege? Los letreros y las instrucciones siguen ahí, pero nadie los mira. La cadena, la reja y el estante bien ordenado siguen funcionando igual. Por eso la jerarquía pone arriba lo que no depende de que tengamos un buen día.",
+          "hablante": "narrador",
+          "icono": "scale"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P08",
+          "tipo": "reflexion",
+          "titulo": "Sube un peldaño en tu propio trabajo",
+          "pregunta": "Elige un riesgo de tu trabajo que hoy se controla solo con una instrucción, un letrero o un EPP. ¿Qué medida de un nivel más alto podría proponerse, y qué riesgo residual quedaría después?",
+          "ayuda": "No necesitas que la medida sea perfecta ni barata. Piensa: ¿se podría eliminar el peligro?, ¿cambiarlo por algo menos peligroso?, ¿separar a las personas con algo físico? Si nada de eso es posible, explica por qué. Después describe qué quedaría y quién debería vigilarlo.",
+          "texto": "Tu respuesta queda guardada y te servirá en el laboratorio.",
+          "voz": "Esta pregunta es la que hace la diferencia entre conocer la jerarquía y usarla. Casi siempre hay un peldaño más arriba que nadie ha mirado. A veces no es factible, y está bien, pero conviene haberlo pensado. Escribe tu idea con tus palabras. No la estás presentando a nadie todavía.",
+          "hablante": "narrador",
+          "icono": "pen-line"
+        },
+        {
+          "id": "SEG360-SST-M02-L03-P09",
+          "tipo": "cierre_leccion",
+          "titulo": "Para llevar",
+          "ideas": [
+            "La jerarquía va de eliminar a sustituir, ingeniería, medidas administrativas y EPP: mientras más abajo, más depende de que todo salga bien cada día.",
+            "Casi siempre se combinan niveles, pero se parte por arriba y se baja solo cuando lo superior no es factible.",
+            "Siempre queda un riesgo residual: hay que decirlo, vigilarlo y, recién ahí, decidir si hace falta EPP y para qué."
+          ],
+          "pregunta": "Piensa en el último EPP que te entregaron. ¿Sabes para qué riesgo residual es y qué controles hay antes que él?",
+          "texto": "Tres ideas para llevarte y una pregunta para tu propio trabajo.",
+          "voz": "La próxima vez que te entreguen un elemento de protección personal, haz esta pregunta en voz alta: ¿para qué riesgo es, y qué se hizo antes? No es desconfianza. Es entender tu propia protección. Si la respuesta es clara, vas a usarlo con más sentido. Si nadie sabe responder, encontraste algo que vale la pena conversar.",
+          "hablante": "narrador",
+          "icono": "lightbulb"
+        }
+      ]
+    }
+  ],
+  "laboratorio": {
+    "id": "SEG360-SST-M02-LAB",
+    "titulo": "Laboratorio: inspección de la zona de despacho",
+    "resultado": "Ante la zona de despacho de Pehuén, identificar y priorizar sus peligros, estimar su riesgo con la matriz simplificada, justificar controles según la jerarquía antes de proponer EPP y declarar el riesgo residual y los límites de la inspección.",
+    "minutos": 60,
+    "fuentes": [
+      "SST-DS44",
+      "SST-DS594",
+      "SST-DS18",
+      "SST-LEY20949",
+      "SST-CT184"
+    ],
+    "pantallas": [
+      {
+        "id": "SEG360-SST-M02-LAB-P01",
+        "tipo": "apertura",
+        "titulo": "El encargo de Patricia",
+        "escena": "Martes, 7:30. Patricia te pasa una tablet con la guía de observación de riesgos. «El jueves se reúne el Comité y quiero llevar una propuesta para la zona de despacho. Recórrela con calma antes de que llegue el primer camión, ponle nivel a lo que encuentres y propón controles. Y ojo: no partas por los guantes».",
+        "pregunta": "¿Qué encontrarías en la zona de despacho y qué propondrías primero?",
+        "texto": "Este laboratorio tiene cinco partes: inspeccionar la zona en 3D, estimar el riesgo de lo más importante, ordenar controles según la jerarquía, escuchar a quienes conocen la máquina más compleja y redactar tu propuesta.\n\nAl final vas a declarar algo que pocas inspecciones dicen: lo que tu recorrido no alcanzó a ver.",
+        "voz": "Esta vez el trabajo es tuyo de principio a fin. Vas a hacer lo mismo que hace Patricia antes de una reunión del Comité: mirar, medir el riesgo a tu manera, pensar en controles y escribir una propuesta que otra persona pueda entender y discutir. No hay apuro. Lo que buscamos no es que encuentres todo, sino que lo que encuentres esté bien mirado, bien priorizado y bien justificado.",
+        "hablante": "narrador",
+        "imagen": "SEG360-IMG010",
+        "icono": "clipboard-check"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P02",
+        "tipo": "escena3d",
+        "titulo": "Inspecciona la zona de despacho",
+        "escena": "bodega",
+        "variante": "inicial",
+        "modo": "detectar",
+        "consigna": "Recorre la zona de despacho y el andén. Marca cada elemento que sea un riesgo y asígnale prioridad alta, media o baja. Hay elementos que están bien: no los marques como riesgo. Cuando termines, revisa el comentario de cada punto.",
+        "texto": "Gira la escena, acércate y marca. Usa lo que aprendiste: peligro, exposición, probabilidad y consecuencia.",
+        "puntos": [
+          {
+            "objeto": "borde_anden",
+            "titulo": "Borde del andén sin cadena ni demarcación",
+            "texto": "Sin camión, el borde queda abierto: más de un metro hasta el patio. Se trabaja cerca con transpaleta, de espaldas, varias veces por turno.",
+            "es_riesgo": true,
+            "prioridad": "alta",
+            "accion": "Reponer la cadena y demarcar el borde. Evaluar una barrera que se cierre sola. Mientras tanto, cerrar el acceso al borde cuando no hay camión."
+          },
+          {
+            "objeto": "envolvedora",
+            "titulo": "Envolvedora sin su reja",
+            "texto": "La reja de protección está retirada y apoyada en la pared. Los rodillos quedan al alcance de las manos durante el envuelto. Riesgo de atrapamiento con consecuencias graves.",
+            "es_riesgo": true,
+            "prioridad": "alta",
+            "accion": "No usar la máquina sin su reja. Avisar a la jefatura y a mantención. Reinstalarla le corresponde a personal autorizado."
+          },
+          {
+            "objeto": "salida_bloqueada",
+            "titulo": "Salida de emergencia bloqueada",
+            "texto": "Cajas apiladas delante de la salida, aunque la señal verde sigue visible. En una emergencia, la ruta que la señal promete no existe.",
+            "es_riesgo": true,
+            "prioridad": "alta",
+            "accion": "Despejar hoy y definir dónde va esa mercadería. Demarcar la zona que debe estar libre."
+          },
+          {
+            "objeto": "zapatilla_sobrecargada",
+            "titulo": "Zapatilla con seis enchufes y un hervidor",
+            "texto": "Bajo la mesa de despacho: notebook, impresora de etiquetas, cargadores y un hervidor en una sola zapatilla. El hervidor exige mucha corriente. Riesgo de recalentamiento e incendio cerca de cartón.",
+            "es_riesgo": true,
+            "prioridad": "alta",
+            "accion": "Sacar el hervidor de la bodega. Avisar para una instalación adecuada. No abrir ni reparar la zapatilla."
+          },
+          {
+            "objeto": "pallet_pasillo",
+            "titulo": "Pallet en el pasillo peatonal",
+            "texto": "El paso queda en 50 centímetros. Exposición alta, consecuencia normalmente leve: golpes y tropiezos.",
+            "es_riesgo": true,
+            "prioridad": "media",
+            "accion": "Devolver el pallet a su zona demarcada y revisar por qué no cabe donde corresponde."
+          },
+          {
+            "objeto": "cable_piso",
+            "titulo": "Alargador cruzando el pasillo",
+            "texto": "El alargador lleva corriente a la mesa de despacho y cruza el paso. Riesgo de tropiezo y de daño al cable por las ruedas de la transpaleta.",
+            "es_riesgo": true,
+            "prioridad": "media",
+            "accion": "Avisar para canalizarlo con un protector o cambiar la ubicación de la conexión. No taparlo con cartón."
+          },
+          {
+            "objeto": "mesa_despacho",
+            "titulo": "Notebook sobre cajas y silla sin respaldo",
+            "texto": "La pantalla queda baja y la silla no da apoyo. Quien etiqueta pasa varias horas al día ahí. Daño lento, exposición diaria.",
+            "es_riesgo": true,
+            "prioridad": "media",
+            "accion": "Pedir soporte para el notebook, teclado externo y una silla con respaldo."
+          },
+          {
+            "objeto": "cartonero",
+            "titulo": "Cartonero abierto sobre la mesa",
+            "texto": "Hoja fija expuesta donde otras personas apoyan las manos. Riesgo de corte, normalmente leve.",
+            "es_riesgo": true,
+            "prioridad": "baja",
+            "accion": "Cerrarlo y guardarlo ahora. Proponer cartoneros de hoja retráctil."
+          },
+          {
+            "objeto": "transpaleta",
+            "titulo": "Transpaleta en su zona",
+            "texto": "Estacionada en la zona demarcada, sin estorbar. Bien resuelto.",
+            "es_riesgo": false,
+            "prioridad": null,
+            "accion": "Mantenerla así y revisarla antes de cada uso."
+          },
+          {
+            "objeto": "extintor",
+            "titulo": "Extintor señalizado y accesible",
+            "texto": "Visible, despejado y con su tarjeta de control. Está bien.",
+            "es_riesgo": false,
+            "prioridad": null,
+            "accion": "Mantener el acceso libre y avisar si se bloquea."
+          }
+        ],
+        "voz": "Antes de marcar, recorre la escena completa una vez sin marcar nada. Mira primero, decide después. Cuando asignes prioridad, piensa en las dos preguntas de la matriz: qué tan probable y qué tan grave. Algunas cosas se ven feas pero son de prioridad baja, y otras se ven ordenadas pero esconden un peligro serio. La salida de emergencia es un buen ejemplo: casi nunca se usa, pero el día que se necesita, no hay segunda oportunidad.",
+        "hablante": "narrador",
+        "icono": "scan-eye"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P03",
+        "tipo": "matriz",
+        "titulo": "El nivel de lo que encontraste",
+        "consigna": "Estima la probabilidad y la consecuencia de seis peligros de la zona de despacho, con las condiciones que se describen. Compara con la estimación de Patricia y fíjate en su justificación.",
+        "peligros": [
+          {
+            "id": "lm1",
+            "texto": "Borde del andén sin cadena ni demarcación cuando no hay camión. Tres personas trabajan cerca con transpaleta varias veces por turno.",
+            "probabilidad": 2,
+            "consecuencia": 3,
+            "justificacion": "Probabilidad media: la exposición es frecuente, pero no se trabaja todo el rato en el borde. Consecuencia grave: una caída de más de un metro con una transpaleta puede causar fracturas o lesiones en la cabeza.",
+            "control": "Cadena o barrera, demarcación del borde y procedimiento de apertura y cierre al acoplar el camión."
+          },
+          {
+            "id": "lm2",
+            "texto": "Envolvedora usada sin su reja. Se envuelven unos treinta pallets al día y el film se traba seguido; a veces se destraba con la máquina andando.",
+            "probabilidad": 3,
+            "consecuencia": 3,
+            "justificacion": "Probabilidad alta: uso diario, trabas frecuentes y manos cerca de los rodillos en marcha. Consecuencia grave: un atrapamiento puede causar lesiones permanentes en la mano o el brazo.",
+            "control": "Reinstalar la reja con dispositivo que detenga la máquina si se abre; reparar la causa de las trabas; destrabar solo con la máquina detenida y por personal autorizado."
+          },
+          {
+            "id": "lm3",
+            "texto": "Salida de emergencia con cajas apiladas delante. La salida se usa solo en emergencias o simulacros.",
+            "probabilidad": 1,
+            "consecuencia": 3,
+            "justificacion": "Probabilidad baja: las emergencias son poco frecuentes. Consecuencia grave: en un incendio, una salida bloqueada puede atrapar a varias personas. El nivel sale moderado, pero se corrige hoy porque despejar cuesta poco y el daño posible es irreversible.",
+            "control": "Despejar hoy, demarcar la zona libre y revisarla en cada ronda."
+          },
+          {
+            "id": "lm4",
+            "texto": "Zapatilla eléctrica con seis enchufes ocupados, incluido un hervidor, bajo una mesa rodeada de cajas de cartón.",
+            "probabilidad": 2,
+            "consecuencia": 3,
+            "justificacion": "Probabilidad media: la sobrecarga es diaria y la zapatilla ya se siente tibia. Consecuencia grave: un recalentamiento junto a cartón puede iniciar un incendio.",
+            "control": "Eliminar el hervidor de la bodega; instalación eléctrica adecuada hecha por personal autorizado; regleta fija con los equipos justos."
+          },
+          {
+            "id": "lm5",
+            "texto": "Pallet que reduce el pasillo peatonal a 50 centímetros. Todo el equipo pasa por ahí muchas veces al día, a veces con cajas.",
+            "probabilidad": 3,
+            "consecuencia": 1,
+            "justificacion": "Probabilidad alta: el paso es constante. Consecuencia leve: lo esperable son golpes y tropiezos menores, aunque con carga podría ser más. Patricia acepta un 2 en consecuencia si se justifica por las cajas que tapan la vista.",
+            "control": "Devolver el pallet a su zona; revisar el espacio de armado para que no vuelva a pasar."
+          },
+          {
+            "id": "lm6",
+            "texto": "Notebook sobre cajas, pantalla baja y silla sin respaldo en la mesa de despacho. Una persona etiqueta ahí unas tres horas al día.",
+            "probabilidad": 3,
+            "consecuencia": 1,
+            "justificacion": "Probabilidad alta: la exposición es diaria y prolongada. Consecuencia leve en el corto plazo: molestias de cuello y espalda, que pueden volverse persistentes si no se corrigen.",
+            "control": "Soporte para el notebook, teclado externo y silla con respaldo y ajuste."
+          }
+        ],
+        "voz": "Fíjate en el caso de la salida de emergencia. Si haces la multiplicación, te da un nivel moderado, más bajo que otros. Y sin embargo, Patricia dice que se corrige hoy. No es una contradicción. Es justamente lo que vimos sobre los límites de la matriz. Cuando la consecuencia es grave, irreversible, puede afectar a muchas personas y la solución cuesta casi nada, no tiene sentido esperar turno.",
+        "hablante": "narrador",
+        "icono": "gauge"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P04",
+        "tipo": "clasificar",
+        "estilo": "piramide",
+        "titulo": "Ordena los controles en la pirámide",
+        "consigna": "Estas son diez medidas propuestas para la zona de despacho. Llévalas al nivel de la jerarquía de controles que les corresponde. Pregúntate en cada una: ¿desaparece el peligro, se cambia por otro menor, se separa físicamente a la persona, se cambia cómo se trabaja o se protege a la persona?",
+        "categorias": [
+          {
+            "id": "eliminacion",
+            "nombre": "Eliminación",
+            "icono": "trash-2",
+            "descripcion": "El peligro deja de existir."
+          },
+          {
+            "id": "sustitucion",
+            "nombre": "Sustitución",
+            "icono": "refresh-cw",
+            "descripcion": "Se reemplaza por algo menos peligroso."
+          },
+          {
+            "id": "ingenieria",
+            "nombre": "Ingeniería",
+            "icono": "wrench",
+            "descripcion": "Cambios físicos que separan a las personas del peligro."
+          },
+          {
+            "id": "administrativo",
+            "nombre": "Administrativos",
+            "icono": "clipboard-list",
+            "descripcion": "Cambios en cómo se organiza y se hace el trabajo."
+          },
+          {
+            "id": "epp",
+            "nombre": "EPP",
+            "icono": "hard-hat",
+            "descripcion": "Protección que lleva puesta la persona."
+          }
+        ],
+        "elementos": [
+          {
+            "texto": "Sacar el hervidor de la bodega y dejarlo en la sala de colación.",
+            "categoria": "eliminacion",
+            "feedback": "El hervidor deja de estar en la zapatilla de la mesa de despacho: esa carga y esa fuente de calor desaparecen de ahí. Es eliminación."
+          },
+          {
+            "texto": "Rediseñar el flujo para que los pallets se armen en una zona que no sea paso peatonal.",
+            "categoria": "eliminacion",
+            "feedback": "Si nunca se arma en el pasillo, el obstáculo deja de existir. Es eliminar el peligro por diseño. Si pensaste en administrativo, mira la diferencia: no es una regla para recordar, es otro lugar de trabajo."
+          },
+          {
+            "texto": "Cambiar el cuchillo cartonero de hoja fija por uno de hoja retráctil.",
+            "categoria": "sustitucion",
+            "feedback": "Se sigue cortando cartón, pero con una herramienta que expone menos la hoja. Es sustitución."
+          },
+          {
+            "texto": "Reemplazar el desengrasante irritante por un producto menos agresivo que limpie igual.",
+            "categoria": "sustitucion",
+            "feedback": "Se cambia el producto por uno menos peligroso para la misma tarea. Sustitución clásica."
+          },
+          {
+            "texto": "Instalar una barrera en el borde del andén que se cierre cuando no hay camión.",
+            "categoria": "ingenieria",
+            "feedback": "Es una separación física entre las personas y el borde. Ingeniería. Mientras más automática, menos depende de que alguien se acuerde."
+          },
+          {
+            "texto": "Reinstalar la reja de la envolvedora con un dispositivo que detenga la máquina si se abre.",
+            "categoria": "ingenieria",
+            "feedback": "La reja separa las manos de los rodillos y el dispositivo impide trabajar con la reja abierta. Ingeniería, y de las buenas."
+          },
+          {
+            "texto": "No aceptar pedidos adelantados sin confirmar con bodega que hay tiempo y personas para armarlos.",
+            "categoria": "administrativo",
+            "feedback": "Cambia cómo se organiza el trabajo. Es administrativo, y muy importante: ataca la presión de tiempo que estuvo detrás de la caja caída."
+          },
+          {
+            "texto": "Demarcar con pintura la zona que debe quedar libre frente a la salida de emergencia.",
+            "categoria": "administrativo",
+            "feedback": "La demarcación es señalización: indica, pero no impide físicamente dejar cajas. Por eso es administrativa. Si pensaste en ingeniería, la diferencia está en que una barrera sí impediría."
+          },
+          {
+            "texto": "Guantes con recubrimiento para manipular cajas con bordes de zuncho.",
+            "categoria": "epp",
+            "feedback": "Protegen las manos de cortes y roces de los zunchos. Es EPP, útil para ese riesgo residual. Ojo: no se usan cerca de los rodillos de la envolvedora, porque podrían ser atrapados."
+          },
+          {
+            "texto": "Chaleco de alta visibilidad para quien circula por el patio cuando maniobran camiones.",
+            "categoria": "epp",
+            "feedback": "Ayuda a que el conductor vea a la persona. Es EPP. Antes conviene separar el tránsito de camiones y personas, que es una medida de más arriba."
+          }
+        ],
+        "voz": "Hay dos medidas por nivel. No es casualidad: en una buena propuesta casi siempre se combinan varios niveles. Pero mira en qué orden aparecen en tu cabeza. Si lo primero que se te ocurrió para la zona de despacho fueron los guantes y el chaleco, no es un error tuyo, es la costumbre. La pirámide sirve justamente para darla vuelta.",
+        "hablante": "narrador",
+        "icono": "list-checks"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P05",
+        "tipo": "dialogo",
+        "titulo": "¿Por qué la reja está en la pared?",
+        "texto": "Antes de proponer, Patricia junta a quienes conocen la envolvedora.",
+        "lineas": [
+          {
+            "personaje": "patricia",
+            "texto": "Héctor, la reja de la envolvedora está apoyada en la pared. ¿Qué pasa con ella?"
+          },
+          {
+            "personaje": "hector",
+            "texto": "La saco porque el film se traba en el rodillo y hay que pasarlo con la mano. Con la reja puesta, cada traba son cinco minutos."
+          },
+          {
+            "personaje": "rodrigo",
+            "texto": "Si molesta tanto, ¿no podemos dejarla así y pedirle a la gente que tenga cuidado?"
+          },
+          {
+            "personaje": "patricia",
+            "texto": "Antes de eso: Héctor, ¿por qué se traba el film?"
+          },
+          {
+            "personaje": "hector",
+            "texto": "El rodillo está gastado. El fabricante tiene el repuesto, pero nunca lo hemos pedido. Y el procedimiento del fabricante dice que se destraba con la máquina detenida y desconectada."
+          },
+          {
+            "personaje": "marisol",
+            "texto": "Eso a nadie del turno se lo han enseñado. Cuando se traba, la gente mete la mano y listo."
+          }
+        ],
+        "pregunta": "¿Qué propuesta llevarías al Comité sobre la envolvedora?",
+        "opciones": [
+          {
+            "texto": "Dejar la reja fuera y poner un letrero grande: «No meter la mano con la máquina en marcha».",
+            "correcta": false,
+            "feedback": "Es bajar de ingeniería a una advertencia. Con trabas frecuentes y apuro, el letrero va a perder contra la costumbre. Y el rodillo gastado sigue ahí."
+          },
+          {
+            "texto": "Entregar guantes anticorte a quienes usan la envolvedora.",
+            "correcta": false,
+            "feedback": "Cuidado: un guante cerca de rodillos en movimiento puede ser atrapado y arrastrar la mano. Aquí el EPP no solo no basta: puede empeorar el riesgo."
+          },
+          {
+            "texto": "Reinstalar la reja hoy, pedir el repuesto del rodillo con fecha, y que mientras tanto las trabas las resuelva solo personal autorizado con la máquina detenida y desconectada, según el fabricante.",
+            "correcta": true,
+            "feedback": "Bien. Vuelves a la ingeniería, atacas la causa de las trabas y defines un procedimiento provisorio claro. Además reconoces el límite: destrabar una máquina es tarea de quien está autorizado."
+          },
+          {
+            "texto": "Dejar de usar la envolvedora y volver a amarrar con huincha.",
+            "correcta": false,
+            "feedback": "Eliminas un peligro, pero creas otro: cargas mal aseguradas, como la caja que cayó en el andén. Una buena medida no debe trasladar el riesgo a otra parte."
+          }
+        ],
+        "explicacion": "La conversación muestra algo frecuente: la protección se retira porque estorba, y estorba porque hay una falla que nadie ha resuelto. Si solo se exige volver a poner la reja, la reja va a volver a la pared. La propuesta sólida combina el control físico, la reparación de la causa y un procedimiento claro, dentro de los límites de cada rol.",
+        "voz": "Este diálogo es oro para cualquier inspección. Si Patricia se hubiera quedado con la reja en la pared, habría escrito: retiran la protección. Pero preguntó por qué. Y apareció un rodillo gastado, un repuesto que nunca se pidió y un procedimiento que nadie enseñó. Fíjate también en la propuesta de Rodrigo. No es mala fe: es lo que parece más rápido. Tu trabajo es mostrarle por qué no es lo más seguro.",
+        "hablante": "narrador",
+        "icono": "wrench"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P06",
+        "tipo": "construir",
+        "titulo": "Tu propuesta de controles",
+        "consigna": "Elige uno de los peligros de nivel alto que encontraste: el borde del andén, la envolvedora o la zapatilla sobrecargada. Escribe la propuesta que llevarías al Comité Paritario. Justifica los controles desde arriba de la jerarquía y menciona EPP solo si queda un riesgo residual que lo justifique.",
+        "contexto": "Zona de despacho de Pehuén, martes antes del primer camión. Tres personas trabajan en el andén con transpaleta. La envolvedora se usa unas treinta veces al día y el film se traba por un rodillo gastado. La zapatilla bajo la mesa de despacho alimenta seis equipos, incluido un hervidor, junto a cartón. El borde del andén queda abierto cuando no hay camión. Presupuesto disponible: limitado, pero Rodrigo apoya medidas con datos concretos.",
+        "campos": [
+          {
+            "id": "peligro",
+            "etiqueta": "Peligro y exposición",
+            "ayuda": "Qué puede hacer daño, quiénes se exponen, cuántas veces y en qué condiciones. Incluye el nivel de riesgo que estimaste y por qué.",
+            "tipo": "texto_largo",
+            "min_palabras": 30
+          },
+          {
+            "id": "control_principal",
+            "etiqueta": "Control de mayor nivel factible",
+            "ayuda": "Parte preguntando si se puede eliminar o sustituir. Si eliges ingeniería, explica por qué no se puede subir más.",
+            "tipo": "texto_largo",
+            "min_palabras": 30
+          },
+          {
+            "id": "complementarios",
+            "etiqueta": "Controles complementarios y medida provisoria",
+            "ayuda": "Procedimientos, instrucción o señalización que acompañan al control principal, y qué se hace mientras tanto.",
+            "tipo": "texto_largo",
+            "min_palabras": 20
+          },
+          {
+            "id": "epp",
+            "etiqueta": "EPP: ¿hace falta?",
+            "ayuda": "Solo si queda un riesgo residual concreto. Di para qué riesgo y por qué no lo cubren los controles anteriores. «No corresponde» también es una respuesta válida si la justificas.",
+            "tipo": "texto",
+            "min_palabras": 15
+          },
+          {
+            "id": "residual",
+            "etiqueta": "Riesgo residual y límites de tu evaluación",
+            "ayuda": "Qué queda después de las medidas, quién lo vigila, y qué no pudiste evaluar en tu recorrido.",
+            "tipo": "texto_largo",
+            "min_palabras": 25
+          }
+        ],
+        "criterios": [
+          {
+            "criterio": "Peligro y exposición bien descritos",
+            "niveles": [
+              "No describe el peligro o lo confunde con la exposición.",
+              "Describe el peligro, pero no quiénes se exponen ni cuándo.",
+              "Describe peligro y exposición, con un nivel de riesgo sin justificar.",
+              "Describe peligro, exposición y condiciones, con un nivel de riesgo justificado."
+            ]
+          },
+          {
+            "criterio": "Jerarquía aplicada y justificada",
+            "niveles": [
+              "Parte por EPP o por una instrucción.",
+              "Propone un control de nivel alto, sin explicar por qué es el más alto factible.",
+              "Propone controles en orden de jerarquía con una justificación general.",
+              "Explica por qué se descartan los niveles superiores y por qué el elegido es el más alto factible, combinándolo con otros."
+            ]
+          },
+          {
+            "criterio": "Medida provisoria y límites del rol",
+            "niveles": [
+              "No considera qué pasa mientras tanto.",
+              "Menciona una medida provisoria vaga.",
+              "Define una medida provisoria concreta.",
+              "Define una medida provisoria concreta y respeta los límites de rol: lo técnico lo hace personal autorizado."
+            ]
+          },
+          {
+            "criterio": "Riesgo residual, EPP y límites",
+            "niveles": [
+              "No menciona lo que queda ni los límites.",
+              "Menciona EPP sin decir para qué riesgo residual.",
+              "Declara el riesgo residual y decide sobre EPP con alguna justificación.",
+              "Declara el riesgo residual, quién lo vigila, decide sobre EPP con razones y reconoce qué no pudo evaluar."
+            ]
+          }
+        ],
+        "ejemplo_solido": "Peligro y exposición: envolvedora sin su reja; los rodillos quedan al alcance de las manos. Se envuelven unos 30 pallets al día y el film se traba seguido; a veces se destraba con la máquina en marcha. Exponen las tres personas del andén. Estimo probabilidad alta y consecuencia grave: nivel 9, por el uso diario y porque un atrapamiento puede dejar lesiones permanentes.\nControl principal: no podemos eliminar la máquina sin volver a cargas mal aseguradas, y no conozco una alternativa que sustituya el envuelto con menos peligro. Por eso propongo ingeniería: reinstalar hoy la reja y evaluar con el fabricante un dispositivo que detenga la máquina si se abre. Además, reponer el rodillo gastado, que es la causa de las trabas.\nComplementarios y provisorio: mientras llega el repuesto, solo Héctor destraba, con la máquina detenida y desconectada según el procedimiento del fabricante. Instruir al turno sobre qué hacer ante una traba: detener y avisar.\nEPP: no propongo guantes para esta tarea; cerca de rodillos podrían ser atrapados. Los guantes sí sirven para manipular las cajas, que es otro riesgo.\nResidual y límites: queda el riesgo de que alguien retire la reja ante una traba; lo vigila Marisol en cada turno y cualquier traba se registra. No evalué el estado eléctrico de la máquina ni su mantención: eso lo debe revisar un técnico autorizado.",
+        "ejemplo_debil": "«Para la envolvedora hay que comprar guantes anticorte y hacer una charla para que tengan cuidado con los rodillos. También poner un letrero.» Esta propuesta parte por el final de la jerarquía, no menciona la reja ni la causa de las trabas, propone un EPP que puede aumentar el riesgo de atrapamiento y no dice qué riesgo queda ni quién lo vigila.",
+        "voz": "Esta es la pieza central del laboratorio. Escribe como si tu propuesta la fuera a leer Rodrigo, que necesita razones para aprobar un gasto, y Héctor, que conoce la máquina mejor que nadie. Si dices que algo no se puede eliminar, explica por qué. Si propones un elemento de protección personal, di exactamente para qué riesgo. Cuando termines, compara con los criterios y los ejemplos. Si tu propuesta tiene un punto débil, corrígelo y vuelve a enviarla.",
+        "hablante": "narrador",
+        "practica_formativa": true,
+        "icono": "pen-line"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P07",
+        "tipo": "explicacion",
+        "titulo": "Lo que tu inspección no vio",
+        "texto": "Toda inspección tiene límites, y una buena propuesta los declara. No es debilidad: es honestidad, y ayuda a decidir qué falta.\n\nTu recorrido fue un martes temprano, en una sola zona, mirando a simple vista. Hay cosas que así no se ven, y otras que no te corresponde evaluar.",
+        "bloques": [
+          {
+            "icono": "clock",
+            "titulo": "Otros momentos",
+            "texto": "El turno de la tarde, un lunes de fin de mes, un día de lluvia en el patio, un simulacro."
+          },
+          {
+            "icono": "gauge",
+            "titulo": "Lo que se mide",
+            "texto": "Ruido, iluminación o aire requieren instrumentos y profesionales con formación específica."
+          },
+          {
+            "icono": "zap",
+            "titulo": "Lo técnico",
+            "texto": "Instalación eléctrica y estado interno de máquinas: personal autorizado y fabricante."
+          },
+          {
+            "icono": "users",
+            "titulo": "Lo que se conversa",
+            "texto": "Presión de tiempo, carga de trabajo y trato: aparecen hablando con las personas, no mirando."
+          }
+        ],
+        "nota": {
+          "tipo": "ojo",
+          "texto": "Escribir «no evalué la instalación eléctrica; requiere revisión de personal autorizado» es mejor que no mencionarla. Así nadie supone que alguien ya la revisó."
+        },
+        "voz": "Hay una frase que me gusta mucho al final de un informe: lo que no vi. Cuando la escribo, el Comité sabe qué falta y nadie supone que algo está bien solo porque no aparece en la lista. Por ejemplo, en la zapatilla sobrecargada, tú puedes ver el hervidor y los seis enchufes. Lo que no puedes ver es cómo está el cableado detrás de la pared. Eso no te corresponde, pero sí te corresponde decir que hay que revisarlo.",
+        "hablante": "patricia",
+        "profundiza": "Las inspecciones visuales son muy útiles para detectar condiciones evidentes y priorizar, pero tienen límites conocidos.\n\nLímites de tiempo: lo que ves en un momento no representa todos los momentos. Un pasillo despejado a las 7:30 puede estar bloqueado a las 9:00.\n\nLímites técnicos: algunos agentes requieren medición. En Chile, por ejemplo, el DS 594 fija como referencia para ruido un límite de 85 decibeles A para una jornada de 8 horas, y eso se evalúa con instrumentos y protocolos, no a oído. Lo mismo pasa con la iluminación o con la calidad del aire.\n\nLímites de rol: no te corresponde abrir tableros, revisar el interior de una máquina ni evaluar estructuras. Sí te corresponde señalar que hay que hacerlo.\n\nLímites de mirada: los peligros de la organización del trabajo, como la presión por plazos o la sobrecarga, no siempre se ven. Aparecen en conversaciones y en registros.\n\nDeclarar estos límites en tu propuesta ayuda a que la empresa complete la evaluación con quien corresponde, y es coherente con la obligación del empleador de tomar todas las medidas necesarias para proteger eficazmente a las personas.",
+        "icono": "eye"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P08",
+        "tipo": "checklist",
+        "titulo": "Antes de llevar tu propuesta al Comité",
+        "consigna": "Revisa tu propuesta con esta lista. Si algo no lo puedes marcar, vuelve a la pantalla anterior y ajústalo.",
+        "items": [
+          "Describo el peligro y quiénes se exponen, cuándo y en qué condiciones.",
+          "El nivel de riesgo que propongo tiene una razón concreta, no solo una impresión.",
+          "Expliqué por qué no se puede eliminar o sustituir antes de proponer otro nivel.",
+          "Incluí una medida provisoria para mientras llega la solución de fondo.",
+          "Lo técnico queda en manos de personal autorizado, no de quien lo detecta.",
+          "Si propongo EPP, digo para qué riesgo residual y verifiqué que no crea otro riesgo.",
+          "Declaro qué riesgo queda, quién lo vigila y qué no alcancé a evaluar."
+        ],
+        "texto": "Siete preguntas para revisar tu propia propuesta antes de presentarla.",
+        "voz": "Esta lista es la misma que uso yo antes de una reunión. La última es la más difícil de marcar, porque a nadie le gusta reconocer lo que no vio. Pero es la que más confianza da. Una propuesta que dice sus límites se discute mejor y se aprueba más rápido, porque nadie siente que le están vendiendo algo.",
+        "hablante": "patricia",
+        "icono": "clipboard-check"
+      },
+      {
+        "id": "SEG360-SST-M02-LAB-P09",
+        "tipo": "cierre_leccion",
+        "titulo": "Lo que te llevas del laboratorio",
+        "ideas": [
+          "Una inspección útil combina mirar, priorizar con criterio y conversar con quienes conocen la tarea y los equipos.",
+          "Los controles se justifican desde arriba de la jerarquía; el EPP entra solo para un riesgo residual concreto y sin crear otro.",
+          "Una buena propuesta incluye medida provisoria, riesgo residual, quién lo vigila y lo que la inspección no alcanzó a ver."
+        ],
+        "pregunta": "Si tuvieras que inspeccionar mañana una zona de tu trabajo, ¿por cuál partirías, a quién le preguntarías «muéstrame cómo lo haces» y qué límite de tu inspección declararías?",
+        "texto": "Tres ideas del laboratorio y una pregunta para tu propio trabajo.",
+        "voz": "Terminaste la inspección completa. Recorriste, priorizaste, escuchaste, propusiste y declaraste tus límites. Es exactamente el trabajo que se hace antes de una reunión de Comité. La próxima vez que alguien proponga solucionar un problema comprando elementos de protección, ya sabes qué preguntar primero.",
+        "hablante": "narrador",
+        "icono": "lightbulb"
+      }
+    ]
+  },
+  "cierre": {
+    "id": "SEG360-SST-M02-CIERRE",
+    "titulo": "De la lista a la propuesta",
+    "texto": "Empezaste con catorce observaciones y una propuesta de «guantes para todos». Ahora sabes ordenar esa lista: mirar el trabajo real, estimar cada riesgo con razones, partir por los controles que no dependen de que alguien se acuerde y decir con claridad qué queda.\n\nNo tienes que ser especialista para hacer esto bien. Tienes que mirar con atención, preguntar «muéstrame» y «qué pasa cuando», y saber dónde termina tu rol: lo técnico, a quien está autorizado; las decisiones, a quien puede tomarlas; y lo que ves, siempre por escrito.",
+    "voz": "Una idea para cerrar. Los elementos de protección personal son importantes, y en la ruta de protección personal vas a aprender a elegirlos, revisarlos y usarlos bien. Pero ahora sabes por qué van al final de la fila. Cada vez que alguien proponga resolver un riesgo comprando algo para ponerse, pregunta qué se puede hacer antes. Casi siempre hay una respuesta. En el próximo módulo vas a aplicar esta mirada a algo muy concreto: el orden, la circulación y la electricidad de uso común, donde mirar sin tocar es la regla de oro.",
+    "hablante": "narrador",
+    "transferencia": [
+      "Elige una tarea de tu trabajo y obsérvala un ciclo completo, preguntando a quien la hace «muéstrame cómo lo haces de verdad».",
+      "Para dos riesgos de tu área, estima probabilidad y consecuencia y escribe la razón de cada número.",
+      "Para un riesgo que hoy se controla solo con una instrucción o un EPP, propone una medida de un nivel más alto y declara qué riesgo quedaría."
+    ],
+    "siguiente": "En el módulo 3, «Orden, circulación y electricidad de uso común», vas a detectar condiciones anormales en pasillos, escaleras, cables y equipos, y a decidir qué no usar, qué aislar según el procedimiento y qué derivar a personal autorizado."
+  },
+  "glosario": [
+    {
+      "termino": "Trabajo prescrito",
+      "definicion": "El trabajo tal como está descrito en procedimientos, instrucciones y planos, pensado para condiciones normales."
+    },
+    {
+      "termino": "Trabajo real",
+      "definicion": "El trabajo tal como se hace de verdad, con los plazos, recursos, fallas y adaptaciones de cada día. Ahí aparecen peligros que el papel no muestra."
+    },
+    {
+      "termino": "Matriz de identificación de peligros y evaluación de riesgos",
+      "definicion": "Herramienta exigida por el DS 44 en que la empresa registra los peligros de sus tareas, evalúa sus riesgos y define medidas. Cada empresa fija su metodología."
+    },
+    {
+      "termino": "Probabilidad",
+      "definicion": "Qué tan posible es que ocurra un daño con las condiciones actuales. Depende de la frecuencia de exposición, las personas expuestas, los controles que funcionan y los casi accidentes previos."
+    },
+    {
+      "termino": "Consecuencia",
+      "definicion": "Qué tan grave sería el daño razonablemente esperable. Se estima pensando en lo peor razonable, no en lo peor imaginable."
+    },
+    {
+      "termino": "Nivel de riesgo",
+      "definicion": "Resultado de combinar probabilidad y consecuencia. En la matriz simple del curso: bajo (1 y 2), moderado (3 y 4) y alto (6 y 9)."
+    },
+    {
+      "termino": "Jerarquía de controles",
+      "definicion": "Orden de preferencia de las medidas preventivas: eliminar, sustituir, controles de ingeniería, controles administrativos y, al final, EPP."
+    },
+    {
+      "termino": "Control de ingeniería",
+      "definicion": "Cambio físico en el lugar o en los equipos que separa a las personas del peligro, como una barrera en el andén o la reja de una máquina."
+    },
+    {
+      "termino": "Control administrativo",
+      "definicion": "Cambio en la forma de organizar y hacer el trabajo: procedimientos, señalización, instrucción, turnos o rotación. Depende de que las personas lo cumplan."
+    },
+    {
+      "termino": "Riesgo residual",
+      "definicion": "El riesgo que queda después de aplicar los controles. Nunca es cero; se declara, se vigila y solo entonces se decide si hace falta EPP."
+    }
+  ],
+  "fuentes": [
+    "SST-DS44",
+    "SST-CT184",
+    "SST-DS594",
+    "SST-DS18",
+    "SST-LEY20949",
+    "SST-ISP-EPP",
+    "SST-OIT"
+  ],
+  "recursos": [
+    "SEG360-REC01",
+    "SEG360-REC03"
+  ],
+  "imagenes": [
+    {
+      "id": "SEG360-IMG010",
+      "titulo": "Recorrido de inspección en la zona de despacho",
+      "uso": "Apertura de la lección 1 y del laboratorio. Muestra una inspección centrada en mirar el trabajo real y conversar con quien lo hace.",
+      "prompt": "Editorial documentary photograph in the dispatch area of a light warehouse of a mid-sized Chilean distributor, early morning. An adult Chilean prevention advisor in her fifties, wearing a high-visibility vest and holding a tablet, stands beside a young female warehouse assistant who is showing her how she assembles a mixed pallet at a packing table; an experienced maintenance man in his sixties points toward a shelving unit. Visible but not dramatic conditions to observe in the background: a pallet slightly encroaching on a marked walkway and a stretch wrapping machine. Natural light from high windows and the open dock door. Respectful, curious body language, people mid-conversation, not posing. Muted bluish graphite and white palette with discreet amber and rust accents. No readable text, no logos, no brand names.",
+      "alt": "Una prevencionista con tablet observa cómo una auxiliar arma un pallet en la mesa de despacho, mientras el encargado de mantención indica un estante. Al fondo se ven un pallet que invade el pasillo y una envolvedora."
+    },
+    {
+      "id": "SEG360-IMG011",
+      "titulo": "Priorizar con el Comité Paritario",
+      "uso": "Apertura del módulo y de la lección 2. Muestra una reunión del Comité Paritario discutiendo prioridades a partir de una lista de observaciones.",
+      "prompt": "Editorial documentary photograph of a small meeting room on the second floor of a Chilean distributor's office. Five adult Chilean coworkers of diverse ages around a table: a prevention advisor pointing at a printed grid-shaped risk matrix with colored cells, an operations manager in a shirt taking notes, a warehouse supervisor, a maintenance man in work clothes and a young worker representative. Printed sheets, sticky notes and coffee cups on the table; a window with soft daylight. Engaged discussion, people listening to each other, natural gestures. Muted bluish graphite and white palette with discreet amber accents. Papers without readable text, no logos, no brand names.",
+      "alt": "Reunión del Comité Paritario: cinco personas alrededor de una mesa discuten prioridades frente a una matriz de riesgos impresa y una lista de observaciones."
+    },
+    {
+      "id": "SEG360-IMG012",
+      "titulo": "La zona de despacho después de los cambios",
+      "uso": "Apertura de la lección 3. Muestra controles implementados y sirve para preguntar qué riesgo residual permanece.",
+      "prompt": "Editorial documentary photograph of the dispatch area and loading dock of a Chilean light warehouse after safety improvements. A chain barrier closes the edge of the empty loading dock, yellow painted lines mark a pallet zone and a clear pedestrian walkway, heavy boxes are stored on the lower shelf levels and light boxes above, a stretch wrapping machine with its protective guard installed, a step ladder set aside with a hanging out-of-service tag without readable text, a tidy packing table with a laptop on a stand. An operations manager and a warehouse supervisor, both adult Chilean, smile while looking at the shelving; a prevention advisor nearby holds an open notebook. Natural daylight, realistic. Muted bluish graphite and white palette with discreet amber and rust accents. No readable text, no logos, no brand names.",
+      "alt": "Zona de despacho ordenada: cadena en el borde del andén, pallets en su zona demarcada, cajas pesadas en los niveles bajos, envolvedora con su protección y escalera con tarjeta de fuera de servicio. Una prevencionista observa con su libreta."
+    }
+  ],
+  "minutos_desglose": {
+    "lecciones": 120,
+    "laboratorio": 60,
+    "intro_cierre_recursos": 15
+  }
+}

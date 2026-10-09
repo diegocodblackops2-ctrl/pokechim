@@ -1,0 +1,80 @@
+/* Seguridad 360 · identidad «Señal · centro de control» · tokens de diseño.
+   El sistema (navegación, paneles, actividades) es oscuro, con vidrio, retícula y neón por ruta.
+   Los objetos del mundo (correos, fichas, documentos, ventanas del computador) se ven claros, como papel real: clase .claro.
+   Contraste medido (WCAG 2.2 AA): texto #E8F3F5 sobre #0A1820 = 15,9:1; texto 2 #A7BEC5 sobre #0A1820 = 9,1:1;
+   cian #3FE0EE sobre #0A1820 = 11,2:1; SST #FF9A52 9,0:1; CIBER #B49CFF 8,0:1; EPP #33E3B2 11,0:1 sobre #0A1820. */
+@font-face { font-family: "Bricolage"; src: url("../fonts/bricolage.woff2") format("woff2"); font-weight: 200 800; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url("../fonts/atkinson-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url("../fonts/atkinson-400i.woff2") format("woff2"); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url("../fonts/atkinson-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+@font-face { font-family: "Atkinson"; src: url("../fonts/atkinson-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+@font-face { font-family: "JetBrains"; src: url("../fonts/jetbrains-500.woff2") format("woff2"); font-weight: 500; font-display: swap; }
+
+:root {
+  --noche: #061118;
+  --fondo: #0A1820;
+  --grafito: #132532;
+  --grafito-2: #0c1a24;
+  --grafito-3: #1d3444;
+  --superficie: #0A1820;
+  --papel: rgba(255, 255, 255, .045);
+  --papel-solido: #102330;
+  --sup-2: rgba(255, 255, 255, .06);
+  --sup-3: rgba(255, 255, 255, .10);
+  --linea: rgba(150, 215, 225, .14);
+  --linea-2: rgba(150, 215, 225, .26);
+  --texto: #E8F3F5;
+  --texto-2: #A7BEC5;
+  --texto-3: #7C939B;
+  --acento: #3FE0EE;
+  --acento-2: #087E8B;
+  --acento-claro: rgba(63, 224, 238, .12);
+  --ambar: #FFB84D;
+  --ambar-claro: rgba(255, 184, 77, .12);
+  --sst: #FF9A52;
+  --ciber: #B49CFF;
+  --epp: #33E3B2;
+  --ruta: var(--acento);
+  --ok: #3ddc97;
+  --ok-claro: rgba(61, 220, 151, .12);
+  --mal: #ff6b7a;
+  --mal-claro: rgba(255, 107, 122, .12);
+  --parcial: #ffc35c;
+  --parcial-claro: rgba(255, 195, 92, .12);
+  --info: #6cb6ff;
+  --info-claro: rgba(108, 182, 255, .12);
+  --sobre-ruta: #061118;
+  --f-titulo: "Bricolage", "Segoe UI", system-ui, sans-serif;
+  --f-texto: "Atkinson", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "JetBrains", ui-monospace, "SFMono-Regular", Consolas, monospace;
+  --escala: 1;
+  --r-s: 8px;
+  --r-m: 14px;
+  --r-l: 20px;
+  --sombra-1: 0 1px 0 rgba(255,255,255,.04) inset, 0 8px 24px rgba(0, 0, 0, .25);
+  --sombra-2: 0 1px 0 rgba(255,255,255,.05) inset, 0 18px 40px rgba(0, 0, 0, .35);
+  --sombra-3: 0 30px 80px rgba(0, 0, 0, .55);
+  --brillo: 0 0 0 1px color-mix(in srgb, var(--ruta) 45%, transparent), 0 0 24px color-mix(in srgb, var(--ruta) 28%, transparent);
+  --vidrio: blur(14px) saturate(140%);
+  --ancho: 1200px;
+  --top: 64px;
+  --pie: 70px;
+  --dur: .3s;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  color-scheme: dark;
+}
+body[data-ruta="SST"] { --ruta: var(--sst); }
+body[data-ruta="CIBER"] { --ruta: var(--ciber); }
+body[data-ruta="EPP"] { --ruta: var(--epp); }
+/* Objetos del mundo: claros, como papel o pantallas reales. */
+.claro, .correo-app, .drive, .ficha, .pc-ventana, .item-ev, .caso-ev, .ev-doc, .telefono .tel-hilo, .cl-el, .orden-it, .tarea-caso .ev-doc, .expediente .ev-doc {
+  --papel: #ffffff; --papel-solido: #ffffff; --sup-2: #eef2f0; --sup-3: #e2e8e5; --linea: #d9dfdb; --linea-2: #c3ccc7;
+  --texto: #132532; --texto-2: #4A5866; --texto-3: #6b7884; --acento: #087E8B;
+  --ok: #16794a; --ok-claro: #e2f4ea; --mal: #b4232f; --mal-claro: #fbe5e6; --parcial: #9a5b00; --parcial-claro: #fdf0dc; --info: #22558a; --info-claro: #e5eef8;
+  --sombra-1: 0 1px 2px rgba(19,37,50,.08), 0 2px 8px rgba(19,37,50,.06); --sobre-ruta: #fff;
+  color: var(--texto); color-scheme: light;
+}
+body[data-ruta="SST"] .claro, body[data-ruta="SST"] .correo-app, body[data-ruta="SST"] .ficha, body[data-ruta="SST"] .cl-el, body[data-ruta="SST"] .orden-it, body[data-ruta="SST"] .item-ev { --ruta: #A64B00; }
+body[data-ruta="CIBER"] .claro, body[data-ruta="CIBER"] .correo-app, body[data-ruta="CIBER"] .drive, body[data-ruta="CIBER"] .pc-ventana, body[data-ruta="CIBER"] .cl-el, body[data-ruta="CIBER"] .orden-it, body[data-ruta="CIBER"] .item-ev { --ruta: #6240C5; }
+body[data-ruta="EPP"] .claro, body[data-ruta="EPP"] .ficha, body[data-ruta="EPP"] .cl-el, body[data-ruta="EPP"] .orden-it, body[data-ruta="EPP"] .item-ev { --ruta: #0B7360; }
+.alto-contraste { --texto-2: #d2e1e5; --texto-3: #b4c8ce; --linea: rgba(200, 235, 240, .4); --linea-2: rgba(200, 235, 240, .6); --papel: rgba(255,255,255,.08); }

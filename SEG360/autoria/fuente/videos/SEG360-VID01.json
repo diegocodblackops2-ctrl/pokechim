@@ -1,0 +1,60 @@
+{
+  "id": "SEG360-VID01",
+  "titulo": "Del peligro al incidente: la cadena que se puede cortar",
+  "modulo": "SEG360-SST-M01",
+  "pantalla": "SEG360-SST-M01-L01-P05",
+  "objetivo": "Reconocer los eslabones que llevan de un peligro a un incidente (peligro, exposición, condiciones, casi accidente, daño) e identificar en cuáles se puede cortar la cadena con medidas sobre el trabajo y con un aviso a tiempo.",
+  "duracion_seg": 90,
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "escena3d", "ref": "bodega", "foco": "pallet_pasillo", "movimiento": "recorrido" },
+      "texto_en_pantalla": "Todo empieza con un peligro",
+      "voz": "Un pallet en el pasillo. Una caja de treinta y dos kilos en el piso. Un borde sin cadena. Son peligros, y en cualquier bodega hay varios. Por sí solos, todavía no le hacen daño a nadie.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["triangle-alert", "users", "clock"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Peligro más personas: exposición",
+      "voz": "El primer eslabón se forma cuando las personas se acercan al peligro. Cuántas, cuántas veces y por cuánto tiempo. Eso es la exposición.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG007", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "Prisa, equipos fuera, poca gente",
+      "voz": "Después llegan las condiciones. Un pedido adelantado, una máquina fuera de servicio, una persona menos en el turno. Ninguna es un accidente, pero cada una hace más probable que algo salga mal.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "escena3d", "ref": "bodega", "foco": "estante_pesado_arriba", "movimiento": "recorrido" },
+      "texto_en_pantalla": "El casi accidente: una advertencia gratis",
+      "voz": "Un día una caja se desliza y cae a medio metro de alguien. No pasó nada. Es el eslabón más valioso de toda la cadena, porque avisa sin que nadie salga lesionado. Si se registra y se corrige, la cadena se corta aquí.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "iconos", "ref": ["package", "footprints", "ambulance"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Si nadie corta, llega el daño",
+      "voz": "Si la advertencia se responde con un «hay que tener más cuidado», las condiciones siguen iguales. Y un martes cualquiera, la caja ya no cae a medio metro: cae sobre un tobillo.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "iconos", "ref": ["route", "wrench", "megaphone", "clipboard-check"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Cada eslabón se puede cortar",
+      "voz": "La buena noticia es que cada eslabón tiene una tijera. Ordenar el lugar reduce el peligro. Reorganizar la tarea baja la exposición. Reparar equipos y revisar plazos mejora las condiciones. Y avisar a tiempo convierte un casi accidente en una corrección.",
+      "hablante": "patricia"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "Avisar a tiempo corta la cadena" },
+      "texto_en_pantalla": "Avisar a tiempo corta la cadena",
+      "voz": "No necesitas ser experto para cortar la cadena. Necesitas mirar, contar lo que viste y llevarlo a quien puede decidir.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: recorrido por una bodega en 3D; la cámara se detiene en un pallet que invade el pasillo peatonal. Texto: «Todo empieza con un peligro». Escena 2: aparecen en secuencia tres íconos, un triángulo de advertencia, un grupo de personas y un reloj. Texto: «Peligro más personas: exposición». Escena 3: fotografía del andén de despacho a primera hora, con un camión acoplado y dos trabajadoras preparando pedidos; la imagen se acerca lentamente. Texto: «Prisa, equipos fuera, poca gente». Escena 4: la cámara de la bodega en 3D se acerca a un estante con cajas pesadas en el nivel superior. Texto: «El casi accidente: una advertencia gratis». Escena 5: íconos de una caja, un pie y una ambulancia aparecen uno tras otro. Texto: «Si nadie corta, llega el daño». Escena 6: íconos de una ruta, una llave de mantención, un megáfono y una lista de verificación aparecen como eslabones separados de una cadena. Texto: «Cada eslabón se puede cortar». Escena 7: fondo liso con la frase en grande «Avisar a tiempo corta la cadena»."
+}

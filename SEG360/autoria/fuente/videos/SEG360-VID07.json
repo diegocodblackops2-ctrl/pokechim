@@ -1,0 +1,59 @@
+{
+  "id": "SEG360-VID07",
+  "titulo": "Un link, demasiados permisos",
+  "modulo": "SEG360-CIBER-M05",
+  "pantalla": "SEG360-CIBER-M05-L01-P06",
+  "objetivo": "Reconocer cómo un link compartido con permisos excesivos se aleja de su propósito y aplicar las cuatro preguntas del mínimo privilegio (quién, qué puede hacer, a qué y hasta cuándo) antes de compartir un archivo.",
+  "escenas": [
+    {
+      "n": 1,
+      "visual": { "tipo": "imagen", "ref": "SEG360-IMG038", "movimiento": "zoom_lento" },
+      "texto_en_pantalla": "Diez segundos para compartir",
+      "voz": "Martes, once y cuarenta. Javier tiene que mandarle una orden de compra al proveedor y elige la opción más rápida del botón compartir: cualquiera con el link puede editar.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 2,
+      "visual": { "tipo": "iconos", "ref": ["folder-lock", "file-text", "link"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "No era un archivo: era la carpeta",
+      "voz": "Pero no compartió solo la orden. Compartió la carpeta completa, con contratos, cotizaciones de otros proveedores y la planilla de pagos.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 3,
+      "visual": { "tipo": "iconos", "ref": ["mail", "send", "users"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "El link viaja solo",
+      "voz": "El proveedor reenvía el correo a su bodega. Alguien guarda el link en un chat. Meses después, sigue funcionando para cualquiera que lo tenga, y nadie en Pehuén lo recuerda.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 4,
+      "visual": { "tipo": "iconos", "ref": ["pen-line", "trash-2", "triangle-alert"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Editar también es borrar",
+      "voz": "Y como el permiso es de edición, cualquiera puede cambiar un monto o borrar un archivo, por error o a propósito.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 5,
+      "visual": { "tipo": "iconos", "ref": ["users", "eye", "file-text", "clock"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Quién, qué, a qué, hasta cuándo",
+      "voz": "Cuatro preguntas lo habrían evitado. Quién lo necesita. Qué tiene que poder hacer. A qué archivo exactamente. Y hasta cuándo.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 6,
+      "visual": { "tipo": "iconos", "ref": ["user-check", "eye", "clock"], "movimiento": "secuencia" },
+      "texto_en_pantalla": "Persona específica, solo lectura, con plazo",
+      "voz": "La misma tarea, bien hecha: compartir solo la orden, con el correo del proveedor, como lector y con fecha de término. Toma los mismos diez segundos.",
+      "hablante": "narrador"
+    },
+    {
+      "n": 7,
+      "visual": { "tipo": "texto", "ref": "Comparte lo mínimo, por el tiempo justo." },
+      "texto_en_pantalla": "Lo mínimo, por el tiempo justo",
+      "voz": "Compartir no es el problema. Compartir de más, sí. Y si descubres un link que quedó abierto, se corrige y se avisa, sin buscar culpables.",
+      "hablante": "narrador"
+    }
+  ],
+  "descripcion_accesible": "Escena 1: Javier, en su mesa de teletrabajo, comparte un archivo desde el notebook mientras atiende el celular, con apuro. Escena 2: aparecen en secuencia el ícono de una carpeta con candado, el de un documento y el de un link, mostrando que se compartió la carpeta entera y no solo el documento. Escena 3: íconos de un correo, de una flecha de envío y de un grupo de personas muestran cómo el link se reenvía y llega a más gente. Escena 4: íconos de un lápiz, de un basurero y de un triángulo de advertencia muestran que con permiso de edición se puede cambiar o borrar. Escena 5: cuatro íconos, personas, ojo, documento y reloj, representan las cuatro preguntas: quién, qué puede hacer, a qué y hasta cuándo. Escena 6: íconos de una persona verificada, un ojo y un reloj muestran la forma correcta: persona específica, solo lectura y con plazo. Escena 7: en letras grandes aparece la frase «Comparte lo mínimo, por el tiempo justo»."
+}
