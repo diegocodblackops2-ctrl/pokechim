@@ -228,6 +228,18 @@
     return decompress(s.length, 32, function (i) { return rev64[s.charAt(i)]; });
   }
 
+  /* Revierte la ofuscación del banco de evaluación (ver herramientas/build_publico.py · ofuscar). No es seguridad. */
+  function desofuscar(b64, etiqueta) {
+    var bin = atob(b64), out = new Uint8Array(bin.length), x = seed31(etiqueta);
+    for (var i = 0; i < bin.length; i++) { x = (Math.imul(x, 1103515245) + 12345) & 0x7fffffff; out[i] = bin.charCodeAt(i) ^ ((x >> 16) & 0xff); }
+    return JSON.parse(new TextDecoder("utf-8").decode(out));
+  }
+  /* Semilla de la ofuscación: FNV-1a de 32 bits sobre la etiqueta, recortado a 31 bits. */
+  function seed31(str) {
+    var x = 0x811c9dc5;
+    for (var i = 0; i < str.length; i++) { x ^= str.charCodeAt(i); x = Math.imul(x, 0x01000193) >>> 0; }
+    return x & 0x7fffffff;
+  }
   function download(name, text, mime) {
     var blob = new Blob([text], { type: (mime || "text/plain") + ";charset=utf-8" });
     var a = h("a", { href: URL.createObjectURL(blob), download: name });
@@ -238,7 +250,7 @@
   IATU.u = {
     h: h, add: add, icon: icon, clear: clear, $: $, $$: $$, newId: newId, announce: announce, toast: toast,
     inline: inline, paragraphs: paragraphs, docLines: docLines, docView: docView, parseNum: parseNum,
-    debounce: debounce, nowISO: nowISO, fmtTime: fmtTime, compressB64: compressB64, decompressB64: decompressB64,
+    debounce: debounce, nowISO: nowISO, desofuscar: desofuscar, fmtTime: fmtTime, compressB64: compressB64, decompressB64: decompressB64,
     download: download
   };
 })();

@@ -147,9 +147,9 @@ function ok(name, cond, detail) { results.push({ prueba: name, resultado: cond ?
   const persisted = await page.$('.bin[data-bin="X"] .dcard[data-item="C02"]');
   ok('Persistencia: borrador de clasificación tras recarga', !!persisted);
 
-  // 13. Examen sin servicio: bloqueado y sin claves
+  // 13. Examen bloqueado hasta completar las 17 secciones
   await go('evaluacion/examen');
-  ok('Examen: bloqueado sin servicio configurado', await page.isVisible('text=Evaluación formal no disponible'));
+  ok('Examen: bloqueado hasta completar las 17 secciones', await page.isVisible('text=Aún bloqueada'));
 
   // 14. Móvil 360 px sin desplazamiento horizontal
   await page.setViewportSize({ width: 360, height: 780 });

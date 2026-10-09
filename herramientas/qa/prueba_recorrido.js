@@ -24,6 +24,7 @@ const R = []; const ok = (n, c, d) => R.push({ prueba: n, resultado: c ? 'OK' : 
     const M = await p.evaluate(s => window.IATU_DATA[s], m.sco);
     for (const l of M.lessons) for (const s of l.screens) {
       await p.evaluate(r => { location.hash = '#/' + r; }, m.sco + '/' + s.id); await p.waitForTimeout(60);
+      await p.evaluate(() => { document.querySelectorAll('.predict .btn-ghost, .stepper .btn-ghost').forEach(b => b.click()); });
       const txt = await p.evaluate(() => document.querySelector('.stage').innerText);
       screens++; ids.add(s.id);
       const strip = t => t.replace(/(^|\s)(?:[A-Z]-)?[A-Z]{1,3}\d{1,2}\.\s/g, ' ').replace(/\[[^\]]+\]/g, '').replace(/\s+/g, ' ').trim();

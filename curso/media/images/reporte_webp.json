@@ -2,8 +2,8 @@
   "catalog_version": "3.0",
   "originals_modified": false,
   "generated_images": false,
-  "files_detected": 6,
-  "converted": 6,
+  "files_detected": 60,
+  "converted": 60,
   "errors": 0,
   "results": [
     {
@@ -101,6 +101,100 @@
       }
     },
     {
+      "input": "iatu-img-003-piezas-de-un-asistente.png",
+      "id": "IATU-IMG003",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "71d0d7daee84fb6820c2d16cc357fe265a5104ee32bf3ee8a4ee1cfa31e2ccf1",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 36630,
+        "kib": 35.77,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "58e70f1f40ba55853c0c2f4906d36e9bbb430a152e9b63686aaad5af9b92d6ec",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-003-piezas-de-un-asistente.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 17572,
+        "kib": 17.16,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "426fe6545767690f5e8848eca26ce3cc00f74e9e8bf6445d573121c191f2e182",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-003-piezas-de-un-asistente--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-004-cuatro-grados-de-delegacion.png",
+      "id": "IATU-IMG004",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "0428371de58acec262182ea94ac81f974d8f68b0247f0e0bd6362b0e2146a96b",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 64310,
+        "kib": 62.8,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "7dc1f7e9df7f5169a8311c05343618fe400e7b5d47dd59f2cfb06551343cf185",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-004-cuatro-grados-de-delegacion.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 31758,
+        "kib": 31.01,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "bcc3a4bb6088a451e0f877042b7611de7d1448017e3c1ec93ae9b3b2c7b5b445",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-004-cuatro-grados-de-delegacion--sm.webp"
+      }
+    },
+    {
       "input": "iatu-img-005-un-limite-antes-de-actuar.png",
       "id": "IATU-IMG005",
       "source_format": "PNG",
@@ -145,6 +239,100 @@
         "metadata_removed": true,
         "visual_review": "pendiente",
         "filename": "iatu-img-005-un-limite-antes-de-actuar--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-006-el-encargo-sobre-la-mesa.png",
+      "id": "IATU-IMG006",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "8519f2abb2195b325df952fe5686efc2641a08bf6ea9490e1fd1e47b6b18e9e6",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 55940,
+        "kib": 54.63,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "974534908a2a390d9b1b7f1cfadc8c9777e7373a44bfa2ca872e98498f6a7281",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-006-el-encargo-sobre-la-mesa.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 25300,
+        "kib": 24.71,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "3422a19127a35f20048f09a5909146c5f7f0960669b5aadaeea0c4267c62f414",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-006-el-encargo-sobre-la-mesa--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-007-contexto-que-si-corresponde.png",
+      "id": "IATU-IMG007",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "918e67be6f8b36d77d0e485864bea2a76477dde221ef0fd95a615228e04b2253",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 40188,
+        "kib": 39.25,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "c2f4f6f8a29c20814a7d3c672364383cbc97f59e598aba216ba3188fe52f1afa",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-007-contexto-que-si-corresponde.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 18560,
+        "kib": 18.12,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "9e0f50337bd56214ad814f1f944d083fd37359df12d2220bd4b2610a104cad4e",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-007-contexto-que-si-corresponde--sm.webp"
       }
     },
     {
@@ -286,6 +474,2356 @@
         "metadata_removed": true,
         "visual_review": "pendiente",
         "filename": "iatu-img-010-la-pieza-que-falta--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-011-preparar-la-sesion-de-trabajo.png",
+      "id": "IATU-IMG011",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "fd48780cfed8bc6d3a60044a8ef23bd6c58b0dcf6136d9f2a4ad5de410f7cba1",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 37488,
+        "kib": 36.61,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "0860e242d04aecfa752f4d27ad839c47dfdab68bfc4fa61ab532c5e702ac6b85",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-011-preparar-la-sesion-de-trabajo.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 18438,
+        "kib": 18.01,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "cdd758fd9ed11a82c2ba12d651d3a264dfc99934e5ae3683915426b748d625ed",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-011-preparar-la-sesion-de-trabajo--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-012-el-archivo-que-abre.png",
+      "id": "IATU-IMG012",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "23d8d2142ecdfb7b0829bb6368db603b331c7255b79cac651e80f1c9d3cec167",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 60562,
+        "kib": 59.14,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "9d33d0e93514abe3496111a600d20dbf0a6337b15ef6bf55ad67f8fdc523a4c5",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-012-el-archivo-que-abre.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 29966,
+        "kib": 29.26,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "582057152ba70806adc2f6eefd49dd543beac8baa9111f077ed2a75a67f041a4",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-012-el-archivo-que-abre--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-013-separar-proyecto-y-memoria.png",
+      "id": "IATU-IMG013",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "6e8a9e1feaa5506a9cede396bc881b88472b1561a964e6a99eec96b76661b128",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 29190,
+        "kib": 28.51,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "51c5494e40ea079dbe5f35bc06e027443a1ba0217cd012134e9fdd3a02a8c551",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-013-separar-proyecto-y-memoria.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 12924,
+        "kib": 12.62,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "b1b5a131d73ca5aad06e140259bb207d92444cf2edfe7ab39656dd31c61f8a42",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-013-separar-proyecto-y-memoria--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-014-buscar-no-es-comprobar.png",
+      "id": "IATU-IMG014",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "3ccec5e8fa94152738615808dab9a4c022b9896700ebebe41567349fc3ec5dbe",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 53498,
+        "kib": 52.24,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "bd5dd84009bf23271b37b8a545b321c0b6915a9c76eb144ac4935bcaffd1c32f",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-014-buscar-no-es-comprobar.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 27626,
+        "kib": 26.98,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "7d5e6ae2265331ce14cd328512adde504fd37bde8215b4a699cba7f207f92884",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-014-buscar-no-es-comprobar--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-015-dos-versiones-de-nexo.png",
+      "id": "IATU-IMG015",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "a0ec4fada96597392731951baca2f8f9ffc94e72339f3e65456402900ed91a7e",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 52624,
+        "kib": 51.39,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "548f6a59aa4d6cfb20817c7cc3c2ebffee570c49b57bc74804c635598d142bdc",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-015-dos-versiones-de-nexo.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 26972,
+        "kib": 26.34,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "ddf36b238aa4d0bfafa38757ddc9c9f87dc5fb678661fd292e31bf906bf5376d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-015-dos-versiones-de-nexo--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-016-del-diseno-a-un-archivo-revisable.png",
+      "id": "IATU-IMG016",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "876d15944fa076a78a3b71ad69556cd9bf058ed9e85904e01c8d574b2622c5e5",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 19180,
+        "kib": 18.73,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "c0850c23434e4f1d341ad1561bf0fbc3eb2f26262028d70bf81fbe855ee81424",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-016-del-diseno-a-un-archivo-revisable.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 7344,
+        "kib": 7.17,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "cb96c2c74292dfbe454e379fc691ce3846412a53c16e2271184a2100b7b37131",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-016-del-diseno-a-un-archivo-revisable--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-017-herramientas-con-alcance-acotado.png",
+      "id": "IATU-IMG017",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "f081afce8971928db23772c45683c1498367fa3e174c25b0de8ed64f4f49a1f2",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 35858,
+        "kib": 35.02,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "a5485600c52ebbb2544db7eae0903c17e8a9edac0908334bfa4ad7651b504797",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-017-herramientas-con-alcance-acotado.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 18158,
+        "kib": 17.73,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "d326f385d66e87ab6ab7adbf80e006c206e491a5204815947b157328cb493761",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-017-herramientas-con-alcance-acotado--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-018-dos-entornos-no-equivalentes.png",
+      "id": "IATU-IMG018",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "b71c54e81f4888fbab13df8a3ab9873263e5a703ff82203411ec05ba41e887c7",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 39238,
+        "kib": 38.32,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "75fb56503bebbe55aeb1649d097d21083c211a4ad7a7b024ed3a5527f52663e4",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-018-dos-entornos-no-equivalentes.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 19478,
+        "kib": 19.02,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "140205947dcd786db7ad4ace9f25ae299689643b7ad744d5dcd4b7a52540e7d2",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-018-dos-entornos-no-equivalentes--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-019-cuaderno-con-fuentes-delimitadas.png",
+      "id": "IATU-IMG019",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "2ce0aa0b1b786b51d190c973eea17da128636ba93fe5ce4f80eca526dbb73f58",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 52754,
+        "kib": 51.52,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "1088bc9e1e3c6bbcd701ab56e51b87705e23dce08c905d639425ef3afda1273d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-019-cuaderno-con-fuentes-delimitadas.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 26316,
+        "kib": 25.7,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "1e3e38e73225742977fb6f8c3c7588c07a2aee4b8559660d24796f8947090b20",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-019-cuaderno-con-fuentes-delimitadas--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-020-tres-asistentes-un-mismo-encargo.png",
+      "id": "IATU-IMG020",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "5459bcba019b6f097db6766326e78cf50e5abf96678b6e8fc1f1a504d05e852b",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 27656,
+        "kib": 27.01,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "4f43f0cea62893bb2fabeffd8a62cb3cc2afb887cbc4b0f02f3035050f6a8cfa",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-020-tres-asistentes-un-mismo-encargo.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 13786,
+        "kib": 13.46,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "431b197e8ee4da735e1d7b16c6e6c9b19f59f9106672235f9e8a527e77c11031",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-020-tres-asistentes-un-mismo-encargo--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-021-comparacion-con-criterios.png",
+      "id": "IATU-IMG021",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "cd1c761a53dae3ed2cb02289c529b9ca93a886a4d6c4d32fa176ad16a6453dd8",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 46130,
+        "kib": 45.05,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "9d051d234e8ea97067276abb907bb81e64fc1ba0afbe6c6cae3331d63b4dfd78",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-021-comparacion-con-criterios.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 23254,
+        "kib": 22.71,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "8be92ec9ce448c48802ea96e45c780a0c8d999ad558592d7d9ea81d700b7fbea",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-021-comparacion-con-criterios--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-022-mas-herramientas-mas-traspasos.png",
+      "id": "IATU-IMG022",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "3a69bee630ec4546b10fff2298e72f091c254f6184f57cd1944cdcbeb5154983",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 27828,
+        "kib": 27.18,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "44c2ccf424bb7e7c30323a5b222fafe8cfa65a32bd0d7b82e60f577b67c96744",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-022-mas-herramientas-mas-traspasos.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 12894,
+        "kib": 12.59,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "6a05575c074d9b9591a08dff6d9384cfca6c8c026e0e93d9c27eb615a1042ec4",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-022-mas-herramientas-mas-traspasos--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-023-atencion-sin-promesas-inventadas.png",
+      "id": "IATU-IMG023",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "dac9fdceec36bd673243740a98b2b69eec3fb2cc84e3cf0c8f9bb886492c2b84",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 39414,
+        "kib": 38.49,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "91399df3bb99a4470601be3ec9963bfbe9331c3d76acf852108e7971fec239d8",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-023-atencion-sin-promesas-inventadas.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 20832,
+        "kib": 20.34,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "ee972b8ff7b65fd5ce08f26bea5d9f75244cac10001f042644b6fc589c9570cd",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-023-atencion-sin-promesas-inventadas--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-024-una-reunion-deja-pendientes.png",
+      "id": "IATU-IMG024",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "f4085c64dc5af552363597fa0239df2f8203e4dd0618aeee476cc812b829c8e7",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 50546,
+        "kib": 49.36,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "642436deaacb6dffc9052cb4a869a2284e12f6a57e9bb21b276851734d18e984",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-024-una-reunion-deja-pendientes.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 26110,
+        "kib": 25.5,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "ebe5aa098df629b4a9458ded16fb5200b7499d74d408f2cdc6cefa285d02ba0c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-024-una-reunion-deja-pendientes--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-025-escuchar-antes-de-responder.png",
+      "id": "IATU-IMG025",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "d005051ed9f0212e15cbc88df3b3ced4440dc3f6703f2affa044282828350b4f",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 49276,
+        "kib": 48.12,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "e2596fe31ad9fd629e4f9f4311464be7cf296a08fcc8d250f73a654c399ed580",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-025-escuchar-antes-de-responder.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 25576,
+        "kib": 24.98,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "438b5a160f585a9757083f5f56cda99e7ef85375b1f4ace9803c7d57fcd5499c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-025-escuchar-antes-de-responder--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-026-una-propuesta-con-condiciones.png",
+      "id": "IATU-IMG026",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "72d570768f897e26eff7313bcf1af4a38494f53bd36102b7e1af6c4614893ce7",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 43322,
+        "kib": 42.31,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "7dec4cf36c47b7a01103f782fcba3d25ef4707ac03639c76b80060d9d8e3b79b",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-026-una-propuesta-con-condiciones.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 22448,
+        "kib": 21.92,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "b4d0d5661196a5a64ef346fe45ecc9b07d583fa8c3cd2855de77842a7c3a7c32",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-026-una-propuesta-con-condiciones--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-027-la-excepcion-tambien-cuenta.png",
+      "id": "IATU-IMG027",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "40a8f7ef0e21403a7a3fa47fed554550c96cd0f335ce21d18389b14bf7b3fc08",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 24992,
+        "kib": 24.41,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "13a95c53b7d0ae0e913860863925d18dc07538e152d9c67b7570bbe18b1b61af",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-027-la-excepcion-tambien-cuenta.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 9312,
+        "kib": 9.09,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "51c34eda8a9b5af23aa17e6ccea8ed2ee4856dbbdc14e2f1a59575ad03642161",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-027-la-excepcion-tambien-cuenta--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-028-contrastar-la-afirmacion.png",
+      "id": "IATU-IMG028",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "d0d3e338ed333a56324138bf06337a5d173075d1d6300fb89f7d072322df99ee",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 46732,
+        "kib": 45.64,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "63f13d72083cc990b6c72e36229775f701a802c0c7b9e928685227daefb6ff18",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-028-contrastar-la-afirmacion.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 23948,
+        "kib": 23.39,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "31a0d49ebfd14c5e7b4e75811dbcf988babc83826ffe364a9983b5612297c380",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-028-contrastar-la-afirmacion--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-029-acuerdo-no-es-independencia.png",
+      "id": "IATU-IMG029",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "398dba9115cc90bf00abf5a9035c3358b9e1532a6fd4bfd28bd09e1c3e6a3aad",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 29540,
+        "kib": 28.85,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "898d203b2c8e235cf02f3ebd5d4c51cd948697ff859f117fd8da67796c6da366",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-029-acuerdo-no-es-independencia.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 12182,
+        "kib": 11.9,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "9e540efe51eb55b3d4cec210c0f05016620d77685a726df90e031d3d3035a912",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-029-acuerdo-no-es-independencia--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-030-cero-vacio-y-repeticion.png",
+      "id": "IATU-IMG030",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "7353d64f89402d01a7d549e2b00d8a34280d6a43b02182d672fa1737e9919003",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 22398,
+        "kib": 21.87,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "4205e60b3f551fe4978bb6c7493d6cbfd325ecd3a17dabbc8a7f330b5570bbfd",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-030-cero-vacio-y-repeticion.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 9638,
+        "kib": 9.41,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "8ef70a7d0a433b71bac9ca898ebf93a6f7cf6ba4095e0c5e2feb547f29444d64",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-030-cero-vacio-y-repeticion--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-031-cada-indicador-tiene-su-poblacion.png",
+      "id": "IATU-IMG031",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "70e9a3b669b0645bcad74acb24663c26ea9c2b6bec8475d801e3d0e4074740c9",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 40234,
+        "kib": 39.29,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "cc8cc1d527efd47cf624bdc6153fa79d2cb72791c9e2007bc1f1e305fa9f46ce",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-031-cada-indicador-tiene-su-poblacion.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 20682,
+        "kib": 20.2,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "5d46461c03c827164691354d6e2f2d67d4cf49873cddbd6e374f083897571eef",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-031-cada-indicador-tiene-su-poblacion--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-032-un-grafico-necesita-sus-datos.png",
+      "id": "IATU-IMG032",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "d669b5ad137285ea027244e3b081a442bbe8202cf1a9e2ec17e4d2e87d3334e3",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 22012,
+        "kib": 21.5,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "133e1bc995044eecbf5d5e8cafab021fc1e8c99c4978237e3f01b41ef8e0bc3f",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-032-un-grafico-necesita-sus-datos.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 8954,
+        "kib": 8.74,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "b6a721e19a0a0aa013e47b31026161ea3706a2d18592adaf49ea4c34ad61cdaa",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-032-un-grafico-necesita-sus-datos--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-033-el-brief-antes-de-la-imagen.png",
+      "id": "IATU-IMG033",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "b06efb760ec9edfb791e625404eaf55a5c0b1d19c7bdd812c1503c397f153786",
+      "aspect_ratio_review": true,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 960,
+        "height": 540,
+        "bytes": 35330,
+        "kib": 34.5,
+        "target_kib": 150.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "c029bdf9864d5b1beff88bc843de8f2fe0956463f3810fcfe627542345f07d8b",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-033-el-brief-antes-de-la-imagen.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 28654,
+        "kib": 27.98,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "4f83d0c338c15db8a4106e564d580b2bb1d06843e9e139f9788b0dc63a2c49a9",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-033-el-brief-antes-de-la-imagen--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-034-cambiar-una-cosa-por-vez.png",
+      "id": "IATU-IMG034",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "b66680254e060891eff111b3b85372220bca0e5be9b98911a9b9da53e8a48880",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 25912,
+        "kib": 25.3,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "df748af8fe545e71cf4c87464dc95cfd5300cf5b6741a14400ea6c9bddf0460c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-034-cambiar-una-cosa-por-vez.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 10410,
+        "kib": 10.17,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "ee0b9969e8cf09e29dd725476664a5cc74a75c91396179c78b9efc141ad8f752",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-034-cambiar-una-cosa-por-vez--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-035-la-imagen-acompana-el-control-funciona.png",
+      "id": "IATU-IMG035",
+      "source_format": "PNG",
+      "source_size": [
+        960,
+        1200
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        960,
+        1200
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "8de2698412ca32ae4c170d2f273614faf9c77a1aaffdcb2fa62ab136db4171e8",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 960,
+        "height": 1200,
+        "bytes": 19316,
+        "kib": 18.86,
+        "target_kib": 150.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "188835c2c21bfdc694dacb69d07bb50faa099141903a2324313cee03e30c15cc",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-035-la-imagen-acompana-el-control-funciona.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 1000,
+        "bytes": 14506,
+        "kib": 14.17,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "55cf595574366c8fc106ae0f5445d7f8d887ec38cc1e16ab4fc0cda7c498e21d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-035-la-imagen-acompana-el-control-funciona--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-036-procedencia-de-un-recurso.png",
+      "id": "IATU-IMG036",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "f6f3cf2988ab1e7e386963cab9a4a2eeab334d4f47f14c37aec66a8da2a69151",
+      "aspect_ratio_review": true,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 960,
+        "height": 540,
+        "bytes": 24816,
+        "kib": 24.23,
+        "target_kib": 150.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "c6cdc396d415fcd2094246baf78b42579282ccb62c0dc33952bbffe419a116e0",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-036-procedencia-de-un-recurso.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 20428,
+        "kib": 19.95,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "2bfc3b973ed9fe64a37fa62c8aac7cd7bbfa79ad3e1d07836cca2960437d5dbd",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-036-procedencia-de-un-recurso--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-037-una-voz-cercana-y-profesional.png",
+      "id": "IATU-IMG037",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "fa34430f83c4230f1eb7760d324048c70ffbd1bad4595112ffd060572809e921",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 29402,
+        "kib": 28.71,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "237393d48e4a315e7eaf9ef267fbe194e9776600e70a5bbbf400f977e1e212d9",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-037-una-voz-cercana-y-profesional.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 13868,
+        "kib": 13.54,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "a60156f9e952c86493828770d245ab50cdf12dd3ac575e1afbee424bb256d9b7",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-037-una-voz-cercana-y-profesional--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-038-tres-escenas-con-proposito.png",
+      "id": "IATU-IMG038",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "53e8e0c6587158ce1207d2e22168767ea2d86228c23024c1462245c61172fa68",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 29802,
+        "kib": 29.1,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "4e9de34a698c25f19e5b23f14e725b4521e2a0b8e183920684834ff88b4ac870",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-038-tres-escenas-con-proposito.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 14476,
+        "kib": 14.14,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "a1a4e0207c24b6e90039834ea6fec316c070ac7e0e4b33bb78c492bc5f65c2c9",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-038-tres-escenas-con-proposito--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-039-escuchar-la-muestra.png",
+      "id": "IATU-IMG039",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "dd3f414e0e46d25ec512974152348da0fee53b1fd43d0dd9d020320bdf0837b3",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 37870,
+        "kib": 36.98,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "ef688de440baa6a4c63b0fb35cd253fc9cbb37144423ef1f5832a26f52ad5121",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-039-escuchar-la-muestra.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 19260,
+        "kib": 18.81,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "dce06d2fd3da962fe8fe663340a243a293c7bb0161a69e69c014e4d36b0eb1bc",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-039-escuchar-la-muestra--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-040-coherencia-entre-voz-texto-e-imagen.png",
+      "id": "IATU-IMG040",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "235f1f7c35b15a15f6e2ca280357602e2f870b7987bbb35c176527720e0be96d",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 34460,
+        "kib": 33.65,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "4ac1af74793dbe010d0b8ddfee5f1d502ee25727b4036dd326ef21e6edd2c63d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-040-coherencia-entre-voz-texto-e-imagen.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 15040,
+        "kib": 14.69,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "e335f644e9ca8b089eaf2e9d8bb8bdad52d858ae527c850860f9375e290bbe14",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-040-coherencia-entre-voz-texto-e-imagen--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-041-mirar-la-tarea-completa.png",
+      "id": "IATU-IMG041",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "358294157be74f1e9438b4e599a284c9931387e836a3f22d055ca57b36df5cfb",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 38026,
+        "kib": 37.13,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "8e813db551d6ca743e6a5bb0ee49ff43600ab9676204e4fd180e7f08bbe09ddf",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-041-mirar-la-tarea-completa.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 19590,
+        "kib": 19.13,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "05493d06cef025880c72bbc4c9f91ef7c08b27f0686f8453cc5b9e23749acaa3",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-041-mirar-la-tarea-completa--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-042-el-trabajo-que-queda-fuera-de-la-demo.png",
+      "id": "IATU-IMG042",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "97024260d643ada8c21121ba8a812f418d706bf08f22b9ff58502ce0da1114ad",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 55580,
+        "kib": 54.28,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "20a629bc0b5375776522ffbfa109466e7c862edaa10670ac87baec09da954c7d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-042-el-trabajo-que-queda-fuera-de-la-demo.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 26690,
+        "kib": 26.06,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "3c0bb1fc41ebbb31ce74049367a0c72e3bd277f7b0dcb4c855f4b69e8cb1053b",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-042-el-trabajo-que-queda-fuera-de-la-demo--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-043-biblioteca-que-se-puede-mantener.png",
+      "id": "IATU-IMG043",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "34a2c1f121a4963274bab9a91c291397f58dabee7cdcc0a1ef00b31b24bd4cf0",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 47432,
+        "kib": 46.32,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "15724bc08a5d4518ad606b60f2ebc802d7de1bfa2c57a220bf040c660c45d947",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-043-biblioteca-que-se-puede-mantener.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 23772,
+        "kib": 23.21,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "839dc1c2bbaf3fc26100f6033eb952a4eb61a9e107042ae3a9a5e63e099915dd",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-043-biblioteca-que-se-puede-mantener--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-044-tambien-existe-una-ruta-manual.png",
+      "id": "IATU-IMG044",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "ad7657761f968bab7a66e93938a7ba4ceaa8d4dea0103cb89d5533ba3435de71",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 49442,
+        "kib": 48.28,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "b1410dc0df204cc4d52761dfa2cef775f3595cf958a99d76d543a6da3d54b435",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-044-tambien-existe-una-ruta-manual.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 25268,
+        "kib": 24.68,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "7b52eec6c8213601b1ad713e9733efd900cb33f8ecc39ff0ccfc8303745f7170",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-044-tambien-existe-una-ruta-manual--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-045-reglas-y-fuentes-separadas.png",
+      "id": "IATU-IMG045",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "8dad7bf15898b8d603d0161b914c227e7b64feec4ca3470f43215ec24bbbca54",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 37900,
+        "kib": 37.01,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "0bdad8bf275e0dee30da774fe5f20d6683a018a2fe8623066b2f557c6a42530e",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-045-reglas-y-fuentes-separadas.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 18776,
+        "kib": 18.34,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "37caac248721c622ba5dc12e280e80c470fb30c8f03c92576140483586f1f51f",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-045-reglas-y-fuentes-separadas--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-046-recuperar-solo-lo-pertinente.png",
+      "id": "IATU-IMG046",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "d258a96a5da98f663d6b8d7ab4f42073c9ecf42f6bbd7512dd3dc72f4eda9151",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 42582,
+        "kib": 41.58,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "30ab0f033b1bb744016774d4507aba06476b36391e4d704c10cbe27b73c5e08c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-046-recuperar-solo-lo-pertinente.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 21240,
+        "kib": 20.74,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "dc2ad9e7a34bc783c21bedd11e4e0738ca424f34e6b342c9356a5d141f9c36db",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-046-recuperar-solo-lo-pertinente--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-047-un-asistente-con-limites.png",
+      "id": "IATU-IMG047",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "822fa0a293ab905b6580cce151af870f732916f051ea8ae2708855163be293c3",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 32924,
+        "kib": 32.15,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "31bceb5016b225dff206675561b515dd385f951a8ded166d9b344c484c8186f2",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-047-un-asistente-con-limites.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 14004,
+        "kib": 13.68,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "60d2ef113118b48c6d2d8d0e391f45d26c29f41276d786fda07cc1ef03585431",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-047-un-asistente-con-limites--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-048-probar-tambien-el-caso-dificil.png",
+      "id": "IATU-IMG048",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "71a168ef0b308c530ae59ce458ae8af6a61ba3bfdaf57ff2ffc4327aab1bce48",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 32814,
+        "kib": 32.04,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "c77771189368fcbe015cd12a869cbbe12fa6cbfa58c85d8e1393e363025f3848",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-048-probar-tambien-el-caso-dificil.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 16354,
+        "kib": 15.97,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "e69bf3de1277f99f1da4848fde4bf0a049299f4f49600d7360a9c255ad9bbb87",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-048-probar-tambien-el-caso-dificil--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-049-un-flujo-con-puntos-de-decision.png",
+      "id": "IATU-IMG049",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "6e937b4f6f941e79419e822e2a7a7aaeadc35e20d6f20b0349375e948bb99f2d",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 38978,
+        "kib": 38.06,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "20558f40f925efb5afe31f695106aa746dfa1632e7339afc080731b316680ebe",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-049-un-flujo-con-puntos-de-decision.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 17754,
+        "kib": 17.34,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "b90c25f631539f84f7cfe0ee5c7b210be554726eb7c1db87f4e8ec28ab488e1d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-049-un-flujo-con-puntos-de-decision--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-050-la-aprobacion-tiene-una-version.png",
+      "id": "IATU-IMG050",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "f0a1458539af13d5ef1312da8aa20f8a79b1bc7fae8d4eb6d2175d5f951a53db",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 43856,
+        "kib": 42.83,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "288e015017733a530f230ead2098d2477149e3f350f1487848f05d82d62d466c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-050-la-aprobacion-tiene-una-version.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 22904,
+        "kib": 22.37,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "2b5a74f89b72d217fbc6fd66a6220c97652b7f29e3d3378a4d8df6adb05ef8ab",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-050-la-aprobacion-tiene-una-version--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-051-no-repetir-el-mismo-efecto.png",
+      "id": "IATU-IMG051",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "a4458947f0a9c352023b25a0918842fc02812fa057dfec937dc075dbada1c9ab",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 38430,
+        "kib": 37.53,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "5455b9804bb5ec1c8803b7c9106f900cb2cbb43f555840e145e80750418d5898",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-051-no-repetir-el-mismo-efecto.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 17326,
+        "kib": 16.92,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "e6894693e5b733a51f73d7cdd02b8ea4be030574b74c5466bc68dd09c4906f12",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-051-no-repetir-el-mismo-efecto--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-052-pausar-conserva-el-control.png",
+      "id": "IATU-IMG052",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "0f01c30e4744954cca14a41b281dee63cf93f30288e0bd04d0331771be83b4f2",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 47360,
+        "kib": 46.25,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "58b19f6714107c568c319679a69d929750e47dae0c92a99f98e7162f5548bc83",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-052-pausar-conserva-el-control.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 24378,
+        "kib": 23.81,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "1c80f2755afe2fd944f3affa5caa384d2277bf5ea9c78f860e2419837518c06c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-052-pausar-conserva-el-control--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-053-una-copia-minima-de-verdad.png",
+      "id": "IATU-IMG053",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "8c2b1584652dc6c3b0135dc2a23f344b519c6a81d2d61d3ddbc1d5ec2cae6cf0",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 35416,
+        "kib": 34.59,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "ac3a9db2aec48bac8e664683835a1b857527ca2e7ac1c4e13e5950ee69b8b20c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-053-una-copia-minima-de-verdad.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 18004,
+        "kib": 17.58,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "112b6bace5692a22f0ad7e14f1812afa466b0e93d0d89c1082b4d93f6a932aac",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-053-una-copia-minima-de-verdad--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-054-lo-que-no-muestra-el-primer-plano.png",
+      "id": "IATU-IMG054",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "a5238b780e87460fa901464ae9dd3b390773866a361be4c063e6d7c219226e31",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 25804,
+        "kib": 25.2,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "35fbe4a22f9f4945894764c279ebc8fb40bc347fcb2cdce3bd197bbba452ff3c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-054-lo-que-no-muestra-el-primer-plano.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 11750,
+        "kib": 11.47,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "9fbbec1c92a0abfdee10753958e09e8fd6750766df7eef2ca64a16e0d738546c",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-054-lo-que-no-muestra-el-primer-plano--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-055-una-instruccion-ajena-dentro-de-un-documento.png",
+      "id": "IATU-IMG055",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "934f72ddc20db602b99beeead0b3e02ee33b6e54cc2bf23b5aeeecc8580c6144",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 26614,
+        "kib": 25.99,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "e74b325b76bbbe26add7abdca69a2ece2fd81b311fddb3eb797b5af61ab063c8",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-055-una-instruccion-ajena-dentro-de-un-documento.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 11670,
+        "kib": 11.4,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "c59338bb474181580ec56e917c5f253efa783725eafcbdb240eae7b3005fb737",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-055-una-instruccion-ajena-dentro-de-un-documento--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-056-verificar-por-otro-canal.png",
+      "id": "IATU-IMG056",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "df969fb4f4c235b9637dc57cebdea33b4c5cc4b703e4c2a30e37c471bb0d5094",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 40322,
+        "kib": 39.38,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "24d0896781e248d4a6305631fcf015dd31aadbf5a0257b2eb4f5e9bd99f37aa8",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-056-verificar-por-otro-canal.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 20978,
+        "kib": 20.49,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "30484e208d49cef1dc1e0ff833a7dd4b48bf29a4f7b07f745c375d810b933264",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-056-verificar-por-otro-canal--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-057-ver-la-demo-fuera-del-encuadre.png",
+      "id": "IATU-IMG057",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "f04321f486b33af56fe62fcf59acb2b8b9d95ab1f3fc7d2b65fb2e26f7a7c8ab",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 53170,
+        "kib": 51.92,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "cbe2ca0792f8818274105c58106320d950e0dde0b937c5c41639c102a1d23df7",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-057-ver-la-demo-fuera-del-encuadre.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 28192,
+        "kib": 27.53,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "3584b375fc08f8be098293e670e68003d0b85b58f59fd01be9acae09d4ff955d",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-057-ver-la-demo-fuera-del-encuadre--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-058-confianza-que-se-puede-explicar.png",
+      "id": "IATU-IMG058",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "684280d47b05c16601c408415e292e7b6173c488c665cd96aa20ab9823749fa6",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 25928,
+        "kib": 25.32,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "38dfc5529e9cadad44dd462c4e33512ddd1f0c8de9f773344459e6a5d03534c7",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-058-confianza-que-se-puede-explicar.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 10992,
+        "kib": 10.73,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "67b69f033deff8875305ee86bcc768973ef5e0fb4442be5a7e6fc9192abc8eb2",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-058-confianza-que-se-puede-explicar--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-059-un-acuerdo-operativo-del-equipo.png",
+      "id": "IATU-IMG059",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "465a679d2dcab59c0341738f3dd3c3173a444bcb6e8f7d43c3e3ee8c13b2a47a",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 44972,
+        "kib": 43.92,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "04c026390710ac32ce34b340a6341c4ab3aa9457e87c3abd5973f94b97ce860b",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-059-un-acuerdo-operativo-del-equipo.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 23028,
+        "kib": 22.49,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "3a6131e1d1f8dba2c9886e4802276a82b2415696e6dcb57b127368cb76c700ee",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-059-un-acuerdo-operativo-del-equipo--sm.webp"
+      }
+    },
+    {
+      "input": "iatu-img-060-cierre-con-un-producto-defendible.png",
+      "id": "IATU-IMG060",
+      "source_format": "PNG",
+      "source_size": [
+        1680,
+        945
+      ],
+      "orientation_applied": true,
+      "icc_conversion": "sin perfil",
+      "working_size": [
+        1680,
+        945
+      ],
+      "alpha_preserved": false,
+      "source_sha256": "519cd9ea1953eacd76ede7a742eb0422a0456ab0efe50b32855ec2f3a3238629",
+      "aspect_ratio_review": false,
+      "status": "convertido; pendiente de revisión visual",
+      "main": {
+        "width": 1440,
+        "height": 810,
+        "bytes": 46288,
+        "kib": 45.2,
+        "target_kib": 180.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "585fb7cfceaf55fbc3a88e958e777ebb2f253a1955ee071aef763e83d689a814",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-060-cierre-con-un-producto-defendible.webp"
+      },
+      "mobile": {
+        "width": 800,
+        "height": 450,
+        "bytes": 23622,
+        "kib": 23.07,
+        "target_kib": 90.0,
+        "target_met": true,
+        "quality": 82,
+        "sha256": "f5693f0ca2b7b0e1c3395242dbef4de3c0e7f6a157380009880f1b2977625bdf",
+        "format_verified": "WEBP",
+        "metadata_removed": true,
+        "visual_review": "pendiente",
+        "filename": "iatu-img-060-cierre-con-un-producto-defendible--sm.webp"
       }
     }
   ],

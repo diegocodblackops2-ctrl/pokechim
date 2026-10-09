@@ -12,3 +12,6 @@ __pycache__/
 .venv/
 # Originales de medios (se publican solo derivados optimizados)
 originales_medios/
+
+# Banco de evaluación ofuscado (se genera con build_publico.py desde el paquete privado; solo viaja en el ZIP SCORM)
+curso/data/eval.js

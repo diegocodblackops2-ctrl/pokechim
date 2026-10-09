@@ -16,6 +16,7 @@ Uso:
 El script falla si detecta en la salida pública un campo de clave del banco o un modelo de proyecto.
 """
 import argparse
+import base64
 import hashlib
 import json
 import os
@@ -42,6 +43,27 @@ def escribir(ruta, texto):
     with open(ruta, "w", encoding="utf-8") as f:
         f.write(texto)
 
+
+def ofuscar(obj, etiqueta):
+    """Ofusca (no cifra) un objeto para el paquete SCORM: XOR con un generador congruencial sembrado por la etiqueta.
+    Evita que las claves se lean a simple vista en el código; NO es seguridad: cualquiera con el paquete puede revertirlo.
+    El cliente lo revierte con IATU.u.desofuscar (misma fórmula, Math.imul)."""
+    data = json.dumps(obj, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    x = 0x811C9DC5  # FNV-1a 32 bits sobre la etiqueta (ASCII), recortado a 31 bits
+    for ch in etiqueta.encode("ascii"):
+        x = ((x ^ ch) * 0x01000193) & 0xFFFFFFFF
+    x &= 0x7FFFFFFF
+    out = bytearray()
+    for b in data:
+        x = (x * 1103515245 + 12345) & 0x7FFFFFFF
+        out.append(b ^ ((x >> 16) & 0xFF))
+    return base64.b64encode(bytes(out)).decode("ascii")
+
+def musica():
+    """Pistas de música de fondo (opcionales): curso/media/music/*.mp3 en orden alfabético."""
+    d = os.path.join(RAIZ, "curso", "media", "music")
+    if not os.path.isdir(d): return []
+    return [{"file": "media/music/" + f, "title": os.path.splitext(f)[0]} for f in sorted(os.listdir(d)) if f.lower().endswith(".mp3")]
 
 def existe_media(rel):
     return os.path.isfile(os.path.join(RAIZ, "curso", rel))
@@ -214,7 +236,7 @@ def main():
         "materials": c["materials"], "prompts": c["prompts"], "faults": c["faults"],
         "templates": c["templates"], "glossary": c["glossary"],
         "sources": c["sources"], "icons": icon,
-        "audio": audio, "images": imagenes, "videos": videos,
+        "audio": audio, "images": imagenes, "videos": videos, "music": musica(),
         "scos": ["orientacion"] + ["m%02d" % m["number"] for m in c["modules"]] + ["evaluacion"],
         "exam_public": {
             "forms": 2, "units_per_form": 64, "blocks": 4, "units_per_block": 16, "minutes": 180,
@@ -224,6 +246,21 @@ def main():
         },
     }
     escribir(os.path.join(RAIZ, "curso", "data", "curso.js"), js_registro("curso", curso))
+
+    # ---------- evaluación dentro del SCORM (decisión de Diego): banco A/B ofuscado + brief público del proyecto ----------
+    # No incluye modelos, anclas ni soluciones de proyecto: esos quedan solo para la persona revisora.
+    def unidad_cliente(u):
+        return {"id": u["id"], "module": u["module"], "title": u["title"], "input": u["input"], "task": u["task"],
+                "options": [{"id": o["id"], "text": o["text"], "why": o.get("rationale", "")} for o in u["options"]],
+                "evidence": [{"id": o["id"], "text": o["text"], "why": o.get("rationale", "")} for o in u["evidence_options"]],
+                "k": [u["key"]["decision"], u["key"]["evidence"]], "just": u.get("key_justification", ""),
+                "next": (u.get("feedback") or {}).get("next_action", "")}
+    por_id = {u["id"]: u for u in banco["units"]}
+    eval_cliente = {"formas": {}, "regla": banco["scoring_rule"], "umbral": 80, "intentos": 2}
+    for fid, f in banco["forms"].items():
+        eval_cliente["formas"][fid] = ofuscar([unidad_cliente(por_id[i]) for i in f["unit_ids"]], "IATU-C05-" + fid)
+    eval_cliente["proyectos"] = ofuscar({p["form"]: proyecto_publico(p) for p in c["projects"]}, "IATU-C05-PROY")
+    escribir(os.path.join(RAIZ, "curso", "data", "eval.js"), js_registro("eval", eval_cliente))
 
     # ---------- privado: servicio de corrección ----------
     os.makedirs(args.privado, exist_ok=True)

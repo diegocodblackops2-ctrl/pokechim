@@ -48,7 +48,23 @@
       if (o.success) this.set("cmi.success_status", o.success);
       if (o.scaled !== undefined && o.scaled !== null) { this.set("cmi.score.scaled", o.scaled.toFixed(4)); }
       if (o.raw !== undefined && o.raw !== null) { this.set("cmi.score.raw", o.raw); this.set("cmi.score.min", 0); this.set("cmi.score.max", o.max || 100); }
-      this.set("cmi.exit", o.completed && o.final ? "normal" : "suspend");
+      // Siempre «suspend»: conserva el registro para volver a la devolución y la biblioteca; con «normal» varios LMS
+      // abren un intento nuevo y vacío. completion/success/score quedan registrados igual.
+      this.set("cmi.exit", "suspend");
+    },
+    sessionTime: function (sec) {
+      var h = Math.floor(sec / 3600), m = Math.floor(sec % 3600 / 60), x = Math.floor(sec % 60);
+      this.set("cmi.session_time", "PT" + h + "H" + m + "M" + x + "S");
+    },
+    /* Un objetivo por sección (orientación, módulos y evaluación) para que el LMS muestre el detalle. */
+    section: function (id, done, pct) {
+      var n = parseInt(this.get("cmi.objectives._count"), 10) || 0, i = 0;
+      for (; i < n; i++) if (this.get("cmi.objectives." + i + ".id") === id) break;
+      var p = "cmi.objectives." + i + ".";
+      if (i === n) this.set(p + "id", id);
+      this.set(p + "completion_status", done ? "completed" : "incomplete");
+      this.set(p + "success_status", done ? "passed" : "unknown");
+      if (pct !== undefined) this.set(p + "progress_measure", Math.max(0, Math.min(1, pct)).toFixed(4));
     },
     objectives: function () {
       var n = parseInt(this.get("cmi.objectives._count"), 10) || 0, out = {};
@@ -90,8 +106,13 @@
       var st = o.success === "passed" ? "passed" : o.success === "failed" ? "failed" : (o.completed ? "completed" : "incomplete");
       this.set("cmi.core.lesson_status", st);
       if (o.raw !== undefined && o.raw !== null) { this.set("cmi.core.score.raw", Math.round(o.raw)); this.set("cmi.core.score.min", 0); this.set("cmi.core.score.max", o.max || 100); }
-      this.set("cmi.core.exit", o.completed && o.final ? "" : "suspend");
+      this.set("cmi.core.exit", "suspend");
     },
+    sessionTime: function (sec) {
+      var h = Math.min(9999, Math.floor(sec / 3600)), m = Math.floor(sec % 3600 / 60), x = Math.floor(sec % 60);
+      this.set("cmi.core.session_time", ("000" + h).slice(-4) + ":" + ("0" + m).slice(-2) + ":" + ("0" + x).slice(-2));
+    },
+    section: function () { /* SCORM 1.2: los objetivos no aportan; el avance va en suspend_data */ },
     objectives: function () { return null; },
     interaction: function () { /* SCORM 1.2: cmi.interactions es de solo escritura y opcional; no se usa para evitar errores en LMS. */ },
     navChoice: function () { return false; }
@@ -100,9 +121,9 @@
   function Local() { this.kind = "local"; this.label = "Vista previa"; }
   Local.prototype = {
     init: function () { return true; },
-    key: function (sco) { return "iatu5:" + CV + ":" + (this.learnerId || "vista") + ":" + sco; },
-    readState: function () { try { return localStorage.getItem(this.key(store.sco)) || ""; } catch (e) { return ""; } },
-    writeState: function (s) { try { localStorage.setItem(this.key(store.sco), s); return true; } catch (e) { return false; } },
+    key: function () { return "iatu5:" + CV + ":" + (this.learnerId || "vista") + ":curso"; },
+    readState: function () { try { return localStorage.getItem(this.key()) || ""; } catch (e) { return ""; } },
+    writeState: function (s) { try { localStorage.setItem(this.key(), s); return true; } catch (e) { return false; } },
     commit: function () { return true; },
     finish: function () {},
     learner: function () {
@@ -113,18 +134,11 @@
       } catch (e) { return "vista"; }
     },
     learnerName: function () { return ""; },
-    location: function (v) { try { if (v === undefined) return localStorage.getItem(this.key(store.sco) + ":loc") || ""; localStorage.setItem(this.key(store.sco) + ":loc", v); } catch (e) { return ""; } return true; },
-    setCompletion: function (o) { try { localStorage.setItem(this.key(store.sco) + ":done", JSON.stringify(o)); } catch (e) { /* sin acción */ } },
-    objectives: function () {
-      var out = {};
-      (store.scos || []).forEach(function (s) {
-        try {
-          var v = JSON.parse(localStorage.getItem(this.key(s) + ":done") || "null");
-          out["obj-" + s] = v && v.completed ? "passed" : "unknown";
-        } catch (e) { out["obj-" + s] = "unknown"; }
-      }, this);
-      return out;
-    },
+    location: function (v) { try { if (v === undefined) return localStorage.getItem(this.key() + ":loc") || ""; localStorage.setItem(this.key() + ":loc", v); } catch (e) { return ""; } return true; },
+    setCompletion: function (o) { try { localStorage.setItem(this.key() + ":lms", JSON.stringify(o)); } catch (e) { /* sin acción */ } },
+    sessionTime: function () {},
+    section: function () {},
+    objectives: function () { return {}; },
     interaction: function () {},
     navChoice: function () { return false; }
   };
@@ -153,7 +167,7 @@
 
   /* ---------- Estado ---------- */
   var store = {
-    sco: null, scos: [], adapter: null, learner: null, state: null, status: "local", statusMsg: "",
+    sco: null, scos: [], adapter: null, learner: null, state: null, root: null, status: "local", statusMsg: "",
     listeners: [], overflow: false,
 
     init: function (sco, scos) {
@@ -168,35 +182,46 @@
       if (adapter.kind === "local") adapter.learnerId = store.learner;
       store.load(sco);
       store.setStatus(adapter.kind === "local" ? "local" : "lms",
-        adapter.kind === "local" ? "Vista previa: guardado solo en este navegador (no es el LMS)" : "Conectado a " + adapter.label);
+        adapter.kind === "local" ? "Vista previa · guardado local" : "Conectado a " + adapter.label);
       window.addEventListener("pagehide", store.finish);
       window.addEventListener("beforeunload", store.finish);
       return store.state;
     },
 
-    /* Carga el estado de un SCO. En la vista previa (un solo documento con todos los SCO) se usa al cambiar de módulo. */
-    load: function (sco) {
-      store.sco = sco;
-      var raw = store.adapter.readState(), st = null;
-      if (raw) {
-        try { st = JSON.parse(raw.slice(0, 3) === "z1:" ? u.decompressB64(raw.slice(3)) : raw); } catch (e) { st = null; }
-      }
+    /* Un solo SCO: todo el curso vive en un registro (root) con una sección por parte del programa.
+       root = { cv, t, time (segundos activos), secs: { orientacion|m01..m16|evaluacion: estado }, last } */
+    readRoot: function () {
+      var raw = store.adapter.readState(), rt = null;
+      if (raw) { try { rt = JSON.parse(raw.slice(0, 3) === "z1:" ? u.decompressB64(raw.slice(3)) : raw); } catch (e) { rt = null; } }
       // Respaldo local cuando el LMS no tenía capacidad para el texto completo (estado "lite").
       var backup = null;
-      try { backup = JSON.parse(localStorage.getItem("iatu5:respaldo:" + store.learner + ":" + sco) || "null"); } catch (e) { backup = null; }
-      if (st && st.lite && backup && (backup.t || 0) >= (st.t || 0)) st = backup;
-      store.state = st && st.cv ? st : { cv: CV, sco: sco, t: 0, s: {}, n: {}, p: {}, a: {}, fc: {}, hs: {}, w: {}, c: {}, d: {}, o: {}, x: {} };
+      try { backup = JSON.parse(localStorage.getItem("iatu5:respaldo:" + store.learner) || "null"); } catch (e) { backup = null; }
+      if (rt && rt.lite && backup && backup.secs && (backup.t || 0) >= (rt.t || 0)) rt = backup;
+      if (rt && rt.sco && !rt.secs) { var old = rt; rt = { cv: CV, t: old.t || 0, time: 0, secs: {} }; rt.secs[old.sco] = old; } // formato antiguo por SCO
+      if (!rt || !rt.secs) rt = { cv: CV, t: 0, time: 0, secs: {} };
+      rt.time = rt.time || 0;
+      store.root = rt;
+    },
+    fresh: function (sco) { return { cv: CV, sco: sco, t: 0, s: {}, n: {}, p: {}, a: {}, fc: {}, hs: {}, w: {}, c: {}, d: {}, o: {}, x: {} }; },
+    /* Activa la sección del programa en uso (no hay recarga: todas las secciones están en el mismo registro). */
+    load: function (sco) {
+      if (!store.root) store.readRoot();
+      store.sco = sco;
+      store.state = store.root.secs[sco] || (store.root.secs[sco] = store.fresh(sco));
       return store.state;
     },
-    /* Solo vista previa: lee el estado guardado de otro SCO sin activarlo. */
-    peek: function (sco) {
-      if (!store.adapter || store.adapter.kind !== "local") return null;
-      if (sco === store.sco) return store.state;
-      try {
-        var raw = localStorage.getItem(store.adapter.key(sco)) || "";
-        return raw ? JSON.parse(raw.slice(0, 3) === "z1:" ? u.decompressB64(raw.slice(3)) : raw) : null;
-      } catch (e) { return null; }
+    /* Lee el estado de otra sección sin activarla. */
+    peek: function (sco) { return store.root && store.root.secs[sco] || null; },
+    /* Tiempo activo acumulado (segundos), visible para la persona y enviado al LMS como session_time. */
+    sessionStart: Date.now(), sessionSec: 0,
+    addTime: function (sec) {
+      if (!store.root) return;
+      store.root.time = (store.root.time || 0) + sec;
+      store.sessionSec += sec;
+      try { store.adapter.sessionTime(store.sessionSec); } catch (e) { /* sin acción */ }
     },
+    totalTime: function () { return store.root ? store.root.time || 0 : 0; },
+    section: function (id, done, pct) { try { store.adapter.section(id, done, pct); } catch (e) { /* sin acción */ } },
     on: function (fn) { store.listeners.push(fn); },
     setStatus: function (s, msg) {
       store.status = s; store.statusMsg = msg || "";
@@ -211,7 +236,7 @@
       for (var k in patch) cur[k] = patch[k];
       cur.u = Date.now();
       b[id] = cur;
-      store.state.t = Date.now();
+      store.state.t = store.root.t = Date.now();
       if (opts && opts.now) return store.save(true);
       store.saveSoon();
       return Promise.resolve(true);
@@ -220,21 +245,27 @@
     saveSoon: u.debounce(function () { store.save(false); }, 1200),
 
     serialize: function (lite) {
-      var st = store.state;
+      var rt = store.root;
       if (lite) {
         // Solo avances (sin textos): permite reanudar el progreso en LMS con poca capacidad.
-        var l = { cv: st.cv, sco: st.sco, t: st.t, lite: 1, s: st.s, o: st.o, d: {}, p: {}, a: {}, w: {}, c: {} };
-        ["p", "a", "w", "c", "d"].forEach(function (sc) {
-          var src = st[sc] || {};
-          for (var id in src) {
-            var r = src[id], keep = {};
-            ["sub", "fbr", "done", "att", "ans", "pr"].forEach(function (k) { if (r[k] !== undefined) keep[k] = r[k]; });
-            l[sc][id] = keep;
-          }
-        });
-        return "z1:" + u.compressB64(JSON.stringify(l));
+        var L = { cv: rt.cv, t: rt.t, time: rt.time, lite: 1, secs: {} };
+        for (var sc0 in rt.secs) {
+          var st = rt.secs[sc0];
+          var l = { cv: st.cv, sco: st.sco, t: st.t, s: st.s, o: {}, d: {}, p: {}, a: {}, w: {}, c: {}, x: {} };
+          ["p", "a", "w", "c", "d", "x"].forEach(function (sc) {
+            var src = st[sc] || {};
+            for (var id in src) {
+              var r = src[id], keep = {};
+              ["sub", "fbr", "done", "att", "ans", "pr", "form", "score", "pass", "sent", "n"].forEach(function (k) { if (r[k] !== undefined) keep[k] = r[k]; });
+              l[sc][id] = keep;
+            }
+          });
+          for (var oid in (st.o || {})) if (/^(ori|res)/.test(oid)) l.o[oid] = st.o[oid];
+          L.secs[sc0] = l;
+        }
+        return "z1:" + u.compressB64(JSON.stringify(L));
       }
-      return "z1:" + u.compressB64(JSON.stringify(st));
+      return "z1:" + u.compressB64(JSON.stringify(rt));
     },
 
     save: function (formal) {
@@ -243,16 +274,16 @@
       if (full.length > limit) { payload = store.serialize(true); lite = true; }
       if (a.kind !== "local") store.setStatus("saving", "Guardando en el LMS…");
       var ok = a.writeState(payload) && a.commit();
-      try { localStorage.setItem("iatu5:respaldo:" + store.learner + ":" + store.sco, JSON.stringify(store.state)); } catch (e) { /* sin acción */ }
+      try { localStorage.setItem("iatu5:respaldo:" + store.learner, JSON.stringify(store.root)); } catch (e) { /* sin acción */ }
       if (a.kind === "local") {
-        store.setStatus(ok ? "local" : "error", ok ? "Vista previa: guardado solo en este navegador (no es el LMS)" : "No se pudo guardar en este navegador");
+        store.setStatus(ok ? "local" : "error", ok ? "Vista previa · guardado local" : "No se pudo guardar en este navegador");
         return Promise.resolve(ok);
       }
       if (!ok) { store.setStatus("error", "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla; reintenta."); return Promise.resolve(false); }
       if (lite) {
         store.overflow = true;
         if (service.configured()) {
-          return service.call("PUT", "/api/v1/estado/" + encodeURIComponent(store.sco), { cv: CV, state: store.state })
+          return service.call("PUT", "/api/v1/estado/curso", { cv: CV, state: store.root })
             .then(function () { store.setStatus("lms", "Guardado: avance en el LMS y textos en el servicio"); return true; },
               function () { store.setStatus("error", "El LMS guardó tu avance, pero tus textos largos quedaron solo en este navegador (límite de " + a.label + ")."); return false; });
         }

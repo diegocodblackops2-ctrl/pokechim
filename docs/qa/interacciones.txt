@@ -125,7 +125,7 @@
   "detalle": ""
  },
  {
-  "prueba": "Examen: bloqueado sin servicio configurado",
+  "prueba": "Examen: bloqueado hasta completar las 17 secciones",
   "resultado": "OK",
   "detalle": ""
  },

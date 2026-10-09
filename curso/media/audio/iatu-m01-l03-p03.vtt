@@ -1,38 +1,37 @@
 WEBVTT
 
-1
-00:00:00.100 --> 00:00:02.925
-Misma tarea, cuatro usos.
+00:00:00.120 --> 00:00:04.170
+Misma tarea, cuatro usos. Consulta:
 
-2
-00:00:02.875 --> 00:00:06.125
-Consulta: “¿Qué debería contener una minuta?
+00:00:04.320 --> 00:00:06.150
+“¿Qué debería contener una minuta?”.
 
-3
-00:00:06.125 --> 00:00:13.200
-Colaboración: aportas la transcripción ficticia y corriges el primer borrador hasta separar acuerdos de propuestas.
+00:00:06.620 --> 00:00:12.200
+Colaboración: aportas la transcripción ficticia y corriges el primer borrador hasta separar
 
-4
-00:00:13.200 --> 00:00:21.000
-Sistematización: guardas una instrucción, un formato, tres casos de prueba y una pauta para revisar cada minuta.
+00:00:12.240 --> 00:00:15.310
+acuerdos de propuestas. Sistematización:
 
-5
-00:00:21.000 --> 00:00:29.450
-Automatización supervisada: un flujo recibe una transcripción autorizada, crea un borrador y espera aprobación antes de compartirlo.
+00:00:15.700 --> 00:00:20.940
+guardas una instrucción, un formato, tres casos de prueba y una pauta para revisar cada
 
-6
-00:00:29.450 --> 00:00:35.862
-En el último flujo no hay permiso para grabar reuniones, invitar personas ni publicar documentos.
+00:00:20.980 --> 00:00:23.720
+minuta. Automatización supervisada:
 
-7
-00:00:35.862 --> 00:00:39.412
-Cada capacidad necesitaría autorización propia.
+00:00:24.440 --> 00:00:29.790
+un flujo recibe una transcripción autorizada, crea un borrador y espera aprobación antes
 
-8
-00:00:39.412 --> 00:00:47.737
-Si la transcripción tiene un responsable dudoso, el sistema debe detener ese campo y pedir revisión, no completar un nombre probable.
+00:00:29.830 --> 00:00:35.550
+de compartirlo. En el último flujo no hay permiso para grabar reuniones, invitar personas
 
-9
-00:00:47.737 --> 00:00:52.650
+00:00:35.590 --> 00:00:40.520
+ni publicar documentos. Cada capacidad necesitaría autorización propia.
+
+00:00:40.890 --> 00:00:45.870
+Si la transcripción tiene un responsable dudoso, el sistema debe detener ese campo y pedir
+
+00:00:45.910 --> 00:00:48.740
+revisión, no completar un nombre probable.
+
+00:00:49.190 --> 00:00:53.510
 El producto profesional puede ser un borrador útil con una incertidumbre visible.
-

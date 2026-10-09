@@ -1,18 +1,18 @@
 [
  {
-  "prueba": "2004: SCO inicializa la API",
+  "prueba": "2004: el SCO inicializa la API",
   "resultado": "OK",
   "detalle": ""
  },
  {
-  "prueba": "2004: estado de guardado muestra conexión al LMS",
+  "prueba": "2004: indicador de guardado muestra conexión al LMS",
   "resultado": "OK",
-  "detalle": "Conectado a SCORM 2004"
+  "detalle": "Guardado en el LMS"
  },
  {
-  "prueba": "2004: suspend_data comprimido escrito",
+  "prueba": "2004: suspend_data comprimido (un registro para todo el curso)",
   "resultado": "OK",
-  "detalle": "167 caracteres"
+  "detalle": "395 caracteres"
  },
  {
   "prueba": "2004: cmi.location guardada",
@@ -20,9 +20,14 @@
   "detalle": "m01/IATU-M01-L01-P02"
  },
  {
-  "prueba": "2004: incompleto mientras faltan requisitos",
+  "prueba": "2004: incompleto mientras faltan secciones",
   "resultado": "OK",
   "detalle": "incomplete"
+ },
+ {
+  "prueba": "2004: progress_measure informado",
+  "resultado": "OK",
+  "detalle": "0.0031"
  },
  {
   "prueba": "2004: cmi.exit = suspend",
@@ -30,9 +35,19 @@
   "detalle": "suspend"
  },
  {
-  "prueba": "2004: reanuda en la ubicación guardada",
+  "prueba": "2004: objetivo por sección (obj-m01)",
   "resultado": "OK",
-  "detalle": "#/m01/IATU-M01-L01-P02"
+  "detalle": "obj-m01"
+ },
+ {
+  "prueba": "2004: cmi.session_time informado (solo escritura: se lee del commit)",
+  "resultado": "OK",
+  "detalle": "session_time\":\"PT0H1M15S"
+ },
+ {
+  "prueba": "2004: el reloj de dedicación se muestra",
+  "resultado": "OK",
+  "detalle": "Llevas 1 min"
  },
  {
   "prueba": "2004: reanuda el avance (pantalla revisada)",
@@ -40,67 +55,122 @@
   "detalle": ""
  },
  {
-  "prueba": "2004: completion_status = completed al cumplir requisitos",
+  "prueba": "2004: reanuda el tiempo acumulado",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: portada ofrece «continuar donde quedaste»",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: examen bloqueado hasta completar las 17 secciones",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: las 17 secciones quedan completas",
+  "resultado": "OK",
+  "detalle": "17/17"
+ },
+ {
+  "prueba": "2004: 17 objetivos de sección en el LMS",
+  "resultado": "OK",
+  "detalle": 17
+ },
+ {
+  "prueba": "2004: sin examen entregado el curso sigue incompleto",
+  "resultado": "OK",
+  "detalle": "incomplete"
+ },
+ {
+  "prueba": "2004: la evaluación aparece disponible",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: forma A con 64 situaciones",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: forma A sin respuestas → no aprobado",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: success_status = failed tras forma A",
+  "resultado": "OK",
+  "detalle": "failed"
+ },
+ {
+  "prueba": "2004: score.scaled = 0",
+  "resultado": "OK",
+  "detalle": "0.0000"
+ },
+ {
+  "prueba": "2004: interacciones del examen registradas",
+  "resultado": "OK",
+  "detalle": 64
+ },
+ {
+  "prueba": "2004: completion_status = completed (17 secciones + examen entregado)",
   "resultado": "OK",
   "detalle": "completed"
  },
  {
-  "prueba": "2004: success_status = passed (escribe objetivo global)",
+  "prueba": "2004: forma B aprobada (95 de 100)",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: success_status = passed",
   "resultado": "OK",
   "detalle": "passed"
  },
  {
-  "prueba": "2004: progress_measure = 1",
+  "prueba": "2004: score.raw = 95 y scaled = 0,95",
   "resultado": "OK",
-  "detalle": "1.0000"
+  "detalle": "95 / 0.9500"
  },
  {
-  "prueba": "2004: interacciones formativas registradas (cmi.interactions)",
+  "prueba": "2004: score.min/max 0–100",
   "resultado": "OK",
-  "detalle": "0"
+  "detalle": ""
  },
  {
-  "prueba": "2004: guardado rechazado no se muestra como guardado",
+  "prueba": "2004: cmi.exit = suspend también al aprobar (permite volver a la devolución)",
+  "resultado": "OK",
+  "detalle": "\"exit\":\"suspend"
+ },
+ {
+  "prueba": "2004: guardado rechazado se informa como error",
   "resultado": "OK",
   "detalle": "El LMS no confirmó el guardado. Tus respuestas siguen en pantalla; reintenta."
  },
  {
-  "prueba": "2004: tras rechazo, el dato sigue disponible para reintentar",
-  "resultado": "OK",
-  "detalle": ""
- },
- {
-  "prueba": "2004 evaluación: lee los 17 objetivos globales",
-  "resultado": "OK",
-  "detalle": "17 filas"
- },
- {
-  "prueba": "2004 evaluación: señala exactamente el módulo pendiente",
-  "resultado": "OK",
-  "detalle": ""
- },
- {
-  "prueba": "2004 evaluación: sin servicio, examen bloqueado",
-  "resultado": "OK",
-  "detalle": ""
- },
- {
-  "prueba": "1.2: SCO inicializa la API",
+  "prueba": "1.2: el SCO inicializa la API",
   "resultado": "OK",
   "detalle": ""
  },
  {
   "prueba": "1.2: lesson_status incomplete + suspend_data",
   "resultado": "OK",
-  "detalle": "171 caracteres"
+  "detalle": "399 caracteres"
+ },
+ {
+  "prueba": "1.2: session_time en formato HHHH:MM:SS",
+  "resultado": "OK",
+  "detalle": "session_time\":\"0001:01:40\""
  },
  {
   "prueba": "1.2: respeta 4.096 caracteres (guarda avance «lite»)",
   "resultado": "OK",
-  "detalle": "171 caracteres"
+  "detalle": "339 caracteres"
  },
  {
-  "prueba": "1.2: informa honestamente que los textos largos quedaron solo en el navegador",
+  "prueba": "1.2: informa que los textos largos quedaron solo en el navegador",
   "resultado": "OK",
   "detalle": "El LMS guardó tu avance, pero tus textos largos quedaron solo en este navegador (límite de SCORM 1.2)."
  },
@@ -111,4 +181,4 @@
  }
 ]
 
-22/22 OK
+36/36 OK

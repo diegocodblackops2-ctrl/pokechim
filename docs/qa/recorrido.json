@@ -2,7 +2,7 @@
  {
   "prueba": "Inicio frío: transferencia de la portada",
   "resultado": "OK",
-  "detalle": "501 KiB en 14 solicitudes, 613 ms (local, sin limitación de red)"
+  "detalle": "720 KiB en 21 solicitudes, 614 ms (local, sin limitación de red)"
  },
  {
   "prueba": "Carga a demanda: sin audio ni video al entrar",
@@ -37,7 +37,7 @@
  {
   "prueba": "Teclado: controles alcanzables con Tab muestran foco visible",
   "resultado": "OK",
-  "detalle": "BUTTON|true, SELECT|true, TEXTAREA|true, A|true, BODY|false, SUMMARY|true"
+  "detalle": "A|true, BUTTON|true, INPUT|true, SELECT|true, TEXTAREA|true, BODY|false, SUMMARY|true"
  },
  {
   "prueba": "Sin errores de JavaScript",

@@ -1,18 +1,18 @@
 /* Curso 5 — aplicación: rutas, navegación, pantallas, módulo, cierre, portada, orientación, biblioteca y ajustes.
-   Modo SCO (LMS): window.IATU_SCO define el SCO activo y solo se muestran sus páginas.
-   Modo vista previa (index.html): todos los SCO en un solo documento con almacenamiento local rotulado. */
+   Un solo SCO: todo el programa (orientación, 16 módulos y evaluación) vive en un documento y en un registro del LMS.
+   Sin LMS, el mismo documento funciona como vista previa con guardado local rotulado. */
 (function () {
   "use strict";
   var IATU = window.IATU = window.IATU || {};
-  var u = IATU.u, h = u.h, icon = u.icon, store = IATU.store, I = IATU.inter, M = IATU.media, P = IATU.practica;
+  var u = IATU.u, h = u.h, icon = u.icon, store = IATU.store, I = IATU.inter, M = IATU.media, P = IATU.practica, fx = IATU.fx;
   var CFG = window.IATU_CONFIG || {};
   var BASE = CFG.base || "";
   IATU.data = window.IATU_DATA || (window.IATU_DATA = {});
 
-  var SCO_LOCK = window.IATU_SCO || null;     // SCO fijo cuando se lanza desde el LMS
-  var PREVIEW = !SCO_LOCK;
+  var SCO_LOCK = null;                         // compatibilidad: el paquete es de un solo SCO
+  var PREVIEW = true;                          // siempre se muestra el programa completo
   var app = {};
-  var main, drawer, pager, topbarMeter, savePill;
+  var main, drawer, pager, topbarMeter, savePill, courseLine, pctChip, timeChip;
 
   /* ---------- Carga diferida de datos de módulo ---------- */
   var loading = {};
@@ -104,25 +104,50 @@
     return { done: d, total: req.length, pct: d / req.length, complete: d === req.length };
   }
 
-  var reportedComplete = {};
+  /* ---------- Avance global del programa (un solo SCO) ---------- */
+  function learningScos() { return IATU.data.curso.scos.filter(function (s) { return s !== "evaluacion"; }); }
+  function cacheProg(sco, p) { var r = store.root; r.prog = r.prog || {}; r.prog[sco] = { d: p.done, t: p.total, c: p.complete ? 1 : 0 }; }
+  /* Avance de una sección aunque su módulo aún no esté cargado (se usa el último cálculo guardado). */
+  function secProg(sco) {
+    if (sco === "orientacion" || IATU.data[sco]) { var p = progressOf(sco); if (p.total) cacheProg(sco, p); return p; }
+    var c = store.root.prog && store.root.prog[sco], mod = IATU.data.curso.modules[parseInt(sco.slice(1), 10) - 1];
+    var t = (c && c.t) || mod.required_count, d = c ? c.d : 0;
+    return { done: d, total: t, pct: t ? d / t : 0, complete: !!(c && c.c), started: !!store.peek(sco) };
+  }
+  function courseProg() {
+    var d = 0, t = 0, n = 0, k = 0;
+    learningScos().forEach(function (s) { var p = secProg(s); d += p.done; t += p.total; if (p.complete) n++; k++; });
+    return { done: d, total: t, pct: t ? d / t : 0, secs: n, nsecs: k, complete: n === k };
+  }
+  function examStatus() { return IATU.evaluacion && IATU.evaluacion.status ? IATU.evaluacion.status() : { sent: false }; }
+  app.courseProg = courseProg; app.secProg = secProg;
+  function updateTopbar() {
+    var cp = courseProg(), pct = Math.round(cp.pct * 100);
+    if (courseLine) { courseLine.firstChild.style.width = pct + "%"; courseLine.setAttribute("aria-label", "Avance del programa: " + pct + " %"); }
+    if (pctChip) { pctChip.lastChild.textContent = pct + " %"; pctChip.title = cp.secs + " de " + cp.nsecs + " secciones completas"; }
+    if (timeChip) timeChip.lastChild.textContent = fx.fmtTime(store.totalTime());
+  }
+  app.updateTopbar = updateTopbar;
   app.refreshProgress = function () {
     var sco = store.sco;
-    if (!sco || sco === "evaluacion") return;
-    var p = progressOf(sco);
-    if (topbarMeter) {
-      topbarMeter.querySelector("i").style.width = Math.round(p.pct * 100) + "%";
-      topbarMeter.querySelector(".lbl").textContent = p.done + "/" + p.total;
-      topbarMeter.setAttribute("aria-label", "Avance obligatorio del " + (sco === "orientacion" ? "módulo de orientación" : "módulo") + ": " + p.done + " de " + p.total);
+    if (sco && sco !== "evaluacion") {
+      var p = progressOf(sco);
+      cacheProg(sco, p);
+      store.section("obj-" + sco, p.complete, p.pct);
+      var cel = store.root.cel || (store.root.cel = {});
+      if (p.complete && !cel[sco]) {
+        cel[sco] = 1;
+        store.save(true);
+        fx.celebrate(sco === "orientacion" ? "00" : sco.slice(1), sco === "orientacion" ? "Orientación completa" : "Módulo " + parseInt(sco.slice(1), 10) + " completo",
+          "Se encendió un nodo más de tu red del programa.");
+        u.announce(sco === "orientacion" ? "Orientación completa." : "Módulo completo: requisitos obligatorios revisados.");
+      }
+      if (IATU.service.configured()) reportProgress(sco, p);
     }
-    store.adapter.setCompletion({ completed: p.complete, success: p.complete ? "passed" : "unknown", progress: p.pct });
-    if (p.complete && !reportedComplete[sco]) {
-      reportedComplete[sco] = true;
-      store.save(true);
-      u.toast(sco === "orientacion" ? "Orientación completa." : "Módulo completo: requisitos obligatorios revisados.");
-    }
-    if (IATU.service.configured()) {
-      reportProgress(sco, p);
-    }
+    var cp = courseProg(), ex = examStatus();
+    updateTopbar();
+    // El curso queda «completed» solo con las 17 secciones completas y el examen entregado; el aprobado lo informa la evaluación.
+    store.adapter.setCompletion({ completed: cp.complete && !!ex.sent, progress: Math.min(1, cp.pct * .9 + (ex.sent ? .1 : 0)) });
     renderDrawer();
   };
   var reportProgress = u.debounce(function (sco, p) {
@@ -176,6 +201,7 @@
     var stage = h("div", { class: "stage fade-in" });
     main.appendChild(stage);
     fn(stage);
+    decorate(stage);
     renderPager(sco, raw);
     renderDrawer();
     if (sco) app.refreshProgress();
@@ -183,6 +209,18 @@
     var h1 = stage.querySelector("h1");
     if (h1) { h1.setAttribute("tabindex", "-1"); h1.focus({ preventScroll: true }); document.title = h1.textContent + " · IA para trabajar mejor"; }
     if (window.innerWidth < 1100) closeDrawer();
+  }
+
+  /* Aparición progresiva al hacer scroll: bloques de primer nivel y párrafos de lectura. */
+  function decorate(stage) {
+    Array.prototype.forEach.call(stage.children, function (el, i) {
+      if (i < 2 || /lab-hero|mod-hero|lesson-head|crumbs|activity|settings/.test(el.className) || el.tagName === "H1") return;
+      el.classList.add("rv");
+    });
+    u.$$(".prose > p, .prose > ul, .prose > ol, .mod-grid > *, .ladder > *, .badges > *", stage).forEach(function (el) { el.classList.add("rv"); });
+    var firstP = stage.classList.contains("lesson-page") ? stage.querySelector(":scope > .prose > p") : null;
+    if (firstP && firstP.textContent.length > 120) firstP.classList.add("lead-in");
+    fx.reveal(stage);
   }
 
   /* ---------- Pager ---------- */
@@ -218,19 +256,24 @@
     if (!drawer) return;
     var C = IATU.data.curso, R = parse(), cur = R.raw;
     u.clear(drawer);
+    var cp = courseProg(), ex = examStatus();
+    drawer.appendChild(h("div", { class: "drawer-sum" },
+      h("div", { class: "row" }, h("span", null, "Tu avance en el programa"), h("b", null, Math.round(cp.pct * 100) + " %")),
+      h("div", { class: "bar", role: "img", "aria-label": "Avance " + Math.round(cp.pct * 100) + " %" }, h("i", { style: { width: Math.round(cp.pct * 100) + "%" } })),
+      h("div", { class: "row" }, h("span", null, cp.secs + " de " + cp.nsecs + " secciones"), h("span", null, icon("reloj"), " ", fx.fmtTime(store.totalTime())))));
     drawer.appendChild(h("nav", { "aria-label": "Mapa del curso" }, (function () {
       var frag = document.createDocumentFragment();
-      if (PREVIEW) frag.appendChild(h("ul", { class: "nav-list" }, h("li", null, h("a", { href: "#/", "aria-current": cur === "" ? "page" : null }, icon("inicio"), "Portada del programa"))));
-      var scos = SCO_LOCK ? [SCO_LOCK] : C.scos;
-      // SCO activo: lista detallada
-      scos.forEach(function (sco) {
+      frag.appendChild(h("ul", { class: "nav-list" }, h("li", null, h("a", { href: "#/", "aria-current": cur === "" ? "page" : null }, icon("inicio"), "Portada del programa"))));
+      C.scos.forEach(function (sco) {
         var title = sco === "orientacion" ? "Orientación" : sco === "evaluacion" ? "Evaluación y proyecto" : "Módulo " + parseInt(sco.slice(1), 10) + " · " + C.modules[parseInt(sco.slice(1), 10) - 1].title;
-        var active = scoOfRoute(R.parts) === sco || SCO_LOCK === sco;
-        var prog = sco !== "evaluacion" ? progressOf(sco) : null;
+        var active = scoOfRoute(R.parts) === sco;
+        var prog = sco !== "evaluacion" ? secProg(sco) : null;
+        var mark = sco === "evaluacion"
+          ? (cp.complete ? (ex.sent ? h("span", { class: "ring full", role: "img", "aria-label": "entregada" }) : null) : h("span", { class: "nav-lock" }, icon("candado", "bloqueada hasta completar las 17 secciones")))
+          : h("span", { class: "ring" + (prog.complete ? " full" : ""), style: "--v:" + prog.pct.toFixed(3), role: "img", "aria-label": prog.complete ? "completo" : Math.round(prog.pct * 100) + " %" });
         var det = h("details", { class: "navmod", open: active });
-        det.appendChild(h("summary", { class: "nav-list" }, h("span", { class: "navbtn", style: { display: "flex", gap: ".5rem", padding: ".45rem .5rem", fontWeight: active ? 700 : 500 } },
-          h("span", { class: "num" }, sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1)), h("span", null, title),
-          prog && prog.total ? statusIcon(prog.complete) : null)));
+        det.appendChild(h("summary", { class: "nav-list" }, h("span", { class: "navbtn", style: { display: "flex", gap: ".5rem", alignItems: "center", padding: ".45rem .5rem", fontWeight: active ? 700 : 500 } },
+          h("span", { class: "num" }, sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1)), h("span", null, title), mark)));
         if (active && (sco === "orientacion" || sco === "evaluacion" || IATU.data[sco])) {
           var ul = h("ul", { class: "nav-sub" });
           var pages = scoPages(sco), lastLesson = null, sub = null;
@@ -249,15 +292,11 @@
             }
           });
           det.appendChild(ul);
-        } else if (PREVIEW) {
+        } else {
           det.appendChild(h("ul", { class: "nav-sub" }, h("li", null, h("a", { href: "#/" + firstRoute(sco) }, "Abrir"))));
         }
         frag.appendChild(det);
       });
-      if (SCO_LOCK) {
-        frag.appendChild(h("p", { class: "nav-title" }, "Otros módulos"));
-        frag.appendChild(h("p", { class: "note", style: { margin: "0 .5rem" } }, "Cada módulo es un SCO del LMS. Ábrelo desde el índice del curso en Dibork Learning."));
-      }
       frag.appendChild(h("p", { class: "nav-title" }, "Recursos"));
       frag.appendChild(h("ul", { class: "nav-list" },
         h("li", null, h("a", { href: "#/biblioteca" }, icon("biblioteca"), "Biblioteca y descargas")),
@@ -269,64 +308,159 @@
   function openDrawer() { drawer.hidden = false; document.body.classList.add("with-drawer"); var b = u.$("#drawer-btn"); if (b) b.setAttribute("aria-expanded", "true"); if (window.innerWidth < 1100) { var bd = h("div", { class: "drawer-backdrop", id: "drawer-backdrop" }); bd.addEventListener("click", closeDrawer); document.body.appendChild(bd); } }
   function closeDrawer() { if (window.innerWidth >= 1100) return; drawer.hidden = true; document.body.classList.remove("with-drawer"); var b = u.$("#drawer-btn"); if (b) b.setAttribute("aria-expanded", "false"); var bd = u.$("#drawer-backdrop"); if (bd) bd.remove(); }
 
-  /* ---------- Portada (vista previa) ---------- */
+  /* ---------- Imágenes por sección ---------- */
+  function imagesFor(prefix) {
+    var C = IATU.data.curso, out = [];
+    for (var id in C.images) { var im = C.images[id]; if (im.file && im.screen && im.screen.indexOf(prefix) === 0) out.push(im); }
+    return out.sort(function (x, y) { return x.screen < y.screen ? -1 : 1; });
+  }
+  function secImage(sco) {
+    var C = IATU.data.curso;
+    if (sco === "orientacion") return C.images["IATU-IMG024"];
+    if (sco === "evaluacion") return C.images["IATU-IMG060"];
+    // Portada de sección: se prefiere una imagen con personas trabajando.
+    var l = imagesFor("IATU-" + sco.toUpperCase());
+    return l.filter(function (x) { return x.people; })[0] || l[0] || C.images["IATU-IMG001"];
+  }
+  function imgEl(im, cls, sizes) {
+    if (!im || !im.file) return null;
+    return h("img", { class: cls || null, src: BASE + im.file, alt: "", loading: "lazy", decoding: "async",
+      srcset: im.sm ? BASE + im.sm + " 720w, " + BASE + im.file + " 1440w" : null, sizes: sizes || "(max-width: 760px) 100vw, 420px" });
+  }
+  app.secImage = secImage; app.imgEl = imgEl; app.imagesFor = imagesFor;
+
+  function secTitle(sco) {
+    var C = IATU.data.curso;
+    return sco === "orientacion" ? "Orientación" : sco === "evaluacion" ? "Evaluación y proyecto" : "Módulo " + parseInt(sco.slice(1), 10) + " · " + C.modules[parseInt(sco.slice(1), 10) - 1].title;
+  }
+  function resumeTarget() {
+    var loc = store.location();
+    if (!loc) return null;
+    var sco = scoOfRoute(loc.split("/"));
+    return sco ? { r: loc, sco: sco } : null;
+  }
+
+  /* ---------- Portada ---------- */
   function renderHome(mnt) {
     var C = IATU.data.curso, pub = C.publication;
-    var img = C.images["IATU-IMG001"];
-    var hero = h("section", { class: "hero" + (img && img.file ? "" : " hero-noimg") });
-    if (img && img.file) hero.appendChild(h("div", { class: "hero-img" }, h("img", { src: BASE + img.file, alt: "", srcset: img.sm ? BASE + img.sm + " 720w, " + BASE + img.file + " 1440w" : null, sizes: "100vw" })));
-    hero.appendChild(h("div", { class: "hero-inner" },
-      h("span", { class: "kicker" }, "Curso 5 · Laboratorio de criterio"),
-      h("h1", null, "IA para trabajar mejor"),
-      h("p", null, pub.subtitle),
-      h("div", { class: "btn-row" },
-        h("a", { class: "btn btn-primary", href: "#/orientacion/bienvenida" }, "Empezar por la orientación", icon("siguiente")),
-        h("a", { class: "btn", href: "#/m01/intro" }, "Ir al módulo 1"))));
+    mnt.classList.add("stage-wide");
+    var cp = courseProg(), ex = examStatus(), res = resumeTarget();
+    var hereSco = res ? res.sco : learningScos().filter(function (s) { return !secProg(s).complete; })[0] || "evaluacion";
+
+    // 1. Héroe: red del programa que se enciende con tu avance real
+    var nodes = C.scos.map(function (sco) {
+      var p = sco === "evaluacion" ? null : secProg(sco);
+      var st = sco === "evaluacion" ? (cp.complete ? (ex.sent ? "done" : "here") : "lock") : p.complete ? "done" : sco === hereSco ? "here" : "todo";
+      return { label: secTitle(sco), short: sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1), state: st, href: st === "lock" ? null : "#/" + firstRoute(sco) };
+    });
+    var canvas = h("canvas", { class: "neural", "aria-hidden": "true" });
+    var title = h("h1", null, h("span", { class: "t1" }), " ", h("span", { class: "grad-text" }, "mejor"));
+    fx.words(title.querySelector(".t1"), "IA para trabajar");
+    var typed = h("p", { class: "typed" });
+    var started = cp.done > 0 || !!res;
+    var primary = h("a", { class: "btn btn-primary", href: "#/" + (res ? res.r : "orientacion/bienvenida") }, icon(started ? "jugar" : "cohete"), started ? "Continuar donde quedé" : "Empezar el laboratorio");
+    var meta = h("div", { class: "hero-meta" });
+    [[16, "", "módulos"], [64, "", "lecciones"], [32, "", "talleres con producto"], [3, "", "casos con decisiones"]].forEach(function (m) {
+      var b = h("b", null, "0"); meta.appendChild(h("div", null, b, h("span", null, m[2]))); setTimeout(function () { fx.count(b, m[0], m[1]); }, 500);
+    });
+    var hero = h("section", { class: "lab-hero", "aria-labelledby": "hero-t" },
+      h("div", { class: "hero-photo", "aria-hidden": "true" }, imgEl(C.images["IATU-IMG001"], null, "60vw")),
+      canvas,
+      h("div", { class: "lab-hero-in" },
+        h("span", { class: "eyebrow" }, h("span", { class: "live" }), "Curso 5 · Laboratorio de criterio"),
+        title, typed,
+        h("div", { class: "hero-cta" }, primary, h("a", { class: "btn btn-glass", href: "#programa" }, icon("mapa"), "Ver el programa")),
+        meta),
+      h("div", { class: "hero-legend", "aria-hidden": "true" },
+        h("span", null, h("i", { style: { background: "#f0abfc" } }), "completado"), h("span", null, h("i", { style: { background: "#fcd34d" } }), "estás aquí"), h("span", null, h("i", { style: { background: "#5b4a8f" } }), "por recorrer")));
+    title.id = "hero-t";
     mnt.appendChild(hero);
-    if (PREVIEW) mnt.appendChild(h("div", { class: "callout warn" }, h("p", null, h("b", null, "Vista previa. "), "Tu avance se guarda solo en este navegador. En Dibork Learning el curso funciona como 18 SCO con guardado en el LMS y examen corregido por el servicio autorizado.")));
-    mnt.appendChild(h("div", { class: "stats" },
-      [["16", "módulos"], ["64", "lecciones"], ["32", "talleres con producto"], ["3", "casos con decisiones"], ["60 h", "estimadas de trabajo activo*"]].map(function (s) { return h("div", { class: "stat" }, h("b", null, s[0]), h("span", null, s[1])); })));
-    mnt.appendChild(h("p", { class: "lead reading" }, pub.short));
-    mnt.appendChild(h("p", { class: "note reading" }, "* " + pub.duration));
-    mnt.appendChild(h("h2", null, "Los cuatro niveles de uso que recorre el programa"));
-    mnt.appendChild(h("div", { class: "levels" },
-      [["Consultar", "Pedir una explicación o un primer apoyo."], ["Colaborar", "Iterar con objetivo, contexto y revisión."], ["Sistematizar", "Procedimiento reutilizable con fuentes, criterios y pruebas."], ["Automatizar con supervisión", "Ejecutar partes con límites, permisos y respuesta ante fallos."]]
-        .map(function (l, i) { return h("div", null, h("span", { class: "mono note" }, "Nivel " + (i + 1)), h("b", null, l[0]), l[1]); })));
-    mnt.appendChild(h("p", { class: "note reading" }, "Mapa editorial de trabajo, no una escala científica ni un ranking de personas."));
-    mnt.appendChild(h("h2", null, "Programa"));
+    fx.type(typed, pub.subtitle, 14);
+    setTimeout(function () { fx.neural(canvas, nodes); }, 60);
+    var progressTxt = "Tu red del programa: " + cp.secs + " de " + cp.nsecs + " secciones completas" + (cp.complete ? "; la evaluación está disponible." : "; la evaluación se habilita al completar todas.");
+    mnt.appendChild(h("p", { class: "sr-only" }, progressTxt));
+
+    // 2. Cinta con términos del glosario del curso
+    var terms = glossary().map(function (g) { return g[0]; });
+    if (terms.length) {
+      var track = h("div", { class: "ticker-track", "aria-hidden": "true" });
+      terms.concat(terms).forEach(function (t) { track.appendChild(h("span", null, t)); });
+      mnt.appendChild(h("div", { class: "ticker" }, track));
+    }
+
+    if (!store.isLMS()) mnt.appendChild(h("div", { class: "callout warn" }, h("p", null, h("b", null, "Vista previa. "), "Tu avance se guarda solo en este navegador. En Dibork Learning el mismo curso guarda tu avance, tu tiempo, la nota y el resultado en el LMS.")));
+
+    // 3. Continuar
+    if (res) {
+      var rt = secTitle(res.sco);
+      mnt.appendChild(h("a", { class: "resume", href: "#/" + res.r },
+        imgEl(secImage(res.sco), null, "220px"),
+        h("div", null, h("small", null, "Continúa donde quedaste"), h("h3", null, rt), h("p", null, "Llevas " + fx.fmtTime(store.totalTime()) + " de trabajo activo y " + Math.round(cp.pct * 100) + " % de los requisitos del programa.")),
+        h("span", { class: "go", "aria-hidden": "true" }, icon("siguiente"))));
+    }
+
+    // 4. Tu avance e insignias
+    mnt.appendChild(h("div", { class: "sec-head" }, h("div", null, h("span", { class: "sec-kick" }, "Tu laboratorio"), h("h2", null, "Tu avance, a la vista"),
+      h("p", null, "Cada sección completa enciende un nodo y una insignia. La evaluación final se abre cuando las 17 están listas."))));
+    var tiles = h("div", { class: "stats" },
+      [[fx.fmtTime(store.totalTime()), "de trabajo activo"], [Math.round(cp.pct * 100) + " %", "de requisitos cumplidos"], [cp.secs + "/" + cp.nsecs, "secciones completas"], [ex.sent ? "Entregada" : cp.complete ? "Disponible" : "Bloqueada", "evaluación final"]]
+        .map(function (x) { return h("div", { class: "stat" }, h("b", null, x[0]), h("span", null, x[1])); }));
+    mnt.appendChild(tiles);
+    var badges = h("div", { class: "badges", role: "list", "aria-label": "Insignias del recorrido" });
+    C.scos.forEach(function (sco) {
+      var on = sco === "evaluacion" ? !!ex.sent : secProg(sco).complete;
+      badges.appendChild(h("div", { class: "badge" + (on ? " on" : ""), role: "listitem" }, h("i", { "aria-hidden": "true" }, h("span", null, sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1))),
+        h("span", null, (sco === "orientacion" ? "Orientación" : sco === "evaluacion" ? "Evaluación" : "Módulo " + parseInt(sco.slice(1), 10)) + (on ? " · lograda" : ""))));
+    });
+    mnt.appendChild(badges);
+
+    // 5. Escalera de niveles de uso (interactiva)
+    mnt.appendChild(h("div", { class: "sec-head" }, h("div", null, h("span", { class: "sec-kick" }, "El mapa del programa"), h("h2", null, "Cuatro niveles de uso, una sola pregunta: ¿quién controla el resultado?"),
+      h("p", null, "Toca cada nivel. Es un mapa editorial de trabajo, no una escala científica ni un ranking de personas."))));
+    var lv = [["Consultar", "Pedir una explicación o un primer apoyo."], ["Colaborar", "Iterar con objetivo, contexto y revisión."], ["Sistematizar", "Procedimiento reutilizable con fuentes, criterios y pruebas."], ["Automatizar con supervisión", "Ejecutar partes con límites, permisos y respuesta ante fallos."]];
+    var ladder = h("div", { class: "ladder", role: "group", "aria-label": "Niveles de uso" });
+    lv.forEach(function (l, i) {
+      var b = h("button", { type: "button", "aria-pressed": i === 0 ? "true" : "false", style: "--h:" + (25 * (i + 1)) },
+        h("span", { class: "lv", "aria-hidden": "true" }, "0" + (i + 1)), h("b", null, l[0]), h("span", { class: "d" }, l[1]));
+      b.addEventListener("click", function () { u.$$("button", ladder).forEach(function (x) { x.setAttribute("aria-pressed", "false"); }); b.setAttribute("aria-pressed", "true"); });
+      ladder.appendChild(b);
+    });
+    mnt.appendChild(ladder);
+
+    // 6. Programa
+    mnt.appendChild(h("div", { class: "sec-head", id: "programa", tabindex: "-1" }, h("div", null, h("span", { class: "sec-kick" }, "Programa"), h("h2", null, "18 paradas, 60 horas de trabajo activo"),
+      h("p", null, pub.short))));
     var routes = [[1, 6, "Ruta esencial"], [7, 12, "Aplicación profesional"], [13, 16, "Profundización"]];
     var grid = h("div", { class: "mod-grid" });
-    var ori = progressOf("orientacion");
-    grid.appendChild(modCard("00", "Orientación y diagnóstico", "Condiciones, rutas, 16 situaciones sin nota y tu tarea inicial.", "60 min", "#/orientacion/bienvenida", ori, "Inicio"));
+    grid.appendChild(mcard({ n: "00", title: "Orientación y diagnóstico", obj: "Condiciones, rutas, 16 situaciones sin nota y tu tarea inicial.", time: "60 min", href: "#/orientacion/bienvenida", prog: secProg("orientacion"), band: "Inicio", img: secImage("orientacion") }));
     C.modules.forEach(function (m) {
       var band = routes.filter(function (r) { return m.number >= r[0] && m.number <= r[1]; })[0][2];
-      grid.appendChild(modCard(("0" + m.number).slice(-2), m.title, m.objective, (m.minutes / 60) + " h", "#/" + m.sco + "/intro", progressOfPeek(m.sco), band));
+      grid.appendChild(mcard({ n: ("0" + m.number).slice(-2), title: m.title, obj: m.objective, time: (m.minutes / 60) + " h", href: "#/" + m.sco + "/intro", prog: secProg(m.sco), band: band, img: secImage(m.sco) }));
     });
-    grid.appendChild(modCard("EV", "Evaluación, proyecto y transferencia", "Situaciones aplicadas A/B, proyecto con rúbrica y revisión humana, transferencia.", "11 h", "#/evaluacion/requisitos", null, "Cierre"));
+    grid.appendChild(mcard({ n: "EV", title: "Evaluación, proyecto y transferencia", obj: "Situaciones aplicadas, proyecto con rúbrica y transferencia a tu trabajo.", time: "11 h", href: "#/evaluacion/requisitos", prog: null, band: cp.complete ? "Disponible" : "Bloqueada", img: secImage("evaluacion"), locked: !cp.complete, sent: ex.sent }));
     mnt.appendChild(grid);
-    mnt.appendChild(h("h2", null, "Qué vas a lograr"));
+    u.$$(".mcard", grid).forEach(fx.tilt);
+
+    // 7. Qué vas a lograr
+    mnt.appendChild(h("div", { class: "sec-head" }, h("div", null, h("span", { class: "sec-kick" }, "Al terminar"), h("h2", null, "Qué vas a lograr"))));
     mnt.appendChild(h("ol", { class: "reading" }, pub.outcomes.map(function (o) { return h("li", null, o); })));
     mnt.appendChild(h("div", { class: "callout info reading" }, h("h3", null, "Lo que este programa no promete"), h("p", null, pub.not_promised)));
-    mnt.appendChild(h("p", { class: "note reading" }, h("b", null, "Requisitos: "), pub.requirements));
+    mnt.appendChild(h("p", { class: "note reading" }, h("b", null, "Requisitos: "), pub.requirements, " ", pub.duration));
   }
-  function progressOfPeek(sco) {
-    if (!IATU.data[sco]) {
-      // Sin cargar el módulo no conocemos el total; se informa solo si hay estado guardado.
-      var st = store.peek(sco); if (!st) return null;
-      return { unknown: true, started: true };
-    }
-    return progressOf(sco);
+  function mcard(o) {
+    var p = o.prog, pct = p && p.total ? Math.round(p.pct * 100) : 0;
+    var state = o.locked ? h("span", null, icon("candado"), " Se abre al completar las 17 secciones")
+      : o.sent ? h("span", { class: "badge-done" }, icon("medalla"), " Entregada")
+      : p && p.complete ? h("span", { class: "badge-done" }, icon("medalla"), " Completo")
+      : p && (p.done || p.started) ? h("span", null, "En curso") : h("span", null, "Por empezar");
+    return h("a", { class: "mcard" + (o.locked ? " locked" : "") + (p && p.complete ? " done" : ""), href: o.href, "aria-label": (o.n === "EV" ? "" : "Sección " + o.n + ": ") + o.title + (o.locked ? " (bloqueada)" : p ? ", avance " + pct + " %" : "") },
+      h("div", { class: "ph" }, o.img ? imgEl(o.img) : null, h("span", { class: "num", "aria-hidden": "true" }, o.n), h("span", { class: "band" }, o.band)),
+      h("div", { class: "body" }, h("h3", null, o.title), h("p", { class: "obj" }, o.obj),
+        h("div", { class: "foot" }, icon("reloj"), h("span", null, o.time), h("span", null, "·"), state,
+          p ? h("span", { class: "ringbig", style: "--v:" + (pct / 100).toFixed(3), "aria-hidden": "true" }, h("span", null, pct + "%")) : null)),
+      h("span", { class: "glare", "aria-hidden": "true" }));
   }
-  function modCard(n, title, obj, time, href, prog, band) {
-    var pct = prog && prog.total ? Math.round(prog.pct * 100) : null;
-    return h("a", { class: "mod-card", href: href },
-      h("span", { class: "route-band" }, band),
-      h("span", { class: "n", "aria-hidden": "true" }, n),
-      h("h3", null, title),
-      h("p", { class: "obj" }, obj),
-      pct !== null ? h("div", { class: "mini-bar", role: "img", "aria-label": "Avance " + pct + "%" }, h("i", { style: { width: pct + "%" } })) : null,
-      h("div", { class: "foot" }, h("span", null, icon("reloj"), " " + time), prog && prog.complete ? h("span", { class: "tag tag-teal" }, "Completo") : prog && (prog.started || prog.done) ? h("span", { class: "tag tag-ochre" }, "En curso") : h("span", null, "Abrir →")));
-  }
+  function progressOfPeek(sco) { return secProg(sco); }
 
   /* ---------- Orientación ---------- */
   function renderOrientation(mnt, page) {
@@ -412,20 +546,30 @@
     var crumbs = h("div", { class: "crumbs" }, h("span", null, "Módulo " + m.number), h("span", { class: "sep" }, "·"), h("span", null, m.title));
     if (!rest.length || rest[0] === "intro") return renderIntro(mnt, m);
     if (rest[0] === "cierre") return renderClosure(mnt, m);
-    if (rest[0] === "taller") { mnt.appendChild(crumbs); var w = m.workshops.filter(function (x) { return x.id === rest[1]; })[0]; return w ? P.workshop(w, mnt) : null; }
-    if (rest[0] === "caso") { mnt.appendChild(crumbs); var c = m.cases.filter(function (x) { return x.id === rest[1]; })[0]; return c ? P.branchCase(c, mnt) : null; }
+    if (rest[0] === "taller") { mnt.appendChild(crumbs); mnt.appendChild(journey(m, rest[1])); var w = m.workshops.filter(function (x) { return x.id === rest[1]; })[0]; return w ? P.workshop(w, mnt) : null; }
+    if (rest[0] === "caso") { mnt.appendChild(crumbs); mnt.appendChild(journey(m, rest[1])); var c = m.cases.filter(function (x) { return x.id === rest[1]; })[0]; return c ? P.branchCase(c, mnt) : null; }
     var sid = rest[0], screen = null, lesson = null, idx = 0;
     m.lessons.forEach(function (l) { l.screens.forEach(function (s, i) { if (s.id === sid) { screen = s; lesson = l; idx = i; } }); });
     if (!screen) { mnt.appendChild(h("p", null, "Pantalla no encontrada.")); return; }
-    crumbs.appendChild(h("span", { class: "sep" }, "·"));
-    crumbs.appendChild(h("span", null, "Lección " + lesson.number + " · pantalla " + (idx + 1) + " de 4"));
+    mnt.classList.add("lesson-page");
     mnt.appendChild(crumbs);
-    mnt.appendChild(h("header", { class: "screen-head" }, h("div", null,
-      h("span", { class: "kicker" }, screen.title),
-      h("h1", null, lesson.title),
-      h("div", { class: "meta-row" }, h("span", { class: "tag" }, icon("reloj"), lesson.minutes + " min la lección"),
-        screen.mandatory ? h("span", { class: "tag tag-ochre" }, "Práctica obligatoria") : null,
-        screen.kind === "lesson" ? (store.get("s", screen.id) ? h("span", { class: "tag tag-teal" }, icon("check"), " Revisada") : null) : null))));
+    // La imagen propia de la pantalla va en la cabecera (con su texto alternativo); si no tiene, se usa una de la lección o del módulo como fondo decorativo.
+    var stripImg = null, ownImg = false;
+    (screen.image_ids || []).some(function (id) { var im = IATU.data.curso.images[id]; if (im && im.file) { stripImg = im; ownImg = true; return true; } return false; });
+    if (!stripImg) lesson.screens.reduce(function (acc, x) { return acc.concat(x.image_ids || []); }, []).some(function (id) { var im = IATU.data.curso.images[id]; if (im && im.file) { stripImg = im; return true; } return false; });
+    if (!stripImg) stripImg = secImage(sco);
+    var steps = h("div", { class: "steps4", role: "list", "aria-label": "Pantallas de la lección" }, lesson.screens.map(function (x, k) {
+      var dn = x.kind === "lesson" ? !!store.get("s", x.id) : itemDone("practice", x.activity ? x.activity.id : x.id);
+      return h("a", { role: "listitem", href: "#/" + sco + "/" + x.id, class: (dn ? "done" : "") + (k === idx ? " here" : ""), "aria-label": "Pantalla " + (k + 1) + ": " + x.title + (dn ? " (completa)" : ""), "aria-current": k === idx ? "step" : null });
+    }));
+    mnt.appendChild(h("header", { class: "lesson-head" + (stripImg ? "" : " noimg") },
+      stripImg ? h("div", { class: "strip" + (ownImg ? " own" : ""), "aria-hidden": ownImg && stripImg.alt ? null : "true" }, (function () { var im = imgEl(stripImg, null, "(max-width: 900px) 100vw, 980px"); if (ownImg && stripImg.alt) im.setAttribute("alt", stripImg.alt); return im; })()) : null,
+      h("div", { class: "in" },
+        h("span", { class: "eyebrow", style: { background: "var(--grad-soft)", color: "var(--violet)", borderColor: "var(--rule)" } }, "Lección " + lesson.number + " · " + (idx + 1) + " de 4 · " + screen.title),
+        h("h1", null, lesson.title),
+        steps,
+        h("div", { class: "steps-label" }, h("span", null, lesson.minutes + " min la lección"),
+          h("span", null, screen.mandatory ? "Práctica obligatoria" : screen.kind === "lesson" ? (store.get("s", screen.id) ? "Revisada" : "Por revisar") : "")))));
     var ap = M.audioPlayer(screen.audio_id);
     if (ap) mnt.appendChild(ap);
     if (screen.kind === "decision") {
@@ -433,16 +577,12 @@
       else I.decision(screen, mnt);
       return;
     }
-    if (screen.image_ids && screen.image_ids.length) {
-      var f = M.figure(screen.image_ids[0], { side: false });
-      if (f) mnt.appendChild(f);
-    }
+    // (la imagen de la pantalla ya está en la cabecera)
     if (/resolución/i.test(screen.title)) {
-      mnt.appendChild(h("section", { class: "resolution", "aria-label": "Resolución comentada" },
-        h("span", { class: "ref-label" }, "Resolución comentada"), u.paragraphs(screen.text, "prose")));
+      mnt.appendChild(predictFirst(screen));
     } else if (/procedimiento/i.test(screen.title)) {
-      mnt.appendChild(h("section", { class: "procedure", "aria-label": "Procedimiento" }, u.paragraphs(screen.text, "prose")));
-    } else mnt.appendChild(u.paragraphs(screen.text, "prose"));
+      mnt.appendChild(stepper(screen));
+    } else mnt.appendChild(glossify(u.paragraphs(screen.text, "prose")));
     if (screen.video_id) { var v = M.videoCard(screen.video_id); if (v) mnt.appendChild(v); }
     if (screen.flipcards) I.flipcards(screen.flipcards, mnt);
     if (screen.hotspots) screen.hotspots.forEach(function (hs) { I.hotspots(hs, mnt); });
@@ -457,39 +597,144 @@
     mnt.appendChild(h("p", { class: "note" }, "Fuentes de esta pantalla: ", screen.source_ids.map(function (id) { return h("a", { class: "src", href: "#/biblioteca/fuentes/" + id }, id); })));
   }
 
+  /* Línea de recorrido del módulo: lecciones, talleres, caso y cierre, con el avance real. */
+  function journey(m, curKey) {
+    var reqs = requirements(m.sco), done = {};
+    reqs.forEach(function (q) { done[q.id] = q.done; });
+    var stops = [];
+    m.lessons.forEach(function (l) {
+      var ids = l.screens.map(function (x) { return x.id; });
+      var lreq = reqs.filter(function (q) { return ids.indexOf(q.id) >= 0; });
+      stops.push({ key: "L" + l.number, label: "Lección " + l.number, sub: l.minutes + " min", ic: "fuente", r: m.sco + "/" + l.screens[0].id, done: lreq.length > 0 && lreq.every(function (q) { return q.done; }) });
+    });
+    m.workshops.forEach(function (w) { stops.push({ key: w.id, label: /T1$/.test(w.id) ? "Taller guiado" : "Taller de transferencia", sub: w.minutes + " min", ic: "archivo", r: m.sco + "/taller/" + w.id, done: !!done[w.id] }); });
+    m.cases.forEach(function (c) { stops.push({ key: c.id, label: "Caso", sub: c.minutes + " min", ic: "ramas", r: m.sco + "/caso/" + c.id, done: !!done[c.id] }); });
+    var p = progressOf(m.sco);
+    stops.push({ key: "cierre", label: "Cierre", sub: p.done + "/" + p.total, ic: "bandera", r: m.sco + "/cierre", done: p.complete });
+    var here = curKey ? stops.filter(function (x) { return x.key === curKey; })[0] : stops.filter(function (x) { return !x.done; })[0];
+    var nd = stops.filter(function (x) { return x.done; }).length;
+    var fill = h("span", { class: "fill", "aria-hidden": "true" });
+    var nav = h("nav", { class: "journey", "aria-label": "Recorrido del módulo: " + nd + " de " + stops.length + " paradas completas" }, fill,
+      stops.map(function (x) {
+        return h("a", { href: "#/" + x.r, class: (x.done ? "done" : "") + (x === here ? " here" : ""), "aria-current": x === here && curKey ? "step" : null },
+          h("span", { class: "dot" }, icon(x.done ? "check" : x.ic)), h("b", null, x.label), h("small", null, x.done ? "listo" : x.sub));
+      }));
+    var k = Math.max(0, stops.indexOf(here) >= 0 ? stops.indexOf(here) : nd);
+    setTimeout(function () { var dots = nav.querySelectorAll(".dot"); if (dots.length > 1) { var a = dots[0].getBoundingClientRect(), b = dots[Math.min(k, dots.length - 1)].getBoundingClientRect(); fill.style.width = Math.max(0, b.left - a.left) + "px"; } }, 120);
+    return nav;
+  }
+  app.journey = journey;
+
+  /* Carrusel de lo que cada lección permite hacer (objetivos de lección del maestro). */
+  function keyIdeas(items, label) {
+    if (!items.length) return null;
+    var i = 0, txt = h("p", { class: "ki-text", "aria-live": "polite" }, items[0]);
+    var nav = h("div", { class: "ki-nav" });
+    var timer = null;
+    function go(k) { i = k; txt.textContent = items[k]; u.$$("button", nav).forEach(function (b, j) { b.setAttribute("aria-current", String(j === k)); }); }
+    items.forEach(function (_, k) { var b = h("button", { type: "button", "aria-label": "Idea " + (k + 1) + " de " + items.length, "aria-current": String(k === 0) }); b.addEventListener("click", function () { clearInterval(timer); go(k); }); nav.appendChild(b); });
+    var box = h("section", { class: "keyidea", "aria-label": label }, h("span", { class: "ki-label" }, label), txt, nav);
+    if (!fx.reduced()) timer = setInterval(function () { if (!box.isConnected) return clearInterval(timer); go((i + 1) % items.length); }, 6500);
+    return box;
+  }
+
+  /* ---------- Interacciones de lectura derivadas del contenido ---------- */
+  /* Resolución comentada: primero tu predicción (opcional), luego la resolución para contrastar. */
+  function predictFirst(screen) {
+    var rec = store.get("o", "pred-" + screen.id) || {};
+    var res = h("section", { class: "resolution", "aria-label": "Resolución comentada", hidden: !rec.shown },
+      h("span", { class: "ref-label" }, "Resolución comentada"), glossify(u.paragraphs(screen.text, "prose")));
+    var id = u.newId("pred"), ta = h("textarea", { id: id, rows: 3, placeholder: "Por ejemplo: qué dato revisaría primero y qué no prometería." }, rec.t || "");
+    ta.addEventListener("input", function () { store.put("o", "pred-" + screen.id, { t: ta.value }); });
+    var show = h("button", { class: "btn btn-primary", type: "button" }, icon("ver"), "Ver la resolución");
+    var skip = h("button", { class: "btn btn-ghost", type: "button" }, "Ver sin predecir");
+    function reveal() { res.hidden = false; box.classList.add("revealed"); store.put("o", "pred-" + screen.id, { t: ta.value, shown: 1 }); u.announce("Resolución visible."); res.scrollIntoView({ behavior: fx.reduced() ? "auto" : "smooth", block: "start" }); }
+    show.addEventListener("click", reveal); skip.addEventListener("click", reveal);
+    var box = h("section", { class: "predict" + (rec.shown ? " revealed" : ""), "aria-label": "Predice antes de ver" },
+      h("div", { class: "predict-q" }, h("span", { class: "sec-kick" }, icon("chispa"), " Predice primero"),
+        h("label", { class: "fl", for: id }, "Antes de leer la resolución: ¿qué harías tú con este caso?"), ta,
+        h("div", { class: "btn-row" }, show, skip)),
+      res);
+    return box;
+  }
+  /* Procedimiento: un paso a la vez, con avance visible (se puede mostrar todo de una vez). */
+  function stepper(screen) {
+    var paras = String(screen.text || "").split(/\n+/).map(function (x) { return x.trim(); }).filter(Boolean);
+    var rec = store.get("o", "steps-" + screen.id) || {}, shown = Math.max(1, Math.min(paras.length, rec.n || 1));
+    var list = h("ol", { class: "steps" }), bar = h("i"), count = h("span");
+    var next = h("button", { class: "btn btn-primary", type: "button" }, "Siguiente paso", icon("siguiente"));
+    var all = h("button", { class: "btn btn-ghost", type: "button" }, "Ver todo el procedimiento");
+    paras.forEach(function (t, i) { list.appendChild(h("li", { class: "step", hidden: i >= shown }, h("span", { class: "n", "aria-hidden": "true" }, String(i + 1)), glossify(u.paragraphs(t, "prose")))); });
+    function upd(focus) {
+      u.$$("li", list).forEach(function (li, i) { var was = li.hidden; li.hidden = i >= shown; if (was && !li.hidden) { li.classList.add("enter"); if (focus) li.setAttribute("tabindex", "-1"), li.focus(); } });
+      bar.style.width = Math.round(100 * shown / paras.length) + "%"; count.textContent = "Paso " + shown + " de " + paras.length;
+      next.hidden = all.hidden = shown >= paras.length;
+      store.put("o", "steps-" + screen.id, { n: shown });
+    }
+    next.addEventListener("click", function () { shown++; upd(true); });
+    all.addEventListener("click", function () { shown = paras.length; upd(false); });
+    var box = h("section", { class: "procedure stepper", "aria-label": "Procedimiento paso a paso" },
+      h("div", { class: "step-head" }, h("span", { class: "sec-kick" }, icon("ruta"), " Procedimiento"), count),
+      h("div", { class: "step-bar", "aria-hidden": "true" }, bar), list, h("div", { class: "btn-row" }, next, all));
+    upd(false);
+    return box;
+  }
+  function glossary() { return (IATU.data.curso.glossary || []).map(function (g) { return Array.isArray(g) ? g : [g.term, g.definition]; }).filter(function (g) { return g[0] && g[1]; }); }
+  /* Glosario vivo: marca la primera aparición de cada término del glosario y muestra su definición al tocarlo. */
+  function glossify(root) {
+    var G = glossary().slice().sort(function (a, b) { return b[0].length - a[0].length; });
+    if (!G.length) return root;
+    var used = {};
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null), nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (tn) {
+      if (tn.parentNode.closest && tn.parentNode.closest(".src, .gterm, a, button")) return;
+      G.some(function (g) {
+        if (used[g[0]]) return false;
+        var re = new RegExp("(^|[^\\wáéíóúñÁÉÍÓÚÑ])(" + g[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")(?![\\wáéíóúñÁÉÍÓÚÑ])", "i");
+        var m = re.exec(tn.nodeValue);
+        if (!m) return false;
+        used[g[0]] = 1;
+        var start = m.index + m[1].length, after = tn.splitText(start), rest = after.splitText(m[2].length);
+        var tipId = u.newId("gl");
+        var btn = h("button", { type: "button", class: "gterm", "aria-expanded": "false", "aria-controls": tipId }, after.nodeValue);
+        var tip = h("span", { class: "gtip", id: tipId, role: "note", hidden: true }, h("b", null, g[0] + ": "), g[1]);
+        btn.addEventListener("click", function () { var open = tip.hidden; u.$$(".gtip").forEach(function (x) { x.hidden = true; }); u.$$(".gterm").forEach(function (x) { x.setAttribute("aria-expanded", "false"); }); tip.hidden = !open; btn.setAttribute("aria-expanded", String(open)); });
+        btn.addEventListener("keydown", function (ev) { if (ev.key === "Escape") { tip.hidden = true; btn.setAttribute("aria-expanded", "false"); } });
+        var wrap = h("span", { class: "gwrap" }, btn, tip);
+        after.parentNode.replaceChild(wrap, after);
+        tn = rest;
+        return true;
+      });
+    });
+    return root;
+  }
+  app.glossify = glossify;
+
   function renderIntro(mnt, m) {
-    mnt.appendChild(h("div", { class: "crumbs" }, "Módulo " + m.number + " de 16"));
-    var C = IATU.data.curso, firstImg = null;
-    m.lessons.some(function (l) { return l.screens.some(function (s) { return (s.image_ids || []).some(function (id) { if (C.images[id] && C.images[id].file) { firstImg = C.images[id]; return true; } return false; }); }); });
-    var banner = h("header", { class: "mod-banner" + (firstImg ? "" : " noimg") },
-      firstImg ? h("img", { src: BASE + firstImg.file, alt: "", srcset: firstImg.sm ? BASE + firstImg.sm + " 720w, " + BASE + firstImg.file + " 1440w" : null, sizes: "(max-width: 900px) 100vw, 980px" }) : null,
-      h("div", { class: "mod-banner-in" }, h("span", { class: "mod-num", "aria-hidden": "true" }, ("0" + m.number).slice(-2)),
-        h("div", null, h("span", { class: "kicker" }, "Módulo " + m.number + " · objetivo " + m.objective_id), h("h1", null, m.title))));
-    mnt.appendChild(banner);
-    mnt.appendChild(M.audioPlayer(m.intro_audio, { label: "Introducción · voz sintética" }));
+    var im = secImage(m.sco);
+    mnt.appendChild(h("header", { class: "mod-hero" },
+      im ? h("img", { class: "bg", src: BASE + im.file, alt: "", srcset: im.sm ? BASE + im.sm + " 720w, " + BASE + im.file + " 1440w" : null, sizes: "(max-width: 900px) 100vw, 1000px" }) : null,
+      h("div", { class: "mod-hero-in" }, h("span", { class: "bignum", "aria-hidden": "true" }, ("0" + m.number).slice(-2)),
+        h("div", null, h("span", { class: "eyebrow" }, h("span", { class: "live" }), "Módulo " + m.number + " de 16 · " + (m.minutes / 60) + " h"),
+          h("h1", null, m.title), h("p", null, m.objective)))));
+    mnt.appendChild(journey(m));
+    mnt.appendChild(M.audioPlayer(m.intro_audio, { label: "Introducción" }));
     mnt.appendChild(h("p", { class: "lead reading" }, m.introduction));
-    mnt.appendChild(h("div", { class: "callout reading" }, h("h3", null, icon("bandera"), " Al terminar podrás"), h("p", null, m.objective)));
+    mnt.appendChild(keyIdeas(m.lessons.map(function (l) { return "Lección " + l.number + " · " + l.objective; }), "Lo que vas a poder hacer"));
     var tc = m.time_components;
     mnt.appendChild(h("div", { class: "stats" },
       [[tc.lecciones_y_micropractica + " min", "4 lecciones y prácticas"], [tc.taller_guiado + " min", "taller guiado"], [tc.taller_independiente + " min", "taller de transferencia"], [tc.revision_y_reintento + " min", "revisión y reintento" + (m.cases.length ? " (incluye el caso)" : "")]]
-        .map(function (s) { return h("div", { class: "stat" }, h("b", null, s[0]), h("span", null, s[1])); })));
-    mnt.appendChild(h("h2", null, "Recorrido"));
-    var ol = h("ol", { class: "req-list" });
-    m.lessons.forEach(function (l) {
-      ol.appendChild(h("li", null, h("a", { href: "#/" + m.sco + "/" + l.screens[0].id }, icon("fuente"), h("span", null, h("b", null, "Lección " + l.number + ". "), l.title), h("span", { class: "note", style: { marginLeft: "auto" } }, l.minutes + " min"))));
-    });
-    m.workshops.forEach(function (w) {
-      ol.appendChild(h("li", null, h("a", { href: "#/" + m.sco + "/taller/" + w.id }, icon("archivo"), h("span", null, h("b", null, (/T1$/.test(w.id) ? "Taller guiado. " : "Taller de transferencia. ")), w.title), h("span", { class: "note", style: { marginLeft: "auto" } }, w.minutes + " min"))));
-    });
-    m.cases.forEach(function (c) {
-      ol.appendChild(h("li", null, h("a", { href: "#/" + m.sco + "/caso/" + c.id }, icon("ramas"), h("span", null, h("b", null, "Caso. "), c.title), h("span", { class: "note", style: { marginLeft: "auto" } }, c.minutes + " min"))));
-    });
-    mnt.appendChild(ol);
-    mnt.appendChild(h("div", { class: "btn-row" }, h("a", { class: "btn btn-primary", href: "#/" + m.sco + "/" + m.lessons[0].screens[0].id }, "Comenzar la lección 1", icon("siguiente"))));
+        .map(function (x) { return h("div", { class: "stat" }, h("b", null, x[0]), h("span", null, x[1])); })));
+    var p = progressOf(m.sco), next = requirements(m.sco).filter(function (q) { return !q.done; })[0];
+    mnt.appendChild(h("div", { class: "btn-row" },
+      h("a", { class: "btn btn-primary", href: "#/" + (p.done && next ? next.r : m.sco + "/" + m.lessons[0].screens[0].id) }, icon(p.done ? "jugar" : "cohete"), p.complete ? "Repasar el módulo" : p.done ? "Seguir con lo pendiente" : "Comenzar la lección 1"),
+      h("a", { class: "btn", href: "#/" + m.sco + "/cierre" }, icon("lista"), "Ver requisitos")));
   }
 
   function renderClosure(mnt, m) {
     mnt.appendChild(h("div", { class: "crumbs" }, "Módulo " + m.number + " · cierre"));
+    mnt.appendChild(journey(m, "cierre"));
     mnt.appendChild(h("span", { class: "kicker" }, "Cierre del módulo"));
     mnt.appendChild(h("h1", null, m.title));
     mnt.appendChild(M.audioPlayer(m.closure_audio, { label: "Cierre · voz sintética" }));
@@ -596,7 +841,7 @@
       function fill() {
         u.clear(dl2);
         var s = q.value.trim().toLowerCase();
-        C.glossary.forEach(function (g) { if (!s || (g[0] + g[1]).toLowerCase().indexOf(s) >= 0) { dl2.appendChild(h("dt", null, g[0])); dl2.appendChild(h("dd", null, g[1])); } });
+        glossary().forEach(function (g) { if (!s || (g[0] + g[1]).toLowerCase().indexOf(s) >= 0) { dl2.appendChild(h("dt", null, g[0])); dl2.appendChild(h("dd", null, g[1])); } });
       }
       q.addEventListener("input", fill); fill();
       mnt.appendChild(h("div", { style: { maxWidth: "420px" } }, q)); mnt.appendChild(dl2);
@@ -674,16 +919,19 @@
     var drawerBtn = h("button", { class: "btn btn-icon btn-ghost", id: "drawer-btn", type: "button", "aria-label": "Mapa del curso", "aria-controls": "drawer", "aria-expanded": "false" }, icon("menu"));
     drawerBtn.addEventListener("click", function () { if (drawer.hidden) openDrawer(); else { drawer.hidden = true; document.body.classList.remove("with-drawer"); drawerBtn.setAttribute("aria-expanded", "false"); var bd = u.$("#drawer-backdrop"); if (bd) bd.remove(); } });
     savePill = h("span", { class: "save-pill", role: "status", "aria-live": "polite" }, h("span", { class: "dot" }), h("span", { class: "lbl" }, ""));
-    topbarMeter = h("div", { class: "progress-meter", role: "img", "aria-label": "Avance" }, h("span", { class: "lbl" }, ""), h("span", { class: "bar" }, h("i", { style: { width: "0%" } })));
+    courseLine = h("div", { class: "course-line", role: "img", "aria-label": "Avance del programa" }, h("i"));
+    pctChip = h("span", { class: "chip pct" }, icon("red"), h("b", null, "0 %"));
+    timeChip = h("span", { class: "chip time", title: "Tiempo activo en el curso (se cuenta solo con la pestaña visible y actividad reciente)" }, icon("cronometro"), h("span", { class: "t-long" }, "Llevas "), h("b", null, "0 min"));
     var brand = h("a", { class: "brand", href: PREVIEW ? "#/" : "#/" + firstRoute(SCO_LOCK) },
-      h("span", { class: "brand-mark", html: '<svg viewBox="0 0 34 34" aria-hidden="true"><rect x="2" y="2" width="30" height="30" rx="8" fill="#17202b"/><path d="M10 11h10l4 4v9a1 1 0 0 1-1 1H10a1 1 0 0 1-1-1V12a1 1 0 0 1 1-1z" fill="#f5efe3"/><path d="M20 11v4h4" fill="none" stroke="#17202b" stroke-width="1.4"/><circle cx="21" cy="21" r="3.6" fill="none" stroke="#17625e" stroke-width="2"/><path d="M23.6 23.6l2.6 2.6" stroke="#17625e" stroke-width="2" stroke-linecap="round"/></svg>' }),
+      h("span", { class: "brand-mark", html: '<svg viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="bm" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c3aed"/><stop offset="1" stop-color="#d946ef"/></linearGradient></defs><rect x="2" y="2" width="30" height="30" rx="9" fill="url(#bm)"/><circle cx="11" cy="12" r="2.6" fill="#fff"/><circle cx="23" cy="11" r="2.2" fill="#fff" opacity=".85"/><circle cx="17" cy="22" r="3" fill="#fff"/><circle cx="26" cy="23" r="1.8" fill="#fcd34d"/><path d="M11 12L17 22L23 11M17 22L26 23" stroke="#fff" stroke-width="1.4" opacity=".75" fill="none"/></svg>' }),
       h("span", { class: "brand-txt" }, h("b", null, "IA para trabajar mejor"), h("small", null, "Dibork Learning · Curso 5")));
-    var top = h("header", { class: "topbar" }, drawerBtn, brand, h("span", { class: "spacer" }), topbarMeter, savePill,
-      h("a", { class: "btn btn-icon btn-ghost", href: "#/biblioteca", "aria-label": "Biblioteca" }, icon("biblioteca")));
+    var top = h("header", { class: "topbar" }, drawerBtn, brand, h("span", { class: "spacer" }), timeChip, pctChip, savePill, M.musicButton(),
+      h("a", { class: "btn btn-icon btn-ghost", href: "#/biblioteca", "aria-label": "Biblioteca" }, icon("biblioteca")), courseLine);
     drawer = h("aside", { class: "drawer", id: "drawer", hidden: true, "aria-label": "Navegación" });
     main = h("main", { class: "main", id: "contenido", tabindex: "-1" });
     pager = h("nav", { class: "pager", "aria-label": "Navegación entre pantallas", hidden: true });
     var layout = h("div", { class: "layout" }, drawer, main);
+    document.body.appendChild(h("div", { class: "aurora", "aria-hidden": "true" }));
     document.body.appendChild(skip);
     document.body.appendChild(top);
     if (CFG.banner) document.body.appendChild(h("div", { class: "banner" }, CFG.banner));
@@ -701,9 +949,16 @@
     applyPrefs();
     var C = IATU.data.curso;
     if (!C) { document.body.textContent = "No se pudieron cargar los datos del curso."; return; }
-    store.init(SCO_LOCK || "orientacion", C.scos);
+    store.init("orientacion", C.scos);
     buildShell();
+    updateTopbar();
+    fx.clock(store, function () { updateTopbar(); store.saveSoon(); });
     window.addEventListener("hashchange", route);
+    // Un enlace a la misma ruta (por ejemplo «usar mi segundo intento» desde el resultado) vuelve a dibujar la pantalla.
+    document.addEventListener("click", function (ev) {
+      var a = ev.target.closest && ev.target.closest('a[href^="#/"]');
+      if (a && a.getAttribute("href") === location.hash && !ev.defaultPrevented) { ev.preventDefault(); route(); }
+    });
     route();
   }
   IATU.app = app;

@@ -1,9 +1,9 @@
-/* Configuración de integración del Curso 5 (la edita el responsable de Dibork Learning; no contiene secretos).
-   servicio.url: URL base del servicio autorizado de corrección/evidencias. Vacío = evaluación formal bloqueada.
-   servicio.token(learnerId): función que devuelve el token firmado que emite el LMS para el participante.
-   El token NUNCA debe derivarse solo del learner_id del cliente en producción (ver docs/INTEGRACION_DIBORK.md). */
+/* Configuración del Curso 5 (la edita el responsable de Dibork Learning; no contiene secretos).
+   evaluacion.intentos: intentos de las situaciones aplicadas (forma A, luego B). evaluacion.umbral: nota mínima para aprobar.
+   servicio.url (opcional): servicio externo para respaldar textos largos en SCORM 1.2. Vacío = no se usa. */
 window.IATU_CONFIG = window.IATU_CONFIG || {
   base: "",
+  evaluacion: { intentos: 2, umbral: 80 },
   servicio: { url: "", token: null },
   banner: ""
 };

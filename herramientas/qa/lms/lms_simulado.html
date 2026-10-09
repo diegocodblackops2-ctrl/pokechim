@@ -5,8 +5,8 @@
 <iframe id="sco" style="width:100vw;height:100vh;border:0"></iframe>
 <script>
 /* Simula el entorno de ejecución SCORM del LMS para pruebas automatizadas: NO es Dibork Learning.
-   ?ed=2004|12 &sco=m01 &estado=<json cmi guardado> &obj=<json objetivos> */
-var q = new URLSearchParams(location.search), ed = q.get("ed") || "2004", sco = q.get("sco") || "m01";
+   ?ed=2004|12 &ruta=m01/intro &estado=<json cmi guardado> */
+var q = new URLSearchParams(location.search), ed = q.get("ed") || "2004", ruta = q.get("ruta") || "";
 var settings = { autocommit: false, logLevel: 5 };
 if (ed === "2004") {
   window.API_1484_11 = new Scorm2004API(settings);
@@ -24,5 +24,5 @@ if (ed === "2004") {
   var saved12 = q.get("estado"); if (saved12) window.API.loadFromJSON(JSON.parse(saved12));
   window.API.on("LMSCommit", function () { window.ultimoCommit = window.API.renderCommitCMI(true); });
 }
-document.getElementById("sco").src = "paquete/sco_" + sco + ".html";
+document.getElementById("sco").src = "paquete/index.html" + (ruta ? "#/" + ruta : "");
 </script></body></html>
