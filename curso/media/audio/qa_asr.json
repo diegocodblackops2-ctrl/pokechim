@@ -4,8 +4,13 @@
  "pistas": [
   {
    "id": "IATU-BIENVENIDA",
-   "similitud": 1.0,
-   "diferencias": [],
+   "similitud": 0.973,
+   "diferencias": [
+    {
+     "guion": "detener",
+     "asr": "de tener"
+    }
+   ],
    "negaciones_o_limites_afectados": [],
    "etiquetas_leidas": []
   },
@@ -24,13 +29,6 @@
    "etiquetas_leidas": []
   },
   {
-   "id": "IATU-M01-CIERRE",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
    "id": "IATU-M01-INTRO",
    "similitud": 1.0,
    "diferencias": [],
@@ -39,8 +37,13 @@
   },
   {
    "id": "IATU-M01-L01-P01",
-   "similitud": 1.0,
-   "diferencias": [],
+   "similitud": 0.9895,
+   "diferencias": [
+    {
+     "guion": "toda ia",
+     "asr": "todavia"
+    }
+   ],
    "negaciones_o_limites_afectados": [],
    "etiquetas_leidas": []
   },
@@ -53,141 +56,68 @@
   },
   {
    "id": "IATU-M01-L01-P03",
-   "similitud": 0.992,
+   "similitud": 0.8517,
    "diferencias": [
     {
-     "guion": "ids",
+     "guion": "ce 1",
+     "asr": "c1"
+    },
+    {
+     "guion": "ce 2",
+     "asr": "c2"
+    },
+    {
+     "guion": "ce 3",
+     "asr": "c3"
+    },
+    {
+     "guion": "ce 4",
+     "asr": "c4"
+    },
+    {
+     "guion": "encargo",
+     "asr": "en cargo"
+    },
+    {
+     "guion": "ce 1",
+     "asr": "c1"
+    },
+    {
+     "guion": "ce 4",
+     "asr": "c4"
+    },
+    {
+     "guion": "i des",
      "asr": "ides"
-    }
-   ],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L01-P04",
-   "similitud": 0.9902,
-   "diferencias": [
+    },
     {
-     "guion": "que",
-     "asr": "si"
-    }
-   ],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L02-P01",
-   "similitud": 0.9924,
-   "diferencias": [
+     "guion": "ce 1",
+     "asr": "c1"
+    },
     {
-     "guion": "de",
-     "asr": "del"
-    }
-   ],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L02-P02",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L02-P03",
-   "similitud": 0.9913,
-   "diferencias": [
+     "guion": "ce 4",
+     "asr": "c4"
+    },
     {
-     "guion": "",
-     "asr": "igual a"
-    }
-   ],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L02-P04",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L03-P01",
-   "similitud": 0.9922,
-   "diferencias": [
+     "guion": "ce 2",
+     "asr": "c2"
+    },
     {
-     "guion": "iterar",
-     "asr": "citerar"
-    }
-   ],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L03-P02",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L03-P03",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M01-L03-P04",
-   "similitud": 0.9697,
-   "diferencias": [
+     "guion": "ce 3",
+     "asr": "c3"
+    },
     {
-     "guion": "que",
-     "asr": "quien"
+     "guion": "ce 2",
+     "asr": "c2"
     }
    ],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M02-CIERRE",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M02-INTRO",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M03-CIERRE",
-   "similitud": 1.0,
-   "diferencias": [],
-   "negaciones_o_limites_afectados": [],
-   "etiquetas_leidas": []
-  },
-  {
-   "id": "IATU-M03-INTRO",
-   "similitud": 1.0,
-   "diferencias": [],
    "negaciones_o_limites_afectados": [],
    "etiquetas_leidas": []
   },
   {
    "id": "IATU-RUTAS",
-   "similitud": 0.9762,
-   "diferencias": [
-    {
-     "guion": "tres",
-     "asr": "3"
-    }
-   ],
+   "similitud": 1.0,
+   "diferencias": [],
    "negaciones_o_limites_afectados": [],
    "etiquetas_leidas": []
   }

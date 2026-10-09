@@ -1,49 +1,49 @@
 WEBVTT
 
-00:00:00.120 --> 00:00:05.250
+00:00:00.030 --> 00:00:03.200
 Caso ficticio. El equipo de Litoral Oficina recibe estos comentarios:
 
-00:00:05.780 --> 00:00:08.020
-C1 “No encontré la descarga”;
+00:00:03.970 --> 00:00:05.240
+ce 1 “No encontré la descarga”;
 
-00:00:08.060 --> 00:00:11.150
-C2 “La página cargó lento”;
+00:00:05.890 --> 00:00:07.120
+ce 2 “La página cargó lento”;
 
-00:00:11.360 --> 00:00:13.910
-C3 “La instrucción fue clara”;
+00:00:07.850 --> 00:00:09.100
+ce 3 “La instrucción fue clara”;
 
-00:00:14.140 --> 00:00:16.810
-C4 “No supe dónde descargar”.
+00:00:09.890 --> 00:00:11.110
+ce 4 “No supe dónde descargar”.
 
-00:00:17.220 --> 00:00:21.990
+00:00:11.150 --> 00:00:14.840
 La tarea es preparar una revisión de experiencia, no responder automáticamente.
 
-00:00:22.560 --> 00:00:27.110
-Encargo útil: “Agrupa C1 a C4 por motivo.
+00:00:15.270 --> 00:00:17.930
+Encargo útil: “Agrupa ce 1 a ce 4 por motivo.
 
-00:00:27.320 --> 00:00:33.490
-Conserva los IDs. Separa problemas de navegación, rendimiento y valoración positiva.
+00:00:17.970 --> 00:00:22.570
+Conserva los i des. Separa problemas de navegación, rendimiento y valoración positiva.
 
-00:00:33.660 --> 00:00:37.000
+00:00:22.610 --> 00:00:25.350
 Cuando una categoría no esté respaldada, no la inventes.
 
-00:00:37.040 --> 00:00:40.730
+00:00:25.390 --> 00:00:27.890
 No infieras emociones o características personales”.
 
-00:00:41.180 --> 00:00:44.770
-Referencia: navegación C1 y C4;
+00:00:27.930 --> 00:00:29.820
+Referencia: navegación ce 1 y ce 4;
 
-00:00:44.960 --> 00:00:48.990
-rendimiento C2; valoración positiva C3.
+00:00:30.290 --> 00:00:32.460
+rendimiento ce 2; valoración positiva ce 3.
 
-00:00:49.500 --> 00:00:54.450
+00:00:32.810 --> 00:00:36.550
 No corresponde concluir que la mitad de todos los clientes tiene problemas de navegación:
 
-00:00:54.640 --> 00:00:57.870
+00:00:36.590 --> 00:00:38.970
 solo dos de estos cuatro comentarios hablan del asunto.
 
-00:00:57.920 --> 00:01:01.590
-Tampoco se puede decir que C2 tuvo una mala conexión;
+00:00:39.010 --> 00:00:41.570
+Tampoco se puede decir que ce 2 tuvo una mala conexión;
 
-00:01:01.840 --> 00:01:03.720
+00:00:41.610 --> 00:00:42.650
 la causa no está en el texto.
