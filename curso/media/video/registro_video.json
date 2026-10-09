@@ -1,0 +1,18 @@
+{
+ "videos": {
+  "IATU-VID01": {
+   "archivo": "media/video/iatu-vid01.mp4",
+   "vtt": "media/video/iatu-vid01.es-CL.vtt",
+   "poster": "media/video/iatu-vid01-poster.webp",
+   "duracion_medida_s": 30.7,
+   "bytes": 530078,
+   "sha256": "0d0d5f209af538ed9661210e6b5e9a7b5587bc31bc44835bf7c7c152ce4928d7",
+   "resolucion": "1280x720",
+   "fps": 25,
+   "voz": "es-CL-CatalinaNeural (ver registro_audio.json)",
+   "estado": "muestra_para_aprobacion",
+   "subtitulos": "VTT por frase, tiempos medidos sobre el audio final (Whisper, palabras); texto del guion. Revisar en reproducción.",
+   "licencia_visual": "Composiciones HTML propias del curso; iconografía y tipografía del sistema."
+  }
+ }
+}

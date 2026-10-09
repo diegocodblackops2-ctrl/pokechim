@@ -1,0 +1,13 @@
+No todo lo que parece trabajo está hecho
+
+Escena 1. ¿Archivo o afirmación?
+Narración: Un asistente escribe: ya guardé tu informe. Pero no hay archivo ni ubicación comprobable. La frase no demuestra una acción.
+Visual: Dos paneles: mensaje del asistente y carpeta vacía, ambos ilustrativos.
+
+Escena 2. Existe · abre · corresponde
+Narración: Comprueba que el archivo existe, abre y contiene la versión correcta. Si no puedes hacerlo, informa que solo existe un borrador.
+Visual: Tres comprobaciones numeradas, sin imitar una interfaz real.
+
+Escena 3. Verifica antes de informar
+Narración: La responsabilidad no termina cuando aparece una respuesta convincente. Termina cuando verificas el producto y declaras lo que todavía falta.
+Visual: Registro editable: borrador disponible; guardado no verificado.

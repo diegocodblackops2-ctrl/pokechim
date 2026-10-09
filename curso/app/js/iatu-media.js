@@ -29,7 +29,8 @@
       [0.85, 1, 1.15, 1.3].map(function (r) { return h("option", { value: r, selected: r === 1 }, (r + "").replace(".", ",") + "×"); }));
     var trBtn = h("button", { class: "btn btn-sm btn-ghost", type: "button", "aria-expanded": "false" }, icon("transcripcion"), "Transcripción");
     var trBox = h("div", { class: "transcript", hidden: true });
-    var label = h("span", { class: "label" }, icon("audio"), opts.label || "Narración · voz sintética Catalina (es-CL)");
+    var muestra = /^muestra/.test(rec.status || "");
+    var label = h("span", { class: "label" }, icon("audio"), (opts.label || "Narración · voz sintética Catalina (es-CL)") + (muestra ? " · muestra en revisión" : ""));
     function setIcon(name, lbl) { u.clear(btn); btn.appendChild(icon(name)); btn.setAttribute("aria-label", lbl); }
     btn.addEventListener("click", function () {
       if (!el.src) el.src = BASE + rec.file;

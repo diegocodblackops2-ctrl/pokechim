@@ -1,0 +1,38 @@
+WEBVTT
+
+1
+00:00:00.100 --> 00:00:02.925
+Misma tarea, cuatro usos.
+
+2
+00:00:02.875 --> 00:00:06.125
+Consulta: “¿Qué debería contener una minuta?
+
+3
+00:00:06.125 --> 00:00:13.200
+Colaboración: aportas la transcripción ficticia y corriges el primer borrador hasta separar acuerdos de propuestas.
+
+4
+00:00:13.200 --> 00:00:21.000
+Sistematización: guardas una instrucción, un formato, tres casos de prueba y una pauta para revisar cada minuta.
+
+5
+00:00:21.000 --> 00:00:29.450
+Automatización supervisada: un flujo recibe una transcripción autorizada, crea un borrador y espera aprobación antes de compartirlo.
+
+6
+00:00:29.450 --> 00:00:35.862
+En el último flujo no hay permiso para grabar reuniones, invitar personas ni publicar documentos.
+
+7
+00:00:35.862 --> 00:00:39.412
+Cada capacidad necesitaría autorización propia.
+
+8
+00:00:39.412 --> 00:00:47.737
+Si la transcripción tiene un responsable dudoso, el sistema debe detener ese campo y pedir revisión, no completar un nombre probable.
+
+9
+00:00:47.737 --> 00:00:52.650
+El producto profesional puede ser un borrador útil con una incertidumbre visible.
+

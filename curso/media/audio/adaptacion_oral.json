@@ -1,0 +1,82 @@
+{
+ "IATU-BIENVENIDA": {
+  "texto": "Bienvenido a IA para trabajar mejor. Aquí no se trata de hablarle bonito a una máquina ni de usar todas las herramientas. Vas a aprender a elegir un apoyo, formular un encargo, revisar resultados y conservar el control del trabajo. Habrá tareas en que la mejor decisión será no usar IA o detener una automatización.",
+  "oral": "Bienvenido a IA para trabajar mejor. Aquí no se trata de hablarle bonito a una máquina ni de usar todas las herramientas. Vas a aprender a elegir un apoyo, formular un encargo, revisar resultados y conservar el control del trabajo. Habrá tareas en que la mejor decisión será no usar IA o detener una automatización.",
+  "cambios": [],
+  "script_sha256": "112165e9c8cb1a17d57bdfbac118a980b532a2da005ece82c5e26b7f6eb2a07b"
+ },
+ "IATU-COMO_ESTUDIAR": {
+  "texto": "Lee las explicaciones, contrasta los ejemplos y produce tus propias respuestas antes de abrir las referencias. Puedes avanzar sin audio, volver atrás y pausar. No necesitas pagar una cuenta: cada taller tiene un expediente y salidas controladas. Cuando uses un asistente real, utiliza solo datos ficticios o autorizados y registra lo que efectivamente hiciste.",
+  "oral": "Lee las explicaciones, contrasta los ejemplos y produce tus propias respuestas antes de abrir las referencias. Puedes avanzar sin audio, volver atrás y pausar. No necesitas pagar una cuenta: cada taller tiene un expediente y salidas controladas. Cuando uses un asistente real, utiliza solo datos ficticios o autorizados y registra lo que efectivamente hiciste.",
+  "cambios": [],
+  "script_sha256": "d432f636b835efea105bcdd661ddc2b3d3e9f58b49f6f4e989ee80bff32f314a"
+ },
+ "IATU-RUTAS": {
+  "texto": "Ruta esencial: módulos 1–6, 18 horas. Aplicación profesional: módulos 7–12, 18 horas. Profundización: módulos 13–16, 12 horas. Las 12 horas comunes corresponden a orientación, evaluación, proyecto y transferencia. No son tres certificaciones separadas ni horas adicionales.",
+  "oral": "Ruta esencial: módulos 1 a 6, 18 horas. Aplicación profesional: módulos 7 a 12, 18 horas. Profundización: módulos 13 a 16, 12 horas. Las 12 horas comunes corresponden a orientación, evaluación, proyecto y transferencia. No son tres certificaciones separadas ni horas adicionales.",
+  "cambios": [
+   "rango X–Y → «X a Y» (el guion no se pronunciaba)"
+  ],
+  "script_sha256": "8e42e735ce643b8d2b723bf5a4f8d7b5e522c64ffda621d7235a4a8094d8f598"
+ },
+ "IATU-CIERRE_CURSO": {
+  "texto": "Terminar pantallas no demuestra dominio por sí solo. Conserva tus productos y las correcciones: esa es la evidencia que te permite explicar qué aprendiste. La aprobación se determina según evaluación y revisión real, no por escuchar todas las narraciones.",
+  "oral": "Terminar pantallas no demuestra dominio por sí solo. Conserva tus productos y las correcciones: esa es la evidencia que te permite explicar qué aprendiste. La aprobación se determina según evaluación y revisión real, no por escuchar todas las narraciones.",
+  "cambios": [],
+  "script_sha256": "9dffcb6f13e83d6fe2b9cfea440c11ccd95a6c542229cb4d52d3003bfb03e441"
+ },
+ "IATU-M01-INTRO": {
+  "texto": "No necesitas aprender una lista de marcas de memoria. Necesitas comprender qué estás usando, qué información recibe y quién controla el resultado. Empezaremos con tareas pequeñas y criterios que seguirán sirviendo aunque cambie una interfaz.",
+  "oral": "No necesitas aprender una lista de marcas de memoria. Necesitas comprender qué estás usando, qué información recibe y quién controla el resultado. Empezaremos con tareas pequeñas y criterios que seguirán sirviendo aunque cambie una interfaz.",
+  "cambios": [],
+  "script_sha256": "75fe70ba5f618c2bb079ad96df0da6718ea93971cee231f2e0d97eed6633dfa0"
+ },
+ "IATU-M01-CIERRE": {
+  "texto": "Una tarea adecuada no es necesariamente la más fácil: es aquella cuyo insumo puedes usar, cuyo resultado puedes comprobar y cuyas consecuencias puedes controlar.",
+  "oral": "Una tarea adecuada no es necesariamente la más fácil: es aquella cuyo insumo puedes usar, cuyo resultado puedes comprobar y cuyas consecuencias puedes controlar.",
+  "cambios": [],
+  "script_sha256": "058acb0abad745170672833273e5dc7f886eb853b76d5b666df93d01b9346eee"
+ },
+ "IATU-M01-L03-P01": {
+  "texto": "En este curso usaremos cuatro niveles de uso: consultar, colaborar, sistematizar y automatizar con supervisión. Es un mapa editorial de trabajo, no una escala científica validada ni un ranking de personas. No coincide con los niveles del marco UNESCO. Puedes usar los cuatro en un mismo día y decidir que una tarea nunca debe automatizarse.\nConsultar es pedir una explicación o un primer apoyo. Colaborar es iterar con un objetivo, aportar contexto y revisar productos. Sistematizar es convertir una buena forma de trabajo en un procedimiento reutilizable con entradas, fuentes, criterios y pruebas. Automatizar con supervisión es ejecutar partes de ese procedimiento mediante herramientas, con límites, autorizaciones y respuesta ante fallos. El cambio importante no es la cantidad de prompts, sino el alcance de la responsabilidad y los controles.",
+  "oral": "En este curso usaremos cuatro niveles de uso: consultar, colaborar, sistematizar y automatizar con supervisión. Es un mapa editorial de trabajo, no una escala científica validada ni un ranking de personas. No coincide con los niveles del marco UNESCO. Puedes usar los cuatro en un mismo día y decidir que una tarea nunca debe automatizarse.\nConsultar es pedir una explicación o un primer apoyo. Colaborar es iterar con un objetivo, aportar contexto y revisar productos. Sistematizar es convertir una buena forma de trabajo en un procedimiento reutilizable con entradas, fuentes, criterios y pruebas. Automatizar con supervisión es ejecutar partes de ese procedimiento mediante herramientas, con límites, autorizaciones y respuesta ante fallos. El cambio importante no es la cantidad de prompts, sino el alcance de la responsabilidad y los controles.",
+  "cambios": [],
+  "script_sha256": "65c39438ca9e07920c9168a628af07520845be0db0efcc5e7cbb51f05389f456"
+ },
+ "IATU-M01-L03-P02": {
+  "texto": "Para ubicar una tarea, observa el comportamiento real. Una plantilla guardada sigue siendo consulta si nunca se comprueba ni se adapta. Un asistente con nombre propio puede ser sistematización si tiene fuentes vigentes y casos de prueba; no se vuelve un agente autónomo por tener un logo.\nAntes de pasar al siguiente nivel, pregunta qué problema resuelve el cambio. Para colaborar necesitas criterio de aceptación. Para sistematizar necesitas versiones y pruebas. Para automatizar necesitas además permisos mínimos, registro y un camino de detención. Volver a una operación manual es una respuesta válida cuando el riesgo o la variabilidad hacen costosa la automatización. Estos requisitos son decisiones de diseño del programa, apoyadas en el enfoque de riesgos, no una obligación de automatizar toda tarea.",
+  "oral": "Para ubicar una tarea, observa el comportamiento real. Una plantilla guardada sigue siendo consulta si nunca se comprueba ni se adapta. Un asistente con nombre propio puede ser sistematización si tiene fuentes vigentes y casos de prueba; no se vuelve un agente autónomo por tener un logo.\nAntes de pasar al siguiente nivel, pregunta qué problema resuelve el cambio. Para colaborar necesitas criterio de aceptación. Para sistematizar necesitas versiones y pruebas. Para automatizar necesitas además permisos mínimos, registro y un camino de detención. Volver a una operación manual es una respuesta válida cuando el riesgo o la variabilidad hacen costosa la automatización. Estos requisitos son decisiones de diseño del programa, apoyadas en el enfoque de riesgos, no una obligación de automatizar toda tarea.",
+  "cambios": [],
+  "script_sha256": "dd8de6c931535f4df3adad2867f78a0f3ae568dce2f9118a5ad5eca62b8e6329"
+ },
+ "IATU-M01-L03-P03": {
+  "texto": "Misma tarea, cuatro usos. Consulta: “¿Qué debería contener una minuta?”. Colaboración: aportas la transcripción ficticia y corriges el primer borrador hasta separar acuerdos de propuestas. Sistematización: guardas una instrucción, un formato, tres casos de prueba y una pauta para revisar cada minuta. Automatización supervisada: un flujo recibe una transcripción autorizada, crea un borrador y espera aprobación antes de compartirlo.\nEn el último flujo no hay permiso para grabar reuniones, invitar personas ni publicar documentos. Cada capacidad necesitaría autorización propia. Si la transcripción tiene un responsable dudoso, el sistema debe detener ese campo y pedir revisión, no completar un nombre probable. El producto profesional puede ser un borrador útil con una incertidumbre visible.",
+  "oral": "Misma tarea, cuatro usos. Consulta: “¿Qué debería contener una minuta?”. Colaboración: aportas la transcripción ficticia y corriges el primer borrador hasta separar acuerdos de propuestas. Sistematización: guardas una instrucción, un formato, tres casos de prueba y una pauta para revisar cada minuta. Automatización supervisada: un flujo recibe una transcripción autorizada, crea un borrador y espera aprobación antes de compartirlo.\nEn el último flujo no hay permiso para grabar reuniones, invitar personas ni publicar documentos. Cada capacidad necesitaría autorización propia. Si la transcripción tiene un responsable dudoso, el sistema debe detener ese campo y pedir revisión, no completar un nombre probable. El producto profesional puede ser un borrador útil con una incertidumbre visible.",
+  "cambios": [],
+  "script_sha256": "723173d9470f6efce30811e6c2cf3c60fd2e4c3d18e6172b85f948edd4bd6bb7"
+ },
+ "IATU-M01-L03-P04": {
+  "texto": "Un equipo guarda el mismo prompt y lo ejecuta manualmente cada viernes. Tiene entradas definidas, control de versiones y pruebas; cada entrega la revisa una persona. ¿En qué nivel está el procedimiento principal?",
+  "oral": "Un equipo guarda el mismo prompt y lo ejecuta manualmente cada viernes. Tiene entradas definidas, control de versiones y pruebas; cada entrega la revisa una persona. ¿En qué nivel está el procedimiento principal?",
+  "cambios": [],
+  "script_sha256": "fd121b208c7b1c75768c738e86e3eafa87c758abbcce03c01fab2e907750ca86"
+ },
+ "IATU-VID01-S01": {
+  "texto": "Un asistente escribe: ya guardé tu informe. Pero no hay archivo ni ubicación comprobable. La frase no demuestra una acción.",
+  "oral": "Un asistente escribe: ya guardé tu informe. Pero no hay archivo ni ubicación comprobable. La frase no demuestra una acción.",
+  "cambios": [],
+  "script_sha256": "ad6fd04f3ff47974e665490c0fe57d92a888b8ebc8c348594effd196867b0255"
+ },
+ "IATU-VID01-S02": {
+  "texto": "Comprueba que el archivo existe, abre y contiene la versión correcta. Si no puedes hacerlo, informa que solo existe un borrador.",
+  "oral": "Comprueba que el archivo existe, abre y contiene la versión correcta. Si no puedes hacerlo, informa que solo existe un borrador.",
+  "cambios": [],
+  "script_sha256": "958237db2330285d175f7422abd94b216e71d9f4fae4710d6dc3521ec962db9e"
+ },
+ "IATU-VID01-S03": {
+  "texto": "La responsabilidad no termina cuando aparece una respuesta convincente. Termina cuando verificas el producto y declaras lo que todavía falta.",
+  "oral": "La responsabilidad no termina cuando aparece una respuesta convincente. Termina cuando verificas el producto y declaras lo que todavía falta.",
+  "cambios": [],
+  "script_sha256": "8874281ee678bdceab0b0ad634a7c5bd2e9ee13f177ff71a6d2b3e2e77745af0"
+ }
+}

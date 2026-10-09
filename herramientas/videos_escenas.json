@@ -1,0 +1,68 @@
+{
+  "nota": "Composiciones visuales de los 12 microvideos (36 escenas). Cada una traduce la columna «Visual/acción» del guion v3 a bloques HTML con la identidad del curso. No agregan hechos: usan solo datos de la narración. Interfaces siempre rotuladas como ilustrativas. Paso 1 se muestra primero; paso 2 completa la escena.",
+  "escenas": {
+    "IATU-VID01-S01": {"tipo": "paneles", "ilustrativo": true, "items": [
+      {"t": "Mensaje del asistente", "lineas": ["«Ya guardé tu informe.»"], "sello": "Afirmación", "tono": "pend"},
+      {"t": "Carpeta del proyecto", "lineas": ["Sin archivo", "Sin ubicación comprobable"], "sello": "Vacía", "tono": "no", "paso": 2}]},
+    "IATU-VID01-S02": {"tipo": "lista", "items": [
+      {"t": "Existe", "d": "El archivo está en una ubicación que puedes abrir."},
+      {"t": "Abre", "d": "Se abre sin errores.", "paso": 2},
+      {"t": "Corresponde", "d": "Contiene la versión correcta.", "paso": 2}],
+      "pie": "Si no puedes comprobarlo: informa que solo existe un borrador."},
+    "IATU-VID01-S03": {"tipo": "registro", "ilustrativo": true, "filas": [
+      ["Borrador", "Disponible", "ok"], ["Guardado", "No verificado", "pend", 2], ["Pendiente declarado", "Sí", "ok", 2]]},
+
+    "IATU-VID02-S01": {"tipo": "comparar", "izq": {"t": "Frase vaga", "lineas": ["«Hazlo mejor»"]},
+      "der": {"t": "Ficha del encargo", "lineas": ["Producto", "Destinatario", "Fuentes", "Restricciones", "Criterios", "Nueva versión: solo después"]}},
+    "IATU-VID02-S02": {"tipo": "destacar", "texto": "La fuente confirma una {actualización de estado}, no una {entrega}.",
+      "etiquetas": ["Confirmado", "No confirmado"], "pie": "Ese límite debe permanecer en el correo."},
+    "IATU-VID02-S03": {"tipo": "comparar", "izq": {"t": "Antes", "lineas": ["«…llegará mañana.»"], "tono": "no"},
+      "der": {"t": "Después", "lineas": ["«Te informaremos el estado; la entrega aún no está confirmada.»"], "tono": "ok"},
+      "pie": "Una corrección por vez, con criterio."},
+
+    "IATU-VID03-S01": {"tipo": "registro", "filas": [["Cuenta y funciones", "Identificadas", "ok"], ["Aviso público", "Permitido", "ok", 2], ["Lista privada de participantes", "Excluida", "no", 2]]},
+    "IATU-VID03-S02": {"tipo": "flujo", "pasos": ["Copia mínima", "Encargo", "Borrador", "Comprobación"], "pie": "Si pediste un archivo: revisa el adjunto y su contenido. Cargar un archivo no equivale a tener permiso."},
+    "IATU-VID03-S03": {"tipo": "registro", "ilustrativo": true, "filas": [["Fecha", "Registrada", "ok"], ["Cuenta", "Registrada", "ok"], ["Función usada", "Ejecutada o simulada", "pend", 2], ["Producto", "Comprobado", "ok", 2]], "pie": "La interfaz cambia: vuelve a consultar la documentación."},
+
+    "IATU-VID04-S01": {"tipo": "paneles", "items": [
+      {"t": "Nexo · versión anterior", "lineas": ["Duración: 45 minutos"], "sello": "Reemplazado", "tono": "no"},
+      {"t": "Nexo · actualización", "lineas": ["Duración: 50 minutos"], "sello": "Vigente", "tono": "ok", "paso": 2}]},
+    "IATU-VID04-S02": {"tipo": "paneles", "items": [
+      {"t": "Transcripción", "lineas": ["Autorizada"], "sello": "Permiso", "tono": "ok"},
+      {"t": "Grabación", "lineas": ["Requiere su propia autorización"], "sello": "No incluida", "tono": "no", "paso": 2}],
+      "pie": "Conserva condiciones y pendientes en el nuevo aviso."},
+    "IATU-VID04-S03": {"tipo": "lista", "items": [{"t": "Abrir", "d": "El archivo editable se abre."}, {"t": "Editar", "d": "Conserva el contenido al cambiarlo.", "paso": 2}, {"t": "Volver a comprobar", "d": "Responde a una prueba de cambio.", "paso": 2}], "pie": "La apariencia no reemplaza esta revisión."},
+
+    "IATU-VID05-S01": {"tipo": "formula", "formula": "32 / 40 = 80 %", "defs": [["32", "confirmaciones"], ["40", "inscripciones"]], "pie": "No sabemos cuántas personas asistieron."},
+    "IATU-VID05-S02": {"tipo": "lista", "items": [{"t": "Fuente", "d": "Trabaja con la versión vigente."}, {"t": "Cuenta", "d": "Registra su alcance.", "paso": 2}, {"t": "Alcance", "d": "Las citas también se comprueban.", "paso": 2}]},
+    "IATU-VID05-S03": {"tipo": "estados", "items": [["Vista previa", "Preparado", "pend"], ["Guardado", "Comprobado al volver a abrir", "ok", 2], ["Función no disponible", "Pendiente", "pend", 2]]},
+
+    "IATU-VID06-S01": {"tipo": "columnas", "ilustrativo": true, "cols": [["Salida X", "Mismo expediente"], ["Salida Y", "Mismos criterios"], ["Salida Z", "Marca oculta"]], "pie": "Salidas ficticias del curso."},
+    "IATU-VID06-S02": {"tipo": "columnas", "ilustrativo": true, "cols": [["Respuesta elegante", "✕ Omite una condición esencial"], ["Respuesta sobria", "✓ Conserva las condiciones"]], "pie": "Primero errores que impiden usarla; después estilo."},
+    "IATU-VID06-S03": {"tipo": "registro", "filas": [["Fecha", "Registrada", "ok"], ["Cuenta y funciones", "Registradas", "ok"], ["Límites de la prueba", "Declarados", "ok", 2], ["¿Siempre mejor?", "Información pendiente", "pend", 2]]},
+
+    "IATU-VID07-S01": {"tipo": "comparar", "izq": {"t": "Resumen", "lineas": ["Afirmación con cita"]}, "der": {"t": "Fuente", "lineas": ["¿Existe?", "¿Sigue vigente?", "¿Conserva sus excepciones?"]}, "pie": "Afirmación ↔ fuente"},
+    "IATU-VID07-S02": {"tipo": "paneles", "items": [{"t": "Encargo autorizado", "lineas": ["Objetivo vigente"], "sello": "Se conserva", "tono": "ok"}, {"t": "Instrucción dentro del material", "lineas": ["Contenido no confiable"], "sello": "No es orden", "tono": "no", "paso": 2}]},
+    "IATU-VID07-S03": {"tipo": "registro", "filas": [["Afirmación", "Corregida", "ok"], ["Evidencia", "Registrada", "ok", 2], ["Límite de la fuente", "Declarado", "pend", 2]]},
+
+    "IATU-VID08-S01": {"tipo": "paneles", "items": [{"t": "Celda con 0", "lineas": ["Dato válido: el valor es cero"], "sello": "Dato", "tono": "ok"}, {"t": "Celda vacía", "lineas": ["El dato no se informó"], "sello": "Faltante", "tono": "pend", "paso": 2}], "pie": "Reemplazar ambos por lo mismo cambia el análisis."},
+    "IATU-VID08-S02": {"tipo": "comparar", "izq": {"t": "Tasa de cierre", "lineas": ["Incluye casos cerrados", "también sin duración"]}, "der": {"t": "Media de duración conocida", "lineas": ["Solo casos con duración informada"]}, "pie": "Poblaciones distintas."},
+    "IATU-VID08-S03": {"tipo": "lista", "items": [{"t": "Tabla original", "d": "Se conserva."}, {"t": "Exclusiones", "d": "Quedan registradas.", "paso": 2}, {"t": "Cifra", "d": "Se puede reconstruir.", "paso": 2}]},
+
+    "IATU-VID09-S01": {"tipo": "registro", "filas": [["Voz candidata", "Catalina", "pend"], ["Proveedor y voz exacta", "Por confirmar", "pend", 2], ["Uso autorizado", "Por confirmar", "pend", 2]], "pie": "El nombre no identifica una licencia."},
+    "IATU-VID09-S02": {"tipo": "lista", "items": [{"t": "Nombres y cifras", "d": "Se oyen sin ambigüedad."}, {"t": "Pausas", "d": "Separan ideas.", "paso": 2}, {"t": "Naturalidad", "d": "Voz sintética, declarada como tal.", "paso": 2}]},
+    "IATU-VID09-S03": {"tipo": "lista", "items": [{"t": "Texto equivalente", "d": "Todo se entiende sin audio."}, {"t": "Subtítulos revisados", "d": "Sincronizados con la voz final.", "paso": 2}, {"t": "Descripción", "d": "Cuando el visual aporta información.", "paso": 2}]},
+
+    "IATU-VID10-S01": {"tipo": "flujo", "pasos": ["Preparación", "Generación (3 min)", "Revisión", "Corrección", "Entrega"], "pie": "Generar no es terminar."},
+    "IATU-VID10-S02": {"tipo": "comparar", "izq": {"t": "Manual", "lineas": ["Producto de calidad equivalente"]}, "der": {"t": "Asistido", "lineas": ["+ revisión y retrabajo", "+ mantenimiento mensual"]}, "pie": "Compara tareas completas."},
+    "IATU-VID10-S03": {"tipo": "decision", "opciones": ["Mantener", "Ajustar", "Detener y volver a lo manual"], "pie": "No inventes productividad para justificar la herramienta."},
+
+    "IATU-VID11-S01": {"tipo": "registro", "filas": [["Texto", "Versión aprobada", "ok"], ["Versión", "Vinculada", "ok", 2], ["Destinatario", "Paula (no todo el equipo)", "pend", 2]]},
+    "IATU-VID11-S02": {"tipo": "flujo", "pasos": ["Cambio", "Aprobación invalidada", "Nueva revisión"], "rama": "¿Ocurrió la acción? Incierto → detenerse y revisar, sin repetir"},
+    "IATU-VID11-S03": {"tipo": "registro", "ilustrativo": true, "filas": [["Prueba de duplicado", "Simulada", "ok"], ["Límites", "Simulados", "ok", 2], ["Detención", "Simulada", "ok", 2]], "pie": "Traza local simulada: no hay servicios conectados."},
+
+    "IATU-VID12-S01": {"tipo": "capas", "items": ["Contenido", "Metadatos", "Permisos", "Contexto"], "pie": "Quitar el nombre no termina la revisión."},
+    "IATU-VID12-S02": {"tipo": "estados", "items": [["Entrenamiento", "Por verificar", "pend"], ["Retención", "Por verificar", "pend"], ["Accesos administrativos", "Por verificar", "pend", 2], ["Servicios externos", "Por verificar", "pend", 2]]},
+    "IATU-VID12-S03": {"tipo": "decision", "opciones": ["Usar el mínimo autorizado", "Consultar", "Abstenerse o usar ejemplo ficticio"], "pie": "La confidencialidad se controla con políticas, no con una instrucción."}
+  }
+}
