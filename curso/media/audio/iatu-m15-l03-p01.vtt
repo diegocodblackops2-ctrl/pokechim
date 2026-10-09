@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:03.790
+Una inyección de instrucciones intenta hacer que el sistema trate contenido no confiable
+
+00:00:03.830 --> 00:00:08.390
+como una orden. Puede aparecer en un documento, página, correo o resultado de una herramienta.
+
+00:00:08.430 --> 00:00:10.530
+El problema no se limita a una frase obvia:
+
+00:00:10.570 --> 00:00:14.530
+el contenido puede pedir cambios de objetivo o acciones que parecen parte del trabajo.
+
+00:00:14.570 --> 00:00:15.830
+La defensa requiere capas:
+
+00:00:15.870 --> 00:00:20.030
+selección de fuentes, separación de instrucciones, permisos mínimos, validación de salidas
+
+00:00:20.070 --> 00:00:24.650
+y aprobación de acciones. Escribir “ignora instrucciones maliciosas” puede ayudar al encargo,
+
+00:00:24.690 --> 00:00:27.490
+pero no garantiza seguridad ni reemplaza controles técnicos.

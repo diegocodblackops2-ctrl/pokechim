@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:04.590
+Crea una tabla de prueba con entrada, condición, resultado esperado, resultado observado,
+
+00:00:04.630 --> 00:00:09.230
+versión y decisión. Separa fallos de recuperación, interpretación, formato y permisos.
+
+00:00:09.270 --> 00:00:12.070
+Cambia una parte del sistema y repite el conjunto afectado.
+
+00:00:12.110 --> 00:00:14.870
+Conserva historial y una forma de volver a la versión anterior.
+
+00:00:14.910 --> 00:00:18.970
+Para publicar, define qué fallos impiden continuar y cuáles admiten corrección menor.
+
+00:00:19.010 --> 00:00:23.010
+Si una función no se pudo probar, registra “pendiente”, no “aprobada por diseño”.
+
+00:00:23.050 --> 00:00:27.410
+Antes de ampliar el público, observa a participantes representativos interpretando consignas
+
+00:00:27.450 --> 00:00:29.810
+y productos, sin inventar resultados del pilotaje.

@@ -44,7 +44,7 @@
     var wrap = h("div", { class: "card", style: { marginTop: "1.2rem" } }, h("h3", { style: { marginTop: 0 } }, icon("reintentar"), " Variante: aplica el criterio"));
     if (t.base_input) {
       wrap.appendChild(u.docView({ tab: "Expediente base del taller", text: t.base_input, compact: true }));
-      if (t.context_note) wrap.appendChild(h("p", { class: "note" }, t.context_note));
+      if (t.context_note) wrap.appendChild(h("p", { class: "note" }, "Este caso viene del taller del módulo: lee el expediente base y después aplica la actualización. No mezcles sus datos con los de la actividad anterior."));
     }
     wrap.appendChild(h("p", null, h("b", null, "Actualización: "), t.input));
     wrap.appendChild(h("p", null, h("b", null, "Tu tarea: "), t.task));
@@ -52,7 +52,7 @@
     var ta = h("textarea", { id: tid, "aria-describedby": tid + "-h" }, rec.tr || "");
     ta.addEventListener("input", function () { store.put("a", act.id, { tr: ta.value }); });
     wrap.appendChild(h("label", { class: "fl", for: tid }, "Tu respuesta a la variante"));
-    wrap.appendChild(h("p", { class: "hint", id: tid + "-h" }, t.evaluation || "Respuesta libre: la comparas con una referencia. No necesitas usar las mismas palabras."));
+    wrap.appendChild(h("p", { class: "hint", id: tid + "-h" }, "Respuesta libre: después la comparas con una referencia. No necesitas usar las mismas palabras."));
     wrap.appendChild(ta);
     var refBox = h("div", { class: "ref", hidden: !rec.trRef }, h("span", { class: "ref-label" }, "Referencia"), t.reference);
     var b = h("button", { class: "btn btn-sm", type: "button" }, icon("ver"), "Comparar con la referencia");
@@ -61,10 +61,8 @@
     wrap.appendChild(refBox);
     return wrap;
   }
-  function microNote(act) {
-    if (!act.source_note) return null;
-    return h("p", { class: "note" }, act.source_note);
-  }
+  // source_note del maestro es una nota de autoría (no se muestra al participante).
+  function microNote() { return null; }
   function recordAttempt(act, response, correct) {
     var rec = store.get("a", act.id) || {};
     var patch = { sub: true, last: response, att: (rec.att || 0) + 1 };

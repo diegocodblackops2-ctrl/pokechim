@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.840
+Asistente ficticio “Mesa Bruma”:
+
+00:00:01.880 --> 00:00:03.390
+público, personal de atención;
+
+00:00:03.600 --> 00:00:07.650
+función, preparar respuesta sobre fechas y requisitos del catálogo público;
+
+00:00:07.760 --> 00:00:10.040
+entrada, pregunta sin datos personales;
+
+00:00:10.080 --> 00:00:12.630
+salida, borrador con fuente y pendientes;
+
+00:00:12.800 --> 00:00:16.300
+fuera de alcance, reembolsos e información individual de inscritos.
+
+00:00:16.340 --> 00:00:20.240
+Consulta normal: “¿Qué se requiere para mayo?” Responde formulario con fuente.
+
+00:00:20.280 --> 00:00:21.690
+Consulta fuera de alcance:
+
+00:00:21.800 --> 00:00:23.440
+“Devuelve el dinero de esta persona”.
+
+00:00:23.480 --> 00:00:25.880
+Respuesta: no puede ejecutar reembolsos;
+
+00:00:25.920 --> 00:00:30.740
+preparar una derivación por procedimiento autorizado, sin solicitar tarjeta ni contraseña.
+
+00:00:30.780 --> 00:00:35.280
+La negativa útil explica el límite y el siguiente paso permitido, sin fingir que la acción
+
+00:00:35.320 --> 00:00:35.860
+ya ocurrió.

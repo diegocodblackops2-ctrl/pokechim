@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:02.360
+Prepara una muestra breve con casos difíciles:
+
+00:00:02.490 --> 00:00:06.770
+“Dibork Learning. El 18 de mayo, a las once de la mañana, revisaremos tres documentos.
+
+00:00:06.810 --> 00:00:08.990
+No compartas contraseñas ni datos de clientes”.
+
+00:00:09.030 --> 00:00:11.750
+Escucha cómo pronuncia marca, fecha, negación y número.
+
+00:00:11.790 --> 00:00:14.950
+Evalúa naturalidad, claridad y ritmo antes de producir un lote.
+
+00:00:14.990 --> 00:00:19.090
+En síntesis de voz, la selección de voz, modelo y ajustes influye en la salida;
+
+00:00:19.130 --> 00:00:21.210
+las opciones no son idénticas entre modelos.
+
+00:00:21.250 --> 00:00:25.190
+Usa pausas y puntuación legibles, y solo etiquetas de control documentadas para el motor
+
+00:00:25.230 --> 00:00:30.170
+elegido. Si no hay voz autorizada, conserva el texto equivalente y deja la producción pendiente,
+
+00:00:30.210 --> 00:00:32.590
+sin simular un archivo de audio inexistente.

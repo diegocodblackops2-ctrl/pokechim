@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:02.900
+Encuesta ficticia: respondieron 12 de 100 personas invitadas.
+
+00:00:03.070 --> 00:00:05.080
+Nueve respuestas valoran positivamente el taller.
+
+00:00:05.150 --> 00:00:09.110
+Salida A: “El 75 % de quienes respondieron lo valoró positivamente”.
+
+00:00:09.150 --> 00:00:12.850
+Salida B: “El 75 % de los 100 participantes quedó satisfecho”.
+
+00:00:12.890 --> 00:00:14.730
+A conserva el alcance:9 de 12.
+
+00:00:14.770 --> 00:00:18.350
+B cambia la población. Otra salida asegura “confianza 99 %”.
+
+00:00:18.390 --> 00:00:21.270
+Ese número no añade observaciones ni corrige el denominador.
+
+00:00:21.310 --> 00:00:25.890
+El registro debe indicar 12 respuestas, 9 positivas y posible sesgo de no respuesta;
+
+00:00:25.930 --> 00:00:27.770
+no una satisfacción poblacional demostrada.

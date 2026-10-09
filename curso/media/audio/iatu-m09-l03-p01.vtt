@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:03.830
+La IA puede ayudar a escribir fórmulas y producir archivos, pero debes abrir el archivo
+
+00:00:03.870 --> 00:00:08.190
+real y probarlo. Una fórmula sintácticamente válida puede usar una columna equivocada.
+
+00:00:08.230 --> 00:00:12.210
+Un archivo que el asistente dice haber creado puede no existir, o contener valores fijos
+
+00:00:12.250 --> 00:00:13.770
+donde se necesitaban fórmulas.
+
+00:00:13.810 --> 00:00:16.550
+En este curso las fórmulas son deliberadamente sencillas.
+
+00:00:16.590 --> 00:00:20.310
+El objetivo es comprobarlas con datos pequeños y variaciones, no aprender programación
+
+00:00:20.350 --> 00:00:22.890
+ni confiar en una cadena de cálculo que nadie puede revisar.

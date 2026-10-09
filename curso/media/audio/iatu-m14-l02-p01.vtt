@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:01.630
+Un disparador inicia un flujo;
+
+00:00:01.670 --> 00:00:03.550
+no autoriza todos los pasos posteriores.
+
+00:00:03.590 --> 00:00:07.330
+Define qué dato entra, de dónde viene, qué herramienta puede leerlo y qué acción puede
+
+00:00:07.370 --> 00:00:11.470
+realizar. El mínimo permiso necesario depende de la tarea, no del prestigio del proveedor.
+
+00:00:11.510 --> 00:00:15.640
+La aprobación humana debe ocurrir antes de la acción de impacto y mostrar información suficiente:
+
+00:00:15.910 --> 00:00:18.330
+destinatario, contenido, datos usados y efecto.
+
+00:00:18.370 --> 00:00:21.870
+Un botón “aprobar” sin esa información puede convertirse en un trámite vacío.

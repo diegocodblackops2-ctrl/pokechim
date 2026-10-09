@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.160
+En la simulación manual usa un índice de documentos con tema, vigencia y permiso.
+
+00:00:04.200 --> 00:00:06.710
+Primero elige qué fragmentos responden a la pregunta.
+
+00:00:06.760 --> 00:00:09.940
+Después redacta usando solo esos fragmentos y conserva la referencia.
+
+00:00:09.980 --> 00:00:13.820
+Si no hay evidencia, devuelve una ausencia informativa, no una respuesta aproximada.
+
+00:00:13.860 --> 00:00:17.380
+Los permisos deben aplicarse antes de entregar material al asistente.
+
+00:00:17.420 --> 00:00:21.760
+Un documento restringido no debería aparecer como contexto para una persona no autorizada.
+
+00:00:21.800 --> 00:00:26.000
+Una instrucción “no reveles secretos” no compensa una recuperación que ya incluyó información
+
+00:00:26.040 --> 00:00:27.040
+fuera de su alcance.

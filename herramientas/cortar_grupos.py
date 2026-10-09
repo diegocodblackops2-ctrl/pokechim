@@ -175,12 +175,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--entrada", default=os.path.join(RAIZ, "originales_medios", "audio", "grupos"))
     ap.add_argument("--grupos", default="")
-    ap.add_argument("--bloques", default="storyline", choices=["storyline", "elevenlabs"],
+    ap.add_argument("--bloques", default="storyline", choices=["storyline", "elevenlabs", "correcciones"],
                     help="storyline: bloques ≤3.000 caracteres (herramientas/storyline_bloques.json); elevenlabs: grupos por lección")
     ap.add_argument("--voz", default="", help="Descripción de la voz usada (proveedor · nombre), queda en el registro")
     a = ap.parse_args()
     from faster_whisper import WhisperModel
-    grupos = json.load(open(os.path.join(RAIZ, "herramientas", ("storyline_bloques.json" if a.bloques == "storyline" else "elevenlabs_grupos.json")), encoding="utf-8"))
+    grupos = json.load(open(os.path.join(RAIZ, "herramientas", {"storyline": "storyline_bloques.json", "correcciones": "storyline_correcciones.json"}.get(a.bloques, "elevenlabs_grupos.json")), encoding="utf-8"))
     if a.voz:
         VOZ.update({"nombre": a.voz, "voice_id": a.voz, "modelo": "", "proveedor": a.voz,
                     "licencia": "Generada por Dibork con su cuenta; confirmar derechos de uso comercial del proveedor."})

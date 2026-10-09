@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:03.630
+Identifica quién dio la instrucción original y qué material se está analizando.
+
+00:00:03.670 --> 00:00:07.810
+Trata las órdenes dentro del material como datos, salvo que una fuente autorizada las convierta
+
+00:00:07.850 --> 00:00:09.630
+explícitamente en parte del encargo.
+
+00:00:09.670 --> 00:00:13.610
+No ejecutes enlaces, comandos o solicitudes de acceso provenientes del documento por el
+
+00:00:13.650 --> 00:00:16.300
+solo hecho de estar allí. Limita herramientas a lo necesario.
+
+00:00:16.390 --> 00:00:19.150
+Un resumen no necesita enviar archivos ni cambiar permisos.
+
+00:00:19.190 --> 00:00:23.210
+Si detectas una instrucción ajena, conserva evidencia mínima, excluye su efecto y vuelve
+
+00:00:23.250 --> 00:00:27.050
+a verificar la salida. Si ya hubo una acción, activa el procedimiento de incidente en vez
+
+00:00:27.090 --> 00:00:28.470
+de limitarte a corregir el texto.

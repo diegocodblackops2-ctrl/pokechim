@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:02.430
+Un flujo determinista sigue reglas explícitas:
+
+00:00:02.470 --> 00:00:07.530
+si ocurre A, ejecuta B. Una automatización puede incluir IA en un paso, por ejemplo redactar
+
+00:00:07.570 --> 00:00:11.490
+un borrador. Un agente puede seleccionar pasos o herramientas dentro de un objetivo y un
+
+00:00:11.530 --> 00:00:14.790
+margen de autonomía. Estas categorías ayudan a decidir controles;
+
+00:00:14.830 --> 00:00:16.930
+no son una garantía de inteligencia o calidad.
+
+00:00:16.970 --> 00:00:20.810
+Cuanto mayor sea la capacidad de actuar, más importante es limitar funciones, permisos
+
+00:00:20.850 --> 00:00:24.890
+y autonomía. Una herramienta que puede enviar mensajes no debe hacerlo solo porque el texto
+
+00:00:24.930 --> 00:00:25.870
+generado lo sugiera.

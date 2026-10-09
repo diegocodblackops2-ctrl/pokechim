@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:04.270
+Un asistente útil necesita un trabajo delimitado y una forma de decir “no tengo información
+
+00:00:04.310 --> 00:00:08.810
+suficiente”. Un asistente “que hace todo” resulta difícil de probar y de supervisar.
+
+00:00:08.850 --> 00:00:12.150
+Diseña primero el contrato de funcionamiento y luego elige la herramienta.
+
+00:00:12.190 --> 00:00:16.550
+El contrato contiene público, tareas admitidas, datos, fuentes, salidas, permisos, límites
+
+00:00:16.590 --> 00:00:18.790
+y escalamiento. No es un contrato legal;
+
+00:00:18.830 --> 00:00:22.530
+es una especificación de trabajo que permite comprobar si el asistente actúa dentro del
+
+00:00:22.570 --> 00:00:22.990
+alcance.

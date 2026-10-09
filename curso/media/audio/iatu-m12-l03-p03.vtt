@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.250
+Ficha ficticia “Minuta verificable ve 1”:
+
+00:00:03.000 --> 00:00:04.940
+entrada, transcripción autorizada;
+
+00:00:04.980 --> 00:00:07.160
+salida, tabla de decisiones y pendientes;
+
+00:00:07.200 --> 00:00:10.580
+instrucción, no asignar responsables o fechas no confirmados;
+
+00:00:10.620 --> 00:00:12.600
+control, cada acción tiene evidencia;
+
+00:00:12.640 --> 00:00:14.930
+prueba normal, responsable explícito;
+
+00:00:14.980 --> 00:00:16.840
+prueba límite, propuesta condicionada;
+
+00:00:16.880 --> 00:00:20.720
+dueño, coordinación; revisión, al cambiar política o herramienta.
+
+00:00:20.760 --> 00:00:25.000
+Una ficha defectuosa solo dice “Actúa como experto y haz una minuta perfecta”.
+
+00:00:25.040 --> 00:00:29.680
+No permite saber con qué datos trabaja, cómo comprobarla ni cuándo dejar una celda pendiente.
+
+00:00:29.720 --> 00:00:32.080
+La nueva versión no borra silenciosamente la anterior:
+
+00:00:32.120 --> 00:00:33.820
+registra cambio y casos repetidos.

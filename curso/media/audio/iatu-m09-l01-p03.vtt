@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.090 --> 00:00:02.900
+Datos ficticios: te 01, cerrado, 12 minutos;
+
+00:00:03.510 --> 00:00:05.920
+te 02, cerrado, 18; te 02, cerrado, 18;
+
+00:00:06.690 --> 00:00:08.140
+te 03, pendiente, duración vacía;
+
+00:00:08.770 --> 00:00:10.590
+te 04, cerrado, 0. Regla del expediente:
+
+00:00:10.630 --> 00:00:13.420
+la fila te 02 repetida es duplicado de exportación;
+
+00:00:13.570 --> 00:00:16.670
+cero en te 04 es válido porque se resolvió sin atención adicional.
+
+00:00:16.710 --> 00:00:19.510
+Tras limpiar quedan cuatro casos, tres cerrados y uno pendiente.
+
+00:00:19.550 --> 00:00:20.530
+Duración media de cerrados:
+
+00:00:20.570 --> 00:00:23.190
+(12 más 18 más 0) dividido por 3 igual a 10 minutos.
+
+00:00:23.230 --> 00:00:27.560
+Si conviertes el vacío en 0 e incluyes todos, obtienes 7,5, pero ya no mides lo solicitado.
+
+00:00:28.130 --> 00:00:29.910
+La exclusión del duplicado se documenta;
+
+00:00:29.950 --> 00:00:33.550
+la de te 03 del promedio se debe a su estado, no a que “moleste” al cálculo.

@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.220
+Pide una tabla con acción, estado del acuerdo, responsable, fecha y evidencia textual breve.
+
+00:00:04.260 --> 00:00:05.820
+Distingue propuesta de decisión.
+
+00:00:05.860 --> 00:00:09.340
+Si el responsable o plazo no está informado, escribe “pendiente de confirmar”.
+
+00:00:09.380 --> 00:00:13.080
+Devuelve la minuta para validación antes de convertirla en tareas o eventos reales.
+
+00:00:13.120 --> 00:00:15.460
+Comprueba el sentido de expresiones condicionales:
+
+00:00:15.500 --> 00:00:18.800
+“si aprueban”, “podríamos”, “yo reviso, pero no esta semana”.
+
+00:00:18.840 --> 00:00:22.240
+Resumir no autoriza eliminar una condición que cambia el compromiso.
+
+00:00:22.280 --> 00:00:26.300
+En una transcripción automática revisa especialmente negaciones, nombres y números contra
+
+00:00:26.340 --> 00:00:28.680
+el audio autorizado o una confirmación humana.

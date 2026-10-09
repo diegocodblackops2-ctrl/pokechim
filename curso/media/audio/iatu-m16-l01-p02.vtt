@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:02.490
+Analiza una demostración con preguntas concretas:
+
+00:00:02.530 --> 00:00:06.750
+qué insumo recibió, cuántos intentos hubo, qué editó una persona, qué herramientas estaban
+
+00:00:06.790 --> 00:00:09.410
+habilitadas, qué costo total tuvo y qué no se probó.
+
+00:00:09.450 --> 00:00:11.590
+No exijas detalles internos inaccesibles;
+
+00:00:11.630 --> 00:00:13.530
+pide evidencias del proceso observable.
+
+00:00:13.570 --> 00:00:16.330
+Reproduce el caso con una variante y un dato faltante.
+
+00:00:16.370 --> 00:00:20.090
+Si el sistema funciona solo con un ejemplo perfectamente preparado, acota su uso.
+
+00:00:20.130 --> 00:00:24.760
+Si un proveedor o un asistente afirma que “todo está listo”, pide archivos, pruebas y resultados,
+
+00:00:24.850 --> 00:00:26.490
+no una nueva afirmación de confianza.

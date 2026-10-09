@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:02.870
+Audio ficticio: “No envíes el mensaje antes de aprobar”.
+
+00:00:02.910 --> 00:00:06.010
+Subtítulo automático: “Envía el mensaje antes de aprobar”.
+
+00:00:06.050 --> 00:00:08.970
+Visual: botón “Enviar” activado antes de revisión.
+
+00:00:09.010 --> 00:00:10.750
+Hay dos errores independientes:
+
+00:00:10.790 --> 00:00:14.250
+el subtítulo invierte el sentido y el visual enseña un flujo incorrecto.
+
+00:00:14.290 --> 00:00:17.030
+Corrección: conservar la negación en audio y subtítulo;
+
+00:00:17.070 --> 00:00:19.850
+mostrar “Borrador” hasta que una persona revise y apruebe.
+
+00:00:19.890 --> 00:00:21.690
+Transcripción: “Primero revisa los datos.
+
+00:00:21.730 --> 00:00:24.850
+Después aprueba. Solo entonces puede enviarse por el canal autorizado”.
+
+00:00:24.890 --> 00:00:27.970
+Una pista de fondo más profesional no resuelve ninguna de esas fallas.

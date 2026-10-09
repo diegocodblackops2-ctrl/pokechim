@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:02.650
+Nota ficticia: “Pedido erre ce 18 embalado.
+
+00:00:02.690 --> 00:00:04.290
+Transporte aún no confirma retiro.
+
+00:00:04.330 --> 00:00:05.830
+Cliente necesita saber estado.
+
+00:00:05.870 --> 00:00:07.810
+Podemos actualizar mañana a las quince horas.
+
+00:00:07.850 --> 00:00:09.010
+No hay descuento aprobado”.
+
+00:00:09.050 --> 00:00:10.730
+Borrador corregido: “Hola, Paula.
+
+00:00:10.770 --> 00:00:12.930
+Tu pedido erre ce 18 ya está embalado.
+
+00:00:12.970 --> 00:00:16.550
+Estamos esperando la confirmación de retiro del transporte, por lo que todavía no podemos
+
+00:00:16.590 --> 00:00:17.970
+indicar una fecha de entrega.
+
+00:00:18.010 --> 00:00:20.630
+Mañana a las quince horas te enviaremos una actualización.
+
+00:00:20.670 --> 00:00:21.990
+Gracias por tu paciencia”.
+
+00:00:22.030 --> 00:00:24.230
+No dice que llegará mañana ni ofrece descuento.
+
+00:00:24.270 --> 00:00:26.410
+La promesa de actualización sí está autorizada.
+
+00:00:26.450 --> 00:00:30.530
+“Mañana” es válido en el ejemplo conversacional, pero un mensaje programado debe usar una
+
+00:00:30.570 --> 00:00:32.950
+fecha concreta confirmada para evitar ambigüedad.

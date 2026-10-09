@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:04.410
+Evento ficticio: ce 17 ve 2 aprobado se envía a las diez horas con dos minutos;
+
+00:00:04.450 --> 00:00:06.210
+la confirmación de pantalla falla.
+
+00:00:06.250 --> 00:00:09.740
+El disparador vuelve a llegar a las diez horas con tres minutos con la misma clave ce 17:ve
+
+00:00:10.430 --> 00:00:14.690
+2:aviso. Si el registro confirma envío, el segundo intento se marca duplicado y no vuelve
+
+00:00:14.730 --> 00:00:19.010
+a enviar. Si no se sabe si el primer envío ocurrió, el estado es “resultado incierto, revisar”.
+
+00:00:19.050 --> 00:00:22.950
+No debe inventarse un éxito ni ejecutar repetidamente hasta ver una respuesta agradable.
+
+00:00:22.990 --> 00:00:27.330
+Una clave nueva para el mismo evento en cada reintento inutiliza la protección contra duplicados.

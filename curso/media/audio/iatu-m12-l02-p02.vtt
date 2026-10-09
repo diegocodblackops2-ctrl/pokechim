@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.600
+Registra por tarea el tiempo del flujo base y del flujo asistido completo, junto con defectos
+
+00:00:04.640 --> 00:00:08.620
+y correcciones. Calcula diferencia absoluta y relativa respecto de la línea base.
+
+00:00:08.660 --> 00:00:10.960
+Si cambia la calidad, no compares solo minutos.
+
+00:00:11.000 --> 00:00:14.420
+Si el nuevo flujo traslada revisión a otra persona, suma ese trabajo.
+
+00:00:14.460 --> 00:00:18.580
+Haz varias repeticiones comparables y registra valores individuales, no solo el mejor.
+
+00:00:18.620 --> 00:00:19.940
+Define un umbral operativo:
+
+00:00:19.980 --> 00:00:24.000
+por ejemplo, continuar el piloto solo si no aparecen errores críticos y la revisión total
+
+00:00:24.040 --> 00:00:27.500
+se reduce. El umbral es una decisión del equipo, no una ley científica.

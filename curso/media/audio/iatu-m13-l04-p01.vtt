@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:02.590
+Una mejora puede romper una función que antes servía.
+
+00:00:02.630 --> 00:00:06.450
+Las pruebas de regresión repiten casos conocidos después de cambiar instrucciones, fuentes
+
+00:00:06.490 --> 00:00:09.990
+o herramientas. Los casos límite exploran condiciones difíciles:
+
+00:00:10.030 --> 00:00:14.170
+datos faltantes, contradicciones, documentos viejos o solicitudes fuera de alcance.
+
+00:00:14.210 --> 00:00:18.210
+No necesitas cientos de pruebas para empezar, pero sí un conjunto que represente el trabajo
+
+00:00:18.250 --> 00:00:21.730
+y sus riesgos. Un único ejemplo exitoso no demuestra robustez.
+
+00:00:21.770 --> 00:00:24.730
+Tampoco una revisión interna equivale a una validación con usuarios.

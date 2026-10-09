@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:02.750
+Asigna una clave única a la acción, no solo al texto.
+
+00:00:02.790 --> 00:00:06.530
+Registra intención, ejecución y resultado con la mínima información necesaria.
+
+00:00:06.570 --> 00:00:09.510
+Antes de reintentar comprueba si la acción ya se realizó.
+
+00:00:09.550 --> 00:00:13.470
+Limita número de intentos y define una salida a revisión cuando no se pueda determinar
+
+00:00:13.510 --> 00:00:17.670
+el estado. En la simulación local, una misma combinación de caso y versión no se procesa
+
+00:00:17.710 --> 00:00:21.970
+dos veces. La prueba debe cubrir duplicado, aprobación ausente, versión cambiada y acción
+
+00:00:22.010 --> 00:00:26.130
+ya ejecutada. No se hacen envíos reales ni se simula que existe una conexión externa.

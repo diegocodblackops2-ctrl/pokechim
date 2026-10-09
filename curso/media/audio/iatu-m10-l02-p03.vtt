@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:03.790
+Primera salida ficticia: tres documentos correctos, pero el espacio para el título está
+
+00:00:03.830 --> 00:00:06.190
+ocupado por una lámpara. Instrucción de mejora:
+
+00:00:06.230 --> 00:00:08.070
+“Conserva los documentos y la iluminación.
+
+00:00:08.110 --> 00:00:11.530
+Retira únicamente la lámpara de la mitad derecha y deja esa zona despejada;
+
+00:00:11.570 --> 00:00:13.270
+no agregues texto”. Segunda salida:
+
+00:00:13.310 --> 00:00:15.910
+elimina la lámpara, pero cambia los documentos por billetes.
+
+00:00:15.950 --> 00:00:17.340
+La edición no es aceptable:
+
+00:00:17.530 --> 00:00:19.230
+cumplió un cambio local y perdió la función global.
+
+00:00:19.270 --> 00:00:22.150
+Se vuelve a la versión anterior o se corrige con una referencia clara.
+
+00:00:22.190 --> 00:00:25.510
+La comprobación requiere mirar el producto completo, no solo la zona modificada.

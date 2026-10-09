@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:02.120
+Dibuja primero el proceso sin tecnología.
+
+00:00:02.190 --> 00:00:05.250
+Identifica entrada, decisión, transformación, revisión y acción.
+
+00:00:05.290 --> 00:00:07.330
+Usa reglas fijas donde sean suficientes.
+
+00:00:07.370 --> 00:00:11.450
+Reserva IA para la parte que necesita interpretación o generación, y coloca validación
+
+00:00:11.490 --> 00:00:14.090
+antes de que su salida se use en una acción externa.
+
+00:00:14.130 --> 00:00:17.170
+En el simulador local del curso no hay modelo ni conexiones:
+
+00:00:17.210 --> 00:00:20.370
+se representa un flujo de borradores para aprender estados y controles.
+
+00:00:20.410 --> 00:00:22.730
+Eso no se declarará un agente de IA desplegado.
+
+00:00:22.770 --> 00:00:27.210
+La transferencia consiste en especificar correctamente el flujo antes de conectarlo a herramientas
+
+00:00:27.250 --> 00:00:27.690
+reales.

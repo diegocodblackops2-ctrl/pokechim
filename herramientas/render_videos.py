@@ -15,43 +15,45 @@ VIDEO = os.path.join(RAIZ, "curso", "media", "video")
 W, H = 1280, 720
 TITULO_S = 2.6
 
+FUENTES = os.path.join(RAIZ, "curso", "app", "fonts")
 CSS = """
-*{box-sizing:border-box}body{margin:0;width:1280px;height:720px;overflow:hidden;background:#f5efe3;color:#17202b;
-font-family:system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
+@font-face{font-family:Sora;src:url(file://@FUENTES@/sora.woff2)}@font-face{font-family:Manrope;src:url(file://@FUENTES@/manrope.woff2)}
+*{box-sizing:border-box}body{margin:0;width:1280px;height:720px;overflow:hidden;background:#f6f2fc;color:#1c1530;
+font-family:Manrope,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
 .f{position:absolute;inset:0;padding:56px 64px;display:grid;grid-template-columns:44% 1fr;gap:48px;align-items:center}
-.k{font:700 15px/1 system-ui;letter-spacing:.14em;text-transform:uppercase;color:#17625e;display:flex;gap:10px;align-items:center}
-.k:before{content:"";width:26px;height:3px;background:#17625e}
-h1{font:600 54px/1.12 'Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;margin:18px 0 0;letter-spacing:-.01em}
-.bar{position:absolute;left:0;bottom:0;height:8px;background:#17625e}
-.foot{position:absolute;left:64px;bottom:28px;font-size:16px;color:#5b6676}
-.il{position:absolute;right:64px;top:30px;font:700 13px/1 system-ui;letter-spacing:.12em;text-transform:uppercase;color:#5b6676;border:2px solid #b9ab92;padding:7px 10px;border-radius:4px}
-.card{background:#fffcf6;border:1px solid #d6cbb6;border-radius:14px;box-shadow:0 2px 6px rgba(23,32,43,.08),0 18px 40px rgba(23,32,43,.10);padding:26px 28px}
+.k{font:700 15px/1 system-ui;letter-spacing:.14em;text-transform:uppercase;color:#7c3aed;display:flex;gap:10px;align-items:center}
+.k:before{content:"";width:26px;height:3px;background:#7c3aed}
+h1{font:600 54px/1.12 'Iowan Old Style','Palatino Linotype',Palatino,Sora,Georgia,serif;margin:18px 0 0;letter-spacing:-.01em}
+.bar{position:absolute;left:0;bottom:0;height:8px;background:#7c3aed}
+.foot{position:absolute;left:64px;bottom:28px;font-size:16px;color:#6b6085}
+.il{position:absolute;right:64px;top:30px;font:700 13px/1 system-ui;letter-spacing:.12em;text-transform:uppercase;color:#6b6085;border:2px solid #cbbdf0;padding:7px 10px;border-radius:4px}
+.card{background:#ffffff;border:1px solid #e2d8f5;border-radius:14px;box-shadow:0 2px 6px rgba(46,16,101,.08),0 18px 40px rgba(46,16,101,.10);padding:26px 28px}
 .st{display:inline-block;font:800 13px/1 system-ui;letter-spacing:.14em;text-transform:uppercase;border:2.5px solid currentColor;border-radius:5px;padding:7px 9px;transform:rotate(-3deg)}
-.ok{color:#17625e}.pend{color:#8a5d0b}.no{color:#9c3426}
-.panels{display:grid;gap:18px}.panel h3{margin:0 0 10px;font:600 26px Georgia,serif}.panel p{margin:4px 0;font-size:24px}
+.ok{color:#7c3aed}.pend{color:#a16207}.no{color:#be123c}
+.panels{display:grid;gap:18px}.panel h3{margin:0 0 10px;font:600 26px Sora,Georgia,serif}.panel p{margin:4px 0;font-size:24px}
 .panel{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:start}
 .list{display:grid;gap:14px;counter-reset:n}.li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:center}
-.li .n{width:52px;height:52px;border-radius:50%;background:#17625e;color:#fff;font:700 24px/52px ui-monospace,monospace;text-align:center}
-.li b{font:600 28px Georgia,serif;display:block}.li span{font-size:21px;color:#3a4555}
-.rec{width:100%;border-collapse:collapse;font-size:23px}.rec td{padding:14px 10px;border-bottom:1px dashed #d6cbb6}.rec td:last-child{text-align:right}
-.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}.cmp .card h3{margin:0 0 10px;font:600 24px Georgia,serif}.cmp p{margin:6px 0;font-size:21px}
-.cmp .vag{border-color:#9c3426;background:#f7e0da}.cmp .good{border-color:#17625e}
-.hl{font:500 34px/1.5 Georgia,serif}.hl mark{background:none;border-bottom:5px solid #17625e;padding:0 2px}.hl mark.b2{border-color:#9c3426}
-.tags{display:flex;gap:14px;margin-top:20px}.tag{font:700 17px system-ui;padding:8px 14px;border-radius:999px;background:#dfeeea;color:#0f4b48}.tag.b2{background:#f7e0da;color:#9c3426}
-.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.fb{background:#fffcf6;border:2px solid #17202b;border-radius:10px;padding:14px 16px;font:600 21px system-ui}
-.ar{font-size:30px;color:#17625e}.rama{margin-top:22px;border-left:5px solid #8a5d0b;padding:10px 16px;font-size:21px;background:#f7ebcf;border-radius:6px}
-.formula{font:700 76px/1.1 Georgia,serif;color:#17625e;margin-bottom:22px}.defs p{font-size:23px;margin:8px 0}
-.cols{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:14px}.cols .card{padding:20px}.cols h3{margin:0 0 10px;font:600 24px Georgia,serif}.cols p{font-size:20px;margin:0}
-.states{display:grid;gap:12px}.state{display:flex;justify-content:space-between;align-items:center;font-size:23px;background:#fffcf6;border:1px solid #d6cbb6;border-radius:10px;padding:14px 18px}
-.dec{display:grid;gap:12px}.opt{font-size:24px;padding:16px 20px;border:2px solid #b9ab92;border-radius:12px;background:#fffcf6;display:flex;gap:14px;align-items:center}
-.opt:before{content:"";width:22px;height:22px;border-radius:50%;border:3px solid #17625e;flex:none}
-.layers{display:grid;gap:0}.layer{font:600 25px system-ui;padding:18px 22px;border:1px solid #d6cbb6;background:#fffcf6;border-radius:10px;margin-top:-6px;box-shadow:0 4px 10px rgba(23,32,43,.08)}
+.li .n{width:52px;height:52px;border-radius:50%;background:#7c3aed;color:#fff;font:700 24px/52px ui-monospace,monospace;text-align:center}
+.li b{font:600 28px Sora,Georgia,serif;display:block}.li span{font-size:21px;color:#3f3558}
+.rec{width:100%;border-collapse:collapse;font-size:23px}.rec td{padding:14px 10px;border-bottom:1px dashed #e2d8f5}.rec td:last-child{text-align:right}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:18px}.cmp .card h3{margin:0 0 10px;font:600 24px Sora,Georgia,serif}.cmp p{margin:6px 0;font-size:21px}
+.cmp .vag{border-color:#be123c;background:#fde2e8}.cmp .good{border-color:#7c3aed}
+.hl{font:500 34px/1.5 Sora,Georgia,serif}.hl mark{background:none;border-bottom:5px solid #7c3aed;padding:0 2px}.hl mark.b2{border-color:#be123c}
+.tags{display:flex;gap:14px;margin-top:20px}.tag{font:700 17px system-ui;padding:8px 14px;border-radius:999px;background:#ede4fd;color:#4c1d95}.tag.b2{background:#fde2e8;color:#be123c}
+.flow{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.fb{background:#ffffff;border:2px solid #1c1530;border-radius:10px;padding:14px 16px;font:600 21px system-ui}
+.ar{font-size:30px;color:#7c3aed}.rama{margin-top:22px;border-left:5px solid #a16207;padding:10px 16px;font-size:21px;background:#fdf3d7;border-radius:6px}
+.formula{font:700 76px/1.1 Sora,Georgia,serif;color:#7c3aed;margin-bottom:22px}.defs p{font-size:23px;margin:8px 0}
+.cols{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:14px}.cols .card{padding:20px}.cols h3{margin:0 0 10px;font:600 24px Sora,Georgia,serif}.cols p{font-size:20px;margin:0}
+.states{display:grid;gap:12px}.state{display:flex;justify-content:space-between;align-items:center;font-size:23px;background:#ffffff;border:1px solid #e2d8f5;border-radius:10px;padding:14px 18px}
+.dec{display:grid;gap:12px}.opt{font-size:24px;padding:16px 20px;border:2px solid #cbbdf0;border-radius:12px;background:#ffffff;display:flex;gap:14px;align-items:center}
+.opt:before{content:"";width:22px;height:22px;border-radius:50%;border:3px solid #7c3aed;flex:none}
+.layers{display:grid;gap:0}.layer{font:600 25px system-ui;padding:18px 22px;border:1px solid #e2d8f5;background:#ffffff;border-radius:10px;margin-top:-6px;box-shadow:0 4px 10px rgba(46,16,101,.08)}
 .layer:nth-child(2){margin-left:22px}.layer:nth-child(3){margin-left:44px}.layer:nth-child(4){margin-left:66px}
-.pie{margin-top:20px;font-size:20px;color:#3a4555;border-left:4px solid #17625e;padding-left:14px}
+.pie{margin-top:20px;font-size:20px;color:#3f3558;border-left:4px solid #7c3aed;padding-left:14px}
 .hide{visibility:hidden}
-.t{position:absolute;inset:0;background:#17202b;color:#f6f1e7;display:flex;flex-direction:column;justify-content:center;padding:0 96px}
-.t h1{color:#fffaf0;font-size:64px;max-width:900px}.t .k{color:#9fd6cf}.t .k:before{background:#9fd6cf}.t p{font-size:22px;color:#cfc6b6;margin-top:26px}
-"""
+.t{position:absolute;inset:0;background:radial-gradient(100% 120% at 100% 0%,#3b1670,#0b0816 70%);color:#f6f1e7;display:flex;flex-direction:column;justify-content:center;padding:0 96px}
+.t h1{color:#fffaf0;font-size:64px;max-width:900px}.t .k{color:#c4b5fd}.t .k:before{background:#c4b5fd}.t p{font-size:22px;color:#d8cdf5;margin-top:26px}
+""".replace("@FUENTES@", FUENTES)
 
 def esc(s): return html.escape(str(s))
 def paso(it, step): return "" if it.get("paso", 1) <= step else " hide"
@@ -198,7 +200,7 @@ def main():
         # Tarjeta de título (silencio breve)
         c0 = os.path.join(tmp, "c0.mp4")
         run(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-t", str(TITULO_S), "-i", os.path.join(tmp, "t.png"), "-f", "lavfi", "-t", str(TITULO_S), "-i", "anullsrc=r=24000:cl=mono",
-             "-vf", "fade=t=in:st=0:d=0.4,format=yuv420p", "-r", "25", "-c:v", "libx264", "-crf", "22", "-preset", "medium", "-c:a", "aac", "-b:a", "96k", "-shortest", c0])
+             "-vf", "fade=t=in:st=0:d=0.4,format=yuv420p", "-r", "25", "-c:v", "libx264", "-crf", "22", "-preset", "medium", "-c:a", "aac", "-b:a", "64k", "-shortest", c0])
         clips.append(c0)
         for i, s in enumerate(v["scenes"], 1):
             au = os.path.join(RAIZ, "curso", reg_a[s["id"]]["archivo"])
@@ -207,7 +209,7 @@ def main():
             ci = os.path.join(tmp, f"c{i}.mp4")
             run(["ffmpeg", "-v", "error", "-y", "-loop", "1", "-t", str(t1 + 0.5), "-i", os.path.join(tmp, f"s{i}_1.png"), "-loop", "1", "-t", str(d - t1 + 0.5), "-i", os.path.join(tmp, f"s{i}_2.png"),
                  "-i", au, "-filter_complex", f"[0][1]xfade=transition=fade:duration=0.5:offset={t1},format=yuv420p,trim=duration={d}[v];[2]adelay=250|250,apad,atrim=duration={d}[a]",
-                 "-map", "[v]", "-map", "[a]", "-r", "25", "-c:v", "libx264", "-crf", "22", "-preset", "medium", "-c:a", "aac", "-b:a", "96k", "-ac", "1", ci])
+                 "-map", "[v]", "-map", "[a]", "-r", "25", "-c:v", "libx264", "-crf", "22", "-preset", "medium", "-c:a", "aac", "-b:a", "64k", "-ac", "1", ci])
             cues += alinear(model, au, s["narration"], t0 + 0.25)
             clips.append(ci); t0 += dur(ci)
         lst = os.path.join(tmp, "l.txt"); open(lst, "w").write("".join(f"file '{c}'\n" for c in clips))
@@ -224,7 +226,7 @@ def main():
         run(["ffmpeg", "-v", "error", "-y", "-i", os.path.join(tmp, "s1_2.png"), "-vf", "scale=960:-1", "-quality", "80", poster])
         reg_v["videos"][vid] = {"archivo": "media/video/" + os.path.basename(out), "vtt": "media/video/" + os.path.basename(vtt), "poster": "media/video/" + os.path.basename(poster),
                                 "duracion_medida_s": round(dur(out), 2), "bytes": os.path.getsize(out), "sha256": sha(out), "resolucion": f"{W}x{H}", "fps": 25,
-                                "voz": "es-CL-CatalinaNeural (ver registro_audio.json)", "estado": a.estado,
+                                "voz": json.load(open(os.path.join(RAIZ, "curso", "media", "audio", "registro_audio.json"), encoding="utf-8"))["voz"].get("nombre", "ver registro_audio.json"), "estado": a.estado,
                                 "subtitulos": "VTT por frase, tiempos medidos sobre el audio final (Whisper, palabras); texto del guion. Revisar en reproducción.",
                                 "licencia_visual": "Composiciones HTML propias del curso; iconografía y tipografía del sistema."}
         print(vid, reg_v["videos"][vid]["duracion_medida_s"], "s", reg_v["videos"][vid]["bytes"] // 1024, "KiB")

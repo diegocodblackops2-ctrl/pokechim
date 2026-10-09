@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:04.140
+Define límites por lote, reintentos, acciones externas y costo autorizado.
+
+00:00:04.180 --> 00:00:08.320
+Establece alertas por fallos repetidos, cambios de comportamiento o exceso de volumen.
+
+00:00:08.360 --> 00:00:12.380
+Incluye un interruptor que impida nuevas acciones, preservando evidencias y estados.
+
+00:00:12.420 --> 00:00:16.340
+Prepara un plan de continuidad manual y un responsable real antes de usar producción.
+
+00:00:16.380 --> 00:00:20.240
+Si el curso no dispone de ese responsable, el ejercicio termina en una especificación y
+
+00:00:20.280 --> 00:00:23.820
+simulación. No se autoriza conexión a datos reales por completar una actividad.

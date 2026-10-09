@@ -32,7 +32,34 @@ def cargar(ruta):
         return json.load(f)
 
 
+# ---------- Corrección de estilo (pedido de Diego, 9-oct-2026: español correcto, cercano y sin calcos del inglés) ----------
+# herramientas/correcciones_estilo.json: lista ordenada de reemplazos literales [de, a] que se aplican a TODO el texto
+# público (lecciones, talleres, casos, examen y proyectos). El maestro v3 no se modifica.
+_ESTILO = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "correcciones_estilo.json"), encoding="utf-8"))["reemplazos"]
+_ESTILO_USO = [0] * len(_ESTILO)
+
+
+_ESTILO_RE = {i: re.compile(r[0]) for i, r in enumerate(_ESTILO) if len(r) > 2 and r[2] == "re"}
+
+
+def estilo(obj):
+    if isinstance(obj, str):
+        for i, r in enumerate(_ESTILO):
+            if i in _ESTILO_RE:
+                nuevo = _ESTILO_RE[i].sub(r[1], obj)
+                if nuevo != obj: obj = nuevo; _ESTILO_USO[i] += 1
+            elif r[0] in obj:
+                obj = obj.replace(r[0], r[1]); _ESTILO_USO[i] += 1
+        return obj
+    if isinstance(obj, list):
+        return [estilo(x) for x in obj]
+    if isinstance(obj, dict):
+        return {k: estilo(v) for k, v in obj.items()}
+    return obj
+
+
 def js_registro(nombre, datos):
+    datos = estilo(datos)
     cuerpo = json.dumps(datos, ensure_ascii=False, separators=(",", ":"))
     return "/* Generado por herramientas/build_publico.py — no editar a mano */\n" \
            "window.IATU_DATA=window.IATU_DATA||{};window.IATU_DATA[%s]=%s;\n" % (json.dumps(nombre), cuerpo)
@@ -57,6 +84,7 @@ def ofuscar(obj, etiqueta):
     """Ofusca (no cifra) un objeto para el paquete SCORM: XOR con un generador congruencial sembrado por la etiqueta.
     Evita que las claves se lean a simple vista en el código; NO es seguridad: cualquiera con el paquete puede revertirlo.
     El cliente lo revierte con IATU.u.desofuscar (misma fórmula, Math.imul)."""
+    obj = estilo(obj)
     data = json.dumps(obj, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
     x = 0x811C9DC5  # FNV-1a 32 bits sobre la etiqueta (ASCII), recortado a 31 bits
     for ch in etiqueta.encode("ascii"):
@@ -344,6 +372,7 @@ def main():
         "imagenes_disponibles": sum(1 for i in imagenes.values() if i["file"]), "imagenes_total": len(imagenes),
         "videos_disponibles": sum(1 for v in videos.values() if v["file"]), "videos_total": len(videos),
         "fuga_privada": "ninguna detectada",
+        "correcciones_estilo": {"total": len(_ESTILO), "sin_uso": [r[0] for r, n in zip(_ESTILO, _ESTILO_USO) if not n]},
         "observaciones": observaciones,
     }, ensure_ascii=False, indent=1))
 

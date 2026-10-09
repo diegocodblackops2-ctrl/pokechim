@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:03.770
+Una automatización necesita límites de operación y una forma de detenerse.
+
+00:00:03.810 --> 00:00:07.290
+Presupuesto, volumen, frecuencia y permisos forman parte del diseño.
+
+00:00:07.330 --> 00:00:11.490
+Un flujo que funciona en tres ejemplos puede fallar al recibir cientos de entradas o una
+
+00:00:11.530 --> 00:00:14.370
+fuente alterada. Monitorear no significa guardar todo.
+
+00:00:14.410 --> 00:00:18.450
+Los registros deben permitir diagnosticar sin copiar contraseñas, documentos completos
+
+00:00:18.490 --> 00:00:22.910
+o datos innecesarios. La reversión tampoco siempre puede deshacer un mensaje ya enviado;
+
+00:00:22.950 --> 00:00:24.110
+por eso la prevención importa.

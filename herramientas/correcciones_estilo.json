@@ -1,0 +1,1139 @@
+{
+ "version": 1,
+ "nota": "Reemplazos literales [de, a] aplicados en orden a todo el texto público del curso (build_publico.estilo). El maestro v3 no se modifica. Cuidado: el orden importa (frases largas antes que palabras sueltas).",
+ "reemplazos": [
+  [
+   "Comprende el criterio",
+   "La idea clave"
+  ],
+  [
+   "Llévalo a un procedimiento",
+   "Cómo se aplica"
+  ],
+  [
+   "Observa una resolución",
+   "Un caso resuelto"
+  ],
+  [
+   "Haz tu propia comprobación",
+   "Ahora te toca"
+  ],
+  [
+   "Tu distribución respeta las categorías y el expediente. Explica una decisión con evidencia antes de revisar la variante.",
+   "¡Bien! Tu distribución calza con las categorías y con el expediente. Antes de pasar a la variante, explica una de tus decisiones con su evidencia."
+  ],
+  [
+   "Revisa las tarjetas señaladas. Cada devolución explica el criterio aplicable; cambia solo lo necesario y vuelve a comprobar.",
+   "Revisa las tarjetas marcadas: cada una te explica por qué. Cambia solo lo necesario y vuelve a comprobar."
+  ],
+  [
+   "Lee el expediente completo. Ubica cada tarjeta en una categoría. Puedes arrastrar o usar “Mover a…”. Confirma tu distribución y revisa qué evidencia respalda cada ubicación.",
+   "Lee todo el expediente y ubica cada tarjeta en una categoría (arrástrala o usa “Mover a…”). Después comprueba y revisa qué evidencia respalda cada ubicación."
+  ],
+  [
+   "Compara cada salida con el expediente. Registra los resultados solicitados y selecciona la salida defendible. No elijas por tono, extensión o marca.",
+   "Compara cada salida con el expediente, anota los resultados que se piden y elige la salida que puedes defender. No te dejes llevar por el tono, el largo o la marca."
+  ],
+  [
+   "Ordena por dependencias del expediente. Arrastra o usa Subir/Bajar. Algunas etapas pueden intercambiarse: se comprueban los requisitos previos, no una lista memorizada.",
+   "Ordena las etapas según lo que cada una necesita antes (arrastra o usa Subir/Bajar). Algunas pueden ir en otro orden: lo que se revisa es que se cumpla lo previo, no una lista memorizada."
+  ],
+  [
+   "Primero decide el resultado de la consulta de estado. Construye solo la ruta que corresponde. Usa arrastre o Subir/Bajar; no ejecutes la rama alternativa.",
+   "Primero decide qué respondió la consulta de estado. Después arma solo la ruta que corresponde (arrastra o usa Subir/Bajar), sin pasos de la otra rama."
+  ],
+  [
+   "Se aceptan redacciones y organizaciones diferentes cuando conservan los hechos, resuelven el encargo y cumplen todos los controles. No se exige coincidencia literal con el modelo.",
+   "Vale otra redacción u otro orden si mantienes los hechos, resuelves el encargo y cumples todos los controles. No tienes que copiar el modelo."
+  ],
+  [
+   "Separa hechos confirmados, información faltante y acciones permitidas antes de escribir.",
+   "Antes de escribir, separa tres cosas: los hechos confirmados, lo que falta y lo que está permitido hacer."
+  ],
+  [
+   "Usa estos controles para contrastar tu primer producto:",
+   "Revisa tu primer producto con estos controles:"
+  ],
+  [
+   "Abre el modelo, señala una diferencia relevante y explica con qué evidencia la corregirás. No copies sin resolver la variante.",
+   "Abre el modelo, busca una diferencia importante con tu producto y explica con qué evidencia la corregirías. No lo copies: primero resuelve la variante."
+  ],
+  [
+   "Guiado: ficha y ejemplo disponibles desde el inicio",
+   "Guiado: con ficha y ejemplo desde el principio"
+  ],
+  [
+   "Transferencia: resolver antes de abrir el modelo",
+   "Transferencia: lo resuelves antes de ver el modelo"
+  ],
+  [
+   "Resolver variante breve y guardar evidencia",
+   "Resolver una variante breve y guardar tu evidencia"
+  ],
+  [
+   "feedback revisado",
+   "devolución revisada"
+  ],
+  [
+   "revisar feedback",
+   "revisar la devolución"
+  ],
+  [
+   "feedback",
+   "devolución"
+  ],
+  [
+   "Feedback",
+   "Devolución"
+  ],
+  [
+   "redacta checklist de carga",
+   "redacta una lista de comprobación antes de cargar"
+  ],
+  [
+   "un checklist",
+   "una lista de comprobación"
+  ],
+  [
+   "el checklist",
+   "la lista de comprobación"
+  ],
+  [
+   "checklists",
+   "listas de comprobación"
+  ],
+  [
+   "checklist",
+   "lista de comprobación"
+  ],
+  [
+   "Checklist",
+   "Lista de comprobación"
+  ],
+  [
+   "el mismo prompt",
+   "el mismo encargo"
+  ],
+  [
+   "guardar un prompt",
+   "guardar un encargo"
+  ],
+  [
+   "la cantidad de prompts",
+   "la cantidad de encargos"
+  ],
+  [
+   "templates",
+   "plantillas"
+  ],
+  [
+   "workflow",
+   "flujo de trabajo"
+  ],
+  [
+   "framework",
+   "marco"
+  ],
+  [
+   "frameworks",
+   "marcos"
+  ],
+  [
+   "tips",
+   "consejos"
+  ],
+  [
+   "desplegar un flujo",
+   "poner en marcha un flujo"
+  ],
+  [
+   "automatización desplegada",
+   "automatización en marcha"
+  ],
+  [
+   "desplegada",
+   "en marcha"
+  ],
+  [
+   "auto-revisión",
+   "autorrevisión"
+  ],
+  [
+   "Es un mapa editorial de trabajo, no una escala científica validada ni un ranking de personas.",
+   "Es una forma práctica de ordenar el trabajo, propia de este curso: no es una escala científica validada ni un ranking de personas."
+  ],
+  [
+   "nuestra pauta de tres rutas es una adaptación editorial para tareas cotidianas",
+   "nuestra pauta de tres rutas es una adaptación propia para tareas cotidianas"
+  ],
+  [
+   "Su disponibilidad debe comprobarse; no nace porque el texto diga “ya lo hice”",
+   "Hay que comprobar que esté disponible: no basta con que el texto diga “ya lo hice”"
+  ],
+  [
+   "No pidas acceso a un supuesto pensamiento secreto como requisito de calidad.",
+   "No exijas ver el “razonamiento interno” del asistente como prueba de calidad."
+  ],
+  [
+   "Es un contraste contra el insumo, no una inferencia sobre toda la clientela.",
+   "Es una comprobación contra el insumo, no una conclusión sobre toda la clientela."
+  ],
+  [
+   "La distinción importa porque cambia la comprobación.",
+   "Distinguirlas importa porque cambia lo que debes revisar."
+  ],
+  [
+   "¿Qué acciones o herramientas consta que utilizó?",
+   "¿Qué acciones o herramientas hay constancia de que usó?"
+  ],
+  [
+   "Adoptaremos tres rutas:",
+   "Usaremos tres rutas:"
+  ],
+  [
+   "“Multimodal” describe trabajar con varias modalidades, no acertar en todas.",
+   "“Multimodal” significa que trabaja con varias modalidades, no que acierte en todas."
+  ],
+  [
+   "Elegir una tarea requiere considerar el dato, el resultado y sus consecuencias.",
+   "Para elegir una tarea hay que mirar el dato, el resultado y sus consecuencias."
+  ],
+  [
+   "Escribe primero el producto permitido y la acción excluida.",
+   "Primero escribe qué producto está permitido y qué acción queda fuera."
+  ],
+  [
+   "La elección atiende a condiciones concretas",
+   "La elección depende de condiciones concretas"
+  ],
+  [
+   "Encargo o prompt",
+   "Encargo o prompt"
+  ],
+  [
+   "Prompt de referencia:",
+   "Encargo de referencia:"
+  ],
+  [
+   "Prompt:",
+   "Encargo:"
+  ],
+  [
+   "Un prompt más largo",
+   "Un encargo más largo"
+  ],
+  [
+   "Escribe un prompt completo",
+   "Escribe un encargo completo"
+  ],
+  [
+   "un prompt de actualización",
+   "un encargo de actualización"
+  ],
+  [
+   "Produce prompt propio y aviso",
+   "Escribe tu propio encargo y el aviso"
+  ],
+  [
+   "prompt propio",
+   "encargo propio"
+  ],
+  [
+   "Evidencia del bloque: ",
+   "En el documento dice: "
+  ],
+  [
+   " Vuelve al documento y explica cómo afecta la decisión final.",
+   " Piensa cómo cambia esto la decisión final."
+  ],
+  [
+   "Escribe o formula tu conclusión después de explorar; compara con la referencia. No se califica por coincidencia literal.",
+   "Cuando termines de explorar, escribe tu conclusión y compárala con la referencia. No necesitas usar las mismas palabras."
+  ],
+  [
+   "la ficha de seis campos que usaremos es una herramienta editorial, no una fórmula del proveedor",
+   "la ficha de seis campos que usaremos es una herramienta propia del curso, no una fórmula del proveedor"
+  ],
+  [
+   "“mejoralo”",
+   "“mejóralo”"
+  ],
+  [
+   "Identifica el tipo de brecha:",
+   "Identifica qué tipo de problema hay:"
+  ],
+  [
+   "La brecha es específica: falta la solicitud.",
+   "El problema es puntual: falta la solicitud."
+  ],
+  [
+   "La verificación semántica de acuerdo, responsable y fecha frente a T2–T3.",
+   "Revisar el contenido (acuerdo, responsable y fecha) contra T2–T3."
+  ],
+  [
+   "no lo conviertas silenciosamente en la nueva fuente de verdad",
+   "no lo trates como la nueva fuente oficial sin revisarlo"
+  ],
+  [
+   "Organiza la información como un expediente, no como una descarga indiscriminada.",
+   "Organiza la información como un expediente, no como un montón de archivos sin orden."
+  ],
+  [
+   "Prueba abstención sobre lugar",
+   "Comprueba que no invente el lugar"
+  ],
+  [
+   "Restituir voluntariedad y eliminar la hora pendiente de la salida",
+   "Volver a indicar que es voluntario y quitar “hora pendiente” de la salida"
+  ],
+  [
+   "Corregir el texto y corregir la instrucción pueden hacerse en distinto orden tras diagnosticar el conflicto. Las dos tareas deben preceder la comprobación final.",
+   "Una vez detectado el conflicto, puedes corregir el texto o la instrucción en el orden que prefieras. Lo importante es hacer ambas cosas antes de la comprobación final."
+  ],
+  [
+   "Es admisible un mensaje",
+   "Sirve un mensaje"
+  ],
+  [
+   "Colaborar consiste en revisar contra criterios y aportar la información necesaria.",
+   "Colaborar es revisar con criterios claros y aportar la información que falta."
+  ],
+  [
+   "Pedir JSON tiene sentido cuando",
+   "Pedir JSON sirve cuando"
+  ],
+  [
+   "Ejecutar o reproducir documentalmente un flujo en ChatGPT, seleccionando herramientas y controles pertinentes y comprobando sus resultados.",
+   "Ejecutar un flujo en ChatGPT (o reproducirlo con documentos si no tienes acceso), eligiendo las herramientas y controles adecuados y comprobando los resultados."
+  ],
+  [
+   "cuando no puedas ejecutar una función",
+   "cuando no puedas usar una función"
+  ],
+  [
+   "lee qué indica sobre personalización, conservación y eventual guardado",
+   "lee qué indica sobre personalización, conservación y posible guardado"
+  ],
+  [
+   "Conserva localmente el prompt, la salida y la corrección.",
+   "Guarda en tu equipo el encargo, la salida y la corrección."
+  ],
+  [
+   "audita la salida de referencia",
+   "revisa la salida de referencia"
+  ],
+  [
+   "La configuración de privacidad de una conversación no debe extrapolarse a un proyecto compartido.",
+   "La configuración de privacidad de una conversación no se aplica automáticamente a un proyecto compartido."
+  ],
+  [
+   "mientras un proyecto organiza un trabajo continuado",
+   "mientras que un proyecto organiza un trabajo que se extiende en el tiempo"
+  ],
+  [
+   "Esto ayuda a trabajar; no constituye una barrera técnica contra exposición.",
+   "Esto ayuda a trabajar, pero no protege por sí solo contra la exposición de datos."
+  ],
+  [
+   "Calcular referencia y construir archivo admiten orden intercambiable; abrir el archivo requiere que exista. Una captura no prueba editabilidad.",
+   "Puedes calcular la referencia o armar el archivo en el orden que quieras, pero para abrir el archivo primero tiene que existir. Una captura no prueba que se pueda editar."
+  ],
+  [
+   "¿Cuál es la copia mínima admisible?",
+   "¿Cuál es la copia mínima que se puede cargar?"
+  ],
+  [
+   "Referencia:(10+20+30)/3=20.",
+   "Referencia: (10 + 20 + 30) / 3 = 20."
+  ],
+  [
+   "Incluidos A1, A2, A5:70/3=23,33.",
+   "Se incluyen A1, A2 y A5: 70 / 3 = 23,33."
+  ],
+  [
+   "La captura sola no satisface archivo editable.",
+   "Una captura sola no reemplaza el archivo editable."
+  ],
+  [
+   "Una captura no satisface tabla editable.",
+   "Una captura no reemplaza la tabla editable."
+  ],
+  [
+   "No dependas de que el asistente recuerde cuál aprobaste.",
+   "No confíes en que el asistente recuerde cuál aprobaste."
+  ],
+  [
+   "La corrección conserva duración y cupo y restituye las condiciones.",
+   "La corrección conserva duración y cupo, y recupera las condiciones."
+  ],
+  [
+   "Elimina la obligación y restituye voluntariedad.",
+   "Quita la obligación: la encuesta es voluntaria."
+  ],
+  [
+   "Restituye esas condiciones.",
+   "Recupera esas condiciones."
+  ],
+  [
+   "No presupongas un régimen único de datos por la marca.",
+   "No supongas que todas las cuentas de una misma marca tratan los datos igual."
+  ],
+  [
+   "marca “auditoría de referencia”",
+   "anótalo como “revisión de la salida de referencia”"
+  ],
+  [
+   "La conversación, los conectores y las herramientas de trabajo con código no son la misma superficie.",
+   "La conversación, los conectores y las herramientas para trabajar con código no son lo mismo."
+  ],
+  [
+   "evidencia real del despliegue",
+   "evidencia real de la publicación"
+  ],
+  [
+   "explicita la prioridad en cada encargo",
+   "deja explícita la prioridad en cada encargo"
+  ],
+  [
+   "botón“Ver condiciones”",
+   "botón “Ver condiciones”"
+  ],
+  [
+   "La imagen falla interacción; enlace público viola alcance.",
+   "La imagen no permite interactuar y el enlace público se sale del alcance."
+  ],
+  [
+   "Reconciliar Nexo sin borrar condiciones",
+   "Combinar las versiones de Nexo sin perder condiciones"
+  ],
+  [
+   "Volver a B/C; no eliminar las condiciones del requisito.",
+   "Vuelve a construir y exportar el artefacto; no quites las condiciones del requisito."
+  ],
+  [
+   "Un resultado final aceptable no vuelve completa la evidencia intermedia.",
+   "Que el resultado final esté bien no completa la evidencia intermedia."
+  ],
+  [
+   "El reporte no sustituye a la prueba.",
+   "El reporte no reemplaza la prueba."
+  ],
+  [
+   "Cseactualiza a 6 confirmados",
+   "C se actualiza a 6 confirmados"
+  ],
+  [
+   "segúnactualización",
+   "según la actualización"
+  ],
+  [
+   "A20 inscritos/15 confirmados; B12/12; C8/5.",
+   "A: 20 inscritos y 15 confirmados; B: 12 y 12; C: 8 y 5."
+  ],
+  [
+   "No basta citar v2: debe restituirse “no habrá grabación”.",
+   "No basta citar v2: hay que volver a incluir “no habrá grabación”."
+  ],
+  [
+   "Restituir “no habrá grabación”",
+   "Volver a incluir “no habrá grabación”"
+  ],
+  [
+   "Canvas es una superficie de trabajo y edición cuando aparece habilitada",
+   "Canvas es un espacio de trabajo y edición, cuando está habilitado"
+  ],
+  [
+   "Si la superficie no está disponible",
+   "Si ese espacio no está disponible"
+  ],
+  [
+   "sin cambiarlos de forma irreflexiva",
+   "sin cambiarlos a la ligera"
+  ],
+  [
+   "no completar caracteres por intuición",
+   "no adivinar lo que dice"
+  ],
+  [
+   "La vista previa no sustituye guardar",
+   "Probar en la vista previa no es lo mismo que guardar"
+  ],
+  [
+   "la hora de una edición es conocimiento versionado",
+   "la hora de una edición es un dato que cambia con cada versión"
+  ],
+  [
+   "Salida controlada escrita para el curso; no representa un resultado medido de proveedor.",
+   "Salida escrita para el curso; no es una respuesta real de ningún asistente."
+  ],
+  [
+   "La solución no es repetir el prompt más fuerte",
+   "La solución no es repetir el encargo con más fuerza"
+  ],
+  [
+   "Parte del entregable. Para una minuta",
+   "Parte por el entregable. Para una minuta"
+  ],
+  [
+   "La calidad semántica de A y C supera a B en este expediente;",
+   "En contenido, A y C son mejores que B en este expediente;"
+  ],
+  [
+   "no un benchmark",
+   "no una medición formal entre proveedores"
+  ],
+  [
+   "Confundir una ronda ficticia con un benchmark",
+   "Confundir una ronda ficticia con una medición formal"
+  ],
+  [
+   "Filtro de admisibilidad antes del ranking",
+   "Primero, qué opciones se pueden usar; después, comparar"
+  ],
+  [
+   "Requisito de admisibilidad",
+   "Requisito para poder usarla"
+  ],
+  [
+   "administración y salida del sistema",
+   "administración y cómo dejar el servicio si hace falta"
+  ],
+  [
+   "el curso no congela tarifas que podrían quedar obsoletas",
+   "el curso no fija tarifas que podrían quedar desactualizadas"
+  ],
+  [
+   "Una ronda escrita por el autor sirve",
+   "Una ronda escrita para el curso sirve"
+  ],
+  [
+   "revisar la lectura móvil",
+   "revisar cómo se lee en el celular"
+  ],
+  [
+   "dos preguntas para cerrar brechas",
+   "dos preguntas para resolver lo que falta"
+  ],
+  [
+   "Propuesta comercial con brechas visibles",
+   "Propuesta comercial que muestra lo que falta"
+  ],
+  [
+   "Hay una brecha: la importación manual",
+   "Hay un problema: la importación manual"
+  ],
+  [
+   "capacidad confirmada, brecha y pregunta siguiente",
+   "capacidad confirmada, lo que falta y la siguiente pregunta"
+  ],
+  [
+   "Reformula el encaje y el siguiente paso.",
+   "Explica de nuevo cómo calza la oferta y cuál es el siguiente paso."
+  ],
+  [
+   "No declarar encaje completo;",
+   "No digas que la oferta calza por completo;"
+  ],
+  [
+   "identifica el acto del mensaje: informar",
+   "identifica para qué es el mensaje: informar"
+  ],
+  [
+   "Integrado en los 20 minutos de revisión del módulo: 15 minutos del caso y 5 de reflexión. No suma horas adicionales.",
+   "Toma unos 20 minutos (15 para el caso y 5 para reflexionar) y ya está incluido en el tiempo del módulo."
+  ],
+  [
+   "Se prepara un resumen público; no se puede agregar un SLA.",
+   "Se prepara un resumen público; no se puede agregar un plazo comprometido."
+  ],
+  [
+   "Dato que pedir antes de publicar un SLA",
+   "Dato que necesitas antes de publicar un plazo"
+  ],
+  [
+   "Auditar una síntesis convincente",
+   "Revisar un resumen que suena convincente"
+  ],
+  [
+   "Auditar un informe con fuentes y omisiones",
+   "Revisar un informe con fuentes y omisiones"
+  ],
+  [
+   "Resumen convincente bajo auditoría",
+   "Un resumen convincente, revisado a fondo"
+  ],
+  [
+   "La prioridad es semántica, no estilística.",
+   "La prioridad es el contenido, no el estilo."
+  ],
+  [
+   "no a contradecir por espectáculo",
+   "no a llevar la contraria por llevarla"
+  ],
+  [
+   "Restituye lugar pendiente",
+   "Vuelve a dejar el lugar como pendiente"
+  ],
+  [
+   "Debe explicitarse que no existe enlace confirmado",
+   "Hay que dejar claro que no existe enlace confirmado"
+  ],
+  [
+   "no que revele una cadena interna de pensamiento",
+   "no que muestre su “razonamiento interno”"
+  ],
+  [
+   "Para reglas versionadas,",
+   "Para reglas que tienen varias versiones,"
+  ],
+  [
+   "reponer pendiente",
+   "volver a mostrar el pendiente"
+  ],
+  [
+   "con muestra autoseleccionada",
+   "con una muestra de quienes quisieron responder"
+  ],
+  [
+   "Distingue resumen extractivo —recupera partes— y reformulación —expresa con palabras nuevas— como operaciones de trabajo.",
+   "Distingue dos formas de resumir: extraer (recuperar las partes clave tal cual) y reformular (decirlo con palabras nuevas)."
+  ],
+  [
+   "flujo A32 minutos y flujo B29 minutos",
+   "flujo A, 32 minutos, y flujo B, 29 minutos"
+  ],
+  [
+   "Flujo A:32 minutos; flujo B:29.",
+   "Flujo A: 32 minutos; flujo B: 29."
+  ],
+  [
+   "(12+18+0)/3 =10 minutos",
+   "(12 + 18 + 0) / 3 = 10 minutos"
+  ],
+  [
+   "Una fórmula sintácticamente válida puede usar una columna equivocada.",
+   "Una fórmula bien escrita puede usar una columna equivocada."
+  ],
+  [
+   "No imputes duraciones ni conviertas",
+   "No inventes duraciones ni conviertas"
+  ],
+  [
+   "Imputar cero sin autorización",
+   "Rellenar con cero sin autorización"
+  ],
+  [
+   "no imputes 0 a T05",
+   "no le pongas 0 a T05"
+  ],
+  [
+   "Auditar un informe de datos y su gráfico",
+   "Revisar un informe de datos y su gráfico"
+  ],
+  [
+   "antes de escalar”",
+   "antes de extenderlo”"
+  ],
+  [
+   "Usar gráfico para esconder muestra",
+   "Usar el gráfico para esconder el tamaño de la muestra"
+  ],
+  [
+   "Explica por qué 55 % no responde",
+   "Explica por qué 55 % no responde la pregunta"
+  ],
+  [
+   "sin hover y en papel",
+   "sin pasar el mouse y en papel"
+  ],
+  [
+   "sin hover o en papel",
+   "sin pasar el mouse o en papel"
+  ],
+  [
+   "Restituye esas decisiones",
+   "Vuelve a poner esas decisiones"
+  ],
+  [
+   "No generes ni publiques con cuentas pagadas por obligación.",
+   "No es obligatorio generar ni publicar con cuentas pagadas."
+  ],
+  [
+   "Texto crítico editable",
+   "Los textos clave son editables"
+  ],
+  [
+   "Mantener automatismo de envío",
+   "Mantener el envío automático"
+  ],
+  [
+   "no mantengas un automatismo por conveniencia visual",
+   "no mantengas un envío automático porque se ve más simple"
+  ],
+  [
+   "No avatar no autorizado",
+   "Sin avatar no autorizado"
+  ],
+  [
+   "Preescucha la voz,",
+   "Escucha antes la voz,"
+  ],
+  [
+   "Storyboard accesible y control audiovisual",
+   "Guion gráfico accesible y control audiovisual"
+  ],
+  [
+   "entrega storyboard y pauta de producción",
+   "entrega el guion gráfico (storyboard) y la pauta de producción"
+  ],
+  [
+   "Versionar y actualizar audio, subtítulos, texto y descarga; volver a comprobar la escena completa.",
+   "Crea una nueva versión y actualiza audio, subtítulos, texto y descarga; después vuelve a comprobar la escena completa."
+  ],
+  [
+   "Versiona la pieza",
+   "Crea una nueva versión de la pieza"
+  ],
+  [
+   "No presupone licencia de Catalina",
+   "No da por hecha la licencia de Catalina"
+  ],
+  [
+   "Ordena un flujo sin gastar en producción masiva antes de la muestra.",
+   "Ordena un flujo que no gaste en producir todo antes de aprobar la muestra."
+  ],
+  [
+   "Auditar tareas antes de automatizar",
+   "Revisar tus tareas antes de automatizar"
+  ],
+  [
+   "20 veces/semana",
+   "20 veces por semana"
+  ],
+  [
+   "Puede convenir una fórmula o automatización determinista.",
+   "Puede convenir una fórmula o una automatización con reglas fijas."
+  ],
+  [
+   "revisión 7=30.",
+   "revisión 7 = 30."
+  ],
+  [
+   "corrección 5=27.",
+   "corrección 5 = 27."
+  ],
+  [
+   "menos 30 de mantenimiento =70 minutos netos",
+   "menos 30 de mantenimiento = 70 minutos netos"
+  ],
+  [
+   "Retirar o archivar prompts que inventan fechas y deduplicar versiones, conservando historial.",
+   "Retirar o archivar los encargos que inventan fechas y eliminar versiones repetidas, conservando el historial."
+  ],
+  [
+   "El rol retórico y la promesa absoluta no sustituyen controles.",
+   "El rol inventado (“experto”) y la promesa absoluta no reemplazan los controles."
+  ],
+  [
+   "Agrega una prueba de regresión cuando se modifica el formato de la minuta a un correo breve.",
+   "Agrega una prueba que confirme que nada se rompió cuando la minuta pasa a formato de correo breve."
+  ],
+  [
+   "Diseña una prueba de regresión del flujo.",
+   "Diseña una prueba que confirme que el flujo no empeoró."
+  ],
+  [
+   "manualantiguo",
+   "manual antiguo"
+  ],
+  [
+   "abril 20 cupos/día 22; mayo 16 cupos/día 18;",
+   "abril, 20 cupos, día 22; mayo, 16 cupos, día 18;"
+  ],
+  [
+   "Dato variable: fuente versionada",
+   "Dato que cambia: va en una fuente con versión"
+  ],
+  [
+   "Instrucción estable admisible",
+   "Instrucción estable válida"
+  ],
+  [
+   "Conservar resolver todo",
+   "Mantener “resuelve cualquier solicitud”"
+  ],
+  [
+   "Esto simula recuperación documental, no un RAG desplegado.",
+   "Esto simula la recuperación de documentos; no es un RAG en funcionamiento."
+  ],
+  [
+   "un RAG desplegado",
+   "un RAG en funcionamiento"
+  ],
+  [
+   "servicio desplegado",
+   "servicio en funcionamiento"
+  ],
+  [
+   "desplegado",
+   "en funcionamiento"
+  ],
+  [
+   "Marca del asistente y rapidez del primer token",
+   "Marca del asistente y rapidez de la primera palabra"
+  ],
+  [
+   "Las pruebas de regresión repiten casos conocidos después de cambiar instrucciones, fuentes o herramientas.",
+   "Las pruebas de regresión vuelven a correr casos conocidos después de cambiar instrucciones, fuentes o herramientas, para confirmar que nada se rompió."
+  ],
+  [
+   "salidas, permisos, límites y escalamiento",
+   "salidas, permisos, límites y a quién derivar"
+  ],
+  [
+   "devuelve una ausencia informativa, no una respuesta aproximada",
+   "responde claramente que no hay información, no una respuesta aproximada"
+  ],
+  [
+   "n 8 n",
+   "n8n"
+  ],
+  [
+   "termina en A–B, mantiene la pausa y escala.",
+   "termina en A–B: mantiene la pausa y lo deriva para revisión."
+  ],
+  [
+   "Mantener en pausa y escalar;",
+   "Mantener en pausa y derivar para revisión;"
+  ],
+  [
+   "mantén C-18 en pausa y escala para verificación",
+   "mantén C-18 en pausa y derívalo para verificación"
+  ],
+  [
+   "Mantener pausa y escalar; no añadir",
+   "Mantener la pausa y derivar para revisión; no añadir"
+  ],
+  [
+   "Flujo determinista, automatización y agente",
+   "Reglas fijas, automatización y agente"
+  ],
+  [
+   "Un flujo determinista sigue reglas explícitas",
+   "Un flujo de reglas fijas (determinista) sigue reglas explícitas"
+  ],
+  [
+   "regla determinista",
+   "regla fija"
+  ],
+  [
+   "Produce reglas de idempotencia, reintento, cola y detención.",
+   "Define reglas para no repetir acciones (idempotencia), reintentos, cola y detención."
+  ],
+  [
+   "antes de usar producción",
+   "antes de usarlo con datos y acciones reales"
+  ],
+  [
+   "no debe eludir deduplicación",
+   "no debe saltarse la detección de duplicados"
+  ],
+  [
+   "La aprobación debe quedar obsoleta para esa acción.",
+   "La aprobación deja de valer para esa acción."
+  ],
+  [
+   "Aprobación que quedó obsoleta",
+   "Una aprobación que dejó de valer"
+  ],
+  [
+   "restringe acceso cuando estés autorizado y escala.",
+   "restringe el acceso si estás autorizado y deriva el caso al responsable."
+  ],
+  [
+   "Preservar evidencia mínima y escalar según política;",
+   "Preservar evidencia mínima y derivar según la política;"
+  ],
+  [
+   "Al corte editorial del 8 de octubre de 2026,",
+   "A la fecha de cierre de este contenido (8 de octubre de 2026),"
+  ],
+  [
+   "No es necesario esperar autenticación para pausar. Preservación y verificación pueden avanzar sin copiar otra vez los datos.",
+   "No hace falta confirmar quién hizo la solicitud para pausar. Puedes preservar la evidencia y verificar al mismo tiempo, sin volver a copiar los datos."
+  ],
+  [
+   "Registro ampliado:20 min",
+   "Registro ampliado: 20 min"
+  ],
+  [
+   "Auditar la promesa completa",
+   "Revisar la promesa completa"
+  ],
+  [
+   "Auditar una demostración y una promesa de productividad",
+   "Revisar una demostración y una promesa de productividad"
+  ],
+  [
+   "Escribe una auditoría de evidencia,",
+   "Escribe una revisión de la evidencia,"
+  ],
+  [
+   "Aprobar por upload",
+   "Aprobar por haber subido un archivo"
+  ],
+  [
+   "Confundir diseño con prueba LMS",
+   "Confundir el diseño con una prueba en el LMS"
+  ],
+  [
+   "No pidas cadenas privadas de razonamiento como sustituto de pruebas.",
+   "No pidas ver el “razonamiento interno” como sustituto de pruebas."
+  ],
+  [
+   "no llenarlos por plausibilidad",
+   "no llenarlos con algo que suene probable"
+  ],
+  [
+   "Usé tres IAs y quedó profesional",
+   "Usé tres IA distintas y quedó profesional"
+  ],
+  [
+   "Programa aplicado de uso profesional de IA generativa. No forma ingenieros de modelos, no enseña toda la matemática de aprendizaje automático y no habilita decisiones autónomas de salud, crédito, contratación o asesoría jurídica. La duración de 60 horas es estimación editorial de trabajo activo, pendiente de pilotaje.",
+   "Es un programa práctico para usar IA generativa en el trabajo. No forma ingenieros de modelos ni enseña la matemática del aprendizaje automático, y no prepara para que la IA tome sola decisiones de salud, crédito, contratación o asesoría legal. Las 60 horas son una estimación de trabajo activo que se ajustará con el piloto."
+  ],
+  [
+   "La ruta documental permite demostrar análisis y diseño; no demuestra que se operó una interfaz, generó un archivo multimedia o desplegó una automatización. La ruta real es opcional y requiere registrar herramienta, cuenta, fecha, insumos, salida y comprobaciones.",
+   "Puedes hacer todo el curso sin cuentas pagadas, trabajando con sus documentos: así demuestras análisis y diseño, aunque no que usaste una herramienta real. Usar herramientas reales es opcional; si lo haces, anota cuál, con qué cuenta, la fecha, lo que le entregaste, lo que obtuviste y cómo lo comprobaste."
+  ],
+  [
+   "La evidencia de producción abierta requiere revisión real antes de aprobar.",
+   "El proyecto final lo revisa un profesor antes de aprobar."
+  ],
+  [
+   "La estructura y los ejemplos son decisiones editoriales del curso, no un método de prompting validado ni una garantía de exactitud.",
+   "La estructura y los ejemplos son decisiones propias del curso, no un método validado para escribir encargos ni una garantía de exactitud."
+  ],
+  [
+   "La respuesta de referencia es editorial, no una salida atribuida a un proveedor.",
+   "La respuesta de referencia se escribió para el curso; no es una respuesta real de un asistente."
+  ],
+  [
+   "Es una herramienta editorial, no una autorización de tratamiento.",
+   "Es una herramienta del curso; no reemplaza la autorización para usar los datos."
+  ],
+  [
+   "Auditoría de una respuesta de atención",
+   "Revisión de una respuesta de atención"
+  ],
+  [
+   "Auditoría de un porcentaje",
+   "Revisión de un porcentaje"
+  ],
+  [
+   "Auditoría de un resumen con instrucción ajena",
+   "Revisión de un resumen con una instrucción ajena"
+  ],
+  [
+   "Auditar una instrucción ajena",
+   "Revisar una instrucción ajena"
+  ],
+  [
+   "Fuente o criterio que reveló una brecha:",
+   "Fuente o criterio que reveló el problema:"
+  ],
+  [
+   "No aparecer 24/7 como servicio ofrecido.",
+   "Que no aparezca 24/7 como servicio ofrecido."
+  ],
+  [
+   "Mantener al menos causalidad y alcance limitado.",
+   "Mantener los límites de causalidad y de alcance."
+  ],
+  [
+   "Remarca como «propuesta»",
+   "Marca como «propuesta»"
+  ],
+  [
+   "No pedir que la IA anonimize",
+   "No pedir que la IA anonimice"
+  ],
+  [
+   "resuelve documentalmente una versión de aviso",
+   "resuelve por escrito una versión de aviso"
+  ],
+  [
+   "Un campo vacío es una plantilla de trabajo, no contenido lectivo pendiente.",
+   "Los campos vacíos son para que los completes; no falta contenido."
+  ],
+  [
+   "desplegó una automatización",
+   "puso en marcha una automatización"
+  ],
+  [
+   "Relaciona directamente la condición determinante del expediente con la decisión. No añade un hecho externo.",
+   "Conecta el dato clave del expediente con la decisión, sin agregar hechos externos."
+  ],
+  [
+   "Es la decisión que responde al encargo bajo los antecedentes:",
+   "Es la decisión correcta según los antecedentes:"
+  ],
+  [
+   "Vuelve a los fragmentos citados por la clave y corrige la relación entre tu decisión y esos datos.",
+   "Vuelve a los fragmentos clave y revisa cómo se conectan con tu decisión."
+  ],
+  [
+   "Después realiza una variante formativa de tu módulo.",
+   "Después practica con una variante de tu módulo."
+  ],
+  [
+   "Prueba limitada, despliegue general",
+   "Una prueba pequeña no autoriza el uso masivo"
+  ],
+  [
+   "permiso de despliegue",
+   "permiso de publicación"
+  ],
+  [
+   "sin despliegue",
+   "sin publicar"
+  ],
+  [
+   "Permitir despliegue solo al terminar",
+   "Permitir la publicación solo al terminar"
+  ],
+  [
+   "ni despliegue",
+   "ni publicación"
+  ],
+  [
+   "Restituir la propuesta como tal, con respaldo en S2.",
+   "Volver a presentarla como propuesta, con respaldo en S2."
+  ],
+  [
+   "Restituir 12 participantes",
+   "Volver a poner 12 participantes"
+  ],
+  [
+   "restituir 12 participantes",
+   "volver a poner 12 participantes"
+  ],
+  [
+   "restituir acceso funcional a las condiciones",
+   "recuperar el acceso real a las condiciones"
+  ],
+  [
+   "Restituir revisión y aprobación",
+   "Volver a incluir revisión y aprobación"
+  ],
+  [
+   "hasta restituir la negación",
+   "hasta recuperar la negación"
+  ],
+  [
+   "un límite editorial incompatible",
+   "un límite de extensión incompatible"
+  ],
+  [
+   "una restricción editorial conflictiva",
+   "una restricción de extensión que choca con las condiciones"
+  ],
+  [
+   "permiten ideación revisada",
+   "permiten generar ideas con revisión"
+  ],
+  [
+   "Todo ejercicio didáctico es un benchmark empírico.",
+   "Todo ejercicio del curso es una medición real entre proveedores."
+  ],
+  [
+   "escritas por el autor",
+   "escritas para el curso"
+  ],
+  [
+   "revisar retrabajo antes de escalar",
+   "revisar el retrabajo antes de ampliar el uso"
+  ],
+  [
+   "semánticamente obsoleta",
+   "desactualizada en su contenido"
+  ],
+  [
+   "No aborda la regresión semántica.",
+   "No corrige el cambio de sentido."
+  ],
+  [
+   "No elimina la contradicción semántica.",
+   "No elimina la contradicción de sentido."
+  ],
+  [
+   "Rechazar el cambio semántico",
+   "Rechazar el cambio de sentido"
+  ],
+  [
+   "Pierde control semántico y editabilidad solicitada;",
+   "Pierde el control del contenido y la edición solicitada;"
+  ],
+  [
+   "no prueba correspondencia semántica",
+   "no prueba que diga lo mismo"
+  ],
+  [
+   "Coincidencia semántica implica autorización.",
+   "Que el contenido se parezca implica autorización."
+  ],
+  [
+   "Separa operaciones deterministas de redacción",
+   "Separa las operaciones de reglas fijas de la redacción"
+  ],
+  [
+   "Un reporte automático equivale a una auditoría independiente completa.",
+   "Un reporte automático equivale a una revisión independiente completa."
+  ],
+  [
+   "([a-záéíóú])v (\\d)",
+   "\\1 v\\2",
+   "re"
+  ],
+  [
+   "\\bv (\\d)",
+   "v\\1",
+   "re"
+  ],
+  [
+   "([a-záéíóú]):(\\d)",
+   "\\1: \\2",
+   "re"
+  ],
+  [
+   "([a-záéíóú]),(\\d)",
+   "\\1, \\2",
+   "re"
+  ],
+  [
+   "(\\s)restituye(\\s)",
+   "\\1recupera\\2",
+   "re"
+  ],
+  [
+   "\\bprompts\\b",
+   "encargos",
+   "re"
+  ],
+  [
+   "\\b([Ee]l|[Uu]n|[Dd]el) prompt\\b",
+   "\\1 encargo",
+   "re"
+  ],
+  [
+   "([a-záéíóú])“",
+   "\\1 “",
+   "re"
+  ],
+  [
+   "(^|[\\s(])SLA\\b",
+   "\\1plazo comprometido",
+   "re"
+  ]
+ ]
+}

@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:03.710
+En la práctica cada fila es un caso y el identificador debe ser único.
+
+00:00:03.750 --> 00:00:07.590
+Se informa expresamente que una repetición idéntica es un error de exportación.
+
+00:00:07.630 --> 00:00:09.670
+Pide un informe de calidad antes del indicador:
+
+00:00:09.710 --> 00:00:14.330
+filas originales, duplicados exactos, vacíos, valores imposibles y propuesta de tratamiento.
+
+00:00:14.370 --> 00:00:17.090
+Realiza la limpieza en una copia y registra cada cambio.
+
+00:00:17.130 --> 00:00:19.780
+No imputes duraciones ni conviertas un caso pendiente en cerrado.
+
+00:00:20.030 --> 00:00:24.150
+La tabla que se entrega debe conservar una columna de estado y una explicación de exclusiones.
+
+00:00:24.190 --> 00:00:28.170
+Revisa el resultado contando filas y comprobando al menos dos registros contra el original.

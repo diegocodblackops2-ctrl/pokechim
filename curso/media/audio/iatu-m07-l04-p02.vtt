@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:02.900
+Extrae requerimientos y restricciones del expediente.
+
+00:00:02.940 --> 00:00:07.320
+Construye una matriz: necesidad, evidencia del cliente, capacidad confirmada, brecha y
+
+00:00:07.360 --> 00:00:11.560
+pregunta siguiente. Pide un borrador que distinga oferta disponible de alternativa a validar.
+
+00:00:11.600 --> 00:00:15.820
+Antes de compartir verifica precios, impuestos, vigencia, alcance y condiciones cuando
+
+00:00:15.860 --> 00:00:20.020
+esos datos existan. Si falta un precio, no lo reemplaces por una cifra inventada “para
+
+00:00:20.060 --> 00:00:24.040
+que se vea completo”. Si una integración no está confirmada, conviértela en una consulta
+
+00:00:24.080 --> 00:00:27.940
+técnica. Mantén el seguimiento como propuesta hasta que el destinatario acepte fecha y
+
+00:00:27.980 --> 00:00:28.200
+canal.

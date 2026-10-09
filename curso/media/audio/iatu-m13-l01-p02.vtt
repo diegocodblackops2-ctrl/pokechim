@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:02.270
+Define una función acotada para el asistente:
+
+00:00:02.310 --> 00:00:05.350
+“Preparar borradores de respuestas sobre el catálogo autorizado”.
+
+00:00:05.390 --> 00:00:09.730
+Escribe límites estables: no inventar precios, señalar información faltante y no enviar
+
+00:00:09.770 --> 00:00:13.810
+mensajes. Mantén precios y fechas en una fuente identificada por versión y vigencia.
+
+00:00:13.850 --> 00:00:18.570
+Antes de usarlo, prueba un caso normal, uno con dato faltante y otro con documentos contradictorios.
+
+00:00:18.610 --> 00:00:20.290
+Registra qué hizo y corrige la causa.
+
+00:00:20.330 --> 00:00:24.550
+Si una regla temporal quedó incrustada en las instrucciones, muévela al documento de conocimiento.
+
+00:00:24.590 --> 00:00:28.210
+Evita duplicar el mismo dato en varios lugares que luego no se actualizan juntos.

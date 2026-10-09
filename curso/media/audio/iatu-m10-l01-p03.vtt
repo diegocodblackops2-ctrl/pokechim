@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.090 --> 00:00:02.540
+Brief ficticio: aviso móvil del taller Atlas;
+
+00:00:02.590 --> 00:00:05.060
+mensaje “Confirma los datos antes de compartir”;
+
+00:00:05.130 --> 00:00:06.720
+una acción: abrir checklist;
+
+00:00:06.770 --> 00:00:09.430
+no representar personas reales ni oficinas reconocibles.
+
+00:00:09.470 --> 00:00:12.370
+Variante A: robot con neón y 20 textos pequeños.
+
+00:00:12.410 --> 00:00:16.050
+Variante B: documentos simples, una marca de revisión y espacio para título.
+
+00:00:16.090 --> 00:00:19.190
+Variante C: fotografía sintética de un gerente conocido firmando.
+
+00:00:19.230 --> 00:00:21.610
+B encaja mejor con función y restricciones.
+
+00:00:21.650 --> 00:00:23.870
+A puede llamar la atención, pero dificulta lectura;
+
+00:00:23.910 --> 00:00:27.190
+C introduce representación personal no autorizada y sugiere un hecho.
+
+00:00:27.230 --> 00:00:31.230
+El título y botón deben ser elementos editables, no depender de que el generador escriba
+
+00:00:31.270 --> 00:00:32.110
+letras correctas.

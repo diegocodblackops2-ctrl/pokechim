@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.920
+Especifica estados: recibido, validado, borrador, pendiente de aprobación, aprobado, enviado
+
+00:00:04.960 --> 00:00:08.640
+o bloqueado. Establece quién puede cambiar cada estado y qué evidencia requiere.
+
+00:00:08.680 --> 00:00:11.880
+Cambiar un borrador después de aprobarlo debe invalidar la aprobación;
+
+00:00:11.920 --> 00:00:14.100
+de otro modo se enviaría algo que nadie revisó.
+
+00:00:14.140 --> 00:00:17.980
+Herramientas como n 8 n documentan aprobación humana para llamadas de herramientas;
+
+00:00:18.020 --> 00:00:20.780
+el patrón requiere configuración y pruebas en el entorno real.
+
+00:00:20.820 --> 00:00:24.860
+El curso enseña la especificación y una simulación local, no entrega un flujo importable
+
+00:00:24.900 --> 00:00:26.620
+que se haya probado en tu organización.

@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:03.660
+Hoja pequeña: a 1 igual a i de, be 1 igual a Estado, ce 1 igual a Minutos;
+
+00:00:03.700 --> 00:00:08.720
+filas 2 a 5: te 01, cerrado dividido por 12, te 02, cerrado dividido por 18, te 03, pendiente
+
+00:00:08.760 --> 00:00:11.000
+o vacío, te 04, cerrado dividido por 0.
+
+00:00:11.040 --> 00:00:12.950
+Fórmula de tasa en notación de archivo:
+
+00:00:14.920 --> 00:00:15.670
+igual a caunt if(be 2 a be 5,"cerrado") dividido por caunt a(a 2 a a 5).
+
+00:00:17.700 --> 00:00:22.640
+Resultado 75 %. Para la duración media de cerrados, la regla debe excluir pendientes y
+
+00:00:22.680 --> 00:00:28.550
+conservar ceros válidos: igual a if(caunt if(be 2 a be 5,"cerrado") igual a 0,"Sin casos",
+
+00:00:28.620 --> 00:00:32.600
+average if(be 2 a be 5,"cerrado", ce 2 a ce 5)).
+
+00:00:32.640 --> 00:00:37.050
+Aquí devuelve 10. La fórmula no comprueba por sí sola duraciones vacías en cerrados:
+
+00:00:37.200 --> 00:00:39.610
+el control de calidad debe detectarlas antes.
+
+00:00:39.660 --> 00:00:45.360
+Prueba: al cambiar te 04 a pendiente, la tasa baja a 50 % y la media de cerrados pasa a
+
+00:00:45.400 --> 00:00:45.660
+15.

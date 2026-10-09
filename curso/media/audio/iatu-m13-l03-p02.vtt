@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.090 --> 00:00:03.170
+Redacta la ficha con un caso normal y dos casos fuera de alcance.
+
+00:00:03.210 --> 00:00:04.960
+Define qué hace cuando faltan datos:
+
+00:00:05.010 --> 00:00:07.950
+preguntar, marcar pendiente o derivar por un canal autorizado.
+
+00:00:07.990 --> 00:00:10.250
+No inventes una persona revisora disponible;
+
+00:00:10.290 --> 00:00:13.590
+en un curso autoinstruccional, esa dependencia debe quedar explícita.
+
+00:00:13.630 --> 00:00:15.550
+Diseña la salida para facilitar revisión:
+
+00:00:15.590 --> 00:00:19.510
+propuesta separada de hechos, referencias por afirmación importante y acciones pendientes
+
+00:00:19.550 --> 00:00:24.050
+visibles. El asistente no debe enviar, borrar o publicar si su función es preparar borradores.
+
+00:00:24.090 --> 00:00:27.650
+Implementar esas acciones requeriría otro diseño y permisos específicos.

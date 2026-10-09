@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.440
+Ejemplo documentado: Microsoft distingue protección organizacional, no uso de ciertos datos
+
+00:00:04.480 --> 00:00:08.880
+para entrenar modelos base y existencia de registros que un administrador puede consultar;
+
+00:00:08.920 --> 00:00:10.840
+la búsqueda web tiene un tratamiento separado.
+
+00:00:10.880 --> 00:00:14.120
+No se extrapola esa condición a una cuenta personal ni a otro proveedor.
+
+00:00:14.160 --> 00:00:15.540
+Ficha ficticia de decisión:
+
+00:00:15.580 --> 00:00:17.440
+“Cuenta aprobada para avisos públicos;
+
+00:00:17.480 --> 00:00:20.040
+entrenamiento revisado; retención no confirmada;
+
+00:00:20.080 --> 00:00:21.580
+conector de correo deshabilitado”.
+
+00:00:21.620 --> 00:00:25.720
+Con ese estado se puede practicar el aviso público, pero no cargar una lista interna asumiendo
+
+00:00:25.760 --> 00:00:27.360
+que “no entrenar” resuelve todo.

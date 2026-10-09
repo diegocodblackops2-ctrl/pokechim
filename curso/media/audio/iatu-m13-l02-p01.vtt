@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:02.580
+RAG significa generación aumentada con recuperación:
+
+00:00:02.620 --> 00:00:06.620
+antes de elaborar una respuesta, un sistema busca material pertinente y lo incorpora como
+
+00:00:06.660 --> 00:00:11.420
+contexto. La recuperación puede usar coincidencia textual, búsqueda semántica u otras estrategias.
+
+00:00:11.460 --> 00:00:15.880
+Una búsqueda semántica intenta encontrar cercanía de significado, no solo palabras idénticas.
+
+00:00:15.920 --> 00:00:19.380
+Esto no equivale a entrenar el modelo con los documentos ni garantiza que la respuesta
+
+00:00:19.420 --> 00:00:23.520
+sea correcta. Puede recuperarse un fragmento equivocado, antiguo o incompleto;
+
+00:00:23.560 --> 00:00:26.080
+también puede interpretarse mal un fragmento correcto.
+
+00:00:26.120 --> 00:00:28.460
+Por eso se revisan recuperación y respuesta por separado.

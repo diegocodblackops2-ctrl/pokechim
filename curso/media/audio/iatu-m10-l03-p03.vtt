@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:01.840
+Procedimiento ficticio: recibir aviso;
+
+00:00:01.880 --> 00:00:03.460
+verificar fecha y destinatario;
+
+00:00:03.500 --> 00:00:06.200
+si falta un dato, solicitarlo y detener envío;
+
+00:00:06.240 --> 00:00:08.140
+si está completo, preparar borrador;
+
+00:00:08.180 --> 00:00:10.760
+revisión humana; enviar por canal autorizado.
+
+00:00:10.800 --> 00:00:15.140
+Un diagrama que conecta “borrador” directamente con “enviar” omite el control esencial.
+
+00:00:15.180 --> 00:00:18.440
+Guion de tres láminas: 1) “Un borrador no es una autorización”.
+
+00:00:18.480 --> 00:00:20.840
+2) “Verifica datos y prepara la propuesta”.
+
+00:00:20.880 --> 00:00:23.980
+3) “Revisa, aprueba y recién entonces comparte”.
+
+00:00:24.020 --> 00:00:25.820
+Cada una incluye el paso textual;
+
+00:00:25.860 --> 00:00:28.360
+una flecha decorativa no reemplaza la explicación.
+
+00:00:28.400 --> 00:00:32.460
+La prueba es pedir a otra persona que reconstruya el flujo desde el material, sin ayuda
+
+00:00:32.500 --> 00:00:33.340
+de quien lo diseñó.

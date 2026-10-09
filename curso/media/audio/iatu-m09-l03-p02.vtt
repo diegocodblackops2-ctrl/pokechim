@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:03.280
+Indica nombres de columnas, filas de datos, condición de inclusión y comportamiento ante
+
+00:00:03.320 --> 00:00:06.140
+vacíos. Pide la fórmula y una explicación de sus referencias.
+
+00:00:06.180 --> 00:00:09.720
+Comprueba tres casos: normal, sin coincidencias y con un cambio conocido.
+
+00:00:09.760 --> 00:00:11.740
+Conserva el archivo editable y su versión.
+
+00:00:11.780 --> 00:00:15.740
+Ejemplo conceptual: contar filas cuyo estado es “cerrado” dividido por todas las filas
+
+00:00:15.780 --> 00:00:19.740
+válidas. En Excel la sintaxis visible puede cambiar con idioma y separadores;
+
+00:00:19.780 --> 00:00:23.940
+los archivos equis ele ese equis guardan fórmulas en su representación interna.
+
+00:00:23.980 --> 00:00:26.980
+No copies una fórmula a ciegas si tu aplicación usa otra sintaxis.
+
+00:00:27.020 --> 00:00:29.980
+Usa el libro del participante o la alternativa de cálculo manual.

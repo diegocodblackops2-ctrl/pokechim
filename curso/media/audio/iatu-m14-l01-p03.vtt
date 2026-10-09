@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:03.600
+Ejemplo: al recibir un caso nuevo, comprobar que tiene identificador;
+
+00:00:03.950 --> 00:00:05.550
+clasificar su tema con una lista permitida;
+
+00:00:05.590 --> 00:00:07.430
+preparar borrador; revisión humana;
+
+00:00:07.470 --> 00:00:09.030
+enviar solo después de aprobación.
+
+00:00:09.070 --> 00:00:11.250
+El disparador y el identificador son reglas;
+
+00:00:11.290 --> 00:00:12.750
+la redacción puede usar IA;
+
+00:00:12.790 --> 00:00:14.750
+la aprobación conserva responsabilidad humana.
+
+00:00:14.790 --> 00:00:18.650
+Flujo defectuoso: “Lee cualquier correo, decide qué hacer y ejecútalo”.
+
+00:00:18.690 --> 00:00:21.470
+No define datos, herramientas, límites ni criterio de éxito.
+
+00:00:21.510 --> 00:00:24.130
+La flexibilidad aparente impide saber qué está autorizado.

@@ -1,0 +1,19 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.320
+Los fallos pueden ocurrir después de ejecutar una acción pero antes de registrar su resultado.
+
+00:00:04.360 --> 00:00:08.120
+Si el sistema reintenta sin comprobar, puede duplicar un envío o una operación.
+
+00:00:08.160 --> 00:00:12.220
+La idempotencia busca que repetir la misma solicitud no produzca efectos adicionales no
+
+00:00:12.260 --> 00:00:16.400
+deseados. También debes decidir qué hacer ante datos inválidos, respuestas incompletas
+
+00:00:16.440 --> 00:00:20.720
+o límites de servicio. Reintentar todo indefinidamente puede aumentar costos y repetir
+
+00:00:20.760 --> 00:00:24.780
+errores. Un flujo necesita estados de fallo y revisión, no solo un camino exitoso.

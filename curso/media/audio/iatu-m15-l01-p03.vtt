@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:04.250
+Política ficticia Lumbre: avisos públicos pueden usarse en asistentes aprobados;
+
+00:00:04.290 --> 00:00:07.210
+listas internas solo en el entorno administrado autorizado;
+
+00:00:07.250 --> 00:00:10.470
+datos de salud y contraseñas no se cargan a asistentes de práctica.
+
+00:00:10.510 --> 00:00:14.710
+Expediente: título del taller, fecha, correo de inscritos, nota médica y clave de acceso
+
+00:00:14.750 --> 00:00:17.910
+personal. Para redactar un aviso general bastan título y fecha.
+
+00:00:17.950 --> 00:00:19.770
+Los correos no son necesarios para escribir;
+
+00:00:19.810 --> 00:00:21.630
+se gestionan luego por un sistema autorizado.
+
+00:00:21.670 --> 00:00:23.390
+Nota médica y clave se excluyen.
+
+00:00:23.430 --> 00:00:28.210
+Cambiar “Ana” por“Persona 1” conservando correo y nota médica no satisface la minimización.

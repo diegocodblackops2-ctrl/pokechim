@@ -25,7 +25,9 @@
     mount.appendChild(steps);
     mount.appendChild(u.docView({ tab: "Expediente del taller", text: w.input }));
     mount.appendChild(h("div", { class: "callout" }, h("h3", null, icon("encargo"), " Encargo"), u.paragraphs(w.task, "")));
-    mount.appendChild(h("p", { class: "note" }, h("b", null, "Producto esperado: "), w.product));
+    // El maestro repite el encargo dentro de «product»: se muestra solo lo que agrega.
+    var prod = String(w.product || "").replace(/^Entrega un producto editable y un registro breve que vincule tus decisiones con los antecedentes\.\s*/, "");
+    mount.appendChild(h("p", { class: "note" }, h("b", null, "Qué entregas: "), prod === w.task || !prod ? "tu producto, editable, y una nota breve que conecte cada decisión con el antecedente que la respalda." : prod));
 
     // Pistas progresivas
     var hintsBox = h("div", { class: "hints" });
@@ -222,7 +224,7 @@
       });
       B.appendChild(h("div", { class: "btn-row" }, go));
       B.appendChild(fb);
-      B.appendChild(h("p", { class: "note" }, "Ojo: desde el curso no se envía ni se aprueba nada real. " + s.expected));
+      B.appendChild(h("p", { class: "note" }, "Ojo: desde el curso no se envía ni se aprueba nada real."));
       stage.appendChild(box);
     }
     function renderFinal() {
@@ -263,7 +265,7 @@
       box.appendChild(h("div", { class: "btn-row" }, done));
       var review = h("button", { class: "linklike", type: "button" }, "Volver a recorrer las decisiones");
       review.addEventListener("click", function () { idx = 0; save(); renderNode(); });
-      box.appendChild(h("p", { class: "note" }, cs.scoring, " ", review));
+      box.appendChild(h("p", { class: "note" }, "Es práctica, sin nota: tus decisiones quedan guardadas. Después de cada decisión el caso vuelve al camino correcto, así un error no arrastra a los siguientes. ", review));
       stage.appendChild(box);
     }
     renderNode();

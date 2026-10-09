@@ -1,0 +1,22 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.600
+Define población, periodo, exclusiones, numerador, denominador y unidad antes de calcular.
+
+00:00:04.640 --> 00:00:07.880
+Haz una comprobación manual y registra el redondeo solo al comunicar.
+
+00:00:07.920 --> 00:00:11.720
+En una hoja de cálculo, usa celdas y fórmulas que otra persona pueda inspeccionar;
+
+00:00:11.760 --> 00:00:13.130
+no una imagen con resultados.
+
+00:00:13.280 --> 00:00:16.160
+Pide al asistente una explicación breve de qué se contó y qué no.
+
+00:00:16.200 --> 00:00:20.500
+Si no hay casos válidos, el resultado es “sin casos válidos”, no una tasa inventada ni
+
+00:00:20.540 --> 00:00:24.280
+una división por cero. Esa condición debe existir en la fórmula y en el texto final.

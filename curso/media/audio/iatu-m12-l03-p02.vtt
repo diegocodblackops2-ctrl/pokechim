@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.360
+Crea una ficha por flujo: nombre, versión, dueño, uso permitido, entrada, pasos, salida,
+
+00:00:05.400 --> 00:00:07.780
+controles, casos de prueba y fecha de revisión.
+
+00:00:07.820 --> 00:00:09.700
+Separa lo estable de datos temporales.
+
+00:00:09.740 --> 00:00:13.660
+Cuando cambie una regla, actualiza la fuente y vuelve a probar los casos afectados.
+
+00:00:13.700 --> 00:00:17.500
+Conserva un ejemplo correcto y uno que el flujo debe rechazar o marcar pendiente.
+
+00:00:17.540 --> 00:00:20.640
+No publiques datos reales en una biblioteca compartida por comodidad.
+
+00:00:20.680 --> 00:00:24.430
+Usa expedientes ficticios y referencias a ubicaciones autorizadas cuando se implemente
+
+00:00:24.700 --> 00:00:25.480
+en una organización.

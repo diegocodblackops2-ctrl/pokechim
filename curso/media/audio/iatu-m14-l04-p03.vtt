@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:01.510
+Política ficticia del piloto:
+
+00:00:01.550 --> 00:00:06.370
+máximo 10 casos por lote, 2 intentos de preparación, 0 envíos sin aprobación y pausa tras
+
+00:00:06.410 --> 00:00:09.070
+3 fallos consecutivos. Llegan 25 casos:
+
+00:00:09.110 --> 00:00:10.950
+no se procesan todos ignorando el límite;
+
+00:00:10.990 --> 00:00:14.290
+se selecciona el lote autorizado y el resto queda en cola identificada.
+
+00:00:14.330 --> 00:00:18.470
+Tras 3 fallos de lectura, la pausa evita producir borradores sobre datos incompletos.
+
+00:00:18.510 --> 00:00:23.260
+El registro conserva i de, versión, estado y motivo, no el contenido sensible completo.
+
+00:00:23.310 --> 00:00:27.370
+Si ya se envió un aviso equivocado, se activa revisión y corrección por canal autorizado;
+
+00:00:27.410 --> 00:00:29.190
+borrar el registro no revierte el efecto.

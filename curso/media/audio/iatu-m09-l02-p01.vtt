@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:02.360
+Un indicador responde a una pregunta operacional.
+
+00:00:02.430 --> 00:00:05.770
+“¿Qué proporción cerramos?” requiere casos cerrados y casos incluidos.
+
+00:00:05.810 --> 00:00:09.080
+“¿Cuánto demoramos en cerrar?” requiere duraciones de los casos cerrados.
+
+00:00:09.170 --> 00:00:11.470
+No se intercambian denominadores por conveniencia.
+
+00:00:11.510 --> 00:00:12.980
+La media resume un conjunto;
+
+00:00:13.050 --> 00:00:17.250
+no describe cada caso. Cuando hay un valor extremo, puede ser útil mostrar también la mediana
+
+00:00:17.290 --> 00:00:21.090
+y el número de observaciones, pero no elegir el indicador que haga parecer mejor al equipo.
+
+00:00:21.130 --> 00:00:23.010
+La elección debe explicarse según la pregunta.

@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:02.440
+ce 18 tiene resultado incierto tras una interrupción.
+
+00:00:02.480 --> 00:00:04.490
+Reintentos de preparación limitados a 2;
+
+00:00:04.920 --> 00:00:06.380
+envío necesita aprobación por versión.
+
+00:00:06.420 --> 00:00:09.100
+Otro evento ce 17:ve 2 ya figura enviado.
+
+00:00:09.140 --> 00:00:11.100
+No hay conexiones reales en esta simulación.
+
+00:00:11.140 --> 00:00:13.540
+Primero decide el resultado de la consulta de estado.
+
+00:00:13.580 --> 00:00:15.540
+Construye solo la ruta que corresponde.
+
+00:00:15.580 --> 00:00:17.300
+Usa arrastre o Subir o Bajar;
+
+00:00:17.340 --> 00:00:18.880
+no ejecutes la rama alternativa.

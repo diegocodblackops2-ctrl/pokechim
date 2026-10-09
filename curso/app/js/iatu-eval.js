@@ -911,7 +911,8 @@
     head(mnt, "Cierre", "Cierre del programa");
     mnt.appendChild(M.audioPlayer("IATU-CIERRE_CURSO"));
     mnt.appendChild(h("p", { class: "lead reading" }, O.finish));
-    mnt.appendChild(h("div", { class: "callout info reading" }, h("p", null, IATU.data.curso.pilot)));
+    // «pilot» del maestro es una nota de producción (pendientes del pilotaje): no se muestra al participante.
+    mnt.appendChild(h("div", { class: "callout info reading" }, h("p", null, "Este curso está en su primera versión. Si algo no se entendió o encontraste un error, cuéntaselo a tu equipo formador: tus comentarios nos ayudan a mejorarlo.")));
   }
 
   function rubricTable(rub) {

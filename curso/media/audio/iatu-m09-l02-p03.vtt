@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:04.070
+Cinco casos cerrados tienen duraciones 2, 4, 6, 8 y 80 minutos.
+
+00:00:04.110 --> 00:00:06.670
+Suma 100; media 20; mediana 6.
+
+00:00:06.710 --> 00:00:10.290
+La media es correcta, pero oculta que cuatro casos están por debajo de 10.
+
+00:00:10.330 --> 00:00:13.310
+Comunicar ambos valores con ene igual a 5 ofrece más contexto.
+
+00:00:13.350 --> 00:00:16.600
+En otro periodo entraron 8 casos, 6 cerrados y 2 pendientes.
+
+00:00:16.670 --> 00:00:21.550
+Tasa de cierre 75 %. No calcular 6 de 6 igual a 100 % por filtrar primero los cerrados
+
+00:00:21.590 --> 00:00:25.450
+y olvidar el total. Para duración de cierre, en cambio, sí se trabaja con los cerrados
+
+00:00:25.490 --> 00:00:29.610
+válidos. Estos datos ficticios no permiten afirmar que una herramienta causó la mejora:
+
+00:00:29.650 --> 00:00:32.350
+no hay comparación controlada ni información sobre dificultad.

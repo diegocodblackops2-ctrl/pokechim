@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:02.890
+Catálogo ficticio Bruma ve 1, vigente en abril:
+
+00:00:02.930 --> 00:00:05.480
+curso Inicial, 20 cupos, fecha 22 de abril.
+
+00:00:05.870 --> 00:00:07.210
+Bruma ve 2, vigente en mayo:
+
+00:00:07.250 --> 00:00:09.910
+curso Inicial, 16 cupos, fecha 18 de mayo.
+
+00:00:09.950 --> 00:00:13.220
+La instrucción estable correcta dice “usa la versión aplicable al evento”.
+
+00:00:13.270 --> 00:00:15.690
+La incorrecta dice “siempre informa 20 cupos”.
+
+00:00:15.730 --> 00:00:18.880
+Consulta: “¿Cuántos cupos hay para mayo?” Respuesta de referencia:16 segúnv 2.
+
+00:00:19.910 --> 00:00:23.590
+Si pregunta por junio, debe señalar que no hay una edición de junio en las fuentes.
+
+00:00:23.630 --> 00:00:26.270
+No se proyectan los datos de mayo por continuidad imaginada.
+
+00:00:26.310 --> 00:00:30.090
+Compartir este asistente exige revisar acceso a sus fuentes, no solo el nombre visible.

@@ -1,0 +1,25 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:02.090
+Escribe la fórmula en palabras y luego calcula.
+
+00:00:02.130 --> 00:00:06.780
+Identifica qué filas pertenecen al periodo, si existen duplicados y cómo se tratan vacíos.
+
+00:00:07.110 --> 00:00:08.310
+Contrasta una muestra manual pequeña.
+
+00:00:08.350 --> 00:00:12.130
+Pide al asistente que explique las exclusiones de forma observable, no que revele una cadena
+
+00:00:12.170 --> 00:00:16.210
+interna de pensamiento. Para reglas versionadas, ordena los documentos por vigencia, no
+
+00:00:16.250 --> 00:00:17.590
+solo por fecha de descarga.
+
+00:00:17.630 --> 00:00:20.790
+Si no se informa qué regla aplica a un caso anterior, plantea la duda;
+
+00:00:20.830 --> 00:00:22.430
+no elijas automáticamente la más nueva.

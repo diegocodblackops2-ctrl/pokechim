@@ -1,0 +1,28 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:05.320
+Índice ficticio: de 1, manual público de inscripción, ve 2, mayo, “se requiere formulario”;
+
+00:00:05.360 --> 00:00:08.980
+de 2, manual antiguo ve 1, marzo, “se acepta correo”;
+
+00:00:09.020 --> 00:00:11.740
+de 3, lista restringida de inscritos con teléfonos.
+
+00:00:11.780 --> 00:00:15.260
+Pregunta pública: “¿Cómo me inscribo en mayo?” Recuperación correcta:
+
+00:00:15.300 --> 00:00:18.330
+de 1. Respuesta: “Mediante el formulario, según manualv 2”.
+
+00:00:19.100 --> 00:00:22.280
+de 2 puede conservarse como historial, pero no gobierna mayo.
+
+00:00:22.320 --> 00:00:25.540
+de 3 no es necesario y no debe recuperarse para esta consulta.
+
+00:00:25.580 --> 00:00:29.660
+Si la pregunta es “¿Cuántos cupos habrá en junio?” ninguno de estos fragmentos responde.
+
+00:00:29.700 --> 00:00:33.480
+El sistema debe señalar el vacío, aunque la búsqueda devuelva documentos parecidos.

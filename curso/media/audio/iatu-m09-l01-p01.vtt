@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:01.990
+Una tabla necesita una unidad de registro:
+
+00:00:02.030 --> 00:00:06.750
+qué significa cada fila. Antes de pedir análisis, identifica columnas, tipos de dato, periodo,
+
+00:00:06.790 --> 00:00:08.930
+valores ausentes y posibles duplicados.
+
+00:00:08.970 --> 00:00:13.170
+La IA puede proponer reglas de limpieza, pero no debe borrar filas solo porque se parecen.
+
+00:00:13.210 --> 00:00:14.930
+Conserva siempre una copia original.
+
+00:00:14.970 --> 00:00:16.380
+Un cero puede significar cero;
+
+00:00:16.530 --> 00:00:18.770
+una celda vacía puede significar que no hay información.
+
+00:00:18.810 --> 00:00:22.030
+No reemplaces ambos por el mismo valor sin una regla justificada.
+
+00:00:22.070 --> 00:00:25.510
+Un identificador repetido puede ser un duplicado o una actualización;
+
+00:00:25.550 --> 00:00:27.890
+necesitas el significado del registro para decidir.
