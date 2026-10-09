@@ -24,7 +24,7 @@ NODE_PATH=… bash herramientas/qa/ejecutar_todo.sh   # build + empaquetado + 3 
 ```
 
 ## 4. Estado al 9-oct-2026
-- Voces: las 63 tomas de Storyline están cortadas en 328 pistas (×0,95, MP3 mono 40 kbps, 22 kHz, −16 LUFS). Similitud media con el guion: 0,973.
+- Voces: las 63 tomas de Storyline están cortadas en 328 pistas (×0,95, MP3 mono 24 kbps, 22 kHz, −16 LUFS; el SCORM completo pesa ~27 MB). Similitud media con el guion: 0,973.
 - Redacción: `herramientas/correcciones_estilo.json` (271 reglas) corrige calcos, anglicismos, palabras pegadas, plantillas y notas internas visibles. El maestro no se toca. «Prompt» se define en M02-L01-P01 y se usa desde ahí. El módulo 2 se llama «Ingeniería de prompts: instrucciones que funcionan».
 - Proyecto: lo califica un profesor en el LMS (`config.js › proyecto.correccion = "docente"`). Contrato en `docs/INTEGRACION_PROYECTO_LMS.md`.
 - Portada, ficha y datos del formulario del LMS: `docs/FICHA_CURSO_LMS.md` y `dist/ficha_lms/` (regenerables).
@@ -49,7 +49,7 @@ NODE_PATH=… bash herramientas/qa/ejecutar_todo.sh   # build + empaquetado + 3 
 5. **Música (opcional):** prompts en `docs/locucion/MUSICA_PROMPTS.md`. Dejar los MP3 en `curso/media/music/` (`iatu-musica-01-laboratorio.mp3`…), recomprimir a 96 kbps y reconstruir. El botón aparece solo.
 6. **Agente del LMS:** implementar la bandeja y la vista del profesor según `docs/INTEGRACION_PROYECTO_LMS.md` y cargar `pauta_docente.json` solo en la vista docente.
 7. **Pruebas en el LMS real:** checklist de `docs/INTEGRACION_DIBORK.md` §6 (reanudar, nota, entrega y calificación del proyecto).
-8. **Peso:** el SCORM pesa unos 41 MB (36,6 MB son audio). Si hace falta bajarlo, se puede pasar el audio a 32 kbps en `cortar_grupos.py` (`KBPS`) y volver a cortar.
+8. **Peso:** el SCORM pesa ~27 MB (22 MB de audio a 24 kbps). Las pistas nuevas salen a 24 kbps (`KBPS` en `cortar_grupos.py`).
 9. Revisión humana final de redacción, con `scratchpad` como apoyo: volcar el texto con un script que recorra `curso/data/*.js`.
 
 ## 6. Reglas que siguen vigentes

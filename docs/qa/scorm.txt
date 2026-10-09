@@ -127,7 +127,7 @@
  {
   "prueba": "2004: la entrega queda legible en cmi.comments_from_learner",
   "resultado": "OK",
-  "detalle": "2 comentario(s) · PROYECTO DE DESEMPEÑO · IA para trabajar · IATU-PROYECTO|IATU-P-A1-mv0iyuuo|1/2"
+  "detalle": "2 comentario(s) · PROYECTO DE DESEMPEÑO · IA para trabajar · IATU-PROYECTO|IATU-P-A1-mv0j5pwp|1/2"
  },
  {
   "prueba": "2004: completion_status = completed (17 secciones + dos partes entregadas)",
@@ -207,7 +207,7 @@
  {
   "prueba": "1.2: respeta 4.096 caracteres (guarda avance «lite»)",
   "resultado": "OK",
-  "detalle": "339 caracteres"
+  "detalle": "343 caracteres"
  },
  {
   "prueba": "1.2: informa que los textos largos quedaron solo en el navegador",

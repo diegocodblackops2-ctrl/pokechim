@@ -10,8 +10,8 @@
   "posible_material_privado": [],
   "sco": 1,
   "zip": "dist/IATU_C05_SCORM2004_4ed_v3.0.0.zip",
-  "bytes": 41173023,
-  "sha256": "c25bb2a20ff7557d2ff6a0996e2d7d57a83f2d82dc2d79037a132a524cc5c7db"
+  "bytes": 28029296,
+  "sha256": "ca334d51c7cf73f8d91ba856393be203172e2db2c35dcdc51ab15da5227d32a1"
  },
  "scorm12": {
   "archivos_declarados": 820,
@@ -22,7 +22,7 @@
   "posible_material_privado": [],
   "sco": 1,
   "zip": "dist/IATU_C05_SCORM12_v3.0.0.zip",
-  "bytes": 41172838,
-  "sha256": "89b393458dfe8c6a7035d2807e57b63f0356ed430b632a42ecf6fe100193f311"
+  "bytes": 28029111,
+  "sha256": "9eeec604fa7c200a13c9841a2ae24a0b2c759e9ad14e673c54069bcb30f1c276"
  }
 }

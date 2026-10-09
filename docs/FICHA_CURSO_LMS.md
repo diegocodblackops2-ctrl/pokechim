@@ -87,7 +87,7 @@ En `dist/ficha_lms/`: `portada_1920x1080.jpg`, `portada_1280x720.jpg` (16:9, par
 | Progreso | `cmi.progress_measure` 0–1 y un objetivo por sección (`obj-orientacion`, `obj-m01`…`obj-m16`, `obj-evaluacion`) |
 | Tiempo | `cmi.session_time` solo cuenta tiempo activo (pestaña visible y actividad reciente) |
 | Reanudación | Sí: «Continuar donde quedaste» con `cmi.location` y `cmi.suspend_data` |
-| Peso aproximado | ver `dist/informe_empaquetado.json` (el audio va en MP3 mono de 40 kbps) |
+| Peso aproximado | ver `dist/informe_empaquetado.json` (el audio va en MP3 mono de 24 kbps; el paquete pesa ~27 MB) |
 
 ## Certificado
 Sugerido: emitir constancia de aprobación cuando el LMS reciba `passed`. Texto: «Aprobó el curso IA para trabajar mejor (60 horas estimadas) de Dibork Learning». No es certificación SENCE ni reconocimiento oficial.

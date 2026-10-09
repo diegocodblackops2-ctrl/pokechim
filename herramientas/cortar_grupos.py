@@ -18,7 +18,7 @@ import numpy as np
 RAIZ = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 AUDIO = os.path.join(RAIZ, "curso", "media", "audio")
 SR = 16000
-KBPS = 40  # voz mono a 22,05 kHz (la frecuencia de las tomas): ~5 KB por segundo
+KBPS = 24  # voz mono a 22,05 kHz: el SCORM completo queda bajo 30 MB
 VOZ = {
     "nombre": "Catalina - Español Chileno",
     "voice_id": "6Gr4AVmTax1pMJO0lHRK",
@@ -130,7 +130,7 @@ def procesar(g, mp3, modelo, dur_prev):
         a2, b2 = max(a, lim[k][0] - 0.12), min(b, lim[k][1] + 0.35)
         dst = os.path.join(AUDIO, s["file"])
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{a2:.3f}", "-to", f"{b2:.3f}", "-i", mp3,
-                        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,aresample=22050", "-ac", "1", "-b:a", f"{KBPS}k",
+                        "-af", "loudnorm=I=-16:TP=-1.5:LRA=11,aresample=22050", "-ac", "1", "-abr", "1", "-b:a", f"{KBPS}k",
                         "-codec:a", "libmp3lame", dst], check=True)
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", dst],
                                    capture_output=True, text=True).stdout.strip())
