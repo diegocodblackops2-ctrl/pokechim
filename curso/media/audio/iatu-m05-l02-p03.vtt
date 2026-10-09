@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:03.150
+Tabla Atlas: sesión A, inscritos 20 y confirmados 15;
+
+00:00:03.190 --> 00:00:05.550
+B, inscritos 12 y confirmados 12;
+
+00:00:05.590 --> 00:00:07.850
+C, inscritos 8 y confirmados 5.
+
+00:00:07.890 --> 00:00:09.730
+Total de inscritos: 40. Confirmados:
+
+00:00:09.770 --> 00:00:12.790
+32. Pendientes: 8. Tasa de confirmación total:
+
+00:00:12.830 --> 00:00:16.230
+32 de 40 igual a 80 %. Salida defectuosa:
+
+00:00:16.270 --> 00:00:19.050
+“72 participantes y 32 confirmados”.
+
+00:00:19.090 --> 00:00:20.670
+Suma dos columnas que se superponen.
+
+00:00:20.710 --> 00:00:25.650
+No es un error cosmético. También sería erróneo presentar 15 más 12 más 5 igual a 32 como
+
+00:00:25.690 --> 00:00:29.530
+número de personas únicas si una persona pudiera inscribirse en varias sesiones:
+
+00:00:29.570 --> 00:00:31.990
+el expediente solo permite hablar de inscripciones.
+
+00:00:32.030 --> 00:00:36.050
+La comprobación manual usa las tres filas y la definición de cada columna, no una segunda
+
+00:00:36.090 --> 00:00:38.850
+pregunta que pida al mismo asistente confirmar que está seguro.

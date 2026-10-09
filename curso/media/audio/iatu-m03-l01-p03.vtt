@@ -1,0 +1,43 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:04.500
+Prueba de inicio. Insumo: “El taller Horizonte abre inscripciones el 10 de junio.
+
+00:00:04.540 --> 00:00:07.000
+Tiene 20 cupos. Aún no se ha definido el horario.
+
+00:00:07.040 --> 00:00:08.740
+La inscripción no garantiza un cupo”.
+
+00:00:08.780 --> 00:00:11.930
+Encargo: “Redacta un aviso de 60 palabras como máximo.
+
+00:00:11.980 --> 00:00:13.450
+Conserva todas las condiciones.
+
+00:00:13.540 --> 00:00:15.460
+No inventes horario ni confirmación de cupo.
+
+00:00:15.500 --> 00:00:17.780
+Entrega después una lista de los hechos utilizados”.
+
+00:00:17.820 --> 00:00:22.040
+Salida de referencia: “El 10 de junio abrimos las inscripciones al taller Horizonte, con
+
+00:00:22.080 --> 00:00:25.120
+20 cupos disponibles. El horario todavía está por definir.
+
+00:00:25.160 --> 00:00:26.740
+Inscribirte no garantiza un cupo”.
+
+00:00:26.780 --> 00:00:30.900
+Revisión: fecha de apertura, cupos, horario pendiente y condición de inscripción están
+
+00:00:30.940 --> 00:00:35.380
+presentes. Guarda la revisión separada del aviso para no enviarla por accidente al destinatario.
+
+00:00:35.420 --> 00:00:39.220
+No uses esta prueba para declarar que ChatGPT siempre responde correctamente:
+
+00:00:39.260 --> 00:00:40.260
+es un ejemplo controlado.

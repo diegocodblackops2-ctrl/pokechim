@@ -1,0 +1,46 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:01.670
+Transcripción ficticia: te 1 Camila:
+
+00:00:01.710 --> 00:00:04.380
+“Voy a revisar la pauta; todavía no puedo fijar fecha”.
+
+00:00:04.590 --> 00:00:08.180
+te 2 José: “Propongo enviar una encuesta el viernes, pero falta que lo acuerde el equipo”.
+
+00:00:08.450 --> 00:00:10.650
+te 3 Camila: “Dejemos registrada la propuesta;
+
+00:00:10.690 --> 00:00:12.610
+no la enviemos aún”. Referencia válida:
+
+00:00:12.650 --> 00:00:15.080
+acción revisar pauta; responsable Camila;
+
+00:00:15.150 --> 00:00:16.940
+fecha por confirmar; estado acuerdo;
+
+00:00:17.110 --> 00:00:18.930
+fuente te 1. Segunda fila:
+
+00:00:18.970 --> 00:00:21.490
+proponer encuesta; responsable por confirmar;
+
+00:00:21.530 --> 00:00:23.490
+fecha propuesta viernes, no confirmada;
+
+00:00:23.530 --> 00:00:25.140
+estado propuesta no aprobada;
+
+00:00:25.910 --> 00:00:28.650
+fuentes te 2 a te 3. Un ejemplo de formato con “Responsable:
+
+00:00:28.690 --> 00:00:32.310
+José, Fecha: viernes” no autoriza usar esos valores como acuerdo.
+
+00:00:32.350 --> 00:00:36.590
+Si entregas un ejemplo, usa rótulos distintos o una advertencia explícita de que sus valores
+
+00:00:36.630 --> 00:00:38.050
+no corresponden al expediente.

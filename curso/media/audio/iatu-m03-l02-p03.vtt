@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:05.480
+ce ese ve ficticio: caso, estado, minutos a 1, cerrado, 10 a 2, cerrado, 20 a 3, pendiente,
+
+00:00:05.520 --> 00:00:08.180
+5 a 4, cerrado, 30. Encargo:
+
+00:00:08.220 --> 00:00:10.320
+“Describe las columnas y cuenta las cuatro filas.
+
+00:00:10.360 --> 00:00:12.840
+Calcula el promedio de minutos solo de casos cerrados.
+
+00:00:12.880 --> 00:00:14.740
+Explica numerador y denominador.
+
+00:00:14.780 --> 00:00:18.420
+No interpretes pendiente como cerrado ni concluyas que este promedio representa a todos
+
+00:00:18.460 --> 00:00:21.640
+los clientes. Entrega una tabla con resultado y limitación”.
+
+00:00:21.680 --> 00:00:25.950
+Resultado reconstruible: 10 más 20 más 30 igual a 60;
+
+00:00:26.100 --> 00:00:28.380
+3 casos cerrados; promedio 20 minutos.
+
+00:00:28.420 --> 00:00:33.240
+a 3 se excluye porque su estado no cumple la definición, no porque tenga un valor pequeño.
+
+00:00:33.280 --> 00:00:36.490
+Si la salida da 16,25, mezcló los cuatro casos.
+
+00:00:36.600 --> 00:00:39.240
+Si da 60, entregó la suma en vez del promedio.
+
+00:00:39.280 --> 00:00:42.240
+El resultado se comprueba sin depender de la marca del asistente.

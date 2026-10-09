@@ -1,37 +1,37 @@
 WEBVTT
 
-00:00:00.120 --> 00:00:04.170
+00:00:00.000 --> 00:00:01.920
 Misma tarea, cuatro usos. Consulta:
 
-00:00:04.320 --> 00:00:06.150
+00:00:01.960 --> 00:00:03.660
 “¿Qué debería contener una minuta?”.
 
-00:00:06.620 --> 00:00:12.200
+00:00:03.700 --> 00:00:07.940
 Colaboración: aportas la transcripción ficticia y corriges el primer borrador hasta separar
 
-00:00:12.240 --> 00:00:15.310
+00:00:07.980 --> 00:00:10.090
 acuerdos de propuestas. Sistematización:
 
-00:00:15.700 --> 00:00:20.940
+00:00:10.240 --> 00:00:14.740
 guardas una instrucción, un formato, tres casos de prueba y una pauta para revisar cada
 
-00:00:20.980 --> 00:00:23.720
+00:00:14.780 --> 00:00:16.860
 minuta. Automatización supervisada:
 
-00:00:24.440 --> 00:00:29.790
+00:00:16.900 --> 00:00:21.000
 un flujo recibe una transcripción autorizada, crea un borrador y espera aprobación antes
 
-00:00:29.830 --> 00:00:35.550
+00:00:21.040 --> 00:00:25.220
 de compartirlo. En el último flujo no hay permiso para grabar reuniones, invitar personas
 
-00:00:35.590 --> 00:00:40.520
+00:00:25.260 --> 00:00:28.820
 ni publicar documentos. Cada capacidad necesitaría autorización propia.
 
-00:00:40.890 --> 00:00:45.870
+00:00:28.860 --> 00:00:32.880
 Si la transcripción tiene un responsable dudoso, el sistema debe detener ese campo y pedir
 
-00:00:45.910 --> 00:00:48.740
+00:00:32.920 --> 00:00:35.100
 revisión, no completar un nombre probable.
 
-00:00:49.190 --> 00:00:53.510
+00:00:35.140 --> 00:00:38.660
 El producto profesional puede ser un borrador útil con una incertidumbre visible.

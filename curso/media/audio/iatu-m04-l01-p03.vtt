@@ -1,0 +1,49 @@
+WEBVTT
+
+00:00:00.090 --> 00:00:01.880
+Documento ficticio nexo 1:
+
+00:00:02.550 --> 00:00:04.860
+ene 1 “La sesión piloto dura 45 minutos”.
+
+00:00:05.690 --> 00:00:07.260
+ene 2 “Participan 12 personas”.
+
+00:00:08.130 --> 00:00:09.660
+ene 3 “La encuesta es voluntaria”.
+
+00:00:10.510 --> 00:00:12.930
+ene 4 “El acceso a la grabación todavía no está aprobado”.
+
+00:00:12.970 --> 00:00:18.190
+Encargo: “Extrae duración, participantes, condición de encuesta y estado de grabación con
+
+00:00:18.230 --> 00:00:21.560
+sus i des. Después redacta un aviso de 70 palabras.
+
+00:00:21.790 --> 00:00:25.010
+No transformes una autorización pendiente en un compromiso”.
+
+00:00:25.050 --> 00:00:26.650
+Salida defectuosa controlada:
+
+00:00:26.690 --> 00:00:29.870
+“Te esperamos en una sesión de 45 minutos para 12 personas.
+
+00:00:29.910 --> 00:00:32.590
+Completa la encuesta obligatoria y recibe la grabación”.
+
+00:00:32.630 --> 00:00:34.350
+La revisión detecta dos cambios:
+
+00:00:34.390 --> 00:00:35.970
+voluntaria pasa a obligatoria;
+
+00:00:36.010 --> 00:00:38.190
+grabación pendiente pasa a entrega prometida.
+
+00:00:38.230 --> 00:00:41.300
+La corrección conserva duración y cupo y restituye las condiciones.
+
+00:00:41.370 --> 00:00:44.310
+No hace falta desechar toda la redacción para reparar esos hechos.

@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:01.790
+Un archivo cargado es un insumo;
+
+00:00:01.830 --> 00:00:03.610
+un archivo producido es una entrega.
+
+00:00:03.650 --> 00:00:08.110
+Verifica ambos. ChatGPT documenta herramientas para trabajar con archivos y analizar datos,
+
+00:00:08.150 --> 00:00:10.890
+sujetas a disponibilidad. No basta con recibir un enlace:
+
+00:00:10.930 --> 00:00:14.050
+abre el resultado y revisa filas, fórmulas, unidades y formato.
+
+00:00:14.090 --> 00:00:17.730
+Tampoco asumas que una captura y una hoja de cálculo se leen con la misma fidelidad.
+
+00:00:17.770 --> 00:00:20.150
+Distingue extracción, cálculo e interpretación.
+
+00:00:20.190 --> 00:00:22.180
+Extraer consiste en recuperar valores;
+
+00:00:22.230 --> 00:00:23.850
+calcular en operar con una regla;
+
+00:00:23.890 --> 00:00:26.550
+interpretar en relacionar el resultado con la pregunta.
+
+00:00:26.590 --> 00:00:28.210
+Un error puede aparecer en cualquiera.
+
+00:00:28.250 --> 00:00:32.510
+Para un conjunto pequeño, reproduce la operación manualmente antes de confiar en un gráfico
+
+00:00:32.550 --> 00:00:33.390
+o una conclusión.

@@ -1,40 +1,43 @@
 WEBVTT
 
-00:00:00.120 --> 00:00:04.410
-F1. El equipo Mesa recibe cuatro comentarios:
+00:00:00.120 --> 00:00:02.130
+efe 1. El equipo Mesa recibe cuatro comentarios:
 
-00:00:04.940 --> 00:00:07.790
-C1 “No encontré el instructivo”;
+00:00:02.640 --> 00:00:04.210
+ce 1 “No encontré el instructivo”;
 
-00:00:08.200 --> 00:00:13.890
-C2 “El acceso demoró”; C3 “El instructivo fue claro”;
+00:00:04.540 --> 00:00:07.750
+ce 2 “El acceso demoró”; ce 3 “El instructivo fue claro”;
 
-00:00:14.320 --> 00:00:17.470
-C4 “No pude descargar el archivo”.
+00:00:08.220 --> 00:00:09.970
+ce 4 “No pude descargar el archivo”.
 
-00:00:17.980 --> 00:00:23.470
-F2. Se necesita una tabla interna de temas, no responder a clientes.
+00:00:10.280 --> 00:00:13.650
+efe 2. Se necesita una tabla interna de temas, no responder a clientes.
 
-00:00:23.800 --> 00:00:28.430
-F3. Solo se permite trabajar con estos comentarios ficticios.
+00:00:13.920 --> 00:00:16.790
+efe 3. Solo se permite trabajar con estos comentarios ficticios.
 
-00:00:28.940 --> 00:00:37.190
-F4. Propuesta de flujo: leer comentarios, agruparlos, redactar respuestas y enviarlas automáticamente.
+00:00:17.240 --> 00:00:18.340
+efe 4. Propuesta de flujo:
 
-00:00:37.580 --> 00:00:39.970
+00:00:18.380 --> 00:00:22.460
+leer comentarios, agruparlos, redactar respuestas y enviarlas automáticamente.
+
+00:00:22.500 --> 00:00:23.900
 Clasifica cada paso por lo que hace;
 
-00:00:40.260 --> 00:00:44.230
+00:00:23.940 --> 00:00:27.080
 que esté técnicamente disponible no significa que esté autorizado.
 
-00:00:44.540 --> 00:00:46.410
+00:00:27.120 --> 00:00:28.360
 Lee el expediente completo.
 
-00:00:46.820 --> 00:00:49.410
+00:00:28.400 --> 00:00:30.240
 Ubica cada tarjeta en una categoría.
 
-00:00:49.560 --> 00:00:52.270
+00:00:30.280 --> 00:00:31.530
 Puedes arrastrar o usar “Mover a…”.
 
-00:00:52.440 --> 00:00:57.000
+00:00:32.100 --> 00:00:35.700
 Confirma tu distribución y revisa qué evidencia respalda cada ubicación.

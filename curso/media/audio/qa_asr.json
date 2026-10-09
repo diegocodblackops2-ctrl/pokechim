@@ -29,6 +29,13 @@
    "etiquetas_leidas": []
   },
   {
+   "id": "IATU-M01-CIERRE",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
    "id": "IATU-M01-INTRO",
    "similitud": 1.0,
    "diferencias": [],
@@ -109,6 +116,1485 @@
     {
      "guion": "ce 2",
      "asr": "c2"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L01-P04",
+   "similitud": 0.8626,
+   "diferencias": [
+    {
+     "guion": "efe 1",
+     "asr": "f1"
+    },
+    {
+     "guion": "cuatro",
+     "asr": "4"
+    },
+    {
+     "guion": "ce 1",
+     "asr": "c1"
+    },
+    {
+     "guion": "ce 2",
+     "asr": "c2"
+    },
+    {
+     "guion": "ce 3",
+     "asr": "c3"
+    },
+    {
+     "guion": "ce 4",
+     "asr": "c4"
+    },
+    {
+     "guion": "efe 2",
+     "asr": "f2"
+    },
+    {
+     "guion": "efe 3",
+     "asr": "f3"
+    },
+    {
+     "guion": "efe 4",
+     "asr": "f4"
+    },
+    {
+     "guion": "mover a",
+     "asr": "movera"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L02-P01",
+   "similitud": 0.9924,
+   "diferencias": [
+    {
+     "guion": "de",
+     "asr": "del"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L02-P02",
+   "similitud": 0.9776,
+   "diferencias": [
+    {
+     "guion": "separa tres",
+     "asr": "se para 3"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L02-P03",
+   "similitud": 0.9492,
+   "diferencias": [
+    {
+     "guion": "ve 1",
+     "asr": "v1"
+    },
+    {
+     "guion": "",
+     "asr": "por ciento"
+    },
+    {
+     "guion": "igual a",
+     "asr": "nacio"
+    },
+    {
+     "guion": "",
+     "asr": "por ciento"
+    },
+    {
+     "guion": "vote",
+     "asr": "bote"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L02-P04",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L03-P01",
+   "similitud": 0.9922,
+   "diferencias": [
+    {
+     "guion": "de personas",
+     "asr": ""
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L03-P02",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L03-P03",
+   "similitud": 0.9732,
+   "diferencias": [
+    {
+     "guion": "cuatro",
+     "asr": "4"
+    },
+    {
+     "guion": "corriges",
+     "asr": "corrijes"
+    },
+    {
+     "guion": "tres",
+     "asr": "3"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L03-P04",
+   "similitud": 0.9851,
+   "diferencias": [
+    {
+     "guion": "",
+     "asr": "a"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L04-P01",
+   "similitud": 0.9914,
+   "diferencias": [
+    {
+     "guion": "nist",
+     "asr": "naest"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L04-P02",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L04-P03",
+   "similitud": 0.9924,
+   "diferencias": [
+    {
+     "guion": "revise",
+     "asr": "rebase"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M01-L04-P04",
+   "similitud": 0.9922,
+   "diferencias": [
+    {
+     "guion": "o",
+     "asr": ""
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-CIERRE",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-INTRO",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L01-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L01-P02",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L01-P03",
+   "similitud": 0.9528,
+   "diferencias": [
+    {
+     "guion": "ene equis 14",
+     "asr": "nx14"
+    },
+    {
+     "guion": "dieciseis",
+     "asr": "16"
+    },
+    {
+     "guion": "ene equis 14",
+     "asr": "nx14"
+    },
+    {
+     "guion": "dieciseis",
+     "asr": "16"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L01-P04",
+   "similitud": 0.8692,
+   "diferencias": [
+    {
+     "guion": "ene 1",
+     "asr": "n1"
+    },
+    {
+     "guion": "ene equis 14",
+     "asr": "nx14"
+    },
+    {
+     "guion": "ene 2",
+     "asr": "n2"
+    },
+    {
+     "guion": "ene 3",
+     "asr": "n3"
+    },
+    {
+     "guion": "dieciseis",
+     "asr": "16"
+    },
+    {
+     "guion": "ene 4",
+     "asr": "n4"
+    },
+    {
+     "guion": "ene 5",
+     "asr": "n5"
+    },
+    {
+     "guion": "ene equis 14",
+     "asr": "nx14"
+    },
+    {
+     "guion": "mover a",
+     "asr": "movera"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L02-P01",
+   "similitud": 0.9707,
+   "diferencias": [
+    {
+     "guion": "senalalos",
+     "asr": "senalarlos"
+    },
+    {
+     "guion": "contraejemplo",
+     "asr": "contra ejemplo"
+    },
+    {
+     "guion": "yeison",
+     "asr": "json"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L02-P02",
+   "similitud": 0.972,
+   "diferencias": [
+    {
+     "guion": "pegues",
+     "asr": "pegue"
+    },
+    {
+     "guion": "comprueba nombres",
+     "asr": "comprueban hombres"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L02-P03",
+   "similitud": 0.9009,
+   "diferencias": [
+    {
+     "guion": "te 1",
+     "asr": "temuno"
+    },
+    {
+     "guion": "te 2",
+     "asr": "dedun"
+    },
+    {
+     "guion": "el",
+     "asr": "del"
+    },
+    {
+     "guion": "te 3",
+     "asr": "t3"
+    },
+    {
+     "guion": "te 1",
+     "asr": "t1"
+    },
+    {
+     "guion": "fuentes te 2",
+     "asr": "fuente t2"
+    },
+    {
+     "guion": "te 3",
+     "asr": "t3"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L02-P04",
+   "similitud": 0.9545,
+   "diferencias": [
+    {
+     "guion": "yeison",
+     "asr": "json"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L03-P01",
+   "similitud": 0.9689,
+   "diferencias": [
+    {
+     "guion": "mejoralo",
+     "asr": "mejorarlo"
+    },
+    {
+     "guion": "uso",
+     "asr": "usa"
+    },
+    {
+     "guion": "corrige la",
+     "asr": "corrijela"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L03-P02",
+   "similitud": 0.9826,
+   "diferencias": [
+    {
+     "guion": "corriges",
+     "asr": "corrijes"
+    },
+    {
+     "guion": "destraben",
+     "asr": "destraven"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L03-P03",
+   "similitud": 0.9758,
+   "diferencias": [
+    {
+     "guion": "dieciseis",
+     "asr": "16"
+    },
+    {
+     "guion": "cotejarlas",
+     "asr": "acotejarlas"
+    },
+    {
+     "guion": "dieciseis",
+     "asr": "16"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L03-P04",
+   "similitud": 0.9219,
+   "diferencias": [
+    {
+     "guion": "sol ve",
+     "asr": ""
+    },
+    {
+     "guion": "sol ve",
+     "asr": "solve"
+    },
+    {
+     "guion": "diez",
+     "asr": "10"
+    },
+    {
+     "guion": "diez",
+     "asr": "10"
+    },
+    {
+     "guion": "o",
+     "asr": ""
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L04-P01",
+   "similitud": 0.9811,
+   "diferencias": [
+    {
+     "guion": "exista",
+     "asr": "existe"
+    },
+    {
+     "guion": "necesitas",
+     "asr": "necesita"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L04-P02",
+   "similitud": 0.9649,
+   "diferencias": [
+    {
+     "guion": "i de",
+     "asr": "id"
+    },
+    {
+     "guion": "i des",
+     "asr": "ides"
+    },
+    {
+     "guion": "conviertas",
+     "asr": "convierta"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L04-P03",
+   "similitud": 0.8761,
+   "diferencias": [
+    {
+     "guion": "pol a",
+     "asr": "pola"
+    },
+    {
+     "guion": "5",
+     "asr": "cinco"
+    },
+    {
+     "guion": "pol be",
+     "asr": "polve"
+    },
+    {
+     "guion": "3",
+     "asr": "tres"
+    },
+    {
+     "guion": "1",
+     "asr": "uno"
+    },
+    {
+     "guion": "2",
+     "asr": "dos"
+    },
+    {
+     "guion": "3",
+     "asr": "tres"
+    },
+    {
+     "guion": "1",
+     "asr": "uno"
+    },
+    {
+     "guion": "pol a",
+     "asr": "pola"
+    },
+    {
+     "guion": "2",
+     "asr": "dos"
+    },
+    {
+     "guion": "pol be",
+     "asr": "polve"
+    },
+    {
+     "guion": "3",
+     "asr": "tres"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M02-L04-P04",
+   "similitud": 0.8511,
+   "diferencias": [
+    {
+     "guion": "pol be",
+     "asr": "polve"
+    },
+    {
+     "guion": "1",
+     "asr": "uno"
+    },
+    {
+     "guion": "2",
+     "asr": "dos"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-CIERRE",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-INTRO",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L01-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L01-P02",
+   "similitud": 0.9883,
+   "diferencias": [
+    {
+     "guion": "chatgpt",
+     "asr": "chat gpt"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L01-P03",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L01-P04",
+   "similitud": 0.9484,
+   "diferencias": [
+    {
+     "guion": "erre 1",
+     "asr": "r1"
+    },
+    {
+     "guion": "nueve",
+     "asr": "9"
+    },
+    {
+     "guion": "erre 2",
+     "asr": "r2"
+    },
+    {
+     "guion": "mover a",
+     "asr": "movera"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L02-P01",
+   "similitud": 0.9859,
+   "diferencias": [
+    {
+     "guion": "chatgpt",
+     "asr": "chat gpt"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L02-P02",
+   "similitud": 0.9313,
+   "diferencias": [
+    {
+     "guion": "ce ese ve",
+     "asr": "csv"
+    },
+    {
+     "guion": "comprueba",
+     "asr": "con prueba"
+    },
+    {
+     "guion": "equis ele ese equis",
+     "asr": "xlsx"
+    },
+    {
+     "guion": "comprueba ademas",
+     "asr": "con prueba de mas"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L02-P03",
+   "similitud": 0.9421,
+   "diferencias": [
+    {
+     "guion": "ce ese ve",
+     "asr": "csb"
+    },
+    {
+     "guion": "cuatro",
+     "asr": "4"
+    },
+    {
+     "guion": "mas",
+     "asr": "plus"
+    },
+    {
+     "guion": "mas",
+     "asr": "plus"
+    },
+    {
+     "guion": "igual a",
+     "asr": "erico"
+    },
+    {
+     "guion": "cuatro",
+     "asr": "4"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L02-P04",
+   "similitud": 0.9185,
+   "diferencias": [
+    {
+     "guion": "ce ese ve",
+     "asr": "csv"
+    },
+    {
+     "guion": "pendiente",
+     "asr": "pendientes"
+    },
+    {
+     "guion": "cerrados y",
+     "asr": "cerrado si"
+    },
+    {
+     "guion": "o",
+     "asr": ""
+    }
+   ],
+   "negaciones_o_limites_afectados": [
+    "pendiente"
+   ],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L03-P01",
+   "similitud": 0.9868,
+   "diferencias": [
+    {
+     "guion": "chatgpt",
+     "asr": "chat gpt"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L03-P02",
+   "similitud": 0.9438,
+   "diferencias": [
+    {
+     "guion": "ficticio",
+     "asr": "ficticios"
+    },
+    {
+     "guion": "publiques",
+     "asr": "publices"
+    },
+    {
+     "guion": "ve 2",
+     "asr": "b2"
+    },
+    {
+     "guion": "quince",
+     "asr": "15"
+    },
+    {
+     "guion": "ve 1",
+     "asr": "b1"
+    },
+    {
+     "guion": "ve 1",
+     "asr": "b1"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L03-P03",
+   "similitud": 0.9422,
+   "diferencias": [
+    {
+     "guion": "ve 1",
+     "asr": "b1"
+    },
+    {
+     "guion": "ve 2",
+     "asr": "b2"
+    },
+    {
+     "guion": "quince",
+     "asr": "15"
+    },
+    {
+     "guion": "quince",
+     "asr": "15"
+    },
+    {
+     "guion": "hazlo",
+     "asr": "haz lo"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L03-P04",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L04-P01",
+   "similitud": 0.9867,
+   "diferencias": [
+    {
+     "guion": "chatgpt",
+     "asr": "chat gpt"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L04-P02",
+   "similitud": 0.9789,
+   "diferencias": [
+    {
+     "guion": "comprueba",
+     "asr": "con prueba"
+    },
+    {
+     "guion": "respalden",
+     "asr": "respalde"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L04-P03",
+   "similitud": 0.9069,
+   "diferencias": [
+    {
+     "guion": "encargo",
+     "asr": "en cargo"
+    },
+    {
+     "guion": "efe 1",
+     "asr": "f1"
+    },
+    {
+     "guion": "efe 2",
+     "asr": "f2"
+    },
+    {
+     "guion": "cupo",
+     "asr": "cupos"
+    },
+    {
+     "guion": "efe 1",
+     "asr": "f1"
+    },
+    {
+     "guion": "efe 2",
+     "asr": "f2"
+    },
+    {
+     "guion": "encargo",
+     "asr": "en cargo"
+    },
+    {
+     "guion": "chatgpt",
+     "asr": "chat gpt"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M03-L04-P04",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-CIERRE",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-INTRO",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L01-P01",
+   "similitud": 0.9633,
+   "diferencias": [
+    {
+     "guion": "claude",
+     "asr": "clod"
+    },
+    {
+     "guion": "haz un",
+     "asr": "asun"
+    },
+    {
+     "guion": "i des",
+     "asr": "ideas"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L01-P02",
+   "similitud": 0.9914,
+   "diferencias": [
+    {
+     "guion": "claude",
+     "asr": "cloud"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L01-P03",
+   "similitud": 0.9283,
+   "diferencias": [
+    {
+     "guion": "ene 1",
+     "asr": "n1"
+    },
+    {
+     "guion": "ene 2",
+     "asr": "n2"
+    },
+    {
+     "guion": "ene 3",
+     "asr": "n3"
+    },
+    {
+     "guion": "ene 4",
+     "asr": "n4"
+    },
+    {
+     "guion": "i des",
+     "asr": "ides"
+    },
+    {
+     "guion": "a",
+     "asr": ""
+    },
+    {
+     "guion": "a",
+     "asr": ""
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L01-P04",
+   "similitud": 0.9759,
+   "diferencias": [
+    {
+     "guion": "mover a",
+     "asr": "moveras"
+    },
+    {
+     "guion": "",
+     "asr": "a"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L02-P01",
+   "similitud": 0.9897,
+   "diferencias": [
+    {
+     "guion": "claude",
+     "asr": "cloud"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L02-P02",
+   "similitud": 0.9837,
+   "diferencias": [
+    {
+     "guion": "i",
+     "asr": "y"
+    },
+    {
+     "guion": "no",
+     "asr": "o"
+    }
+   ],
+   "negaciones_o_limites_afectados": [
+    "no"
+   ],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L02-P03",
+   "similitud": 0.9865,
+   "diferencias": [
+    {
+     "guion": "",
+     "asr": "o"
+    },
+    {
+     "guion": "encuesta",
+     "asr": "encuestas"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L02-P04",
+   "similitud": 0.9444,
+   "diferencias": [
+    {
+     "guion": "corriges",
+     "asr": "corrijes"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L03-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L03-P02",
+   "similitud": 0.9739,
+   "diferencias": [
+    {
+     "guion": "capture",
+     "asr": "captura"
+    },
+    {
+     "guion": "necesitas y",
+     "asr": "necesita si"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L03-P03",
+   "similitud": 0.9784,
+   "diferencias": [
+    {
+     "guion": "brief",
+     "asr": "brif"
+    },
+    {
+     "guion": "encuesta",
+     "asr": "en cuesta"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L03-P04",
+   "similitud": 0.9901,
+   "diferencias": [
+    {
+     "guion": "o",
+     "asr": ""
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L04-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L04-P02",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L04-P03",
+   "similitud": 0.9921,
+   "diferencias": [
+    {
+     "guion": "muestre",
+     "asr": "muestra"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M04-L04-P04",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-CIERRE",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-INTRO",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L01-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L01-P02",
+   "similitud": 0.986,
+   "diferencias": [
+    {
+     "guion": "sin cuenta",
+     "asr": "50"
+    }
+   ],
+   "negaciones_o_limites_afectados": [
+    "sin"
+   ],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L01-P03",
+   "similitud": 0.9912,
+   "diferencias": [
+    {
+     "guion": "ve",
+     "asr": ""
+    },
+    {
+     "guion": "",
+     "asr": "a"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L01-P04",
+   "similitud": 0.9106,
+   "diferencias": [
+    {
+     "guion": "1",
+     "asr": "un"
+    },
+    {
+     "guion": "2",
+     "asr": "dos"
+    },
+    {
+     "guion": "once",
+     "asr": "11"
+    },
+    {
+     "guion": "3",
+     "asr": "tres"
+    },
+    {
+     "guion": "mover a",
+     "asr": "movera"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L02-P01",
+   "similitud": 0.96,
+   "diferencias": [
+    {
+     "guion": "si",
+     "asr": "se"
+    },
+    {
+     "guion": "en",
+     "asr": "el"
+    },
+    {
+     "guion": "ilegible",
+     "asr": "elegible"
+    },
+    {
+     "guion": "legible",
+     "asr": "elegible"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L02-P02",
+   "similitud": 0.9794,
+   "diferencias": [
+    {
+     "guion": "contrasta",
+     "asr": "contraste"
+    },
+    {
+     "guion": "reproducirla",
+     "asr": "reproducirlas"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L02-P03",
+   "similitud": 0.952,
+   "diferencias": [
+    {
+     "guion": "tasa",
+     "asr": "taza"
+    },
+    {
+     "guion": "igual",
+     "asr": ""
+    },
+    {
+     "guion": "mas",
+     "asr": "plas"
+    },
+    {
+     "guion": "mas",
+     "asr": "plas sin"
+    },
+    {
+     "guion": "igual a",
+     "asr": "y"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L02-P04",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L03-P01",
+   "similitud": 0.9862,
+   "diferencias": [
+    {
+     "guion": "notebooklm",
+     "asr": "notebook lm"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L03-P02",
+   "similitud": 0.9902,
+   "diferencias": [
+    {
+     "guion": "u",
+     "asr": "y"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L03-P03",
+   "similitud": 0.9302,
+   "diferencias": [
+    {
+     "guion": "ve",
+     "asr": "pero"
+    },
+    {
+     "guion": "once",
+     "asr": "11"
+    },
+    {
+     "guion": "de pendiente",
+     "asr": "dependiente"
+    },
+    {
+     "guion": "once",
+     "asr": "11"
+    },
+    {
+     "guion": "ve 2",
+     "asr": "piotos"
+    },
+    {
+     "guion": "mantienen",
+     "asr": "mantiene en"
+    }
+   ],
+   "negaciones_o_limites_afectados": [
+    "pendiente"
+   ],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L03-P04",
+   "similitud": 0.9259,
+   "diferencias": [
+    {
+     "guion": "ve",
+     "asr": "b"
+    },
+    {
+     "guion": "ve 2",
+     "asr": "b2"
+    },
+    {
+     "guion": "once",
+     "asr": "11"
+    },
+    {
+     "guion": "",
+     "asr": "a"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L04-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L04-P02",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L04-P03",
+   "similitud": 0.972,
+   "diferencias": [
+    {
+     "guion": "aforo",
+     "asr": "a foro"
+    },
+    {
+     "guion": "aforo",
+     "asr": "a foro"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M05-L04-P04",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M06-INTRO",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M06-L01-P01",
+   "similitud": 0.9888,
+   "diferencias": [
+    {
+     "guion": "claude",
+     "asr": "cloud"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M06-L01-P02",
+   "similitud": 0.9741,
+   "diferencias": [
+    {
+     "guion": "chatgpt claude",
+     "asr": "chat gpt cloud"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M06-L01-P03",
+   "similitud": 0.9488,
+   "diferencias": [
+    {
+     "guion": "diez",
+     "asr": "10"
+    },
+    {
+     "guion": "doce",
+     "asr": "12"
+    },
+    {
+     "guion": "aun",
+     "asr": "a un"
+    },
+    {
+     "guion": "",
+     "asr": "y"
+    },
+    {
+     "guion": "a cumple",
+     "asr": "acumple"
+    }
+   ],
+   "negaciones_o_limites_afectados": [
+    "aun"
+   ],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M06-L01-P04",
+   "similitud": 0.9673,
+   "diferencias": [
+    {
+     "guion": "z",
+     "asr": "zeta"
+    },
+    {
+     "guion": "mover a",
+     "asr": "movera"
     }
    ],
    "negaciones_o_limites_afectados": [],

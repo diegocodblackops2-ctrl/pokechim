@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:03.270
+Aviso Atlas ve 1: “Taller virtual el 18 de mayo.
+
+00:00:03.310 --> 00:00:05.970
+Se enviará el enlace únicamente a las personas inscritas.
+
+00:00:06.010 --> 00:00:07.170
+No se ha definido la hora.
+
+00:00:07.210 --> 00:00:08.470
+La sesión no será grabada.
+
+00:00:08.510 --> 00:00:10.210
+Inscripción por formulario interno”.
+
+00:00:10.250 --> 00:00:11.670
+Salida controlada correcta:
+
+00:00:11.710 --> 00:00:13.550
+“Inscríbete mediante el formulario interno.
+
+00:00:13.590 --> 00:00:16.330
+Revisa el enlace que recibirán las personas inscritas.
+
+00:00:16.370 --> 00:00:19.390
+Reserva el 18 de mayo y espera la confirmación de la hora;
+
+00:00:19.430 --> 00:00:23.110
+no habrá grabación”. No se inventa un enlace, una hora ni un correo de soporte.
+
+00:00:23.150 --> 00:00:26.960
+Salida defectuosa: “Entra a tu correo y reenvía la invitación a todos”.
+
+00:00:27.050 --> 00:00:30.330
+El encargo excluía acceder al correo y no autorizaba un envío.
+
+00:00:30.370 --> 00:00:34.170
+Corregir el texto no sería suficiente si una herramienta ya hubiera ejecutado esa acción.

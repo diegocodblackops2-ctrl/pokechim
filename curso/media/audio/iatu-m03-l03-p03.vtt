@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:05.230
+Expediente ve 1: apertura 10 de junio, 20 cupos, horario pendiente, inscripción no garantiza
+
+00:00:05.270 --> 00:00:07.930
+cupo. ve 2 modifica solo el horario a quince horas.
+
+00:00:07.970 --> 00:00:10.650
+Una versión correcta conserva apertura, cupos y condición;
+
+00:00:10.690 --> 00:00:12.910
+cambia “horario por definir” por “quince horas”.
+
+00:00:12.950 --> 00:00:16.660
+Una versión incorrecta elimina la condición de cupo porque la instrucción decía “hazlo
+
+00:00:16.990 --> 00:00:19.010
+más breve”. Instrucción reutilizable:
+
+00:00:19.050 --> 00:00:22.710
+“Cuando recibas una nueva fuente, identifica qué reemplaza y qué permanece.
+
+00:00:22.750 --> 00:00:26.250
+Si hay contradicción sin regla de prioridad, presenta ambas y pregunta.
+
+00:00:26.290 --> 00:00:28.890
+No des por aprobada una versión por estar en el historial”.
+
+00:00:28.930 --> 00:00:32.610
+Esto ayuda a trabajar; no constituye una barrera técnica contra exposición.
+
+00:00:32.650 --> 00:00:35.810
+La revisión de quién tiene acceso sigue haciéndose en los controles del producto.

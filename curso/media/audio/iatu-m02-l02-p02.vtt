@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:01.370
+Prueba con un ejemplo mínimo.
+
+00:00:01.410 --> 00:00:03.130
+Para una minuta, define campos:
+
+00:00:03.170 --> 00:00:07.210
+acción, responsable confirmado, fecha confirmada, estado del acuerdo y fuente.
+
+00:00:07.250 --> 00:00:10.290
+Establece que un dato ausente quede como “por confirmar”.
+
+00:00:10.330 --> 00:00:14.010
+Evita pedir que se completen todos los campos con “la mejor suposición”:
+
+00:00:14.050 --> 00:00:16.730
+eso transforma un formato en una invitación a inventar.
+
+00:00:16.770 --> 00:00:18.400
+Distingue instrucciones de material.
+
+00:00:18.450 --> 00:00:20.890
+Puedes usar encabezados como ENCARGO y TRANSCRIPCIÓN.
+
+00:00:20.930 --> 00:00:24.730
+Esa separación mejora la lectura, pero no es una defensa suficiente contra instrucciones
+
+00:00:24.770 --> 00:00:26.930
+maliciosas insertadas en documentos.
+
+00:00:26.970 --> 00:00:30.310
+Nunca pegues una contraseña para que la IA comprenda “mejor” el contexto.
+
+00:00:30.350 --> 00:00:34.190
+Si el producto será importado, comprueba nombres de campos y tipos antes de conectarlo
+
+00:00:34.230 --> 00:00:34.750
+a una acción.

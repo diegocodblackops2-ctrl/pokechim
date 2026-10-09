@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:01.870
+Pide un artefacto de práctica acotado:
+
+00:00:01.910 --> 00:00:05.290
+una ficha del taller con datos ficticios y un botón que muestre requisitos.
+
+00:00:05.330 --> 00:00:08.430
+Especifica que no capture información ni use servicios externos.
+
+00:00:08.470 --> 00:00:10.830
+Revisa texto, estados y comportamiento con teclado.
+
+00:00:10.870 --> 00:00:13.870
+Pide una revisión localizada y conserva la versión anterior para comparar.
+
+00:00:13.910 --> 00:00:18.230
+Antes de exportar, indica el formato que necesitas y comprueba que la cuenta permita producirlo.
+
+00:00:18.270 --> 00:00:19.930
+Abre el archivo fuera de la vista previa.
+
+00:00:19.970 --> 00:00:22.590
+Si se comparte un enlace, revisa destinatarios y permisos;
+
+00:00:22.630 --> 00:00:24.950
+no uses “cualquiera con el enlace” por comodidad.
+
+00:00:24.990 --> 00:00:28.770
+Si el artefacto ofrece conexión o almacenamiento, detén la práctica y mantén la versión
+
+00:00:28.810 --> 00:00:32.990
+sin datos externos. Esa capacidad requiere una revisión adicional, no un clic automático
+
+00:00:33.030 --> 00:00:33.650
+de aceptación.

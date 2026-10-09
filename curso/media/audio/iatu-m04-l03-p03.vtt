@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00:00.120 --> 00:00:01.820
+Brief ficticio: título “Taller Nexo”;
+
+00:00:01.860 --> 00:00:04.350
+duración 50 minutos; 12 participantes;
+
+00:00:04.680 --> 00:00:06.580
+encuesta voluntaria; transcripción autorizada.
+
+00:00:06.620 --> 00:00:10.840
+Interacción: un botón “Ver condiciones” muestra “Inscribirse no garantiza cupo;
+
+00:00:10.880 --> 00:00:12.980
+la confirmación se informa por el canal habitual”.
+
+00:00:13.020 --> 00:00:15.360
+Prueba de contenido: no aparece “grabación incluida”.
+
+00:00:15.400 --> 00:00:19.040
+Prueba funcional: el botón puede abrirse con teclado y el foco sigue visible.
+
+00:00:19.080 --> 00:00:22.660
+Prueba de acceso: el archivo local no envía datos ni necesita un formulario.
+
+00:00:22.700 --> 00:00:26.820
+Revisión pedida: “Cambia solo el orden de las condiciones y conserva el texto aprobado”.
+
+00:00:26.860 --> 00:00:30.220
+Si el botón no funciona, no se resuelve generando una captura de pantalla.
+
+00:00:30.260 --> 00:00:32.340
+La entrega solicitada es interactiva.
+
+00:00:32.380 --> 00:00:36.580
+Si el producto final será estático, debe cambiarse el alcance explícitamente y conservar
+
+00:00:36.620 --> 00:00:38.320
+la información sin fingir interacción.

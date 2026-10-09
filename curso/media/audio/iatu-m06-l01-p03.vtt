@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:03.160
+Encargo común: “Escribe un aviso de máximo 70 palabras.
+
+00:00:03.290 --> 00:00:07.080
+Feria interna el 9 de agosto, diez horas a doce horas, inscripción voluntaria;
+
+00:00:07.370 --> 00:00:09.010
+capacidad aún pendiente”. Salida A:
+
+00:00:09.050 --> 00:00:10.830
+conserva fecha, hora y voluntariedad;
+
+00:00:10.870 --> 00:00:12.330
+declara capacidad pendiente.
+
+00:00:12.370 --> 00:00:15.790
+Salida B: añade “últimos 30 cupos” y omite voluntariedad.
+
+00:00:15.830 --> 00:00:20.290
+Salida C: conserva todos los hechos, pero usa 130 palabras y debe acortarse.
+
+00:00:20.330 --> 00:00:23.680
+La calidad semántica de A y C supera a B en este expediente;
+
+00:00:24.030 --> 00:00:24.950
+A cumple además el límite.
+
+00:00:24.990 --> 00:00:27.790
+Ninguna etiqueta de marca permite rescatar la invención de B.
+
+00:00:27.830 --> 00:00:30.750
+La segunda ronda cambia la capacidad a 24 confirmada.
+
+00:00:30.790 --> 00:00:34.410
+Debes verificar que A no siga repitiendo “pendiente” por copiar el patrón anterior.

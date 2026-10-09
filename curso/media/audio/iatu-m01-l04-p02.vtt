@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:02.850
+Escribe primero el producto permitido y la acción excluida.
+
+00:00:02.890 --> 00:00:05.830
+Después identifica una fuente que permita verificar el resultado.
+
+00:00:05.870 --> 00:00:08.430
+Si la fuente no existe, pide información o cambia la tarea:
+
+00:00:08.470 --> 00:00:11.610
+en vez de “resuelve el reclamo”, “prepara preguntas para aclararlo”.
+
+00:00:11.650 --> 00:00:15.850
+Si el dato no puede compartirse, utiliza una versión sintética aprobada o realiza el trabajo
+
+00:00:15.890 --> 00:00:20.330
+sin el asistente externo. Un buen resultado en dos ejemplos no autoriza desplegar un flujo
+
+00:00:20.370 --> 00:00:24.470
+en todos los casos. Prueba también una entrada incompleta, una contradictoria y una fuera
+
+00:00:24.510 --> 00:00:27.390
+del alcance. Define quién puede aprobar el siguiente paso.
+
+00:00:27.430 --> 00:00:31.370
+“Revisar después” puede ser insuficiente si el sistema ya hizo una acción irreversible.
+
+00:00:31.410 --> 00:00:34.490
+En situaciones ambiguas, conserva el borrador y evita la ejecución.

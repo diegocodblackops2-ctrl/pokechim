@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00:00.050 --> 00:00:03.590
+Expediente ficticio. pol a, vigente para solicitudes de enero a junio:
+
+00:00:03.630 --> 00:00:05.340
+plazo de revisión 5 días hábiles.
+
+00:00:05.630 --> 00:00:07.170
+pol be, para solicitudes desde julio:
+
+00:00:07.210 --> 00:00:10.730
+plazo 3 días hábiles; casos con antecedentes incompletos quedan pendientes.
+
+00:00:10.770 --> 00:00:13.250
+caso 1: solicitud recibida el 28 de junio.
+
+00:00:13.290 --> 00:00:16.430
+caso 2: solicitud del 3 de julio sin un antecedente requerido.
+
+00:00:16.470 --> 00:00:20.650
+Una síntesis que diga “todos los casos se revisan en 3 días” ignora periodo y excepción.
+
+00:00:20.690 --> 00:00:22.600
+Para caso 1 corresponde consultar pol a.
+
+00:00:22.890 --> 00:00:26.830
+Para caso 2 corresponde pol be y declarar pendiente por información faltante;
+
+00:00:26.870 --> 00:00:30.370
+no prometer 3 días desde una entrada incompleta sin una regla que lo autorice.
+
+00:00:30.410 --> 00:00:33.890
+El mejor encargo pide aplicar la política según fecha y estado de cada caso.

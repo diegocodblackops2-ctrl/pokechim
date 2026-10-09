@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.010 --> 00:00:02.790
+Atlas ve 2: “Actualización del 12 de mayo:
+
+00:00:02.830 --> 00:00:05.490
+el taller del 18 de mayo comenzará a las once horas.
+
+00:00:05.530 --> 00:00:07.070
+La inscripción sigue siendo interna;
+
+00:00:07.110 --> 00:00:09.170
+no habrá grabación”. Producto de referencia:
+
+00:00:09.210 --> 00:00:11.880
+“La hora pasó de pendiente a once horas, según Atlas ve 2.
+
+00:00:12.310 --> 00:00:15.790
+Se mantienen la fecha, el canal de inscripción y la ausencia de grabación”.
+
+00:00:15.830 --> 00:00:19.830
+La versión anterior se conserva como historial, identificada como reemplazada para la hora.
+
+00:00:19.870 --> 00:00:24.070
+Un Gem con la instrucción fija “nunca hay hora confirmada” entraría en conflicto con la
+
+00:00:24.110 --> 00:00:28.110
+nueva fuente. La solución no es repetir el prompt más fuerte, sino corregir la instrucción
+
+00:00:28.150 --> 00:00:30.830
+estable y dejar el dato variable en una fuente fechada.

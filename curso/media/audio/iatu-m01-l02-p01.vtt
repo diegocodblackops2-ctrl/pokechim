@@ -1,43 +1,43 @@
 WEBVTT
 
-00:00:00.000 --> 00:00:04.110
+00:00:00.050 --> 00:00:03.190
 Un modelo es el componente que procesa entradas y genera respuestas.
 
-00:00:04.500 --> 00:00:07.370
+00:00:03.230 --> 00:00:05.470
 Un asistente es el producto con el que conversas:
 
-00:00:07.580 --> 00:00:12.490
+00:00:05.510 --> 00:00:09.050
 puede sumar interfaz, instrucciones, memoria, herramientas y controles.
 
-00:00:12.940 --> 00:00:17.630
+00:00:09.090 --> 00:00:13.050
 La marca del asistente no identifica necesariamente el modelo de cada respuesta.
 
-00:00:18.260 --> 00:00:23.380
+00:00:13.090 --> 00:00:17.130
 Una herramienta permite hacer algo adicional, como buscar, leer un archivo o ejecutar un
 
-00:00:23.420 --> 00:00:26.380
+00:00:17.170 --> 00:00:19.450
 cálculo. Su disponibilidad debe comprobarse;
 
-00:00:26.420 --> 00:00:29.510
+00:00:19.490 --> 00:00:21.630
 no nace porque el texto diga “ya lo hice”.
 
-00:00:29.880 --> 00:00:33.930
+00:00:21.670 --> 00:00:24.930
 Los modelos de lenguaje procesan unidades de texto llamadas tokens.
 
-00:00:34.320 --> 00:00:36.050
+00:00:24.970 --> 00:00:26.410
 No equivalen siempre a palabras.
 
-00:00:36.500 --> 00:00:40.070
+00:00:26.450 --> 00:00:29.390
 El contexto disponible es limitado y depende del sistema.
 
-00:00:40.480 --> 00:00:42.690
+00:00:29.430 --> 00:00:31.270
 No memorices una cifra que puede cambiar:
 
-00:00:42.960 --> 00:00:47.070
+00:00:31.310 --> 00:00:34.510
 aprende a detectar qué material se incluyó y qué parte se verificó.
 
-00:00:47.380 --> 00:00:51.490
+00:00:34.550 --> 00:00:37.770
 Un modelo puede generar texto convincente con una premisa equivocada.
 
-00:00:51.620 --> 00:00:54.600
+00:00:37.810 --> 00:00:39.950
 Por eso la fluidez no es una prueba de exactitud.

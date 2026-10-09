@@ -1,0 +1,37 @@
+WEBVTT
+
+00:00:00.070 --> 00:00:02.090
+Abre Gemini y comprueba la cuenta activa.
+
+00:00:02.130 --> 00:00:06.050
+Localiza sus ajustes de actividad y aplicaciones, sin cambiarlos de forma irreflexiva.
+
+00:00:06.090 --> 00:00:09.950
+Registra fecha, tipo de cuenta, funciones visibles y fuente oficial consultada.
+
+00:00:09.990 --> 00:00:13.890
+Para el primer ejercicio inicia una conversación nueva, añade solo el aviso ficticio y
+
+00:00:13.930 --> 00:00:15.430
+define el producto solicitado.
+
+00:00:15.470 --> 00:00:20.010
+Usa el siguiente encargo: “Convierte el aviso Atlas en tres instrucciones para participantes.
+
+00:00:20.050 --> 00:00:22.370
+Conserva las condiciones y señala lo pendiente.
+
+00:00:22.410 --> 00:00:23.710
+Trabaja solo con este texto;
+
+00:00:23.750 --> 00:00:25.390
+no consultes correo ni calendario”.
+
+00:00:25.430 --> 00:00:27.390
+Revisa cada instrucción contra el insumo.
+
+00:00:27.430 --> 00:00:31.570
+La alternativa sin cuenta consiste en hacer esa comprobación sobre las salidas de referencia;
+
+00:00:31.610 --> 00:00:33.870
+no se marcará como experiencia de uso real de Gemini.

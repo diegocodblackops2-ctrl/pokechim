@@ -1,37 +1,37 @@
 WEBVTT
 
-00:00:00.120 --> 00:00:03.750
+00:00:00.000 --> 00:00:02.600
 Para ubicar una tarea, observa el comportamiento real.
 
-00:00:04.120 --> 00:00:08.930
+00:00:02.640 --> 00:00:06.360
 Una plantilla guardada sigue siendo consulta si nunca se comprueba ni se adapta.
 
-00:00:09.360 --> 00:00:14.240
+00:00:06.400 --> 00:00:10.520
 Un asistente con nombre propio puede ser sistematización si tiene fuentes vigentes y casos
 
-00:00:14.280 --> 00:00:18.070
+00:00:10.560 --> 00:00:13.200
 de prueba; no se vuelve un agente autónomo por tener un logo.
 
-00:00:18.620 --> 00:00:23.050
+00:00:13.240 --> 00:00:16.540
 Antes de pasar al siguiente nivel, pregunta qué problema resuelve el cambio.
 
-00:00:23.600 --> 00:00:26.550
+00:00:16.580 --> 00:00:18.800
 Para colaborar necesitas criterio de aceptación.
 
-00:00:26.700 --> 00:00:30.110
+00:00:18.840 --> 00:00:21.140
 Para sistematizar necesitas versiones y pruebas.
 
-00:00:30.480 --> 00:00:36.190
+00:00:21.180 --> 00:00:25.520
 Para automatizar necesitas además permisos mínimos, registro y un camino de detención.
 
-00:00:36.700 --> 00:00:41.600
+00:00:25.560 --> 00:00:29.420
 Volver a una operación manual es una respuesta válida cuando el riesgo o la variabilidad
 
-00:00:41.640 --> 00:00:43.670
+00:00:29.460 --> 00:00:30.920
 hacen costosa la automatización.
 
-00:00:44.180 --> 00:00:49.510
+00:00:30.960 --> 00:00:35.080
 Estos requisitos son decisiones de diseño del programa, apoyadas en el enfoque de riesgos,
 
-00:00:49.740 --> 00:00:52.320
+00:00:35.120 --> 00:00:37.180
 no una obligación de automatizar toda tarea.

@@ -1,0 +1,31 @@
+WEBVTT
+
+00:00:00.030 --> 00:00:04.230
+Cuando una tarea requiera datos de una aplicación, revisa qué permisos solicita el conector
+
+00:00:04.270 --> 00:00:07.890
+y si necesita escribir. Para una búsqueda documental puede bastar lectura.
+
+00:00:07.930 --> 00:00:11.610
+No autorices eliminación, envío o acceso general si el encargo no lo requiere.
+
+00:00:11.650 --> 00:00:15.110
+En la práctica utiliza el expediente local, sin conectar servicios reales.
+
+00:00:15.150 --> 00:00:19.330
+Si pides código o una automatización a un asistente de desarrollo, define carpeta de trabajo
+
+00:00:19.370 --> 00:00:23.630
+autorizada, archivos que puede cambiar, pruebas, acciones excluidas y forma de entregar
+
+00:00:23.670 --> 00:00:27.130
+evidencia. No pegues comandos en una terminal sin comprender su alcance.
+
+00:00:27.170 --> 00:00:30.230
+Pide explicación de entradas y efectos, no una promesa de seguridad.
+
+00:00:30.270 --> 00:00:34.490
+Si falta el entorno, solicita un plan verificable o una simulación identificada, nunca
+
+00:00:34.530 --> 00:00:36.690
+una declaración inventada de pruebas ejecutadas.
