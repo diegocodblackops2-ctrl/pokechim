@@ -15,26 +15,30 @@ Se generan con `python3 herramientas/build_publico.py && python3 herramientas/em
 |---|---|
 | `cmi.suspend_data` | Estado de **todo** el programa en un registro comprimido (prefijo `z1:`): las 17 secciones, la evaluación, el proyecto y el tiempo. Límite de 64.000 caracteres; si no cabe, se guarda una versión «lite» con los avances y se avisa. |
 | `cmi.location` | Última pantalla (para «continuar donde quedaste»). |
-| `cmi.progress_measure` | 0–1: 90 % por requisitos de las 17 secciones y 10 % por entregar el examen. |
-| `cmi.completion_status` | `completed` cuando las 17 secciones están completas **y** el examen se entregó; si no, `incomplete`. |
-| `cmi.success_status` | `passed` si el mejor intento obtiene 80 o más; `failed` si no; `unknown` antes del primer intento. |
-| `cmi.score.raw/min/max/scaled` | Mejor nota de las situaciones aplicadas (0–100) y su versión escalada. |
+| `cmi.progress_measure` | 0–1: 90 % por requisitos de las 17 secciones, 5 % por entregar las situaciones aplicadas y 5 % por entregar el proyecto. |
+| `cmi.completion_status` | `completed` cuando las 17 secciones están completas **y** se entregaron las dos partes de la evaluación; si no, `incomplete`. |
+| `cmi.success_status` | `unknown` hasta entregar las dos partes. Luego `passed` si la nota global es 80 o más, el proyecto 75 o más y no hay fallos críticos pendientes; si no, `failed` (puede pasar a `passed` con el segundo intento o al subsanar). |
+| `cmi.score.raw/min/max/scaled` | Nota global 0–100 = 40 % situaciones (mejor intento) + 60 % proyecto (mejor intento), y su versión escalada. |
 | `cmi.session_time` | Tiempo activo de la sesión (solo con la pestaña visible y actividad reciente). |
 | `cmi.objectives.n` | Un objetivo por sección (`obj-orientacion`, `obj-m01`…`obj-m16`, `obj-evaluacion`) con completion/success/progress. Son informativos. |
-| `cmi.interactions.n` | Una por situación del examen (respuesta decisión/evidencia y resultado) y la entrega del proyecto. |
+| `cmi.interactions.n` | Una por situación del examen (decisión/evidencia y resultado), una por ítem del proyecto (puntos obtenidos/posibles) y la subsanación de fallos críticos. |
 | `cmi.exit` | Siempre `suspend`. Así la persona puede volver a su devolución; la nota y el estado quedan registrados igual. |
 
 **SCORM 1.2:** `cmi.core.lesson_status` (`incomplete` → `passed`/`failed`), `cmi.core.score.raw/min/max` y `cmi.core.session_time`. El estado va en `cmi.suspend_data`, limitado a **4.096 caracteres**: el avance siempre cabe en versión «lite», pero los textos largos de talleres y proyecto pueden quedar solo en el navegador, y el curso lo avisa. Por eso se recomienda 2004.
 
-## 3. Evaluación dentro del SCORM
-- Bloqueada en el curso hasta que las 17 secciones cumplen sus requisitos (pantallas revisadas, prácticas y talleres con devolución revisada, casos terminados y diagnóstico de orientación).
-- Forma A en el primer intento y B en el segundo; 64 situaciones; 3 + 2 puntos; nota = 100 × puntos / 320; aprobado con **80 o más**. Intentos y umbral se cambian en `config.js` (`evaluacion: { intentos: 2, umbral: 80 }`).
-- **Seguridad:** el banco viaja **ofuscado** en `data/eval.js`. Evita la lectura casual de claves, pero no es seguridad: quien tenga el paquete y conocimientos técnicos puede leerlas. No subir el ZIP a lugares públicos. Para seguridad real, el servicio de corrección de referencia (`servicio-correccion/`) sigue disponible.
-- **Proyecto:** el brief público de la forma (A o B) se muestra en el curso. La persona escribe sus 8 evidencias, que se guardan en el LMS, y al entregar se descarga un `.txt` para la revisión humana. No bloquea la aprobación. Dibork debe definir quién revisa y dónde se sube.
+## 3. Evaluación dentro del SCORM (100 % automática)
+- Bloqueada hasta que las 17 secciones cumplen sus requisitos (pantallas revisadas, prácticas y talleres con devolución revisada, casos terminados y diagnóstico de orientación).
+- **Situaciones aplicadas (40 %):** forma A en el primer intento y B en el segundo; 64 situaciones; 3 + 2 puntos; nota = 100 × puntos / 320. Cuenta el mejor intento.
+- **Proyecto de desempeño (60 %):** forma A (Lumbre) y luego B (Marea), en 9 etapas con el expediente siempre visible: clasificar documentos, elegir, calcular indicadores, ordenar el flujo, escribir los encargos (6 partes) y redactar el producto final, más la actualización del expediente. Se corrige al entregar con una pauta derivada del modelo y las anclas del maestro v3, ponderada por criterio de la rúbrica (C1 20 · C2 25 · C3 30 · C4 25). Los textos se revisan con comprobaciones concretas (fechas, cifras, límites, datos que no deben aparecer); la redacción es libre.
+- **Fallos críticos:** usar la versión reemplazada, inventar aprobaciones, incluir datos personales, o dejar sin hacer el encargo o el producto final. El puntaje se conserva, pero la aprobación queda pendiente hasta que la persona corrige el texto señalado en la misma pantalla de devolución.
+- **Aprobación:** nota global ≥ 80, proyecto ≥ 75 y sin fallos críticos pendientes (regla del maestro v3; ya no requiere revisión humana). Tras entregar, la persona ve su devolución por etapa con el modelo de referencia.
+- Límite declarado: la corrección automática de textos se basa en reglas; acepta redacciones distintas, pero no evalúa estilo ni matices. Si Dibork quiere una revisión adicional, el registro del LMS y las interacciones permiten auditarla.
+- **Seguridad:** banco y pauta viajan **ofuscados** en `data/eval.js`. Evita la lectura casual de claves, pero no es seguridad: quien tenga el paquete y conocimientos técnicos puede leerlas. No subir el ZIP a lugares públicos. La pauta fuente es `autoria_privada/proyecto_auto_v1.json` (privada, fuera del repositorio).
 
 ## 4. Configuración (`config.js` en la raíz del paquete)
 ```js
-window.IATU_CONFIG = { base: "", evaluacion: { intentos: 2, umbral: 80 }, servicio: { url: "", token: null }, banner: "" };
+window.IATU_CONFIG = { base: "", evaluacion: { intentos: 2, umbral: 80 }, proyecto: { intentos: 2, umbral: 75 },
+  global: { peso_examen: 0.4, peso_proyecto: 0.6 }, servicio: { url: "", token: null }, banner: "" };
 ```
 `servicio.url` es opcional: si se configura, en SCORM 1.2 los textos largos que no caben se respaldan en `PUT /api/v1/estado/curso`.
 
@@ -48,6 +52,6 @@ window.IATU_CONFIG = { base: "", evaluacion: { intentos: 2, umbral: 80 }, servic
 2. Avanzar unas pantallas, salir y volver: la portada ofrece «continuar donde quedaste» y el tiempo acumulado se mantiene.
 3. Simular un error de red durante el guardado: el curso muestra el error, no «guardado».
 4. Con una matrícula de prueba, completar las 17 secciones: la evaluación se habilita.
-5. Rendir la forma A, luego la B: revisar en el LMS `score`, `success_status` y `completion_status`, el reporte de interacciones y los objetivos.
+5. Rendir situaciones (A y luego B) y proyecto: revisar en el LMS `score` (nota global), `success_status` y `completion_status`, el reporte de interacciones y los objetivos. Probar un fallo crítico y su subsanación.
 6. Repetir con el ZIP 1.2 y comprobar el aviso de capacidad.
 7. Medir los tiempos de carga desde el LMS.

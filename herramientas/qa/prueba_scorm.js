@@ -72,12 +72,42 @@ const R = []; const ok = (n, c, d) => R.push({ prueba: n, resultado: c ? 'OK' : 
   await f.evaluate(() => { location.hash = '#/evaluacion/requisitos'; }); await p.waitForTimeout(500);
   await f.evaluate(() => { location.hash = '#/evaluacion/examen'; }); await p.waitForTimeout(900);
   await f.check('.card input[type=checkbox]'); await f.click('text=Entregar forma'); await p.waitForTimeout(1200);
-  ok('2004: forma A sin respuestas → no aprobado', await f.isVisible('text=Aún no alcanzas'));
-  ok('2004: success_status = failed tras forma A', (await get('cmi.success_status')) === 'failed', await get('cmi.success_status'));
-  ok('2004: score.scaled = 0', parseFloat(await get('cmi.score.scaled')) === 0, await get('cmi.score.scaled'));
+  ok('2004: forma A sin respuestas → 0 de 100', await f.isVisible('text=Situaciones aplicadas: 0,0 / 100'));
+  ok('2004: sin proyecto no hay aprobado/reprobado aún', (await get('cmi.success_status')) === 'unknown', await get('cmi.success_status'));
   ok('2004: interacciones del examen registradas', parseInt(await get('cmi.interactions._count'), 10) >= 64, await get('cmi.interactions._count'));
-  ok('2004: completion_status = completed (17 secciones + examen entregado)', (await get('cmi.completion_status')) === 'completed', await get('cmi.completion_status'));
+  ok('2004: sin proyecto el curso sigue incompleto', (await get('cmi.completion_status')) === 'incomplete', await get('cmi.completion_status'));
+  // Proyecto forma A: respuestas de la pauta, pero el aviso usa la versión reemplazada → fallo crítico
+  const PROMPT_A = ['Redactar un borrador interno del aviso de Encuentro Lumbre para revisión.', 'Personas inscritas en Encuentro Lumbre del equipo interno ficticio.',
+    'Versión 2 del 8 de octubre: 20 de noviembre de 2026 a las 11:00, tres grupos virtuales de 36 inscripciones cada uno, participación voluntaria, sin grabación, actualización de cupos el 13 de noviembre antes de las 16:00.',
+    'No envíes ni agendes nada. No incluyas nombres, correos ni datos individuales. Aclara que la inscripción no garantiza cupo.',
+    'Asunto y mensaje de 100 a 150 palabras, más una lista de comprobaciones.', 'Reviso fecha, hora, capacidad y que no queden datos de la versión 1.'];
+  const AVISO_A = 'Asunto: Encuentro Lumbre, nueva fecha y condiciones (borrador)\n\nHola: te escribimos por tu inscripción en Encuentro Lumbre. El encuentro será el 20 de noviembre de 2026 a las 11:00, en tres grupos virtuales simultáneos con una capacidad de 36 inscripciones por grupo. La participación es voluntaria. Ten presente que inscribirte no asegura un cupo: la actualización de cupos se informará el 13 de noviembre antes de las 16:00 y solo entonces sabrás si quedaste en un grupo. No habrá grabación de la sesión, así que te recomendamos reservar el horario. El enlace exacto de conexión llegará más adelante por el canal interno habitual. Si tienes dudas sobre tu inscripción o sobre tu grupo, responde a este mensaje por el canal interno y el equipo coordinador te ayudará. Gracias por tu interés en participar. Equipo coordinador de Encuentro Lumbre.';
+  await f.evaluate(() => { location.hash = '#/evaluacion/proyecto'; }); await p.waitForTimeout(1200);
+  await f.click('text=Comenzar proyecto (forma A)'); await p.waitForTimeout(600);
+  ok('2004: proyecto con 9 etapas y expediente', (await f.$$('.pstages button')).length === 10 && (await f.$$('.docpick button')).length >= 8);
+  await f.evaluate(({ PROMPT_A, AVISO_A }) => {
+    const P = window.IATU.u.desofuscar(window.IATU_DATA.eval.pauto, 'IATU-C05-PAUTO'), pr = window.IATU.store.peek('evaluacion').x.proj;
+    P.formas.A.etapas.forEach(e => e.items.forEach((it, i) => {
+      const k = e.id + '.' + i;
+      pr.ans[k] = it.t === 'classify' ? Object.assign({}, it.key) : it.t === 'multi' ? it.key.slice() : it.t === 'mcq' ? it.key
+        : it.t === 'num' ? it.fields.map(x => String(x[1]).replace('.', ',')) : it.t === 'order' ? it.steps.map((_, j) => j)
+        : it.t === 'prompt' ? PROMPT_A : AVISO_A.replace('20 de noviembre de 2026 a las 11:00', '18 de noviembre de 2026 a las 10:00');
+    }));
+    pr.idx = 9;
+  }, { PROMPT_A, AVISO_A });
+  await f.evaluate(() => { location.hash = '#/evaluacion/requisitos'; }); await p.waitForTimeout(400);
+  await f.evaluate(() => { location.hash = '#/evaluacion/proyecto'; }); await p.waitForTimeout(900);
+  await f.check('.card input[type=checkbox]'); await f.click('text=Entregar y corregir'); await p.waitForTimeout(1500);
+  ok('2004: el proyecto se corrige solo y detecta el fallo crítico', await f.isVisible('text=Hay un fallo crítico por subsanar'));
+  const pA = await f.evaluate(() => window.IATU.evaluacion.status());
+  ok('2004: nota del proyecto sobre 90 pese al fallo (puntaje analítico)', pA.pbest > 90 && pA.pbest < 100 && pA.pend, JSON.stringify({ p: pA.pbest, pend: pA.pend }));
+  ok('2004: completion_status = completed (17 secciones + dos partes entregadas)', (await get('cmi.completion_status')) === 'completed', await get('cmi.completion_status'));
+  ok('2004: success_status = failed con fallo crítico pendiente', (await get('cmi.success_status')) === 'failed', await get('cmi.success_status'));
+  await f.fill('.critbox textarea', AVISO_A); await f.click('text=Comprobar y subsanar'); await p.waitForTimeout(1200);
+  ok('2004: subsanar el texto levanta el fallo crítico', await f.isVisible('text=Fallo crítico subsanado') && !(await f.evaluate(() => window.IATU.evaluacion.status().pend)));
+  const pPct = await f.evaluate(() => window.IATU.evaluacion.status().pbest);
   // Forma B: responder con las claves (lectura del banco ofuscado en la prueba) → aprobado
+  await f.evaluate(() => { location.hash = '#/evaluacion/examen'; }); await p.waitForTimeout(900);
   await f.click('text=Usar mi segundo intento'); await p.waitForTimeout(1200);
   await f.click('text=Iniciar forma B'); await p.waitForTimeout(600);
   await f.evaluate(() => {
@@ -87,11 +117,14 @@ const R = []; const ok = (n, c, d) => R.push({ prueba: n, resultado: c ? 'OK' : 
   await f.evaluate(() => { location.hash = '#/evaluacion/requisitos'; }); await p.waitForTimeout(400);
   await f.evaluate(() => { location.hash = '#/evaluacion/examen'; }); await p.waitForTimeout(900);
   await f.check('.card input[type=checkbox]'); await f.click('text=Entregar forma'); await p.waitForTimeout(1500);
-  // 56×5 + 8×3 = 304 / 320 = 95
-  ok('2004: forma B aprobada (95 de 100)', await f.isVisible('text=¡Aprobado!'));
+  // 56×5 + 8×3 = 304 / 320 = 95 → global = 0,4 × 95 + 0,6 × proyecto
+  const glob = Math.round((0.4 * 95 + 0.6 * pPct) * 100) / 100;
+  await f.evaluate(() => { location.hash = '#/evaluacion/resultado'; }); await p.waitForTimeout(1200);
+  ok('2004: nota global aprobada', await f.isVisible('text=¡Aprobado!'));
   ok('2004: success_status = passed', (await get('cmi.success_status')) === 'passed', await get('cmi.success_status'));
-  ok('2004: score.raw = 95 y scaled = 0,95', parseFloat(await get('cmi.score.raw')) === 95 && parseFloat(await get('cmi.score.scaled')) === 0.95, (await get('cmi.score.raw')) + ' / ' + (await get('cmi.score.scaled')));
+  ok('2004: score.raw = nota global y scaled coherente', Math.abs(parseFloat(await get('cmi.score.raw')) - glob) < 0.011 && Math.abs(parseFloat(await get('cmi.score.scaled')) - glob / 100) < 0.0002, (await get('cmi.score.raw')) + ' / ' + (await get('cmi.score.scaled')) + ' (esperado ' + glob + ')');
   ok('2004: score.min/max 0–100', (await get('cmi.score.min')) === '0' && (await get('cmi.score.max')) === '100');
+  ok('2004: interacciones del proyecto registradas', parseInt(await get('cmi.interactions._count'), 10) >= 64 * 2 + 18, await get('cmi.interactions._count'));
   const commit2 = await p.evaluate(() => JSON.stringify(window.API_1484_11.renderCommitCMI(true)));
   ok('2004: cmi.exit = suspend también al aprobar (permite volver a la devolución)', /"exit":"suspend"/.test(commit2), (commit2.match(/"exit":"[^"]*/) || [''])[0]);
   await p.screenshot({ path: OUT + '/qa-scorm-aprobado.png' });

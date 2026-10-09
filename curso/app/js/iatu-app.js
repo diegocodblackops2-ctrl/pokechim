@@ -146,8 +146,9 @@
     }
     var cp = courseProg(), ex = examStatus();
     updateTopbar();
-    // El curso queda «completed» solo con las 17 secciones completas y el examen entregado; el aprobado lo informa la evaluación.
-    store.adapter.setCompletion({ completed: cp.complete && !!ex.sent, progress: Math.min(1, cp.pct * .9 + (ex.sent ? .1 : 0)) });
+    // «completed» solo con las 17 secciones completas, el examen y el proyecto entregados. La evaluación arma el registro
+    // completo (estado, aprobado y nota) para que ninguna llamada pise el passed/failed (SCORM 1.2 usa un solo campo).
+    store.adapter.setCompletion(IATU.evaluacion && IATU.evaluacion.lms ? IATU.evaluacion.lms() : { completed: cp.complete && !!ex.done, progress: Math.min(1, cp.pct * .9) });
     renderDrawer();
   };
   var reportProgress = u.debounce(function (sco, p) {
@@ -269,7 +270,7 @@
         var active = scoOfRoute(R.parts) === sco;
         var prog = sco !== "evaluacion" ? secProg(sco) : null;
         var mark = sco === "evaluacion"
-          ? (cp.complete ? (ex.sent ? h("span", { class: "ring full", role: "img", "aria-label": "entregada" }) : null) : h("span", { class: "nav-lock" }, icon("candado", "bloqueada hasta completar las 17 secciones")))
+          ? (cp.complete ? (ex.done ? h("span", { class: "ring full", role: "img", "aria-label": "entregada" }) : null) : h("span", { class: "nav-lock" }, icon("candado", "bloqueada hasta completar las 17 secciones")))
           : h("span", { class: "ring" + (prog.complete ? " full" : ""), style: "--v:" + prog.pct.toFixed(3), role: "img", "aria-label": prog.complete ? "completo" : Math.round(prog.pct * 100) + " %" });
         var det = h("details", { class: "navmod", open: active });
         det.appendChild(h("summary", { class: "nav-list" }, h("span", { class: "navbtn", style: { display: "flex", gap: ".5rem", alignItems: "center", padding: ".45rem .5rem", fontWeight: active ? 700 : 500 } },
@@ -350,7 +351,7 @@
     // 1. Héroe: red del programa que se enciende con tu avance real
     var nodes = C.scos.map(function (sco) {
       var p = sco === "evaluacion" ? null : secProg(sco);
-      var st = sco === "evaluacion" ? (cp.complete ? (ex.sent ? "done" : "here") : "lock") : p.complete ? "done" : sco === hereSco ? "here" : "todo";
+      var st = sco === "evaluacion" ? (cp.complete ? (ex.done ? "done" : "here") : "lock") : p.complete ? "done" : sco === hereSco ? "here" : "todo";
       return { label: secTitle(sco), short: sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1), state: st, href: st === "lock" ? null : "#/" + firstRoute(sco) };
     });
     var canvas = h("canvas", { class: "neural", "aria-hidden": "true" });
@@ -403,12 +404,12 @@
     mnt.appendChild(h("div", { class: "sec-head" }, h("div", null, h("span", { class: "sec-kick" }, "Tu laboratorio"), h("h2", null, "Tu avance, a la vista"),
       h("p", null, "Cada sección completa enciende un nodo y una insignia. La evaluación final se abre cuando las 17 están listas."))));
     var tiles = h("div", { class: "stats" },
-      [[fx.fmtTime(store.totalTime()), "de trabajo activo"], [Math.round(cp.pct * 100) + " %", "de requisitos cumplidos"], [cp.secs + "/" + cp.nsecs, "secciones completas"], [ex.sent ? "Entregada" : cp.complete ? "Disponible" : "Bloqueada", "evaluación final"]]
+      [[fx.fmtTime(store.totalTime()), "de trabajo activo"], [Math.round(cp.pct * 100) + " %", "de requisitos cumplidos"], [cp.secs + "/" + cp.nsecs, "secciones completas"], [ex.pass ? "Aprobada" : ex.done ? "Entregada" : cp.complete ? "Disponible" : "Bloqueada", "evaluación final"]]
         .map(function (x) { return h("div", { class: "stat" }, h("b", null, x[0]), h("span", null, x[1])); }));
     mnt.appendChild(tiles);
     var badges = h("div", { class: "badges", role: "list", "aria-label": "Insignias del recorrido" });
     C.scos.forEach(function (sco) {
-      var on = sco === "evaluacion" ? !!ex.sent : secProg(sco).complete;
+      var on = sco === "evaluacion" ? !!ex.done : secProg(sco).complete;
       badges.appendChild(h("div", { class: "badge" + (on ? " on" : ""), role: "listitem" }, h("i", { "aria-hidden": "true" }, h("span", null, sco === "orientacion" ? "00" : sco === "evaluacion" ? "EV" : sco.slice(1))),
         h("span", null, (sco === "orientacion" ? "Orientación" : sco === "evaluacion" ? "Evaluación" : "Módulo " + parseInt(sco.slice(1), 10)) + (on ? " · lograda" : ""))));
     });
@@ -437,7 +438,7 @@
       var band = routes.filter(function (r) { return m.number >= r[0] && m.number <= r[1]; })[0][2];
       grid.appendChild(mcard({ n: ("0" + m.number).slice(-2), title: m.title, obj: m.objective, time: (m.minutes / 60) + " h", href: "#/" + m.sco + "/intro", prog: secProg(m.sco), band: band, img: secImage(m.sco) }));
     });
-    grid.appendChild(mcard({ n: "EV", title: "Evaluación, proyecto y transferencia", obj: "Situaciones aplicadas, proyecto con rúbrica y transferencia a tu trabajo.", time: "11 h", href: "#/evaluacion/requisitos", prog: null, band: cp.complete ? "Disponible" : "Bloqueada", img: secImage("evaluacion"), locked: !cp.complete, sent: ex.sent }));
+    grid.appendChild(mcard({ n: "EV", title: "Evaluación, proyecto y transferencia", obj: "Situaciones aplicadas y proyecto con corrección automática al entregar, y transferencia a tu trabajo.", time: "11 h", href: "#/evaluacion/requisitos", prog: null, band: cp.complete ? "Disponible" : "Bloqueada", img: secImage("evaluacion"), locked: !cp.complete, sent: ex.done }));
     mnt.appendChild(grid);
     u.$$(".mcard", grid).forEach(fx.tilt);
 

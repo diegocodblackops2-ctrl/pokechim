@@ -44,6 +44,15 @@ def escribir(ruta, texto):
         f.write(texto)
 
 
+# Regla del maestro v3 adaptada a corrección 100 % automática (pedido de Diego, 9-oct-2026):
+# se mantienen los pesos y umbrales; la revisión humana se reemplaza por la pauta automática del proyecto.
+REGLAS_EVALUACION = ("Situaciones aplicadas: 40 % de la nota global. Proyecto de desempeño: 60 %. "
+                     "Apruebas con nota global de 80 o más (sin redondeo previo) y proyecto de 75 o más, "
+                     "sin fallos críticos pendientes. Las dos partes se corrigen automáticamente al entregar; "
+                     "un fallo crítico se subsana corrigiendo el texto señalado. Dos intentos por parte (forma A y luego B); "
+                     "cuenta el mejor resultado de cada una.")
+
+
 def ofuscar(obj, etiqueta):
     """Ofusca (no cifra) un objeto para el paquete SCORM: XOR con un generador congruencial sembrado por la etiqueta.
     Evita que las claves se lean a simple vista en el código; NO es seguridad: cualquiera con el paquete puede revertirlo.
@@ -229,7 +238,7 @@ def main():
         "title": c["title"], "publication": c["publication"],
         "orientation": c["orientation"], "diagnostic": c["diagnostic"],
         "modules": resumen_mod,
-        "rubric": c["rubric"], "evaluation_rules": c["pedagogy"]["evaluation"],
+        "rubric": c["rubric"], "evaluation_rules": REGLAS_EVALUACION,
         "honesty": c["pedagogy"]["honesty"], "scope": c["pedagogy"]["scope"],
         "pilot": c["pedagogy"]["pilot"], "accessibility": c["pedagogy"]["accessibility"],
         "required_progress": c["required_progress_v3"],
@@ -260,6 +269,20 @@ def main():
     for fid, f in banco["forms"].items():
         eval_cliente["formas"][fid] = ofuscar([unidad_cliente(por_id[i]) for i in f["unit_ids"]], "IATU-C05-" + fid)
     eval_cliente["proyectos"] = ofuscar({p["form"]: proyecto_publico(p) for p in c["projects"]}, "IATU-C05-PROY")
+    # Corrección automática del proyecto (pedido de Diego, 9-oct-2026): pauta privada + bloque del modelo
+    # de referencia que corresponde a cada etapa, para mostrarlo como devolución DESPUÉS de entregar.
+    pauta_ruta = os.path.join(RAIZ, "autoria_privada", "proyecto_auto_v1.json")
+    if not os.path.exists(pauta_ruta):
+        sys.exit("Falta autoria_privada/proyecto_auto_v1.json (pauta privada del proyecto)")
+    pauta = cargar(pauta_ruta)
+    for p in c["projects"]:
+        modelo = {b["title"].split(".")[0].strip(): b for b in p["model"]}
+        for e in pauta["formas"][p["form"]]["etapas"]:
+            num = e["title"].split("·")[0].strip()
+            ref = modelo.get(num)
+            e["modelo"] = {"title": ref["title"], "text": ref["text"]} if ref else {"title": "Actualización resuelta", "text": p["update_model"]}
+    eval_cliente["pauto"] = ofuscar({"criterios": pauta["criterios"], "formas": pauta["formas"]}, "IATU-C05-PAUTO")
+    eval_cliente["global"] = {"peso_examen": 0.4, "peso_proyecto": 0.6, "umbral": 80, "umbral_proyecto": 75}
     escribir(os.path.join(RAIZ, "curso", "data", "eval.js"), js_registro("eval", eval_cliente))
 
     # ---------- privado: servicio de corrección ----------

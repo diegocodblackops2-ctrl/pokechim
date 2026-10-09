@@ -1,2 +1,2 @@
-IATU_C05_SCORM2004_4ed_v3.0.0 {"archivos_declarados": 208, "faltantes": [], "ids_duplicados": [], "referencias_rotas": [], "archivos_no_declarados": [], "posible_material_privado": [], "sco": 1} 10077 KiB
-IATU_C05_SCORM12_v3.0.0 {"archivos_declarados": 208, "faltantes": [], "ids_duplicados": [], "referencias_rotas": [], "archivos_no_declarados": [], "posible_material_privado": [], "sco": 1} 10076 KiB
+IATU_C05_SCORM2004_4ed_v3.0.0 {"archivos_declarados": 208, "faltantes": [], "ids_duplicados": [], "referencias_rotas": [], "archivos_no_declarados": [], "posible_material_privado": [], "sco": 1} 10121 KiB
+IATU_C05_SCORM12_v3.0.0 {"archivos_declarados": 208, "faltantes": [], "ids_duplicados": [], "referencias_rotas": [], "archivos_no_declarados": [], "posible_material_privado": [], "sco": 1} 10121 KiB

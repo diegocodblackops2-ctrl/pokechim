@@ -30,11 +30,21 @@ def _parte(p):
     if len(p) >= 3 and re.search(r"[AEIOU]", p): return p.lower()          # palabra pronunciable: CASO, NEXO, POL
     return " ".join(LETRAS.get(ch, ch) for ch in p)                        # sigla deletreada: NX, RC, S
 def deletrear(t):
+    # --- signos matemáticos y separadores, para que una voz IA los diga como una persona ---
     t = re.sub(r"\b([A-Z]{1,2}\d+):([A-Z]{1,2}\d+)\b", r"\1 a \2", t)          # rangos de celdas B2:B5 → B2 a B5
-    t = re.sub(r"=(?=[A-Z]{2,})", "igual a ", t)                               # =COUNTIF( → igual a COUNTIF(
-    t = t.replace("AVERAGEIF", "average if").replace("COUNTIF", "caunt if").replace("IF(", "if(")
+    t = t.replace("AVERAGEIF", "average if").replace("COUNTIF", "caunt if").replace("COUNTA", "caunt a").replace("IF(", "if(")
+    t = re.sub(r"(?<![\w])n\s*=\s*(?=\d)", "ene igual a ", t)                    # n=5
+    t = re.sub(r"\s*=\s*", " igual a ", t)                                       # 12 de 18 = 66,7 %
+    t = re.sub(r"\s*\+\s*", " más ", t)                                          # 10 + 20
+    t = re.sub(r"(\w+)/(día|semana|mes|año|hora|minuto)s?\b(?!\s*\d)", r"\1 por \2", t)     # 20 cupos/día
+    t = re.sub(r"(\)|\b\w+)/(?=\s*(\d|caunt|average|\())", r"\1 dividido por ", t)  # (12+18+0)/3, nivel/3, …)/caunt a(
+    t = re.sub(r"\s+/\s+", ", ", t)                                               # «revisar / acordado» → coma
+    t = re.sub(r"(?<=\d)/(?=\w)|(?<=\w)/(?=\d)", ", ", t)                        # te 01/cerrado/12
+    t = re.sub(r"/(?=día\s*\d)", ", ", t)                                         # 20 cupos/día 22 → 20 cupos, día 22
+    t = re.sub(r"(?<=\w)/(?=\w)", " o ", t)                                       # Subir/Bajar → Subir o Bajar
+    t = re.sub(r"\s{2,}", " ", t)
     t = re.sub(r"(?<![\w-])(IDs|ID|CSV|JSON|XLSX|SLA|LMS|COUNTA|PDF|URL)(?![\w-])", lambda m: SIGLAS[m.group(1)], t)
-    t = re.sub(r"(?<![\w-])v(\d+)(?![\w-])", lambda m: "ve " + m.group(1), t)
+    t = re.sub(r"(?<![\w-])v ?(\d+)(?![\w-])", lambda m: "ve " + m.group(1), t)
     t = re.sub(r"(?<![\w-])([A-ZÑ]{1,6}(?:-[A-Z0-9]+)+|[A-ZÑ]{1,3}\d+)(?![\w-])", lambda m: " ".join(_parte(x) for x in m.group(1).split("-")), t)
     return t
 bloques = []
@@ -107,7 +117,13 @@ Notas
 ESTA ENTREGA: bloques {A.zip_desde:02d} a {len(bloques):02d}. Los anteriores ya están grabados y no cambian.
 Los códigos ahora vienen escritos como se dicen (NX-14 → «ene equis 14», N4 → «ene 4», POL-A → «pol a»).
 Tres bloques quedaron divididos en dos (sufijos a y b) para no pasar de 3.000 caracteres al deletrear.
-""" if A.zip_desde > 1 else ""))
+""" if A.zip_desde > 1 else f"""
+ESTA ENTREGA: los {len(bloques)} bloques completos, desde el 01, para grabar TODO con la misma voz y que no haya cambios de timbre.
+Los códigos y signos ya vienen escritos como se dicen: NX-14 → «ene equis 14», N4 → «ene 4», C1 → «ce 1»,
+POL-A → «pol a», CSV → «ce ese ve», «12 de 18 = 66,7 %» → «12 de 18 igual a 66,7 %», «10 + 20» → «10 más 20»,
+«Subir/Bajar» → «Subir o Bajar». Los números siguen siendo números.
+Puedes mandarme todos los MP3 juntos en un ZIP: yo los separo en las 328 pistas.
+"""))
 z = os.path.join(RAIZ, "dist", "IATU_C05_voces_storyline_bloques" + (f"_desde_{A.zip_desde:02d}" if A.zip_desde > 1 else "") + ".zip")
 with zipfile.ZipFile(z, "w", zipfile.ZIP_DEFLATED) as zf:
     for r, _, fs in os.walk(out):

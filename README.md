@@ -1,6 +1,6 @@
 # Curso 5 · IA para trabajar mejor · Dibork Learning
 
-Producción del Curso 5 ULTRA (v3), con la identidad **«Laboratorio nocturno de criterio»** (violeta, en movimiento, con una red del programa que se enciende con el avance): 16 módulos, 64 lecciones, 256 pantallas, 32 talleres, 3 casos ramificados, examen A/B dentro del SCORM, proyecto como evidencia, y **un solo SCO** para SCORM 2004 (recomendado) y 1.2.
+Producción del Curso 5 ULTRA (v3), con la identidad **«Laboratorio nocturno de criterio»** (violeta, en movimiento, con una red del programa que se enciende con el avance): 16 módulos, 64 lecciones, 256 pantallas, 32 talleres, 3 casos ramificados, evaluación 100 % automática dentro del SCORM (situaciones A/B 40 % + proyecto por etapas 60 %), y **un solo SCO** para SCORM 2004 (recomendado) y 1.2.
 
 > **Estado:** curso implementado y probado en vista previa y en un LMS simulado (36/36), con 60/60 imágenes. **No está publicado ni listo para venta**: faltan las 328 pistas de voz definitivas (Diego las graba en Storyline con los bloques entregados), los 12 videos con esa voz y la prueba en Dibork Learning. Ver [`docs/INFORME_ENTREGA.md`](docs/INFORME_ENTREGA.md).
 

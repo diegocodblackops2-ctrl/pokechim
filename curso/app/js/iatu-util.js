@@ -249,7 +249,7 @@
 
   IATU.u = {
     h: h, add: add, icon: icon, clear: clear, $: $, $$: $$, newId: newId, announce: announce, toast: toast,
-    inline: inline, paragraphs: paragraphs, docLines: docLines, docView: docView, parseNum: parseNum,
+    seed31: seed31, inline: inline, paragraphs: paragraphs, docLines: docLines, docView: docView, parseNum: parseNum,
     debounce: debounce, nowISO: nowISO, desofuscar: desofuscar, fmtTime: fmtTime, compressB64: compressB64, decompressB64: decompressB64,
     download: download
   };

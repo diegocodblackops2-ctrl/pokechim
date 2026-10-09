@@ -1,10 +1,12 @@
-/* Curso 5 — Evaluación dentro del SCORM (decisión de Diego, 9-oct-2026).
+/* Curso 5 — Evaluación dentro del SCORM (decisiones de Diego, 9-oct-2026), corregida 100 % automáticamente.
    - Se habilita solo cuando las 17 secciones (orientación y 16 módulos) cumplen sus requisitos.
-   - Forma A en el primer intento y B en el segundo (máximo configurable, 2 por defecto).
-   - Corrección 3 (decisión) + 2 (evidencia) por situación; nota = 100 × puntos / 320; aprobado con 80 o más.
-   - Informa al LMS: cmi.score (raw/scaled/min/max), success_status (passed/failed), completion_status e interacciones.
-   - El banco viaja OFUSCADO en data/eval.js: evita la lectura casual de claves, NO es seguridad. Ver docs/INTEGRACION_DIBORK.md.
-   - El proyecto se entrega como evidencia para revisión humana y no bloquea la aprobación. */
+   - Situaciones aplicadas: forma A y luego B; 3 (decisión) + 2 (evidencia) por situación; nota = 100 × puntos / 320.
+   - Proyecto de desempeño: forma A y luego B; 9 etapas con pauta automática (clasificar, elegir, calcular, ordenar,
+     encargos y textos con comprobaciones). Nota 0–100 ponderada por criterio C1–C4 de la rúbrica.
+   - Global = 40 % situaciones (mejor intento) + 60 % proyecto (mejor intento). Aprueba con global ≥ 80, proyecto ≥ 75
+     y sin fallos críticos pendientes (se subsanan corrigiendo el texto señalado). Todo configurable en config.js.
+   - Informa al LMS: cmi.score (raw/scaled/min/max), success_status, completion_status e interacciones.
+   - Banco y pauta viajan OFUSCADOS en data/eval.js: evita la lectura casual de claves, NO es seguridad. */
 (function () {
   "use strict";
   var IATU = window.IATU = window.IATU || {};
@@ -23,9 +25,26 @@
   function forma(id) { return cache[id] || (cache[id] = u.desofuscar(IATU.data.eval.formas[id], "IATU-C05-" + id)); }
   function proyectos() { return cache.P || (cache.P = u.desofuscar(IATU.data.eval.proyectos, "IATU-C05-PROY")); }
 
+  function pauta() { return cache.PA || (cache.PA = u.desofuscar(IATU.data.eval.pauto, "IATU-C05-PAUTO")); }
+  function regla() {
+    var E = IATU.data.eval || {}, g = E.global || {}, c = CFG.global || {}, p = CFG.proyecto || {};
+    return { pe: c.peso_examen != null ? c.peso_examen : g.peso_examen != null ? g.peso_examen : .4,
+      pp: c.peso_proyecto != null ? c.peso_proyecto : g.peso_proyecto != null ? g.peso_proyecto : .6,
+      umbral: umbral(), up: p.umbral || g.umbral_proyecto || 75, pint: p.intentos || 2 };
+  }
+  function phist() { return X().phist || []; }
+  /* Mejor proyecto sin fallos críticos pendientes (el que cuenta para aprobar) y mejor proyecto a secas. */
+  function pbest(clean) { return phist().reduce(function (b, a) { return (clean && a.crit && a.crit.length) || (b && b.pct >= a.pct) ? b : a; }, null); }
+
   function status() {
-    var hs = hist(), b = best();
-    return { sent: hs.length > 0, pass: !!(b && b.pass), best: b ? b.pct : null, attempts: hs.length, max: maxIntentos(), inProgress: !!X().ex };
+    var hs = hist(), b = best(), R = regla(), pb = pbest(true), pa = pbest(false), ph = phist();
+    var g = b && (pb || pa) ? R.pe * b.pct + R.pp * (pb || pa).pct : null;
+    var pass = !!(b && pb && pb.pct >= R.up && g >= R.umbral);
+    var pend = !!(pa && pa.crit && pa.crit.length && !pb);
+    return { sent: hs.length > 0, best: b ? b.pct : null, attempts: hs.length, max: maxIntentos(), inProgress: !!X().ex,
+      psent: ph.length > 0, pbest: (pb || pa) ? (pb || pa).pct : null, pattempts: ph.length, pmax: R.pint, pInProgress: !!X().proj, pend: pend,
+      done: hs.length > 0 && ph.length > 0, global: g, pass: pass,
+      final: pass || (hs.length >= maxIntentos() && ph.length >= R.pint && !pend) };
   }
 
   function head(mnt, k, t) { mnt.appendChild(h("div", { class: "crumbs" }, "Evaluación y proyecto")); mnt.appendChild(h("span", { class: "kicker" }, k)); mnt.appendChild(h("h1", null, t)); }
@@ -41,11 +60,11 @@
       h("div", null, h("span", { class: "eyebrow" }, h("span", { class: "live" }), cp.complete ? "Evaluación disponible" : "Evaluación bloqueada"),
         h("h1", { style: { margin: ".5rem 0 .3rem" } }, cp.complete ? "Llegó el momento de demostrarlo" : "Primero, completa las 17 secciones"),
         h("p", { style: { margin: 0 } }, cp.complete
-          ? "64 situaciones aplicadas con expediente. Necesitas " + umbral() + " o más para aprobar. Tienes " + (stt.max - stt.attempts) + " de " + stt.max + " intentos disponibles."
+          ? "Dos partes que se corrigen solas al entregar: 64 situaciones aplicadas (40 %) y un proyecto de 9 etapas (60 %). Apruebas con " + umbral() + " o más de nota global y " + regla().up + " o más en el proyecto."
           : "Llevas " + cp.secs + " de " + cp.nsecs + " secciones completas (" + Math.round(cp.pct * 100) + " % de los requisitos). La evaluación se abre sola cuando termines.")))));
     var C = IATU.data.curso;
     mnt.appendChild(h("div", { class: "stats" },
-      [["64", "situaciones por forma (A o B)"], ["4", "bloques de 16, con pausa"], ["3 + 2", "puntos: decisión + evidencia"], ["≥ " + umbral(), "para aprobar"]].map(function (s) { return h("div", { class: "stat" }, h("b", null, s[0]), h("span", null, s[1])); })));
+      [["64", "situaciones aplicadas (40 %)"], ["9", "etapas de proyecto (60 %)"], ["≥ " + umbral(), "nota global para aprobar"], ["≥ " + regla().up, "en el proyecto"]].map(function (s) { return h("div", { class: "stat" }, h("b", null, s[0]), h("span", null, s[1])); })));
     mnt.appendChild(h("h2", null, "Tus 17 secciones"));
     var list = h("ul", { class: "gate-list" });
     C.scos.filter(function (s) { return s !== "evaluacion"; }).forEach(function (sco) {
@@ -57,13 +76,19 @@
     mnt.appendChild(list);
     mnt.appendChild(h("p", { class: "note reading" }, C.exam_public.count_definition));
     if (cp.complete) {
-      var row = h("div", { class: "btn-row" });
-      if (stt.inProgress) row.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/examen" }, icon("jugar"), "Continuar mi intento"));
-      else if (stt.pass || stt.attempts >= stt.max) row.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/resultado" }, icon("medalla"), "Ver mi resultado"));
-      else row.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/examen" }, icon("bandera"), stt.attempts ? "Usar mi segundo intento (forma B)" : "Ir a las situaciones aplicadas"));
-      row.appendChild(h("a", { class: "btn", href: "#/evaluacion/proyecto" }, icon("proyecto"), "Proyecto de desempeño"));
-      mnt.appendChild(row);
+      mnt.appendChild(h("h2", null, "Tus dos partes"));
+      mnt.appendChild(h("div", { class: "parts" }, parte("Situaciones aplicadas", "40 %", stt.sent ? fmt(stt.best) + " / 100" : "Pendiente",
+        stt.inProgress ? "Tienes un intento en curso." : stt.attempts + " de " + stt.max + " intentos usados · forma A y luego B.", "#/evaluacion/examen",
+        stt.inProgress ? "Continuar" : !stt.sent ? "Empezar" : stt.attempts < stt.max && !stt.pass ? "Mejorar con la forma B" : "Ver devolución", "bandera"),
+        parte("Proyecto de desempeño", "60 %", stt.psent ? fmt(stt.pbest) + " / 100" : "Pendiente",
+        stt.pend ? "Hay un fallo crítico por subsanar." : stt.pInProgress ? "Tienes un proyecto en curso." : stt.pattempts + " de " + stt.pmax + " intentos usados · forma A y luego B.", "#/evaluacion/proyecto",
+        stt.pInProgress ? "Continuar" : stt.pend ? "Subsanar" : !stt.psent ? "Empezar" : "Ver devolución", "proyecto")));
+      if (stt.done) mnt.appendChild(h("div", { class: "btn-row" }, h("a", { class: "btn btn-primary", href: "#/evaluacion/resultado" }, icon("medalla"), "Ver mi nota global")));
     }
+  }
+  function parte(t, peso, nota, sub, href, cta, ic) {
+    return h("section", { class: "part-card" }, h("div", { class: "pc-top" }, h("span", { class: "tag tag-violet" }, peso), h("b", { class: "pc-score" }, nota)),
+      h("h3", null, t), h("p", { class: "note" }, sub), h("a", { class: "btn btn-sm btn-primary", href: href }, icon(ic), cta));
   }
   function blocked(mnt) {
     mnt.appendChild(h("div", { class: "callout warn" }, h("h3", null, icon("candado"), " Aún bloqueada"),
@@ -81,6 +106,7 @@
       var x = X(), stt = status();
       if (x.ex) return runExam(box);
       if (stt.pass || stt.attempts >= stt.max) return results(box, hist()[hist().length - 1]);
+      if (stt.sent && !x.nuevo) return results(box, hist()[hist().length - 1]);
       startScreen(box, stt);
     }, function (e) { u.clear(box); box.appendChild(h("div", { class: "callout risk" }, e.message)); });
   }
@@ -92,10 +118,10 @@
         h("li", null, "Puedes pausar y volver: tus respuestas quedan guardadas en el LMS."),
         h("li", null, "Puedes revisar y cambiar respuestas antes de entregar."),
         h("li", null, "La devolución se muestra después de entregar la forma completa."),
-        h("li", null, "Intento " + (stt.attempts + 1) + " de " + stt.max + " · forma " + f + ". Apruebas con " + umbral() + " o más."))));
+        h("li", null, "Intento " + (stt.attempts + 1) + " de " + stt.max + " · forma " + f + ". Cuenta tu mejor intento, que aporta el " + Math.round(regla().pe * 100) + " % de la nota global."))));
     var b = h("button", { class: "btn btn-primary", type: "button" }, icon("bandera"), "Iniciar forma " + f);
     b.addEventListener("click", function () {
-      X().ex = { n: stt.attempts + 1, forma: f, ans: {}, idx: 0, ini: new Date().toISOString() };
+      X().ex = { n: stt.attempts + 1, forma: f, ans: {}, idx: 0, ini: new Date().toISOString() }; delete X().nuevo;
       persist(true); u.clear(box); runExam(box);
     });
     box.appendChild(h("div", { class: "btn-row" }, b));
@@ -198,23 +224,30 @@
     IATU.app.refreshProgress();
     return at;
   }
-  function report() {
-    var b = best(), stt = status(), cp = IATU.app.courseProg();
-    if (!b) return;
-    var final = stt.pass || stt.attempts >= stt.max;
-    store.setCompletion({ completed: cp.complete, success: b.pass ? "passed" : "failed", raw: Math.round(b.pct * 100) / 100, scaled: b.pct / 100, max: 100, final: final, progress: 1 });
-    store.section("obj-evaluacion", b.pass, 1);
+  /* Registro completo para el LMS: lo usan la evaluación y app.refreshProgress (así nadie pisa el passed/failed). */
+  function lms() {
+    var cp = IATU.app.courseProg(), stt = status(), o = { completed: cp.complete && stt.done, progress: Math.min(1, cp.pct * .9 + (stt.sent ? .05 : 0) + (stt.psent ? .05 : 0)) };
+    if (stt.done) {
+      var g = Math.round(stt.global * 100) / 100;
+      o.success = stt.pass ? "passed" : "failed"; o.raw = g; o.scaled = g / 100; o.max = 100; o.final = stt.final;
+    }
+    return o;
   }
-
+  function report() {
+    var stt = status();
+    store.setCompletion(lms());
+    if (stt.done) store.section("obj-evaluacion", stt.pass, 1);
+  }
   function results(box, at, fresh) {
     if (!at) { box.appendChild(h("p", null, "Aún no entregas ninguna forma.")); return; }
     var units = forma(at.forma), stt = status();
     var ring = h("div", { class: "ringbig", style: "--v:" + (at.pct / 100).toFixed(3) + ";width:150px;height:150px;font-size:1.6rem" }, h("span", null, fmt(at.pct)));
     box.appendChild(h("section", { class: "gate-hero" }, h("div", { style: { display: "flex", gap: "1.6rem", alignItems: "center", flexWrap: "wrap" } }, ring,
       h("div", null, h("span", { class: "eyebrow" }, "Forma " + at.forma + " · intento " + at.n + " de " + stt.max),
-        h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, at.pass ? "¡Aprobado!" : "Aún no alcanzas el " + umbral()),
-        h("p", { style: { margin: 0 } }, at.raw + " de " + at.max + " puntos · " + fmt(at.pct) + " de 100. " + (at.pass ? "Tu resultado quedó informado al LMS." : stt.attempts < stt.max ? "Revisa la devolución y usa tu segundo intento con la forma B." : "Usaste tus intentos. Revisa la devolución con tu equipo formador."))))));
-    if (fresh && at.pass) IATU.fx.celebrate("✓", "Evaluación aprobada", fmt(at.pct) + " de 100 en situaciones aplicadas.");
+        h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, at.pct >= umbral() ? "¡Muy buen resultado!" : "Situaciones aplicadas: " + fmt(at.pct) + " / 100"),
+        h("p", { style: { margin: 0 } }, at.raw + " de " + at.max + " puntos · " + fmt(at.pct) + " de 100. Cuenta tu mejor intento y aporta el " + Math.round(regla().pe * 100) + " % de la nota global. " +
+          (stt.pass ? "Tu evaluación está aprobada." : !stt.psent ? "Te falta el proyecto (60 %)." : stt.attempts < stt.max ? "Puedes mejorar con la forma B." : ""))))));
+    if (fresh && at.pct >= umbral()) IATU.fx.celebrate("✓", "Situaciones aplicadas", fmt(at.pct) + " de 100.");
     box.appendChild(h("h2", null, "Por módulo"));
     var bars = h("div", { class: "modbars" });
     Object.keys(at.mod).sort().forEach(function (m) {
@@ -237,86 +270,411 @@
       box.appendChild(det);
     });
     var row = h("div", { class: "btn-row" });
-    if (!stt.pass && stt.attempts < stt.max) row.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/examen" }, icon("reintentar"), "Usar mi segundo intento (forma B)"));
-    row.appendChild(h("a", { class: "btn" + (stt.pass ? " btn-primary" : ""), href: "#/evaluacion/proyecto" }, icon("proyecto"), "Ir al proyecto"));
+    if (!stt.pass && stt.attempts < stt.max) {
+      var again = h("a", { class: "btn", href: "#/evaluacion/examen" }, icon("reintentar"), "Usar mi segundo intento (forma B)");
+      again.addEventListener("click", function () { X().nuevo = 1; });
+      row.appendChild(again);
+    }
+    row.appendChild(h("a", { class: "btn btn-primary", href: stt.done ? "#/evaluacion/resultado" : "#/evaluacion/proyecto" }, icon(stt.done ? "medalla" : "proyecto"), stt.done ? "Ver mi nota global" : "Ir al proyecto"));
     box.appendChild(row);
   }
 
-  /* ---------- Proyecto (evidencia para revisión humana; no bloquea la aprobación) ---------- */
+  /* ---------- Proyecto de desempeño: 9 etapas con corrección automática ---------- */
+  function sinTildes(t) { return String(t || "").normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+  /* ¿El texto cumple la comprobación? Con «neg», ignora la coincidencia si va negada justo antes («ya no es el 18…»). */
+  function cumple(c, txt) {
+    var re = new RegExp(sinTildes(c.re), "gi"), t = sinTildes(txt), m;
+    while ((m = re.exec(t))) {
+      if (!c.neg || !/(^|[^a-z])(no|sin|nunca|tampoco|ni)\s[^.]{0,25}$/i.test(t.slice(Math.max(0, m.index - 30), m.index))) return true;
+      if (m[0] === "") re.lastIndex++;
+    }
+    return false;
+  }
+  function palabras(t) { return (String(t || "").match(/[0-9A-Za-zÀ-ÿ%:/.,-]+/g) || []).filter(function (w) { return /[0-9A-Za-zÀ-ÿ]/.test(w); }).length; }
+  function fmtN(n) { return String(Math.round(n * 100) / 100).replace(".", ","); }
+  function semilla(str) { var x = u.seed31(str); return function () { x = (Math.imul(x, 1103515245) + 12345) & 0x7fffffff; return x / 0x7fffffff; }; }
+  function barajar(n, key) { var r = semilla(key), a = []; for (var i = 0; i < n; i++) a.push(i); for (i = n - 1; i > 0; i--) { var j = Math.floor(r() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } if (a.every(function (v, k) { return v === k; })) a.reverse(); return a; }
+
+  /* Corrige un ítem. Devuelve { s, max, det:[[ok, texto]], crit:[etiquetas] }. */
+  function corregirItem(it, v) {
+    var r = { s: 0, max: it.pts, det: [], crit: [] }, ok = 0;
+    if (it.t === "classify") {
+      it.rows.forEach(function (row) {
+        var a = v ? v[row[0]] : undefined, good = a === it.key[row[0]]; if (good) ok++;
+        r.det.push([good, row[1] + " → " + (a === undefined || a === null ? "sin respuesta" : it.cats[a]) + (good ? "" : " · correcto: " + it.cats[it.key[row[0]]])]);
+      });
+      r.s = it.pts * ok / it.rows.length;
+    } else if (it.t === "multi") {
+      var sel = v || [], hit = 0, fp = 0;
+      it.opts.forEach(function (o, i) {
+        var k = it.key.indexOf(i) >= 0, m = sel.indexOf(i) >= 0;
+        if (k && m) hit++; if (!k && m) fp++;
+        r.det.push([k === m, (k ? (m ? "Marcaste bien: " : "Faltó marcar: ") : (m ? "No correspondía: " : "Bien dejado fuera: ")) + o]);
+      });
+      r.s = it.pts * Math.max(0, (hit - fp) / it.key.length);
+    } else if (it.t === "mcq") {
+      var g1 = v === it.key; r.s = g1 ? it.pts : 0;
+      r.det.push([g1, v === undefined || v === null ? "Sin respuesta" : "Elegiste: " + it.opts[v]]);
+      if (!g1) r.det.push([true, "Respuesta esperada: " + it.opts[it.key]]);
+    } else if (it.t === "num") {
+      it.fields.forEach(function (f, i) {
+        var raw = v && v[i], n = u.parseNum(raw), tol = f[2] > 0 ? Math.max(f[2], 0.051) : 1e-9, good = !isNaN(n) && Math.abs(n - f[1]) <= tol;
+        if (good) ok++;
+        r.det.push([good, f[0] + ": " + (raw ? raw : "vacío") + (good ? "" : " · esperado " + fmtN(f[1]) + (f[3] ? " " + f[3] : ""))]);
+      });
+      r.s = it.pts * ok / it.fields.length;
+    } else if (it.t === "order") {
+      var o = v || [], n = it.steps.length, pares = 0, bien = 0;
+      for (var i = 0; i < n; i++) for (var j = i + 1; j < n; j++) { pares++; if (o.indexOf(i) > -1 && o.indexOf(i) < o.indexOf(j)) bien++; }
+      var f1 = o.length === n ? Math.max(0, (bien / pares - .5) * 2) : 0;
+      r.s = it.pts * f1;
+      r.det.push([f1 === 1, f1 === 1 ? "Orden correcto." : "Tu orden: " + o.map(function (k) { return it.steps[k]; }).join(" → ")]);
+      if (f1 < 1) r.det.push([true, "Orden esperado: " + it.steps.join(" → ")]);
+    } else if (it.t === "prompt") {
+      var vv = v || [], llenos = it.fields.filter(function (f, i) { return (vv[i] || "").trim().length >= it.min; }).length, pas = 0, todo = vv.join("\n");
+      r.det.push([llenos === it.fields.length, llenos + " de " + it.fields.length + " partes del encargo completas (mínimo " + it.min + " caracteres cada una)"]);
+      it.checks.forEach(function (c) { var g = cumple(c, c.field < 0 ? todo : vv[c.field] || ""); if (g) pas++; r.det.push([g, c.label]); });
+      r.s = it.pts * (.25 * llenos / it.fields.length + .75 * pas / it.checks.length);
+      if (llenos < 4) r.crit.push("Encargo incompleto: faltan partes del encargo (" + llenos + " de " + it.fields.length + ")");
+    } else if (it.t === "text") {
+      var tx = v || "", w = palabras(tx), enRango = w >= it.min_words && w <= it.max_words, tot = it.checks.length + 1, pas2 = enRango ? 1 : 0;
+      r.det.push([enRango, "Extensión: " + w + " palabras (pedido: " + it.min_words + "–" + it.max_words + ")"]);
+      it.checks.forEach(function (c) {
+        var hay = cumple(c, tx), g = c.must ? hay : !hay; if (g) pas2++;
+        r.det.push([g, c.label]);
+        if (!c.must && hay && c.critical) r.crit.push(c.label);
+      });
+      r.s = it.pts * pas2 / tot;
+      // Sin producto no hay puntaje: las comprobaciones «no debe aparecer» no premian un texto vacío.
+      if (w < it.min_words * .5) { r.s = 0; r.crit.push("Producto final ausente o demasiado breve (" + w + " palabras)"); }
+    }
+    r.s = Math.round(r.s * 100) / 100;
+    return r;
+  }
+  function corregirProyecto(forma, ans) {
+    var P = pauta(), F = P.formas[forma], cr = {}, items = {}, crit = [], raw = 0, max = 0;
+    F.etapas.forEach(function (e) {
+      e.items.forEach(function (it, i) {
+        var k = e.id + "." + i, r = corregirItem(it, ans[k]);
+        items[k] = [r.s, r.max]; raw += r.s; max += r.max;
+        cr[e.crit] = cr[e.crit] || [0, 0]; cr[e.crit][0] += r.s; cr[e.crit][1] += r.max;
+        r.crit.forEach(function (c) { crit.push({ k: k, label: c }); });
+      });
+    });
+    var W = P.criterios, sw = 0, pct = 0;
+    Object.keys(W).forEach(function (c) { if (cr[c]) { sw += W[c]; pct += W[c] * cr[c][0] / cr[c][1]; } });
+    pct = sw ? 100 * pct / sw : 0;
+    return { pct: Math.round(pct * 100) / 100, raw: Math.round(raw * 100) / 100, max: max, cr: cr, items: items, crit: crit };
+  }
+
   function proyecto(mnt) {
     head(mnt, "Proyecto de desempeño", "Proyecto de desempeño");
     if (!IATU.app.courseProg().complete) return blocked(mnt);
     var box = h("div", null, h("p", { class: "loading" }, "Cargando tu expediente…"));
     mnt.appendChild(box);
-    loadEval().then(function () { u.clear(box); renderProject(box); }, function (e) { u.clear(box); box.appendChild(h("div", { class: "callout risk" }, e.message)); });
+    loadEval().then(function () {
+      u.clear(box);
+      var x = X(), stt = status(), ph = phist();
+      if (x.proj) return runProject(box);
+      if (ph.length && (!x.pnuevo || stt.pass || stt.pattempts >= stt.pmax)) return projResults(box, ph[ph.length - 1]);
+      projStart(box, stt);
+    }, function (e) { u.clear(box); box.appendChild(h("div", { class: "callout risk" }, e.message)); });
   }
-  function renderProject(box) {
-    var x = X(), pr = x.proj || (x.proj = { forma: hist().length > 1 ? "B" : "A", ev: [], upd: "" });
-    var p = proyectos()[pr.forma], C = IATU.data.curso, locked = !!pr.sent;
-    box.appendChild(h("div", { class: "callout info reading" }, h("p", null, h("b", null, "Cómo se usa: "), "el proyecto es tu evidencia de desempeño para la revisión humana de Dibork. Tu aprobación en el LMS depende de las situaciones aplicadas; el proyecto no la bloquea. Al entregar, descarga tu copia y súbela donde indique tu equipo formador.")));
-    box.appendChild(h("div", { class: "meta-row" }, h("span", { class: "tag tag-violet" }, "Forma " + p.form), h("span", { class: "tag" }, icon("reloj"), " " + p.minutes / 60 + " h estimadas"), h("span", { class: "tag " + (locked ? "tag-teal" : "") }, locked ? "Entregado" : "Borrador")));
+  function brief(box, p) {
     box.appendChild(h("h2", null, p.title));
     box.appendChild(h("p", null, h("b", null, "Rol: "), p.role, " · ", h("b", null, "Destinatarios: "), p.audience));
     box.appendChild(h("p", { class: "lead reading" }, p.purpose));
     box.appendChild(h("div", { class: "callout warn reading" }, h("h3", null, icon("limite"), " Restricciones"), h("p", null, p.restrictions)));
-    box.appendChild(h("h3", null, "Plan de trabajo sugerido"));
-    box.appendChild(h("ol", { class: "ws-steps" }, p.workplan.map(function (s, i) { return h("li", null, h("b", null, (i + 1) + ". " + s.stage), s.minutes + " min"); })));
-    var docs = h("details", { open: !locked }, h("summary", null, h("b", null, "Expediente completo (" + p.documents.length + " documentos)")));
-    p.documents.forEach(function (d) { docs.appendChild(u.docView({ tab: d.id + " · " + d.classification, title: d.title, text: d.text })); });
-    box.appendChild(docs);
     box.appendChild(h("div", { class: "callout" }, h("h3", null, "Encargo"), h("p", null, p.task)));
-    box.appendChild(h("h3", null, "Rúbrica pública"));
-    box.appendChild(rubricTable(C.rubric));
-    box.appendChild(h("p", { class: "note reading" }, p.accepted));
-    box.appendChild(h("p", { class: "note reading" }, h("b", null, "Fallos críticos: "), p.critical_policy));
-    box.appendChild(h("h2", null, "Tus ocho evidencias"));
-    p.expected_evidence.forEach(function (lab, i) {
-      var id = u.newId("ev"), ta = h("textarea", { id: id, rows: 6, disabled: locked }, pr.ev[i] || "");
-      ta.addEventListener("input", function () { pr.ev[i] = ta.value; persist(); });
-      box.appendChild(h("label", { class: "fl", for: id }, (i + 1) + ". " + lab)); box.appendChild(ta);
+  }
+  function projStart(box, stt) {
+    var f = stt.pattempts % 2 === 0 ? "A" : "B", p = proyectos()[f], F = pauta().formas[f], R = regla();
+    box.appendChild(h("div", { class: "meta-row" }, h("span", { class: "tag tag-violet" }, "Forma " + f), h("span", { class: "tag" }, icon("reloj"), " " + p.minutes / 60 + " h estimadas"), h("span", { class: "tag" }, "Intento " + (stt.pattempts + 1) + " de " + stt.pmax)));
+    brief(box, p);
+    box.appendChild(h("h3", null, "Cómo se corrige"));
+    box.appendChild(h("ul", { class: "reading" },
+      h("li", null, "Trabajas en 9 etapas con el expediente siempre a mano: clasificar, elegir, calcular, ordenar, escribir tus encargos y redactar el producto final."),
+      h("li", null, "Al entregar, todo se corrige automáticamente con la pauta del curso, por criterio de la rúbrica: C1 20 %, C2 25 %, C3 30 % y C4 25 %."),
+      h("li", null, "Los textos se revisan con comprobaciones concretas (fechas, cifras, límites, datos que no deben aparecer). La redacción es libre: no se exige coincidencia literal."),
+      h("li", null, "Un fallo crítico (por ejemplo, usar la versión reemplazada o incluir datos personales) deja la aprobación pendiente hasta que lo subsanes."),
+      h("li", null, "El proyecto aporta el " + Math.round(R.pp * 100) + " % de la nota global y necesitas " + R.up + " o más. Puedes pausar: tus respuestas quedan guardadas.")));
+    box.appendChild(h("ol", { class: "ws-steps" }, F.etapas.map(function (e) { return h("li", null, h("b", null, e.title.replace(/^\d+ · /, "")), e.crit); })));
+    var b = h("button", { class: "btn btn-primary", type: "button" }, icon("proyecto"), "Comenzar proyecto (forma " + f + ")");
+    b.addEventListener("click", function () {
+      X().proj = { n: stt.pattempts + 1, forma: f, ans: {}, idx: 0, ini: new Date().toISOString() }; delete X().pnuevo;
+      persist(true); u.clear(box); runProject(box);
     });
-    box.appendChild(h("h3", null, "Actualización del expediente"));
-    box.appendChild(u.docView({ tab: "Actualización autorizada", text: p.update }));
-    var uid = u.newId("upd"), upd = h("textarea", { id: uid, rows: 6, disabled: locked }, pr.upd || "");
-    upd.addEventListener("input", function () { pr.upd = upd.value; persist(); });
-    box.appendChild(h("label", { class: "fl", for: uid }, "Cómo aplicaste la actualización a todos los productos afectados")); box.appendChild(upd);
-    function exportar() {
-      var t = "PROYECTO DE DESEMPEÑO · Curso 5 · IA para trabajar mejor\nForma " + p.form + " · " + p.title + "\nParticipante: " + (store.adapter.learnerName ? store.adapter.learnerName() || store.learner : store.learner) + "\nFecha: " + new Date().toLocaleString("es-CL") + "\n\n";
-      p.expected_evidence.forEach(function (lab, i) { t += "== " + (i + 1) + ". " + lab + " ==\n" + (pr.ev[i] || "(vacío)") + "\n\n"; });
-      t += "== Actualización del expediente ==\n" + (pr.upd || "(vacío)") + "\n";
-      u.download("IATU_proyecto_forma_" + p.form + ".txt", t);
+    box.appendChild(h("div", { class: "btn-row" }, b));
+  }
+
+  function runProject(box) {
+    var pr = X().proj, p = proyectos()[pr.forma], F = pauta().formas[pr.forma], ans = pr.ans, docSel = pr.doc || 0;
+    var steps = h("nav", { class: "pstages", "aria-label": "Etapas del proyecto" }), stage = h("div"), bar = h("div", { class: "pbar", "aria-hidden": "true" }, h("i", { style: { width: "0%" } }));
+    box.appendChild(h("div", { class: "meta-row" }, h("span", { class: "tag tag-violet" }, "Forma " + pr.forma + " · " + p.title), h("span", { class: "tag" }, "Intento " + pr.n + " de " + regla().pint)));
+    box.appendChild(bar); box.appendChild(steps); box.appendChild(stage);
+    function key(e, i) { return e.id + "." + i; }
+    function lleno(it, v) {
+      if (v === undefined || v === null) return false;
+      if (it.t === "classify") return it.rows.every(function (r) { return v[r[0]] !== undefined && v[r[0]] !== null; });
+      if (it.t === "multi") return v.length > 0;
+      if (it.t === "num") return it.fields.every(function (f, i) { return (v[i] || "").trim() !== ""; });
+      if (it.t === "prompt") return it.fields.every(function (f, i) { return (v[i] || "").trim().length >= it.min; });
+      if (it.t === "text") return palabras(v) >= Math.round(it.min_words * .6);
+      return true;
     }
-    var dl = h("button", { class: "btn", type: "button" }, icon("descargar"), "Descargar mi proyecto");
-    dl.addEventListener("click", exportar);
-    if (!locked) {
-      var cf = h("label", { class: "opt", style: { maxWidth: "620px" } }, h("input", { type: "checkbox" }), h("span", null, "Entrego mi proyecto como evidencia para revisión humana. Confirmo que usé solo datos del expediente ficticio y que no envié, publiqué ni conecté servicios reales."));
-      var send = h("button", { class: "btn btn-primary", type: "button", disabled: true }, icon("enviar"), "Entregar proyecto");
-      cf.firstChild.addEventListener("change", function (e2) { send.disabled = !e2.target.checked; });
-      send.addEventListener("click", function () {
-        pr.sent = new Date().toISOString(); persist(true);
-        store.interaction({ id: "IATU-PROYECTO-" + p.form, type: "long-fill-in", response: "entregado", description: "Proyecto entregado como evidencia" });
-        exportar(); u.clear(box); renderProject(box);
-        IATU.fx.celebrate("★", "Proyecto entregado", "Descargamos tu copia para la revisión humana.");
+    function etapaOk(e) { return e.items.every(function (it, i) { return lleno(it, ans[key(e, i)]); }); }
+    function renderSteps() {
+      u.clear(steps);
+      F.etapas.forEach(function (e, i) {
+        var b = h("button", { type: "button", class: etapaOk(e) ? "ok" : "", "aria-current": i === pr.idx ? "step" : null, title: e.title }, i < 8 ? String(i + 1) : "9");
+        b.addEventListener("click", function () { pr.idx = i; persist(); render(); });
+        steps.appendChild(b);
       });
-      box.appendChild(cf); box.appendChild(h("div", { class: "btn-row" }, send, dl));
-    } else {
-      box.appendChild(h("div", { class: "callout" }, h("h3", null, "Proyecto entregado"), h("p", null, "Entregado el " + new Date(pr.sent).toLocaleString("es-CL") + ". Una persona revisora de Dibork lo evaluará con la rúbrica. Guarda tu copia descargada."), h("div", { class: "btn-row" }, dl)));
+      var fin = h("button", { type: "button", class: "fin", "aria-current": pr.idx >= F.etapas.length ? "step" : null }, icon("enviar"), "Entrega");
+      fin.addEventListener("click", function () { pr.idx = F.etapas.length; persist(); render(); });
+      steps.appendChild(fin);
+      var n = F.etapas.filter(etapaOk).length;
+      bar.querySelector("i").style.width = Math.round(100 * n / F.etapas.length) + "%";
     }
+    function carpeta() {
+      var docs = p.documents, view = h("div");
+      var picks = h("div", { class: "docpick", role: "tablist", "aria-label": "Documentos del expediente" });
+      function show(i) {
+        docSel = pr.doc = i; u.clear(view);
+        view.appendChild(u.docView({ tab: docs[i].id + " · " + docs[i].classification, title: docs[i].title, text: docs[i].text }));
+        [].forEach.call(picks.children, function (b, k) { b.setAttribute("aria-selected", k === i ? "true" : "false"); });
+      }
+      docs.forEach(function (d, i) { var b = h("button", { type: "button", role: "tab" }, d.id); b.addEventListener("click", function () { show(i); }); picks.appendChild(b); });
+      // En pantallas angostas el expediente parte plegado para no empujar la etapa hacia abajo.
+      var ancho = !window.matchMedia || window.matchMedia("(min-width: 961px)").matches;
+      var c = h("details", { class: "carpeta", open: ancho || pr.carpeta ? true : null }, h("summary", { class: "ref-label" }, icon("archivo"), " Expediente · " + docs.length + " documentos"), picks, view);
+      c.addEventListener("toggle", function () { if (!ancho) pr.carpeta = c.open; });
+      show(Math.min(docSel, docs.length - 1));
+      return c;
+    }
+    function persistAns(k, v) { ans[k] = v; persist(); renderSteps(); }
+    function itemUI(it, k) {
+      var v = ans[k], c = h("div", { class: "pitem" });
+      if (it.q) c.appendChild(h("p", { class: "pq" }, it.q));
+      if (it.t === "classify") {
+        var cur = v || {};
+        it.rows.forEach(function (row) {
+          var id = u.newId("cl"), sel = h("select", { id: id }, h("option", { value: "" }, "Elige…"), it.cats.map(function (ct, ci) { return h("option", { value: String(ci), selected: cur[row[0]] === ci }, ct); }));
+          sel.addEventListener("change", function () { cur[row[0]] = sel.value === "" ? null : +sel.value; persistAns(k, cur); });
+          c.appendChild(h("div", { class: "cls-row" }, h("label", { for: id }, row[1]), sel));
+        });
+      } else if (it.t === "multi" || it.t === "mcq") {
+        var fs = h("fieldset", { class: "opts" }, h("legend", { class: "sr-only" }, it.q || "Opciones"));
+        it.opts.forEach(function (o, i) {
+          var inp = it.t === "multi" ? h("input", { type: "checkbox", checked: (v || []).indexOf(i) >= 0 }) : h("input", { type: "radio", name: k, checked: v === i });
+          inp.addEventListener("change", function () {
+            if (it.t === "mcq") return persistAns(k, i);
+            var s2 = (ans[k] || []).filter(function (z) { return z !== i; }); if (inp.checked) s2.push(i); s2.sort(); persistAns(k, s2);
+          });
+          fs.appendChild(h("label", { class: "opt" }, inp, h("span", null, o)));
+        });
+        c.appendChild(fs);
+      } else if (it.t === "num") {
+        var vals = v || [], grid = h("div", { class: "num-grid" });
+        it.fields.forEach(function (f, i) {
+          var id = u.newId("nm"), inp = h("input", { id: id, type: "text", inputmode: "decimal", autocomplete: "off", value: vals[i] || "", placeholder: f[3] === "%" ? "ej.: 66,67" : "número" });
+          inp.addEventListener("input", function () { vals[i] = inp.value; persistAns(k, vals); });
+          grid.appendChild(h("div", { class: "num-f" }, h("label", { for: id }, f[0]), h("div", { class: "num-in" }, inp, f[3] ? h("span", null, f[3]) : null)));
+        });
+        c.appendChild(grid);
+        c.appendChild(h("p", { class: "note" }, "Acepta coma o punto decimal. Porcentajes con dos decimales (ej.: 73,33)."));
+      } else if (it.t === "order") {
+        if (!v) { v = barajar(it.steps.length, k + pr.n); ans[k] = v; }
+        var ol = h("ol", { class: "ord-list" });
+        var draw = function () {
+          u.clear(ol);
+          v.forEach(function (si, pos) {
+            var up = h("button", { type: "button", class: "btn btn-ghost btn-sm", disabled: pos === 0, "aria-label": "Subir «" + it.steps[si] + "»" }, icon("subir"));
+            var dn = h("button", { type: "button", class: "btn btn-ghost btn-sm", disabled: pos === v.length - 1, "aria-label": "Bajar «" + it.steps[si] + "»" }, icon("bajar"));
+            up.addEventListener("click", function () { v.splice(pos - 1, 0, v.splice(pos, 1)[0]); persistAns(k, v); draw(); ol.children[pos - 1].querySelector("button").focus(); });
+            dn.addEventListener("click", function () { v.splice(pos + 1, 0, v.splice(pos, 1)[0]); persistAns(k, v); draw(); var b2 = ol.children[pos + 1].querySelectorAll("button")[1]; if (b2) b2.focus(); });
+            ol.appendChild(h("li", null, h("span", { class: "grow" }, it.steps[si]), up, dn));
+          });
+        };
+        draw(); c.appendChild(ol);
+      } else if (it.t === "prompt") {
+        var pv = v || [];
+        it.fields.forEach(function (f, i) {
+          var id = u.newId("pf"), ta = h("textarea", { id: id, rows: i === 2 || i === 3 ? 4 : 2 }, pv[i] || "");
+          ta.addEventListener("input", function () { pv[i] = ta.value; persistAns(k, pv); });
+          c.appendChild(h("label", { class: "fl", for: id }, (i + 1) + ". " + f)); c.appendChild(ta);
+        });
+      } else if (it.t === "text") {
+        var id2 = u.newId("tx"), ta2 = h("textarea", { id: id2, rows: 10 }, v || ""), wc = h("span", { class: "wc" });
+        var cnt = function () { var w = palabras(ta2.value); wc.textContent = w + " palabras · pedido " + it.min_words + "–" + it.max_words; wc.className = "wc" + (w >= it.min_words && w <= it.max_words ? " ok" : ""); };
+        ta2.addEventListener("input", function () { cnt(); persistAns(k, ta2.value); });
+        cnt();
+        c.appendChild(h("label", { class: "fl", for: id2 }, it.label)); c.appendChild(ta2); c.appendChild(wc);
+      }
+      return c;
+    }
+    function render() {
+      renderSteps(); u.clear(stage);
+      if (pr.idx >= F.etapas.length) return revisar();
+      var e = F.etapas[pr.idx], lay = h("div", { class: "exam-layout" }), q = h("div");
+      q.appendChild(h("div", { class: "meta-row" }, h("span", { class: "tag" }, "Etapa " + (pr.idx + 1) + " de " + F.etapas.length), h("span", { class: "tag tag-violet" }, e.crit)));
+      q.appendChild(h("h2", { tabindex: "-1", style: { marginTop: ".4rem" } }, e.title.replace(/^\d+ · /, "")));
+      if (e.intro) q.appendChild(h("p", { class: "lead", style: { fontSize: "1.02rem" } }, e.intro));
+      if (pr.idx === F.etapas.length - 1) q.appendChild(u.docView({ tab: "Actualización autorizada del expediente", text: p.update }));
+      e.items.forEach(function (it, i) { q.appendChild(itemUI(it, key(e, i))); });
+      var prev = h("button", { class: "btn", type: "button", disabled: pr.idx === 0 }, icon("anterior"), "Anterior");
+      prev.addEventListener("click", function () { pr.idx--; persist(); render(); });
+      var next = h("button", { class: "btn btn-primary", type: "button" }, pr.idx + 1 < F.etapas.length ? "Siguiente etapa" : "Revisar y entregar", icon("siguiente"));
+      next.addEventListener("click", function () { pr.idx++; persist(); render(); });
+      var pause = h("button", { class: "btn btn-ghost", type: "button" }, icon("pausa"), "Pausar");
+      pause.addEventListener("click", function () { persist(true); u.toast("Tu proyecto quedó guardado. Puedes volver cuando quieras."); });
+      q.appendChild(h("div", { class: "btn-row" }, prev, next, pause));
+      lay.appendChild(h("div", { class: "ctx" }, carpeta())); lay.appendChild(q);
+      stage.appendChild(lay);
+      q.querySelector("h2").focus();
+    }
+    function revisar() {
+      var falta = F.etapas.filter(function (e) { return !etapaOk(e); });
+      var c = h("section", { class: "card" });
+      c.appendChild(h("h2", { tabindex: "-1", style: { marginTop: 0 } }, "Revisión antes de entregar"));
+      c.appendChild(h("p", null, (F.etapas.length - falta.length) + " de " + F.etapas.length + " etapas completas."));
+      if (falta.length) c.appendChild(h("p", null, "Incompletas: " + falta.map(function (e) { return e.title.replace(/ · .*/, ""); }).join(", ") + ". Lo vacío vale 0 puntos."));
+      c.appendChild(h("p", { class: "note" }, "Al entregar se corrige todo de inmediato y verás tu devolución por etapa con el modelo de referencia. Tus encargos (etapa 3) y el producto final (etapa 4) son obligatorios: si faltan, la aprobación queda pendiente hasta completarlos."));
+      var cf = h("label", { class: "opt", style: { maxWidth: "620px" } }, h("input", { type: "checkbox" }), h("span", null, "Entrego mi proyecto (forma " + pr.forma + "). Confirmo que usé solo datos del expediente ficticio y que no envié, publiqué ni conecté servicios reales."));
+      var send = h("button", { class: "btn btn-primary", type: "button", disabled: true }, icon("enviar"), "Entregar y corregir");
+      cf.firstChild.addEventListener("change", function (ev) { send.disabled = !ev.target.checked; });
+      send.addEventListener("click", function () { send.disabled = true; var at = gradeProject(); u.clear(box); projResults(box, at, true); });
+      c.appendChild(cf); c.appendChild(h("div", { class: "btn-row" }, send));
+      stage.appendChild(c); c.querySelector("h2").focus();
+    }
+    render();
+  }
+
+  function gradeProject() {
+    var x = X(), pr = x.proj, res = corregirProyecto(pr.forma, pr.ans);
+    var at = { n: pr.n, forma: pr.forma, pct: res.pct, raw: res.raw, max: res.max, cr: res.cr, items: res.items, crit: res.crit, crit0: res.crit.length, ans: pr.ans, at: new Date().toISOString() };
+    Object.keys(res.items).forEach(function (k) {
+      var v = res.items[k];
+      store.interaction({ id: "IATU-PROY-" + pr.forma + "-" + k.replace(".", "-"), type: "other", response: v[0] + "/" + v[1], result: v[0] >= v[1] ? "correct" : v[0] > 0 ? "neutral" : "incorrect", description: "Proyecto forma " + pr.forma + " · etapa " + k });
+    });
+    x.phist = phist().concat([at]);
+    delete x.proj;
+    report(); persist(true); IATU.app.refreshProgress();
+    return at;
+  }
+
+  function projResults(box, at, fresh) {
+    var F = pauta().formas[at.forma], W = pauta().criterios, stt = status(), R = regla(), C = IATU.data.curso;
+    var ring = h("div", { class: "ringbig", style: "--v:" + (at.pct / 100).toFixed(3) + ";width:150px;height:150px;font-size:1.6rem" }, h("span", null, fmt(at.pct)));
+    var pendiente = at.crit && at.crit.length;
+    box.appendChild(h("section", { class: "gate-hero" }, h("div", { style: { display: "flex", gap: "1.6rem", alignItems: "center", flexWrap: "wrap" } }, ring,
+      h("div", null, h("span", { class: "eyebrow" }, "Proyecto · forma " + at.forma + " · intento " + at.n + " de " + R.pint),
+        h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, pendiente ? "Hay un fallo crítico por subsanar" : at.pct >= R.up ? "Proyecto sobre el estándar" : "Aún bajo el " + R.up),
+        h("p", { style: { margin: 0 } }, fmt(at.pct) + " de 100, ponderado por criterio. Aporta el " + Math.round(R.pp * 100) + " % de tu nota global. " +
+          (stt.pass ? "Tu evaluación está aprobada." : !stt.sent ? "Te faltan las situaciones aplicadas (40 %)." : ""))))));
+    if (fresh && !pendiente && at.pct >= R.up) IATU.fx.celebrate("★", "Proyecto corregido", fmt(at.pct) + " de 100.");
+    if (pendiente) {
+      var cb = h("div", { class: "callout risk critbox" }, h("h3", null, icon("circulo-alerta"), " Fallo crítico: la aprobación queda pendiente"),
+        h("p", null, "Tu puntaje se conserva, pero para aprobar debes corregir lo señalado. Edita solo lo necesario y vuelve a comprobar."),
+        h("ul", null, at.crit.map(function (c) { return h("li", null, c.label); })));
+      var eds = [], keys = at.crit.map(function (c) { return c.k; }).filter(function (k, i, a) { return a.indexOf(k) === i; });
+      keys.forEach(function (k) {
+        var it0 = null; F.etapas.forEach(function (e) { e.items.forEach(function (it, i) { if (e.id + "." + i === k) it0 = it; }); });
+        var prev = (at.sub && at.sub[k]) || at.ans[k], ed;
+        if (it0.t === "prompt") {
+          var vals = (prev || []).slice(), w = h("div");
+          it0.fields.forEach(function (f, i) {
+            var id = u.newId("sub"), ta = h("textarea", { id: id, rows: 2 }, vals[i] || "");
+            ta.addEventListener("input", function () { vals[i] = ta.value; });
+            w.appendChild(h("label", { class: "fl", for: id }, (i + 1) + ". " + f)); w.appendChild(ta);
+          });
+          ed = { k: k, it: it0, val: function () { return vals; } }; cb.appendChild(h("h4", null, "Tu encargo (versión corregida)")); cb.appendChild(w);
+        } else {
+          var id2 = u.newId("sub"), ta2 = h("textarea", { id: id2, rows: 10 }, prev || "");
+          ed = { k: k, it: it0, val: function () { return ta2.value; } };
+          cb.appendChild(h("label", { class: "fl", for: id2 }, it0.label + " (versión corregida)")); cb.appendChild(ta2);
+        }
+        eds.push(ed);
+      });
+      var chk = h("button", { class: "btn btn-primary", type: "button" }, icon("check"), "Comprobar y subsanar");
+      chk.addEventListener("click", function () {
+        var quedan = [];
+        at.sub = at.sub || {};
+        eds.forEach(function (ed) { var r = corregirItem(ed.it, ed.val()); at.sub[ed.k] = ed.val(); r.crit.forEach(function (l) { quedan.push({ k: ed.k, label: l }); }); });
+        at.crit = quedan;
+        if (quedan.length) { persist(true); u.toast("Aún falta: " + quedan.map(function (c) { return c.label; }).join(" · ")); return; }
+        at.fix = new Date().toISOString();
+        store.interaction({ id: "IATU-PROY-" + at.forma + "-SUBSANA", type: "other", response: "subsanado", result: "correct", description: "Fallo crítico subsanado" });
+        report(); persist(true); IATU.app.refreshProgress(); u.clear(box); projResults(box, at, true);
+      });
+      cb.appendChild(h("div", { class: "btn-row" }, chk));
+      box.appendChild(cb);
+    } else if (at.fix) box.appendChild(h("div", { class: "callout info" }, h("p", null, icon("circulo-check"), " Fallo crítico subsanado el " + new Date(at.fix).toLocaleString("es-CL") + ". El puntaje analítico se mantiene.")));
+    box.appendChild(h("h2", null, "Por criterio de la rúbrica"));
+    var bars = h("div", { class: "modbars" });
+    C.rubric.forEach(function (c) {
+      var v = at.cr[c.id]; if (!v) return;
+      var pc = Math.round(100 * v[0] / v[1]);
+      bars.appendChild(h("div", { class: "modbar" + (pc < 60 ? " low" : "") }, h("span", null, c.id), h("div", { class: "bar" }, h("i", { style: { width: pc + "%" } })), h("b", null, pc + " % · peso " + W[c.id])));
+    });
+    box.appendChild(bars);
+    box.appendChild(h("p", { class: "note" }, C.rubric.map(function (c) { return c.id + ": " + c.title; }).join(" · ")));
+    box.appendChild(h("h2", null, "Devolución por etapa"));
+    F.etapas.forEach(function (e) {
+      var s = 0, m = 0;
+      e.items.forEach(function (it, i) { var v = at.items[e.id + "." + i] || [0, it.pts]; s += v[0]; m += v[1]; });
+      var det = h("details", { class: "card", style: { marginBottom: ".5rem" } });
+      det.appendChild(h("summary", null, h("b", null, e.title), " · ", h("span", { class: "tag " + (s >= m ? "tag-teal" : s > 0 ? "tag-ochre" : "tag-brick") }, fmtN(s) + " / " + m), " ", h("span", { class: "tag" }, e.crit)));
+      e.items.forEach(function (it, i) {
+        var r = corregirItem(it, at.ans[e.id + "." + i]);
+        det.appendChild(h("p", { class: "pq" }, it.q || it.label));
+        det.appendChild(h("ul", { class: "chk" }, r.det.map(function (d) { return h("li", { class: d[0] ? "ok" : "no" }, icon(d[0] ? "circulo-check" : "circulo-x"), h("span", null, d[1])); })));
+        if (it.why) det.appendChild(h("p", { class: "note" }, h("b", null, "Por qué: "), it.why));
+      });
+      if (e.modelo) det.appendChild(h("div", { class: "ref" }, h("span", { class: "ref-label" }, "Modelo de referencia · " + e.modelo.title), e.modelo.text));
+      box.appendChild(det);
+    });
+    var row = h("div", { class: "btn-row" });
+    if (!stt.pass && stt.pattempts < R.pint && !X().proj) {
+      var again = h("a", { class: "btn", href: "#/evaluacion/proyecto" }, icon("reintentar"), "Usar mi segundo intento (forma B)");
+      again.addEventListener("click", function () { X().pnuevo = 1; });
+      row.appendChild(again);
+    }
+    row.appendChild(h("a", { class: "btn btn-primary", href: stt.done ? "#/evaluacion/resultado" : "#/evaluacion/examen" }, icon(stt.done ? "medalla" : "bandera"), stt.done ? "Ver mi nota global" : "Ir a las situaciones aplicadas"));
+    box.appendChild(row);
   }
 
   /* ---------- Resultado ---------- */
   function resultado(mnt) {
     head(mnt, "Resultado", "Tu resultado");
-    var stt = status(), b = best(), pr = X().proj;
-    if (!stt.sent) { mnt.appendChild(h("p", null, "Aún no entregas las situaciones aplicadas.")); mnt.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/requisitos" }, "Ir a la evaluación")); return; }
-    var rows = [["Situaciones aplicadas (mejor intento)", fmt(b.pct) + " / 100 · forma " + b.forma],
-      ["Intentos usados", stt.attempts + " de " + stt.max], ["Umbral de aprobación", umbral() + " / 100"],
-      ["Resultado informado al LMS", b.pass ? "Aprobado (passed)" : "No aprobado (failed)"],
-      ["Proyecto de desempeño", pr && pr.sent ? "Entregado para revisión humana" : "Sin entregar (no bloquea la aprobación)"],
+    var stt = status(), b = best(), R = regla(), pb = pbest(true) || pbest(false);
+    if (!stt.done) {
+      mnt.appendChild(h("p", null, "Tu nota global aparece cuando entregas las dos partes: " + (stt.sent ? "te falta el proyecto." : stt.psent ? "te faltan las situaciones aplicadas." : "situaciones aplicadas y proyecto.")));
+      mnt.appendChild(h("a", { class: "btn btn-primary", href: "#/evaluacion/requisitos" }, "Ir a la evaluación")); return;
+    }
+    var g = stt.global;
+    mnt.appendChild(h("section", { class: "gate-hero" }, h("div", { style: { display: "flex", gap: "1.6rem", alignItems: "center", flexWrap: "wrap" } },
+      h("div", { class: "ringbig", style: "--v:" + (g / 100).toFixed(3) + ";width:150px;height:150px;font-size:1.6rem" }, h("span", null, fmt(g))),
+      h("div", null, h("span", { class: "eyebrow" }, "Nota global"),
+        h("h2", { style: { color: "#fff", margin: ".5rem 0 .3rem" } }, stt.pass ? "¡Aprobado!" : stt.pend ? "Aprobación pendiente de subsanación" : "Aún no apruebas"),
+        h("p", { style: { margin: 0 } }, fmt(R.pe * 100) .replace(",0", "") + " % × " + fmt(b.pct) + " (situaciones) + " + fmt(R.pp * 100).replace(",0", "") + " % × " + fmt(pb.pct) + " (proyecto) = " + fmt(g) + ". Necesitas " + R.umbral + " global y " + R.up + " en el proyecto.")))));
+    var rows = [["Situaciones aplicadas (mejor intento)", fmt(b.pct) + " / 100 · forma " + b.forma + " · " + stt.attempts + " de " + stt.max + " intentos"],
+      ["Proyecto de desempeño (mejor intento)", fmt(pb.pct) + " / 100 · forma " + pb.forma + " · " + stt.pattempts + " de " + stt.pmax + " intentos" + (stt.pend ? " · fallo crítico pendiente" : "")],
+      ["Nota global", fmt(g) + " / 100 (umbral " + R.umbral + ")"],
+      ["Resultado informado al LMS", stt.pass ? "Aprobado (passed)" : "No aprobado (failed)" + (stt.final ? "" : " · aún puedes mejorar")],
       ["Tiempo activo en el curso", IATU.fx.fmtTime(store.totalTime())]];
     mnt.appendChild(h("div", { class: "table-wrap" }, h("table", { class: "data" }, h("tbody", null, rows.map(function (x) { return h("tr", null, h("th", { scope: "row" }, x[0]), h("td", null, x[1])); })))));
-    var row = h("div", { class: "btn-row" }, h("a", { class: "btn", href: "#/evaluacion/examen" }, icon("ver"), "Ver la devolución"), h("a", { class: "btn btn-primary", href: "#/evaluacion/transferencia" }, "Transferencia", icon("siguiente")));
+    if (!stt.pass && !stt.final) {
+      var tips = [];
+      if (stt.pend) tips.push("Subsana el fallo crítico del proyecto: es lo único que se interpone si tu nota ya alcanza.");
+      if (pb.pct < R.up && stt.pattempts < stt.pmax) tips.push("Tu proyecto está bajo " + R.up + ": usa el segundo intento (forma B).");
+      if (stt.attempts < stt.max) tips.push("Puedes subir la parte de situaciones con la forma B.");
+      if (tips.length) mnt.appendChild(h("div", { class: "callout info" }, h("h3", null, icon("idea"), " Cómo mejorar"), h("ul", null, tips.map(function (t) { return h("li", null, t); }))));
+    }
+    var row = h("div", { class: "btn-row" }, h("a", { class: "btn", href: "#/evaluacion/examen" }, icon("ver"), "Situaciones"), h("a", { class: "btn", href: "#/evaluacion/proyecto" }, icon("proyecto"), "Proyecto"),
+      h("a", { class: "btn btn-primary", href: "#/evaluacion/transferencia" }, "Transferencia", icon("siguiente")));
     mnt.appendChild(row);
+    if (stt.pass && !(store.root.cel || {}).global) { (store.root.cel = store.root.cel || {}).global = 1; IATU.fx.celebrate("✓", "Curso aprobado", fmt(g) + " de 100 de nota global."); }
     report();
   }
 
@@ -365,7 +723,7 @@
       h("tbody", null, rub.map(function (c) { return h("tr", null, h("th", { scope: "row" }, c.id + " · " + c.title + " (" + c.weight + " %)"), [0, 1, 2, 3].map(function (n) { return h("td", null, c.levels[String(n)]); })); }))));
   }
   IATU.evaluacion = {
-    status: status,
+    status: status, lms: lms, corregirItem: corregirItem, corregirProyecto: corregirProyecto,
     render: function (mnt, page, api) {
       ({ requisitos: function () { gate(mnt, api); }, examen: function () { examen(mnt); }, proyecto: function () { proyecto(mnt); },
         resultado: function () { resultado(mnt); }, transferencia: function () { transferencia(mnt); }, cierre: function () { cierre(mnt); } }[page] || function () { gate(mnt, api); })();

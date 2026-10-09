@@ -95,19 +95,14 @@
   "detalle": ""
  },
  {
-  "prueba": "2004: forma A sin respuestas → no aprobado",
+  "prueba": "2004: forma A sin respuestas → 0 de 100",
   "resultado": "OK",
   "detalle": ""
  },
  {
-  "prueba": "2004: success_status = failed tras forma A",
+  "prueba": "2004: sin proyecto no hay aprobado/reprobado aún",
   "resultado": "OK",
-  "detalle": "failed"
- },
- {
-  "prueba": "2004: score.scaled = 0",
-  "resultado": "OK",
-  "detalle": "0.0000"
+  "detalle": "unknown"
  },
  {
   "prueba": "2004: interacciones del examen registradas",
@@ -115,12 +110,42 @@
   "detalle": 64
  },
  {
-  "prueba": "2004: completion_status = completed (17 secciones + examen entregado)",
+  "prueba": "2004: sin proyecto el curso sigue incompleto",
+  "resultado": "OK",
+  "detalle": "incomplete"
+ },
+ {
+  "prueba": "2004: proyecto con 9 etapas y expediente",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: el proyecto se corrige solo y detecta el fallo crítico",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: nota del proyecto sobre 90 pese al fallo (puntaje analítico)",
+  "resultado": "OK",
+  "detalle": "{\"p\":96.09,\"pend\":true}"
+ },
+ {
+  "prueba": "2004: completion_status = completed (17 secciones + dos partes entregadas)",
   "resultado": "OK",
   "detalle": "completed"
  },
  {
-  "prueba": "2004: forma B aprobada (95 de 100)",
+  "prueba": "2004: success_status = failed con fallo crítico pendiente",
+  "resultado": "OK",
+  "detalle": "failed"
+ },
+ {
+  "prueba": "2004: subsanar el texto levanta el fallo crítico",
+  "resultado": "OK",
+  "detalle": ""
+ },
+ {
+  "prueba": "2004: nota global aprobada",
   "resultado": "OK",
   "detalle": ""
  },
@@ -130,14 +155,19 @@
   "detalle": "passed"
  },
  {
-  "prueba": "2004: score.raw = 95 y scaled = 0,95",
+  "prueba": "2004: score.raw = nota global y scaled coherente",
   "resultado": "OK",
-  "detalle": "95 / 0.9500"
+  "detalle": "95.65 / 0.9565 (esperado 95.65)"
  },
  {
   "prueba": "2004: score.min/max 0–100",
   "resultado": "OK",
   "detalle": ""
+ },
+ {
+  "prueba": "2004: interacciones del proyecto registradas",
+  "resultado": "OK",
+  "detalle": 148
  },
  {
   "prueba": "2004: cmi.exit = suspend también al aprobar (permite volver a la devolución)",
@@ -157,7 +187,7 @@
  {
   "prueba": "1.2: lesson_status incomplete + suspend_data",
   "resultado": "OK",
-  "detalle": "399 caracteres"
+  "detalle": "395 caracteres"
  },
  {
   "prueba": "1.2: session_time en formato HHHH:MM:SS",
@@ -167,7 +197,7 @@
  {
   "prueba": "1.2: respeta 4.096 caracteres (guarda avance «lite»)",
   "resultado": "OK",
-  "detalle": "339 caracteres"
+  "detalle": "343 caracteres"
  },
  {
   "prueba": "1.2: informa que los textos largos quedaron solo en el navegador",
@@ -181,4 +211,4 @@
  }
 ]
 
-36/36 OK
+42/42 OK

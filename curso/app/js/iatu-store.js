@@ -256,7 +256,9 @@
             var src = st[sc] || {};
             for (var id in src) {
               var r = src[id], keep = {};
-              ["sub", "fbr", "done", "att", "ans", "pr", "form", "score", "pass", "sent", "n"].forEach(function (k) { if (r[k] !== undefined) keep[k] = r[k]; });
+              // Evaluación: historiales de intentos sin las respuestas (la nota, el aprobado y los fallos críticos sí viajan).
+              if (sc === "x" && Array.isArray(r)) { l[sc][id] = r.map(function (a) { var b = {}; for (var q in a) if (q !== "ans" && q !== "items" && q !== "sub" && q !== "mod") b[q] = a[q]; return b; }); continue; }
+              ["sub", "fbr", "done", "att", "ans", "pr", "form", "forma", "idx", "score", "pass", "sent", "n"].forEach(function (k) { if (r[k] !== undefined && !(sc === "x" && id === "proj" && k === "ans")) keep[k] = r[k]; });
               l[sc][id] = keep;
             }
           });

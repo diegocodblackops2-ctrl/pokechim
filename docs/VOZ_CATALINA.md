@@ -15,7 +15,7 @@ La voz es sintética: así se rotula en el curso («voz sintética (es-CL)») y 
    - horas: «16:00» → «dieciséis horas»
    - rangos: «C1–C4» → «C1 a C4»
    - flechas: «→» → «y luego»
-   - **códigos deletreados** (desde el bloque 07): «NX-14» → «ene equis 14», «N4» → «ene 4», «POL-A» → «pol a», «CASO-1» → «caso 1», «CSV» → «ce ese ve», «JSON» → «yeison»
+   - **códigos deletreados** (en los 63 bloques): «NX-14» → «ene equis 14», «N4» → «ene 4», «POL-A» → «pol a», «CASO-1» → «caso 1», «CSV» → «ce ese ve», «JSON» → «yeison»
    - rangos de celdas: «B2:B5» → «B2 a B5»
    - Los números siguen siendo números.
 3. Diego genera una toma por bloque con la misma voz y los mismos ajustes, y exporta MP3 (o WAV/M4A) con el nombre del índice.
@@ -27,7 +27,7 @@ La voz es sintética: así se rotula en el curso («voz sintética (es-CL)») y 
    - registra la pista en `curso/media/audio/registro_audio.json` y su control de calidad (similitud, negaciones afectadas, etiquetas leídas) en `qa_asr.json`.
 5. `python3 herramientas/build_publico.py && python3 herramientas/empaquetar_scorm.py`.
 
-Los bloques 01–06 se grabaron antes del deletreo; el cortador usa su texto original para que la alineación calce. Los bloques 02–04 incluyen «C1…C4», «F1…F4», «IDs» y «V1» sin deletrear: si suenan mal, conviene regrabarlos.
+Los 63 bloques tienen el deletreo aplicado desde el 01, para grabar todo de nuevo con la misma voz y evitar cambios de timbre.
 
 ## Reproductor
 - Sin reproducción automática; una sola pista activa a la vez.
