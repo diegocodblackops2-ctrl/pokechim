@@ -4104,6 +4104,63 @@
    "etiquetas_leidas": []
   },
   {
+   "id": "IATU-M16-L02-P02",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M16-L02-P03",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M16-L02-P04",
+   "similitud": 0.9027,
+   "diferencias": [
+    {
+     "guion": "30 s",
+     "asr": "30s"
+    },
+    {
+     "guion": "min",
+     "asr": "minupost"
+    },
+    {
+     "guion": "min cuatro",
+     "asr": "4"
+    },
+    {
+     "guion": "incompletos",
+     "asr": "sin completos"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M16-L03-P01",
+   "similitud": 1.0,
+   "diferencias": [],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
+   "id": "IATU-M16-L03-P02",
+   "similitud": 0.9873,
+   "diferencias": [
+    {
+     "guion": "declares",
+     "asr": "declare"
+    }
+   ],
+   "negaciones_o_limites_afectados": [],
+   "etiquetas_leidas": []
+  },
+  {
    "id": "IATU-RUTAS",
    "similitud": 1.0,
    "diferencias": [],
