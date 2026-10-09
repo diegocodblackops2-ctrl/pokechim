@@ -267,3 +267,5 @@ textarea::placeholder { color: var(--texto-3); }
 
 /* Movimiento de entrada con un leve desenfoque, más «interfaz» */
 @keyframes entrar { from { opacity: 0; transform: translateY(12px); filter: blur(4px); } to { opacity: 1; transform: none; filter: none; } }
+.v3d-btn, .v3d-vlab { background: rgba(6, 17, 24, .78); border: 1px solid var(--linea-2); color: #fff; backdrop-filter: var(--vidrio); }
+.v3d-btn:hover, .v3d-btn.on { background: var(--ruta); color: var(--sobre-ruta); box-shadow: 0 0 18px color-mix(in srgb, var(--ruta) 50%, transparent); }
