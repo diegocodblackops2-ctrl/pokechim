@@ -39,7 +39,7 @@ No cambió ningún ID, ningún conteo de pantallas, ítems, opciones ni nodos, n
 - **PA-B20**: el ítem decía que un calendario de cambio de filtros «es un error». Ahora sigue lo que enseñan M03 y M05: un programa de cambio que define la empresa con la información del fabricante y, además, cambio inmediato si cuesta respirar o si el filtro está dañado o húmedo. Se mantiene la clave c.
 - **PA-B10**: el feedback ahora dice explícitamente que la prueba de ajuste la hace personal competente con un procedimiento, y que la verificación de sello la hace la persona en cada uso.
 - **PA-B15 y B16 (UV)**: «gorro tipo legionario» pasó a «jockey con legionario», el término del módulo (M04-L03-P05).
-- **PP-A08**: la clave aceptaba alimentar el film a mano con la envolvedora girando, con tal de sacarse los guantes, y eso contradice M04-L01-P06 y P07. Ahora Héctor vigila el ciclo desde el panel, sin tocar la carga, y el feedback deja claro que el film y la carga se tocan solo con la máquina detenida. Se mantiene la clave a.
+- **PP-A08**: ítem corregido para que no contradiga lo enseñado sobre la envolvedora (detalle en el material docente privado).
 - **PA-A20 y PA-B06**: la ficha ficticia del casco C-3 decía «hasta 5 años», la misma cifra del mito que desarma M02-L01-P07. Se cambió a «hasta 4 años». Sigue siendo un plazo que declara ese fabricante ficticio, no una regla general, y la clave no cambia (A20: 2 años, dentro del plazo pero con señales de retiro; B06: 5 años y 7 meses, plazo superado).
 - La distribución de claves, la tabla de especificaciones, los conjuntos y los conteos no cambiaron.
 
