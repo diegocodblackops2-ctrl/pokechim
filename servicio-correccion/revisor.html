@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revisión de proyectos · Curso 5</title>
+<style>
+  :root { --ink:#17202b; --paper:#f5efe3; --card:#fffcf6; --rule:#d6cbb6; --teal:#17625e; --ochre:#8a5d0b; --brick:#9c3426; }
+  body { margin:0; font:16px/1.55 system-ui, sans-serif; background:var(--paper); color:var(--ink); }
+  header { padding:1rem 1.5rem; border-bottom:1px solid var(--rule); background:var(--card); display:flex; gap:1rem; align-items:center; flex-wrap:wrap; }
+  h1 { font:600 1.3rem Georgia, serif; margin:0; }
+  main { padding:1.2rem 1.5rem 4rem; max-width:1300px; margin:auto; }
+  .cols { display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; } @media (max-width:900px){ .cols{ grid-template-columns:1fr; } }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:10px; padding:1rem 1.1rem; margin-bottom:1rem; }
+  .ev { white-space:pre-wrap; background:#fff; border:1px solid var(--rule); border-radius:6px; padding:.6rem; font-size:.92rem; }
+  .priv { border-left:4px solid var(--brick); }
+  button { min-height:40px; padding:.4rem 1rem; border-radius:999px; border:1.5px solid var(--ink); background:var(--card); font-weight:600; cursor:pointer; }
+  button.pri { background:var(--teal); color:#fff; border-color:var(--teal); }
+  table { border-collapse:collapse; width:100%; font-size:.85rem; } td, th { border:1px solid var(--rule); padding:.4rem; vertical-align:top; text-align:left; }
+  label.lv { display:block; cursor:pointer; } input[type=text], textarea { width:100%; font:inherit; padding:.4rem; border:1px solid var(--rule); border-radius:6px; }
+  :focus-visible { outline:3px solid #0b57d0; outline-offset:2px; }
+  .note { color:#5b6676; font-size:.85rem; }
+</style>
+</head>
+<body>
+<header><h1>Revisión humana de proyectos · Curso 5</h1>
+  <label>Token de revisor <input type="text" id="tok" placeholder="revisor:nombre (solo desarrollo)" style="width:260px"></label>
+  <button id="cargar">Cargar pendientes</button></header>
+<main>
+  <p class="note">Herramienta de referencia del servicio de corrección. El modelo, las anclas y las soluciones solo se muestran a personas con rol revisor; nunca viajan al participante. La nota se asigna con la rúbrica C1–C4; no por extensión ni coincidencia literal.</p>
+  <div id="lista"></div>
+  <div id="detalle"></div>
+</main>
+<script>
+(function () {
+  var tok = document.getElementById("tok"), lista = document.getElementById("lista"), det = document.getElementById("detalle");
+  tok.value = sessionStorage.getItem("iatu-revisor") || "";
+  function api(m, p, b) {
+    sessionStorage.setItem("iatu-revisor", tok.value);
+    return fetch("/api/v1" + p, { method: m, headers: { "Content-Type": "application/json", Authorization: "Bearer " + tok.value }, body: b ? JSON.stringify(b) : undefined })
+      .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw j; return j; }); });
+  }
+  function esc(s) { var d = document.createElement("div"); d.textContent = s == null ? "" : String(s); return d.innerHTML; }
+  document.getElementById("cargar").onclick = function () {
+    api("GET", "/revision/pendientes").then(function (r) {
+      lista.innerHTML = "<h2>Pendientes (" + r.pendientes.length + ")</h2>" + (r.pendientes.length ? "" : "<p>No hay proyectos pendientes.</p>");
+      r.pendientes.forEach(function (p) {
+        var b = document.createElement("button"); b.textContent = "Entrega " + p.id.slice(0, 8) + " · forma " + p.forma + " · " + new Date(p.entregado).toLocaleString("es-CL");
+        b.onclick = function () { abrir(p.id); }; lista.appendChild(b);
+      });
+    }, function (e) { lista.textContent = "Error: " + (e.message || e.error); });
+  };
+  function abrir(id) {
+    api("GET", "/revision/" + id).then(function (r) {
+      var ent = r.entrega, br = r.brief, pv = r.privado;
+      var h = "<h2>" + esc(br.title) + " · forma " + esc(ent.forma) + "</h2><div class='cols'><div>";
+      br.expected_evidence.forEach(function (lab, i) { h += "<div class='card'><b>" + (i + 1) + ". " + esc(lab) + "</b><div class='ev'>" + esc(ent.evidencias[i] || "(vacía)") + "</div></div>"; });
+      h += "<div class='card'><b>Actualización aplicada</b><div class='ev'>" + esc(ent.actualizacion || "(vacía)") + "</div></div></div><div>";
+      h += "<div class='card priv'><b>Modelo (privado)</b>" + pv.modelo.map(function (m) { return "<p><b>" + esc(m.title) + "</b><br>" + esc(m.text) + "</p>"; }).join("") + "<p><b>Actualización resuelta:</b> " + esc(pv.actualizacion_resuelta) + "</p></div>";
+      h += "<div class='card priv'><b>Anclas</b>" + Object.keys(pv.anclas).map(function (k) { return "<p><b>" + esc(k) + ":</b> " + esc(pv.anclas[k]) + "</p>"; }).join("") + "</div></div></div>";
+      h += "<div class='card'><h3>Rúbrica</h3><form id='f'><table><tr><th>Criterio</th><th>0</th><th>1</th><th>2</th><th>3</th><th>Comentario</th></tr>";
+      r.rubrica.forEach(function (c) {
+        h += "<tr><th>" + esc(c.id + " · " + c.title + " (" + c.weight + " %)") + "</th>";
+        [0, 1, 2, 3].forEach(function (n) { h += "<td><label class='lv'><input type='radio' name='" + c.id + "' value='" + n + "' required> " + esc(c.levels[n]) + "</label></td>"; });
+        h += "<td><textarea name='com-" + c.id + "' rows='3'></textarea></td></tr>";
+      });
+      h += "</table><p><label><input type='checkbox' name='critico'> Registrar fallo crítico (solo según la política: datos excluidos, acción prohibida aprobada o afirmación central contradictoria)</label></p><p><input type='text' name='critico_detalle' placeholder='Evidencia concreta y criterio afectado'></p><button class='pri'>Guardar revisión</button> <span id='msg'></span></form></div>";
+      det.innerHTML = h;
+      document.getElementById("f").onsubmit = function (ev) {
+        ev.preventDefault();
+        var fd = new FormData(ev.target), niveles = {}, com = {};
+        r.rubrica.forEach(function (c) { niveles[c.id] = parseInt(fd.get(c.id), 10); com[c.id] = fd.get("com-" + c.id); });
+        api("POST", "/revision/" + id, { niveles: niveles, comentarios: com, critico: !!fd.get("critico"), critico_detalle: fd.get("critico_detalle") })
+          .then(function (x) { document.getElementById("msg").textContent = "Revisión guardada. Puntaje del proyecto: " + x.puntaje.toFixed(2); }, function (e) { document.getElementById("msg").textContent = "Error: " + (e.message || e.error); });
+      };
+    });
+  }
+})();
+</script>
+</body>
+</html>

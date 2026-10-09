@@ -1,0 +1,14 @@
+# ── Material PRIVADO de autoría: nunca al repositorio (el repo es público) ──
+# Contiene banco de evaluación con claves, soluciones de proyectos y maestro completo.
+autoria_privada/
+servicio-correccion/data/
+servicio-correccion/registros/
+# Salidas de compilación regenerables
+dist/
+build/
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+# Originales de medios (se publican solo derivados optimizados)
+originales_medios/

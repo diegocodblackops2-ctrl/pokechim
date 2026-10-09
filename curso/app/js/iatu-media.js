@@ -1,0 +1,110 @@
+/* Curso 5 — audio, video e imágenes. Una sola pista activa, sin autoplay, carga diferida.
+   El audio es opcional: nunca bloquea el progreso y siempre hay texto equivalente. */
+(function () {
+  "use strict";
+  var IATU = window.IATU = window.IATU || {};
+  var u = IATU.u, h = u.h, icon = u.icon;
+  var active = null;
+  var BASE = (window.IATU_CONFIG && window.IATU_CONFIG.base) || "";
+
+  function stopAll() { if (active) { try { active.pause(); } catch (e) { /* sin acción */ } active = null; } }
+
+  function audioPlayer(audioId, opts) {
+    opts = opts || {};
+    var C = IATU.data.curso, rec = C.audio[audioId];
+    if (!rec) return null;
+    if (!rec.file) {
+      // Pista aún no producida/aprobada: se informa sin simular audio ni usar voz del navegador.
+      return h("div", { class: "audio na", role: "note" },
+        icon("audio"),
+        h("span", { class: "label" }, "Narración pendiente de aprobación de voz. El texto de esta pantalla es el contenido completo."));
+    }
+    var el = new Audio();
+    el.preload = "none";
+    var playing = false;
+    var btn = h("button", { class: "btn btn-icon btn-primary", type: "button", "aria-label": "Reproducir narración" }, icon("play"));
+    var range = h("input", { type: "range", min: 0, max: 1000, value: 0, "aria-label": "Posición de la narración", step: 1 });
+    var time = h("span", { class: "time" }, "0:00 / " + u.fmtTime(rec.dur || rec.est));
+    var speed = h("select", { "aria-label": "Velocidad" },
+      [0.85, 1, 1.15, 1.3].map(function (r) { return h("option", { value: r, selected: r === 1 }, (r + "").replace(".", ",") + "×"); }));
+    var trBtn = h("button", { class: "btn btn-sm btn-ghost", type: "button", "aria-expanded": "false" }, icon("transcripcion"), "Transcripción");
+    var trBox = h("div", { class: "transcript", hidden: true });
+    var label = h("span", { class: "label" }, icon("audio"), opts.label || "Narración · voz sintética Catalina (es-CL)");
+    function setIcon(name, lbl) { u.clear(btn); btn.appendChild(icon(name)); btn.setAttribute("aria-label", lbl); }
+    btn.addEventListener("click", function () {
+      if (!el.src) el.src = BASE + rec.file;
+      if (playing) { el.pause(); return; }
+      if (active && active !== el) active.pause();
+      active = el;
+      el.playbackRate = parseFloat(speed.value);
+      el.play().catch(function () { u.toast("No se pudo reproducir el audio. El texto de la pantalla contiene la misma información."); });
+    });
+    el.addEventListener("play", function () { playing = true; setIcon("pausa", "Pausar narración"); });
+    el.addEventListener("pause", function () { playing = false; setIcon("play", "Reproducir narración"); });
+    el.addEventListener("ended", function () { playing = false; setIcon("play", "Reproducir narración"); });
+    el.addEventListener("timeupdate", function () {
+      if (el.duration) range.value = Math.round(1000 * el.currentTime / el.duration);
+      time.textContent = u.fmtTime(el.currentTime) + " / " + u.fmtTime(el.duration || rec.dur || rec.est);
+    });
+    range.addEventListener("input", function () {
+      if (!el.src) el.src = BASE + rec.file;
+      if (el.duration) el.currentTime = el.duration * range.value / 1000;
+    });
+    speed.addEventListener("change", function () { el.playbackRate = parseFloat(speed.value); });
+    trBtn.addEventListener("click", function () {
+      var open = trBox.hidden;
+      trBox.hidden = !open; trBtn.setAttribute("aria-expanded", String(open));
+      if (open && !trBox.firstChild) {
+        if (rec.text) trBox.appendChild(u.paragraphs(rec.text, ""));
+        else trBox.appendChild(h("p", null, "La narración lee el texto de esta pantalla, sin agregar información."));
+      }
+    });
+    var wrap = h("div", null,
+      h("div", { class: "audio", role: "group", "aria-label": "Narración opcional" },
+        btn, h("div", { class: "track" }, label, range), time, speed, trBtn),
+      trBox);
+    wrap._audio = el;
+    return wrap;
+  }
+
+  function figure(imgId, opts) {
+    opts = opts || {};
+    var C = IATU.data.curso, im = C.images[imgId];
+    if (!im || !im.file) return null; // sin marcador "imagen pendiente" en la vista del participante
+    var img = h("img", {
+      src: BASE + im.file, alt: im.role === "ambiental" ? "" : (im.alt || ""), loading: "lazy", decoding: "async",
+      width: im.w, height: im.h
+    });
+    if (im.sm) { img.setAttribute("srcset", BASE + im.sm + " 720w, " + BASE + im.file + " " + im.w + "w"); img.setAttribute("sizes", opts.side ? "(max-width: 720px) 100vw, 360px" : "(max-width: 900px) 100vw, 860px"); }
+    return h("figure", { class: "figure" + (opts.side ? " figure-side" : ""), "data-img": imgId }, img);
+  }
+
+  function videoCard(vidId) {
+    var C = IATU.data.curso, v = C.videos[vidId];
+    if (!v) return null;
+    var body = h("div", { class: "vbody" });
+    var card = h("section", { class: "video-card", "aria-label": "Microvideo: " + v.title },
+      h("div", { class: "vhead" }, icon("video"), h("div", null, h("span", { class: "note" }, "Microvideo · complementario"), h("br"), h("b", null, v.title))));
+    if (v.file) {
+      var vid = h("video", { controls: true, preload: "none", playsinline: true, poster: v.poster ? BASE + v.poster : null, "aria-describedby": "" });
+      vid.appendChild(h("source", { src: BASE + v.file, type: "video/mp4" }));
+      if (v.vtt) vid.appendChild(h("track", { kind: "captions", src: BASE + v.vtt, srclang: "es-CL", label: "Español (Chile)", default: true }));
+      vid.addEventListener("play", function () { if (active && active !== vid) active.pause(); active = vid; });
+      card.appendChild(vid);
+    }
+    body.appendChild(h("p", { class: "note" }, h("b", null, "Antes de ver: "), v.before));
+    var det = h("details", { open: !v.file });
+    det.appendChild(h("summary", null, v.file ? "Alternativa textual y escenas" : "Escenas del microvideo (versión textual)"));
+    var ol = h("ol", { class: "scenes" });
+    v.scenes.forEach(function (s) {
+      ol.appendChild(h("li", null, h("div", { class: "vt" }, s.visible_text), h("p", null, s.narration), h("p", { class: "note" }, "Visual: " + s.description)));
+    });
+    det.appendChild(ol);
+    body.appendChild(det);
+    body.appendChild(h("p", { class: "note" }, h("b", null, "Después: "), v.after));
+    card.appendChild(body);
+    return card;
+  }
+
+  IATU.media = { audioPlayer: audioPlayer, figure: figure, videoCard: videoCard, stopAll: stopAll };
+})();
